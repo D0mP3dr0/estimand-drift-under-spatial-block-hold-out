@@ -1,0 +1,39 @@
+{
+ "status": "FINAL",
+ "campinas_Q1": {
+  "veredito": "CONFIRMADO",
+  "meu": {
+   "vies": 0.5110838281415973,
+   "ep_mc": 0.20645176360350315,
+   "termo": 0.48528373619173715,
+   "ep_boot": 0.12355048388593617,
+   "corr": -0.3480931752648647,
+   "identidade_diff": 5.551115123125783e-16,
+   "vies_menos_termo": 0.025800091949860104
+  },
+  "primeiro_calculo": {
+   "vies": 0.51108,
+   "termo": 0.48528,
+   "corr": -0.34809
+  },
+  "nota": "Numbers match the first calculation up to the 10th decimal place. Bias-minus-term difference (+0.026 / -0.059 dB) = theta-mu, well below the SE (0.12-0.14 dB of the term). The own partition uses a floor with shift by min (voto_a does not shift); N=132 blocks, kte=20. Geometry, FSPL and tensor reading copied from voto_a."
+ },
+ "sorocaba_Q1": {
+  "veredito": "CONFIRMADO",
+  "meu": {
+   "vies": 0.576495122007505,
+   "ep_mc": 0.25848063999045884,
+   "termo": 0.6359711254756844,
+   "ep_boot": 0.14333816712358413,
+   "corr": -0.35533076061189683,
+   "identidade_diff": 1.1102230246251565e-15,
+   "vies_menos_termo": -0.059476003468179384
+  },
+  "primeiro_calculo": {
+   "vies": 0.5765,
+   "termo": 0.63597,
+   "corr": -0.35533
+  },
+  "nota": "Numbers match the first calculation up to the 10th decimal place. Bias-minus-term difference (+0.026 / -0.059 dB) = theta-mu, well below the SE (0.12-0.14 dB of the term). The own partition uses a floor with shift by min (voto_a does not shift); N=132 blocks, kte=20. Geometry, FSPL and tensor reading copied from voto_a."
+ }
+}

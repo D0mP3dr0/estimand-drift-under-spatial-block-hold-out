@@ -1,0 +1,347 @@
+{
+ "descricao": "Check of the F4 aggregates and of panel (b) of F34 (per-split-draw data in fase2/_v3_2.1_3.1_parcial_16x60rnd.json) against redacao_v3-12/tables_v3-12/T3_deriva_erro_v3-12.csv and the summary in fase2/2.1_deriva_erro_baselines_16x60rnd.json",
+ "tolerancia_abs": 1e-09,
+ "n_celulas": 16,
+ "total_sorteios_utilizaveis": 904,
+ "tudo_confere": true,
+ "por_celula": [
+  {
+   "celula": "bauru_Q1",
+   "ok": true,
+   "calculado": {
+    "n": 59,
+    "mediana": 18.10143378775323,
+    "min": 4.5279963688670835,
+    "max": 38.79030753925218,
+    "dp_simples": 7.034393648382777
+   },
+   "T3_csv": {
+    "n": 59,
+    "mediana": 18.10143378775323,
+    "min": 4.5279963688670835,
+    "max": 38.79030753925218,
+    "dp_simples": 7.034393648382777
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "bauru_Q2",
+   "ok": true,
+   "calculado": {
+    "n": 56,
+    "mediana": 15.079777696845849,
+    "min": 2.727214865044017,
+    "max": 41.29275608710735,
+    "dp_simples": 7.244004380441048
+   },
+   "T3_csv": {
+    "n": 56,
+    "mediana": 15.079777696845849,
+    "min": 2.727214865044017,
+    "max": 41.29275608710735,
+    "dp_simples": 7.244004380441048
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "bauru_Q3",
+   "ok": true,
+   "calculado": {
+    "n": 56,
+    "mediana": 17.825996349677744,
+    "min": 8.525602730112412,
+    "max": 42.72102977271736,
+    "dp_simples": 7.7244467217127895
+   },
+   "T3_csv": {
+    "n": 56,
+    "mediana": 17.825996349677744,
+    "min": 8.525602730112412,
+    "max": 42.72102977271736,
+    "dp_simples": 7.7244467217127895
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "bauru_Q4",
+   "ok": true,
+   "calculado": {
+    "n": 56,
+    "mediana": 15.492051985504048,
+    "min": 3.637150281697178,
+    "max": 44.56221401714248,
+    "dp_simples": 8.242688924092242
+   },
+   "T3_csv": {
+    "n": 56,
+    "mediana": 15.492051985504048,
+    "min": 3.637150281697178,
+    "max": 44.56221401714248,
+    "dp_simples": 8.242688924092242
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "campinas_Q1",
+   "ok": true,
+   "calculado": {
+    "n": 59,
+    "mediana": 14.113661078476479,
+    "min": 5.619786154895249,
+    "max": 52.959911689924056,
+    "dp_simples": 10.397658314112505
+   },
+   "T3_csv": {
+    "n": 59,
+    "mediana": 14.113661078476479,
+    "min": 5.619786154895249,
+    "max": 52.959911689924056,
+    "dp_simples": 10.397658314112505
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "campinas_Q2",
+   "ok": true,
+   "calculado": {
+    "n": 59,
+    "mediana": 16.940060293236918,
+    "min": 2.781936075452348,
+    "max": 48.89982628799423,
+    "dp_simples": 9.064379865272642
+   },
+   "T3_csv": {
+    "n": 59,
+    "mediana": 16.940060293236918,
+    "min": 2.781936075452348,
+    "max": 48.89982628799423,
+    "dp_simples": 9.064379865272642
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "campinas_Q3",
+   "ok": true,
+   "calculado": {
+    "n": 57,
+    "mediana": 15.767382054459908,
+    "min": 6.329255723520572,
+    "max": 41.073486653642995,
+    "dp_simples": 8.574514037914847
+   },
+   "T3_csv": {
+    "n": 57,
+    "mediana": 15.767382054459908,
+    "min": 6.329255723520572,
+    "max": 41.073486653642995,
+    "dp_simples": 8.574514037914847
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "campinas_Q4",
+   "ok": true,
+   "calculado": {
+    "n": 58,
+    "mediana": 15.512189003653862,
+    "min": 5.7006031718433805,
+    "max": 51.51122739080533,
+    "dp_simples": 8.457682950550817
+   },
+   "T3_csv": {
+    "n": 58,
+    "mediana": 15.512189003653862,
+    "min": 5.7006031718433805,
+    "max": 51.51122739080533,
+    "dp_simples": 8.457682950550817
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "lins_Q1",
+   "ok": true,
+   "calculado": {
+    "n": 56,
+    "mediana": 18.887909323824836,
+    "min": 11.566957821997766,
+    "max": 50.944717535803086,
+    "dp_simples": 7.977808852754722
+   },
+   "T3_csv": {
+    "n": 56,
+    "mediana": 18.887909323824836,
+    "min": 11.566957821997766,
+    "max": 50.944717535803086,
+    "dp_simples": 7.977808852754722
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "lins_Q2",
+   "ok": true,
+   "calculado": {
+    "n": 59,
+    "mediana": 21.2203990270551,
+    "min": 12.531239241874639,
+    "max": 36.935249330827055,
+    "dp_simples": 5.745358846317356
+   },
+   "T3_csv": {
+    "n": 59,
+    "mediana": 21.2203990270551,
+    "min": 12.531239241874639,
+    "max": 36.935249330827055,
+    "dp_simples": 5.745358846317356
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "lins_Q3",
+   "ok": true,
+   "calculado": {
+    "n": 48,
+    "mediana": 19.481453272298864,
+    "min": 10.483891373820537,
+    "max": 36.651251892887686,
+    "dp_simples": 6.02579185033425
+   },
+   "T3_csv": {
+    "n": 48,
+    "mediana": 19.481453272298864,
+    "min": 10.483891373820537,
+    "max": 36.651251892887686,
+    "dp_simples": 6.02579185033425
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "lins_Q4",
+   "ok": true,
+   "calculado": {
+    "n": 53,
+    "mediana": 19.775437486346515,
+    "min": 6.211998712448847,
+    "max": 38.03007960097308,
+    "dp_simples": 7.447211074362315
+   },
+   "T3_csv": {
+    "n": 53,
+    "mediana": 19.775437486346515,
+    "min": 6.211998712448847,
+    "max": 38.03007960097308,
+    "dp_simples": 7.447211074362315
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "sorocaba_Q1",
+   "ok": true,
+   "calculado": {
+    "n": 58,
+    "mediana": 11.664594892714447,
+    "min": 6.126934401229293,
+    "max": 52.529268113988685,
+    "dp_simples": 10.511974125784015
+   },
+   "T3_csv": {
+    "n": 58,
+    "mediana": 11.664594892714447,
+    "min": 6.126934401229293,
+    "max": 52.529268113988685,
+    "dp_simples": 10.511974125784015
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "sorocaba_Q2",
+   "ok": true,
+   "calculado": {
+    "n": 59,
+    "mediana": 14.749005488479991,
+    "min": 6.370778934658003,
+    "max": 55.1712540421416,
+    "dp_simples": 8.818190775465292
+   },
+   "T3_csv": {
+    "n": 59,
+    "mediana": 14.749005488479991,
+    "min": 6.370778934658003,
+    "max": 55.1712540421416,
+    "dp_simples": 8.818190775465292
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "sorocaba_Q3",
+   "ok": true,
+   "calculado": {
+    "n": 55,
+    "mediana": 20.171784684778046,
+    "min": 6.029847049038179,
+    "max": 40.33664881284696,
+    "dp_simples": 8.668822526955049
+   },
+   "T3_csv": {
+    "n": 55,
+    "mediana": 20.171784684778046,
+    "min": 6.029847049038179,
+    "max": 40.33664881284696,
+    "dp_simples": 8.668822526955049
+   },
+   "dif_abs_max": 0
+  },
+  {
+   "celula": "sorocaba_Q4",
+   "ok": true,
+   "calculado": {
+    "n": 56,
+    "mediana": 14.597559858445177,
+    "min": 6.903710375650726,
+    "max": 37.403239160270914,
+    "dp_simples": 6.330729521638972
+   },
+   "T3_csv": {
+    "n": 56,
+    "mediana": 14.597559858445177,
+    "min": 6.903710375650726,
+    "max": 37.403239160270914,
+    "dp_simples": 6.330729521638972
+   },
+   "dif_abs_max": 0
+  }
+ ],
+ "agregados": {
+  "dp_medio_entre_sorteios_dB": {
+   "calculado": 8.016603526005728,
+   "resumo_2_1": 8.016603526005728,
+   "T3_tex_arredondado": 8.017,
+   "ok": true
+  },
+  "dp_entre_celulas_das_medias_dB": {
+   "calculado": 2.179646210370172,
+   "resumo_2_1": 2.179646210370172,
+   "T3_tex_arredondado": 2.18,
+   "ddof": 1,
+   "ok": true
+  }
+ },
+ "medias_de_longo_prazo_dB": {
+  "bauru_Q1": 18.962056319476968,
+  "bauru_Q2": 14.455149335783796,
+  "bauru_Q3": 19.271585715266557,
+  "bauru_Q4": 18.093771185307478,
+  "campinas_Q1": 17.72350038918343,
+  "campinas_Q2": 18.016919670093277,
+  "campinas_Q3": 17.02630207284341,
+  "campinas_Q4": 18.058615428435363,
+  "lins_Q1": 20.9864497674936,
+  "lins_Q2": 21.96225956572383,
+  "lins_Q3": 20.619571547240998,
+  "lins_Q4": 20.468331575256364,
+  "sorocaba_Q1": 15.226649007074856,
+  "sorocaba_Q2": 17.361866946066854,
+  "sorocaba_Q3": 20.875602617097332,
+  "sorocaba_Q4": 15.93241609404413
+ },
+ "quartis_metodo": "numpy.percentile, linear interpolation (default)"
+}

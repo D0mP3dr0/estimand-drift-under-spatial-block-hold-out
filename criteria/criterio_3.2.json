@@ -1,0 +1,21 @@
+{
+  "id": "3.2",
+  "pergunta": "Over the 16 cells (seed 42), the edges Q1- and Q1+ of the P7 band (prop:median), computed over the actual SENTINEL training nodes (not over simulated distance U[1,140] km): how wide are they and where do the calibrated medians (published p_tx_eff) fall?",
+  "alegacao": "A5 (P7): calibration by the median does not identify the offset; non-trivial quantile band.",
+  "hipotese": "H0 (theorem, not refutable by data): every median theta_hat of the mixture F = pi_bar*F1 + (1-pi_bar)*F0 satisfies Q1-(1-1/(2*pi_bar)) <= theta_hat <= Q1+(1/(2*pi_bar)), with F1 = cdf of W=RSSI+PL_modelo(dist) over the sentinel training nodes and pi_bar = sentinel fraction of training. H1 (empirical, target of the article): the width of the actual (not simulated) band is >= 1 dB in at least 12 of the computed cells.",
+  "criterio_de_aceitacao": "100% of the calibrated medians (p_tx_eff_dbm from baselines_analiticos.train, for fspl/hata_rural/cost231_sub) must fall inside [Q1-, Q1+] by construction (violation = bug in the script, not a scientific finding). The 'not identifiable' claim (practical width, not only theoretical) is publishable only if the actual band width is >= 1 dB in >= 12 of the cells with available data.",
+  "o_que_refuta": "If any calibrated median falls outside the band -> implementation bug (stop and fix, it is not a content finding). If the actual width is < 1 dB in most cells -> the claim 'the median does not identify the offset' lacks quantitative support in this dataset (although the theorem still holds); record as a finding that lowers the strength of claim A5.",
+  "populacao_e_definicoes": {
+    "W": "y[:,3] (observed RSSI, column 3 of the tensor terrain.y) + PL_modelo(dist_nearest_m), computed node by node; sentinel RSSI = -110.0 dBm exactly (saturated); dist_nearest_m = geodesic-planar (equirectangular) distance to the nearest antenna, in metres, field terrain.dist_nearest_m",
+    "F1": "empirical cdf of W restricted to sentinel nodes (y[:,0] >= 299.0) WITHIN the training partition of the cell (3-way spatial split, split_seed=42, grid_km=10, buffer_km=2, fracs 0.70/0.15/0.15, logic identical to train_gnn_c0_spatial.py:412-472 / scripts/varredura_split_geometria.py)",
+    "pi_bar": "n_sentinela_treino / n_treino of the same partition (not the pi_bar published in the run JSON; recomputed from the raw data)",
+    "PL_modelo": "free_space_path_loss / okumura_hata_rural / cost231_hata(suburban) from GNN_RF_V2/04_baselines/empirical_models.py, freq_mhz=900.0 (config.freq_mhz of the run JSON)",
+    "mediana_calibrada": "baselines_analiticos.train.p_tx_eff_dbm.<modelo> of the frozen run JSON (definition: train_gnn_c0_spatial.py:711, ptx=median(rssi_tgt+pl) ONLY on training)"
+  },
+  "insumos_declarados_antes_de_rodar": [
+    "run JSON of the 20 training runs c0c1cf_*/c0c1_bauru_* (dados/treinos_c1) for geometry, config, baselines_analiticos.train.p_tx_eff_dbm",
+    "light tensors *_enriched_v2_cftudo.pt (~1.7 GB each) ONLY for the cells with a local file: bauru Q1, bauru Q2, lins Q1-4 (6 of 16); the remaining 10 cells (campinas x4, sorocaba x4, bauru Q3/Q4) go to nao_verificado because the raw data are unavailable on this machine"
+  ],
+  "fixado_em": "2026-09-25T00:00:00-03:00 (before running the recomputation script)",
+  "script_planejado": "scripts/v3_3.2_banda_p7_bordas_reais.py"
+}

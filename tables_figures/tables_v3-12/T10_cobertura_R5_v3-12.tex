@@ -1,0 +1,32 @@
+\begin{table}[H]
+\caption{Coverage of the one-partition variance estimate in the sixteen cells, for the valid test nodes. $v$ is the plug-in cluster-variance estimate from one partition (finite-population factor; test blocks with a valid node), $Q$ is the ratio of its mean over draws to the between-draw variance of the same error, and coverage is the fraction of the draws with $v$ defined in which $\mathrm{Err} \pm 2\sqrt{v}$ contains the mean of $\mathrm{Err}$ over the draws with $\mathrm{Err}$ defined; $g = 10$~km, $b = 2$~km.}
+\label{tab:coverage_one_partition}
+\centering
+\begin{tabular}{lccccc}
+\toprule
+ & & \multicolumn{2}{c}{Constant predictor} & \multicolumn{2}{c}{FSPL (second calibration)} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Cell & \celula{Draws with \\ \relax $v$ defined \\ \relax (of 60)} & $Q$ & Coverage & $Q$ & Coverage \\
+\midrule
+Bauru Q1 & 57 & 0.44 & 0.70 & 0.49 & 0.65 \\
+Bauru Q2 & 40 & 0.69 & 0.78 & 0.47 & 0.62 \\
+Bauru Q3 & 46 & 0.49 & 0.61 & 0.47 & 0.41 \\
+Bauru Q4 & 44 & 0.56 & 0.61 & 0.56 & 0.70 \\
+\midrule
+Campinas Q1 & 53 & 0.25 & 0.57 & 0.30 & 0.57 \\
+Campinas Q2 & 54 & 0.59 & 0.63 & 0.69 & 0.78 \\
+Campinas Q3 & 52 & 0.77 & 0.65 & 0.71 & 0.67 \\
+Campinas Q4 & 49 & 0.56 & 0.59 & 0.42 & 0.51 \\
+\midrule
+Lins Q1 & 40 & 0.31 & 0.60 & 0.43 & 0.57 \\
+Lins Q2 & 53 & 0.73 & 0.68 & 0.72 & 0.83 \\
+Lins Q3 & 35 & 0.42 & 0.57 & 0.79 & 0.63 \\
+Lins Q4 & 35 & 0.16 & 0.37 & 0.46 & 0.66 \\
+\midrule
+Sorocaba Q1 & 46 & 0.23 & 0.48 & 0.40 & 0.61 \\
+Sorocaba Q2 & 50 & 0.60 & 0.60 & 0.84 & 0.74 \\
+Sorocaba Q3 & 39 & 0.31 & 0.54 & 0.48 & 0.51 \\
+Sorocaba Q4 & 43 & 0.52 & 0.58 & 0.87 & 0.72 \\
+\bottomrule
+\end{tabular}
+\end{table}

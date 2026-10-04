@@ -1,0 +1,41 @@
+grupo,linha,graph_regressor,perceptron,campo_da_folha_B7.2
+Architecture,Layers,4 (message passing),5 (encoder),arquitetura/camadas ...
+Architecture,Neighbourhood,"one hop per relation, full neighbourhood (no sampling)","node batches, no graph",vizinhanca/amostragem no treino
+Architecture,Operators,"transmitter$\to$terrain and terrain$\to$terrain (Moore neighbourhood with self-loop): GATv2, 4 heads concatenated, edge dimension 2; terrain$\to$transmitter: SAGE with mean aggregation, no gradient",none (no edges),arquitetura/operador *
+Architecture,Relation aggregation,sum,--,arquitetura/agregacao entre relacoes
+Architecture,Layer,"LeakyReLU (slope 0.2), dropout, residual connection, LayerNorm","linear, BatchNorm, LeakyReLU (slope 0.2), dropout (not after the last block)",arquitetura/por camada (GNN) / bloco (MLP)
+Architecture,Attention heads,4,--,arquitetura/cabecas de atencao
+Architecture,Width,256 (hidden),"654, 654, 600, 636, 256 (encoder)",arquitetura/largura oculta / larguras do encoder
+Architecture,Input features per terrain node,18,same,arquitetura/entradas por no de terreno
+Architecture,Input features per transmitter,6,not used,arquitetura/entradas por transmissor
+Architecture,Output channels,5,same,arquitetura/saidas
+Architecture,Dropout,0.1,same,arquitetura/dropout
+Architecture,"Parameters, nominal",1812515,1484067,capacidade/parametros nominais
+Architecture,Parameters receiving gradient,1484037,same,capacidade/parametros efetivos
+Architecture,Width-sensitivity arm (10 runs),--,"{""larguras"": [712, 712, 720, 688, 256], ""nominal"": 1812515, ""efetiva"": 1812485}",capacidade/braco de sensibilidade
+Loss,Prediction term,"Huber loss with threshold 5~dB on each of the 5 channels, averaged over the seed nodes (sentinel nodes included)",same,perda/termo de predicao
+Loss,Channel weights,"uniform, $1/5$ each (fixed)",same,perda/pesos dos canais
+Loss,Distance-gradient penalty,"mean_{(i,j): d_i<d_j} ReLU(rssi_hat_j - rssi_hat_i + 1 dBm), K=min(512, N//2) pares sorteados no lote | dist = distancia ate a antena mais proxima (physics_loss.py:360, docstring de dist_to_ant)",same,perda/penalidade gradiente de distancia
+Loss,Variance penalty,ReLU(std(y_rssi) - std(rssi_hat))^2 no lote (alvo sem gradiente),same,perda/penalidade de variancia
+Loss,Shadowing$\times$NDVI penalty,"ReLU(0.15 - corr(PL_veg_hat, NDVI)) no lote, NDVI = coluna 12 (sem gradiente) | valor maximo registrado nas epocas das corridas = 0",same,perda/penalidade sombra x NDVI; valor_maximo_shadowing_ndvi_penalty_registrado
+Loss,Free-space loss penalty,0.05 * mean ReLU(FSPL_900MHz(d) - PL_hat_total),same,perda/restricao FSPL
+Optimisation,Optimiser,"AdamW, weight_decay=1e-5",same,otimizacao/otimizador
+Optimisation,Initial learning rate,0.001,same,otimizacao/taxa inicial
+Optimisation,Learning-rate schedule,"{""classe"": ""CosineAnnealingWarmRestarts"", ""T_0_epocas"": 10, ""T_mult"": 2, ""eta_min"": 1e-06, ""passo"": ""por epoca"", ""reinicio_dentro_de_8_epocas"": false}",same,otimizacao/agenda
+Optimisation,"Gradient clipping, norm threshold",0.5,same,otimizacao/corte de gradiente (norma)
+Optimisation,Mixed precision,automatic mixed precision (CUDA),same,otimizacao/precisao mista
+Optimisation,Batch size (nodes),12288,same,otimizacao/lote (nos semente)
+Optimisation,Epochs,8,same,otimizacao/epocas
+Optimisation,Early stopping,none,same,otimizacao/parada antecipada
+Optimisation,"Gradient steps per run, median (range)","{""mediana"": 5912.0, ""min"": 5880, ""max"": 5920, ""n"": 60}",same,otimizacao/passos de gradiente por corrida
+Selection,Epoch retained,lowest validation MAE of received power,same,selecao/regra da epoca retida
+Selection,Test set used in selection,no,same,selecao/teste usado na selecao
+Selection,"Best epoch, median (range)","{""mediana"": 6.0, ""min"": 2, ""max"": 8, ""n"": 60}","{""mediana"": 6.0, ""min"": 1, ""max"": 8, ""n"": 60}",selecao/melhor epoca
+Baselines,Frequency (MHz),900,same,baselines/frequencia
+Baselines,Heights (m),"{""h_tx"": 30.0, ""h_rx"": 1.5}",same,"baselines/h_tx, h_rx"
+Baselines,COST-231 variant,suburban ($C_m=0$),same,baselines/variante COST-231
+Baselines,Distance,"to the nearest transmitter, floored at 1~m",same,baselines/distancia
+Baselines,Calibration,"offset equal to the training median of received power plus modelled path loss, over (a) all training nodes, (b) valid training nodes only",same,baselines/calibracao
+Hardware and cost,Hardware and software,"[""NVIDIA GeForce RTX 5070 Ti"", ""2.10.0+cu128"", ""12.8""]",same,custo/hardware
+Hardware and cost,"Time per run (s), median (range)","{""mediana"": 783.05, ""min"": 775.9, ""max"": 1141.3, ""n"": 60}","{""mediana"": 84.55, ""min"": 82.5, ""max"": 192.2, ""n"": 60}",custo/tempo por corrida (s)
+Hardware and cost,"Peak GPU memory (MB), median (range)","{""mediana"": 4159.9, ""min"": 4140.7, ""max"": 4187.6, ""n"": 60}","{""mediana"": 316.3, ""min"": 316.3, ""max"": 316.3, ""n"": 60}",custo/pico de VRAM (MB)

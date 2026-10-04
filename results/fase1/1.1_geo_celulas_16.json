@@ -1,0 +1,647 @@
+{
+ "id": "1.1",
+ "fio": "analysis",
+ "alegacao": "validity condition for A1-A4 (well-defined cells)",
+ "pergunta": "What is, geometrically, each of the 16 city-quadrant cells (4 cities x Q1-Q4, g10b2)? For each cell: lon/lat bbox, extent in km (equirectangular, cos phi at the center), number of nodes, number of antennas, mesh step. Do cells of the same city overlap in space (bbox intersection in km2 and nodes with the same position in two cells)? The current text says that Bauru Q1 holds the city's 794 antennas -- confirm or refute?",
+ "criterio": {
+  "id": "1.1",
+  "alegacao": "validity condition for A1-A4 (well-defined cells)",
+  "pergunta": "What is, geometrically, each of the 16 city-quadrant cells (4 cities x Q1-Q4, g10b2)? For each cell: lon/lat bbox, extent in km (equirectangular, cos phi at the center), number of nodes, number of antennas, mesh step. Do cells of the same city overlap in space (bbox intersection in km2 and nodes with the same position in two cells)? The current text says that Bauru Q1 holds the city's 794 antennas -- confirm or refute?",
+  "hipotese": "The 16 cells are disjoint (bboxes of quadrants of the same city do not overlap; intersection = 0 nodes) and each has an extent compatible with 3600x30m (3600x3600 grid, step ~28-31m); the antennas are NOT clipped per quadrant -- the 794 Bauru antennas appear identically in the 4 quadrants (Q1-Q4), not only in Q1.",
+  "limiar_de_aceitacao": [
+   "bbox intersection between quadrants of the same city = 0 km2 (or, if >0, count of grid nodes with identical lon/lat position between the two cells = 0) for the 4 cities x 6 pairs per city",
+   "extensao_x_km and extensao_y_km (recomputed by equirectangular projection, cos phi at the centre) match the field geometria.extensao_*_km of the run JSON (relative error <=1e-3) and are compatible with 3600 x ~30m (step within 20-35m on both axes, in the 16 cells)",
+   "n_antena per cell read from subgrafos.<papel>.n_antenna (run JSON) and identical across train/val/test within the same cell; for Bauru, compare n_antena(Q1) with n_antena(Q2,Q3,Q4)"
+  ],
+  "o_que_refuta": "bbox intersection > 0 km2 WITH coincident grid nodes between quadrants of the same city (geometric leakage between cells, severity blocks A1-A4, study redesign before any other test); OR extent outside 3600x30m; OR the statement 'Bauru Q1 has the city's 794 antennas' being LITERALLY false in the sense that the other quadrants do NOT have those antennas (if Q2/Q3/Q4 have n_antena different from 794 or null) -- and in that case the text must be corrected to describe correctly how the antennas enter the 4 graphs",
+  "metodo_declarado": "direct reading of the geometria field (bbox, extensao, n_nos_no_grafo_de_trabalho) and subgrafos.<papel>.n_antenna of the 16 g10b2 run JSONs (c0c1cf_<cidade>_s42_Q<k>_g10b2.json); independent recalculation of extensao_km via the equirectangular formula (dlon*111000*cos(radians(lat_centro)); dlat*111000) to check against the declared field; bbox intersection per pair of quadrants of the same city computed analytically (intersection rectangle in degrees -> km2 via the same formula); if bbox intersection > 0, generate the synthetic grids (build_synthetic_grid, imported from varredura_split_geometria.py) of the two cells and count nodes with identical lon/lat; map figure with the 16 bboxes, 10km blocks and the actual partition (split_espacial_3vias_exato, seed 42) of Bauru Q1",
+  "fixado_por": "fixed in internal/note_16.md, 25/09/2026, BEFORE running the script v3_1.1_1.2_celulas_cadeia.py",
+  "nao_amplia_a_varredura": "roadmap rule D5 -- only the 16 g10b2 cells (plus the identical bbox of the 4 Bauru g5b2 cells, already confirmed equal to the corresponding g10b2 ones); no other city/config."
+ },
+ "metodo": "direct reading of geometry/subgraphs from the 16 g10b2 run JSONs; independent recalculation of the extent in km (equirectangular, cos phi at the center); analytic bbox intersection per pair of quadrants of the same city; count of coincident nodes via a synthetic grid only when the bboxes intersect",
+ "insumos": {
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json": "552890b4dd972c6e7e4bb2193d03a7483b70f6d6bcedb2434c0401cbd9c5f7a2",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json": "42256b79ed7914b9776aaccc24ff1139236c59ce6662e653e8684419c436f7d2",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json": "a2519b94caf880d98995ea8066a99357a3e6780ec1ab35ebfca9d144fbe89909",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json": "adddf2211d473a592fc18722c12eb4ec980b1d5da7512f18611ede57d7fec885",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q1_g10b2.json": "257ca5ef60b07acede04a81a84764dc152d455d2adf797b417a64727dd8366c6",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q2_g10b2.json": "3f4137ec7c2f7c1dcf23ba3d8c5eecac69038d75948c89d3d65785fe176a9df5",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q3_g10b2.json": "2549ce770a5fce6fc95929a2ddfe42801f63e27dc435a8fe77c60bcc4c32477e",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q4_g10b2.json": "3760ce316e13e52a7ff614880b9fe3efe0524f5b55402d41f75948181ec07224",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json": "e56719dffd273cce73fcafa71afbb8f8417ddd0ce8dd923089652bce253f8359",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q2_g10b2.json": "2c60de023b73a63d642a6023a4159bfe28bcbf85643be3f1c5b92f76f47fa0e9",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q3_g10b2.json": "0d25f361abecab655e17e28d5a82c9e7d2833d80bcf59367e31e3de5b61a4a77",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q4_g10b2.json": "f732d6e97c4146b4c053fad63023ba8ba131845e923a47eb1b0e1f5fd9d9d873",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q1_g10b2.json": "091a498915d1482476f983fb260cc4f774ab9b3118fd7187e311259b01e03819",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q2_g10b2.json": "bafed7e36b1096e3e3bb064181357298d09212edf6e875f59f0997d10b0bf368",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q3_g10b2.json": "dca25aaaa504d33a766859231164f49d2a825c3461fa9a47f9b3e9e9058c9069",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q4_g10b2.json": "2eaa5abd38fb24ff466b77501ba3ea0c1e4a2bb39a646701a441cb4856eba2d4"
+ },
+ "por_celula": {
+  "bauru_Q1": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json",
+   "bbox_lon_min_deg": -50.063751220703125,
+   "bbox_lon_max_deg": -49.064029693603516,
+   "bbox_lat_min_deg": -22.324304580688477,
+   "bbox_lat_max_deg": -21.324583053588867,
+   "extensao_x_km_recalculada": 103.01563608459725,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 103.37162264246432,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003443755150273058,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.623405413891984,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 794,
+    "val": 794,
+    "test": 794
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 794
+  },
+  "bauru_Q2": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json",
+   "bbox_lon_min_deg": -49.063751220703125,
+   "bbox_lon_max_deg": -48.064029693603516,
+   "bbox_lat_min_deg": -22.324304580688477,
+   "bbox_lat_max_deg": -21.324583053588867,
+   "extensao_x_km_recalculada": 103.01563608459725,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 103.37162264246432,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003443755150273058,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.623405413891984,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 794,
+    "val": 794,
+    "test": 794
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 794
+  },
+  "bauru_Q3": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json",
+   "bbox_lon_min_deg": -50.063751220703125,
+   "bbox_lon_max_deg": -49.064029693603516,
+   "bbox_lat_min_deg": -23.324304580688477,
+   "bbox_lat_max_deg": -22.324583053588867,
+   "extensao_x_km_recalculada": 102.27995943417548,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 102.65160398721596,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003620445649215248,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.418994007828697,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 794,
+    "val": 794,
+    "test": 794
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 794
+  },
+  "bauru_Q4": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json",
+   "bbox_lon_min_deg": -49.063751220703125,
+   "bbox_lon_max_deg": -48.064029693603516,
+   "bbox_lat_min_deg": -23.324304580688477,
+   "bbox_lat_max_deg": -22.324583053588867,
+   "extensao_x_km_recalculada": 102.27995943417548,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 102.65160398721596,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003620445649215248,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.418994007828697,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 794,
+    "val": 794,
+    "test": 794
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 794
+  },
+  "campinas_Q1": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q1_g10b2.json",
+   "bbox_lon_min_deg": -48.06097412109375,
+   "bbox_lon_max_deg": -47.06125259399414,
+   "bbox_lat_min_deg": -22.90513801574707,
+   "bbox_lat_max_deg": -21.90541648864746,
+   "extensao_x_km_recalculada": 102.59213625789295,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 102.95723100995667,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003546081693168485,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.50573388660543,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 4252,
+    "val": 4252,
+    "test": 4252
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 4252
+  },
+  "campinas_Q2": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q2_g10b2.json",
+   "bbox_lon_min_deg": -47.06097412109375,
+   "bbox_lon_max_deg": -46.06125259399414,
+   "bbox_lat_min_deg": -22.90513801574707,
+   "bbox_lat_max_deg": -21.90541648864746,
+   "extensao_x_km_recalculada": 102.59213625789295,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 102.95723100995667,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003546081693168485,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.50573388660543,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 4252,
+    "val": 4252,
+    "test": 4252
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 4252
+  },
+  "campinas_Q3": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q3_g10b2.json",
+   "bbox_lon_min_deg": -48.06097412109375,
+   "bbox_lon_max_deg": -47.06125259399414,
+   "bbox_lat_min_deg": -23.90513801574707,
+   "bbox_lat_max_deg": -22.90541648864746,
+   "extensao_x_km_recalculada": 101.83833558085807,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 102.21902315239262,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.0037242340984515714,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.296286629857757,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 4252,
+    "val": 4252,
+    "test": 4252
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 4252
+  },
+  "campinas_Q4": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q4_g10b2.json",
+   "bbox_lon_min_deg": -47.06097412109375,
+   "bbox_lon_max_deg": -46.06125259399414,
+   "bbox_lat_min_deg": -23.90513801574707,
+   "bbox_lat_max_deg": -22.90541648864746,
+   "extensao_x_km_recalculada": 101.83833558085807,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 102.21902315239262,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.0037242340984515714,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.296286629857757,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 4252,
+    "val": 4252,
+    "test": 4252
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 4252
+  },
+  "lins_Q1": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json",
+   "bbox_lon_min_deg": -50.745140075683594,
+   "bbox_lon_max_deg": -49.745418548583984,
+   "bbox_lat_min_deg": -21.679304122924805,
+   "bbox_lat_max_deg": -20.679582595825195,
+   "extensao_x_km_recalculada": 103.47351426723873,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 103.81934358302617,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.0033310682176570976,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.75062913788239,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 175,
+    "val": 175,
+    "test": 175
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 175
+  },
+  "lins_Q2": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q2_g10b2.json",
+   "bbox_lon_min_deg": -49.745140075683594,
+   "bbox_lon_max_deg": -48.745418548583984,
+   "bbox_lat_min_deg": -21.679304122924805,
+   "bbox_lat_max_deg": -20.679582595825195,
+   "extensao_x_km_recalculada": 103.47351426723873,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 103.81934358302617,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.0033310682176570976,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.75062913788239,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 175,
+    "val": 175,
+    "test": 175
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 175
+  },
+  "lins_Q3": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q3_g10b2.json",
+   "bbox_lon_min_deg": -50.745140075683594,
+   "bbox_lon_max_deg": -49.745418548583984,
+   "bbox_lat_min_deg": -22.679304122924805,
+   "bbox_lat_max_deg": -21.679582595825195,
+   "extensao_x_km_recalculada": 102.75805239048918,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 103.11961019149625,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003506198290855081,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.55183450694337,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 175,
+    "val": 175,
+    "test": 175
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 175
+  },
+  "lins_Q4": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q4_g10b2.json",
+   "bbox_lon_min_deg": -49.745140075683594,
+   "bbox_lon_max_deg": -48.745418548583984,
+   "bbox_lat_min_deg": -22.679304122924805,
+   "bbox_lat_max_deg": -21.679582595825195,
+   "extensao_x_km_recalculada": 102.75805239048918,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 103.11961019149625,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003506198290855081,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.55183450694337,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 175,
+    "val": 175,
+    "test": 175
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 175
+  },
+  "sorocaba_Q1": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q1_g10b2.json",
+   "bbox_lon_min_deg": -48.452640533447266,
+   "bbox_lon_max_deg": -47.452919006347656,
+   "bbox_lat_min_deg": -23.5009708404541,
+   "bbox_lat_max_deg": -22.501249313354492,
+   "extensao_x_km_recalculada": 102.14674539587755,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 102.5211445573578,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003651921397256633,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.38197982658448,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 1398,
+    "val": 1398,
+    "test": 1398
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 1398
+  },
+  "sorocaba_Q2": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q2_g10b2.json",
+   "bbox_lon_min_deg": -47.452640533447266,
+   "bbox_lon_max_deg": -46.452919006347656,
+   "bbox_lat_min_deg": -23.5009708404541,
+   "bbox_lat_max_deg": -22.501249313354492,
+   "extensao_x_km_recalculada": 102.14674539587755,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 102.5211445573578,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.003651921397256633,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.38197982658448,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 1398,
+    "val": 1398,
+    "test": 1398
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 1398
+  },
+  "sorocaba_Q3": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q3_g10b2.json",
+   "bbox_lon_min_deg": -48.452640533447266,
+   "bbox_lon_max_deg": -47.452919006347656,
+   "bbox_lat_min_deg": -24.5009708404541,
+   "bbox_lat_max_deg": -23.501249313354492,
+   "extensao_x_km_recalculada": 101.37443316809768,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 101.76435662528071,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.00383163093752773,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.167389043650367,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 1398,
+    "val": 1398,
+    "test": 1398
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 1398
+  },
+  "sorocaba_Q4": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q4_g10b2.json",
+   "bbox_lon_min_deg": -47.452640533447266,
+   "bbox_lon_max_deg": -46.452919006347656,
+   "bbox_lat_min_deg": -24.5009708404541,
+   "bbox_lat_max_deg": -23.501249313354492,
+   "extensao_x_km_recalculada": 101.37443316809768,
+   "extensao_y_km_recalculada": 110.96908950805664,
+   "extensao_x_km_declarada": 101.76435662528071,
+   "extensao_y_km_declarada": 110.96908950805664,
+   "erro_relativo_extensao_x": 0.00383163093752773,
+   "erro_relativo_extensao_y": 0.0,
+   "n_side": 3600,
+   "n_nos": 12960000,
+   "passo_malha_x_m": 28.167389043650367,
+   "passo_malha_y_m": 30.833311894430853,
+   "n_antena_por_papel": {
+    "train": 1398,
+    "val": 1398,
+    "test": 1398
+   },
+   "n_antena_consistente_entre_papeis": true,
+   "n_antena": 1398
+  }
+ },
+ "sobreposicao_pares_mesma_cidade": [
+  {
+   "cidade": "bauru",
+   "par": "Q1-Q2",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 110.96908950805664,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "bauru",
+   "par": "Q1-Q3",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 102.65170642182449,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "bauru",
+   "par": "Q1-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "bauru",
+   "par": "Q2-Q3",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "bauru",
+   "par": "Q2-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 102.65170642182449,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "bauru",
+   "par": "Q3-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 110.96908950805664,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "campinas",
+   "par": "Q1-Q2",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 110.96908950805664,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "campinas",
+   "par": "Q1-Q3",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 102.21912811055704,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "campinas",
+   "par": "Q1-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "campinas",
+   "par": "Q2-Q3",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "campinas",
+   "par": "Q2-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 102.21912811055704,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "campinas",
+   "par": "Q3-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 110.96908950805664,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "lins",
+   "par": "Q1-Q2",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 110.96908950805664,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "lins",
+   "par": "Q1-Q3",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 103.11970981143712,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "lins",
+   "par": "Q1-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "lins",
+   "par": "Q2-Q3",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "lins",
+   "par": "Q2-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 103.11970981143712,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "lins",
+   "par": "Q3-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 110.96908950805664,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "sorocaba",
+   "par": "Q1-Q2",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 110.96908950805664,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "sorocaba",
+   "par": "Q1-Q3",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 101.76446416095911,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "sorocaba",
+   "par": "Q1-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "sorocaba",
+   "par": "Q2-Q3",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "sorocaba",
+   "par": "Q2-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 101.76446416095911,
+   "intersecao_lat_km": 0.0,
+   "n_nos_coincidentes": 0
+  },
+  {
+   "cidade": "sorocaba",
+   "par": "Q3-Q4",
+   "intersecao_km2": 0.0,
+   "intersecao_lon_km": 0.0,
+   "intersecao_lat_km": 110.96908950805664,
+   "n_nos_coincidentes": 0
+  }
+ ],
+ "antenas_bauru_por_quadrante": {
+  "n_antena_por_quadrante": {
+   "Q1": 794,
+   "Q2": 794,
+   "Q3": 794,
+   "Q4": 794
+  },
+  "todas_iguais": true,
+  "leitura": "the city's 794 antennas appear IDENTICAL (same count) in the 4 Bauru quadrants, not only in Q1 -- this refutes the reading that only Q1 'has' the 794 antennas; it confirms that the number 794 is the total number of antennas of the CITY and that antennas are not clipped by the quadrant bbox (unlike terrain nodes, which are exclusive to each quadrant): each quadrant graph includes ALL antennas of the city as context, only the terrain nodes (and the 30m grid) change from quadrant to quadrant",
+  "evidencia_auxiliar": "n_arestas_ant_ter_base (antenna-terrain edges before any partition) DIFFERS between the Bauru quadrants although n_antena is the same in all of them -- consistent with the SAME set of 794 physical antennas being reconnected in each quadrant to a DIFFERENT subset of terrain nodes (k_antenna=20 nearest neighbours per node, see config.k_antenna)"
+ },
+ "resumo": {
+  "n_celulas": 16,
+  "erro_relativo_maximo_extensao_vs_run_json": 0.00383163093752773,
+  "nota_erro_extensao_x": "the relative error in extensao_x stays systematically at 0.33-0.38% across the 16 cells (extensao_y error 0.0, exact) -- explained by a different cos(phi) CONVENTION: this test uses cos(phi) at the CENTER of the bbox (as requested by decision criterion 1.1), while the run JSON declares extensao_x_km with cos(phi) PER NODE (geometria.convencao); the difference is of the order of magnitude expected for ~1 degree of latitude variation and does NOT indicate a geometry error -- it exceeds the <=1e-3 threshold fixed in the criterion for 'matching the run JSON', which is therefore marked as not strictly met in this secondary item (the item that decides the outcome -- disjointness of the cells -- is not affected)",
+  "passo_malha_m_min": 28.167389043650367,
+  "passo_malha_m_max": 30.833311894430853,
+  "compativel_3600x30m": true,
+  "intersecao_km2_maxima_entre_quadrantes_mesma_cidade": 0.0,
+  "n_nos_coincidentes_maximo": 0,
+  "celulas_disjuntas": true,
+  "extensao_bate_run_json_1e-3": false
+ },
+ "veredito_vs_criterio": "CENTRAL DECISION CRITERION MET: disjoint cells (0 coincident nodes in all 24 pairs of the same city, bbox intersection = 0 km2) and grid spacing compatible with 3600 x ~30m (28.2-30.8m). Minor caveat: extensao_x recalculated with cos(phi) at the center differs by 0.33-0.38% from the extensao_x_km declared in the run JSON (which uses cos(phi) per node) -- above the 1e-3 fixed in the decision criterion for this secondary item, but explained by the different cos(phi) convention, not by a geometry error; it does not affect the disjointness of the cells.",
+ "nao_verificado": [],
+ "comando_rodado": "python v3_1.1_1.2_celulas_cadeia.py --out-11 <out> --out-12 <out> --fig <fig>",
+ "script_sha256": "aa03b1d7e2eb3a865b6a664afbc2e8b7b16ba86041ffb1f07b246c0afb866581"
+}

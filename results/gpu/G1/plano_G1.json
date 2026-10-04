@@ -1,0 +1,2008 @@
+{
+ "criterio": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/criterios/criterio_G1_modelos_g10.json",
+ "grid_km": 10.0,
+ "buffer_km": 2.0,
+ "n": 200,
+ "corridas": [
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss811474_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss811474_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss811474_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss811474_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss54892_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss54892_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss54892_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss54892_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss880099_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss880099_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss880099_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss880099_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss125243_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss125243_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss125243_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss125243_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss159513_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss159513_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss159513_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss159513_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss739191_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss739191_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss739191_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss739191_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss29675_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss29675_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss29675_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss29675_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss676375_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss676375_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss676375_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss676375_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss387379_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss387379_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss387379_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss387379_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss259492_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss259492_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss259492_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss259492_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss684965_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 684965,
+   "indice_sorteio": 10
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss684965_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 684965,
+   "indice_sorteio": 10
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss684965_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 684965,
+   "indice_sorteio": 10
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss684965_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 684965,
+   "indice_sorteio": 10
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss723969_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 723969,
+   "indice_sorteio": 11
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss723969_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 723969,
+   "indice_sorteio": 11
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss723969_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 723969,
+   "indice_sorteio": 11
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss723969_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 723969,
+   "indice_sorteio": 11
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss508734_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 508734,
+   "indice_sorteio": 12
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss508734_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 508734,
+   "indice_sorteio": 12
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss508734_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 508734,
+   "indice_sorteio": 12
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss508734_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 508734,
+   "indice_sorteio": 12
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss198718_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 198718,
+   "indice_sorteio": 13
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss198718_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 198718,
+   "indice_sorteio": 13
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss198718_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 198718,
+   "indice_sorteio": 13
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss198718_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 198718,
+   "indice_sorteio": 13
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss769856_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 769856,
+   "indice_sorteio": 14
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss769856_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 769856,
+   "indice_sorteio": 14
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss769856_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 769856,
+   "indice_sorteio": 14
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss769856_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 769856,
+   "indice_sorteio": 14
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss535105_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 535105,
+   "indice_sorteio": 15
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss535105_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 535105,
+   "indice_sorteio": 15
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss535105_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 535105,
+   "indice_sorteio": 15
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss535105_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 535105,
+   "indice_sorteio": 15
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss282106_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 282106,
+   "indice_sorteio": 16
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss282106_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 282106,
+   "indice_sorteio": 16
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss282106_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 282106,
+   "indice_sorteio": 16
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss282106_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 282106,
+   "indice_sorteio": 16
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss756541_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 756541,
+   "indice_sorteio": 17
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss756541_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 756541,
+   "indice_sorteio": 17
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss756541_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 756541,
+   "indice_sorteio": 17
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss756541_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 756541,
+   "indice_sorteio": 17
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss934410_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 934410,
+   "indice_sorteio": 18
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss934410_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 934410,
+   "indice_sorteio": 18
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss934410_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 934410,
+   "indice_sorteio": 18
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss934410_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 934410,
+   "indice_sorteio": 18
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_campinas_Q1_ss546703_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 546703,
+   "indice_sorteio": 19
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_gnn_bauru_Q1_ss546703_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 546703,
+   "indice_sorteio": 19
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_campinas_Q1_ss546703_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 546703,
+   "indice_sorteio": 19
+  },
+  {
+   "bloco": 1,
+   "run_label": "g1_mlp_bauru_Q1_ss546703_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 546703,
+   "indice_sorteio": 19
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss811474_s43",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss811474_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss811474_s43",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss811474_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss811474_s44",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss811474_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss811474_s44",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss811474_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss54892_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss54892_s43",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss54892_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss54892_s43",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss54892_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss54892_s44",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss54892_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss54892_s44",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss880099_s43",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss880099_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss880099_s43",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss880099_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss880099_s44",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss880099_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss880099_s44",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss880099_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss125243_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss125243_s43",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss125243_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss125243_s43",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss125243_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss125243_s44",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss125243_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss125243_s44",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss159513_s43",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss159513_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss159513_s43",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss159513_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_bauru_Q1_ss159513_s44",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_gnn_campinas_Q1_ss159513_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_bauru_Q1_ss159513_s44",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 2,
+   "run_label": "g1_mlp_campinas_Q1_ss159513_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss811474_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss811474_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss811474_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss811474_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 811474,
+   "indice_sorteio": 0
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss54892_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss54892_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss54892_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss54892_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 54892,
+   "indice_sorteio": 1
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss880099_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss880099_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss880099_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss880099_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 880099,
+   "indice_sorteio": 2
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss125243_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss125243_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss125243_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss125243_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 125243,
+   "indice_sorteio": 3
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss159513_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss159513_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss159513_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss159513_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 159513,
+   "indice_sorteio": 4
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss739191_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss739191_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss739191_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss739191_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss29675_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss29675_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss29675_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss29675_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss676375_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss676375_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss676375_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss676375_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss387379_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss387379_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss387379_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss387379_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss259492_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss259492_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss259492_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss259492_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss684965_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 684965,
+   "indice_sorteio": 10
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss684965_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 684965,
+   "indice_sorteio": 10
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss684965_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 684965,
+   "indice_sorteio": 10
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss684965_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 684965,
+   "indice_sorteio": 10
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss723969_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 723969,
+   "indice_sorteio": 11
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss723969_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 723969,
+   "indice_sorteio": 11
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss723969_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 723969,
+   "indice_sorteio": 11
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss723969_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 723969,
+   "indice_sorteio": 11
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss508734_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 508734,
+   "indice_sorteio": 12
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss508734_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 508734,
+   "indice_sorteio": 12
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss508734_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 508734,
+   "indice_sorteio": 12
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss508734_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 508734,
+   "indice_sorteio": 12
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss198718_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 198718,
+   "indice_sorteio": 13
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss198718_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 198718,
+   "indice_sorteio": 13
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss198718_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 198718,
+   "indice_sorteio": 13
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss198718_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 198718,
+   "indice_sorteio": 13
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss769856_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 769856,
+   "indice_sorteio": 14
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss769856_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 769856,
+   "indice_sorteio": 14
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss769856_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 769856,
+   "indice_sorteio": 14
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss769856_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 769856,
+   "indice_sorteio": 14
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss535105_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 535105,
+   "indice_sorteio": 15
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss535105_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 535105,
+   "indice_sorteio": 15
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss535105_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 535105,
+   "indice_sorteio": 15
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss535105_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 535105,
+   "indice_sorteio": 15
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss282106_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 282106,
+   "indice_sorteio": 16
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss282106_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 282106,
+   "indice_sorteio": 16
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss282106_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 282106,
+   "indice_sorteio": 16
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss282106_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 282106,
+   "indice_sorteio": 16
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss756541_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 756541,
+   "indice_sorteio": 17
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss756541_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 756541,
+   "indice_sorteio": 17
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss756541_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 756541,
+   "indice_sorteio": 17
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss756541_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 756541,
+   "indice_sorteio": 17
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss934410_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 934410,
+   "indice_sorteio": 18
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss934410_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 934410,
+   "indice_sorteio": 18
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss934410_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 934410,
+   "indice_sorteio": 18
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss934410_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 934410,
+   "indice_sorteio": 18
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_campinas_Q3_ss546703_s42",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 546703,
+   "indice_sorteio": 19
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_gnn_bauru_Q3_ss546703_s42",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 546703,
+   "indice_sorteio": 19
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_campinas_Q3_ss546703_s42",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 546703,
+   "indice_sorteio": 19
+  },
+  {
+   "bloco": 3,
+   "run_label": "g1_mlp_bauru_Q3_ss546703_s42",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 546703,
+   "indice_sorteio": 19
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "id": "G1_modelos_g10_adendo1",
+ "emenda": "criterios/criterio_G1_modelos_g10.json (sha256 d0d2b6366930d53ca71065baeff36addbe61be6f56560e722d08721e91125132), which stays intact",
+ "origem": "internal/note_28.md (audit of the design BEFORE any result): the two-factor ANOVA without replication does not measure seed variation (flag true in 0.718 of the simulations without a partition effect); block 3, truncated by the cap, would make the rule '>= 3 of 4' undecidable; reading branches were missing.",
+ "prova_de_anterioridade": {
+  "agregados_existentes": [],
+  "pastas_de_corrida_existentes": [
+   "g1_gnn_bauru_Q1_ss811474_s42",
+   "g1_gnn_campinas_Q1_ss811474_s42",
+   "g1_mlp_bauru_Q1_ss811474_s42"
+  ],
+  "nota": "no agregado_G1_bloco*.json exists; no run MAE of the batch has been read; the aggregator has not been run."
+ },
+ "emendas": {
+  "1_componentes_de_variancia": "In block 2 (3 seeds x 5 split draws per cell and model) the decomposition is one-way, seeds nested in the split draw: sigma2_semente = QM_dentro; sigma2_sorteio = max(0, (QM_entre - QM_dentro)/3). Condition 2 is met in a cell when sigma2_sorteio >= sigma2_semente for GNN and for MLP. The two-way ANOVA without replication drops out of the reading.",
+  "2_comparador": "In the Q1 cells the comparator for the between-draw SD is max(0.132 dB; pooled between-seed SD at 10 km from block 2, per model). In the Q3 cells (no crossed block) the comparator is 0.132 dB, stated as an anchor measured at 5 km. 0.132 dB is an absolute difference between two repetitions, not an SD: the threshold is conservative.",
+  "3_leitura_por_celula": "A cell meets condition 1 when the between-draw SD is >= 3 x comparator for GNN AND for MLP.",
+  "4_bloco_3": "Block 3 is to be completed (the batch is relaunched if the cap cuts it). If it still remains incomplete, the first k split draws of the plan with all 4 runs complete are used, requiring k >= 10 split draws with valid nodes per cell; below that, block 3 is not included and the rule becomes 2 of 2 in the Q1 cells, with the text saying 'two cities, one quadrant each'.",
+  "5_ramos_que_faltavam": "SD between 2x and 3x the comparator in cells that prevent the '>= 3 of 4', or condition 1 met and condition 2 not: PARTIALLY DELIMITS - the text reports the numbers at 10 km per cell without the general sentence, and the abstract keeps the scope the data allow.",
+  "6_sorteios_sem_validos": "The count of split draws without a valid node per cell is reported; these runs enter the sentinel parity.",
+  "7_conferencias_do_agregador": "Before the first aggregation: provenance and geometry flags abort; partition checked through the hash of the .npz indices against the run JSON; config of each run equal to that of A4 except for g; the shim sidecar is read. The corrected aggregator is a new file and is independently re-run by a third party (mutation tests)."
+ },
+ "fixado_em": "2026-10-01T23:33:14-03:00"
+}

@@ -1,0 +1,47 @@
+{
+ "achado_id": "G1_v10_bloco4",
+ "veredito": "confirmado",
+ "refutado": false,
+ "motivo_classe": "confirmado",
+ "motivo": "Independent recalculation (own script) reproduces all GNN and MLP numbers, comparator/ratios 7.60 and 2.98, CI by F(9,20), same test idx across seeds, identical config. The count over the 4 cells (cond. 1 in 3 of 4) was not recalculated, only taken from the stated values.",
+ "normalidade": "declared (one-way ANOVA, random effect, CI by F)",
+ "gnn": {
+  "QM_entre": 13.1894,
+  "QM_dentro": 0.18394,
+  "s2_sorteio": 4.3352,
+  "dp_pooled": 0.42888,
+  "razao": 23.568,
+  "IC95": [
+   8.093,
+   87.312
+  ],
+  "sd20_semente42": 3.260304,
+  "razao_dp_comparador": 7.6,
+  "LODO_razao_min": 1.505,
+  "LODO_razao_max": 44.774
+ },
+ "mlp": {
+  "QM_entre": 7.1188,
+  "QM_dentro": 0.45383,
+  "s2_sorteio": 2.2217,
+  "dp_pooled": 0.67367,
+  "razao": 4.895,
+  "IC95": [
+   1.51,
+   18.84
+  ],
+  "sd20_semente42": 2.0050368,
+  "razao_dp_comparador": 2.98,
+  "LODO_razao_min": 4.18,
+  "LODO_razao_max": 6.174
+ },
+ "item2": "idx_global identical across the 3 seeds of each split draw (10/10, both models); seed 43/44, split_seed, grid_km=10, buffer_km=2 and config (excluding run_label/seed/split_seed/evid_dir) equal across the 60 runs per model, 0 discrepancies",
+ "item3": "ss259492_s44: retained epoch 6 of 8 (as s42 and s43), selection margin 0.0089 (within the 0.0002-0.17 range of the others), n=822659, valid 44969, all finite, idx hash 46dcaa79 equal to the other two seeds. Nothing distinguishes it; MAE from the npz on all nodes 0.1306 vs test_mae from the log 0.1359 (~3.9 %), consistent with the stated difference. RMSE of the run JSON was not measured (the JSON has no metrics field, only the log).",
+ "nota": "GNN LODO drops to 1.5 without one split draw (387379 dominates: MAE ~7-8 dB in all three seeds)",
+ "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1_votos_bloco4/recalc.py",
+ "script_sha256": "57bcb545f05abaefce4014571c4c29abae08c391aeeb0d9266f0d8325601169d",
+ "script2_sha256": "12e79bc85a367ed28100f318a61f74c896f6a0b58581aeeb974f75609ecb6539",
+ "agregado_sha256": "bc47778f91fbdd1413a430813ce7bcc4d7a93c69db2c700f6f439d252f2add2f",
+ "comando_rodado": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python recalc.py; recalc2.py",
+ "gravidade_sugerida": "nota"
+}

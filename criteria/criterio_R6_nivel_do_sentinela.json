@@ -1,0 +1,11 @@
+{
+ "id": "R6_nivel_do_sentinela",
+ "subclaim": "S4 (titulo)",
+ "origem": "test requested in the internal review of the manuscript drafts and adopted on 01/10/2026, with the title 'Estimand Drift under Spatial Block Hold-Out'",
+ "pergunta": "Does the ratio between the between-draw SD and the SD between cell means of the error on the valid nodes (8.02 versus 2.18 dB for the constant at -110 dBm) depend on the level of the constant predictor? Same 16 cells and 60 split draws, g=10 km, b=2 km.",
+ "metodo_fixado": "constant predictors c in {-100, -110, -120, -130} dBm and the constant 'median of the valid training nodes' (recomputed per split draw); per level: mean over the 16 cells of the between-draw SD (ddof=1) of the MAE on the valid test nodes; SD between cell means; ratio; same exclusion of split draws without a valid node.",
+ "previsao": "the ratio stays above 2 at all levels; the absolute level of the two deviations changes with c.",
+ "leitura": "ratio >= 2 in the five predictors -> REINFORCES: one sentence ('the ratio holds for constants from -100 to -130 dBm and for the valid-median constant, between x and y'). Ratio < 1.5 in any -> DELIMITS: the text says for which anchor the ratio holds.",
+ "se_inverter": "ratio < 1 for the constant 'median of valid nodes' sends the central sentence of the abstract back for reformulation (the comparison would then depend on the anchor).",
+ "fixado_em": "2026-10-01T22:47:16-03:00 (before any script or result of this test existed)"
+}

@@ -1,0 +1,54 @@
+{
+ "1.8_referencia_nodal_200seeds.json": {
+  "n_cel": 16,
+  "blocos": {
+   "bauru_Q1": 132,
+   "bauru_Q2": 132,
+   "bauru_Q3": 132,
+   "bauru_Q4": 132,
+   "campinas_Q1": 132,
+   "campinas_Q2": 132,
+   "campinas_Q3": 132,
+   "campinas_Q4": 132,
+   "lins_Q1": 132,
+   "lins_Q2": 132,
+   "lins_Q3": 132,
+   "lins_Q4": 132,
+   "sorocaba_Q1": 132,
+   "sorocaba_Q2": 132,
+   "sorocaba_Q3": 132,
+   "sorocaba_Q4": 132
+  },
+  "corr_min": 0.9953283971411967,
+  "corr_mediana": 0.9987734125427812,
+  "corr_max": 1.0,
+  "inter_cidades_min": 0.9953283971411967,
+  "frac_pares_ge_0.995": 1.0
+ },
+ "1.8b_referencia_nodal_200seeds_g5.json": {
+  "n_cel": 16,
+  "blocos": {
+   "bauru_Q1": 483,
+   "bauru_Q2": 483,
+   "bauru_Q3": 483,
+   "bauru_Q4": 483,
+   "campinas_Q1": 483,
+   "campinas_Q2": 483,
+   "campinas_Q3": 483,
+   "campinas_Q4": 483,
+   "lins_Q1": 483,
+   "lins_Q2": 483,
+   "lins_Q3": 483,
+   "lins_Q4": 483,
+   "sorocaba_Q1": 483,
+   "sorocaba_Q2": 483,
+   "sorocaba_Q3": 483,
+   "sorocaba_Q4": 483
+  },
+  "corr_min": 0.9763610293280878,
+  "corr_mediana": 0.9968294040407122,
+  "corr_max": 1.0,
+  "inter_cidades_min": 0.9763610293280878,
+  "frac_pares_ge_0.995": 0.5666666666666667
+ }
+}

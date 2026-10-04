@@ -1,0 +1,20 @@
+{
+  "id": "3.4",
+  "pergunta": "Does the actual FSPL of Lins Q1 training (20.4026 dBm, baselines_analiticos.train.p_tx_eff_dbm.fspl of the run JSON) coincide to the 4th decimal place with the simulated upper edge in fismat_sympy_eqR.json (pi_bar=0.8, C_P7.pi_0.8.borda_superior_dBm=20.4022) by chance, or is there a functional dependence?",
+  "alegacao": "A5 (P7): risk (i) raised in an internal note (block 2) that the coincidence 20.4026 x 20.4022 should be checked before it becomes a sentence in the text.",
+  "hipotese": "H0: the coincidence is an artifact of (a) the actual pi_bar_treino (~0.903) being close enough to 0.8 and (b) the simulation using d~U[1,140]km, an arbitrary range chosen without looking at the actual data; under other seeds/other simulated d intervals, and under the ACTUAL (non-uniform) d of Lins Q1, the coincidence at the 4th decimal place does not repeat. H1: the coincidence repeats systematically with actual d -> there is a functional dependence to explain (not chance).",
+  "criterio_de_aceitacao": "Fixed before the run: (1) compute p(coincidence <= 0.001 dBm by chance) by re-running the simulation with >=200 independent seeds and >=5 distinct d intervals (all fixed BEFORE seeing the result, in this same round, without choosing the interval that yields the coincidence); (2) recompute the upper edge of the band with the ACTUAL d of Lins Q1 training (dist_nearest_m of the sentinel nodes, not uniform) and compare against the actual 20.4026. If the edge with actual d reproduces 20.4026 at the 4th decimal place (|diff| <= 0.001 dB) AND the probability of chance coincidence (H0) is low (< 0.05 by the empirical distribution of the >=1000 seed x interval combinations), the claim changes to 'functional dependence to explain'. Otherwise ('the coincidence with U[1,140]km was chance from the choice of interval, but with actual d it is expected by construction, since the edge with actual d is just another way of computing the same quantity as the calibrated median') -> it becomes a footnote, not a central claim.",
+  "o_que_refuta": "If the edge with actual d diverges from the published 20.4026 by more than 0.01 dB, or if the rate of chance coincidence (|diff|<=0.001 dB) under seed/interval variation is high (showing that the 4th decimal place collides easily because of the log-distance formula itself, not because of anything hidden), the 'mysterious functional dependence' reading is refuted and the correct finding is 'coincidence expected because the upper edge of the band at pi_bar~0.8-0.9 is algebraically close to the calibrated median when F1 is approximately log-normal in distance'.",
+  "populacao_e_definicoes": {
+    "borda_superior_simulada_original": "C_P7.pi_0.8.borda_superior_dBm from fismat_sympy_eqR.json, FSPL at 900 MHz with d~U[1,140]km (script of 11/09, fismat_sympy_eqR.py)",
+    "borda_superior_com_d_real": "quantile 1/(2*pi_bar_treino_real) of W=RSSI_sentinela+FSPL(dist_nearest_m) over the sentinel training nodes of Lins Q1 (same definition as test 3.2, cell lins_Q1)",
+    "p_tx_eff_real": "baselines_analiticos.train.p_tx_eff_dbm.fspl from run_c0c1cf_lins_s42_Q1_g10b2.json = 20.402631103093142"
+  },
+  "insumos_declarados_antes_de_rodar": [
+    "analysis/fismat_sympy_eqR.py and .json (sha256 cited in the internal note) to re-run the original simulation",
+    "run_c0c1cf_lins_s42_Q1_g10b2.json (dados/treinos_c1) for p_tx_eff_dbm.fspl and config.freq_mhz",
+    "transfer_dataset_lins_v19_Q1_enriched_v2_cftudo.pt for the actual dist_nearest_m of the training sentinels"
+  ],
+  "fixado_em": "2026-09-25T00:00:00-03:00 (before running the recomputation script)",
+  "script_planejado": "scripts/v3_3.4_coincidencia_fspl.py"
+}

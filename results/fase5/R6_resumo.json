@@ -1,0 +1,1142 @@
+{
+ "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_13_R6_nivel_sentinela.py",
+ "script_sha256": "6a5fb85e4e536841feb109ffdc83c6902947a93575c6443817696e0a7dfeb68d",
+ "laco_comum": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_13_laco_comum.py",
+ "laco_comum_sha256": "d6e7c2c6f5f0bb0af5f12c1fe3cbe47235e85347665f171b3fd7cd41fe813b93",
+ "script_original_reusado": "scripts/v3_2.1_3.1_deriva_calibracao.py",
+ "script_original_sha256": "9b9bcf91bab51621107a3d7978964d46dd16c5ec1a76a3789842ae1bce77f3bc",
+ "sementes": [
+  811474,
+  54892,
+  880099,
+  125243,
+  159513,
+  739191,
+  29675,
+  676375,
+  387379,
+  259492,
+  684965,
+  723969,
+  508734,
+  198718,
+  769856,
+  535105,
+  282106,
+  756541,
+  934410,
+  546703,
+  26985,
+  58662,
+  20148,
+  605829,
+  540222,
+  5424,
+  950991,
+  665836,
+  467964,
+  3501,
+  930981,
+  594931,
+  736698,
+  962757,
+  142719,
+  901191,
+  175301,
+  139100,
+  961518,
+  703500,
+  265085,
+  871666,
+  713232,
+  187349,
+  669235,
+  88695,
+  458475,
+  558282,
+  552975,
+  273559,
+  242785,
+  9777,
+  241392,
+  313330,
+  525912,
+  390809,
+  14034,
+  373703,
+  346056,
+  513794
+ ],
+ "sementes_fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase2/2.1_deriva_erro_baselines_16x60rnd.json",
+ "data_utc": "2026-10-02T02:08:09.193379+00:00",
+ "comando": "v3_13_R6_nivel_sentinela.py --consolidar",
+ "criterio": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/criterios/criterio_R6_nivel_do_sentinela.json",
+ "venv": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python",
+ "buffer_km": 2.0,
+ "grid_km": 10.0,
+ "validacao_do_laco": {
+  "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/R5R6_validacao_laco.json",
+  "reproduz": true,
+  "sha256_arquivo": "710f9a3ee407b280d6466d8bbe9fd96506a61819fcbb5f7855bf603c5e994abd"
+ },
+ "sha256_parciais_laco": {
+  "bauru_Q1": "2e0285d0c2401fa3d9f6fcffe9234f511034af768c34021277baa718934bc2c5",
+  "bauru_Q2": "bbbea62bedaa78685d7fd278307814b299cecb8c82aa7a79a9f4b5eb779efeb5",
+  "bauru_Q3": "29d1280024aabe80c0a3f32ee4b18c11fbf3e3f8dc0f25eff786c921c120e03d",
+  "bauru_Q4": "18cf0482624e99fc175c0feaa250c2b1e40869aaba4b411ce1c71c5b5d482451",
+  "campinas_Q1": "d60bc536fb9a6729f05216a8f130bff4408283632bf4620cffb049c91dc47706",
+  "campinas_Q2": "e4c9717b94705242b75c99ad7d91ac78de05225938245f3f3b21c63bd026a94f",
+  "campinas_Q3": "cf3b9f29d02015192a1e8b8f2bd093e999322de4ec8df859448703b14af74fd9",
+  "campinas_Q4": "62bdb77085f2ea48e9badd67896d77ff212b8e20bce4fb818bb435aa833c333f",
+  "lins_Q1": "d6929ea02a2a7b2e3c6bccfe1e85d591ddbd1a7d449daed34a64b3c1b76992b0",
+  "lins_Q2": "b39c0d4f3339129de7ebf5cb81c0755681d138e4947d831cf98fe5a344ee82f2",
+  "lins_Q3": "e3e171e384b1acae0809a57e7afbd792d36274f5e52e0230d390b999ac05d268",
+  "lins_Q4": "79ca968360d5680419faafdf31a92a39e8a62d6f4568250b0e49111cceb51f2b",
+  "sorocaba_Q1": "c0c3d852dfe52d271a500c39db847883a8348aac8784dde4f6529b53014b0b45",
+  "sorocaba_Q2": "5e07a0cd22341d34c676345746906d766fe674732e3f5fe6f493a349278fa976",
+  "sorocaba_Q3": "f83a59250a9d0530a0fc636fbc36d031bda2a987a62462b4c87601d6188bea01",
+  "sorocaba_Q4": "2fc928d94916d2d4fc09513f3c8e7ca8f8ddb835db6d2d8345b59c43f54fe566"
+ },
+ "id": "R6_resumo",
+ "preditores": {
+  "c-100": "constante -100 dBm",
+  "c-110": "constante -110 dBm",
+  "c-120": "constante -120 dBm",
+  "c-130": "constante -130 dBm",
+  "mediana_validos_treino": "median RSSI of the valid training nodes, per split draw",
+  "mediana_treino_inteiro_ref": "REFERENCE outside the decision criterion: median of the whole training set (constant of 2.1)"
+ },
+ "estatisticas": "sd (ddof=1) across split draws of the MAE on the valid test nodes, per cell; mean over the 16; sd (ddof=1) across the 16 cell means; ratio = mean of the sds / sd across cells; split draws without a valid test node excluded and counted",
+ "conferencia_c_-110": {
+  "alvo_enunciado": {
+   "media_dp_entre_sorteios": 8.0166,
+   "dp_entre_celulas": 2.1796
+  },
+  "obtido": {
+   "media_dp_entre_sorteios": 8.016603526005728,
+   "dp_entre_celulas": 2.179646210370172
+  },
+  "arredondado_4_casas": {
+   "media_dp_entre_sorteios": 8.0166,
+   "dp_entre_celulas": 2.1796
+  },
+  "artefato_2.1": {
+   "dp_medio_entre_sorteios_validos_dB_simples": 8.016603526005728,
+   "dp_entre_celulas_das_medias_validos_dB": 2.179646210370172,
+   "dp_medio_ponderado": 7.227361286295269
+  },
+  "absdiff_vs_artefato_2.1": {
+   "media_dp": 0.0,
+   "dp_celulas": 0.0,
+   "media_dp_ponderado": 0.0
+  },
+  "reproduz_8.0166_e_2.1796_em_4_casas": true,
+  "reproduz_artefato_2.1_dentro_de_1e-9": true,
+  "mediana_treino_inteiro_igual_a_-110_em_todos_os_sorteios": true
+ },
+ "contagem_mecanica_dos_limiares": {
+  "razoes_cinco_preditores": {
+   "c-100": 3.7215398857957256,
+   "c-110": 3.6779379551896443,
+   "c-120": 2.6766446122403043,
+   "c-130": 2.504665015530862,
+   "mediana_validos_treino": 2.068195628345077
+  },
+  "razao_minima": 2.068195628345077,
+  "razao_maxima": 3.7215398857957256,
+  "todas_ge_2": true,
+  "alguma_lt_1.5": false,
+  "mediana_validos_treino_lt_1": false,
+  "media_dp_por_preditor": {
+   "c-100": 7.242555063299269,
+   "c-110": 8.016603526005728,
+   "c-120": 9.628454316878944,
+   "c-130": 9.904511009921634,
+   "mediana_validos_treino": 7.028217472692207
+  },
+  "dp_entre_celulas_por_preditor": {
+   "c-100": 1.9461178129361076,
+   "c-110": 2.179646210370172,
+   "c-120": 3.597210579562185,
+   "c-130": 3.9544254215657575,
+   "mediana_validos_treino": 3.398236306260847
+  }
+ },
+ "leitura_do_criterio_texto": "ratio >= 2 in the five predictors -> REINFORCES: one sentence ('the ratio holds for constants from -100 to -130 dBm and for the valid-median constant, between x and y'). Ratio < 1.5 in any -> DELIMITS: the text says for which anchor the ratio holds.",
+ "se_inverter_texto": "ratio < 1 for the constant 'median of valid nodes' sends the central sentence of the abstract back for reformulation (the comparison would then depend on the anchor).",
+ "por_preditor": {
+  "c-100": {
+   "no_criterio": true,
+   "media_16_celulas_dp_entre_sorteios": 7.242555063299269,
+   "dp_entre_medias_das_celulas": 1.9461178129361076,
+   "razao": 3.7215398857957256,
+   "suplementar_ponderado": {
+    "media_16_celulas_dp_ponderado": 6.6035171804184385,
+    "razao_ponderado_sobre_dp_entre_celulas": 3.3931744196183646
+   },
+   "media_das_16_medias_das_celulas": 12.859958283595784,
+   "dp_entre_sorteios_por_celula_min_max": [
+    5.068552526795082,
+    12.155059104344836
+   ],
+   "n_sorteios_excluidos_total": 56,
+   "por_celula": {
+    "bauru_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 5.394371259000622,
+     "dp_ponderado_por_n_validos": 5.116738787528643,
+     "media_mae_validos": 12.535595459723115,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "bauru_Q2": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 5.068552526795082,
+     "dp_ponderado_por_n_validos": 4.844524716290803,
+     "media_mae_validos": 11.172680256987395,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "bauru_Q3": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.488503054600271,
+     "dp_ponderado_por_n_validos": 6.228398562117018,
+     "media_mae_validos": 11.482200494941319,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "bauru_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.420055329926323,
+     "dp_ponderado_por_n_validos": 6.770459893022976,
+     "media_mae_validos": 12.975656694668462,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "campinas_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 8.856717621424064,
+     "dp_ponderado_por_n_validos": 8.83888292759736,
+     "media_mae_validos": 12.537153509698964,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "campinas_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 7.036150489877747,
+     "dp_ponderado_por_n_validos": 6.911774850268929,
+     "media_mae_validos": 13.356920273583183,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "campinas_Q3": {
+     "n_sorteios_incluidos": 57,
+     "n_sorteios_sem_no_valido_excluidos": 3,
+     "dp_entre_sorteios": 7.179509808252868,
+     "dp_ponderado_por_n_validos": 6.624279586540486,
+     "media_mae_validos": 16.078113037973466,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "campinas_Q4": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 7.902301178593386,
+     "dp_ponderado_por_n_validos": 7.217953132094275,
+     "media_mae_validos": 13.755076469184525,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "lins_Q1": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.812259442504101,
+     "dp_ponderado_por_n_validos": 6.553256483164417,
+     "media_mae_validos": 11.327180164390066,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "lins_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 5.743850401441888,
+     "dp_ponderado_por_n_validos": 5.322260261886526,
+     "media_mae_validos": 11.967849534283786,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "lins_Q3": {
+     "n_sorteios_incluidos": 48,
+     "n_sorteios_sem_no_valido_excluidos": 12,
+     "dp_entre_sorteios": 5.196892758600942,
+     "dp_ponderado_por_n_validos": 4.1104965122847,
+     "media_mae_validos": 11.959420716795748,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "lins_Q4": {
+     "n_sorteios_incluidos": 53,
+     "n_sorteios_sem_no_valido_excluidos": 7,
+     "dp_entre_sorteios": 6.810168591592495,
+     "dp_ponderado_por_n_validos": 6.06216000851356,
+     "media_mae_validos": 11.077779425366927,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "sorocaba_Q1": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 8.016782243794784,
+     "dp_ponderado_por_n_validos": 8.25049308754564,
+     "media_mae_validos": 13.457266754398844,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "sorocaba_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 7.4923459127365675,
+     "dp_ponderado_por_n_validos": 7.176969821954341,
+     "media_mae_validos": 12.837064388201513,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "sorocaba_Q3": {
+     "n_sorteios_incluidos": 55,
+     "n_sorteios_sem_no_valido_excluidos": 5,
+     "dp_entre_sorteios": 12.155059104344836,
+     "dp_ponderado_por_n_validos": 9.829657292994964,
+     "media_mae_validos": 18.27721235846891,
+     "c_min": -100.0,
+     "c_max": -100.0
+    },
+    "sorocaba_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 6.3073612893023405,
+     "dp_ponderado_por_n_validos": 5.79796896289037,
+     "media_mae_validos": 10.962162998866315,
+     "c_min": -100.0,
+     "c_max": -100.0
+    }
+   }
+  },
+  "c-110": {
+   "no_criterio": true,
+   "media_16_celulas_dp_entre_sorteios": 8.016603526005728,
+   "dp_entre_medias_das_celulas": 2.179646210370172,
+   "razao": 3.6779379551896443,
+   "suplementar_ponderado": {
+    "media_16_celulas_dp_ponderado": 7.227361286295269,
+    "razao_ponderado_sobre_dp_entre_celulas": 3.3158414663395477
+   },
+   "media_das_16_medias_das_celulas": 18.440065452274265,
+   "dp_entre_sorteios_por_celula_min_max": [
+    5.745358846317356,
+    10.511974125784015
+   ],
+   "n_sorteios_excluidos_total": 56,
+   "por_celula": {
+    "bauru_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 7.034393648382777,
+     "dp_ponderado_por_n_validos": 6.276069819249327,
+     "media_mae_validos": 18.962056319476968,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "bauru_Q2": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.244004380441048,
+     "dp_ponderado_por_n_validos": 6.922944461094714,
+     "media_mae_validos": 14.455149335783796,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "bauru_Q3": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.7244467217127895,
+     "dp_ponderado_por_n_validos": 6.197580357940937,
+     "media_mae_validos": 19.271585715266557,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "bauru_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 8.242688924092242,
+     "dp_ponderado_por_n_validos": 7.1800857567594,
+     "media_mae_validos": 18.093771185307478,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "campinas_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 10.397658314112505,
+     "dp_ponderado_por_n_validos": 9.967112738412396,
+     "media_mae_validos": 17.72350038918343,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "campinas_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 9.064379865272642,
+     "dp_ponderado_por_n_validos": 8.956632427007403,
+     "media_mae_validos": 18.016919670093277,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "campinas_Q3": {
+     "n_sorteios_incluidos": 57,
+     "n_sorteios_sem_no_valido_excluidos": 3,
+     "dp_entre_sorteios": 8.574514037914847,
+     "dp_ponderado_por_n_validos": 7.5295677914417185,
+     "media_mae_validos": 17.02630207284341,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "campinas_Q4": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 8.457682950550817,
+     "dp_ponderado_por_n_validos": 7.426446479617344,
+     "media_mae_validos": 18.058615428435363,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "lins_Q1": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.977808852754722,
+     "dp_ponderado_por_n_validos": 6.680035077415079,
+     "media_mae_validos": 20.9864497674936,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "lins_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 5.745358846317356,
+     "dp_ponderado_por_n_validos": 5.3240973413285815,
+     "media_mae_validos": 21.96225956572383,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "lins_Q3": {
+     "n_sorteios_incluidos": 48,
+     "n_sorteios_sem_no_valido_excluidos": 12,
+     "dp_entre_sorteios": 6.02579185033425,
+     "dp_ponderado_por_n_validos": 4.6165653551104935,
+     "media_mae_validos": 20.619571547240998,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "lins_Q4": {
+     "n_sorteios_incluidos": 53,
+     "n_sorteios_sem_no_valido_excluidos": 7,
+     "dp_entre_sorteios": 7.447211074362315,
+     "dp_ponderado_por_n_validos": 6.469264704385758,
+     "media_mae_validos": 20.468331575256364,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "sorocaba_Q1": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 10.511974125784015,
+     "dp_ponderado_por_n_validos": 10.565184752880796,
+     "media_mae_validos": 15.226649007074856,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "sorocaba_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 8.818190775465292,
+     "dp_ponderado_por_n_validos": 8.753614085866431,
+     "media_mae_validos": 17.361866946066854,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "sorocaba_Q3": {
+     "n_sorteios_incluidos": 55,
+     "n_sorteios_sem_no_valido_excluidos": 5,
+     "dp_entre_sorteios": 8.668822526955049,
+     "dp_ponderado_por_n_validos": 7.189376295901918,
+     "media_mae_validos": 20.875602617097332,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "sorocaba_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 6.330729521638972,
+     "dp_ponderado_por_n_validos": 5.583203136312009,
+     "media_mae_validos": 15.93241609404413,
+     "c_min": -110.0,
+     "c_max": -110.0
+    }
+   }
+  },
+  "c-120": {
+   "no_criterio": true,
+   "media_16_celulas_dp_entre_sorteios": 9.628454316878944,
+   "dp_entre_medias_das_celulas": 3.597210579562185,
+   "razao": 2.6766446122403043,
+   "suplementar_ponderado": {
+    "media_16_celulas_dp_ponderado": 8.18532170100828,
+    "razao_ponderado_sobre_dp_entre_celulas": 2.27546359045917
+   },
+   "media_das_16_medias_das_celulas": 25.7912131127233,
+   "dp_entre_sorteios_por_celula_min_max": [
+    5.745358846317356,
+    14.219708633548453
+   ],
+   "n_sorteios_excluidos_total": 56,
+   "por_celula": {
+    "bauru_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 8.7831373744611,
+     "dp_ponderado_por_n_validos": 7.187002860882051,
+     "media_mae_validos": 27.319274267007778,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "bauru_Q2": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 9.511954363286174,
+     "dp_ponderado_por_n_validos": 8.12107604433737,
+     "media_mae_validos": 21.996875687042607,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "bauru_Q3": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 9.193477607937494,
+     "dp_ponderado_por_n_validos": 6.619883894869709,
+     "media_mae_validos": 27.62056727775018,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "bauru_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 10.500959875191556,
+     "dp_ponderado_por_n_validos": 8.113117421693259,
+     "media_mae_validos": 25.168566929166587,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "campinas_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 12.706817381044782,
+     "dp_ponderado_por_n_validos": 11.085069046393684,
+     "media_mae_validos": 24.89502425052637,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "campinas_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 10.400374848984692,
+     "dp_ponderado_por_n_validos": 10.110967469651339,
+     "media_mae_validos": 25.822611487744936,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "campinas_Q3": {
+     "n_sorteios_incluidos": 57,
+     "n_sorteios_sem_no_valido_excluidos": 3,
+     "dp_entre_sorteios": 11.175472752822644,
+     "dp_ponderado_por_n_validos": 9.696614870714146,
+     "media_mae_validos": 20.994495830289893,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "campinas_Q4": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 10.746589600701853,
+     "dp_ponderado_por_n_validos": 8.960585664996241,
+     "media_mae_validos": 24.505106863002055,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "lins_Q1": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 8.144490362446321,
+     "dp_ponderado_por_n_validos": 6.795796037722766,
+     "media_mae_validos": 30.70947359453526,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "lins_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 5.745358846317356,
+     "dp_ponderado_por_n_validos": 5.3240973413285815,
+     "media_mae_validos": 31.96225956572383,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "lins_Q3": {
+     "n_sorteios_incluidos": 48,
+     "n_sorteios_sem_no_valido_excluidos": 12,
+     "dp_entre_sorteios": 6.867753549855232,
+     "dp_ponderado_por_n_validos": 5.228106881234024,
+     "media_mae_validos": 29.748995306899598,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "lins_Q4": {
+     "n_sorteios_incluidos": 53,
+     "n_sorteios_sem_no_valido_excluidos": 7,
+     "dp_entre_sorteios": 7.4494749157667455,
+     "dp_ponderado_por_n_validos": 6.471062225575421,
+     "media_mae_validos": 30.464824184867787,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "sorocaba_Q1": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 14.219708633548453,
+     "dp_ponderado_por_n_validos": 12.90447112532545,
+     "media_mae_validos": 19.964902539566648,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "sorocaba_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 11.062176240432061,
+     "dp_ponderado_por_n_validos": 10.429394487892337,
+     "media_mae_validos": 23.98277634860787,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "sorocaba_Q3": {
+     "n_sorteios_incluidos": 55,
+     "n_sorteios_sem_no_valido_excluidos": 5,
+     "dp_entre_sorteios": 8.844397331673372,
+     "dp_ponderado_por_n_validos": 7.1376586135816495,
+     "media_mae_validos": 24.94632705899072,
+     "c_min": -120.0,
+     "c_max": -120.0
+    },
+    "sorocaba_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 8.703125385593287,
+     "dp_ponderado_por_n_validos": 6.780243229934467,
+     "media_mae_validos": 22.55732861185073,
+     "c_min": -120.0,
+     "c_max": -120.0
+    }
+   }
+  },
+  "c-130": {
+   "no_criterio": true,
+   "media_16_celulas_dp_entre_sorteios": 9.904511009921634,
+   "dp_entre_medias_das_celulas": 3.9544254215657575,
+   "razao": 2.504665015530862,
+   "suplementar_ponderado": {
+    "media_16_celulas_dp_ponderado": 8.363695706792274,
+    "razao_ponderado_sobre_dp_entre_celulas": 2.1150217326593714
+   },
+   "media_das_16_medias_das_celulas": 35.33800853070285,
+   "dp_entre_sorteios_por_celula_min_max": [
+    5.745358846317356,
+    14.24981199845177
+   ],
+   "n_sorteios_excluidos_total": 56,
+   "por_celula": {
+    "bauru_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 8.78780172766054,
+     "dp_ponderado_por_n_validos": 7.190645321939166,
+     "media_mae_validos": 37.31445859735193,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "bauru_Q2": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 9.52938705977615,
+     "dp_ponderado_por_n_validos": 8.137699865901672,
+     "media_mae_validos": 31.97003145702883,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "bauru_Q3": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 9.246570665725214,
+     "dp_ponderado_por_n_validos": 6.6237960408554875,
+     "media_mae_validos": 37.579570559281656,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "bauru_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 10.610344911843942,
+     "dp_ponderado_por_n_validos": 8.13561403677674,
+     "media_mae_validos": 35.07065371647986,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "campinas_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 12.7718686454732,
+     "dp_ponderado_por_n_validos": 11.100122329284586,
+     "media_mae_validos": 34.851441733841256,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "campinas_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 10.501669367048583,
+     "dp_ponderado_por_n_validos": 10.181759117306612,
+     "media_mae_validos": 35.668400371032625,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "campinas_Q3": {
+     "n_sorteios_incluidos": 57,
+     "n_sorteios_sem_no_valido_excluidos": 3,
+     "dp_entre_sorteios": 11.677295997388633,
+     "dp_ponderado_por_n_validos": 10.112327836178851,
+     "media_mae_validos": 30.002639733835387,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "campinas_Q4": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 11.217695565364243,
+     "dp_ponderado_por_n_validos": 9.233331100163488,
+     "media_mae_validos": 33.993163677843555,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "lins_Q1": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 8.16457385035184,
+     "dp_ponderado_por_n_validos": 6.806938360925196,
+     "media_mae_validos": 40.67803889336153,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "lins_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 5.745358846317356,
+     "dp_ponderado_por_n_validos": 5.3240973413285815,
+     "media_mae_validos": 41.962259565723826,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "lins_Q3": {
+     "n_sorteios_incluidos": 48,
+     "n_sorteios_sem_no_valido_excluidos": 12,
+     "dp_entre_sorteios": 6.868296013381583,
+     "dp_ponderado_por_n_validos": 5.22875790174088,
+     "media_mae_validos": 39.748356442698544,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "lins_Q4": {
+     "n_sorteios_incluidos": 53,
+     "n_sorteios_sem_no_valido_excluidos": 7,
+     "dp_entre_sorteios": 7.449493191436352,
+     "dp_ponderado_por_n_validos": 6.471076545917273,
+     "media_mae_validos": 40.464806269693405,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "sorocaba_Q1": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 14.24981199845177,
+     "dp_ponderado_por_n_validos": 12.918332125412661,
+     "media_mae_validos": 29.931880414877455,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "sorocaba_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 11.477653051284262,
+     "dp_ponderado_por_n_validos": 10.697573614588666,
+     "media_mae_validos": 33.491825094974466,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "sorocaba_Q3": {
+     "n_sorteios_incluidos": 55,
+     "n_sorteios_sem_no_valido_excluidos": 5,
+     "dp_entre_sorteios": 11.184587994571322,
+     "dp_ponderado_por_n_validos": 8.599649448570098,
+     "media_mae_validos": 30.682240644982933,
+     "c_min": -130.0,
+     "c_max": -130.0
+    },
+    "sorocaba_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 8.989767272671168,
+     "dp_ponderado_por_n_validos": 7.057410321786458,
+     "media_mae_validos": 31.998369318238367,
+     "c_min": -130.0,
+     "c_max": -130.0
+    }
+   }
+  },
+  "mediana_validos_treino": {
+   "no_criterio": true,
+   "media_16_celulas_dp_entre_sorteios": 7.028217472692207,
+   "dp_entre_medias_das_celulas": 3.398236306260847,
+   "razao": 2.068195628345077,
+   "suplementar_ponderado": {
+    "media_16_celulas_dp_ponderado": 6.233127219370381,
+    "razao_ponderado_sobre_dp_entre_celulas": 1.8342241850240326
+   },
+   "media_das_16_medias_das_celulas": 11.780820834931923,
+   "dp_entre_sorteios_por_celula_min_max": [
+    3.7805430527255077,
+    13.694381347181798
+   ],
+   "n_sorteios_excluidos_total": 56,
+   "por_celula": {
+    "bauru_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 5.55884473531704,
+     "dp_ponderado_por_n_validos": 4.233488377281998,
+     "media_mae_validos": 10.392875901372848,
+     "c_min": -94.8379135131836,
+     "c_max": -87.89096069335938
+    },
+    "bauru_Q2": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 6.505814757067873,
+     "dp_ponderado_por_n_validos": 5.839633787451852,
+     "media_mae_validos": 11.209312564008565,
+     "c_min": -109.80084991455078,
+     "c_max": -93.30965042114258
+    },
+    "bauru_Q3": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.237760404975389,
+     "dp_ponderado_por_n_validos": 5.832927480595323,
+     "media_mae_validos": 9.821223106360927,
+     "c_min": -96.45926666259766,
+     "c_max": -89.89234161376953
+    },
+    "bauru_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.912986181183188,
+     "dp_ponderado_por_n_validos": 6.679004878730452,
+     "media_mae_validos": 11.61234520609419,
+     "c_min": -98.10563659667969,
+     "c_max": -90.89920806884766
+    },
+    "campinas_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 8.262897240424472,
+     "dp_ponderado_por_n_validos": 8.020247817221579,
+     "media_mae_validos": 12.653619650571823,
+     "c_min": -98.33379364013672,
+     "c_max": -92.0477523803711
+    },
+    "campinas_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 6.603846044830885,
+     "dp_ponderado_por_n_validos": 6.350970119151425,
+     "media_mae_validos": 13.227286717923068,
+     "c_min": -98.31445693969727,
+     "c_max": -92.80158996582031
+    },
+    "campinas_Q3": {
+     "n_sorteios_incluidos": 57,
+     "n_sorteios_sem_no_valido_excluidos": 3,
+     "dp_entre_sorteios": 8.042985187139912,
+     "dp_ponderado_por_n_validos": 7.588118002585384,
+     "media_mae_validos": 18.06301354276437,
+     "c_min": -113.00789642333984,
+     "c_max": -95.09523010253906
+    },
+    "campinas_Q4": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 8.335363146745937,
+     "dp_ponderado_por_n_validos": 7.497771842947749,
+     "media_mae_validos": 13.370965302093305,
+     "c_min": -103.07562255859375,
+     "c_max": -94.50753021240234
+    },
+    "lins_Q1": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 5.665625900297298,
+     "dp_ponderado_por_n_validos": 5.047132659671376,
+     "media_mae_validos": 7.554196806080268,
+     "c_min": -93.75455474853516,
+     "c_max": -87.78062438964844
+    },
+    "lins_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 3.7805430527255077,
+     "dp_ponderado_por_n_validos": 3.4935182219111014,
+     "media_mae_validos": 8.182952822514398,
+     "c_min": -93.92247009277344,
+     "c_max": -85.88698959350586
+    },
+    "lins_Q3": {
+     "n_sorteios_incluidos": 48,
+     "n_sorteios_sem_no_valido_excluidos": 12,
+     "dp_entre_sorteios": 4.438976266536278,
+     "dp_ponderado_por_n_validos": 3.7044663391612436,
+     "media_mae_validos": 7.59361653180596,
+     "c_min": -93.84014129638672,
+     "c_max": -88.65188598632812
+    },
+    "lins_Q4": {
+     "n_sorteios_incluidos": 53,
+     "n_sorteios_sem_no_valido_excluidos": 7,
+     "dp_entre_sorteios": 4.4543898138646405,
+     "dp_ponderado_por_n_validos": 3.848370578573233,
+     "media_mae_validos": 7.493268362463339,
+     "c_min": -94.9809341430664,
+     "c_max": -87.70841979980469
+    },
+    "sorocaba_Q1": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 8.108311521226877,
+     "dp_ponderado_por_n_validos": 8.085872026133964,
+     "media_mae_validos": 14.187416429502157,
+     "c_min": -101.32052612304688,
+     "c_max": -94.70652770996094
+    },
+    "sorocaba_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 7.41437891052169,
+     "dp_ponderado_por_n_validos": 6.845831909922074,
+     "media_mae_validos": 13.473778863406475,
+     "c_min": -101.24993896484375,
+     "c_max": -93.62422180175781
+    },
+    "sorocaba_Q3": {
+     "n_sorteios_incluidos": 55,
+     "n_sorteios_sem_no_valido_excluidos": 5,
+     "dp_entre_sorteios": 13.694381347181798,
+     "dp_ponderado_por_n_validos": 10.9653773859619,
+     "media_mae_validos": 18.58956767257394,
+     "c_min": -103.59259033203125,
+     "c_max": -93.40986633300781
+    },
+    "sorocaba_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 6.434375053036531,
+     "dp_ponderado_por_n_validos": 5.697304082625451,
+     "media_mae_validos": 11.06769387937514,
+     "c_min": -105.03801727294922,
+     "c_max": -93.08100891113281
+    }
+   }
+  },
+  "mediana_treino_inteiro_ref": {
+   "no_criterio": false,
+   "media_16_celulas_dp_entre_sorteios": 8.016603526005728,
+   "dp_entre_medias_das_celulas": 2.179646210370172,
+   "razao": 3.6779379551896443,
+   "suplementar_ponderado": {
+    "media_16_celulas_dp_ponderado": 7.227361286295269,
+    "razao_ponderado_sobre_dp_entre_celulas": 3.3158414663395477
+   },
+   "media_das_16_medias_das_celulas": 18.440065452274265,
+   "dp_entre_sorteios_por_celula_min_max": [
+    5.745358846317356,
+    10.511974125784015
+   ],
+   "n_sorteios_excluidos_total": 56,
+   "por_celula": {
+    "bauru_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 7.034393648382777,
+     "dp_ponderado_por_n_validos": 6.276069819249327,
+     "media_mae_validos": 18.962056319476968,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "bauru_Q2": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.244004380441048,
+     "dp_ponderado_por_n_validos": 6.922944461094714,
+     "media_mae_validos": 14.455149335783796,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "bauru_Q3": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.7244467217127895,
+     "dp_ponderado_por_n_validos": 6.197580357940937,
+     "media_mae_validos": 19.271585715266557,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "bauru_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 8.242688924092242,
+     "dp_ponderado_por_n_validos": 7.1800857567594,
+     "media_mae_validos": 18.093771185307478,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "campinas_Q1": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 10.397658314112505,
+     "dp_ponderado_por_n_validos": 9.967112738412396,
+     "media_mae_validos": 17.72350038918343,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "campinas_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 9.064379865272642,
+     "dp_ponderado_por_n_validos": 8.956632427007403,
+     "media_mae_validos": 18.016919670093277,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "campinas_Q3": {
+     "n_sorteios_incluidos": 57,
+     "n_sorteios_sem_no_valido_excluidos": 3,
+     "dp_entre_sorteios": 8.574514037914847,
+     "dp_ponderado_por_n_validos": 7.5295677914417185,
+     "media_mae_validos": 17.02630207284341,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "campinas_Q4": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 8.457682950550817,
+     "dp_ponderado_por_n_validos": 7.426446479617344,
+     "media_mae_validos": 18.058615428435363,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "lins_Q1": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 7.977808852754722,
+     "dp_ponderado_por_n_validos": 6.680035077415079,
+     "media_mae_validos": 20.9864497674936,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "lins_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 5.745358846317356,
+     "dp_ponderado_por_n_validos": 5.3240973413285815,
+     "media_mae_validos": 21.96225956572383,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "lins_Q3": {
+     "n_sorteios_incluidos": 48,
+     "n_sorteios_sem_no_valido_excluidos": 12,
+     "dp_entre_sorteios": 6.02579185033425,
+     "dp_ponderado_por_n_validos": 4.6165653551104935,
+     "media_mae_validos": 20.619571547240998,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "lins_Q4": {
+     "n_sorteios_incluidos": 53,
+     "n_sorteios_sem_no_valido_excluidos": 7,
+     "dp_entre_sorteios": 7.447211074362315,
+     "dp_ponderado_por_n_validos": 6.469264704385758,
+     "media_mae_validos": 20.468331575256364,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "sorocaba_Q1": {
+     "n_sorteios_incluidos": 58,
+     "n_sorteios_sem_no_valido_excluidos": 2,
+     "dp_entre_sorteios": 10.511974125784015,
+     "dp_ponderado_por_n_validos": 10.565184752880796,
+     "media_mae_validos": 15.226649007074856,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "sorocaba_Q2": {
+     "n_sorteios_incluidos": 59,
+     "n_sorteios_sem_no_valido_excluidos": 1,
+     "dp_entre_sorteios": 8.818190775465292,
+     "dp_ponderado_por_n_validos": 8.753614085866431,
+     "media_mae_validos": 17.361866946066854,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "sorocaba_Q3": {
+     "n_sorteios_incluidos": 55,
+     "n_sorteios_sem_no_valido_excluidos": 5,
+     "dp_entre_sorteios": 8.668822526955049,
+     "dp_ponderado_por_n_validos": 7.189376295901918,
+     "media_mae_validos": 20.875602617097332,
+     "c_min": -110.0,
+     "c_max": -110.0
+    },
+    "sorocaba_Q4": {
+     "n_sorteios_incluidos": 56,
+     "n_sorteios_sem_no_valido_excluidos": 4,
+     "dp_entre_sorteios": 6.330729521638972,
+     "dp_ponderado_por_n_validos": 5.583203136312009,
+     "media_mae_validos": 15.93241609404413,
+     "c_min": -110.0,
+     "c_max": -110.0
+    }
+   }
+  }
+ },
+ "interpretacao": "NOT done in this artifact (outside the pipeline scope)"
+}

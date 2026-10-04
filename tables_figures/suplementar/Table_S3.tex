@@ -1,0 +1,26 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,array,graphicx}
+\usepackage{microtype}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\celula}[1]{\begin{tabular}[c]{@{}c@{}}#1\end{tabular}}
+\newsavebox{\tabcaixa}
+\newcommand{\tabajusta}[1]{\sbox{\tabcaixa}{#1}\ifdim\wd\tabcaixa>\linewidth\resizebox{\linewidth}{!}{\usebox{\tabcaixa}}\else\usebox{\tabcaixa}\fi}
+\begin{document}
+
+{\large\bfseries Table S3. Trained models at $g = 5$~km in the four Bauru cells (five draws)}
+
+\medskip
+\small
+A trained model's valid-node MAE drifts with the split draw. Split draws $101$--$105$ in the four Bauru cells, $g = 5$~km, $b = 2$~km, training seed $42$, training budget of eight epochs. Valid-node mean absolute error of received power, in decibels, mean over draws (between-draw standard deviation) for the graph regressor (GNN) and the perceptron (MLP); bottom row: standard deviation of the per-cell means. Over the five draws, the between-draw standard deviation of the valid-node MAE is $5.2$ to $21.6$ times (GNN) and $4.7$ to $32.0$ times (MLP) the same-seed repeat difference ($0.132$~dB, the largest difference between two training repeats with the same seed and partition, measured at $5$~km). In Bauru Q1 and Bauru Q3, where five training seeds were also run at split seed $42$, it is $11.7$ (GNN) and $38.2$ (MLP) times the standard deviation across the five training seeds in Bauru Q1, and $2.8$ (GNN) and $50.6$ (MLP) times in Bauru Q3.
+
+\medskip
+\centering
+\tabajusta{\input{../tables_v3-12/T7b_deriva_modelo_A4_v3-12.tex}}
+
+\end{document}

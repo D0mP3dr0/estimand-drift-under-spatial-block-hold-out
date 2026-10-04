@@ -1,0 +1,50 @@
+{
+ "bbox_cidade_bauru_lins": [
+  1.785973047313746,
+  0.4466176240750966
+ ],
+ "bbox_cidade_bauru": [
+  -50.063751220703125,
+  -48.064029693603516,
+  -23.324304580688477,
+  -21.324583053588867
+ ],
+ "bbox_cidade_lins": [
+  -50.745140075683594,
+  -48.745418548583984,
+  -22.679304122924805,
+  -20.679582595825195
+ ],
+ "bauru_Q1_em_qualquer_lins": 0.7569925925925926,
+ "bauru_Q2_em_qualquer_lins": 0.24018317901234568,
+ "bauru_Q3_em_qualquer_lins": 0.2674962962962963,
+ "bauru_Q4_em_qualquer_lins": 0.08487283950617285,
+ "lins_Q1_em_qualquer_bauru": 0.08507469135802469,
+ "lins_Q2_em_qualquer_bauru": 0.26657237654320987,
+ "lins_Q3_em_qualquer_bauru": 0.24142345679012345,
+ "lins_Q4_em_qualquer_bauru": 0.7564743827160494,
+ "bbox_cidade_campinas_sorocaba": [
+  2.257530408416642,
+  0.5645398001950928
+ ],
+ "bbox_cidade_campinas": [
+  -48.06097412109375,
+  -46.06125259399414,
+  -23.90513801574707,
+  -21.90541648864746
+ ],
+ "bbox_cidade_sorocaba": [
+  -48.452640533447266,
+  -46.452919006347656,
+  -24.5009708404541,
+  -22.501249313354492
+ ],
+ "campinas_Q1_em_qualquer_sorocaba": 0.2743622685185185,
+ "campinas_Q2_em_qualquer_sorocaba": 0.16740609567901235,
+ "campinas_Q3_em_qualquer_sorocaba": 0.6746782407407408,
+ "campinas_Q4_em_qualquer_sorocaba": 0.41166466049382716,
+ "sorocaba_Q1_em_qualquer_campinas": 0.4106561728395062,
+ "sorocaba_Q2_em_qualquer_campinas": 0.6756867283950617,
+ "sorocaba_Q3_em_qualquer_campinas": 0.166995987654321,
+ "sorocaba_Q4_em_qualquer_campinas": 0.27477237654320985
+}

@@ -1,0 +1,3353 @@
+{
+  "artefato_tipo": "blocos_efetivos_20celulas",
+  "frente": "analysis",
+  "convocado_por": "authors",
+  "fio": "analysis",
+  "n_celulas": 20,
+  "portao_exato_geral_passou": false,
+  "portao_quase_exato_geral_passou_lt_1e-4": false,
+  "celulas": [
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json",
+      "run_label": "c0c1cf_bauru_s42_Q1_g10b2",
+      "cidade": "bauru",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 9.900476068013856e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9188826,
+            "val": 1983247,
+            "test": 1787927
+          },
+          "apos": {
+            "train": 9188826,
+            "val": 1033406,
+            "test": 828161
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9188831,
+            "val": 1983242,
+            "test": 1787927
+          },
+          "apos": {
+            "train": 9188831,
+            "val": 1033370,
+            "test": 828243
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "52d91a141aa9b17ce6200073c092431991e5c080e760e0df3f55b01722bebc1a",
+          "val": "3bdb7d62097ac00136e29a5f378d29e89e2c1b1a939fee944f48241b1f0d06e7",
+          "test": "8a7a298ea0ace18e6128275c4e8d282983be4c33f050abd67b15dc98534c2ba7"
+        },
+        "sha256_idx_declarado": {
+          "train": "7ce69f2153a11e0b3019823367d32ee8f1d32832be8e62378a09bbd33e6f7a17",
+          "val": "2c0c847ebf26a317df1ee2d11f19c899480a6848b3e3acee89efd0b715a0eeb7",
+          "test": "f070b3e31cec5b7e10810b0b093d1149b7a7fe3fd9ef26e1643d9e29d7cc449d"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 20,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1033406,
+          "d_min_km": 2.000002205489565,
+          "d_max_km": 10.011300163293171,
+          "d_mediana_km": 3.48416424653279
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 17,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 17,
+        "n_nao_efetivos": 3,
+        "nao_efetivos_borda": 3,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 828161,
+          "d_min_km": 2.0000022054895794,
+          "d_max_km": 8.60087135698244,
+          "d_mediana_km": 3.6382792583571733
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json",
+      "run_label": "c0c1cf_bauru_s42_Q2_g10b2",
+      "cidade": "bauru",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 9.900476068013856e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9188826,
+            "val": 1983247,
+            "test": 1787927
+          },
+          "apos": {
+            "train": 9188826,
+            "val": 1033406,
+            "test": 828161
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9188829,
+            "val": 1983244,
+            "test": 1787927
+          },
+          "apos": {
+            "train": 9188829,
+            "val": 1033369,
+            "test": 828243
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "52d91a141aa9b17ce6200073c092431991e5c080e760e0df3f55b01722bebc1a",
+          "val": "3bdb7d62097ac00136e29a5f378d29e89e2c1b1a939fee944f48241b1f0d06e7",
+          "test": "8a7a298ea0ace18e6128275c4e8d282983be4c33f050abd67b15dc98534c2ba7"
+        },
+        "sha256_idx_declarado": {
+          "train": "c8ff5e72549a5c4ad405452eb7da93c935937a6bd6a5405ca614ff7a976eeb32",
+          "val": "43c41930904045c175d8a48f9df9dbbbf2f87dc1020b077f6e3c27e4d13ab135",
+          "test": "f070b3e31cec5b7e10810b0b093d1149b7a7fe3fd9ef26e1643d9e29d7cc449d"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 20,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1033406,
+          "d_min_km": 2.000002205489565,
+          "d_max_km": 10.011300163293171,
+          "d_mediana_km": 3.48416424653279
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 17,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 17,
+        "n_nao_efetivos": 3,
+        "nao_efetivos_borda": 3,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 828161,
+          "d_min_km": 2.0000022054895794,
+          "d_max_km": 8.60087135698244,
+          "d_mediana_km": 3.6382792583571733
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json",
+      "run_label": "c0c1cf_bauru_s42_Q3_g10b2",
+      "cidade": "bauru",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 8.70375044606721e-06,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9188538,
+            "val": 1988853,
+            "test": 1782609
+          },
+          "apos": {
+            "train": 9188538,
+            "val": 1034028,
+            "test": 817603
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9188528,
+            "val": 1988868,
+            "test": 1782604
+          },
+          "apos": {
+            "train": 9188528,
+            "val": 1034037,
+            "test": 817601
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "6ada8e19c1b04b86b688cf893b0788fd433299329102e9eab9df94a6b4bb1db5",
+          "val": "7d9a991bd8f72f4ea0ff96568fe485c253c2e57fb7539bf28a09d80e8be9db56",
+          "test": "a5471fea2dda4822e552e137fb1e982bd7dbe6b51832ab55568921a18be0cf3f"
+        },
+        "sha256_idx_declarado": {
+          "train": "656caa03af953d51ab94e17e74170947466f7c3e7db8266f61d3ce5baefedf84",
+          "val": "936dcc7d9b9f5d06bd41403c58013579e3df551c2ad6205273f11ac0f5cb7193",
+          "test": "9faaea122e57bb4a8f2f602a9138caa1eb17ea3cae54bb5d95595c6d5f8742f7"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 1,
+        "n_efetivos_com_retencao_ge_10pct": 19,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1034028,
+          "d_min_km": 2.0000290698106844,
+          "d_max_km": 10.014766371884754,
+          "d_mediana_km": 3.4841816660416516
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 16,
+        "n_quase_vazios": 1,
+        "n_efetivos_com_retencao_ge_10pct": 15,
+        "n_nao_efetivos": 4,
+        "nao_efetivos_borda": 4,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 120,
+            "i": 10,
+            "j": 0,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": true,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 817603,
+          "d_min_km": 2.0001039628528177,
+          "d_max_km": 8.602503605170027,
+          "d_mediana_km": 3.6691682682159112
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json",
+      "run_label": "c0c1cf_bauru_s42_Q4_g10b2",
+      "cidade": "bauru",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 6.769596773803595e-06,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9188538,
+            "val": 1988853,
+            "test": 1782609
+          },
+          "apos": {
+            "train": 9188538,
+            "val": 1034028,
+            "test": 817603
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9188530,
+            "val": 1988866,
+            "test": 1782604
+          },
+          "apos": {
+            "train": 9188530,
+            "val": 1034035,
+            "test": 817601
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "6ada8e19c1b04b86b688cf893b0788fd433299329102e9eab9df94a6b4bb1db5",
+          "val": "7d9a991bd8f72f4ea0ff96568fe485c253c2e57fb7539bf28a09d80e8be9db56",
+          "test": "a5471fea2dda4822e552e137fb1e982bd7dbe6b51832ab55568921a18be0cf3f"
+        },
+        "sha256_idx_declarado": {
+          "train": "d1db695dbce9ea542a4415f786a085c0a5dc616e859abd962bb8208017f19318",
+          "val": "0f5a7946aa3fee79ae657834f18446f6d25f2512452b3b0c0fec3f4d1a264c41",
+          "test": "9faaea122e57bb4a8f2f602a9138caa1eb17ea3cae54bb5d95595c6d5f8742f7"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 1,
+        "n_efetivos_com_retencao_ge_10pct": 19,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1034028,
+          "d_min_km": 2.0000290698106844,
+          "d_max_km": 10.014766371884754,
+          "d_mediana_km": 3.4841816660416516
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 16,
+        "n_quase_vazios": 1,
+        "n_efetivos_com_retencao_ge_10pct": 15,
+        "n_nao_efetivos": 4,
+        "nao_efetivos_borda": 4,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 120,
+            "i": 10,
+            "j": 0,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": true,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 817603,
+          "d_min_km": 2.0001039628528177,
+          "d_max_km": 8.602503605170027,
+          "d_mediana_km": 3.6691682682159112
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q1_g10b2.json",
+      "run_label": "c0c1cf_campinas_s42_Q1_g10b2",
+      "cidade": "campinas",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 3.409328897958786e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9188777,
+            "val": 1986410,
+            "test": 1784813
+          },
+          "apos": {
+            "train": 9188777,
+            "val": 1033214,
+            "test": 821304
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9188776,
+            "val": 1986412,
+            "test": 1784812
+          },
+          "apos": {
+            "train": 9188776,
+            "val": 1033211,
+            "test": 821276
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "008c653a9204470287281ff6f688fb974c2519f03ffb03c8a01e95576cd2efb4",
+          "val": "aed51863bf6e71af0ac0a5e825f3c96c72bfbcc48ceb0fd09b3e915481da4d34",
+          "test": "78ea85965bc4f60689490b7b9277358af5e7a4d1e15a56c4b1ec4d440adab174"
+        },
+        "sha256_idx_declarado": {
+          "train": "5fbb4173644ede4f21dd4c7396368fb2f2ce3ac02877907ddcc78ce43cdeb3ef",
+          "val": "91ac6abe762d9c1b7243727085b8a9fc15de5393464e61a1db92abaaa1cb5008",
+          "test": "f2e230c569a7d6d0f867607f12ca0582474ef7dbd61839218d0b5eed05a7b617"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 20,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1033214,
+          "d_min_km": 2.000056906852179,
+          "d_max_km": 9.997512181220964,
+          "d_mediana_km": 3.4841731773681808
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 17,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 17,
+        "n_nao_efetivos": 3,
+        "nao_efetivos_borda": 3,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 821304,
+          "d_min_km": 2.0000021983295504,
+          "d_max_km": 8.602502275270238,
+          "d_mediana_km": 3.6515229306305486
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q2_g10b2.json",
+      "run_label": "c0c1cf_campinas_s42_Q2_g10b2",
+      "cidade": "campinas",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 3.409328897958786e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9188777,
+            "val": 1986410,
+            "test": 1784813
+          },
+          "apos": {
+            "train": 9188777,
+            "val": 1033214,
+            "test": 821304
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9188780,
+            "val": 1986408,
+            "test": 1784812
+          },
+          "apos": {
+            "train": 9188780,
+            "val": 1033207,
+            "test": 821276
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "008c653a9204470287281ff6f688fb974c2519f03ffb03c8a01e95576cd2efb4",
+          "val": "aed51863bf6e71af0ac0a5e825f3c96c72bfbcc48ceb0fd09b3e915481da4d34",
+          "test": "78ea85965bc4f60689490b7b9277358af5e7a4d1e15a56c4b1ec4d440adab174"
+        },
+        "sha256_idx_declarado": {
+          "train": "7b770c8bde187bbad51cad761aa1aa091731c3f15dd7321110caf8214de4e5da",
+          "val": "372d85d30560e380c3a0d0a2113e7872c4fe07114654f37784fcd4b8d9ffcc6f",
+          "test": "f2e230c569a7d6d0f867607f12ca0582474ef7dbd61839218d0b5eed05a7b617"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 20,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1033214,
+          "d_min_km": 2.000056906852179,
+          "d_max_km": 9.997512181220964,
+          "d_mediana_km": 3.4841731773681808
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 17,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 17,
+        "n_nao_efetivos": 3,
+        "nao_efetivos_borda": 3,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 821304,
+          "d_min_km": 2.0000021983295504,
+          "d_max_km": 8.602502275270238,
+          "d_mediana_km": 3.6515229306305486
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q3_g10b2.json",
+      "run_label": "c0c1cf_campinas_s42_Q3_g10b2",
+      "cidade": "campinas",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 4.8628612346075245e-06,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9187808,
+            "val": 1992507,
+            "test": 1779685
+          },
+          "apos": {
+            "train": 9187808,
+            "val": 1038051,
+            "test": 822565
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9187817,
+            "val": 1992502,
+            "test": 1779681
+          },
+          "apos": {
+            "train": 9187817,
+            "val": 1038048,
+            "test": 822561
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "1364405513dc20695a8c809f07cc13161b0288c587b7c16c9718afbb42fc6eaf",
+          "val": "8e44201ae9c1a4893e7a9df0fced952d65bffcbd06c9be6ff94d64c1a3271153",
+          "test": "8e28f1397bd7204ec320313254281950ec43dbe942174556adf5e32e0686f7f4"
+        },
+        "sha256_idx_declarado": {
+          "train": "5bf011d5f11f216099a3425dda17d0ce728c9ef16c0d0d579e3760ee0c7ad72c",
+          "val": "be5422227cb111a48d64a6cb1e4dd82c6186837064529f579e8a2b33d4bf3714",
+          "test": "11ef172422c555b6e745b0d51c0e50301475f6723df5a84bf575152ccd270056"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 19,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 19,
+        "n_nao_efetivos": 1,
+        "nao_efetivos_borda": 1,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 125,
+            "i": 10,
+            "j": 5,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1038051,
+          "d_min_km": 2.0000108095920797,
+          "d_max_km": 9.999606496166805,
+          "d_mediana_km": 3.4841850433194894
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 15,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 15,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 120,
+            "i": 10,
+            "j": 0,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": true,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 121,
+            "i": 10,
+            "j": 1,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 822565,
+          "d_min_km": 2.0000815687527274,
+          "d_max_km": 8.586126017705318,
+          "d_mediana_km": 3.6691652476624426
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q4_g10b2.json",
+      "run_label": "c0c1cf_campinas_s42_Q4_g10b2",
+      "cidade": "campinas",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 4.8628612346075245e-06,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9187808,
+            "val": 1992507,
+            "test": 1779685
+          },
+          "apos": {
+            "train": 9187808,
+            "val": 1038051,
+            "test": 822565
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9187819,
+            "val": 1992502,
+            "test": 1779679
+          },
+          "apos": {
+            "train": 9187819,
+            "val": 1038048,
+            "test": 822561
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "1364405513dc20695a8c809f07cc13161b0288c587b7c16c9718afbb42fc6eaf",
+          "val": "8e44201ae9c1a4893e7a9df0fced952d65bffcbd06c9be6ff94d64c1a3271153",
+          "test": "8e28f1397bd7204ec320313254281950ec43dbe942174556adf5e32e0686f7f4"
+        },
+        "sha256_idx_declarado": {
+          "train": "9559a58d6a214ee23e53c7c1eafde9e2eab47467e2f9caf8f1aefe73ee6c4764",
+          "val": "be5422227cb111a48d64a6cb1e4dd82c6186837064529f579e8a2b33d4bf3714",
+          "test": "11ef172422c555b6e745b0d51c0e50301475f6723df5a84bf575152ccd270056"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 19,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 19,
+        "n_nao_efetivos": 1,
+        "nao_efetivos_borda": 1,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 125,
+            "i": 10,
+            "j": 5,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1038051,
+          "d_min_km": 2.0000108095920797,
+          "d_max_km": 9.999606496166805,
+          "d_mediana_km": 3.4841850433194894
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 15,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 15,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 120,
+            "i": 10,
+            "j": 0,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": true,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 121,
+            "i": 10,
+            "j": 1,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 822565,
+          "d_min_km": 2.0000815687527274,
+          "d_max_km": 8.586126017705318,
+          "d_mediana_km": 3.6691652476624426
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json",
+      "run_label": "c0c1cf_lins_s42_Q1_g10b2",
+      "cidade": "lins",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 6.062430913547715e-06,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9189807,
+            "val": 1979416,
+            "test": 1790777
+          },
+          "apos": {
+            "train": 9189807,
+            "val": 1031213,
+            "test": 833592
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9189821,
+            "val": 1979404,
+            "test": 1790775
+          },
+          "apos": {
+            "train": 9189821,
+            "val": 1031207,
+            "test": 833593
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "94f8671694ceb8fbe118e7d679c9a49f8e0aa6aea5856781d32c49227c03472f",
+          "val": "01fab049a7145287948a6d258ae35dc2995c20cfa43cb82d7da380635aed29d9",
+          "test": "743b11ae3659e686070438fd4d2f418671baef95a8c6950dc5f0d32e65e85903"
+        },
+        "sha256_idx_declarado": {
+          "train": "d4a122f2582a3609a9dc13e97adcaed991c2a32589fd3f7586c6f3c7fd8f807d",
+          "val": "b4ac444ba0de4323496d94844ef860f61a07ee66c3555b8eb6248c61f8d8cd45",
+          "test": "3cdac4e6c3c76e6ce4fe66f19904442bc85fd02aaa9d28866df86d7377a754c6"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 20,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1031213,
+          "d_min_km": 2.0000762421097793,
+          "d_max_km": 10.013889693049745,
+          "d_mediana_km": 3.476386621131258
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 17,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 17,
+        "n_nao_efetivos": 3,
+        "nao_efetivos_borda": 3,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 833592,
+          "d_min_km": 2.000015829397561,
+          "d_max_km": 8.602499019006144,
+          "d_mediana_km": 3.6074990297917466
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q2_g10b2.json",
+      "run_label": "c0c1cf_lins_s42_Q2_g10b2",
+      "cidade": "lins",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 6.062430913547715e-06,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9189807,
+            "val": 1979416,
+            "test": 1790777
+          },
+          "apos": {
+            "train": 9189807,
+            "val": 1031213,
+            "test": 833592
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9189821,
+            "val": 1979404,
+            "test": 1790775
+          },
+          "apos": {
+            "train": 9189821,
+            "val": 1031207,
+            "test": 833593
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "94f8671694ceb8fbe118e7d679c9a49f8e0aa6aea5856781d32c49227c03472f",
+          "val": "01fab049a7145287948a6d258ae35dc2995c20cfa43cb82d7da380635aed29d9",
+          "test": "743b11ae3659e686070438fd4d2f418671baef95a8c6950dc5f0d32e65e85903"
+        },
+        "sha256_idx_declarado": {
+          "train": "d4a122f2582a3609a9dc13e97adcaed991c2a32589fd3f7586c6f3c7fd8f807d",
+          "val": "b4ac444ba0de4323496d94844ef860f61a07ee66c3555b8eb6248c61f8d8cd45",
+          "test": "3cdac4e6c3c76e6ce4fe66f19904442bc85fd02aaa9d28866df86d7377a754c6"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 20,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1031213,
+          "d_min_km": 2.0000762421097793,
+          "d_max_km": 10.013889693049745,
+          "d_mediana_km": 3.476386621131258
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 17,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 17,
+        "n_nao_efetivos": 3,
+        "nao_efetivos_borda": 3,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 833592,
+          "d_min_km": 2.000015829397561,
+          "d_max_km": 8.602499019006144,
+          "d_mediana_km": 3.6074990297917466
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q3_g10b2.json",
+      "run_label": "c0c1cf_lins_s42_Q3_g10b2",
+      "cidade": "lins",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 4.728986626668332e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9189009,
+            "val": 1985141,
+            "test": 1785850
+          },
+          "apos": {
+            "train": 9189009,
+            "val": 1032805,
+            "test": 824740
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9189022,
+            "val": 1985135,
+            "test": 1785843
+          },
+          "apos": {
+            "train": 9189022,
+            "val": 1032790,
+            "test": 824701
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "970bf64fd44f94f89db7a974e486668eac3080d6ad8fe9e4304e0819794aa333",
+          "val": "bfa322585e83a247555414723cf863b13542f3df468bdd437096bfef5a2a10fa",
+          "test": "b6a964e54bc49090e56c6f1edee10569e826789dc3a04899b8147b2cbc4caf82"
+        },
+        "sha256_idx_declarado": {
+          "train": "1285a86419643708d8f6285a9ee351182c1a291b6a19490b02986ed231dfbdb2",
+          "val": "04520a7f06b17eed051d2e38458ebdc1ca1772eb78d3bc83f18a88880f72d0a4",
+          "test": "b36bf1a98e708823b4a89f51ee497d3d3d5bea72df77f6e4b7a45059603978f7"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 20,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1032805,
+          "d_min_km": 2.0000415444039277,
+          "d_max_km": 10.005410048157529,
+          "d_mediana_km": 3.484171454319053
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 17,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 17,
+        "n_nao_efetivos": 3,
+        "nao_efetivos_borda": 3,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 824740,
+          "d_min_km": 2.0000022084766726,
+          "d_max_km": 8.602501608591824,
+          "d_mediana_km": 3.638341281488715
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q4_g10b2.json",
+      "run_label": "c0c1cf_lins_s42_Q4_g10b2",
+      "cidade": "lins",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 4.728986626668332e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9189009,
+            "val": 1985141,
+            "test": 1785850
+          },
+          "apos": {
+            "train": 9189009,
+            "val": 1032805,
+            "test": 824740
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9189022,
+            "val": 1985135,
+            "test": 1785843
+          },
+          "apos": {
+            "train": 9189022,
+            "val": 1032790,
+            "test": 824701
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "970bf64fd44f94f89db7a974e486668eac3080d6ad8fe9e4304e0819794aa333",
+          "val": "bfa322585e83a247555414723cf863b13542f3df468bdd437096bfef5a2a10fa",
+          "test": "b6a964e54bc49090e56c6f1edee10569e826789dc3a04899b8147b2cbc4caf82"
+        },
+        "sha256_idx_declarado": {
+          "train": "1285a86419643708d8f6285a9ee351182c1a291b6a19490b02986ed231dfbdb2",
+          "val": "04520a7f06b17eed051d2e38458ebdc1ca1772eb78d3bc83f18a88880f72d0a4",
+          "test": "b36bf1a98e708823b4a89f51ee497d3d3d5bea72df77f6e4b7a45059603978f7"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 20,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1032805,
+          "d_min_km": 2.0000415444039277,
+          "d_max_km": 10.005410048157529,
+          "d_mediana_km": 3.484171454319053
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 17,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 17,
+        "n_nao_efetivos": 3,
+        "nao_efetivos_borda": 3,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 824740,
+          "d_min_km": 2.0000022084766726,
+          "d_max_km": 8.602501608591824,
+          "d_mediana_km": 3.638341281488715
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q1_g10b2.json",
+      "run_label": "c0c1cf_sorocaba_s42_Q1_g10b2",
+      "cidade": "sorocaba",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 8.695064101944797e-06,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9188194,
+            "val": 1990117,
+            "test": 1781689
+          },
+          "apos": {
+            "train": 9188194,
+            "val": 1035079,
+            "test": 818920
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9188187,
+            "val": 1990113,
+            "test": 1781700
+          },
+          "apos": {
+            "train": 9188187,
+            "val": 1035070,
+            "test": 818925
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "c15a34fba0e7cf05683c1174adbcd5f379a3302985d010ebaec56c6e2a827864",
+          "val": "cd2bd2eedd18ce50608aa30e94a4ae2bebcc6a04631c68b20d1ce01b35a1711a",
+          "test": "26c452835d568d8c29e054d23bfa76bc7ea99f6c0511ae535c8adccbf2704e61"
+        },
+        "sha256_idx_declarado": {
+          "train": "9dd5eb07bd981fa125adf5db6e8ce723e6403643a9ef13c46140f3c3acfe4413",
+          "val": "7dfbd1b7a6e0b37ba00aad086ae84a946f9aa2c2b1498afe489eabc40b4e670c",
+          "test": "a30d0ddb4e3896af487adc2b8709e27290dfd58415c359b1bcb4316e146fd347"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 1,
+        "n_efetivos_com_retencao_ge_10pct": 19,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1035079,
+          "d_min_km": 2.000070203365868,
+          "d_max_km": 10.009593205539758,
+          "d_mediana_km": 3.4841821957903067
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 15,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 15,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 120,
+            "i": 10,
+            "j": 0,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": true,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 121,
+            "i": 10,
+            "j": 1,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 818920,
+          "d_min_km": 2.000080290699692,
+          "d_max_km": 8.58410941165431,
+          "d_mediana_km": 3.6691660851047523
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q2_g10b2.json",
+      "run_label": "c0c1cf_sorocaba_s42_Q2_g10b2",
+      "cidade": "sorocaba",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 8.695064101944797e-06,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9188194,
+            "val": 1990117,
+            "test": 1781689
+          },
+          "apos": {
+            "train": 9188194,
+            "val": 1035079,
+            "test": 818920
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9188187,
+            "val": 1990113,
+            "test": 1781700
+          },
+          "apos": {
+            "train": 9188187,
+            "val": 1035070,
+            "test": 818925
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "c15a34fba0e7cf05683c1174adbcd5f379a3302985d010ebaec56c6e2a827864",
+          "val": "cd2bd2eedd18ce50608aa30e94a4ae2bebcc6a04631c68b20d1ce01b35a1711a",
+          "test": "26c452835d568d8c29e054d23bfa76bc7ea99f6c0511ae535c8adccbf2704e61"
+        },
+        "sha256_idx_declarado": {
+          "train": "9dd5eb07bd981fa125adf5db6e8ce723e6403643a9ef13c46140f3c3acfe4413",
+          "val": "7dfbd1b7a6e0b37ba00aad086ae84a946f9aa2c2b1498afe489eabc40b4e670c",
+          "test": "a30d0ddb4e3896af487adc2b8709e27290dfd58415c359b1bcb4316e146fd347"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 20,
+        "n_quase_vazios": 1,
+        "n_efetivos_com_retencao_ge_10pct": 19,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1035079,
+          "d_min_km": 2.000070203365868,
+          "d_max_km": 10.009593205539758,
+          "d_mediana_km": 3.4841821957903067
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 15,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 15,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 120,
+            "i": 10,
+            "j": 0,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": true,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 121,
+            "i": 10,
+            "j": 1,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 818920,
+          "d_min_km": 2.000080290699692,
+          "d_max_km": 8.58410941165431,
+          "d_mediana_km": 3.6691660851047523
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q3_g10b2.json",
+      "run_label": "c0c1cf_sorocaba_s42_Q3_g10b2",
+      "cidade": "sorocaba",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 1.0893786789225802e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9187678,
+            "val": 1996211,
+            "test": 1776111
+          },
+          "apos": {
+            "train": 9187678,
+            "val": 1041513,
+            "test": 826168
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9187682,
+            "val": 1996218,
+            "test": 1776100
+          },
+          "apos": {
+            "train": 9187682,
+            "val": 1041517,
+            "test": 826159
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "97d9222b5ae11d6b18db009a54f0ed8044f62cdedd80dc1f4ddc486a7ef82ece",
+          "val": "9b622dbe38cfeb7b7bf3f6789677c0395bc5e751bd190a505786ba7e8c45d676",
+          "test": "b7a51a133d538be62a1d5ecc406aaf132953ee91230dc9550434a80b893245bf"
+        },
+        "sha256_idx_declarado": {
+          "train": "7405a18a5955199e6697c0d1b6ed9a56877a712e78ca6fbcf22344de31bcad56",
+          "val": "9e533ea30f4bdb563109c13e0062c67f10b9533889b6361bcfdc0471018fd276",
+          "test": "07451f5893c08d800d571ab423754590845e1303fb2e13c816c4842bbf6de2eb"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 19,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 19,
+        "n_nao_efetivos": 1,
+        "nao_efetivos_borda": 1,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 125,
+            "i": 10,
+            "j": 5,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1041513,
+          "d_min_km": 2.0000033227101994,
+          "d_max_km": 10.016273495652035,
+          "d_mediana_km": 3.4841898027954694
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 15,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 15,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 120,
+            "i": 10,
+            "j": 0,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": true,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 121,
+            "i": 10,
+            "j": 1,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 826168,
+          "d_min_km": 2.0000486535650714,
+          "d_max_km": 8.60250329118503,
+          "d_mediana_km": 3.669165852227631
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q4_g10b2.json",
+      "run_label": "c0c1cf_sorocaba_s42_Q4_g10b2",
+      "cidade": "sorocaba",
+      "grid_km": 10.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 1.0893786789225802e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9187678,
+            "val": 1996211,
+            "test": 1776111
+          },
+          "apos": {
+            "train": 9187678,
+            "val": 1041513,
+            "test": 826168
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9187684,
+            "val": 1996216,
+            "test": 1776100
+          },
+          "apos": {
+            "train": 9187684,
+            "val": 1041519,
+            "test": 826159
+          },
+          "n_blocos": {
+            "train": 92,
+            "val": 20,
+            "test": 20
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "97d9222b5ae11d6b18db009a54f0ed8044f62cdedd80dc1f4ddc486a7ef82ece",
+          "val": "9b622dbe38cfeb7b7bf3f6789677c0395bc5e751bd190a505786ba7e8c45d676",
+          "test": "b7a51a133d538be62a1d5ecc406aaf132953ee91230dc9550434a80b893245bf"
+        },
+        "sha256_idx_declarado": {
+          "train": "c57a66132a2d189d6cfbe29789635191969f750270c275f17ea21e0209324dcd",
+          "val": "feffe980e8d5864b09b1832bba95e590a01f579a8a74117c12b166de66e89aae",
+          "test": "07451f5893c08d800d571ab423754590845e1303fb2e13c816c4842bbf6de2eb"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 20,
+        "n_efetivos_total": 19,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 19,
+        "n_nao_efetivos": 1,
+        "nao_efetivos_borda": 1,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 125,
+            "i": 10,
+            "j": 5,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 1041513,
+          "d_min_km": 2.0000033227101994,
+          "d_max_km": 10.016273495652035,
+          "d_mediana_km": 3.4841898027954694
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 20,
+        "n_efetivos_total": 15,
+        "n_quase_vazios": 0,
+        "n_efetivos_com_retencao_ge_10pct": 15,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 23,
+            "i": 1,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 120,
+            "i": 10,
+            "j": 0,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": true,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 121,
+            "i": 10,
+            "j": 1,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": false
+            }
+          },
+          {
+            "group_id": 131,
+            "i": 10,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 71,
+            "i": 5,
+            "j": 11,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 826168,
+          "d_min_km": 2.0000486535650714,
+          "d_max_km": 8.60250329118503,
+          "d_mediana_km": 3.669165852227631
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1_bauru_s42_Q1_g5b2.json",
+      "run_label": "c0c1_bauru_s42_Q1_g5b2",
+      "cidade": "bauru",
+      "grid_km": 5.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": false,
+        "erro_relativo_max_nos": 0.00020384450740974785,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9079414,
+            "val": 2007968,
+            "test": 1872618
+          },
+          "apos": {
+            "train": 9079414,
+            "val": 405460,
+            "test": 196268
+          },
+          "n_blocos": {
+            "train": 338,
+            "val": 72,
+            "test": 73
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9079415,
+            "val": 2007946,
+            "test": 1872639
+          },
+          "apos": {
+            "train": 9079415,
+            "val": 405420,
+            "test": 196228
+          },
+          "n_blocos": {
+            "train": 338,
+            "val": 72,
+            "test": 73
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "8351b8d0450badeca0b44ab10368f182ed295c825ec63d1c3a8339b1fa5a7edc",
+          "val": "5f68b1ef9895eb1960ddd28e43c7f1e9a8d723cfcde569cec8c343bec769c800",
+          "test": "74280a4507a5bae7b86f52c66bb54730a76a87bf59a72f1046fc3dade380af4f"
+        },
+        "sha256_idx_declarado": {
+          "train": "765985398a0fd1762d392ee74f69828a332634faf421343fff0618b048875eab",
+          "val": "65c230e97de8f627db45b367e1a8ea6a9e50e2f7cef6e181691f3db7cda09f15",
+          "test": "d9a857aa782666a7a54fbfed8ff9df39e5135a352e505a074011c720a3e9fd85"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 72,
+        "n_efetivos_total": 72,
+        "n_quase_vazios": 17,
+        "n_efetivos_com_retencao_ge_10pct": 55,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 405460,
+          "d_min_km": 2.000009563619919,
+          "d_max_km": 5.882896719317862,
+          "d_mediana_km": 2.404998327769614
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 73,
+        "n_efetivos_total": 68,
+        "n_quase_vazios": 34,
+        "n_efetivos_com_retencao_ge_10pct": 34,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 91,
+            "i": 3,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 252,
+            "i": 10,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 160,
+            "i": 6,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 413,
+            "i": 17,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 482,
+            "i": 20,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 196268,
+          "d_min_km": 2.0000218740409963,
+          "d_max_km": 5.025831685544378,
+          "d_mediana_km": 2.3019677293349856
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1_bauru_s42_Q2_g5b2.json",
+      "run_label": "c0c1_bauru_s42_Q2_g5b2",
+      "cidade": "bauru",
+      "grid_km": 5.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": false,
+        "erro_relativo_max_nos": 0.00020384450740974785,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9079414,
+            "val": 2007968,
+            "test": 1872618
+          },
+          "apos": {
+            "train": 9079414,
+            "val": 405460,
+            "test": 196268
+          },
+          "n_blocos": {
+            "train": 338,
+            "val": 72,
+            "test": 73
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9079421,
+            "val": 2007940,
+            "test": 1872639
+          },
+          "apos": {
+            "train": 9079421,
+            "val": 405435,
+            "test": 196228
+          },
+          "n_blocos": {
+            "train": 338,
+            "val": 72,
+            "test": 73
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "8351b8d0450badeca0b44ab10368f182ed295c825ec63d1c3a8339b1fa5a7edc",
+          "val": "5f68b1ef9895eb1960ddd28e43c7f1e9a8d723cfcde569cec8c343bec769c800",
+          "test": "74280a4507a5bae7b86f52c66bb54730a76a87bf59a72f1046fc3dade380af4f"
+        },
+        "sha256_idx_declarado": {
+          "train": "ab50a397c714342b988de55a95496cc594b80ffbf221658e48cc66890ef24c7d",
+          "val": "60f1abca9c99f91dc1e7d2f2e39f796e1b9307101f90c3b581c3b4a7ad8acdb1",
+          "test": "d9a857aa782666a7a54fbfed8ff9df39e5135a352e505a074011c720a3e9fd85"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 72,
+        "n_efetivos_total": 72,
+        "n_quase_vazios": 17,
+        "n_efetivos_com_retencao_ge_10pct": 55,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 405460,
+          "d_min_km": 2.000009563619919,
+          "d_max_km": 5.882896719317862,
+          "d_mediana_km": 2.404998327769614
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 73,
+        "n_efetivos_total": 68,
+        "n_quase_vazios": 34,
+        "n_efetivos_com_retencao_ge_10pct": 34,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 91,
+            "i": 3,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 252,
+            "i": 10,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 160,
+            "i": 6,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 413,
+            "i": 17,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 482,
+            "i": 20,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 196268,
+          "d_min_km": 2.0000218740409963,
+          "d_max_km": 5.025831685544378,
+          "d_mediana_km": 2.3019677293349856
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1_bauru_s42_Q3_g5b2.json",
+      "run_label": "c0c1_bauru_s42_Q3_g5b2",
+      "cidade": "bauru",
+      "grid_km": 5.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 2.1147908471852134e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9078060,
+            "val": 2017790,
+            "test": 1864150
+          },
+          "apos": {
+            "train": 9078060,
+            "val": 405301,
+            "test": 189148
+          },
+          "n_blocos": {
+            "train": 338,
+            "val": 72,
+            "test": 73
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9078058,
+            "val": 2017790,
+            "test": 1864152
+          },
+          "apos": {
+            "train": 9078058,
+            "val": 405296,
+            "test": 189144
+          },
+          "n_blocos": {
+            "train": 338,
+            "val": 72,
+            "test": 73
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "b84dad0b1568b0a881789f413aa09d1529e0d741bff795e6ca29b295acd862fa",
+          "val": "e4f3aa561bd3528361a688fc5996b2eb374a4c3145d736b353b50a4a8e3b40f5",
+          "test": "879ce30df4b4242aad7ec09855fb4eb56305f4e269e285fa6a99fb44f553d4b2"
+        },
+        "sha256_idx_declarado": {
+          "train": "361ee2dc40e324941823ff0b652d58ac2419252d1ac6f4e24c106bff5715791a",
+          "val": "c0259702f3d8a911a739f165e19ee74b47e862c547078d0d558d53983a8c8e76",
+          "test": "7cc488ca95b8a916f648bc8d1c4b5ae3463e5705ceb06798eb04330658fa6503"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 72,
+        "n_efetivos_total": 72,
+        "n_quase_vazios": 17,
+        "n_efetivos_com_retencao_ge_10pct": 55,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 405301,
+          "d_min_km": 2.0000755036415256,
+          "d_max_km": 5.87310168184543,
+          "d_mediana_km": 2.405011623773443
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 73,
+        "n_efetivos_total": 68,
+        "n_quase_vazios": 35,
+        "n_efetivos_com_retencao_ge_10pct": 33,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 91,
+            "i": 3,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 252,
+            "i": 10,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 160,
+            "i": 6,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 413,
+            "i": 17,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 482,
+            "i": 20,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 189148,
+          "d_min_km": 2.0000235811871554,
+          "d_max_km": 5.025833335047875,
+          "d_mediana_km": 2.296270477326691
+        }
+      }
+    },
+    {
+      "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1_bauru_s42_Q4_g5b2.json",
+      "run_label": "c0c1_bauru_s42_Q4_g5b2",
+      "cidade": "bauru",
+      "grid_km": 5.0,
+      "buffer_km": 2.0,
+      "split_seed": 42,
+      "split_frac": "0.70,0.15,0.15",
+      "n_side": 3600,
+      "portao": {
+        "n_nos_antes_do_buffer_bate": false,
+        "n_nos_apos_buffer_bate": false,
+        "n_blocos_bate": true,
+        "passou_exato": false,
+        "passou_quase_exato_lt_1e-4": true,
+        "erro_relativo_max_nos": 2.1147908471852134e-05,
+        "causa_divergencia": "synthetic mesh (float64 linspace over lon/lat_min/max of the run JSON) does not reproduce the real ETL mesh bit for bit; a fraction <=1e-4 of the nodes falls on the wrong side of a block boundary (see the module docstring, section 3). n_blocos (count of groups per role) matches exactly in all cells.",
+        "reconstruido": {
+          "antes": {
+            "train": 9078060,
+            "val": 2017790,
+            "test": 1864150
+          },
+          "apos": {
+            "train": 9078060,
+            "val": 405301,
+            "test": 189148
+          },
+          "n_blocos": {
+            "train": 338,
+            "val": 72,
+            "test": 73
+          }
+        },
+        "declarado": {
+          "antes": {
+            "train": 9078060,
+            "val": 2017788,
+            "test": 1864152
+          },
+          "apos": {
+            "train": 9078060,
+            "val": 405294,
+            "test": 189144
+          },
+          "n_blocos": {
+            "train": 338,
+            "val": 72,
+            "test": 73
+          }
+        },
+        "sha256_idx_reconstruido": {
+          "train": "b84dad0b1568b0a881789f413aa09d1529e0d741bff795e6ca29b295acd862fa",
+          "val": "e4f3aa561bd3528361a688fc5996b2eb374a4c3145d736b353b50a4a8e3b40f5",
+          "test": "879ce30df4b4242aad7ec09855fb4eb56305f4e269e285fa6a99fb44f553d4b2"
+        },
+        "sha256_idx_declarado": {
+          "train": "6940f9743f9604dcc214c79c3c459d7cc556968f34ec718f351f356be6d22101",
+          "val": "8d4cd9cd1406cc74e3bc0b0fb89df83eb55eb48c9aeecb3d82c819b45bce18c5",
+          "test": "7cc488ca95b8a916f648bc8d1c4b5ae3463e5705ceb06798eb04330658fa6503"
+        },
+        "sha256_idx_bate": {
+          "train": false,
+          "val": false,
+          "test": false
+        }
+      },
+      "status": "ok_aproximado_provisorio",
+      "blocos_val": {
+        "n_declarados": 72,
+        "n_efetivos_total": 72,
+        "n_quase_vazios": 17,
+        "n_efetivos_com_retencao_ge_10pct": 55,
+        "n_nao_efetivos": 0,
+        "nao_efetivos_borda": 0,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 405301,
+          "d_min_km": 2.0000755036415256,
+          "d_max_km": 5.87310168184543,
+          "d_mediana_km": 2.405011623773443
+        }
+      },
+      "blocos_test": {
+        "n_declarados": 73,
+        "n_efetivos_total": 68,
+        "n_quase_vazios": 35,
+        "n_efetivos_com_retencao_ge_10pct": 33,
+        "n_nao_efetivos": 5,
+        "nao_efetivos_borda": 5,
+        "nao_efetivos_interior": 0,
+        "nao_efetivos_detalhe": [
+          {
+            "group_id": 91,
+            "i": 3,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 252,
+            "i": 10,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 160,
+            "i": 6,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 413,
+            "i": 17,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": false,
+              "j_min": false,
+              "j_max": true
+            }
+          },
+          {
+            "group_id": 482,
+            "i": 20,
+            "j": 22,
+            "borda": true,
+            "borda_detalhe": {
+              "i_min": false,
+              "i_max": true,
+              "j_min": false,
+              "j_max": true
+            }
+          }
+        ],
+        "distancia_ao_treino_km": {
+          "n_nos_retidos": 189148,
+          "d_min_km": 2.0000235811871554,
+          "d_max_km": 5.025833335047875,
+          "d_mediana_km": 2.296270477326691
+        }
+      }
+    }
+  ],
+  "tempo_s": 140.4306890964508,
+  "script_sha256": "367a41046731d1e4ba6ec922415d7cd7b402db683e06b84f6ec916a08d7879af",
+  "script_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/blocos_efetivos_20celulas.py",
+  "resumo": {
+    "g10b2_16_celulas": {
+      "test_declarados": 20,
+      "test_efetivos_faixa": {
+        "min": 15,
+        "max": 17,
+        "valores": [
+          17,
+          17,
+          16,
+          16,
+          17,
+          17,
+          15,
+          15,
+          17,
+          17,
+          17,
+          17,
+          15,
+          15,
+          15,
+          15
+        ]
+      },
+      "test_nao_efetivos_faixa": {
+        "min": 3,
+        "max": 5,
+        "valores": [
+          3,
+          3,
+          4,
+          4,
+          3,
+          3,
+          5,
+          5,
+          3,
+          3,
+          3,
+          3,
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "test_nao_efetivos_sao_todos_borda": true,
+      "val_declarados": 20,
+      "val_efetivos_faixa": {
+        "min": 19,
+        "max": 20,
+        "valores": [
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          19,
+          19,
+          20,
+          20,
+          20,
+          20,
+          20,
+          20,
+          19,
+          19
+        ]
+      },
+      "d_test_min_km_faixa": {
+        "min": 2.0000021983295504,
+        "max": 2.0001039628528177,
+        "valores": [
+          2.0000022054895794,
+          2.0000022054895794,
+          2.0001039628528177,
+          2.0001039628528177,
+          2.0000021983295504,
+          2.0000021983295504,
+          2.0000815687527274,
+          2.0000815687527274,
+          2.000015829397561,
+          2.000015829397561,
+          2.0000022084766726,
+          2.0000022084766726,
+          2.000080290699692,
+          2.000080290699692,
+          2.0000486535650714,
+          2.0000486535650714
+        ]
+      },
+      "d_test_max_km_faixa": {
+        "min": 8.58410941165431,
+        "max": 8.602503605170027,
+        "valores": [
+          8.60087135698244,
+          8.60087135698244,
+          8.602503605170027,
+          8.602503605170027,
+          8.602502275270238,
+          8.602502275270238,
+          8.586126017705318,
+          8.586126017705318,
+          8.602499019006144,
+          8.602499019006144,
+          8.602501608591824,
+          8.602501608591824,
+          8.58410941165431,
+          8.58410941165431,
+          8.60250329118503,
+          8.60250329118503
+        ]
+      },
+      "d_val_min_km_faixa": {
+        "min": 2.000002205489565,
+        "max": 2.0000762421097793,
+        "valores": [
+          2.000002205489565,
+          2.000002205489565,
+          2.0000290698106844,
+          2.0000290698106844,
+          2.000056906852179,
+          2.000056906852179,
+          2.0000108095920797,
+          2.0000108095920797,
+          2.0000762421097793,
+          2.0000762421097793,
+          2.0000415444039277,
+          2.0000415444039277,
+          2.000070203365868,
+          2.000070203365868,
+          2.0000033227101994,
+          2.0000033227101994
+        ]
+      },
+      "d_val_max_km_faixa": {
+        "min": 9.997512181220964,
+        "max": 10.016273495652035,
+        "valores": [
+          10.011300163293171,
+          10.011300163293171,
+          10.014766371884754,
+          10.014766371884754,
+          9.997512181220964,
+          9.997512181220964,
+          9.999606496166805,
+          9.999606496166805,
+          10.013889693049745,
+          10.013889693049745,
+          10.005410048157529,
+          10.005410048157529,
+          10.009593205539758,
+          10.009593205539758,
+          10.016273495652035,
+          10.016273495652035
+        ]
+      }
+    },
+    "g5b2_4_celulas_bauru": {
+      "test_declarados": 73,
+      "test_efetivos_faixa": {
+        "min": 68,
+        "max": 68,
+        "valores": [
+          68,
+          68,
+          68,
+          68
+        ]
+      },
+      "test_quase_vazios_faixa": {
+        "min": 34,
+        "max": 35,
+        "valores": [
+          34,
+          34,
+          35,
+          35
+        ]
+      },
+      "val_declarados": 72,
+      "val_efetivos_faixa": {
+        "min": 72,
+        "max": 72,
+        "valores": [
+          72,
+          72,
+          72,
+          72
+        ]
+      },
+      "d_test_min_km_faixa": {
+        "min": 2.0000218740409963,
+        "max": 2.0000235811871554,
+        "valores": [
+          2.0000218740409963,
+          2.0000218740409963,
+          2.0000235811871554,
+          2.0000235811871554
+        ]
+      },
+      "d_test_max_km_faixa": {
+        "min": 5.025831685544378,
+        "max": 5.025833335047875,
+        "valores": [
+          5.025831685544378,
+          5.025831685544378,
+          5.025833335047875,
+          5.025833335047875
+        ]
+      }
+    },
+    "confere_r1_Q1_g10b2": {
+      "esperado_ata_15_09": {
+        "bauru": 17,
+        "campinas": 17,
+        "lins": 17,
+        "sorocaba": 15
+      },
+      "obtido_nesta_rodada": {
+        "bauru": 17,
+        "campinas": 17,
+        "lins": 17,
+        "sorocaba": 15
+      },
+      "bate": true
+    }
+  },
+  "tabela_numero_campo_comando": [
+    {
+      "numero": "15-17 effective test blocks out of 20 declared, g10b2 (16 cells)",
+      "campo": "blocos_test.n_efetivos_total",
+      "arquivo": "internal/artifact_03.json",
+      "comando": "blocos_efetivos_20celulas.py:blocos_por_papel, on the split_espacial_3vias reconstruction"
+    },
+    {
+      "numero": "68 effective test blocks out of 73 declared, g5b2 (4 Bauru cells)",
+      "campo": "blocos_test.n_efetivos_total",
+      "arquivo": "internal/artifact_03.json",
+      "comando": "blocos_efetivos_20celulas.py:blocos_por_papel"
+    },
+    {
+      "numero": "19-20 effective val blocks out of 20 declared, g10b2; 72/72 in g5b2",
+      "campo": "blocos_val.n_efetivos_total",
+      "arquivo": "internal/artifact_03.json",
+      "comando": "blocos_efetivos_20celulas.py:blocos_por_papel"
+    },
+    {
+      "numero": "d_max test->training ~8.58-8.60 km (g10b2), ~5.03 km (g5b2); d_max val->training ~9.9-10.0 km (g10b2), ~5.87-5.88 km (g5b2)",
+      "campo": "blocos_{test,val}.distancia_ao_treino_km.d_max_km",
+      "arquivo": "internal/artifact_03.json",
+      "comando": "blocos_efetivos_20celulas.py:distancias_papel_treino (cKDTree, only against training nodes)"
+    },
+    {
+      "numero": "maximum relative error of reconstructed vs declared nodes: 5e-6 to 2e-4 (EXACT gate failed in 20/20 cells)",
+      "campo": "portao.erro_relativo_max_nos",
+      "arquivo": "internal/artifact_03.json",
+      "comando": "blocos_efetivos_20celulas.py:processar_celula, comparison against split.n_nos_{antes,apos}_do_buffer of the run JSON"
+    }
+  ],
+  "veredito_provisorio": "ATTENTION, does not BLOCK (same outcome as R1, now extended to the 20 cells). The 2 km buffer is honored (node-to-node d_min ~2.000 km in all cells, test and val, against training). Between 3 and 5 of the 20 DECLARED test blocks per cell in g10b2 retain no node after the buffer (15-17 effective out of 20), always in EDGE blocks (last row/column of the grid, never interior) -- confirms and EXTENDS the R1 finding (Q1: 17/17/17/15) to the 12 cells Q2-Q4 that R1 left nao_verificado. In g5b2 (Bauru), 68 of 73 test blocks are effective, but 34-35 of those 68 are 'nearly empty' (retention <10% of the nodes the block had before the buffer) -- the finer 5 km grid is more sensitive to the same edge mechanism. VALIDATION blocks are much less affected: 19-20 of 20 effective in g10b2, 72/72 in g5b2. METHODOLOGICAL CAVEAT of this round: the reconstruction of the synthetic mesh (linspace over the lon/lat bounds of the run JSON) does NOT match the real ETL mesh bit for bit -- relative node-count error between 5e-6 and 2e-4 in all 20 cells (EXACT gate declared FAILED in 20/20; n_blocos per role matches exactly in 20/20). Where comparable (Q1 g10b2, 4 cities), the effective test blocks match EXACTLY the number already published in the internal note of 15/09 and confirmed with real npz in R1 (17/17/17/15) -- strong indication that the node-level error does not change the count of effective blocks in the cells already cross-checked, but this was NOT verified with real data in the remaining 16 cells of this round (Q2-Q4 g10b2, g5b2): treat as PROVISIONAL until an independent recalculation settles the origin of the relative error (candidate: float32 vs float64 precision between the original .pt and the synthetic mesh)."
+}

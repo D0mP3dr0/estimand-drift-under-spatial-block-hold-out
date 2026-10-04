@@ -1,0 +1,895 @@
+{
+  "frente": "R3-b data contract check (gnn_rf_artigo2_mathematics_r2)",
+  "alvo": "post-correction target in the 16 g10b2 cells (bauru, campinas, lins, sorocaba x Q1..Q4)",
+  "veredito": "bloqueia",
+  "achados": [
+    {
+      "id": "A1",
+      "gravidade": "info",
+      "texto": "pi (sentinel fraction) post-correction in the 16 g10b2 cells: whole cell 0.8378-0.9302; training 0.8395-0.9373; validation 0.8681-0.9977; test 0.6718-0.9701. Closes the earlier 'pi only in 6/16' gap: now 16/16."
+    },
+    {
+      "id": "A2",
+      "gravidade": "bloqueia",
+      "texto": "R2 ceiling after the correction (corr(valid RSSI, -log10 dist))**2, same definition as alvo_stats.py/e3_alvos_dataset_v2_multi.py: whole cell 0.5838-0.9829 (corr 0.7640-0.9914); test 0.3672-0.9883 (corr 0.6060-0.9942). The text (main.tex ~230) cites 0.206-0.679 (corr, 8 cells bauru/lins, population=whole cell, the old script did not separate test); after the correction AND in the same population (whole cell, 16 cells) the CORRELATION range rises to 0.7640-0.9914 -- it is not contained in the old range and shifts upward in almost all comparable cells (see por_celula.*.pre_correcao_r2_teto.diferenca_r2_celula). The number in the text is pre-correction and cannot be reused as it stands; either replace it with the post-correction values or remove it, as decision D2 foresees."
+    },
+    {
+      "id": "A3",
+      "gravidade": "bloqueia",
+      "texto": "MAE of the constant predictor, LITERAL definition from fismat_controle_negativo_alvo.py: the constant is the MEDIAN of the RSSI column (col3) of the measured population ITSELF -- it is NOT defined as the sentinel value; it only COINCIDES with -110.0 dBm (floor/sentinel value) in all 16 cells, in every partition, because pi > 0.5 in all of them (min 0.6718 in the test set). MAE_constante whole cell: 1.3373-3.2886 dB; MAE_constante on the test set: 1.1304-5.2355 dB (identical to the 'floor -110' and to the 'training median applied to the test set' in all 16 cells, because the median is always -110). The text (main.tex ~332) cites 1.63 dB for lins_Q1 whole cell, pre-correction; post-correction lins_Q1 whole cell = 1.7400 dB (difference +0.1107 dB). The figure in the text is pre-correction; the test-set value for lins_Q1 (not the same population as in the text) is 1.1304 dB, identical to the value in baselines_v2_lins_Q1.json particoes.test.preditor_constante_piso.todos.mae_db (1.1304 dB) and to the value recomputed from the E3 .npz (diff 0.0)."
+    },
+    {
+      "id": "A4",
+      "gravidade": "info",
+      "texto": "Cross-check with e3_predicoes/mlp_<cidade>_<Q>_s42.npz: in the 16 cells, idx_global == recomputed test partition (array_equal after sorting), target[:,0:5] == y[idx_teste] bit for bit in float32, sentinel == (target[:,0]>=299) bit for bit, and the constant MAE recomputed from the .npz matches the one recomputed from the tensor with difference 0.0 in all 16 cells (median and floor)."
+    }
+  ],
+  "cobertura": {
+    "celulas_alvo": 16,
+    "celulas_conferidas": 16,
+    "amostragem": "none - full pass, one 28 GB tensor at a time, sha256 checked before loading for the 16 cells",
+    "particoes_sha_ok": true,
+    "sha_tensor_ok": true,
+    "sha_manifest_vs_run_json_ok": true
+  },
+  "resumo": {
+    "pi_frac_sentinela": {
+      "celula": {
+        "min": 0.8378438271604939,
+        "max": 0.9301748456790123
+      },
+      "treino": {
+        "min": 0.8394913241509274,
+        "max": 0.9373088888023121
+      },
+      "val": {
+        "min": 0.8681139985819538,
+        "max": 0.9976820069907726
+      },
+      "teste": {
+        "min": 0.6718209510976851,
+        "max": 0.9700753245288768
+      }
+    },
+    "r2_teto": {
+      "corr_celula": {
+        "min": 0.7640357613563538,
+        "max": 0.9914093613624573
+      },
+      "corr_teste": {
+        "min": 0.6059500575065613,
+        "max": 0.9941531419754028
+      },
+      "r2_celula": {
+        "min": 0.5837506446313832,
+        "max": 0.9828925217971154
+      },
+      "r2_teste": {
+        "min": 0.3671754721922049,
+        "max": 0.9883404696995655
+      },
+      "comparacao_pre_correcao": {
+        "corr_pre_correcao_8_celulas_bauru_lins": {
+          "min": 0.20617219805717468,
+          "max": 0.6791917681694031
+        },
+        "populacao_pre_correcao": "whole cell (8 bauru+lins cells Q1-Q4, alvo_stats_*_v2.json, old script)",
+        "citado_em": "MDPI_Mathematics/draft_B/main.tex:230 ('0.206 to 0.679')"
+      }
+    },
+    "mae_constante_db": {
+      "celula_inteira": {
+        "min": 1.3373463542558723,
+        "max": 3.288584570554881
+      },
+      "teste": {
+        "min": 1.1304061473262308,
+        "max": 5.235512330378909
+      },
+      "comparacao_pre_correcao": {
+        "lins_Q1_celula_inteira": 1.6293892346023042,
+        "bauru_Q1_celula_inteira": 3.205406635170954,
+        "citado_em": "MDPI_Mathematics/draft_B/main.tex:332 (lins_Q1 whole cell, '1.63 dB')",
+        "fonte": "EVIDENCIA_RESUBMISSAO/dados/alvo/fismat_controle_negativo_alvo.json"
+      }
+    },
+    "cruzamento_npz": {
+      "celulas_com_idx_igual": 16,
+      "celulas_com_target_igual": 16,
+      "celulas_com_sentinela_igual": 16,
+      "diff_maximo_mae_mediana": 0.0,
+      "diff_maximo_mae_piso": 0.0
+    },
+    "celulas_ok": 16,
+    "celulas_total": 16
+  },
+  "por_celula": {
+    "lins_Q1": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9189821,
+        "val": 1031207,
+        "test": 833593,
+        "celula": 12960000
+      },
+      "pi_celula": 0.914560725308642,
+      "pi_treino": 0.9030456632397954,
+      "pi_val": 0.9590334433338796,
+      "pi_teste": 0.9700753245288768,
+      "r2_teto_celula": {
+        "corr": 0.9302660822868347,
+        "r2": 0.8653949838532959,
+        "n_validos": 1107293
+      },
+      "r2_teto_teste": {
+        "corr": 0.9587731957435608,
+        "r2": 0.9192460408763203,
+        "n_validos": 24945
+      },
+      "mae_constante_celula_inteira_db": 1.7400471079026338,
+      "mae_constante_teste_db": 1.1304061473262308,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 1.1304061473262308,
+      "mae_constante_piso_teste_db": 1.1304061473262308,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 1.1304061473262308,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "pre_correcao_r2_teto": {
+        "corr": 0.4792797565460205,
+        "r2": 0.2297090850348127,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_lins_s42_Q1_v2.json",
+        "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
+        "populacao": "whole cell (the old script did not separate test)",
+        "diferenca_r2_celula": 0.6356858988184833
+      },
+      "pre_correcao_mae_constante": {
+        "valor_db": 1.6293892346023042,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/fismat_controle_negativo_alvo.json",
+        "campo": "lins_Q1.col3_rssi.MAE_preditor_constante_mediana",
+        "populacao": "celula inteira",
+        "diferenca_celula_inteira": 0.11065787330032961
+      }
+    },
+    "bauru_Q1": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9188831,
+        "val": 1033370,
+        "test": 828243,
+        "celula": 12960000
+      },
+      "pi_celula": 0.8378438271604939,
+      "pi_treino": 0.8575141930458836,
+      "pi_val": 0.8761760066578282,
+      "pi_teste": 0.6718209510976851,
+      "r2_teto_celula": {
+        "corr": 0.8756462931632996,
+        "r2": 0.7667564307306272,
+        "n_validos": 2101544
+      },
+      "r2_teto_teste": {
+        "corr": 0.9061370491981506,
+        "r2": 0.8210843519295317,
+        "n_validos": 271812
+      },
+      "mae_constante_celula_inteira_db": 3.288584570554881,
+      "mae_constante_teste_db": 5.235512330378909,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 5.235512330378909,
+      "mae_constante_piso_teste_db": 5.235512330378909,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 5.235512330378909,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "pre_correcao_r2_teto": {
+        "corr": 0.3193790912628174,
+        "r2": 0.10200300393586303,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_bauru_s42_Q1_v2.json",
+        "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
+        "populacao": "whole cell (the old script did not separate test)",
+        "diferenca_r2_celula": 0.6647534267947641
+      },
+      "pre_correcao_mae_constante": {
+        "valor_db": 3.205406635170954,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/fismat_controle_negativo_alvo.json",
+        "campo": "bauru_Q1.col3_rssi.MAE_preditor_constante_mediana",
+        "populacao": "celula inteira",
+        "diferenca_celula_inteira": 0.08317793538392682
+      }
+    },
+    "bauru_Q2": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9188829,
+        "val": 1033369,
+        "test": 828243,
+        "celula": 12960000
+      },
+      "pi_celula": 0.9054130401234568,
+      "pi_treino": 0.909052393944865,
+      "pi_val": 0.9124146360109506,
+      "pi_teste": 0.8504810786206464,
+      "r2_teto_celula": {
+        "corr": 0.8945492506027222,
+        "r2": 0.8002183617538918,
+        "n_validos": 1225847
+      },
+      "r2_teto_teste": {
+        "corr": 0.8144054412841797,
+        "r2": 0.6632562227932794,
+        "n_validos": 123838
+      },
+      "mae_constante_celula_inteira_db": 1.3373463542558723,
+      "mae_constante_teste_db": 1.6941554396896066,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 1.6941554396896066,
+      "mae_constante_piso_teste_db": 1.6941554396896066,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 1.6941554396896066,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "pre_correcao_r2_teto": {
+        "corr": 0.2799915671348572,
+        "r2": 0.07839527766663323,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_bauru_s42_Q2_v2.json",
+        "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
+        "populacao": "whole cell (the old script did not separate test)",
+        "diferenca_r2_celula": 0.7218230840872586
+      }
+    },
+    "bauru_Q3": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9188528,
+        "val": 1034037,
+        "test": 817601,
+        "celula": 12960000
+      },
+      "pi_celula": 0.9018369598765432,
+      "pi_treino": 0.9160702345359344,
+      "pi_val": 0.9402884036064474,
+      "pi_teste": 0.8408514666689497,
+      "r2_teto_celula": {
+        "corr": 0.9071668386459351,
+        "r2": 0.82295167313886,
+        "n_validos": 1272193
+      },
+      "r2_teto_teste": {
+        "corr": 0.8276644945144653,
+        "r2": 0.6850285154798854,
+        "n_validos": 130120
+      },
+      "mae_constante_celula_inteira_db": 1.8936736609098157,
+      "mae_constante_teste_db": 2.6132474851554677,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 2.6132474851554677,
+      "mae_constante_piso_teste_db": 2.6132474851554677,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 2.6132474851554677,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "pre_correcao_r2_teto": {
+        "corr": 0.6791917681694031,
+        "r2": 0.4613014579490802,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_bauru_s42_Q3_v2.json",
+        "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
+        "populacao": "whole cell (the old script did not separate test)",
+        "diferenca_r2_celula": 0.3616502151897798
+      }
+    },
+    "bauru_Q4": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9188530,
+        "val": 1034035,
+        "test": 817601,
+        "celula": 12960000
+      },
+      "pi_celula": 0.9046118055555555,
+      "pi_treino": 0.8985844308066687,
+      "pi_val": 0.9604471802211724,
+      "pi_teste": 0.8652937068325504,
+      "r2_teto_celula": {
+        "corr": 0.8752049207687378,
+        "r2": 0.7659836533378126,
+        "n_validos": 1236231
+      },
+      "r2_teto_teste": {
+        "corr": 0.7112237215042114,
+        "r2": 0.5058391820303001,
+        "n_validos": 110136
+      },
+      "mae_constante_celula_inteira_db": 1.5957074696593763,
+      "mae_constante_teste_db": 2.076847688675111,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 2.076847688675111,
+      "mae_constante_piso_teste_db": 2.076847688675111,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 2.076847688675111,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "pre_correcao_r2_teto": {
+        "corr": 0.5000356435775757,
+        "r2": 0.2500356448480403,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_bauru_s42_Q4_v2.json",
+        "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
+        "populacao": "whole cell (the old script did not separate test)",
+        "diferenca_r2_celula": 0.5159480084897723
+      }
+    },
+    "campinas_Q1": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9188776,
+        "val": 1033211,
+        "test": 821276,
+        "celula": 12960000
+      },
+      "pi_celula": 0.8606036265432099,
+      "pi_treino": 0.8642070499922949,
+      "pi_val": 0.9378142509129307,
+      "pi_teste": 0.7588265089933226,
+      "r2_teto_celula": {
+        "corr": 0.909743070602417,
+        "r2": 0.8276324545091143,
+        "n_validos": 1806577
+      },
+      "r2_teto_teste": {
+        "corr": 0.7698299288749695,
+        "r2": 0.5926381193916406,
+        "n_validos": 198070
+      },
+      "mae_constante_celula_inteira_db": 2.543892353597888,
+      "mae_constante_teste_db": 2.416962710516136,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 2.416962710516136,
+      "mae_constante_piso_teste_db": 2.416962710516136,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 2.416962710516136,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      }
+    },
+    "campinas_Q2": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9188780,
+        "val": 1033207,
+        "test": 821276,
+        "celula": 12960000
+      },
+      "pi_celula": 0.8530585648148148,
+      "pi_treino": 0.8455319422164858,
+      "pi_val": 0.8815561644472018,
+      "pi_teste": 0.8485904860241867,
+      "r2_teto_celula": {
+        "corr": 0.9259447455406189,
+        "r2": 0.8573736717942815,
+        "n_validos": 1904361
+      },
+      "r2_teto_teste": {
+        "corr": 0.6059500575065613,
+        "r2": 0.3671754721922049,
+        "n_validos": 124349
+      },
+      "mae_constante_celula_inteira_db": 2.5736264615203237,
+      "mae_constante_teste_db": 2.636048740959969,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 2.636048740959969,
+      "mae_constante_piso_teste_db": 2.636048740959969,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 2.636048740959969,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      }
+    },
+    "campinas_Q3": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9187817,
+        "val": 1038048,
+        "test": 822561,
+        "celula": 12960000
+      },
+      "pi_celula": 0.8478702932098765,
+      "pi_treino": 0.8756939760554656,
+      "pi_val": 0.8681139985819538,
+      "pi_teste": 0.7031964802610384,
+      "r2_teto_celula": {
+        "corr": 0.9384543299674988,
+        "r2": 0.8806965294347471,
+        "n_validos": 1971601
+      },
+      "r2_teto_teste": {
+        "corr": 0.9124389886856079,
+        "r2": 0.8325449080736149,
+        "n_validos": 244139
+      },
+      "mae_constante_celula_inteira_db": 2.4826860279189873,
+      "mae_constante_teste_db": 3.882408015487518,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 3.882408015487518,
+      "mae_constante_piso_teste_db": 3.882408015487518,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 3.882408015487518,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      }
+    },
+    "campinas_Q4": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9187819,
+        "val": 1038048,
+        "test": 822561,
+        "celula": 12960000
+      },
+      "pi_celula": 0.8729304012345679,
+      "pi_treino": 0.8629532209983675,
+      "pi_val": 0.9333903634514011,
+      "pi_teste": 0.8650483064477893,
+      "r2_teto_celula": {
+        "corr": 0.8894088268280029,
+        "r2": 0.7910480612395645,
+        "n_validos": 1646822
+      },
+      "r2_teto_teste": {
+        "corr": 0.6652172803878784,
+        "r2": 0.44251403012664525,
+        "n_validos": 111006
+      },
+      "mae_constante_celula_inteira_db": 2.030495396506009,
+      "mae_constante_teste_db": 2.0868751482294874,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 2.0868751482294874,
+      "mae_constante_piso_teste_db": 2.0868751482294874,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 2.0868751482294874,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      }
+    },
+    "lins_Q2": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9189821,
+        "val": 1031207,
+        "test": 833593,
+        "celula": 12960000
+      },
+      "pi_celula": 0.8513441358024691,
+      "pi_treino": 0.8394913241509274,
+      "pi_val": 0.8894324805785842,
+      "pi_teste": 0.8520788922171851,
+      "r2_teto_celula": {
+        "corr": 0.9914093613624573,
+        "r2": 0.9828925217971154,
+        "n_validos": 1926580
+      },
+      "r2_teto_teste": {
+        "corr": 0.9941531419754028,
+        "r2": 0.9883404696995655,
+        "n_validos": 123306
+      },
+      "mae_constante_celula_inteira_db": 3.230663555980584,
+      "mae_constante_teste_db": 4.334394991985829,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 4.334394991985829,
+      "mae_constante_piso_teste_db": 4.334394991985829,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 4.334394991985829,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "pre_correcao_r2_teto": {
+        "corr": 0.4921395182609558,
+        "r2": 0.24220130543412566,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_lins_s42_Q2_v2.json",
+        "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
+        "populacao": "whole cell (the old script did not separate test)",
+        "diferenca_r2_celula": 0.7406912163629897
+      }
+    },
+    "lins_Q3": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9189022,
+        "val": 1032790,
+        "test": 824701,
+        "celula": 12960000
+      },
+      "pi_celula": 0.928636188271605,
+      "pi_treino": 0.9373088888023121,
+      "pi_val": 0.9403160371421102,
+      "pi_teste": 0.8995684496562997,
+      "r2_teto_celula": {
+        "corr": 0.8599354028701782,
+        "r2": 0.7394888971094957,
+        "n_validos": 924875
+      },
+      "r2_teto_teste": {
+        "corr": 0.892221212387085,
+        "r2": 0.7960586918334798,
+        "n_validos": 82826
+      },
+      "mae_constante_celula_inteira_db": 1.4232381191394212,
+      "mae_constante_teste_db": 1.829824565511713,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 1.829824565511713,
+      "mae_constante_piso_teste_db": 1.829824565511713,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 1.829824565511713,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "pre_correcao_r2_teto": {
+        "corr": 0.20617219805717468,
+        "r2": 0.042506975251726864,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_lins_s42_Q3_v2.json",
+        "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
+        "populacao": "whole cell (the old script did not separate test)",
+        "diferenca_r2_celula": 0.6969819218577689
+      }
+    },
+    "lins_Q4": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9189022,
+        "val": 1032790,
+        "test": 824701,
+        "celula": 12960000
+      },
+      "pi_celula": 0.9301748456790123,
+      "pi_treino": 0.9245507302082855,
+      "pi_val": 0.9976820069907726,
+      "pi_teste": 0.8752153810896313,
+      "r2_teto_celula": {
+        "corr": 0.9614946246147156,
+        "r2": 0.9244719131629928,
+        "n_validos": 904934
+      },
+      "r2_teto_teste": {
+        "corr": 0.8663787841796875,
+        "r2": 0.7506121976766735,
+        "n_validos": 102910
+      },
+      "mae_constante_celula_inteira_db": 1.3645599628728033,
+      "mae_constante_teste_db": 1.926629245905163,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 1.926629245905163,
+      "mae_constante_piso_teste_db": 1.926629245905163,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 1.926629245905163,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "pre_correcao_r2_teto": {
+        "corr": 0.3822721242904663,
+        "r2": 0.14613197700954572,
+        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_lins_s42_Q4_v2.json",
+        "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
+        "populacao": "whole cell (the old script did not separate test)",
+        "diferenca_r2_celula": 0.7783399361534471
+      }
+    },
+    "sorocaba_Q1": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9188187,
+        "val": 1035070,
+        "test": 818925,
+        "celula": 12960000
+      },
+      "pi_celula": 0.8723791666666667,
+      "pi_treino": 0.8759106665983181,
+      "pi_val": 0.9356256098621349,
+      "pi_teste": 0.7787624019293586,
+      "r2_teto_celula": {
+        "corr": 0.9234664440155029,
+        "r2": 0.852790273222638,
+        "n_validos": 1653966
+      },
+      "r2_teto_teste": {
+        "corr": 0.6572237610816956,
+        "r2": 0.43194307213036964,
+        "n_validos": 181177
+      },
+      "mae_constante_celula_inteira_db": 2.0014325706137406,
+      "mae_constante_teste_db": 1.3904948136066784,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 1.3904948136066784,
+      "mae_constante_piso_teste_db": 1.3904948136066784,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 1.3904948136066784,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      }
+    },
+    "sorocaba_Q2": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9188187,
+        "val": 1035070,
+        "test": 818925,
+        "celula": 12960000
+      },
+      "pi_celula": 0.8697375771604938,
+      "pi_treino": 0.8674690665307531,
+      "pi_val": 0.8852386795095983,
+      "pi_teste": 0.8473486583020423,
+      "r2_teto_celula": {
+        "corr": 0.9126315116882324,
+        "r2": 0.8328962761263483,
+        "n_validos": 1688201
+      },
+      "r2_teto_teste": {
+        "corr": 0.8318631649017334,
+        "r2": 0.6919963251203285,
+        "n_validos": 125010
+      },
+      "mae_constante_celula_inteira_db": 2.1661364893088226,
+      "mae_constante_teste_db": 2.427705122862128,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 2.427705122862128,
+      "mae_constante_piso_teste_db": 2.427705122862128,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 2.427705122862128,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      }
+    },
+    "sorocaba_Q3": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9187682,
+        "val": 1041517,
+        "test": 826159,
+        "celula": 12960000
+      },
+      "pi_celula": 0.891336188271605,
+      "pi_treino": 0.9122514253323091,
+      "pi_val": 0.9346626123241387,
+      "pi_teste": 0.7795291221181395,
+      "r2_teto_celula": {
+        "corr": 0.7640357613563538,
+        "r2": 0.5837506446313832,
+        "n_validos": 1408283
+      },
+      "r2_teto_teste": {
+        "corr": 0.8071074485778809,
+        "r2": 0.6514224335498966,
+        "n_validos": 182144
+      },
+      "mae_constante_celula_inteira_db": 2.087311670918942,
+      "mae_constante_teste_db": 4.063168974798036,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 4.063168974798036,
+      "mae_constante_piso_teste_db": 4.063168974798036,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 4.063168974798036,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      }
+    },
+    "sorocaba_Q4": {
+      "sha_tensor_conferido": true,
+      "modo_carga": "mmap",
+      "idx_sha_ok": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "n": {
+        "train": 9187684,
+        "val": 1041519,
+        "test": 826159,
+        "celula": 12960000
+      },
+      "pi_celula": 0.8943023919753087,
+      "pi_treino": 0.8895991634017888,
+      "pi_val": 0.9456831800476035,
+      "pi_teste": 0.8648577331966365,
+      "r2_teto_celula": {
+        "corr": 0.8151572346687317,
+        "r2": 0.6644813172327737,
+        "n_validos": 1369841
+      },
+      "r2_teto_teste": {
+        "corr": 0.7359477281570435,
+        "r2": 0.5416190585795135,
+        "n_validos": 111649
+      },
+      "mae_constante_celula_inteira_db": 1.6318456085529787,
+      "mae_constante_teste_db": 1.6649006439440335,
+      "constante_usada_dbm": -110.0,
+      "constante_e_igual_ao_piso_sentinela": true,
+      "mae_constante_treino_aplicada_teste_db": 1.6649006439440335,
+      "mae_constante_piso_teste_db": 1.6649006439440335,
+      "cruzamento_npz": {
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana_db": 1.6649006439440335,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      }
+    }
+  },
+  "definicoes": {
+    "pi_frac_sentinela": "y[:,0] >= 299.0 (PL_TARGET_MAX_VALID); e3_inferencia_por_populacao.py:175,951; alvo_stats.py:'sentinela'",
+    "r2_teto": "corr_pearson(RSSI[~sentinela], -log10(max(dist_nearest_m,1.0)))**2, over the indicated POPULATION (whole cell or test set); COPY of the corr() function of EVIDENCIA_RESUBMISSAO/scripts/alvo_stats.py:24-27, reused by e3_alvos_dataset_v2_multi.py (generator of the alvo_stats_*_v2.json files). dist_nearest_m is the field of the tensor itself (rf_data['terrain'].dist_nearest_m), the same one used by alvo_stats.py and by e3_inferencia_por_populacao.py.",
+    "mae_constante": "mean(|RSSI - median(RSSI)|) over the SAME population (whole cell or test set); COPY of EVIDENCIA_RESUBMISSAO/scripts/fismat_controle_negativo_alvo.py:31-35 (field 'MAE_preditor_constante_mediana'). The constant is the median of the column, NOT the sentinel value by definition -- in the 16 cells it collapses to -110.0 dBm (== floor/sentinel) because frac_sentinela>0.5 in every cell and every partition; hence mae_constante_teste == mae_constante_piso_teste == mae_constante_treino_aplicada_teste in all 16 cells (see por_celula).",
+    "split": "Literal COPY of train_gnn_c0_spatial.py:351-373 (latlon_graus_para_metros) and :412-487 (split_espacial_3vias) + SpatialKFold from GNN_RF_V2/03_training/spatial_cv.py, via e3_inferencia_por_populacao.py. grid_km/buffer_km/split_frac/split_seed read from run_rec['config']; idx_sha256_global of the 3 partitions checked against run_c0c1cf_<cidade>_s42_<Q>_g10b2.json (16/16 OK)."
+  },
+  "nao_verificado": [
+    "g5b2 (5 km grid) is not part of this analysis (outside the R3-b scope; it is the separate R3-c analysis).",
+    "The covered fraction of the validation partition across 20 seeds is a separate analysis (R3-a); here only seed=42.",
+    "The GNN arm of e3_predicoes/*.npz was not cross-checked (only mlp_*; sufficient for the requested cross-check, but gnn_*.npz was not read).",
+    "No independent verification was made that dist_nearest_m in the cftudo tensor is byte-for-byte equal to the dist_nearest_m used by the pre-correction scripts (e3_alvos_dataset_v2_multi.py records 'dist_nearest identical to v1 bit for bit' for lins_Q1, but this was not rechecked here for the 16 post-correction cells)."
+  ],
+  "evidencia": {
+    "comando": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/r3_alvo_pos_correcao_16celulas.py (once without --celula for the 16 cells; prior smoke test with --celula lins_Q1)",
+    "log": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/r3_alvo_pos_correcao.log",
+    "json_bruto": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/r3_alvo_pos_correcao_16celulas_RAW.json",
+    "json_bruto_sha256": "2a121f0c38476e9ec7a9a30804d5a3d001675943ddb457a666853a5876fec0fb"
+  },
+  "script_caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/r3_alvo_pos_correcao_16celulas.py",
+  "script_sha256": "a6a7dcc62a23868f3e24bd29ef3dadcf3cd4e0e7bb73d01db647275e1f56fb75",
+  "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/r3_alvo_pos_correcao_16celulas_RAW.json"
+}

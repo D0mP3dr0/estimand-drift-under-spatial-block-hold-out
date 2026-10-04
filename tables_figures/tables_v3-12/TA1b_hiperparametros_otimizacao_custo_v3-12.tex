@@ -1,0 +1,33 @@
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.43\linewidth}>{\raggedright\arraybackslash}p{0.25\linewidth}}
+\toprule
+Setting & Graph regressor & Perceptron \\
+\midrule
+\multicolumn{3}{l}{\textit{Optimisation}} \\
+Optimiser & AdamW, weight decay $10^{-5}$ & same \\
+Initial learning rate & $10^{-3}$ & same \\
+Learning-rate schedule & cosine annealing with warm restarts, $T_0=10$ epochs, $T_{\mathrm{mult}}=2$, minimum rate $10^{-6}$, stepped per epoch; no restart falls within the 8 epochs & same \\
+Gradient clipping, norm \mbox{threshold} & 0.5 & same \\
+Mixed precision & automatic mixed precision (CUDA) & same \\
+Batch size (nodes) & 12288 & same \\
+Epochs & 8 & same \\
+Early stopping & none & same \\
+Gradient steps per run, median (range) & 5912 (5880--5920) & same \\
+\midrule
+\multicolumn{3}{l}{\textit{Selection}} \\
+Epoch retained & lowest validation MAE of received power & same \\
+Test set used in selection & no & same \\
+Best epoch, median (range) & 6 (2--8) & 6 (1--8) \\
+\midrule
+\multicolumn{3}{l}{\textit{Baselines}} \\
+Frequency (MHz) & 900 & same \\
+Heights (m) & Hata rural and COST-231: $h_{\mathrm{tx}}=30$, $h_{\mathrm{rx}}=1.5$ & same \\
+COST-231 variant & suburban ($C_m=0$) & same \\
+Distance & to the nearest transmitter, floored at 1~m & same \\
+Calibration & offset equal to the training median of received power plus modelled path loss, over (a) all training nodes, (b) valid training nodes only & same \\
+\midrule
+\multicolumn{3}{l}{\textit{Hardware and cost}} \\
+Hardware and software & NVIDIA GeForce RTX 5070 Ti; PyTorch 2.10.0+cu128; CUDA 12.8 & same \\
+Time per run (s), median (range) & 783.05 (775.9--1141.3) & 84.55 (82.5--192.2) \\
+Peak GPU memory (MB), median (range) & 4159.9 (4140.7--4187.6) & 316.3 \\
+\bottomrule
+\end{tabular}

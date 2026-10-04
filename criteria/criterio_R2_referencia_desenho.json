@@ -1,0 +1,12 @@
+{
+ "id": "R2_referencia_desenho",
+ "roadmap": "B4.1",
+ "subclaim": "S2 (first sentence of the abstract) and S4",
+ "origem": "requested in the internal review of the manuscript; adopted on 01/10/2026",
+ "pergunta": "For FIXED predictors (constant; calibrated FSPL (b)), in Bauru Q1, Campinas Q1, Lins Q1 and Sorocaba Q1, g=10 km, b=2 km, on the 200 split draws of fase1/1.8_referencia_nodal_200seeds.json: what is the distribution of (estimate - domain mean mu_U) for (H) the block hold-out with buffer, (H0) the same with b=0, (A) a simple random sample of nodes, without replacement, of the same size as the held-out test set in each split draw, and (J) the block hold-out with buffer reweighted by Hajek (1/p_i, p_i from fase2/1.6)? Populations: all nodes and valid nodes.",
+ "metodo_fixado": "e_i fixed as in criterios/criterio_2.3.json (single calibration on the training set of split seed=42); mu_U = mean of e_i over all nodes of the population; per estimator: bias = mean of the 200 estimates - mu_U, MC standard error of the bias = SD/sqrt(n), RMSE around mu_U; design effect deff = Var(H)/Var(A). Seed of the random sample: RandomState(20261001 + split-draw index).",
+ "previsao": "(A) unbiased and with much smaller RMSE; (H) with bias within 2 standard errors and RMSE dominated by between-draw variance; deff >> 1.",
+ "leitura": "deff >= 10 on the valid nodes in >= 3 of the 4 cells AND |bias(H)| <= 2 SE in >= 3 of the 4 -> the text states as its own result: for a fixed predictor, the block hold-out estimates the domain mean with variance deff times that of a probability sample of the same size and a bias not distinguished from zero over 200 split draws; the first sentence of the abstract no longer asserts a measured bias (the bias is attributed to the literature and to the exact identity). |bias(H)| > 2 SE in >= 3 of the 4 -> REINFORCES 'without removing its bias' with the value. Hajek (J) enters the text only if it reduces the RMSE to less than half of (H) in >= 3 of the 4 cells; otherwise the current sentence stays (no demonstrable correction).",
+ "se_inverter": "if deff < 2 in the valid nodes in >= 3 of the 4 cells, the error drift does not exceed that of a random sample and S4 is sent back for a reformulation decision.",
+ "fixado_em": "2026-10-01T17:13:54-03:00 (before any script or result of this test existed)"
+}

@@ -1,0 +1,552 @@
+{
+  "id": "G2_P1_por_cidade",
+  "adendo1_sha256": "ee56ae8ed9667d641f9305b4c226140ce3bceea5eaf4aaa4164cf0b70964f690",
+  "script_sha256": "920eaa7f9152c349bc49ede4481960c46e4ad5fd04a332d9f27588865bd01a16",
+  "data_utc": "2026-10-04T13:27:26.050271+00:00",
+  "cidades": {
+    "bauru": {
+      "cidade": "bauru",
+      "P1a_identidade": {
+        "por_celula": {
+          "bauru_Q1": true,
+          "bauru_Q2": true,
+          "bauru_Q3": true,
+          "bauru_Q4": true
+        },
+        "passou": true
+      },
+      "P1b_constantes": {
+        "elev_mean": {
+          "Q1": 555.48681640625,
+          "Q2": 555.48681640625,
+          "Q3": 555.48681640625,
+          "Q4": 555.48681640625
+        },
+        "elev_std": {
+          "Q1": 104.38325500488281,
+          "Q2": 104.38325500488281,
+          "Q3": 104.38325500488281,
+          "Q4": 104.38325500488281
+        },
+        "elev_mean_hex": {
+          "Q1": "0x1.15be500000000p+9",
+          "Q2": "0x1.15be500000000p+9",
+          "Q3": "0x1.15be500000000p+9",
+          "Q4": "0x1.15be500000000p+9"
+        },
+        "elev_std_hex": {
+          "Q1": "0x1.a188740000000p+6",
+          "Q2": "0x1.a188740000000p+6",
+          "Q3": "0x1.a188740000000p+6",
+          "Q4": "0x1.a188740000000p+6"
+        },
+        "passou": true
+      },
+      "P1c0_cobertura": {
+        "n_nos_por_quadrante": {
+          "Q1": 12960000,
+          "Q2": 12960000,
+          "Q3": 12960000,
+          "Q4": 12960000
+        },
+        "soma_nos": 51840000,
+        "H_vezes_W_dem_shape": 51840000,
+        "dem_shape": [
+          7200,
+          7200
+        ],
+        "posicoes_unicas": 51840000,
+        "posicoes_total": 51840000,
+        "quadrantes_disjuntos": true,
+        "avaliavel": true,
+        "passou": true,
+        "registro_quadrantes_gpu_pt": {
+          "Q1": {
+            "name": "Q1",
+            "r0": 0,
+            "r1": 3600,
+            "c0": 0,
+            "c1": 3600,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q2": {
+            "name": "Q2",
+            "r0": 0,
+            "r1": 3600,
+            "c0": 3600,
+            "c1": 7200,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q3": {
+            "name": "Q3",
+            "r0": 3600,
+            "r1": 7200,
+            "c0": 0,
+            "c1": 3600,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q4": {
+            "name": "Q4",
+            "r0": 3600,
+            "r1": 7200,
+            "c0": 3600,
+            "c1": 7200,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          }
+        }
+      },
+      "P1c_momentos": {
+        "aplicavel": true,
+        "media_ponderada": -2.2073460959852387e-07,
+        "dp_agregado_ddof0": 0.999999917827396,
+        "faixa_media": [
+          -0.001,
+          0.001
+        ],
+        "faixa_dp": [
+          0.999,
+          1.001
+        ],
+        "passou": true
+      },
+      "P1d_nodata": {
+        "n_abs_lt_1e-6_por_quadrante": {
+          "Q1": 6,
+          "Q2": 11,
+          "Q3": 13,
+          "Q4": 10
+        },
+        "fracao_cidade": 7.716049382716049e-07,
+        "limite": 0.01,
+        "passou": true
+      },
+      "P2_nan": {
+        "bauru_Q1": 0,
+        "bauru_Q2": 0,
+        "bauru_Q3": 0,
+        "bauru_Q4": 0
+      },
+      "abortar": false
+    },
+    "campinas": {
+      "cidade": "campinas",
+      "P1a_identidade": {
+        "por_celula": {
+          "campinas_Q1": true,
+          "campinas_Q2": true,
+          "campinas_Q3": true,
+          "campinas_Q4": true
+        },
+        "passou": true
+      },
+      "P1b_constantes": {
+        "elev_mean": {
+          "Q1": 762.5386962890625,
+          "Q2": 762.5386962890625,
+          "Q3": 762.5386962890625,
+          "Q4": 762.5386962890625
+        },
+        "elev_std": {
+          "Q1": 215.7462615966797,
+          "Q2": 215.7462615966797,
+          "Q3": 215.7462615966797,
+          "Q4": 215.7462615966797
+        },
+        "elev_mean_hex": {
+          "Q1": "0x1.7d44f40000000p+9",
+          "Q2": "0x1.7d44f40000000p+9",
+          "Q3": "0x1.7d44f40000000p+9",
+          "Q4": "0x1.7d44f40000000p+9"
+        },
+        "elev_std_hex": {
+          "Q1": "0x1.af7e160000000p+7",
+          "Q2": "0x1.af7e160000000p+7",
+          "Q3": "0x1.af7e160000000p+7",
+          "Q4": "0x1.af7e160000000p+7"
+        },
+        "passou": true
+      },
+      "P1c0_cobertura": {
+        "n_nos_por_quadrante": {
+          "Q1": 12960000,
+          "Q2": 12960000,
+          "Q3": 12960000,
+          "Q4": 12960000
+        },
+        "soma_nos": 51840000,
+        "H_vezes_W_dem_shape": 51840000,
+        "dem_shape": [
+          7200,
+          7200
+        ],
+        "posicoes_unicas": 51840000,
+        "posicoes_total": 51840000,
+        "quadrantes_disjuntos": true,
+        "avaliavel": true,
+        "passou": true,
+        "registro_quadrantes_gpu_pt": {
+          "Q1": {
+            "name": "Q1",
+            "r0": 0,
+            "r1": 3600,
+            "c0": 0,
+            "c1": 3600,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q2": {
+            "name": "Q2",
+            "r0": 0,
+            "r1": 3600,
+            "c0": 3600,
+            "c1": 7200,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q3": {
+            "name": "Q3",
+            "r0": 3600,
+            "r1": 7200,
+            "c0": 0,
+            "c1": 3600,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q4": {
+            "name": "Q4",
+            "r0": 3600,
+            "r1": 7200,
+            "c0": 3600,
+            "c1": 7200,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          }
+        }
+      },
+      "P1c_momentos": {
+        "aplicavel": true,
+        "media_ponderada": -1.9783305690873897e-07,
+        "dp_agregado_ddof0": 0.9999999519143871,
+        "faixa_media": [
+          -0.001,
+          0.001
+        ],
+        "faixa_dp": [
+          0.999,
+          1.001
+        ],
+        "passou": true
+      },
+      "P1d_nodata": {
+        "n_abs_lt_1e-6_por_quadrante": {
+          "Q1": 9,
+          "Q2": 9,
+          "Q3": 1,
+          "Q4": 26
+        },
+        "fracao_cidade": 8.680555555555556e-07,
+        "limite": 0.01,
+        "passou": true
+      },
+      "P2_nan": {
+        "campinas_Q1": 0,
+        "campinas_Q2": 0,
+        "campinas_Q3": 0,
+        "campinas_Q4": 0
+      },
+      "abortar": false
+    },
+    "lins": {
+      "cidade": "lins",
+      "P1a_identidade": {
+        "por_celula": {
+          "lins_Q1": true,
+          "lins_Q2": true,
+          "lins_Q3": true,
+          "lins_Q4": true
+        },
+        "passou": true
+      },
+      "P1b_constantes": {
+        "elev_mean": {
+          "Q1": 474.563720703125,
+          "Q2": 474.563720703125,
+          "Q3": 474.563720703125,
+          "Q4": 474.563720703125
+        },
+        "elev_std": {
+          "Q1": 68.59114837646484,
+          "Q2": 68.59114837646484,
+          "Q3": 68.59114837646484,
+          "Q4": 68.59114837646484
+        },
+        "elev_mean_hex": {
+          "Q1": "0x1.da90500000000p+8",
+          "Q2": "0x1.da90500000000p+8",
+          "Q3": "0x1.da90500000000p+8",
+          "Q4": "0x1.da90500000000p+8"
+        },
+        "elev_std_hex": {
+          "Q1": "0x1.125d560000000p+6",
+          "Q2": "0x1.125d560000000p+6",
+          "Q3": "0x1.125d560000000p+6",
+          "Q4": "0x1.125d560000000p+6"
+        },
+        "passou": true
+      },
+      "P1c0_cobertura": {
+        "n_nos_por_quadrante": {
+          "Q1": 12960000,
+          "Q2": 12960000,
+          "Q3": 12960000,
+          "Q4": 12960000
+        },
+        "soma_nos": 51840000,
+        "H_vezes_W_dem_shape": 51840000,
+        "dem_shape": [
+          7200,
+          7200
+        ],
+        "posicoes_unicas": 51840000,
+        "posicoes_total": 51840000,
+        "quadrantes_disjuntos": true,
+        "avaliavel": true,
+        "passou": true,
+        "registro_quadrantes_gpu_pt": {
+          "Q1": {
+            "name": "Q1",
+            "r0": 0,
+            "r1": 3600,
+            "c0": 0,
+            "c1": 3600,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q2": {
+            "name": "Q2",
+            "r0": 0,
+            "r1": 3600,
+            "c0": 3600,
+            "c1": 7200,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q3": {
+            "name": "Q3",
+            "r0": 3600,
+            "r1": 7200,
+            "c0": 0,
+            "c1": 3600,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q4": {
+            "name": "Q4",
+            "r0": 3600,
+            "r1": 7200,
+            "c0": 3600,
+            "c1": 7200,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          }
+        }
+      },
+      "P1c_momentos": {
+        "aplicavel": true,
+        "media_ponderada": -3.4967083807310297e-07,
+        "dp_agregado_ddof0": 1.00000002559443,
+        "faixa_media": [
+          -0.001,
+          0.001
+        ],
+        "faixa_dp": [
+          0.999,
+          1.001
+        ],
+        "passou": true
+      },
+      "P1d_nodata": {
+        "n_abs_lt_1e-6_por_quadrante": {
+          "Q1": 11,
+          "Q2": 12,
+          "Q3": 12,
+          "Q4": 9
+        },
+        "fracao_cidade": 8.487654320987654e-07,
+        "limite": 0.01,
+        "passou": true
+      },
+      "P2_nan": {
+        "lins_Q1": 0,
+        "lins_Q2": 0,
+        "lins_Q3": 0,
+        "lins_Q4": 0
+      },
+      "abortar": false
+    },
+    "sorocaba": {
+      "cidade": "sorocaba",
+      "P1a_identidade": {
+        "por_celula": {
+          "sorocaba_Q1": true,
+          "sorocaba_Q2": true,
+          "sorocaba_Q3": true,
+          "sorocaba_Q4": true
+        },
+        "passou": true
+      },
+      "P1b_constantes": {
+        "elev_mean": {
+          "Q1": 584.0597534179688,
+          "Q2": 584.0597534179688,
+          "Q3": 584.0597534179688,
+          "Q4": 584.0597534179688
+        },
+        "elev_std": {
+          "Q1": 265.7874755859375,
+          "Q2": 265.7874755859375,
+          "Q3": 265.7874755859375,
+          "Q4": 265.7874755859375
+        },
+        "elev_mean_hex": {
+          "Q1": "0x1.2407a60000000p+9",
+          "Q2": "0x1.2407a60000000p+9",
+          "Q3": "0x1.2407a60000000p+9",
+          "Q4": "0x1.2407a60000000p+9"
+        },
+        "elev_std_hex": {
+          "Q1": "0x1.09c9980000000p+8",
+          "Q2": "0x1.09c9980000000p+8",
+          "Q3": "0x1.09c9980000000p+8",
+          "Q4": "0x1.09c9980000000p+8"
+        },
+        "passou": true
+      },
+      "P1c0_cobertura": {
+        "n_nos_por_quadrante": {
+          "Q1": 12960000,
+          "Q2": 12960000,
+          "Q3": 12960000,
+          "Q4": 12960000
+        },
+        "soma_nos": 51840000,
+        "H_vezes_W_dem_shape": 51840000,
+        "dem_shape": [
+          7200,
+          7200
+        ],
+        "posicoes_unicas": 51840000,
+        "posicoes_total": 51840000,
+        "quadrantes_disjuntos": true,
+        "avaliavel": true,
+        "passou": true,
+        "registro_quadrantes_gpu_pt": {
+          "Q1": {
+            "name": "Q1",
+            "r0": 0,
+            "r1": 3600,
+            "c0": 0,
+            "c1": 3600,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q2": {
+            "name": "Q2",
+            "r0": 0,
+            "r1": 3600,
+            "c0": 3600,
+            "c1": 7200,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q3": {
+            "name": "Q3",
+            "r0": 3600,
+            "r1": 7200,
+            "c0": 0,
+            "c1": 3600,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          },
+          "Q4": {
+            "name": "Q4",
+            "r0": 3600,
+            "r1": 7200,
+            "c0": 3600,
+            "c1": 7200,
+            "full_grid": [
+              7200,
+              7200
+            ]
+          }
+        }
+      },
+      "P1c_momentos": {
+        "aplicavel": true,
+        "media_ponderada": 2.3654413181012152e-08,
+        "dp_agregado_ddof0": 1.0000000341175945,
+        "faixa_media": [
+          -0.001,
+          0.001
+        ],
+        "faixa_dp": [
+          0.999,
+          1.001
+        ],
+        "passou": true
+      },
+      "P1d_nodata": {
+        "n_abs_lt_1e-6_por_quadrante": {
+          "Q1": 38,
+          "Q2": 22,
+          "Q3": 13,
+          "Q4": 3
+        },
+        "fracao_cidade": 1.4660493827160495e-06,
+        "limite": 0.01,
+        "passou": true
+      },
+      "P2_nan": {
+        "sorocaba_Q1": 0,
+        "sorocaba_Q2": 0,
+        "sorocaba_Q3": 0,
+        "sorocaba_Q4": 0
+      },
+      "abortar": false
+    }
+  }
+}

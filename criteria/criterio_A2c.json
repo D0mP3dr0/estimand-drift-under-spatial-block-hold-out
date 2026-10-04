@@ -1,0 +1,104 @@
+{
+ "id": "A2c",
+ "gravado_em": "2026-09-26 (plan A, decision D7, PROVENANCE ERRATUM, item (3) of the deliverables)",
+ "autor": "authors",
+ "alvo": "gpu/modelo_v3/{v3_common.py,train_gnn_v3.py,train_mlp_v3.py,rf_decoder_v3.py} -- SAME code as A2 (byte-identical to the version approved by the A1bis gate and by the silent-bug gate), with the PROVENANCE FIX (default dataset switched from `_enriched_v2.pt`/`GNN_RF_V2/graph_data` to `_enriched_cftudo.pt`/`graph_data_v3`, with a sha256 gate against the manifest v4 recorded in `insumos` of the run JSON)",
+ "tipo": "confirmatorio",
+ "substitui": "criterio_A2.json -- the 8 A2 runs ran on the dataset from BEFORE the target correction (PROVENANCE ERRATUM, internal/note_20.md); none of their numbers is citable. A2c repeats the SAME design on the CANONICAL dataset.",
+ "nota_proveniencia": "cftudo dataset by sha: rf_data_file = transfer_dataset_<cidade>_v19_<Q>_enriched_cftudo.pt in /trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3, sha256 verified at each run against /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/manifest_mathematics_v4.jsonl (group tensores_cftudo, 16 entries); the run ABORTS (rc=3) if the sha does not match. See the insumos field of each run JSON.",
+ "manifest": "manifest_mathematics_v4.jsonl (grupo tensores_cftudo)",
+ "hipotese": "The modelo_v3 pipeline (GNN and MLP), on the CANONICAL dataset (enriched_cftudo), run 2 times with the SAME training seed (42) and the SAME split_seed (42), without chain, 8 epochs, produces the SAME per-population MAE number between the 2 repetitions (effective training determinism on this GPU/driver), within a numerical-floor tolerance.",
+ "predicao": "If the hypothesis is true, the absolute divergence between repetition 1 and repetition 2 in the per-population MAE (rssi_dbm, path_loss_total_dB and the other reported channels) is <= 1e-3 dB, for both GNN and MLP, in Bauru Q1 and in Lins Q1.",
+ "criterio_aceite": "PASS if |MAE_rep1 - MAE_rep2| <= 1e-3 dB in ALL 4 combinations (bauru-GNN, bauru-MLP, lins-GNN, lins-MLP); FAIL (branch declared in the protocol) if any combination diverges by > 1e-3 dB -- in that case every modelo_v3 number becomes a per-seed distribution and the article text declares non-determinism instead of a point value. Indeterminate (budget exhausted before completing the 8 runs) = abortado_por_orcamento, with no PASS/FAIL conclusion on the hypothesis.",
+ "condicao_de_lancamento": "launched only if gpu/A2c/controle_cftudo_bauru_Q1.json (GNN and MLP, Bauru Q1, cftudo, same config) shows sentinel MAE_rssi < 1 dB and valid < 5 dB for both models (item (2)/(3) of the deliverable); otherwise the batch stays on hold and the diagnosis is recorded without launching a run.",
+ "corridas": [
+  {
+   "run_label": "gnn_v3_a2c_bauru_Q1_rep1",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "rep": 1
+  },
+  {
+   "run_label": "gnn_v3_a2c_bauru_Q1_rep2",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "rep": 2
+  },
+  {
+   "run_label": "mlp_v3_a2c_bauru_Q1_rep1",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "rep": 1
+  },
+  {
+   "run_label": "mlp_v3_a2c_bauru_Q1_rep2",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "rep": 2
+  },
+  {
+   "run_label": "gnn_v3_a2c_lins_Q1_rep1",
+   "tipo": "gnn",
+   "cidade": "lins",
+   "quadrante": "Q1",
+   "rep": 1
+  },
+  {
+   "run_label": "gnn_v3_a2c_lins_Q1_rep2",
+   "tipo": "gnn",
+   "cidade": "lins",
+   "quadrante": "Q1",
+   "rep": 2
+  },
+  {
+   "run_label": "mlp_v3_a2c_lins_Q1_rep1",
+   "tipo": "mlp",
+   "cidade": "lins",
+   "quadrante": "Q1",
+   "rep": 1
+  },
+  {
+   "run_label": "mlp_v3_a2c_lins_Q1_rep2",
+   "tipo": "mlp",
+   "cidade": "lins",
+   "quadrante": "Q1",
+   "rep": 2
+  }
+ ],
+ "config_fixa_por_corrida": {
+  "seed_treino": 42,
+  "split_seed": 42,
+  "epochs": 8,
+  "max_nodes": 0,
+  "mmap": true,
+  "k_antenna": -1,
+  "k_terrain": -1,
+  "hidden_dim": 256,
+  "batch_size": 12288,
+  "lr": 0.001,
+  "sem_cadeia": true,
+  "transfer_from": ""
+ },
+ "gravidade": "divergence > 1e-3 dB in any combination = finding that changes the article text (distribution per seed instead of a point value); it does not by itself block the roadmap -- it is the very exit question of this block",
+ "dado": "ACTUAL Bauru Q1 and Lins Q1, CANONICAL dataset enriched_cftudo (whole graph, --mmap, without --max-nodes), GPU RTX 5070 Ti (~8.4 GB free at the start of this round; concurrent embedding engine; abort the run if free VRAM < 1 GB)",
+ "orcamento": "orcamento_gpu_min=180 (hard cap, inherited from A2; cost ERRATUM estimates ~2.5h for the 8 runs -- the cftudo dataset is ~16x larger on disk than the _v2 of A2, but the number of nodes/epochs is identical, so the per-run time projection does not change, by the same reasoning as A2); stop on reaching the cap or on finishing the 8 runs, whichever comes first",
+ "referencia_custo": "the control of this block (gpu/A2c/controle_cftudo_bauru_Q1.json) measures the actual time of 1 GNN run + 1 MLP run on the cftudo dataset before the batch; see also A2/lote_A2_status.json (same config, wrong dataset, GNN ~824s/~15.7min and MLP ~94s/~1.5min at 8 epochs)",
+ "referencia_gate_anterior": "gpu/A2/ia-bug-silencioso.json (veredito=passa, reuse of the A1bis gate on hash-identical code); the provenance correction does NOT change the decoder/training code, only the default dataset/graph_dir and the sha gate, so the A2 silent-bug gate remains valid for modelo_v3",
+ "errata": [
+  {
+   "quando": "2026-09-26 01:32:07",
+   "autor": "authors",
+   "motivo": "CUDA OutOfMemoryError in the 1st A2 run (bs=24576, k=-1, whole graph) alongside the embedding engine (5.3 GB): ~10 GB reserved > 10.2 GB available; expandable_segments did not solve it. batch_size 24576 -> 12288 BEFORE any result. Inherited by A2c (same config_fixa_por_corrida).",
+   "batch_size_anterior": 24576
+  },
+  {
+   "quando": "2026-09-26 03:30",
+   "autor": "authors",
+   "motivo": "PROVENANCE ERRATUM: the 8 A2 runs used `transfer_dataset_<c>_v19_<Q>_enriched_v2.pt` (from BEFORE the target correction) instead of the canonical `_enriched_cftudo.pt`; no A2 number is citable. A2c repeats the design on the canonical dataset, with a sha256 gate per run."
+  }
+ ]
+}

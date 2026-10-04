@@ -1,0 +1,909 @@
+{
+ "artefato": "agregado_G1_v5_bloco1",
+ "versao_agregador": 5,
+ "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_G1_agregar_v5.py",
+ "script_sha256": "50610e19f9ea1314c899b86b21eeefb569b74e64093f28936ee1c03a6aa0e465",
+ "script_original_copiado": {
+  "caminho": "scripts/v3_G1_agregar_v4.py",
+  "sha256": "4263076007a28aa76c5e51fa73c35c513b34131c8019f2b5089981a57e916b14",
+  "avo_v3_sha256": "5102299e6e5b0b3d25009693ad04c3dc0d9341833252b406841e2e894bae0e16",
+  "avo_v2_sha256": "d94fac29dcf6c694cab9bec55c4bdd9e2701fe5baf2675cbfe0aa77a5c155824",
+  "avo_v1_sha256": "88d444d4c480b7758ccd197f6936d5835a78c71863d99933fe8cbcfcd2419d2b"
+ },
+ "comando": [
+  "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python",
+  "scripts/v3_G1_agregar_v5.py",
+  "--bloco",
+  "1"
+ ],
+ "comando_texto": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python scripts/v3_G1_agregar_v5.py --bloco 1",
+ "data": "2026-10-02T15:44:27-03:00",
+ "criterio_sha256": "d0d2b6366930d53ca71065baeff36addbe61be6f56560e722d08721e91125132",
+ "adendo_sha256": "e36a6294948566905f50ca5adebe325c3d5a003178a18397ed499fad4eb409e5",
+ "adendo2_sha256": "5089c7f869adb34d5172201b3e6c1e57ad383515c25af73e59f739acfe8e80d0",
+ "script_v3_sha256_copiado": "5102299e6e5b0b3d25009693ad04c3dc0d9341833252b406841e2e894bae0e16",
+ "script_v2_sha256_avo": "d94fac29dcf6c694cab9bec55c4bdd9e2701fe5baf2675cbfe0aa77a5c155824",
+ "plano_sha256": "cb481fbb3c71103531692d89fee388cfa24a6834c16270df5dcec131a68b14f0",
+ "status_lote_veredito": null,
+ "modo_teste": false,
+ "raiz": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25",
+ "limiares_do_criterio_db": {
+  "ruido_repeticao_gnn_0_132": 0.132,
+  "ruido_sentinela_0_117": 0.117,
+  "fator_condicao1": 3.0,
+  "fator_delimita": 2.0,
+  "k_min_bloco3": 10
+ },
+ "nota_0_132": "0.132 dB is an absolute difference between two repetitions, not a std: the threshold is conservative (addendum 2)",
+ "conferencias_item7": {
+  "scripts_do_lote": {
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1/proveniencia_scripts_G1.json",
+   "arquivos": [
+    {
+     "caminho": "_v3_2026-09-25/gpu/G1/train_v3_g10.py",
+     "sha256_registrado": "1a9dfa2f7079ce58056e53a63f682f7b0336355dae6582efa2941379fefae70c",
+     "sha256_observado": "1a9dfa2f7079ce58056e53a63f682f7b0336355dae6582efa2941379fefae70c",
+     "igual": true
+    },
+    {
+     "caminho": "_v3_2026-09-25/gpu/G1/rodar_lote_G1.py",
+     "sha256_registrado": "e05a921488a13f4fb34e262968cddeb9cb3134bd44c9cfcb05bbaaa03ff3bc59",
+     "sha256_observado": "e05a921488a13f4fb34e262968cddeb9cb3134bd44c9cfcb05bbaaa03ff3bc59",
+     "igual": true
+    },
+    {
+     "caminho": "scripts/v3_G1_agregar.py",
+     "sha256_registrado": "88d444d4c480b7758ccd197f6936d5835a78c71863d99933fe8cbcfcd2419d2b",
+     "sha256_observado": "88d444d4c480b7758ccd197f6936d5835a78c71863d99933fe8cbcfcd2419d2b",
+     "igual": true
+    },
+    {
+     "caminho": "_v3_2026-09-25/criterios/criterio_G1_modelos_g10.json",
+     "sha256_registrado": "d0d2b6366930d53ca71065baeff36addbe61be6f56560e722d08721e91125132",
+     "sha256_observado": "d0d2b6366930d53ca71065baeff36addbe61be6f56560e722d08721e91125132",
+     "igual": true
+    },
+    {
+     "caminho": "_v3_2026-09-25/gpu/G1/portao_G1.json",
+     "sha256_registrado": "4ced4fcba7aa8e6e520f467458260f958723d56084b25a8c54d71573d60161c8",
+     "sha256_observado": "4ced4fcba7aa8e6e520f467458260f958723d56084b25a8c54d71573d60161c8",
+     "igual": true
+    }
+   ]
+  },
+  "criterio_x_adendo": "sha256 of the decision criterion equal to the one cited in the addendum",
+  "plano_x_lista_2_1_e_g_b": "ok",
+  "corridas_conferidas": {
+   "n": 80,
+   "itens": [
+    "run_label",
+    "dataset_nome/sha256/flag_manifest_v4",
+    "g=10 and b=2 in the run JSON (config, geometry, split)",
+    "g=10 and b=2 in the sidecar shim_g10 (requested, effective, flags, n_nos)",
+    "seed and split_seed vs plano_G1.json",
+    "hash of the .npz indices vs particoes.test.idx_sha256_global",
+    "config vs A4 (except grid_km, seed, split_seed, labels and paths)",
+    "script/decoder/wrapper sha vs A4",
+    "n_test/n_validos/n_todos vs 2.1 (C1)",
+    "unique names run_/predicoes_/shim_g10_<label> (C3)",
+    "binding of .npz to run JSON (C3)",
+    "sem_validos without .npz: run JSON + 2.1 validos==0 (C2)"
+   ],
+   "n_corridas_carregadas": 80,
+   "amarracao_por_corrida": {
+    "g1_gnn_bauru_Q1_ss811474_s42": {
+     "dif_rel_mae": 0.020775164882291836,
+     "dif_rel_rmse": 0.001722804458974172
+    },
+    "g1_gnn_campinas_Q1_ss811474_s42": {
+     "dif_rel_mae": 0.017783388560919527,
+     "dif_rel_rmse": 0.0013841627871095203
+    },
+    "g1_mlp_bauru_Q1_ss811474_s42": {
+     "dif_rel_mae": 0.0030638647162961174,
+     "dif_rel_rmse": 0.000593092163983893
+    },
+    "g1_mlp_campinas_Q1_ss811474_s42": {
+     "dif_rel_mae": 0.02048258390793468,
+     "dif_rel_rmse": 3.745872530719845e-05
+    },
+    "g1_gnn_campinas_Q1_ss54892_s42": {
+     "dif_rel_mae": 0.030721421585634033,
+     "dif_rel_rmse": 0.0014382139357690079
+    },
+    "g1_gnn_bauru_Q1_ss54892_s42": {
+     "dif_rel_mae": 0.06347059896397333,
+     "dif_rel_rmse": 0.0026729540936335726
+    },
+    "g1_mlp_campinas_Q1_ss54892_s42": {
+     "dif_rel_mae": 0.008915191208121648,
+     "dif_rel_rmse": 2.304408525111059e-05
+    },
+    "g1_mlp_bauru_Q1_ss54892_s42": {
+     "dif_rel_mae": 0.006411961780943443,
+     "dif_rel_rmse": 0.00024065646731472818
+    },
+    "g1_gnn_bauru_Q1_ss880099_s42": {
+     "dif_rel_mae": 0.0012424374586654226,
+     "dif_rel_rmse": 0.0011648286361381622
+    },
+    "g1_gnn_campinas_Q1_ss880099_s42": {
+     "dif_rel_mae": 0.006585435969229438,
+     "dif_rel_rmse": 0.0030931121984521036
+    },
+    "g1_mlp_bauru_Q1_ss880099_s42": {
+     "dif_rel_mae": 0.0009726771777404832,
+     "dif_rel_rmse": 0.00021547633628762409
+    },
+    "g1_mlp_campinas_Q1_ss880099_s42": {
+     "dif_rel_mae": 0.0027439116724958207,
+     "dif_rel_rmse": 0.0009582717843868669
+    },
+    "g1_gnn_campinas_Q1_ss125243_s42": {
+     "dif_rel_mae": 0.004501439121896383,
+     "dif_rel_rmse": 0.009425026288274609
+    },
+    "g1_gnn_bauru_Q1_ss125243_s42": {
+     "dif_rel_mae": 0.007820291920323534,
+     "dif_rel_rmse": 0.004712084359247095
+    },
+    "g1_mlp_campinas_Q1_ss125243_s42": {
+     "dif_rel_mae": 0.0003602989699178952,
+     "dif_rel_rmse": 0.0005046955237914728
+    },
+    "g1_mlp_bauru_Q1_ss125243_s42": {
+     "dif_rel_mae": 0.001998243665678288,
+     "dif_rel_rmse": 0.00036242573996078377
+    },
+    "g1_gnn_bauru_Q1_ss159513_s42": {
+     "dif_rel_mae": 0.00037775488197253526,
+     "dif_rel_rmse": 0.0013241060343216183
+    },
+    "g1_gnn_campinas_Q1_ss159513_s42": {
+     "dif_rel_mae": 0.0001128098937570276,
+     "dif_rel_rmse": 0.006102934451388998
+    },
+    "g1_mlp_bauru_Q1_ss159513_s42": {
+     "dif_rel_mae": 0.0023074313994914295,
+     "dif_rel_rmse": 0.0002526000562810588
+    },
+    "g1_mlp_campinas_Q1_ss159513_s42": {
+     "dif_rel_mae": 0.02079669537831719,
+     "dif_rel_rmse": 0.000580123756674656
+    },
+    "g1_gnn_campinas_Q1_ss739191_s42": {
+     "dif_rel_mae": 0.022203525987738466,
+     "dif_rel_rmse": 0.008245413728266291
+    },
+    "g1_gnn_bauru_Q1_ss739191_s42": {
+     "dif_rel_mae": 0.010287909534326827,
+     "dif_rel_rmse": 0.01324228283681425
+    },
+    "g1_mlp_campinas_Q1_ss739191_s42": {
+     "dif_rel_mae": 0.00797427692927066,
+     "dif_rel_rmse": 0.0008079925156085652
+    },
+    "g1_mlp_bauru_Q1_ss739191_s42": {
+     "dif_rel_mae": 0.005563755977384558,
+     "dif_rel_rmse": 0.00048333429670259357
+    },
+    "g1_gnn_bauru_Q1_ss29675_s42": {
+     "dif_rel_mae": 0.006943959007922091,
+     "dif_rel_rmse": 0.0003642380181344842
+    },
+    "g1_gnn_campinas_Q1_ss29675_s42": {
+     "dif_rel_mae": 0.022070089924256978,
+     "dif_rel_rmse": 0.003929064361473138
+    },
+    "g1_mlp_bauru_Q1_ss29675_s42": {
+     "dif_rel_mae": 0.008910219677832072,
+     "dif_rel_rmse": 0.00016556530162169133
+    },
+    "g1_mlp_campinas_Q1_ss29675_s42": {
+     "dif_rel_mae": 0.012260491530574989,
+     "dif_rel_rmse": 0.0013754591353795137
+    },
+    "g1_gnn_campinas_Q1_ss676375_s42": {
+     "dif_rel_mae": 0.008234011426595826,
+     "dif_rel_rmse": 0.003258863611505309
+    },
+    "g1_gnn_bauru_Q1_ss676375_s42": {
+     "dif_rel_mae": 0.005476028190795675,
+     "dif_rel_rmse": 0.00848768654811015
+    },
+    "g1_mlp_campinas_Q1_ss676375_s42": {
+     "dif_rel_mae": 0.0033945620202790834,
+     "dif_rel_rmse": 0.00041532017446752436
+    },
+    "g1_mlp_bauru_Q1_ss676375_s42": {
+     "dif_rel_mae": 0.009826254078362498,
+     "dif_rel_rmse": 0.00018245090681706368
+    },
+    "g1_gnn_bauru_Q1_ss387379_s42": {
+     "dif_rel_mae": 0.0018875277256441367,
+     "dif_rel_rmse": 0.0011822791160989343
+    },
+    "g1_gnn_campinas_Q1_ss387379_s42": {
+     "dif_rel_mae": 0.0015765325733939188,
+     "dif_rel_rmse": 0.0007568599495785639
+    },
+    "g1_mlp_bauru_Q1_ss387379_s42": {
+     "dif_rel_mae": 0.002768485692879101,
+     "dif_rel_rmse": 0.00022617053505592655
+    },
+    "g1_mlp_campinas_Q1_ss387379_s42": {
+     "dif_rel_mae": 0.001599738707078524,
+     "dif_rel_rmse": 3.13226006454127e-05
+    },
+    "g1_gnn_campinas_Q1_ss259492_s42": {
+     "dif_rel_mae": 0.005867244111634436,
+     "dif_rel_rmse": 0.026669719709712884
+    },
+    "g1_gnn_bauru_Q1_ss259492_s42": {
+     "dif_rel_mae": 0.014250323358568849,
+     "dif_rel_rmse": 0.008944887500360217
+    },
+    "g1_mlp_campinas_Q1_ss259492_s42": {
+     "dif_rel_mae": 0.011066828862844302,
+     "dif_rel_rmse": 0.00024158817446017883
+    },
+    "g1_mlp_bauru_Q1_ss259492_s42": {
+     "dif_rel_mae": 0.02601208650510273,
+     "dif_rel_rmse": 0.0017915506051115338
+    },
+    "g1_gnn_bauru_Q1_ss684965_s42": {
+     "dif_rel_mae": 0.002170726212976441,
+     "dif_rel_rmse": 0.013366588793561009
+    },
+    "g1_gnn_campinas_Q1_ss684965_s42": {
+     "dif_rel_mae": 0.014325255612173368,
+     "dif_rel_rmse": 0.012546346817595895
+    },
+    "g1_mlp_bauru_Q1_ss684965_s42": {
+     "dif_rel_mae": 0.0005898102097151048,
+     "dif_rel_rmse": 0.0007673729346502825
+    },
+    "g1_mlp_campinas_Q1_ss684965_s42": {
+     "dif_rel_mae": 0.005480879539834659,
+     "dif_rel_rmse": 0.0003704101673236506
+    },
+    "g1_gnn_campinas_Q1_ss723969_s42": {
+     "dif_rel_mae": 0.0019130389858816182,
+     "dif_rel_rmse": 0.0007735859651331827
+    },
+    "g1_gnn_bauru_Q1_ss723969_s42": {
+     "dif_rel_mae": 0.0008323877675035253,
+     "dif_rel_rmse": 0.0007225523909202624
+    },
+    "g1_mlp_campinas_Q1_ss723969_s42": {
+     "dif_rel_mae": 8.995297562939769e-05,
+     "dif_rel_rmse": 5.677152110043073e-06
+    },
+    "g1_mlp_bauru_Q1_ss723969_s42": {
+     "dif_rel_mae": 0.0038019729960052507,
+     "dif_rel_rmse": 0.0011417969920498956
+    },
+    "g1_gnn_bauru_Q1_ss508734_s42": {
+     "dif_rel_mae": 0.01730095459850245,
+     "dif_rel_rmse": 0.0025350323428348586
+    },
+    "g1_gnn_campinas_Q1_ss508734_s42": {
+     "dif_rel_mae": 0.011176018883330939,
+     "dif_rel_rmse": 0.0006681910649660573
+    },
+    "g1_mlp_bauru_Q1_ss508734_s42": {
+     "dif_rel_mae": 0.0012895871447846346,
+     "dif_rel_rmse": 0.0004945357436776251
+    },
+    "g1_mlp_campinas_Q1_ss508734_s42": {
+     "dif_rel_mae": 0.000719474906138894,
+     "dif_rel_rmse": 0.00020465926581528758
+    },
+    "g1_gnn_campinas_Q1_ss198718_s42": {
+     "dif_rel_mae": 0.01776960009699409,
+     "dif_rel_rmse": 0.003864352631614294
+    },
+    "g1_gnn_bauru_Q1_ss198718_s42": {
+     "dif_rel_mae": 0.014701310675945824,
+     "dif_rel_rmse": 0.0058653721907216344
+    },
+    "g1_mlp_campinas_Q1_ss198718_s42": {
+     "dif_rel_mae": 0.0005747450960962001,
+     "dif_rel_rmse": 0.00013058194501767693
+    },
+    "g1_mlp_bauru_Q1_ss198718_s42": {
+     "dif_rel_mae": 0.00954148521420337,
+     "dif_rel_rmse": 0.0004354583055397204
+    },
+    "g1_gnn_bauru_Q1_ss769856_s42": {
+     "dif_rel_mae": 0.0030622201579930063,
+     "dif_rel_rmse": 0.0012577635880608627
+    },
+    "g1_gnn_campinas_Q1_ss769856_s42": {
+     "dif_rel_mae": 0.004573641114549003,
+     "dif_rel_rmse": 0.001502112421900045
+    },
+    "g1_mlp_bauru_Q1_ss769856_s42": {
+     "dif_rel_mae": 0.0015905550212001753,
+     "dif_rel_rmse": 0.0005664392185453242
+    },
+    "g1_mlp_campinas_Q1_ss769856_s42": {
+     "dif_rel_mae": 0.003676947247737717,
+     "dif_rel_rmse": 0.00015690564739449157
+    },
+    "g1_gnn_campinas_Q1_ss535105_s42": {
+     "dif_rel_mae": 0.018376559071217234,
+     "dif_rel_rmse": 0.0015443726468511417
+    },
+    "g1_gnn_bauru_Q1_ss535105_s42": {
+     "dif_rel_mae": 0.014915009292300933,
+     "dif_rel_rmse": 0.0001571090953521987
+    },
+    "g1_mlp_campinas_Q1_ss535105_s42": {
+     "dif_rel_mae": 0.00428102427396469,
+     "dif_rel_rmse": 0.00044444874507521166
+    },
+    "g1_mlp_bauru_Q1_ss535105_s42": {
+     "dif_rel_mae": 0.0023229344342175443,
+     "dif_rel_rmse": 6.686382447905777e-05
+    },
+    "g1_gnn_bauru_Q1_ss282106_s42": {
+     "dif_rel_mae": 0.013886057239597316,
+     "dif_rel_rmse": 0.008672268210858923
+    },
+    "g1_gnn_campinas_Q1_ss282106_s42": {
+     "dif_rel_mae": 0.017109156170905436,
+     "dif_rel_rmse": 0.0012635039441135385
+    },
+    "g1_mlp_bauru_Q1_ss282106_s42": {
+     "dif_rel_mae": 0.024371301944582726,
+     "dif_rel_rmse": 0.001720611939971788
+    },
+    "g1_mlp_campinas_Q1_ss282106_s42": {
+     "dif_rel_mae": 0.007838522217083766,
+     "dif_rel_rmse": 0.0012980118578308833
+    },
+    "g1_gnn_campinas_Q1_ss756541_s42": {
+     "dif_rel_mae": 0.000997137608907057,
+     "dif_rel_rmse": 4.081806990979554e-05
+    },
+    "g1_gnn_bauru_Q1_ss756541_s42": {
+     "dif_rel_mae": 0.0010766947793189225,
+     "dif_rel_rmse": 0.00026764659917801836
+    },
+    "g1_mlp_campinas_Q1_ss756541_s42": {
+     "dif_rel_mae": 0.004922702423508451,
+     "dif_rel_rmse": 0.0004836387255598867
+    },
+    "g1_mlp_bauru_Q1_ss756541_s42": {
+     "dif_rel_mae": 9.92068870153136e-05,
+     "dif_rel_rmse": 2.801492402881627e-05
+    },
+    "g1_gnn_bauru_Q1_ss934410_s42": {
+     "dif_rel_mae": 0.001701536797019148,
+     "dif_rel_rmse": 0.0005253384464928183
+    },
+    "g1_gnn_campinas_Q1_ss934410_s42": {
+     "dif_rel_mae": 0.002743439867803786,
+     "dif_rel_rmse": 0.011868192247534678
+    },
+    "g1_mlp_bauru_Q1_ss934410_s42": {
+     "dif_rel_mae": 0.004697472054252255,
+     "dif_rel_rmse": 0.00021215928752948637
+    },
+    "g1_mlp_campinas_Q1_ss934410_s42": {
+     "dif_rel_mae": 0.006009779564189342,
+     "dif_rel_rmse": 0.0009653298665392369
+    },
+    "g1_gnn_campinas_Q1_ss546703_s42": {
+     "dif_rel_mae": 0.0003519984522382638,
+     "dif_rel_rmse": 0.0062264318442501985
+    },
+    "g1_gnn_bauru_Q1_ss546703_s42": {
+     "dif_rel_mae": 0.036098792315866414,
+     "dif_rel_rmse": 0.004464292980306282
+    },
+    "g1_mlp_campinas_Q1_ss546703_s42": {
+     "dif_rel_mae": 0.0029302001296098988,
+     "dif_rel_rmse": 0.0007151503305504572
+    },
+    "g1_mlp_bauru_Q1_ss546703_s42": {
+     "dif_rel_mae": 0.01359730317128342,
+     "dif_rel_rmse": 0.005808882959227843
+    }
+   },
+   "amarracao_dif_rel_maxima": {
+    "dif_rel_mae": 0.06347059896397333,
+    "dif_rel_rmse": 0.026669719709712884
+   },
+   "todas_passaram": true,
+   "n_com_npz": 80,
+   "n_sem_validos_sem_npz_conferidas_C2": 0,
+   "amarracao_npz": "RSSI MAE and RMSE (all nodes) of the .npz vs selecao.test_no_melhor_ckpt (tol. 10 % / 3 %), n_nos, n_pl_alvo_valido; no artifact of the batch records the sha of the .npz",
+   "sem_artefatos_sem_validos_registrados": []
+  }
+ },
+ "celulas": {
+  "bauru_Q1": {
+   "sorteios": [
+    811474,
+    54892,
+    880099,
+    125243,
+    159513,
+    739191,
+    29675,
+    676375,
+    387379,
+    259492,
+    684965,
+    723969,
+    508734,
+    198718,
+    769856,
+    535105,
+    282106,
+    756541,
+    934410,
+    546703
+   ],
+   "n_sorteios_plano_usados": 20,
+   "sem_validos": [],
+   "n_sorteios_sem_validos": 0,
+   "por_modelo": {
+    "gnn": {
+     "n_sorteios_com_validos": 20,
+     "mae_validos_por_sorteio": {
+      "811474": 0.7155877550019264,
+      "54892": 0.7985770106839226,
+      "880099": 1.6188843808954014,
+      "125243": 1.1621854867101482,
+      "159513": 0.3908430056153612,
+      "739191": 0.5751666193264686,
+      "29675": 3.6549104758637663,
+      "676375": 0.820627293235602,
+      "387379": 4.112112914534979,
+      "259492": 0.5374625034345378,
+      "684965": 0.47776381638546583,
+      "723969": 3.9023770796799684,
+      "508734": 0.5217222311008155,
+      "198718": 0.418622951713463,
+      "769856": 0.6567521063421656,
+      "535105": 1.739116644744668,
+      "282106": 1.6739506811099734,
+      "756541": 1.2090173986945156,
+      "934410": 3.3086876430101513,
+      "546703": 0.8995864478159894
+     },
+     "dp_entre_sorteios_validos_db": 1.248182158036913,
+     "razao_dp_sobre_0_132": 9.455925439673583,
+     "dp_ge_3x_0_132": true,
+     "dp_lt_2x_0_132": false,
+     "correlacao_com_constante_validos": {
+      "pearson": 0.6312910418662591,
+      "spearman": 0.6060150375939849,
+      "n": 20
+     },
+     "dp_entre_sorteios_demais_populacoes_db": {
+      "mae_rssi_validos_db": 1.248182158036913,
+      "mae_rssi_sentinela_db": 0.03182821906381264,
+      "mae_rssi_todos_db": 0.1991483335003808,
+      "mae_pl_validos_db": 1.2011774628289713
+     },
+     "inversao_vs_baselines_validos": {
+      "fspl": 17,
+      "hata_rural": 20,
+      "cost231_sub": 20
+     },
+     "proveniencia_toda_ok": true,
+     "geometria_declarada": [
+      [
+       10.0,
+       2.0
+      ]
+     ],
+     "dist_min_entre_particoes_km_min": 2.0000008870264523,
+     "bate_com_2_1_todos": true,
+     "melhores_epocas": [
+      5,
+      6,
+      8,
+      8,
+      8,
+      8,
+      3,
+      7,
+      8,
+      7,
+      8,
+      8,
+      8,
+      8,
+      8,
+      2,
+      1,
+      8,
+      3,
+      4
+     ]
+    },
+    "mlp": {
+     "n_sorteios_com_validos": 20,
+     "mae_validos_por_sorteio": {
+      "811474": 2.836760638500199,
+      "54892": 1.2817567817955062,
+      "880099": 3.023584583425422,
+      "125243": 2.2732470022717437,
+      "159513": 2.5349590737385297,
+      "739191": 3.066546419379395,
+      "29675": 3.8184479259576656,
+      "676375": 2.692644913852239,
+      "387379": 4.702341930039182,
+      "259492": 1.9728581963782184,
+      "684965": 1.8160396358352453,
+      "723969": 4.918533761649357,
+      "508734": 2.391327979911646,
+      "198718": 1.1731771048907365,
+      "769856": 4.195091475830061,
+      "535105": 2.9655206590505436,
+      "282106": 3.359664867225341,
+      "756541": 3.5272597307233853,
+      "934410": 4.189186515663729,
+      "546703": 0.9871796890137058
+     },
+     "dp_entre_sorteios_validos_db": 1.1304380663198776,
+     "razao_dp_sobre_0_132": 8.563924744847558,
+     "dp_ge_3x_0_132": true,
+     "dp_lt_2x_0_132": false,
+     "correlacao_com_constante_validos": {
+      "pearson": 0.5337507092487105,
+      "spearman": 0.6075187969924812,
+      "n": 20
+     },
+     "dp_entre_sorteios_demais_populacoes_db": {
+      "mae_rssi_validos_db": 1.1304380663198776,
+      "mae_rssi_sentinela_db": 0.043248017414023385,
+      "mae_rssi_todos_db": 0.3478803189108096,
+      "mae_pl_validos_db": 1.477863423047156
+     },
+     "inversao_vs_baselines_validos": {
+      "fspl": 11,
+      "hata_rural": 20,
+      "cost231_sub": 20
+     },
+     "proveniencia_toda_ok": true,
+     "geometria_declarada": [
+      [
+       10.0,
+       2.0
+      ]
+     ],
+     "dist_min_entre_particoes_km_min": 2.0000008870264523,
+     "bate_com_2_1_todos": true,
+     "melhores_epocas": [
+      7,
+      6,
+      1,
+      4,
+      6,
+      3,
+      7,
+      8,
+      6,
+      7,
+      7,
+      8,
+      2,
+      8,
+      2,
+      6,
+      4,
+      8,
+      7,
+      6
+     ]
+    }
+   },
+   "paridade_sentinela": {
+    "abs_gnn_menos_mlp_por_sorteio": {
+     "811474": 0.026896520638722193,
+     "54892": 0.055340839723201224,
+     "880099": 0.03906185385627603,
+     "125243": 0.016190940228588413,
+     "159513": 0.005010660780286891,
+     "739191": 0.015317047667134903,
+     "29675": 0.048859541682330004,
+     "676375": 0.004832422574720274,
+     "387379": 0.0638085600322508,
+     "259492": 0.054860274957433064,
+     "684965": 0.0820491584438918,
+     "723969": 0.01966200726383177,
+     "508734": 0.09740280276741675,
+     "198718": 0.004462951797756215,
+     "769856": 0.012079681654207516,
+     "535105": 0.04698399855860584,
+     "282106": 0.028493865093926138,
+     "756541": 0.020544083689219783,
+     "934410": 0.047450951801786906,
+     "546703": 0.02111027376735007
+    },
+    "mediana_db": 0.027695192866324166,
+    "n_sorteios_na_mediana": 20,
+    "n_sorteios_sem_validos_incluidos_na_mediana": 0,
+    "sorteios_sem_predicao_fora_da_mediana": [],
+    "mediana_le_0_117": true,
+    "mesma_particao_gnn_mlp": true
+   }
+  },
+  "campinas_Q1": {
+   "sorteios": [
+    811474,
+    54892,
+    880099,
+    125243,
+    159513,
+    739191,
+    29675,
+    676375,
+    387379,
+    259492,
+    684965,
+    723969,
+    508734,
+    198718,
+    769856,
+    535105,
+    282106,
+    756541,
+    934410,
+    546703
+   ],
+   "n_sorteios_plano_usados": 20,
+   "sem_validos": [],
+   "n_sorteios_sem_validos": 0,
+   "por_modelo": {
+    "gnn": {
+     "n_sorteios_com_validos": 20,
+     "mae_validos_por_sorteio": {
+      "811474": 1.655102384367487,
+      "54892": 0.9864887156754886,
+      "880099": 0.8155582838971659,
+      "125243": 1.2230395970557681,
+      "159513": 1.2762223448934433,
+      "739191": 0.7948619054390286,
+      "29675": 1.3993184738067992,
+      "676375": 0.8581833712167314,
+      "387379": 8.411208446471813,
+      "259492": 0.37544818404740454,
+      "684965": 0.43889079362004824,
+      "723969": 13.583654053230068,
+      "508734": 2.6571950212119324,
+      "198718": 0.42292026087224077,
+      "769856": 3.0418027180074656,
+      "535105": 2.235041861394564,
+      "282106": 5.072640539913477,
+      "756541": 4.288270853375316,
+      "934410": 0.7083071943466572,
+      "546703": 1.0909447491655062
+     },
+     "dp_entre_sorteios_validos_db": 3.260303378611019,
+     "razao_dp_sobre_0_132": 24.699268019780444,
+     "dp_ge_3x_0_132": true,
+     "dp_lt_2x_0_132": false,
+     "correlacao_com_constante_validos": {
+      "pearson": 0.8626627856660619,
+      "spearman": 0.37293233082706767,
+      "n": 20
+     },
+     "dp_entre_sorteios_demais_populacoes_db": {
+      "mae_rssi_validos_db": 3.260303378611019,
+      "mae_rssi_sentinela_db": 0.040322832366993425,
+      "mae_rssi_todos_db": 0.34125675759558755,
+      "mae_pl_validos_db": 3.347141854314538
+     },
+     "inversao_vs_baselines_validos": {
+      "fspl": 14,
+      "hata_rural": 17,
+      "cost231_sub": 17
+     },
+     "proveniencia_toda_ok": true,
+     "geometria_declarada": [
+      [
+       10.0,
+       2.0
+      ]
+     ],
+     "dist_min_entre_particoes_km_min": 2.0000008870264594,
+     "bate_com_2_1_todos": true,
+     "melhores_epocas": [
+      7,
+      4,
+      8,
+      8,
+      8,
+      6,
+      6,
+      2,
+      8,
+      6,
+      8,
+      8,
+      3,
+      8,
+      8,
+      2,
+      1,
+      3,
+      7,
+      7
+     ]
+    },
+    "mlp": {
+     "n_sorteios_com_validos": 20,
+     "mae_validos_por_sorteio": {
+      "811474": 4.072259783349007,
+      "54892": 6.873650385633158,
+      "880099": 5.321539902326693,
+      "125243": 2.8603965598756655,
+      "159513": 7.10584336568822,
+      "739191": 6.71892234661233,
+      "29675": 3.6687659786389317,
+      "676375": 3.5581010066501033,
+      "387379": 6.945947754435693,
+      "259492": 4.3971113287113415,
+      "684965": 4.58788775305221,
+      "723969": 9.916100267766934,
+      "508734": 3.3218135247729146,
+      "198718": 4.883012888234577,
+      "769856": 3.8621393047834065,
+      "535105": 2.8349842252264152,
+      "282106": 2.500970090604214,
+      "756541": 3.987405413695037,
+      "934410": 6.799763229050939,
+      "546703": 7.916856895063522
+     },
+     "dp_entre_sorteios_validos_db": 2.0050368461786,
+     "razao_dp_sobre_0_132": 15.189673077110607,
+     "dp_ge_3x_0_132": true,
+     "dp_lt_2x_0_132": false,
+     "correlacao_com_constante_validos": {
+      "pearson": 0.6192889857314767,
+      "spearman": 0.3293233082706767,
+      "n": 20
+     },
+     "dp_entre_sorteios_demais_populacoes_db": {
+      "mae_rssi_validos_db": 2.0050368461786,
+      "mae_rssi_sentinela_db": 0.05299173947766916,
+      "mae_rssi_todos_db": 0.39428269076086303,
+      "mae_pl_validos_db": 2.8187465697505187
+     },
+     "inversao_vs_baselines_validos": {
+      "fspl": 1,
+      "hata_rural": 12,
+      "cost231_sub": 12
+     },
+     "proveniencia_toda_ok": true,
+     "geometria_declarada": [
+      [
+       10.0,
+       2.0
+      ]
+     ],
+     "dist_min_entre_particoes_km_min": 2.0000008870264594,
+     "bate_com_2_1_todos": true,
+     "melhores_epocas": [
+      6,
+      5,
+      6,
+      3,
+      2,
+      4,
+      8,
+      5,
+      3,
+      5,
+      1,
+      5,
+      2,
+      2,
+      3,
+      2,
+      2,
+      7,
+      7,
+      4
+     ]
+    }
+   },
+   "paridade_sentinela": {
+    "abs_gnn_menos_mlp_por_sorteio": {
+     "811474": 0.020992749645906084,
+     "54892": 0.023853849308444294,
+     "880099": 0.03469426153891894,
+     "125243": 0.025466570508564185,
+     "159513": 0.011882819288883378,
+     "739191": 0.05902931561131905,
+     "29675": 0.07244196887550988,
+     "676375": 0.049994584921876306,
+     "387379": 0.06608569168788833,
+     "259492": 0.00667567516581434,
+     "684965": 0.05362292548893503,
+     "723969": 0.00749327765066235,
+     "508734": 0.09606250295446632,
+     "198718": 0.1280959493189243,
+     "769856": 0.08944653373775294,
+     "535105": 0.023910346510513922,
+     "282106": 0.018902012866869905,
+     "756541": 0.039684537817759075,
+     "934410": 0.03714009701479337,
+     "546703": 0.017825160034165857
+    },
+    "mediana_db": 0.035917179276856157,
+    "n_sorteios_na_mediana": 20,
+    "n_sorteios_sem_validos_incluidos_na_mediana": 0,
+    "sorteios_sem_predicao_fora_da_mediana": [],
+    "mediana_le_0_117": true,
+    "mesma_particao_gnn_mlp": true
+   }
+  }
+ },
+ "leitura_aritmetica_contra_piso_0_132": {
+  "bauru_Q1": {
+   "condicao1_gnn_e_mlp": true,
+   "ambos_lt_2x": false,
+   "faixa_intermediaria": false,
+   "algum_modelo_entre_2x_e_3x": false,
+   "indeterminada_dp_nao_calculavel": false,
+   "paridade_le_0_117": true,
+   "por_modelo": {
+    "gnn": {
+     "dp_entre_sorteios_db": 1.248182158036913,
+     "comparador_db": 0.132,
+     "razao_dp_sobre_comparador": 9.455925439673583,
+     "dp_ge_3x_comparador": true,
+     "dp_lt_2x_comparador": false,
+     "dp_entre_2x_e_3x_comparador": false
+    },
+    "mlp": {
+     "dp_entre_sorteios_db": 1.1304380663198776,
+     "comparador_db": 0.132,
+     "razao_dp_sobre_comparador": 8.563924744847558,
+     "dp_ge_3x_comparador": true,
+     "dp_lt_2x_comparador": false,
+     "dp_entre_2x_e_3x_comparador": false
+    }
+   }
+  },
+  "campinas_Q1": {
+   "condicao1_gnn_e_mlp": true,
+   "ambos_lt_2x": false,
+   "faixa_intermediaria": false,
+   "algum_modelo_entre_2x_e_3x": false,
+   "indeterminada_dp_nao_calculavel": false,
+   "paridade_le_0_117": true,
+   "por_modelo": {
+    "gnn": {
+     "dp_entre_sorteios_db": 3.260303378611019,
+     "comparador_db": 0.132,
+     "razao_dp_sobre_comparador": 24.699268019780444,
+     "dp_ge_3x_comparador": true,
+     "dp_lt_2x_comparador": false,
+     "dp_entre_2x_e_3x_comparador": false
+    },
+    "mlp": {
+     "dp_entre_sorteios_db": 2.0050368461786,
+     "comparador_db": 0.132,
+     "razao_dp_sobre_comparador": 15.189673077110607,
+     "dp_ge_3x_comparador": true,
+     "dp_lt_2x_comparador": false,
+     "dp_entre_2x_e_3x_comparador": false
+    }
+   }
+  }
+ },
+ "nota": "condition 1 for the Q1 cells uses the comparator max(0.132; sd across seeds) from block 2: see agregado_G1_v5_bloco2.json; here only the comparison with the floor 0.132",
+ "contagem_sorteios_sem_validos_por_celula": {
+  "bauru_Q1": 0,
+  "campinas_Q1": 0
+ }
+}

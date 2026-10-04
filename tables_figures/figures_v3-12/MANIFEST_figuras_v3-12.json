@@ -1,0 +1,53 @@
+{
+ "protocolo": "internal/note_21.md, items A24 and D10 (01/10/2026); finishing pass v3-12b (internal note on figures v3-12a)",
+ "pasta_saida": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/redacao_v3-12/figures_v3-12",
+ "largura_final_pt": 394.36,
+ "entradas_sha256": {
+  "F3": {
+   "caminho": "internal/artifact_04.json",
+   "sha256": "5fc43ee5fa25b78c74a428d883f4d917826e6adfc582174cb2961c232e4b0dea"
+  },
+  "F4_por_sorteio": {
+   "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase2/_v3_2.1_3.1_parcial_16x60rnd.json",
+   "sha256": "c8bddfe828c583f7fca78f9d961fb2d502f5727956b78a2d9132598c1b42c5d1"
+  },
+  "F4_conferencia_resumo_2.1": {
+   "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase2/2.1_deriva_erro_baselines_16x60rnd.json",
+   "sha256": "f6dfcc8d209e6d711daa16eddb6678e69aa6d432555eb949007b0cd8def223b8"
+  },
+  "F4_conferencia_T3_csv": {
+   "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/redacao_v3-12/tables_v3-12/T3_deriva_erro_v3-12.csv",
+   "sha256": "495e6c1116bd2ca6a3d88a858dea94a9fae1cc160eebe80d6c11e93382082ad3"
+  }
+ },
+ "scripts_sha256": {
+  "v3_12_gerar_figuras.py": {
+   "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_12_gerar_figuras.py",
+   "sha256": "b89f647f80343112124786e2dadb1b09a7421d3e3c21d7675c048f99e988f077"
+  },
+  "v3_12_fig1_block_erosion.py": {
+   "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_12_fig1_block_erosion.py",
+   "sha256": "6677f8fa7bb04337418339d3f8ddb97bc137b42097c02eebd0854ca03d3a5cd7"
+  },
+  "original:v3_gerar_figuras.py": {
+   "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_gerar_figuras.py",
+   "sha256": "ad88a54a2015887f10fd7efa5bf63c989651be4207ff7b244d03f384b44951a9"
+  },
+  "original:v3_fig1_block_erosion.py": {
+   "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_fig1_block_erosion.py",
+   "sha256": "8cae02e108b193257c0847b07fa81e1cf2baef963d1db1c194890e916451a3a5"
+  }
+ },
+ "saidas_sha256": {
+  "fig1_block_erosion.pdf": "96da427e2ebf3fc26a170e3a3bcc972bb82c6126fd0ce82b76f84a0a96e586fa",
+  "fig1_block_erosion.png": "fc6ef845677fc6aa88a83d89baf3f092601156b929ee1a2bfe969a6f2634ac4a",
+  "F3_fracao_valida_teste_boxplot.pdf": "0c0f39bc8da1f6053f3f5cf3d92a2bf582770b585be83269668ce5a555378605",
+  "F3_fracao_valida_teste_boxplot.png": "9fcc1805213a1e31d3feb7478fd032cfabf59b9464079eff5e26237e5cb1bbab",
+  "F4_deriva_erro_por_celula.pdf": "566a7a5bce8506247517239c63f9053e52507cdfc7d0a60a787c721c30a19f77",
+  "F4_deriva_erro_por_celula.png": "9793f7ddb4a90d0da06b2af1beda35e8bffd6c2a0befd48fa7cfa9e5805263ef",
+  "F34_fracao_e_deriva.pdf": "fd4a8a400e833c404fcb2b5fb551f91f4ecc799d563faabc156eac3cc6c2b557",
+  "F34_fracao_e_deriva.png": "46590d1d8901f5d4e64a387696f2c29c04d78677cd9ef9c364837d40ae6b22f2",
+  "F4_conferencia_T3.json": "3c1205b66a051b9f33c24074638896e054e79b9eaeda5d0fd2998bff6b52f147"
+ },
+ "saidas_ausentes": []
+}

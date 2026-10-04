@@ -1,0 +1,26 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,array,graphicx}
+\usepackage{microtype}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\celula}[1]{\begin{tabular}[c]{@{}c@{}}#1\end{tabular}}
+\newsavebox{\tabcaixa}
+\newcommand{\tabajusta}[1]{\sbox{\tabcaixa}{#1}\ifdim\wd\tabcaixa>\linewidth\resizebox{\linewidth}{!}{\usebox{\tabcaixa}}\else\usebox{\tabcaixa}\fi}
+\begin{document}
+
+{\large\bfseries Table S2. Constant predictor against calibrated free-space loss by cell}
+
+\medskip
+\small
+Draws: split draws at $g = 10$~km, $b = 2$~km with at least one valid test node, by cell. Free-space loss (FSPL) is calibrated on the training median of received power plus modelled path loss, over all training nodes (first calibration) or over the valid training nodes only (second calibration). Counts are draws in which FSPL errs less than the constant predictor on the valid test nodes, and draws in which the constant errs less over all test nodes; the last two rows total the sixteen cells, the second one with no buffer ($b = 0$). Medians are mean absolute errors in dB over the valid test nodes.
+
+\medskip
+\centering
+\tabajusta{\input{../tables_v3-12/T4_S2_v3-12.tex}}
+
+\end{document}

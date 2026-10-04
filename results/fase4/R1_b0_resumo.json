@@ -1,0 +1,847 @@
+{
+  "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_12_R1_b0_deriva.py",
+  "script_sha256": "3525877ddd7eaa44689b254474ded0999e883c56e148bc6a94ae9d78192fff16",
+  "script_original": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_2.1_3.1_deriva_calibracao.py",
+  "script_original_sha256": "9b9bcf91bab51621107a3d7978964d46dd16c5ec1a76a3789842ae1bce77f3bc",
+  "sementes": [
+    811474,
+    54892,
+    880099,
+    125243,
+    159513,
+    739191,
+    29675,
+    676375,
+    387379,
+    259492,
+    684965,
+    723969,
+    508734,
+    198718,
+    769856,
+    535105,
+    282106,
+    756541,
+    934410,
+    546703,
+    26985,
+    58662,
+    20148,
+    605829,
+    540222,
+    5424,
+    950991,
+    665836,
+    467964,
+    3501,
+    930981,
+    594931,
+    736698,
+    962757,
+    142719,
+    901191,
+    175301,
+    139100,
+    961518,
+    703500,
+    265085,
+    871666,
+    713232,
+    187349,
+    669235,
+    88695,
+    458475,
+    558282,
+    552975,
+    273559,
+    242785,
+    9777,
+    241392,
+    313330,
+    525912,
+    390809,
+    14034,
+    373703,
+    346056,
+    513794
+  ],
+  "sementes_fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase2/2.1_deriva_erro_baselines_16x60rnd.json",
+  "data_utc": "2026-10-01T20:37:47.885417+00:00",
+  "comando_consolidacao": "scripts/v3_12_R1_b0_deriva.py --consolidar",
+  "criterio": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/criterios/criterio_R1_b0.json",
+  "venv": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python",
+  "id": "R1_b0_resumo",
+  "buffer_km_b0": 0.0,
+  "buffer_km_comparacao": 2.0,
+  "estatisticas": "sd (ddof=1) across split draws per cell; simple mean of the 16 cells; split draws without a valid node in the test set are excluded (main set, in MAE-valid and valid fraction) and counted",
+  "por_celula": {
+    "bauru_Q1": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 6.512595782668684,
+        "dp_fracao_valida_teste": 0.06023892037097341,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06233575362097585,
+        "media_mae_constante_validos": 18.488961293975443,
+        "media_fracao_valida_teste": 0.13824380820105395,
+        "media_n_teste": 1966464.8166666667,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 23,
+          "a_validos": 56,
+          "b_todos": 7,
+          "b_validos": 56
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 7.034393648382777,
+        "dp_fracao_valida_teste": 0.07236381079216676,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.07372128999414575,
+        "media_mae_constante_validos": 18.962056319476968,
+        "media_fracao_valida_teste": 0.13123918953450858,
+        "media_n_teste": 889551.4333333333,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 22,
+          "a_validos": 55,
+          "b_todos": 10,
+          "b_validos": 55
+        },
+        "dp_mae_constante_validos_artefato_2.1": 7.034393648382777,
+        "n_sorteios_com_no_valido_artefato_2.1": 59,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.9258219127622953,
+      "razao_dp_fracao_b0_sobre_b2": 0.8324453854977764
+    },
+    "bauru_Q2": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 6.253034701922486,
+        "dp_fracao_valida_teste": 0.06448582367046356,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06539091289728824,
+        "media_mae_constante_validos": 13.069701935768869,
+        "media_fracao_valida_teste": 0.10621631361981262,
+        "media_n_teste": 1966464.4166666667,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 6,
+          "a_validos": 45,
+          "b_todos": 5,
+          "b_validos": 45
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 56,
+        "n_sorteios_sem_no_valido_excluidos": 4,
+        "dp_mae_constante_validos": 7.244004380441048,
+        "dp_fracao_valida_teste": 0.08113698609145684,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.08446251907550953,
+        "media_mae_constante_validos": 14.455149335783796,
+        "media_fracao_valida_teste": 0.125525181479773,
+        "media_n_teste": 889562.0,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 14,
+          "a_validos": 45,
+          "b_todos": 11,
+          "b_validos": 45
+        },
+        "dp_mae_constante_validos_artefato_2.1": 7.244004380441048,
+        "n_sorteios_com_no_valido_artefato_2.1": 56,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.8632013971175667,
+      "razao_dp_fracao_b0_sobre_b2": 0.7947771636202478
+    },
+    "bauru_Q3": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 60,
+        "n_sorteios_sem_no_valido_excluidos": 0,
+        "dp_mae_constante_validos": 6.831604537120137,
+        "dp_fracao_valida_teste": 0.059617512354854386,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.059617512354854386,
+        "media_mae_constante_validos": 20.18781797040092,
+        "media_fracao_valida_teste": 0.09670923974140698,
+        "media_n_teste": 1965343.2,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 12,
+          "a_validos": 59,
+          "b_todos": 1,
+          "b_validos": 58
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 56,
+        "n_sorteios_sem_no_valido_excluidos": 4,
+        "dp_mae_constante_validos": 7.7244467217127895,
+        "dp_fracao_valida_teste": 0.06475906519648507,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06676367190064707,
+        "media_mae_constante_validos": 19.271585715266557,
+        "media_fracao_valida_teste": 0.09305870320668164,
+        "media_n_teste": 884211.25,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 13,
+          "a_validos": 53,
+          "b_todos": 4,
+          "b_validos": 52
+        },
+        "dp_mae_constante_validos_artefato_2.1": 7.7244467217127895,
+        "n_sorteios_com_no_valido_artefato_2.1": 56,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.8844134451619757,
+      "razao_dp_fracao_b0_sobre_b2": 0.9206048940633913
+    },
+    "bauru_Q4": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 57,
+        "n_sorteios_sem_no_valido_excluidos": 3,
+        "dp_mae_constante_validos": 6.857254942916488,
+        "dp_fracao_valida_teste": 0.0565372650708865,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06060401357460213,
+        "media_mae_constante_validos": 18.06654895813889,
+        "media_fracao_valida_teste": 0.115007322550585,
+        "media_n_teste": 1965343.4666666666,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 14,
+          "a_validos": 54,
+          "b_todos": 9,
+          "b_validos": 54
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 56,
+        "n_sorteios_sem_no_valido_excluidos": 4,
+        "dp_mae_constante_validos": 8.242688924092242,
+        "dp_fracao_valida_teste": 0.0739601971605461,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.07819378415326982,
+        "media_mae_constante_validos": 18.093771185307478,
+        "media_fracao_valida_teste": 0.12665234288496638,
+        "media_n_teste": 884211.45,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 19,
+          "a_validos": 50,
+          "b_todos": 12,
+          "b_validos": 50
+        },
+        "dp_mae_constante_validos_artefato_2.1": 8.242688924092242,
+        "n_sorteios_com_no_valido_artefato_2.1": 56,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.8319196570519213,
+      "razao_dp_fracao_b0_sobre_b2": 0.764428263328727
+    },
+    "campinas_Q1": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 9.043735165860895,
+        "dp_fracao_valida_teste": 0.059587020771180846,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06092450442653365,
+        "media_mae_constante_validos": 17.593735968903875,
+        "media_fracao_valida_teste": 0.11524636497741803,
+        "media_n_teste": 1965805.1333333333,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 20,
+          "a_validos": 53,
+          "b_todos": 20,
+          "b_validos": 52
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 10.397658314112505,
+        "dp_fracao_valida_teste": 0.07474991274281437,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.07548731023071613,
+        "media_mae_constante_validos": 17.72350038918343,
+        "media_fracao_valida_teste": 0.11103750146554692,
+        "media_n_teste": 885605.6666666666,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 19,
+          "a_validos": 51,
+          "b_todos": 20,
+          "b_validos": 50
+        },
+        "dp_mae_constante_validos_artefato_2.1": 10.397658314112505,
+        "n_sorteios_com_no_valido_artefato_2.1": 59,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.8697857625871432,
+      "razao_dp_fracao_b0_sobre_b2": 0.7971517100788708
+    },
+    "campinas_Q2": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 7.562372724881168,
+        "dp_fracao_valida_teste": 0.07134698407081828,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.07388304133746922,
+        "media_mae_constante_validos": 17.039641392918668,
+        "media_fracao_valida_teste": 0.16515256475504805,
+        "media_n_teste": 1965804.7,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 24,
+          "a_validos": 53,
+          "b_todos": 25,
+          "b_validos": 53
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 9.064379865272642,
+        "dp_fracao_valida_teste": 0.09023171655124307,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.0923453296420337,
+        "media_mae_constante_validos": 18.016919670093277,
+        "media_fracao_valida_teste": 0.17729521353942784,
+        "media_n_teste": 885606.2166666667,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 25,
+          "a_validos": 53,
+          "b_todos": 26,
+          "b_validos": 52
+        },
+        "dp_mae_constante_validos_artefato_2.1": 9.064379865272642,
+        "n_sorteios_com_no_valido_artefato_2.1": 59,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.8342956536777604,
+      "razao_dp_fracao_b0_sobre_b2": 0.7907084869686587
+    },
+    "campinas_Q3": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 60,
+        "n_sorteios_sem_no_valido_excluidos": 0,
+        "dp_mae_constante_validos": 8.284986271410528,
+        "dp_fracao_valida_teste": 0.06680922482534075,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06680922482534075,
+        "media_mae_constante_validos": 17.88277287740673,
+        "media_fracao_valida_teste": 0.1455871017254398,
+        "media_n_teste": 1964673.1,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 15,
+          "a_validos": 46,
+          "b_todos": 4,
+          "b_validos": 50
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 57,
+        "n_sorteios_sem_no_valido_excluidos": 3,
+        "dp_mae_constante_validos": 8.574514037914847,
+        "dp_fracao_valida_teste": 0.07259024977787248,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.07689822082612766,
+        "media_mae_constante_validos": 17.02630207284341,
+        "media_fracao_valida_teste": 0.13739884481961648,
+        "media_n_teste": 885680.7666666667,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 15,
+          "a_validos": 42,
+          "b_todos": 3,
+          "b_validos": 43
+        },
+        "dp_mae_constante_validos_artefato_2.1": 8.574514037914847,
+        "n_sorteios_com_no_valido_artefato_2.1": 57,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.9662339153887808,
+      "razao_dp_fracao_b0_sobre_b2": 0.9203608615451555
+    },
+    "campinas_Q4": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 6.580935639862526,
+        "dp_fracao_valida_teste": 0.06918862288335524,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.07103130741198424,
+        "media_mae_constante_validos": 17.543284549625483,
+        "media_fracao_valida_teste": 0.142727250411907,
+        "media_n_teste": 1964673.1666666667,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 19,
+          "a_validos": 53,
+          "b_todos": 15,
+          "b_validos": 53
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 58,
+        "n_sorteios_sem_no_valido_excluidos": 2,
+        "dp_mae_constante_validos": 8.457682950550817,
+        "dp_fracao_valida_teste": 0.08477446841958941,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.08773052922310466,
+        "media_mae_constante_validos": 18.058615428435363,
+        "media_fracao_valida_teste": 0.15164546012207508,
+        "media_n_teste": 885680.4666666667,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 21,
+          "a_validos": 51,
+          "b_todos": 18,
+          "b_validos": 51
+        },
+        "dp_mae_constante_validos_artefato_2.1": 8.457682950550817,
+        "n_sorteios_com_no_valido_artefato_2.1": 58,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.7781014822072438,
+      "razao_dp_fracao_b0_sobre_b2": 0.8161492979337557
+    },
+    "lins_Q1": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 58,
+        "n_sorteios_sem_no_valido_excluidos": 2,
+        "dp_mae_constante_validos": 6.597250347001207,
+        "dp_fracao_valida_teste": 0.049597338635171836,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.05053832934921674,
+        "media_mae_constante_validos": 20.067309282307313,
+        "media_fracao_valida_teste": 0.07362241490835032,
+        "media_n_teste": 1967140.2,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 10,
+          "a_validos": 56,
+          "b_todos": 0,
+          "b_validos": 56
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 56,
+        "n_sorteios_sem_no_valido_excluidos": 4,
+        "dp_mae_constante_validos": 7.977808852754722,
+        "dp_fracao_valida_teste": 0.060392410391473784,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06144714321698822,
+        "media_mae_constante_validos": 20.9864497674936,
+        "media_fracao_valida_teste": 0.07706262878533586,
+        "media_n_teste": 891582.1,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 12,
+          "a_validos": 56,
+          "b_todos": 1,
+          "b_validos": 56
+        },
+        "dp_mae_constante_validos_artefato_2.1": 7.977808852754722,
+        "n_sorteios_com_no_valido_artefato_2.1": 56,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.8269501649846109,
+      "razao_dp_fracao_b0_sobre_b2": 0.8212511855988779
+    },
+    "lins_Q2": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 60,
+        "n_sorteios_sem_no_valido_excluidos": 0,
+        "dp_mae_constante_validos": 5.260954422702041,
+        "dp_fracao_valida_teste": 0.07552427873749522,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.07552427873749522,
+        "media_mae_constante_validos": 21.692768897441802,
+        "media_fracao_valida_teste": 0.16711186539791115,
+        "media_n_teste": 1967140.2,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 34,
+          "a_validos": 60,
+          "b_todos": 6,
+          "b_validos": 60
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 5.745358846317356,
+        "dp_fracao_valida_teste": 0.0925554170971885,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.094831065203546,
+        "media_mae_constante_validos": 21.96225956572383,
+        "media_fracao_valida_teste": 0.18519514533129922,
+        "media_n_teste": 891582.1333333333,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 33,
+          "a_validos": 59,
+          "b_todos": 11,
+          "b_validos": 59
+        },
+        "dp_mae_constante_validos_artefato_2.1": 5.745358846317356,
+        "n_sorteios_com_no_valido_artefato_2.1": 59,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.915687699137225,
+      "razao_dp_fracao_b0_sobre_b2": 0.8159898264862271
+    },
+    "lins_Q3": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 58,
+        "n_sorteios_sem_no_valido_excluidos": 2,
+        "dp_mae_constante_validos": 6.3490732244078325,
+        "dp_fracao_valida_teste": 0.052098248757833025,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.05302127210539681,
+        "media_mae_constante_validos": 20.792827816522518,
+        "media_fracao_valida_teste": 0.07595289010997976,
+        "media_n_teste": 1966067.8166666667,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 5,
+          "a_validos": 56,
+          "b_todos": 0,
+          "b_validos": 56
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 48,
+        "n_sorteios_sem_no_valido_excluidos": 12,
+        "dp_mae_constante_validos": 6.02579185033425,
+        "dp_fracao_valida_teste": 0.058039231524672316,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06248166653062184,
+        "media_mae_constante_validos": 20.619571547240998,
+        "media_fracao_valida_teste": 0.08660951514038435,
+        "media_n_teste": 887068.7833333333,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 7,
+          "a_validos": 48,
+          "b_todos": 0,
+          "b_validos": 47
+        },
+        "dp_mae_constante_validos_artefato_2.1": 6.02579185033425,
+        "n_sorteios_com_no_valido_artefato_2.1": 48,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 1.0536496085664908,
+      "razao_dp_fracao_b0_sobre_b2": 0.8976385005319412
+    },
+    "lins_Q4": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 55,
+        "n_sorteios_sem_no_valido_excluidos": 5,
+        "dp_mae_constante_validos": 7.049246237228722,
+        "dp_fracao_valida_teste": 0.04887216738397234,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.05347898539585787,
+        "media_mae_constante_validos": 21.112646125328215,
+        "media_fracao_valida_teste": 0.0931412049891879,
+        "media_n_teste": 1966067.8166666667,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 10,
+          "a_validos": 55,
+          "b_todos": 0,
+          "b_validos": 55
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 53,
+        "n_sorteios_sem_no_valido_excluidos": 7,
+        "dp_mae_constante_validos": 7.447211074362315,
+        "dp_fracao_valida_teste": 0.06421286637094202,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06950945508335601,
+        "media_mae_constante_validos": 20.468331575256364,
+        "media_fracao_valida_teste": 0.10689272271883463,
+        "media_n_teste": 887077.35,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 14,
+          "a_validos": 53,
+          "b_todos": 3,
+          "b_validos": 52
+        },
+        "dp_mae_constante_validos_artefato_2.1": 7.447211074362315,
+        "n_sorteios_com_no_valido_artefato_2.1": 53,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.9465618963717005,
+      "razao_dp_fracao_b0_sobre_b2": 0.7610961812800847
+    },
+    "sorocaba_Q1": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 8.327302089484558,
+        "dp_fracao_valida_teste": 0.054845155751973185,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.056031141081154506,
+        "media_mae_constante_validos": 15.369876324770281,
+        "media_fracao_valida_teste": 0.10463667470586542,
+        "media_n_teste": 1965150.05,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 14,
+          "a_validos": 45,
+          "b_todos": 11,
+          "b_validos": 46
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 58,
+        "n_sorteios_sem_no_valido_excluidos": 2,
+        "dp_mae_constante_validos": 10.511974125784015,
+        "dp_fracao_valida_teste": 0.06793823533766892,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06924132665014668,
+        "media_mae_constante_validos": 15.226649007074856,
+        "media_fracao_valida_teste": 0.10114320645023334,
+        "media_n_teste": 884323.4,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 14,
+          "a_validos": 38,
+          "b_todos": 10,
+          "b_validos": 39
+        },
+        "dp_mae_constante_validos_artefato_2.1": 10.511974125784015,
+        "n_sorteios_com_no_valido_artefato_2.1": 58,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.7921730009836266,
+      "razao_dp_fracao_b0_sobre_b2": 0.8072796633498049
+    },
+    "sorocaba_Q2": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 7.4158462214173735,
+        "dp_fracao_valida_teste": 0.06794410789508708,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.0699305877197227,
+        "media_mae_constante_validos": 16.15007674343064,
+        "media_fracao_valida_teste": 0.14535392655831647,
+        "media_n_teste": 1965150.05,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 18,
+          "a_validos": 53,
+          "b_todos": 18,
+          "b_validos": 53
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 8.818190775465292,
+        "dp_fracao_valida_teste": 0.08632212048747213,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.08795498742965935,
+        "media_mae_constante_validos": 17.361866946066854,
+        "media_fracao_valida_teste": 0.1570098243337563,
+        "media_n_teste": 884323.4166666666,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 19,
+          "a_validos": 52,
+          "b_todos": 20,
+          "b_validos": 52
+        },
+        "dp_mae_constante_validos_artefato_2.1": 8.818190775465292,
+        "n_sorteios_com_no_valido_artefato_2.1": 59,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.8409713976760813,
+      "razao_dp_fracao_b0_sobre_b2": 0.7870996160821577
+    },
+    "sorocaba_Q3": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 59,
+        "n_sorteios_sem_no_valido_excluidos": 1,
+        "dp_mae_constante_validos": 8.003330444462977,
+        "dp_fracao_valida_teste": 0.0595458761430921,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.060649828713743546,
+        "media_mae_constante_validos": 21.188672714557228,
+        "media_fracao_valida_teste": 0.10755105582900655,
+        "media_n_teste": 1963943.9666666666,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 11,
+          "a_validos": 48,
+          "b_todos": 10,
+          "b_validos": 48
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 55,
+        "n_sorteios_sem_no_valido_excluidos": 5,
+        "dp_mae_constante_validos": 8.668822526955049,
+        "dp_fracao_valida_teste": 0.06265943726453448,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06675359875578685,
+        "media_mae_constante_validos": 20.875602617097332,
+        "media_fracao_valida_teste": 0.10537357919888732,
+        "media_n_teste": 887174.35,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 12,
+          "a_validos": 43,
+          "b_todos": 11,
+          "b_validos": 43
+        },
+        "dp_mae_constante_validos_artefato_2.1": 8.668822526955049,
+        "n_sorteios_com_no_valido_artefato_2.1": 55,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 0.9232315484112433,
+      "razao_dp_fracao_b0_sobre_b2": 0.9503097816168121
+    },
+    "sorocaba_Q4": {
+      "b0": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 58,
+        "n_sorteios_sem_no_valido_excluidos": 2,
+        "dp_mae_constante_validos": 6.556172771512748,
+        "dp_fracao_valida_teste": 0.063924040809494,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.06671942558800052,
+        "media_mae_constante_validos": 16.718108472830732,
+        "media_fracao_valida_teste": 0.1239840632254288,
+        "media_n_teste": 1963944.0,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 12,
+          "a_validos": 52,
+          "b_todos": 6,
+          "b_validos": 52
+        }
+      },
+      "b2": {
+        "n_sorteios_ok": 60,
+        "n_sorteios_com_no_valido": 56,
+        "n_sorteios_sem_no_valido_excluidos": 4,
+        "dp_mae_constante_validos": 6.330729521638972,
+        "dp_fracao_valida_teste": 0.0781918088721261,
+        "dp_fracao_valida_teste_todos_os_sorteios": 0.08283550205792768,
+        "media_mae_constante_validos": 15.93241609404413,
+        "media_fracao_valida_teste": 0.1355284894225432,
+        "media_n_teste": 887174.7833333333,
+        "inversoes_constante_gt_fspl": {
+          "a_todos": 16,
+          "a_validos": 50,
+          "b_todos": 15,
+          "b_validos": 50
+        },
+        "dp_mae_constante_validos_artefato_2.1": 6.330729521638972,
+        "n_sorteios_com_no_valido_artefato_2.1": 56,
+        "conferencia_dp_mae_recomputado_vs_artefato_absdiff": 0.0,
+        "origem": "dp_mae: copied from artifact fase2/2.1 (por_celula.constante_validos.dp_simples); dp_fracao_valida and inversions: recomputed from the per-cell split draws of the partial file fase2/_v3_2.1_3.1_parcial_16x60rnd.json (artifact 2.1 does not carry the std of the fraction) with the SAME function used at b=0"
+      },
+      "razao_dp_mae_b0_sobre_b2": 1.0356109432733134,
+      "razao_dp_fracao_b0_sobre_b2": 0.817528609857774
+    }
+  },
+  "medias_16_celulas": {
+    "dp_mae_constante_validos_b0": 7.0928559703037735,
+    "dp_mae_constante_validos_b2_artefato_2.1": 8.016603526005728,
+    "dp_mae_constante_validos_b2_recomputado_do_parcial": 8.016603526005728,
+    "dp_fracao_valida_teste_b0": 0.061260161758249485,
+    "dp_fracao_valida_teste_b2": 0.07405487087989077,
+    "dp_fracao_valida_teste_b0_todos_os_sorteios_suplementar": 0.06290563244622727,
+    "dp_fracao_valida_teste_b2_todos_os_sorteios_suplementar": 0.07691608749834919
+  },
+  "razoes_criterio": {
+    "R_err": 0.8847707071074012,
+    "R_frac": 0.8272266365517947,
+    "definicao": "R_err = media16(dp_b0)/media16(dp_b2) of the constant predictor MAE on valid nodes (b2 = artifact 2.1); R_frac likewise for the valid fraction of the test set",
+    "R_frac_suplementar_todos_os_sorteios": 0.8178475334900176
+  },
+  "inversoes_constante_gt_fspl": {
+    "b0": {
+      "a_todos": 247,
+      "a_validos": 844,
+      "b_todos": 137,
+      "b_validos": 847,
+      "n_combinacoes_celula_x_sorteio": 960
+    },
+    "b2": {
+      "a_todos": 275,
+      "a_validos": 799,
+      "b_todos": 175,
+      "b_validos": 796,
+      "n_combinacoes_celula_x_sorteio": 960
+    },
+    "conferencia_b2_vs_artefato_3.1": {
+      "artefato_3.1_a_validos": 799,
+      "artefato_3.1_a_todos": 275,
+      "artefato_3.1_b_validos": 796,
+      "artefato_3.1_b_todos": 175,
+      "artefato_3.1_n_combinacoes": 960,
+      "recomputado_do_parcial": {
+        "a_todos": 275,
+        "a_validos": 799,
+        "b_todos": 175,
+        "b_validos": 796,
+        "n_combinacoes_celula_x_sorteio": 960
+      },
+      "bate": true
+    }
+  },
+  "sorteios_com_no_valido": {
+    "b0": {
+      "n_sorteios_com_no_valido_total": 938,
+      "n_sorteios_sem_no_valido_excluidos_total": 22,
+      "de_total": 960,
+      "por_celula_com_no_valido": {
+        "bauru_Q1": 59,
+        "bauru_Q2": 59,
+        "bauru_Q3": 60,
+        "bauru_Q4": 57,
+        "campinas_Q1": 59,
+        "campinas_Q2": 59,
+        "campinas_Q3": 60,
+        "campinas_Q4": 59,
+        "lins_Q1": 58,
+        "lins_Q2": 60,
+        "lins_Q3": 58,
+        "lins_Q4": 55,
+        "sorocaba_Q1": 59,
+        "sorocaba_Q2": 59,
+        "sorocaba_Q3": 59,
+        "sorocaba_Q4": 58
+      }
+    },
+    "b2": {
+      "n_sorteios_com_no_valido_total": 904,
+      "n_sorteios_sem_no_valido_excluidos_total": 56,
+      "de_total": 960,
+      "por_celula_com_no_valido": {
+        "bauru_Q1": 59,
+        "bauru_Q2": 56,
+        "bauru_Q3": 56,
+        "bauru_Q4": 56,
+        "campinas_Q1": 59,
+        "campinas_Q2": 59,
+        "campinas_Q3": 57,
+        "campinas_Q4": 58,
+        "lins_Q1": 56,
+        "lins_Q2": 59,
+        "lins_Q3": 48,
+        "lins_Q4": 53,
+        "sorocaba_Q1": 58,
+        "sorocaba_Q2": 59,
+        "sorocaba_Q3": 55,
+        "sorocaba_Q4": 56
+      }
+    }
+  },
+  "teto_criterio_texto": "R_err >= 0.8 AND R_frac >= 0.8 -> DELIMITS: the drift comes from the block split draw; the buffer adds unequal inclusion and reduces the scored population (the text says so; the title stays, since it does not assert a cause). R_err <= 0.5 OR R_frac <= 0.5 -> REINFORCES: the buffer amplifies the drift (one sentence with the ratio). Between 0.5 and 0.8 -> descriptive: the ratio is reported. In any outcome the number goes into a table row or a sentence.",
+  "interpretacao": "NOT done in this artifact (outside the pipeline scope)"
+}

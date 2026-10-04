@@ -1,0 +1,12 @@
+{
+ "id": "R4_p_fechado_vs_frequencia",
+ "roadmap": "B3.3",
+ "subclaim": "S2",
+ "origem": "requested in the internal review of the manuscript; adopted on 01/10/2026",
+ "pergunta": "By border class m(i) (number of sides/corners of the block within b of the node, as defined in section 4.4), in the four Q1 cells and the 200 split draws of fase1/1.8: does the frequency of inclusion in the test conditional on the block being test (p_{i|te}) match the closed form where the proposition declares it exact and respect the bounds where it gives bounds?",
+ "metodo_fixado": "same partition as scripts/v3_1.6_2.3_estimando_formal.py; per cell and class: fraction of nodes, nodal mean of the frequency, closed-form value or bounds, MC standard error (between split draws, by blocks).",
+ "previsao": "interior class (m=0): frequency = 1 exactly; edge classes: frequency between the bounds, above the lower bound.",
+ "leitura": "agreement (|freq - fechado| <= 2 SE) in every class declared exact and frequency within the bounds in the others, in the 4 cells -> the sentence 'is not examined' (main.tex l.310) becomes the result, and 'known exactly for most nodes' gains the fraction of nodes. Frequency outside the bounds or outside 2 SE in a class declared exact -> error in the statement: BLOCKS and goes to an independent physics/mathematics check.",
+ "se_inverter": "does not invert any subclaim; may require correcting the statement of the proposition.",
+ "fixado_em": "2026-10-01T17:13:54-03:00 (before any script or result of this test existed)"
+}

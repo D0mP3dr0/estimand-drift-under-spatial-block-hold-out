@@ -1,0 +1,208 @@
+{
+ "criterio": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/criterios/criterio_G1b_campinas_bloco_cruzado.json",
+ "grid_km": 10.0,
+ "buffer_km": 2.0,
+ "n": 20,
+ "corridas": [
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss739191_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss739191_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss739191_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss739191_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 739191,
+   "indice_sorteio": 5
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss29675_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss29675_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss29675_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss29675_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 29675,
+   "indice_sorteio": 6
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss676375_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss676375_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss676375_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss676375_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 676375,
+   "indice_sorteio": 7
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss387379_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss387379_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss387379_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss387379_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 387379,
+   "indice_sorteio": 8
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss259492_s43",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss259492_s43",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_gnn_campinas_Q1_ss259492_s44",
+   "tipo": "gnn",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  },
+  {
+   "bloco": 4,
+   "run_label": "g1_mlp_campinas_Q1_ss259492_s44",
+   "tipo": "mlp",
+   "cidade": "campinas",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 259492,
+   "indice_sorteio": 9
+  }
+ ]
+}

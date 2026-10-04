@@ -1,0 +1,1464 @@
+{
+  "script_caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/r3_alvo_pos_correcao_16celulas.py",
+  "script_sha256": "a6a7dcc62a23868f3e24bd29ef3dadcf3cd4e0e7bb73d01db647275e1f56fb75",
+  "timestamp_utc_inicio": "2026-09-25T12:06:13.481270+00:00",
+  "celulas": {
+    "lins_Q1": {
+      "cidade": "lins",
+      "quadrante": "Q1",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_lins_v19_Q1_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_lins_s42_Q1_g10b2/run_c0c1cf_lins_s42_Q1_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:06:13.481387+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "f23d15852f1d132eeb5412e194cb0d4251f88c6a0d32097cef08588835742cfc",
+      "sha256_calculado": "f23d15852f1d132eeb5412e194cb0d4251f88c6a0d32097cef08588835742cfc",
+      "sha256_ok": true,
+      "tempo_sha_s": 27.799445721000666,
+      "modo_carga": "mmap",
+      "tempo_load_s": 6.8494051070010755,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9189821,
+          "recomputado": "d4a122f2582a3609a9dc13e97adcaed991c2a32589fd3f7586c6f3c7fd8f807d",
+          "run_json": "d4a122f2582a3609a9dc13e97adcaed991c2a32589fd3f7586c6f3c7fd8f807d",
+          "ok": true
+        },
+        "val": {
+          "n": 1031207,
+          "recomputado": "b4ac444ba0de4323496d94844ef860f61a07ee66c3555b8eb6248c61f8d8cd45",
+          "run_json": "b4ac444ba0de4323496d94844ef860f61a07ee66c3555b8eb6248c61f8d8cd45",
+          "ok": true
+        },
+        "test": {
+          "n": 833593,
+          "recomputado": "3cdac4e6c3c76e6ce4fe66f19904442bc85fd02aaa9d28866df86d7377a754c6",
+          "run_json": "3cdac4e6c3c76e6ce4fe66f19904442bc85fd02aaa9d28866df86d7377a754c6",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.914560725308642,
+        "train": 0.9030456632397954,
+        "val": 0.9590334433338796,
+        "test": 0.9700753245288768
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1107293,
+          "corr": 0.9302660822868347,
+          "r2_teto": 0.8653949838532959
+        },
+        "teste": {
+          "n_validos": 24945,
+          "corr": 0.9587731957435608,
+          "r2_teto": 0.9192460408763203
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.7400471079026338,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.1304061473262308,
+        "n": 833593
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 1.1304061473262308,
+        "n": 833593
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 1.1304061473262308,
+        "n": 833593
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 1.7400471079026338,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_lins_Q1_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 1.1304061473262308,
+        "mae_teste_npz_piso": 1.1304061473262308,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:06:51.900641+00:00"
+    },
+    "bauru_Q1": {
+      "cidade": "bauru",
+      "quadrante": "Q1",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q1_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_bauru_s42_Q1_g10b2/run_c0c1cf_bauru_s42_Q1_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:07:12.580017+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "33e8d57368920241fc289f8c939de35ece7178c316d2bf5488c3cdf98ff5fb5c",
+      "sha256_calculado": "33e8d57368920241fc289f8c939de35ece7178c316d2bf5488c3cdf98ff5fb5c",
+      "sha256_ok": true,
+      "tempo_sha_s": 22.671315729996422,
+      "modo_carga": "mmap",
+      "tempo_load_s": 7.199499456997728,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9188831,
+          "recomputado": "7ce69f2153a11e0b3019823367d32ee8f1d32832be8e62378a09bbd33e6f7a17",
+          "run_json": "7ce69f2153a11e0b3019823367d32ee8f1d32832be8e62378a09bbd33e6f7a17",
+          "ok": true
+        },
+        "val": {
+          "n": 1033370,
+          "recomputado": "2c0c847ebf26a317df1ee2d11f19c899480a6848b3e3acee89efd0b715a0eeb7",
+          "run_json": "2c0c847ebf26a317df1ee2d11f19c899480a6848b3e3acee89efd0b715a0eeb7",
+          "ok": true
+        },
+        "test": {
+          "n": 828243,
+          "recomputado": "f070b3e31cec5b7e10810b0b093d1149b7a7fe3fd9ef26e1643d9e29d7cc449d",
+          "run_json": "f070b3e31cec5b7e10810b0b093d1149b7a7fe3fd9ef26e1643d9e29d7cc449d",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.8378438271604939,
+        "train": 0.8575141930458836,
+        "val": 0.8761760066578282,
+        "test": 0.6718209510976851
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 2101544,
+          "corr": 0.8756462931632996,
+          "r2_teto": 0.7667564307306272
+        },
+        "teste": {
+          "n_validos": 271812,
+          "corr": 0.9061370491981506,
+          "r2_teto": 0.8210843519295317
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 3.288584570554881,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 5.235512330378909,
+        "n": 828243
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 5.235512330378909,
+        "n": 828243
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 5.235512330378909,
+        "n": 828243
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 3.288584570554881,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_bauru_Q1_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 5.235512330378909,
+        "mae_teste_npz_piso": 5.235512330378909,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:07:46.373084+00:00"
+    },
+    "bauru_Q2": {
+      "cidade": "bauru",
+      "quadrante": "Q2",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q2_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_bauru_s42_Q2_g10b2/run_c0c1cf_bauru_s42_Q2_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:07:46.534083+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "29bdc73e6f4bea464f2e3772670bef68febac95c21e18d66e0293dcd5f799163",
+      "sha256_calculado": "29bdc73e6f4bea464f2e3772670bef68febac95c21e18d66e0293dcd5f799163",
+      "sha256_ok": true,
+      "tempo_sha_s": 27.101566972,
+      "modo_carga": "mmap",
+      "tempo_load_s": 4.908550312000443,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9188829,
+          "recomputado": "c8ff5e72549a5c4ad405452eb7da93c935937a6bd6a5405ca614ff7a976eeb32",
+          "run_json": "c8ff5e72549a5c4ad405452eb7da93c935937a6bd6a5405ca614ff7a976eeb32",
+          "ok": true
+        },
+        "val": {
+          "n": 1033369,
+          "recomputado": "43c41930904045c175d8a48f9df9dbbbf2f87dc1020b077f6e3c27e4d13ab135",
+          "run_json": "43c41930904045c175d8a48f9df9dbbbf2f87dc1020b077f6e3c27e4d13ab135",
+          "ok": true
+        },
+        "test": {
+          "n": 828243,
+          "recomputado": "f070b3e31cec5b7e10810b0b093d1149b7a7fe3fd9ef26e1643d9e29d7cc449d",
+          "run_json": "f070b3e31cec5b7e10810b0b093d1149b7a7fe3fd9ef26e1643d9e29d7cc449d",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.9054130401234568,
+        "train": 0.909052393944865,
+        "val": 0.9124146360109506,
+        "test": 0.8504810786206464
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1225847,
+          "corr": 0.8945492506027222,
+          "r2_teto": 0.8002183617538918
+        },
+        "teste": {
+          "n_validos": 123838,
+          "corr": 0.8144054412841797,
+          "r2_teto": 0.6632562227932794
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.3373463542558723,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.6941554396896066,
+        "n": 828243
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 1.6941554396896066,
+        "n": 828243
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 1.6941554396896066,
+        "n": 828243
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 1.3373463542558723,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_bauru_Q2_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 1.6941554396896066,
+        "mae_teste_npz_piso": 1.6941554396896066,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:08:22.389093+00:00"
+    },
+    "bauru_Q3": {
+      "cidade": "bauru",
+      "quadrante": "Q3",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q3_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_bauru_s42_Q3_g10b2/run_c0c1cf_bauru_s42_Q3_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:08:22.645771+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "ef67c8c886b6c0cb7001a84f0316033699965d73961b6eca31ea66dd042f5264",
+      "sha256_calculado": "ef67c8c886b6c0cb7001a84f0316033699965d73961b6eca31ea66dd042f5264",
+      "sha256_ok": true,
+      "tempo_sha_s": 27.998457082998357,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.050376646002405,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9188528,
+          "recomputado": "656caa03af953d51ab94e17e74170947466f7c3e7db8266f61d3ce5baefedf84",
+          "run_json": "656caa03af953d51ab94e17e74170947466f7c3e7db8266f61d3ce5baefedf84",
+          "ok": true
+        },
+        "val": {
+          "n": 1034037,
+          "recomputado": "936dcc7d9b9f5d06bd41403c58013579e3df551c2ad6205273f11ac0f5cb7193",
+          "run_json": "936dcc7d9b9f5d06bd41403c58013579e3df551c2ad6205273f11ac0f5cb7193",
+          "ok": true
+        },
+        "test": {
+          "n": 817601,
+          "recomputado": "9faaea122e57bb4a8f2f602a9138caa1eb17ea3cae54bb5d95595c6d5f8742f7",
+          "run_json": "9faaea122e57bb4a8f2f602a9138caa1eb17ea3cae54bb5d95595c6d5f8742f7",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.9018369598765432,
+        "train": 0.9160702345359344,
+        "val": 0.9402884036064474,
+        "test": 0.8408514666689497
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1272193,
+          "corr": 0.9071668386459351,
+          "r2_teto": 0.82295167313886
+        },
+        "teste": {
+          "n_validos": 130120,
+          "corr": 0.8276644945144653,
+          "r2_teto": 0.6850285154798854
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.8936736609098157,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.6132474851554677,
+        "n": 817601
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 2.6132474851554677,
+        "n": 817601
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 2.6132474851554677,
+        "n": 817601
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 1.8936736609098157,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_bauru_Q3_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 2.6132474851554677,
+        "mae_teste_npz_piso": 2.6132474851554677,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:08:59.895968+00:00"
+    },
+    "bauru_Q4": {
+      "cidade": "bauru",
+      "quadrante": "Q4",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q4_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_bauru_s42_Q4_g10b2/run_c0c1cf_bauru_s42_Q4_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:09:00.065195+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "0caa7c2c3a7412a4f7fbf39ce08cefffc6896f7efa9db376897df6438024db20",
+      "sha256_calculado": "0caa7c2c3a7412a4f7fbf39ce08cefffc6896f7efa9db376897df6438024db20",
+      "sha256_ok": true,
+      "tempo_sha_s": 27.211271696993208,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.235493701999076,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9188530,
+          "recomputado": "d1db695dbce9ea542a4415f786a085c0a5dc616e859abd962bb8208017f19318",
+          "run_json": "d1db695dbce9ea542a4415f786a085c0a5dc616e859abd962bb8208017f19318",
+          "ok": true
+        },
+        "val": {
+          "n": 1034035,
+          "recomputado": "0f5a7946aa3fee79ae657834f18446f6d25f2512452b3b0c0fec3f4d1a264c41",
+          "run_json": "0f5a7946aa3fee79ae657834f18446f6d25f2512452b3b0c0fec3f4d1a264c41",
+          "ok": true
+        },
+        "test": {
+          "n": 817601,
+          "recomputado": "9faaea122e57bb4a8f2f602a9138caa1eb17ea3cae54bb5d95595c6d5f8742f7",
+          "run_json": "9faaea122e57bb4a8f2f602a9138caa1eb17ea3cae54bb5d95595c6d5f8742f7",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.9046118055555555,
+        "train": 0.8985844308066687,
+        "val": 0.9604471802211724,
+        "test": 0.8652937068325504
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1236231,
+          "corr": 0.8752049207687378,
+          "r2_teto": 0.7659836533378126
+        },
+        "teste": {
+          "n_validos": 110136,
+          "corr": 0.7112237215042114,
+          "r2_teto": 0.5058391820303001
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.5957074696593763,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.076847688675111,
+        "n": 817601
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 2.076847688675111,
+        "n": 817601
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 2.076847688675111,
+        "n": 817601
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 1.5957074696593763,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_bauru_Q4_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 2.076847688675111,
+        "mae_teste_npz_piso": 2.076847688675111,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:09:36.206954+00:00"
+    },
+    "campinas_Q1": {
+      "cidade": "campinas",
+      "quadrante": "Q1",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_campinas_v19_Q1_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_campinas_s42_Q1_g10b2/run_c0c1cf_campinas_s42_Q1_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:09:36.356449+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "d3787cd087c1ded417da788a83bd048bcaafa347dcd6adc0e64a9fe1e405fe00",
+      "sha256_calculado": "d3787cd087c1ded417da788a83bd048bcaafa347dcd6adc0e64a9fe1e405fe00",
+      "sha256_ok": true,
+      "tempo_sha_s": 17.240577174001373,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.018194321994088,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9188776,
+          "recomputado": "5fbb4173644ede4f21dd4c7396368fb2f2ce3ac02877907ddcc78ce43cdeb3ef",
+          "run_json": "5fbb4173644ede4f21dd4c7396368fb2f2ce3ac02877907ddcc78ce43cdeb3ef",
+          "ok": true
+        },
+        "val": {
+          "n": 1033211,
+          "recomputado": "91ac6abe762d9c1b7243727085b8a9fc15de5393464e61a1db92abaaa1cb5008",
+          "run_json": "91ac6abe762d9c1b7243727085b8a9fc15de5393464e61a1db92abaaa1cb5008",
+          "ok": true
+        },
+        "test": {
+          "n": 821276,
+          "recomputado": "f2e230c569a7d6d0f867607f12ca0582474ef7dbd61839218d0b5eed05a7b617",
+          "run_json": "f2e230c569a7d6d0f867607f12ca0582474ef7dbd61839218d0b5eed05a7b617",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.8606036265432099,
+        "train": 0.8642070499922949,
+        "val": 0.9378142509129307,
+        "test": 0.7588265089933226
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1806577,
+          "corr": 0.909743070602417,
+          "r2_teto": 0.8276324545091143
+        },
+        "teste": {
+          "n_validos": 198070,
+          "corr": 0.7698299288749695,
+          "r2_teto": 0.5926381193916406
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.543892353597888,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.416962710516136,
+        "n": 821276
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 2.416962710516136,
+        "n": 821276
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 2.416962710516136,
+        "n": 821276
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 2.543892353597888,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_campinas_Q1_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 2.416962710516136,
+        "mae_teste_npz_piso": 2.416962710516136,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:10:02.957203+00:00"
+    },
+    "campinas_Q2": {
+      "cidade": "campinas",
+      "quadrante": "Q2",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_campinas_v19_Q2_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_campinas_s42_Q2_g10b2/run_c0c1cf_campinas_s42_Q2_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:10:03.115492+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "c952a61cfcbeda2a042a6ba80f17ff73aabea5e42511a5614b0a7954321ef16c",
+      "sha256_calculado": "c952a61cfcbeda2a042a6ba80f17ff73aabea5e42511a5614b0a7954321ef16c",
+      "sha256_ok": true,
+      "tempo_sha_s": 26.97350894999545,
+      "modo_carga": "mmap",
+      "tempo_load_s": 4.987650812996435,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9188780,
+          "recomputado": "7b770c8bde187bbad51cad761aa1aa091731c3f15dd7321110caf8214de4e5da",
+          "run_json": "7b770c8bde187bbad51cad761aa1aa091731c3f15dd7321110caf8214de4e5da",
+          "ok": true
+        },
+        "val": {
+          "n": 1033207,
+          "recomputado": "372d85d30560e380c3a0d0a2113e7872c4fe07114654f37784fcd4b8d9ffcc6f",
+          "run_json": "372d85d30560e380c3a0d0a2113e7872c4fe07114654f37784fcd4b8d9ffcc6f",
+          "ok": true
+        },
+        "test": {
+          "n": 821276,
+          "recomputado": "f2e230c569a7d6d0f867607f12ca0582474ef7dbd61839218d0b5eed05a7b617",
+          "run_json": "f2e230c569a7d6d0f867607f12ca0582474ef7dbd61839218d0b5eed05a7b617",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.8530585648148148,
+        "train": 0.8455319422164858,
+        "val": 0.8815561644472018,
+        "test": 0.8485904860241867
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1904361,
+          "corr": 0.9259447455406189,
+          "r2_teto": 0.8573736717942815
+        },
+        "teste": {
+          "n_validos": 124349,
+          "corr": 0.6059500575065613,
+          "r2_teto": 0.3671754721922049
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.5736264615203237,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.636048740959969,
+        "n": 821276
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 2.636048740959969,
+        "n": 821276
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 2.636048740959969,
+        "n": 821276
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 2.5736264615203237,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_campinas_Q2_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 2.636048740959969,
+        "mae_teste_npz_piso": 2.636048740959969,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:10:38.798216+00:00"
+    },
+    "campinas_Q3": {
+      "cidade": "campinas",
+      "quadrante": "Q3",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_campinas_v19_Q3_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_campinas_s42_Q3_g10b2/run_c0c1cf_campinas_s42_Q3_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:10:38.976719+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "8b7bacbcdb7d34bc8c0234554a1f1afd954a05773a61d1b79e53191687330bb5",
+      "sha256_calculado": "8b7bacbcdb7d34bc8c0234554a1f1afd954a05773a61d1b79e53191687330bb5",
+      "sha256_ok": true,
+      "tempo_sha_s": 29.150889454998833,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.516149590999703,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9187817,
+          "recomputado": "5bf011d5f11f216099a3425dda17d0ce728c9ef16c0d0d579e3760ee0c7ad72c",
+          "run_json": "5bf011d5f11f216099a3425dda17d0ce728c9ef16c0d0d579e3760ee0c7ad72c",
+          "ok": true
+        },
+        "val": {
+          "n": 1038048,
+          "recomputado": "be5422227cb111a48d64a6cb1e4dd82c6186837064529f579e8a2b33d4bf3714",
+          "run_json": "be5422227cb111a48d64a6cb1e4dd82c6186837064529f579e8a2b33d4bf3714",
+          "ok": true
+        },
+        "test": {
+          "n": 822561,
+          "recomputado": "11ef172422c555b6e745b0d51c0e50301475f6723df5a84bf575152ccd270056",
+          "run_json": "11ef172422c555b6e745b0d51c0e50301475f6723df5a84bf575152ccd270056",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.8478702932098765,
+        "train": 0.8756939760554656,
+        "val": 0.8681139985819538,
+        "test": 0.7031964802610384
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1971601,
+          "corr": 0.9384543299674988,
+          "r2_teto": 0.8806965294347471
+        },
+        "teste": {
+          "n_validos": 244139,
+          "corr": 0.9124389886856079,
+          "r2_teto": 0.8325449080736149
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.4826860279189873,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 3.882408015487518,
+        "n": 822561
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 3.882408015487518,
+        "n": 822561
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 3.882408015487518,
+        "n": 822561
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 2.4826860279189873,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_campinas_Q3_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 3.882408015487518,
+        "mae_teste_npz_piso": 3.882408015487518,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:11:18.639362+00:00"
+    },
+    "campinas_Q4": {
+      "cidade": "campinas",
+      "quadrante": "Q4",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_campinas_v19_Q4_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_campinas_s42_Q4_g10b2/run_c0c1cf_campinas_s42_Q4_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:11:18.809157+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "7e9c4e41fc10078813afe081a436b88323532ff41282555232938f17913916dc",
+      "sha256_calculado": "7e9c4e41fc10078813afe081a436b88323532ff41282555232938f17913916dc",
+      "sha256_ok": true,
+      "tempo_sha_s": 28.46747530400171,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.319032815001265,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9187819,
+          "recomputado": "9559a58d6a214ee23e53c7c1eafde9e2eab47467e2f9caf8f1aefe73ee6c4764",
+          "run_json": "9559a58d6a214ee23e53c7c1eafde9e2eab47467e2f9caf8f1aefe73ee6c4764",
+          "ok": true
+        },
+        "val": {
+          "n": 1038048,
+          "recomputado": "be5422227cb111a48d64a6cb1e4dd82c6186837064529f579e8a2b33d4bf3714",
+          "run_json": "be5422227cb111a48d64a6cb1e4dd82c6186837064529f579e8a2b33d4bf3714",
+          "ok": true
+        },
+        "test": {
+          "n": 822561,
+          "recomputado": "11ef172422c555b6e745b0d51c0e50301475f6723df5a84bf575152ccd270056",
+          "run_json": "11ef172422c555b6e745b0d51c0e50301475f6723df5a84bf575152ccd270056",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.8729304012345679,
+        "train": 0.8629532209983675,
+        "val": 0.9333903634514011,
+        "test": 0.8650483064477893
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1646822,
+          "corr": 0.8894088268280029,
+          "r2_teto": 0.7910480612395645
+        },
+        "teste": {
+          "n_validos": 111006,
+          "corr": 0.6652172803878784,
+          "r2_teto": 0.44251403012664525
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.030495396506009,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.0868751482294874,
+        "n": 822561
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 2.0868751482294874,
+        "n": 822561
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 2.0868751482294874,
+        "n": 822561
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 2.030495396506009,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_campinas_Q4_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 2.0868751482294874,
+        "mae_teste_npz_piso": 2.0868751482294874,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:11:56.892248+00:00"
+    },
+    "lins_Q2": {
+      "cidade": "lins",
+      "quadrante": "Q2",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_lins_v19_Q2_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_lins_s42_Q2_g10b2/run_c0c1cf_lins_s42_Q2_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:11:57.043191+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "64a48e1cb48287cf0753c04bb4934d65bf21144a084e1afe058161640a428249",
+      "sha256_calculado": "64a48e1cb48287cf0753c04bb4934d65bf21144a084e1afe058161640a428249",
+      "sha256_ok": true,
+      "tempo_sha_s": 28.87713206400076,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.454397047993552,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9189821,
+          "recomputado": "d4a122f2582a3609a9dc13e97adcaed991c2a32589fd3f7586c6f3c7fd8f807d",
+          "run_json": "d4a122f2582a3609a9dc13e97adcaed991c2a32589fd3f7586c6f3c7fd8f807d",
+          "ok": true
+        },
+        "val": {
+          "n": 1031207,
+          "recomputado": "b4ac444ba0de4323496d94844ef860f61a07ee66c3555b8eb6248c61f8d8cd45",
+          "run_json": "b4ac444ba0de4323496d94844ef860f61a07ee66c3555b8eb6248c61f8d8cd45",
+          "ok": true
+        },
+        "test": {
+          "n": 833593,
+          "recomputado": "3cdac4e6c3c76e6ce4fe66f19904442bc85fd02aaa9d28866df86d7377a754c6",
+          "run_json": "3cdac4e6c3c76e6ce4fe66f19904442bc85fd02aaa9d28866df86d7377a754c6",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.8513441358024691,
+        "train": 0.8394913241509274,
+        "val": 0.8894324805785842,
+        "test": 0.8520788922171851
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1926580,
+          "corr": 0.9914093613624573,
+          "r2_teto": 0.9828925217971154
+        },
+        "teste": {
+          "n_validos": 123306,
+          "corr": 0.9941531419754028,
+          "r2_teto": 0.9883404696995655
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 3.230663555980584,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 4.334394991985829,
+        "n": 833593
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 4.334394991985829,
+        "n": 833593
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 4.334394991985829,
+        "n": 833593
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 3.230663555980584,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_lins_Q2_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 4.334394991985829,
+        "mae_teste_npz_piso": 4.334394991985829,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:12:35.468411+00:00"
+    },
+    "lins_Q3": {
+      "cidade": "lins",
+      "quadrante": "Q3",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_lins_v19_Q3_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_lins_s42_Q3_g10b2/run_c0c1cf_lins_s42_Q3_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:12:35.627264+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "845b287a7b3d33e1b08670c0dad745c2b9f50628e2d38540553de73ed234a4f2",
+      "sha256_calculado": "845b287a7b3d33e1b08670c0dad745c2b9f50628e2d38540553de73ed234a4f2",
+      "sha256_ok": true,
+      "tempo_sha_s": 28.19029005199991,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.467219871999987,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9189022,
+          "recomputado": "1285a86419643708d8f6285a9ee351182c1a291b6a19490b02986ed231dfbdb2",
+          "run_json": "1285a86419643708d8f6285a9ee351182c1a291b6a19490b02986ed231dfbdb2",
+          "ok": true
+        },
+        "val": {
+          "n": 1032790,
+          "recomputado": "04520a7f06b17eed051d2e38458ebdc1ca1772eb78d3bc83f18a88880f72d0a4",
+          "run_json": "04520a7f06b17eed051d2e38458ebdc1ca1772eb78d3bc83f18a88880f72d0a4",
+          "ok": true
+        },
+        "test": {
+          "n": 824701,
+          "recomputado": "b36bf1a98e708823b4a89f51ee497d3d3d5bea72df77f6e4b7a45059603978f7",
+          "run_json": "b36bf1a98e708823b4a89f51ee497d3d3d5bea72df77f6e4b7a45059603978f7",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.928636188271605,
+        "train": 0.9373088888023121,
+        "val": 0.9403160371421102,
+        "test": 0.8995684496562997
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 924875,
+          "corr": 0.8599354028701782,
+          "r2_teto": 0.7394888971094957
+        },
+        "teste": {
+          "n_validos": 82826,
+          "corr": 0.892221212387085,
+          "r2_teto": 0.7960586918334798
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.4232381191394212,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.829824565511713,
+        "n": 824701
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 1.829824565511713,
+        "n": 824701
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 1.829824565511713,
+        "n": 824701
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 1.4232381191394212,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_lins_Q3_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 1.829824565511713,
+        "mae_teste_npz_piso": 1.829824565511713,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:13:14.091219+00:00"
+    },
+    "lins_Q4": {
+      "cidade": "lins",
+      "quadrante": "Q4",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_lins_v19_Q4_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_lins_s42_Q4_g10b2/run_c0c1cf_lins_s42_Q4_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:13:14.251640+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "eb2974f829c149378d1025fca8fa51e3191e8a06ba0821cf8f1adc2712754744",
+      "sha256_calculado": "eb2974f829c149378d1025fca8fa51e3191e8a06ba0821cf8f1adc2712754744",
+      "sha256_ok": true,
+      "tempo_sha_s": 27.23314489099721,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.519849237003655,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9189022,
+          "recomputado": "1285a86419643708d8f6285a9ee351182c1a291b6a19490b02986ed231dfbdb2",
+          "run_json": "1285a86419643708d8f6285a9ee351182c1a291b6a19490b02986ed231dfbdb2",
+          "ok": true
+        },
+        "val": {
+          "n": 1032790,
+          "recomputado": "04520a7f06b17eed051d2e38458ebdc1ca1772eb78d3bc83f18a88880f72d0a4",
+          "run_json": "04520a7f06b17eed051d2e38458ebdc1ca1772eb78d3bc83f18a88880f72d0a4",
+          "ok": true
+        },
+        "test": {
+          "n": 824701,
+          "recomputado": "b36bf1a98e708823b4a89f51ee497d3d3d5bea72df77f6e4b7a45059603978f7",
+          "run_json": "b36bf1a98e708823b4a89f51ee497d3d3d5bea72df77f6e4b7a45059603978f7",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.9301748456790123,
+        "train": 0.9245507302082855,
+        "val": 0.9976820069907726,
+        "test": 0.8752153810896313
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 904934,
+          "corr": 0.9614946246147156,
+          "r2_teto": 0.9244719131629928
+        },
+        "teste": {
+          "n_validos": 102910,
+          "corr": 0.8663787841796875,
+          "r2_teto": 0.7506121976766735
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.3645599628728033,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.926629245905163,
+        "n": 824701
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 1.926629245905163,
+        "n": 824701
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 1.926629245905163,
+        "n": 824701
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 1.3645599628728033,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_lins_Q4_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 1.926629245905163,
+        "mae_teste_npz_piso": 1.926629245905163,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:13:50.937821+00:00"
+    },
+    "sorocaba_Q1": {
+      "cidade": "sorocaba",
+      "quadrante": "Q1",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_sorocaba_v19_Q1_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_sorocaba_s42_Q1_g10b2/run_c0c1cf_sorocaba_s42_Q1_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:13:51.101861+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "858293a658cddbf2b45ddf2673d46153108698b0d04c7b48f8d39d3bf8527919",
+      "sha256_calculado": "858293a658cddbf2b45ddf2673d46153108698b0d04c7b48f8d39d3bf8527919",
+      "sha256_ok": true,
+      "tempo_sha_s": 28.317520508993766,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.496652454996365,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9188187,
+          "recomputado": "9dd5eb07bd981fa125adf5db6e8ce723e6403643a9ef13c46140f3c3acfe4413",
+          "run_json": "9dd5eb07bd981fa125adf5db6e8ce723e6403643a9ef13c46140f3c3acfe4413",
+          "ok": true
+        },
+        "val": {
+          "n": 1035070,
+          "recomputado": "7dfbd1b7a6e0b37ba00aad086ae84a946f9aa2c2b1498afe489eabc40b4e670c",
+          "run_json": "7dfbd1b7a6e0b37ba00aad086ae84a946f9aa2c2b1498afe489eabc40b4e670c",
+          "ok": true
+        },
+        "test": {
+          "n": 818925,
+          "recomputado": "a30d0ddb4e3896af487adc2b8709e27290dfd58415c359b1bcb4316e146fd347",
+          "run_json": "a30d0ddb4e3896af487adc2b8709e27290dfd58415c359b1bcb4316e146fd347",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.8723791666666667,
+        "train": 0.8759106665983181,
+        "val": 0.9356256098621349,
+        "test": 0.7787624019293586
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1653966,
+          "corr": 0.9234664440155029,
+          "r2_teto": 0.852790273222638
+        },
+        "teste": {
+          "n_validos": 181177,
+          "corr": 0.6572237610816956,
+          "r2_teto": 0.43194307213036964
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.0014325706137406,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.3904948136066784,
+        "n": 818925
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 1.3904948136066784,
+        "n": 818925
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 1.3904948136066784,
+        "n": 818925
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 2.0014325706137406,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_sorocaba_Q1_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 1.3904948136066784,
+        "mae_teste_npz_piso": 1.3904948136066784,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:14:28.868729+00:00"
+    },
+    "sorocaba_Q2": {
+      "cidade": "sorocaba",
+      "quadrante": "Q2",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_sorocaba_v19_Q2_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_sorocaba_s42_Q2_g10b2/run_c0c1cf_sorocaba_s42_Q2_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:14:29.078884+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "5741e2b87fee80b15907aebee1122a5f12c992a66555a4b8b17282d384ab991d",
+      "sha256_calculado": "5741e2b87fee80b15907aebee1122a5f12c992a66555a4b8b17282d384ab991d",
+      "sha256_ok": true,
+      "tempo_sha_s": 27.953123667997716,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.614970267997705,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9188187,
+          "recomputado": "9dd5eb07bd981fa125adf5db6e8ce723e6403643a9ef13c46140f3c3acfe4413",
+          "run_json": "9dd5eb07bd981fa125adf5db6e8ce723e6403643a9ef13c46140f3c3acfe4413",
+          "ok": true
+        },
+        "val": {
+          "n": 1035070,
+          "recomputado": "7dfbd1b7a6e0b37ba00aad086ae84a946f9aa2c2b1498afe489eabc40b4e670c",
+          "run_json": "7dfbd1b7a6e0b37ba00aad086ae84a946f9aa2c2b1498afe489eabc40b4e670c",
+          "ok": true
+        },
+        "test": {
+          "n": 818925,
+          "recomputado": "a30d0ddb4e3896af487adc2b8709e27290dfd58415c359b1bcb4316e146fd347",
+          "run_json": "a30d0ddb4e3896af487adc2b8709e27290dfd58415c359b1bcb4316e146fd347",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.8697375771604938,
+        "train": 0.8674690665307531,
+        "val": 0.8852386795095983,
+        "test": 0.8473486583020423
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1688201,
+          "corr": 0.9126315116882324,
+          "r2_teto": 0.8328962761263483
+        },
+        "teste": {
+          "n_validos": 125010,
+          "corr": 0.8318631649017334,
+          "r2_teto": 0.6919963251203285
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.1661364893088226,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.427705122862128,
+        "n": 818925
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 2.427705122862128,
+        "n": 818925
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 2.427705122862128,
+        "n": 818925
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 2.1661364893088226,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_sorocaba_Q2_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 2.427705122862128,
+        "mae_teste_npz_piso": 2.427705122862128,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:15:07.441230+00:00"
+    },
+    "sorocaba_Q3": {
+      "cidade": "sorocaba",
+      "quadrante": "Q3",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_sorocaba_v19_Q3_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_sorocaba_s42_Q3_g10b2/run_c0c1cf_sorocaba_s42_Q3_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:15:07.607306+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "aed5e373e11bc94650b1d944e03153cf58af07b1224884f2f011a14609db8f2a",
+      "sha256_calculado": "aed5e373e11bc94650b1d944e03153cf58af07b1224884f2f011a14609db8f2a",
+      "sha256_ok": true,
+      "tempo_sha_s": 22.70705588800047,
+      "modo_carga": "mmap",
+      "tempo_load_s": 5.128275497998402,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9187682,
+          "recomputado": "7405a18a5955199e6697c0d1b6ed9a56877a712e78ca6fbcf22344de31bcad56",
+          "run_json": "7405a18a5955199e6697c0d1b6ed9a56877a712e78ca6fbcf22344de31bcad56",
+          "ok": true
+        },
+        "val": {
+          "n": 1041517,
+          "recomputado": "9e533ea30f4bdb563109c13e0062c67f10b9533889b6361bcfdc0471018fd276",
+          "run_json": "9e533ea30f4bdb563109c13e0062c67f10b9533889b6361bcfdc0471018fd276",
+          "ok": true
+        },
+        "test": {
+          "n": 826159,
+          "recomputado": "07451f5893c08d800d571ab423754590845e1303fb2e13c816c4842bbf6de2eb",
+          "run_json": "07451f5893c08d800d571ab423754590845e1303fb2e13c816c4842bbf6de2eb",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.891336188271605,
+        "train": 0.9122514253323091,
+        "val": 0.9346626123241387,
+        "test": 0.7795291221181395
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1408283,
+          "corr": 0.7640357613563538,
+          "r2_teto": 0.5837506446313832
+        },
+        "teste": {
+          "n_validos": 182144,
+          "corr": 0.8071074485778809,
+          "r2_teto": 0.6514224335498966
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 2.087311670918942,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 4.063168974798036,
+        "n": 826159
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 4.063168974798036,
+        "n": 826159
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 4.063168974798036,
+        "n": 826159
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 2.087311670918942,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_sorocaba_Q3_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 4.063168974798036,
+        "mae_teste_npz_piso": 4.063168974798036,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:15:39.317900+00:00"
+    },
+    "sorocaba_Q4": {
+      "cidade": "sorocaba",
+      "quadrante": "Q4",
+      "tensor_path": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_sorocaba_v19_Q4_enriched_cftudo.pt",
+      "run_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos/c0c1cf_sorocaba_s42_Q4_g10b2/run_c0c1cf_sorocaba_s42_Q4_g10b2.json",
+      "timestamp_utc_inicio": "2026-09-25T12:15:39.521435+00:00",
+      "sha_manifest_vs_run_json_ok": true,
+      "sha256_esperado": "467a03166acd932abea979a48dded6ce51cf1c3d13992aa45ae4949c3737177a",
+      "sha256_calculado": "467a03166acd932abea979a48dded6ce51cf1c3d13992aa45ae4949c3737177a",
+      "sha256_ok": true,
+      "tempo_sha_s": 28.129120516998228,
+      "modo_carga": "mmap",
+      "tempo_load_s": 4.837598081001488,
+      "n_nodes_total": 12960000,
+      "particoes_sha": {
+        "train": {
+          "n": 9187684,
+          "recomputado": "c57a66132a2d189d6cfbe29789635191969f750270c275f17ea21e0209324dcd",
+          "run_json": "c57a66132a2d189d6cfbe29789635191969f750270c275f17ea21e0209324dcd",
+          "ok": true
+        },
+        "val": {
+          "n": 1041519,
+          "recomputado": "feffe980e8d5864b09b1832bba95e590a01f579a8a74117c12b166de66e89aae",
+          "run_json": "feffe980e8d5864b09b1832bba95e590a01f579a8a74117c12b166de66e89aae",
+          "ok": true
+        },
+        "test": {
+          "n": 826159,
+          "recomputado": "07451f5893c08d800d571ab423754590845e1303fb2e13c816c4842bbf6de2eb",
+          "run_json": "07451f5893c08d800d571ab423754590845e1303fb2e13c816c4842bbf6de2eb",
+          "ok": true
+        }
+      },
+      "pi_frac_sentinela": {
+        "celula": 0.8943023919753087,
+        "train": 0.8895991634017888,
+        "val": 0.9456831800476035,
+        "test": 0.8648577331966365
+      },
+      "r2_teto": {
+        "celula": {
+          "n_validos": 1369841,
+          "corr": 0.8151572346687317,
+          "r2_teto": 0.6644813172327737
+        },
+        "teste": {
+          "n_validos": 111649,
+          "corr": 0.7359477281570435,
+          "r2_teto": 0.5416190585795135
+        }
+      },
+      "mae_constante_mediana_celula_inteira": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.6318456085529787,
+        "n": 12960000
+      },
+      "mae_constante_mediana_teste": {
+        "constante_mediana": -110.0,
+        "mae_db": 1.6649006439440335,
+        "n": 826159
+      },
+      "mae_constante_mediana_treino_aplicada_teste": {
+        "constante": -110.0,
+        "mae_db": 1.6649006439440335,
+        "n": 826159
+      },
+      "mae_constante_piso_teste": {
+        "constante": -110.0,
+        "mae_db": 1.6649006439440335,
+        "n": 826159
+      },
+      "mae_constante_piso_celula_inteira": {
+        "constante": -110.0,
+        "mae_db": 1.6318456085529787,
+        "n": 12960000
+      },
+      "cruzamento_npz": {
+        "npz_path": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_R2_2026-09-24/e3_predicoes/mlp_sorocaba_Q4_s42.npz",
+        "existe": true,
+        "idx_igual": true,
+        "target_igual": true,
+        "sentinela_igual": true,
+        "mae_teste_npz_mediana": 1.6649006439440335,
+        "mae_teste_npz_piso": 1.6649006439440335,
+        "diff_mediana_vs_tensor": 0.0,
+        "diff_piso_vs_tensor": 0.0
+      },
+      "status": "ok",
+      "timestamp_utc_fim": "2026-09-25T12:16:16.438353+00:00"
+    }
+  },
+  "timestamp_utc_ultima_gravacao": "2026-09-25T12:16:16.631626+00:00"
+}

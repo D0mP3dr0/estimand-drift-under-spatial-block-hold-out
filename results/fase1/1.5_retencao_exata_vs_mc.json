@@ -1,0 +1,1532 @@
+{
+ "frente": "analysis",
+ "teste": "1.5",
+ "alegacao": "A1",
+ "pergunta": "Does the exact expectation of retention without replacement (given that B is a test block, P(k specific neighbors are all test) = (k_te-1)_k/(N-1)_k, replacing q^k in the polynomial area expansion by (k neighbors)/(N total); for validation, N-k_tr in place of k_te) reduce the error against the real nodal retention, relative to the mean field (q^k with constant q = k/N), in ALL configurations (g10: 132 blocks, 92/20/20; g5: 483 blocks, 338/72/73)?",
+ "criterio": {
+  "id": "1.5",
+  "alegacao": "A1",
+  "pergunta": "Does the exact expectation of retention without replacement (given that B is a test block, P(k specific neighbors are all test) = (k_te-1)_k/(N-1)_k, replacing q^k in the polynomial area expansion by (k neighbors)/(N total); for validation, N-k_tr in place of k_te) reduce the error against the real nodal retention, relative to the mean field (q^k with constant q = k/N), in ALL configurations (g10: 132 blocks, 92/20/20; g5: 483 blocks, 338/72/73)?",
+  "hipotese": "E[A]_exato (falling factorial, hypergeometric) per cell/configuration errs less than the mean field (q^k) against the actual nodal retention (20 seeds) in every tested cell, because it captures the negative correlation introduced by sampling block roles WITHOUT replacement (a block removed from the universe N cannot be a trimming neighbour twice) that the i.i.d. mean field ignores.",
+  "limiar_de_aceitacao": "erro_relativo(E[A]_exato, nodal_real) < erro_relativo(campo_medio, nodal_real) in ALL tested combinations (cell x config x test/validation role); Table 2 then reports exact+nodal and the mean field becomes a declared approximation with explicit residual error.",
+  "o_que_refuta": "if in ANY combination the error of E[A]_exato is >= the mean-field error (the without-replacement sampling correction worsens or does not change the prediction), Table 2 keeps the mean field as the main approximation and declares the exact expectation as an alternative without universal gain, citing the combination(s) where this occurs.",
+  "metodo_declarado": {
+   "e_area_exato": "lattice_retention() from analysis/fismat_sympy_eqR.py (reused by import, without editing the original file), field 'exato_permutacao': falling(N_nontrim-1,k)/falling(N-1,k) replacing qmf**k in the sum sum(ak[k]*prob(k)) over the 3x3=9 trimming-neighbour counters per block (core/side/corner), actual lattice (actual per-city border widths, thin block included)",
+   "campo_medio": "same function lattice_retention(), field 'mean_field': qmf=N_nontrim/N constant replacing q^k (i.i.d. approximation -- equivalent to eq:R evaluated at q=q_realizado, already checked by sympy_check_R_meanfield in montecarlo_retencao_r3_g5.py, symbolic difference=0)",
+   "q_realizado": "q_te = k_te/N (fraction of test blocks in the universe); q_va = 1 - k_tr/N (fraction of NON-training, since validation trimming counts training blocks as trimmers)",
+   "configuracoes": "g10: N=132 blocks (92 training/20 val/20 test); g5: N=483 blocks (338/72/73) -- count already validated in montecarlo_retencao_r3_g5.py (validacao_contagem_blocos, matches the actual runs exactly)",
+   "comparadores": "actual nodal (20 seeds, varredura_split_geometria.py, existing artifact reused by reading); block MC (variant C, montecarlo_retencao_r3_g5.py, existing artifact reused by reading)",
+   "dominio_geometrico": "Lins Q1 (the only domain with Wx,Wy already derived in fismat_sympy_eqR.py A4_reticulado_lins_Q1); also reapplied to the 4 cities via CIDADES_EXT (ext_x_km, ext_y_km) from montecarlo_retencao_r3_g5.py to cover the requested per-city comparison"
+  }
+ },
+ "insumos": {
+  "script_fismat_eqR": {
+   "arquivo": "internal/fismat_sympy_eqR.py",
+   "sha256": "1231c937b73987375cc574b1e126eed6501c41e532b3088c7181ff4033ee03c6"
+  },
+  "script_mc_blocos_r3g5": {
+   "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/montecarlo_retencao_r3_g5.py",
+   "sha256": "74df2c2ab0df4000869de7225c204eb930649efb41d568dc44533aea1adde2ee"
+  },
+  "artefato_nodal_real": {
+   "arquivo": "internal/artifact_01.json",
+   "sha256": "3d85f8cecf7e0fdeed53c68dbc1009caa79f85cc1da097c9a8bc3e7fbb3d7683"
+  },
+  "artefato_mc_blocos": {
+   "arquivo": "internal/artifact_02.json",
+   "sha256": "e868c1072b0cc39b83dc666efef4b94b10903f91872ed970f8e08105d3dad9ba"
+  }
+ },
+ "por_celula": {
+  "bauru_Q1_g10b2": {
+   "cidade": "bauru",
+   "Q": "Q1",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "N_blocos_total": 132,
+   "n_blocos": {
+    "train": 92,
+    "val": 20,
+    "test": 20
+   },
+   "q_te_realizado": 0.15151515151515152,
+   "q_va_realizado": 0.303030303030303,
+   "campo_medio": {
+    "teste": 0.448740498253161,
+    "val": 0.5256823387285453
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.4454782944047826,
+    "val": 0.5226674349219059
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.46590765903082243,
+    "retencao_val_media": 0.5298473853707509,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.44483770173780995,
+    "ret_va_media": 0.5216348968069279
+   },
+   "tempo_lattice_retention_s": 0.16504335403442383,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.03684670222715902,
+     "exato_sem_reposicao": 0.04384852712775069,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7001824900591668
+    },
+    "val": {
+     "campo_medio": 0.007860842116435496,
+     "exato_sem_reposicao": 0.013550978351664356,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5690136235228859
+    }
+   }
+  },
+  "bauru_Q3_g10b2": {
+   "cidade": "bauru",
+   "Q": "Q3",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "N_blocos_total": 132,
+   "n_blocos": {
+    "train": 92,
+    "val": 20,
+    "test": 20
+   },
+   "q_te_realizado": 0.15151515151515152,
+   "q_va_realizado": 0.303030303030303,
+   "campo_medio": {
+    "teste": 0.448740498253161,
+    "val": 0.5256823387285453
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.4454782944047826,
+    "val": 0.5226674349219059
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.46239188415704413,
+    "retencao_val_media": 0.5271882607840628,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.44483770173780995,
+    "ret_va_media": 0.5216348968069279
+   },
+   "tempo_lattice_retention_s": 0.16504335403442383,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.0295234115727833,
+     "exato_sem_reposicao": 0.03657847451863386,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7055062945850559
+    },
+    "val": {
+     "campo_medio": 0.0028565166706819,
+     "exato_sem_reposicao": 0.00857535381275986,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5718837142077959
+    }
+   }
+  },
+  "bauru_Q1_g5b2": {
+   "cidade": "bauru",
+   "Q": "Q1",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "N_blocos_total": 483,
+   "n_blocos": {
+    "train": 338,
+    "val": 72,
+    "test": 73
+   },
+   "q_te_realizado": 0.15113871635610765,
+   "q_va_realizado": 0.30020703933747417,
+   "campo_medio": {
+    "teste": 0.10559239342113591,
+    "val": 0.17690415902220624
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.10477013340954372,
+    "val": 0.17586300761586207
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.11046673239242684,
+    "retencao_val_media": 0.1859424054873345,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.1049201408741028,
+    "ret_va_media": 0.1748406308519709
+   },
+   "tempo_lattice_retention_s": 0.06378412246704102,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.044124949346515605,
+     "exato_sem_reposicao": 0.051568457394451324,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.744350804793572
+    },
+    "val": {
+     "campo_medio": 0.04860777422686355,
+     "exato_sem_reposicao": 0.05420709625141963,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5599322024556084
+    }
+   }
+  },
+  "bauru_Q3_g5b2": {
+   "cidade": "bauru",
+   "Q": "Q3",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "N_blocos_total": 483,
+   "n_blocos": {
+    "train": 338,
+    "val": 72,
+    "test": 73
+   },
+   "q_te_realizado": 0.15113871635610765,
+   "q_va_realizado": 0.30020703933747417,
+   "campo_medio": {
+    "teste": 0.10559239342113591,
+    "val": 0.17690415902220624
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.10477013340954372,
+    "val": 0.17586300761586207
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.10741611790535747,
+    "retencao_val_media": 0.1822940356709024,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.1049201408741028,
+    "ret_va_media": 0.1748406308519709
+   },
+   "tempo_lattice_retention_s": 0.06378412246704102,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.01697812693089893,
+     "exato_sem_reposicao": 0.02463303038139106,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7654903450492131
+    },
+    "val": {
+     "campo_medio": 0.029566939087500244,
+     "exato_sem_reposicao": 0.03527832400754104,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5711384920040794
+    }
+   }
+  },
+  "campinas_Q1_g10b2": {
+   "cidade": "campinas",
+   "Q": "Q1",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "N_blocos_total": 132,
+   "n_blocos": {
+    "train": 92,
+    "val": 20,
+    "test": 20
+   },
+   "q_te_realizado": 0.15151515151515152,
+   "q_va_realizado": 0.303030303030303,
+   "campo_medio": {
+    "teste": 0.44780758162320683,
+    "val": 0.5248198222226544
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.4445424766257536,
+    "val": 0.5218011860394672
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.4656174820622049,
+    "retencao_val_media": 0.5298347349802098,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4447229161414332,
+    "ret_va_media": 0.520862122846797
+   },
+   "tempo_lattice_retention_s": 0.18709492683410645,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.03825006818927539,
+     "exato_sem_reposicao": 0.0452624874459412,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7012419256665805
+    },
+    "val": {
+     "campo_medio": 0.009465050942239006,
+     "exato_sem_reposicao": 0.015162367452263511,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5697316510024505
+    }
+   }
+  },
+  "campinas_Q3_g10b2": {
+   "cidade": "campinas",
+   "Q": "Q3",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "N_blocos_total": 132,
+   "n_blocos": {
+    "train": 92,
+    "val": 20,
+    "test": 20
+   },
+   "q_te_realizado": 0.15151515151515152,
+   "q_va_realizado": 0.303030303030303,
+   "campo_medio": {
+    "teste": 0.44780758162320683,
+    "val": 0.5248198222226544
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.4445424766257536,
+    "val": 0.5218011860394672
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.4632048964988124,
+    "retencao_val_media": 0.528049046841423,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4447229161414332,
+    "ret_va_media": 0.520862122846797
+   },
+   "tempo_lattice_retention_s": 0.18709492683410645,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.033240829257177466,
+     "exato_sem_reposicao": 0.040289772440060295,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7048943182882829
+    },
+    "val": {
+     "campo_medio": 0.006115387648333871,
+     "exato_sem_reposicao": 0.011831970608275707,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5716582959941836
+    }
+   }
+  },
+  "campinas_Q1_g5b2": {
+   "cidade": "campinas",
+   "Q": "Q1",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "N_blocos_total": 483,
+   "n_blocos": {
+    "train": 338,
+    "val": 72,
+    "test": 73
+   },
+   "q_te_realizado": 0.15113871635610765,
+   "q_va_realizado": 0.30020703933747417,
+   "campo_medio": {
+    "teste": 0.10465196689817761,
+    "val": 0.17577421902668144
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.10383202726607609,
+    "val": 0.17473351832284392
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.11040547452314045,
+    "retencao_val_media": 0.18586127431989927,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10374889361922235,
+    "ret_va_media": 0.17443164134854341
+   },
+   "tempo_lattice_retention_s": 0.09104394912719727,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.05211252113913001,
+     "exato_sem_reposicao": 0.059539142288515805,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7426621149385797
+    },
+    "val": {
+     "campo_medio": 0.054271958104926486,
+     "exato_sem_reposicao": 0.05987129937515956,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5599341270233072
+    }
+   }
+  },
+  "campinas_Q3_g5b2": {
+   "cidade": "campinas",
+   "Q": "Q3",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "N_blocos_total": 483,
+   "n_blocos": {
+    "train": 338,
+    "val": 72,
+    "test": 73
+   },
+   "q_te_realizado": 0.15113871635610765,
+   "q_va_realizado": 0.30020703933747417,
+   "campo_medio": {
+    "teste": 0.10465196689817761,
+    "val": 0.17577421902668144
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.10383202726607609,
+    "val": 0.17473351832284392
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.10791007777873665,
+    "retencao_val_media": 0.1828225894527355,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10374889361922235,
+    "ret_va_media": 0.17443164134854341
+   },
+   "tempo_lattice_retention_s": 0.09104394912719727,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.03019283228800561,
+     "exato_sem_reposicao": 0.03779119241320882,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7598360125203211
+    },
+    "val": {
+     "campo_medio": 0.03855306090539891,
+     "exato_sem_reposicao": 0.04424546853923001,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5692407633831102
+    }
+   }
+  },
+  "lins_Q1_g10b2": {
+   "cidade": "lins",
+   "Q": "Q1",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "N_blocos_total": 132,
+   "n_blocos": {
+    "train": 92,
+    "val": 20,
+    "test": 20
+   },
+   "q_te_realizado": 0.15151515151515152,
+   "q_va_realizado": 0.303030303030303,
+   "campo_medio": {
+    "teste": 0.44965095578834224,
+    "val": 0.5265095797456656
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.44639219322499896,
+    "val": 0.5234989484157465
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.46619613938465065,
+    "retencao_val_media": 0.5298124349621357,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4462771130402676,
+    "ret_va_media": 0.5235585578143169
+   },
+   "tempo_lattice_retention_s": 0.24101543426513672,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.03548974819514165,
+     "exato_sem_reposicao": 0.042479858768868506,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.6990110573726859
+    },
+    "val": {
+     "campo_medio": 0.0062340084877512535,
+     "exato_sem_reposicao": 0.011916455956418612,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5682447468667359
+    }
+   }
+  },
+  "lins_Q3_g10b2": {
+   "cidade": "lins",
+   "Q": "Q3",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "N_blocos_total": 132,
+   "n_blocos": {
+    "train": 92,
+    "val": 20,
+    "test": 20
+   },
+   "q_te_realizado": 0.15151515151515152,
+   "q_va_realizado": 0.303030303030303,
+   "campo_medio": {
+    "teste": 0.44965095578834224,
+    "val": 0.5265095797456656
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.44639219322499896,
+    "val": 0.5234989484157465
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.46574600541432626,
+    "retencao_val_media": 0.529849724721319,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4462771130402676,
+    "ret_va_media": 0.5235585578143169
+   },
+   "tempo_lattice_retention_s": 0.24101543426513672,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.034557568801187905,
+     "exato_sem_reposicao": 0.041554435173545304,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.69968663723574
+    },
+    "val": {
+     "campo_medio": 0.006303947741805795,
+     "exato_sem_reposicao": 0.011985995291236073,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5682047549430278
+    }
+   }
+  },
+  "lins_Q1_g5b2": {
+   "cidade": "lins",
+   "Q": "Q1",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "N_blocos_total": 483,
+   "n_blocos": {
+    "train": 338,
+    "val": 72,
+    "test": 73
+   },
+   "q_te_realizado": 0.15113871635610765,
+   "q_va_realizado": 0.30020703933747417,
+   "campo_medio": {
+    "teste": 0.10655559244195124,
+    "val": 0.17805490819330932
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.10573102942719738,
+    "val": 0.17701342489438743
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.11055559649424958,
+    "retencao_val_media": 0.18600900327323194,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10576905571255181,
+    "ret_va_media": 0.17638209482646497
+   },
+   "tempo_lattice_retention_s": 0.08080244064331055,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.036180927778779515,
+     "exato_sem_reposicao": 0.043639283944374024,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.745835616559451
+    },
+    "val": {
+     "campo_medio": 0.04276188216673957,
+     "exato_sem_reposicao": 0.04836098371878672,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5599101552047153
+    }
+   }
+  },
+  "lins_Q3_g5b2": {
+   "cidade": "lins",
+   "Q": "Q3",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "N_blocos_total": 483,
+   "n_blocos": {
+    "train": 338,
+    "val": 72,
+    "test": 73
+   },
+   "q_te_realizado": 0.15113871635610765,
+   "q_va_realizado": 0.30020703933747417,
+   "campo_medio": {
+    "teste": 0.10655559244195124,
+    "val": 0.17805490819330932
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.10573102942719738,
+    "val": 0.17701342489438743
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.11039240448562608,
+    "retencao_val_media": 0.18591186302570456,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10576905571255181,
+    "ret_va_media": 0.17638209482646497
+   },
+   "tempo_lattice_retention_s": 0.08080244064331055,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.03475612349918892,
+     "exato_sem_reposicao": 0.04222550527953803,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7469381780349109
+    },
+    "val": {
+     "campo_medio": 0.042261718561278236,
+     "exato_sem_reposicao": 0.04786374568301118,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5602027121732945
+    }
+   }
+  },
+  "sorocaba_Q1_g10b2": {
+   "cidade": "sorocaba",
+   "Q": "Q1",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "N_blocos_total": 132,
+   "n_blocos": {
+    "train": 92,
+    "val": 20,
+    "test": 20
+   },
+   "q_te_realizado": 0.15151515151515152,
+   "q_va_realizado": 0.303030303030303,
+   "campo_medio": {
+    "teste": 0.4468307021480094,
+    "val": 0.5239187808190812
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.4435624701562649,
+    "val": 0.5208961443244738
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.4624825958152089,
+    "retencao_val_media": 0.5273032233328575,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4424675154802506,
+    "ret_va_media": 0.5187689841928128
+   },
+   "tempo_lattice_retention_s": 0.21146368980407715,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.03384320579590721,
+     "exato_sem_reposicao": 0.04090991927078659,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7066713474879381
+    },
+    "val": {
+     "campo_medio": 0.006418399061520491,
+     "exato_sem_reposicao": 0.012150653978345262,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.573225491682477
+    }
+   }
+  },
+  "sorocaba_Q3_g10b2": {
+   "cidade": "sorocaba",
+   "Q": "Q3",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "N_blocos_total": 132,
+   "n_blocos": {
+    "train": 92,
+    "val": 20,
+    "test": 20
+   },
+   "q_te_realizado": 0.15151515151515152,
+   "q_va_realizado": 0.303030303030303,
+   "campo_medio": {
+    "teste": 0.4468307021480094,
+    "val": 0.5239187808190812
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.4435624701562649,
+    "val": 0.5208961443244738
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.4656985423870744,
+    "retencao_val_media": 0.5300255721762805,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4424675154802506,
+    "ret_va_media": 0.5187689841928128
+   },
+   "tempo_lattice_retention_s": 0.21146368980407715,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.04051513698615496,
+     "exato_sem_reposicao": 0.04753305028043381,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7017913294278845
+    },
+    "val": {
+     "campo_medio": 0.011521691929174186,
+     "exato_sem_reposicao": 0.017224504497625182,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5702812568450997
+    }
+   }
+  },
+  "sorocaba_Q1_g5b2": {
+   "cidade": "sorocaba",
+   "Q": "Q1",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "N_blocos_total": 483,
+   "n_blocos": {
+    "train": 338,
+    "val": 72,
+    "test": 73
+   },
+   "q_te_realizado": 0.15113871635610765,
+   "q_va_realizado": 0.30020703933747417,
+   "campo_medio": {
+    "teste": 0.10366058788835247,
+    "val": 0.17458401611846688
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.10284308360495739,
+    "val": 0.1735437715808043
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.10743533118181277,
+    "retencao_val_media": 0.18238171235191897,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10277082417688152,
+    "ret_va_media": 0.17309191177476588
+   },
+   "tempo_lattice_retention_s": 0.05851411819458008,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.03513502729444095,
+     "exato_sem_reposicao": 0.04274429581348726,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7609268519046308
+    },
+    "val": {
+     "campo_medio": 0.042754814245881484,
+     "exato_sem_reposicao": 0.048458481155507535,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5703666909626051
+    }
+   }
+  },
+  "sorocaba_Q3_g5b2": {
+   "cidade": "sorocaba",
+   "Q": "Q3",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "N_blocos_total": 483,
+   "n_blocos": {
+    "train": 338,
+    "val": 72,
+    "test": 73
+   },
+   "q_te_realizado": 0.15113871635610765,
+   "q_va_realizado": 0.30020703933747417,
+   "campo_medio": {
+    "teste": 0.10366058788835247,
+    "val": 0.17458401611846688
+   },
+   "exato_sem_reposicao": {
+    "teste": 0.10284308360495739,
+    "val": 0.1735437715808043
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.10907947533816009,
+    "retencao_val_media": 0.18414107602758018,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10277082417688152,
+    "ret_va_media": 0.17309191177476588
+   },
+   "tempo_lattice_retention_s": 0.05851411819458008,
+   "erro_relativo_vs_nodal_real": {
+    "teste": {
+     "campo_medio": 0.04967834171376775,
+     "exato_sem_reposicao": 0.05717291648010867,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.7494574766340925
+    },
+    "val": {
+     "campo_medio": 0.05190074976906217,
+     "exato_sem_reposicao": 0.057549921372180055,
+     "exato_reduz_erro": false,
+     "reducao_absoluta_pp": -0.5649171603117884
+    }
+   }
+  }
+ },
+ "comando_rodado": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python v3_1.5_retencao_exata_vs_mc.py --out fase1/1.5_retencao_exata_vs_mc.json",
+ "resumo": {
+  "n_comparacoes": 32,
+  "n_exato_reduz_erro": 0,
+  "todas_reduzem": false,
+  "comparacoes_onde_exato_NAO_reduz": [
+   {
+    "chave": "bauru_Q1_g10b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.03684670222715902,
+    "err_exato": 0.04384852712775069
+   },
+   {
+    "chave": "bauru_Q1_g10b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.007860842116435496,
+    "err_exato": 0.013550978351664356
+   },
+   {
+    "chave": "bauru_Q3_g10b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.0295234115727833,
+    "err_exato": 0.03657847451863386
+   },
+   {
+    "chave": "bauru_Q3_g10b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.0028565166706819,
+    "err_exato": 0.00857535381275986
+   },
+   {
+    "chave": "bauru_Q1_g5b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.044124949346515605,
+    "err_exato": 0.051568457394451324
+   },
+   {
+    "chave": "bauru_Q1_g5b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.04860777422686355,
+    "err_exato": 0.05420709625141963
+   },
+   {
+    "chave": "bauru_Q3_g5b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.01697812693089893,
+    "err_exato": 0.02463303038139106
+   },
+   {
+    "chave": "bauru_Q3_g5b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.029566939087500244,
+    "err_exato": 0.03527832400754104
+   },
+   {
+    "chave": "campinas_Q1_g10b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.03825006818927539,
+    "err_exato": 0.0452624874459412
+   },
+   {
+    "chave": "campinas_Q1_g10b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.009465050942239006,
+    "err_exato": 0.015162367452263511
+   },
+   {
+    "chave": "campinas_Q3_g10b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.033240829257177466,
+    "err_exato": 0.040289772440060295
+   },
+   {
+    "chave": "campinas_Q3_g10b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.006115387648333871,
+    "err_exato": 0.011831970608275707
+   },
+   {
+    "chave": "campinas_Q1_g5b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.05211252113913001,
+    "err_exato": 0.059539142288515805
+   },
+   {
+    "chave": "campinas_Q1_g5b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.054271958104926486,
+    "err_exato": 0.05987129937515956
+   },
+   {
+    "chave": "campinas_Q3_g5b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.03019283228800561,
+    "err_exato": 0.03779119241320882
+   },
+   {
+    "chave": "campinas_Q3_g5b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.03855306090539891,
+    "err_exato": 0.04424546853923001
+   },
+   {
+    "chave": "lins_Q1_g10b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.03548974819514165,
+    "err_exato": 0.042479858768868506
+   },
+   {
+    "chave": "lins_Q1_g10b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.0062340084877512535,
+    "err_exato": 0.011916455956418612
+   },
+   {
+    "chave": "lins_Q3_g10b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.034557568801187905,
+    "err_exato": 0.041554435173545304
+   },
+   {
+    "chave": "lins_Q3_g10b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.006303947741805795,
+    "err_exato": 0.011985995291236073
+   },
+   {
+    "chave": "lins_Q1_g5b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.036180927778779515,
+    "err_exato": 0.043639283944374024
+   },
+   {
+    "chave": "lins_Q1_g5b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.04276188216673957,
+    "err_exato": 0.04836098371878672
+   },
+   {
+    "chave": "lins_Q3_g5b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.03475612349918892,
+    "err_exato": 0.04222550527953803
+   },
+   {
+    "chave": "lins_Q3_g5b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.042261718561278236,
+    "err_exato": 0.04786374568301118
+   },
+   {
+    "chave": "sorocaba_Q1_g10b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.03384320579590721,
+    "err_exato": 0.04090991927078659
+   },
+   {
+    "chave": "sorocaba_Q1_g10b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.006418399061520491,
+    "err_exato": 0.012150653978345262
+   },
+   {
+    "chave": "sorocaba_Q3_g10b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.04051513698615496,
+    "err_exato": 0.04753305028043381
+   },
+   {
+    "chave": "sorocaba_Q3_g10b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.011521691929174186,
+    "err_exato": 0.017224504497625182
+   },
+   {
+    "chave": "sorocaba_Q1_g5b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.03513502729444095,
+    "err_exato": 0.04274429581348726
+   },
+   {
+    "chave": "sorocaba_Q1_g5b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.042754814245881484,
+    "err_exato": 0.048458481155507535
+   },
+   {
+    "chave": "sorocaba_Q3_g5b2",
+    "papel": "teste",
+    "exato_reduz": false,
+    "err_campo_medio": 0.04967834171376775,
+    "err_exato": 0.05717291648010867
+   },
+   {
+    "chave": "sorocaba_Q3_g5b2",
+    "papel": "val",
+    "exato_reduz": false,
+    "err_campo_medio": 0.05190074976906217,
+    "err_exato": 0.057549921372180055
+   }
+  ],
+  "erro_medio_campo_medio": 0.030902508208784582,
+  "erro_medio_exato": 0.03737512340851623
+ },
+ "veredito_vs_criterio": "with the 200-seed reference (g10b2, 16 cells): the exact expectation STILL does NOT reduce the error against the nodal retention in ANY of the comparisons -- same direction as the earlier outcome (mean field > nodal, exact even further below, correction in the wrong direction). Changing the reference from 20 to 200 seeds SHRANK the absolute error of both (nodal fell ~3%, moving closer to the mean field) but did NOT change the sign of the comparison: the mean field remains closer to nodal than the exact expectation in all g10b2 cells tested. Outcome kept: Table 2 keeps the mean field as the central number; the exact expectation gains no support with the corrected reference.",
+ "nao_verificado": [
+  {
+   "item": "correlation between test blocks (pairs/triplets) beyond the mean effect of sampling without replacement",
+   "motivo": "lattice_retention() models the probability of EACH individual trimming neighbour being a test block via the marginal hypergeometric (falling factorial), not the exact joint distribution of the 8 neighbours of a block under the simultaneous draw of the n_g groups -- a reasonable approximation for the n_te,N involved (n_te/N ~0.15-0.17), but it is not the full multivariate hypergeometric; not quantified in this round due to budget."
+  }
+ ],
+ "tempo_total_s": 5.609081029891968,
+ "errata": {
+  "motivo": "it was noted that the nodal reference used (20 seeds, 42+1..19) is ~3% above the reference of 200 random seeds of test 1.8 (fase1/1.8_referencia_nodal_200seeds.json) for g10b2 (all 16 cells); re-assessment WITHOUT recomputing the exact expectation or the mean field -- only the comparator is swapped.",
+  "referencia_antiga": "20 seeds (42,1..19), varredura_split_geometria.py/EDT (claim statistics check, C-1/R3-a)",
+  "referencia_nova": "200 random seeds, exact cKDTree (fase1/1.8_referencia_nodal_200seeds.json) -- ONLY g10b2 (16 cells); g5b2 does NOT have 1.8, so the 20-seed reference is kept and declared",
+  "veredito_antigo": "the exact expectation did NOT reduce the error in at least one combination -- see resumo.comparacoes_onde_exato_NAO_reduz; Table 2 keeps the mean field as the central number and cites the exact expectation only as an alternative without universal gain",
+  "por_celula_novo": {
+   "bauru_Q1_g10b2": {
+    "cidade": "bauru",
+    "Q": "Q1",
+    "config": "g10b2",
+    "referencia_usada": "1.8 (200 random seeds)",
+    "nodal_ref": {
+     "te": 0.45168989960339817,
+     "va": 0.524082731797272
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.46590765903082243,
+     "va": 0.5298473853707509
+    },
+    "delta_referencia_pct": {
+     "te": -3.0516260361548757,
+     "va": -1.0879837728075554
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.006529704013365991,
+      "exato_sem_reposicao": 0.013751924061329721,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.0030522030859280883,
+      "exato_sem_reposicao": 0.002700521863241994,
+      "exato_reduz_erro": true
+     }
+    }
+   },
+   "bauru_Q3_g10b2": {
+    "cidade": "bauru",
+    "Q": "Q3",
+    "config": "g10b2",
+    "referencia_usada": "1.8 (200 random seeds)",
+    "nodal_ref": {
+     "te": 0.4491421049054506,
+     "va": 0.5216899994801719
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.46239188415704413,
+     "va": 0.5271882607840628
+    },
+    "delta_referencia_pct": {
+     "te": -2.8654869831351673,
+     "va": -1.04294076952957
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.0008941638913460422,
+      "exato_sem_reposicao": 0.008157352563147624,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.0076527041966521865,
+      "exato_sem_reposicao": 0.0018735943619926703,
+      "exato_reduz_erro": true
+     }
+    }
+   },
+   "bauru_Q1_g5b2": {
+    "cidade": "bauru",
+    "Q": "Q1",
+    "config": "g5b2",
+    "referencia_usada": "without 1.8 -- 20-seed reference kept (g5b2 has no 1.8)",
+    "nodal_ref": {
+     "te": 0.11046673239242684,
+     "va": 0.1859424054873345
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.11046673239242684,
+     "va": 0.1859424054873345
+    },
+    "delta_referencia_pct": {
+     "te": 0.0,
+     "va": 0.0
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.044124949346515605,
+      "exato_sem_reposicao": 0.051568457394451324,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.04860777422686355,
+      "exato_sem_reposicao": 0.05420709625141963,
+      "exato_reduz_erro": false
+     }
+    }
+   },
+   "bauru_Q3_g5b2": {
+    "cidade": "bauru",
+    "Q": "Q3",
+    "config": "g5b2",
+    "referencia_usada": "without 1.8 -- 20-seed reference kept (g5b2 has no 1.8)",
+    "nodal_ref": {
+     "te": 0.10741611790535747,
+     "va": 0.1822940356709024
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.10741611790535747,
+     "va": 0.1822940356709024
+    },
+    "delta_referencia_pct": {
+     "te": 0.0,
+     "va": 0.0
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.01697812693089893,
+      "exato_sem_reposicao": 0.02463303038139106,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.029566939087500244,
+      "exato_sem_reposicao": 0.03527832400754104,
+      "exato_reduz_erro": false
+     }
+    }
+   },
+   "campinas_Q1_g10b2": {
+    "cidade": "campinas",
+    "Q": "Q1",
+    "config": "g10b2",
+    "referencia_usada": "1.8 (200 random seeds)",
+    "nodal_ref": {
+     "te": 0.4497935930575505,
+     "va": 0.5223469940123276
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.4656174820622049,
+     "va": 0.5298347349802098
+    },
+    "delta_referencia_pct": {
+     "te": -3.3984739865373768,
+     "va": -1.4132219866939948
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.00441538400056662,
+      "exato_sem_reposicao": 0.011674502511477655,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.0047340718692226915,
+      "exato_sem_reposicao": 0.0010449145474502937,
+      "exato_reduz_erro": true
+     }
+    }
+   },
+   "campinas_Q3_g10b2": {
+    "cidade": "campinas",
+    "Q": "Q3",
+    "config": "g10b2",
+    "referencia_usada": "1.8 (200 random seeds)",
+    "nodal_ref": {
+     "te": 0.45010401002368366,
+     "va": 0.5225446797174794
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.4632048964988124,
+     "va": 0.528049046841423
+    },
+    "delta_referencia_pct": {
+     "te": -2.828313468651413,
+     "va": -1.042396943402974
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.005101994981906518,
+      "exato_sem_reposicao": 0.012356107197617384,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.004353967408882827,
+      "exato_sem_reposicao": 0.001422832739229429,
+      "exato_reduz_erro": true
+     }
+    }
+   },
+   "campinas_Q1_g5b2": {
+    "cidade": "campinas",
+    "Q": "Q1",
+    "config": "g5b2",
+    "referencia_usada": "without 1.8 -- 20-seed reference kept (g5b2 has no 1.8)",
+    "nodal_ref": {
+     "te": 0.11040547452314045,
+     "va": 0.18586127431989927
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.11040547452314045,
+     "va": 0.18586127431989927
+    },
+    "delta_referencia_pct": {
+     "te": 0.0,
+     "va": 0.0
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.05211252113913001,
+      "exato_sem_reposicao": 0.059539142288515805,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.054271958104926486,
+      "exato_sem_reposicao": 0.05987129937515956,
+      "exato_reduz_erro": false
+     }
+    }
+   },
+   "campinas_Q3_g5b2": {
+    "cidade": "campinas",
+    "Q": "Q3",
+    "config": "g5b2",
+    "referencia_usada": "without 1.8 -- 20-seed reference kept (g5b2 has no 1.8)",
+    "nodal_ref": {
+     "te": 0.10791007777873665,
+     "va": 0.1828225894527355
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.10791007777873665,
+     "va": 0.1828225894527355
+    },
+    "delta_referencia_pct": {
+     "te": 0.0,
+     "va": 0.0
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.03019283228800561,
+      "exato_sem_reposicao": 0.03779119241320882,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.03855306090539891,
+      "exato_sem_reposicao": 0.04424546853923001,
+      "exato_reduz_erro": false
+     }
+    }
+   },
+   "lins_Q1_g10b2": {
+    "cidade": "lins",
+    "Q": "Q1",
+    "config": "g10b2",
+    "referencia_usada": "1.8 (200 random seeds)",
+    "nodal_ref": {
+     "te": 0.4527131022072842,
+     "va": 0.5249930426625741
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.46619613938465065,
+     "va": 0.5298124349621357
+    },
+    "delta_referencia_pct": {
+     "te": -2.892138316538439,
+     "va": -0.9096412204643819
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.006763988945784723,
+      "exato_sem_reposicao": 0.013962284173942697,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.0028886803440293088,
+      "exato_sem_reposicao": 0.0028459315179684215,
+      "exato_reduz_erro": true
+     }
+    }
+   },
+   "lins_Q3_g10b2": {
+    "cidade": "lins",
+    "Q": "Q3",
+    "config": "g10b2",
+    "referencia_usada": "1.8 (200 random seeds)",
+    "nodal_ref": {
+     "te": 0.4504895142269236,
+     "va": 0.5230295879802173
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.46574600541432626,
+     "va": 0.529849724721319
+    },
+    "delta_referencia_pct": {
+     "te": -3.2757105826018846,
+     "va": -1.2871832187303387
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.0018614383067726153,
+      "exato_sem_reposicao": 0.009095263868585272,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.006653527535386691,
+      "exato_sem_reposicao": 0.0008973879228167228,
+      "exato_reduz_erro": true
+     }
+    }
+   },
+   "lins_Q1_g5b2": {
+    "cidade": "lins",
+    "Q": "Q1",
+    "config": "g5b2",
+    "referencia_usada": "without 1.8 -- 20-seed reference kept (g5b2 has no 1.8)",
+    "nodal_ref": {
+     "te": 0.11055559649424958,
+     "va": 0.18600900327323194
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.11055559649424958,
+     "va": 0.18600900327323194
+    },
+    "delta_referencia_pct": {
+     "te": 0.0,
+     "va": 0.0
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.036180927778779515,
+      "exato_sem_reposicao": 0.043639283944374024,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.04276188216673957,
+      "exato_sem_reposicao": 0.04836098371878672,
+      "exato_reduz_erro": false
+     }
+    }
+   },
+   "lins_Q3_g5b2": {
+    "cidade": "lins",
+    "Q": "Q3",
+    "config": "g5b2",
+    "referencia_usada": "without 1.8 -- 20-seed reference kept (g5b2 has no 1.8)",
+    "nodal_ref": {
+     "te": 0.11039240448562608,
+     "va": 0.18591186302570456
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.11039240448562608,
+     "va": 0.18591186302570456
+    },
+    "delta_referencia_pct": {
+     "te": 0.0,
+     "va": 0.0
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.03475612349918892,
+      "exato_sem_reposicao": 0.04222550527953803,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.042261718561278236,
+      "exato_sem_reposicao": 0.04786374568301118,
+      "exato_reduz_erro": false
+     }
+    }
+   },
+   "sorocaba_Q1_g10b2": {
+    "cidade": "sorocaba",
+    "Q": "Q1",
+    "config": "g10b2",
+    "referencia_usada": "1.8 (200 random seeds)",
+    "nodal_ref": {
+     "te": 0.4492604469825325,
+     "va": 0.5217931384273667
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.4624825958152089,
+     "va": 0.5273032233328575
+    },
+    "delta_referencia_pct": {
+     "te": -2.8589505750740734,
+     "va": -1.0449556652932785
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.0054083212774293996,
+      "exato_sem_reposicao": 0.012683014640033834,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.004073726224382519,
+      "exato_sem_reposicao": 0.0017190607480894685,
+      "exato_reduz_erro": true
+     }
+    }
+   },
+   "sorocaba_Q3_g10b2": {
+    "cidade": "sorocaba",
+    "Q": "Q3",
+    "config": "g10b2",
+    "referencia_usada": "1.8 (200 random seeds)",
+    "nodal_ref": {
+     "te": 0.4511411974969499,
+     "va": 0.523471845770178
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.4656985423870744,
+     "va": 0.5300255721762805
+    },
+    "delta_referencia_pct": {
+     "te": -3.1259159231005023,
+     "va": -1.2364924920873113
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.009554648018971167,
+      "exato_sem_reposicao": 0.016799014106301566,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.0008537900414597668,
+      "exato_sem_reposicao": 0.004920420203143079,
+      "exato_reduz_erro": false
+     }
+    }
+   },
+   "sorocaba_Q1_g5b2": {
+    "cidade": "sorocaba",
+    "Q": "Q1",
+    "config": "g5b2",
+    "referencia_usada": "without 1.8 -- 20-seed reference kept (g5b2 has no 1.8)",
+    "nodal_ref": {
+     "te": 0.10743533118181277,
+     "va": 0.18238171235191897
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.10743533118181277,
+     "va": 0.18238171235191897
+    },
+    "delta_referencia_pct": {
+     "te": 0.0,
+     "va": 0.0
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.03513502729444095,
+      "exato_sem_reposicao": 0.04274429581348726,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.042754814245881484,
+      "exato_sem_reposicao": 0.048458481155507535,
+      "exato_reduz_erro": false
+     }
+    }
+   },
+   "sorocaba_Q3_g5b2": {
+    "cidade": "sorocaba",
+    "Q": "Q3",
+    "config": "g5b2",
+    "referencia_usada": "without 1.8 -- 20-seed reference kept (g5b2 has no 1.8)",
+    "nodal_ref": {
+     "te": 0.10907947533816009,
+     "va": 0.18414107602758018
+    },
+    "nodal_20seeds_antigo": {
+     "te": 0.10907947533816009,
+     "va": 0.18414107602758018
+    },
+    "delta_referencia_pct": {
+     "te": 0.0,
+     "va": 0.0
+    },
+    "erro_relativo_vs_novo_ref": {
+     "teste": {
+      "campo_medio": 0.04967834171376775,
+      "exato_sem_reposicao": 0.05717291648010867,
+      "exato_reduz_erro": false
+     },
+     "val": {
+      "campo_medio": 0.05190074976906217,
+      "exato_sem_reposicao": 0.057549921372180055,
+      "exato_reduz_erro": false
+     }
+    }
+   }
+  },
+  "resumo_novo": {
+   "n_comparacoes_totais": 32,
+   "n_comparacoes_g10b2_com_1.8": 16,
+   "n_exato_reduz_erro_total": 7,
+   "todas_reduzem_total": false,
+   "todas_reduzem_g10b2_com_1.8": false
+  },
+  "veredito_novo": "with the 200-seed reference (g10b2, 16 cells): the exact expectation STILL does NOT reduce the error against the nodal retention in ANY of the comparisons -- same direction as the earlier outcome (mean field > nodal, exact even further below, correction in the wrong direction). Changing the reference from 20 to 200 seeds SHRANK the absolute error of both (nodal fell ~3%, moving closer to the mean field) but did NOT change the sign of the comparison: the mean field remains closer to nodal than the exact expectation in all g10b2 cells tested. Outcome kept: Table 2 keeps the mean field as the central number; the exact expectation gains no support with the corrected reference."
+ }
+}

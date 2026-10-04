@@ -1,0 +1,17 @@
+{
+ "id": "G1_modelos_g10_adendo2",
+ "emenda": "criterios/criterio_G1_adendo1.json (sha256 e36a6294948566905f50ca5adebe325c3d5a003178a18397ed499fad4eb409e5), which stays intact",
+ "origem": "ambiguities of addendum 1 resolved in the implementation of the aggregator scripts/v3_G1_agregar_v2.py (sha256 d94fac29dcf6c694cab9bec55c4bdd9e2701fe5baf2675cbfe0aa77a5c155824); they are fixed here before any aggregate exists.",
+ "prova_de_anterioridade": {
+  "agregados_existentes": [],
+  "nota": "no MAE of a real run of the batch was computed or read; the aggregator only ran against synthetic data and in a check mode without MAE."
+ },
+ "fixacoes": {
+  "comparador_Q1": "between-seed SD pooled PER CELL and model (square root of the cell's own QM_dentro); the alternative with both cities together is informative only.",
+  "bloco3_incompleto": "CONTIGUOUS prefix of split draws with all 4 runs complete; k >= 10 split draws with valid nodes per cell within the prefix; only once the batch has finished.",
+  "delimita": "a cell counts toward DELIMITS when GNN and MLP fall below 2 x the same comparator; threshold 3 of 4 cells (2 of 2 if only the Q1 cells are included).",
+  "delimita_parcial": "(a) condition 1 at the cell threshold without condition 2 in both Q1 cells; (b) neither rule at the threshold. The residual case with no cell in the 2x-3x band is also PARTIALLY DELIMITS.",
+  "paridade": "a run without .npz (failed because there was no valid node) is left out of the parity median and is counted and listed."
+ },
+ "fixado_em": "2026-10-01T23:51:05-03:00"
+}

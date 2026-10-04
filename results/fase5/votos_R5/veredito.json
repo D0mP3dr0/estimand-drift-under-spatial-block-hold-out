@@ -1,0 +1,77 @@
+{
+ "achado_id": "R5",
+ "veredito": "confirmado",
+ "refutado": false,
+ "motivo_classe": "confirmado",
+ "script": "recalc_R5_verificador.py",
+ "script_sha256": "c172cf73ec4ad8d36d815728a01c64bde0e2466ac348f73b0a9e253f70d3cf27",
+ "leitura_por_dentro": "v = (1-k/N)*k/(k-1)*sum(S_B-Err*M_B)^2/M^2 equal to the decision criterion; N = occupied 10 km blocks (the criterion does not fix N: bbox and no-fpc exist as variants); block = SpatialKFold._assign_groups, k = test blocks with M_B>0; coverage = |Err-mean(Err)|<=2 sqrt(v) over split draws with defined v (mean of Err over all draws with defined Err, reading A primary), as per the decision criterion. Note: the 'constant' of the loop is the median of the whole training set (that of 2.1), not of the valid nodes only.",
+ "recalculo_16_celulas": {
+  "constante__validos": {
+   "Q_mediano": 0.5059777151370085,
+   "Q_min": 0.15984803468795744,
+   "Q_max": 0.7704166265537005,
+   "n_Q_faixa": 8,
+   "n_cob_ge80": 0,
+   "n_cob_lt60": 7,
+   "k_lt2_min": 3,
+   "k_lt2_max": 25,
+   "max_abs_dif_Q_vs_gravado": 0.0,
+   "max_abs_dif_cob_vs_gravado": 0.0,
+   "n_Q_faixa_E_cob80": 0
+  },
+  "constante__todos": {
+   "Q_mediano": 0.8386535068535816,
+   "Q_min": 0.732984129359142,
+   "Q_max": 1.1020280290447293,
+   "n_Q_faixa": 16,
+   "n_cob_ge80": 2,
+   "n_cob_lt60": 0,
+   "k_lt2_min": 0,
+   "k_lt2_max": 0,
+   "max_abs_dif_Q_vs_gravado": 0.0,
+   "max_abs_dif_cob_vs_gravado": 0.0,
+   "n_Q_faixa_E_cob80": 2
+  },
+  "fspl_b__validos": {
+   "Q_mediano": 0.485312333841169,
+   "Q_min": 0.29661121880028235,
+   "Q_max": 0.8739436183864613,
+   "n_Q_faixa": 7,
+   "n_cob_ge80": 1,
+   "n_cob_lt60": 5,
+   "k_lt2_min": 3,
+   "k_lt2_max": 25,
+   "max_abs_dif_Q_vs_gravado": 0.0,
+   "max_abs_dif_cob_vs_gravado": 0.0,
+   "n_Q_faixa_E_cob80": 1
+  },
+  "fspl_b__todos": {
+   "Q_mediano": 0.7097221410593463,
+   "Q_min": 0.04543545521556768,
+   "Q_max": 1.167634583447561,
+   "n_Q_faixa": 13,
+   "n_cob_ge80": 12,
+   "n_cob_lt60": 1,
+   "k_lt2_min": 0,
+   "k_lt2_max": 0,
+   "max_abs_dif_Q_vs_gravado": 0.0,
+   "max_abs_dif_cob_vs_gravado": 0.0,
+   "n_Q_faixa_E_cob80": 12
+  }
+ },
+ "recalculo_bruto_2_celulas": "lins_Q1 and bauru_Q1, 8 combinations, Q/coverage/undefined identical to the stored values (diff 0); block recomputed independently (floor(km/10), id gx*(ymax+1)+gy), N=132 for both",
+ "alegado_vs_meu": {
+  "constante_validos": "Q median 0.506 (0.160-0.770), 8 in range, cov>=.8 0, <.6 7, k<2 3-25: identical",
+  "constante_todos": "0.839 (0.733-1.102), 16, cov>=.8 2: identical",
+  "fspl_validos": "0.485, 7 in range, cov>=.8 1, <.6 5: identical",
+  "fspl_todos": "0.710 (0.045-1.168), 13 in range, cov>=.8 12 (cov<.6 1): identical"
+ },
+ "leitura_do_criterio": {
+  "constante_validos": "none (descriptive): the 'reinforces' branch requires 12 cells with Q in range and cov>=.8 (has 0); the 'delimits' branch requires cov<.6 in >=8 (has 7, 1 cell short of the threshold)",
+  "constante_todos": "none (cov>=.8 in 2; cov<.6 in 0)",
+  "fspl_validos": "none (outside the literal scope of the decision criterion, which fixes constant/valid; 5 <.6)",
+  "fspl_todos": "meets the 'reinforces' threshold (12 jointly, cell by cell; 12 with cov>=.8 and median Q in range) but the decision criterion fixes the reading only for constant/valid"
+ },
+ "gravidade_sugerida": "nota"
+}

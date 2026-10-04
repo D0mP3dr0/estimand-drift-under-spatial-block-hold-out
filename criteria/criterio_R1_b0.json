@@ -1,0 +1,12 @@
+{
+ "id": "R1_b0",
+ "roadmap": "B1.3 (internal/note_21.md)",
+ "subclaim": "S4 (titulo)",
+ "origem": "requested in the internal review of the manuscript; adopted on 01/10/2026",
+ "pergunta": "With buffer b=0 (blocks without erosion), in the same 16 cells, g=10 km and on the SAME 60 split draws of fase2/2.1_deriva_erro_baselines_16x60rnd.json, how much remains of (i) the between-draw SD of the constant-predictor MAE on the valid test nodes, (ii) the between-draw SD of the valid fraction of the test set and (iii) the count of constant x calibrated FSPL inversions (all nodes and valid)?",
+ "previsao": "with b=0 every inclusion probability in the test set is k_te/N (zero design term); composition drift persists because it comes from the block draw.",
+ "metodo_fixado": "same partition code and same calibration rules (a) and (b) as scripts/v3_2.1_3.1_deriva_calibracao.py, changing only b=2 km to b=0; same seeds; statistics identical to those of T3/T4 (SD ddof=1 per cell, simple mean of the 16 cells; split draws without a valid test node excluded and counted). Ratios R_err = media16(dp_b0)/media16(dp_b2) and R_frac likewise for the valid fraction.",
+ "leitura": "R_err >= 0.8 AND R_frac >= 0.8 -> DELIMITS: the drift comes from the block split draw; the buffer adds unequal inclusion and reduces the scored population (the text says so; the title stays, since it does not assert a cause). R_err <= 0.5 OR R_frac <= 0.5 -> REINFORCES: the buffer amplifies the drift (one sentence with the ratio). Between 0.5 and 0.8 -> descriptive: the ratio is reported. In any outcome the number goes into a table row or a sentence.",
+ "se_inverter": "no outcome inverts S4 (the drift of the reported error exists in both cases); what may change is the attribution to the buffer.",
+ "fixado_em": "2026-10-01T17:13:54-03:00 (before any script or result of this test existed)"
+}

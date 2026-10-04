@@ -1,0 +1,11 @@
+{
+ "id": "R7_sementes_x_sorteios_existentes",
+ "subclaim": "S8",
+ "origem": "test requested in the internal review of the manuscript drafts and adopted on 01/10/2026, with the title 'Estimand Drift under Spatial Block Hold-Out'",
+ "pergunta": "In the runs already done at g=5 km (A3: 5 training seeds on split draw 42; A4: 5 split draws on seed 42), in Bauru Q1 and Bauru Q3 (the cells present in both batches), does the sd of the MAE on valid nodes across split draws exceed the sd across seeds, for GNN and MLP?",
+ "metodo_fixado": "sd with ddof=1 of mae on valid nodes (received power) across the 5 seeds (A3) and across the 5 split draws (A4), per cell and model; ratio; no new training.",
+ "previsao": "split-draw/seed ratio above 2 in all four cell-model pairs.",
+ "leitura": "ratio >= 2 in >= 3 of the 4 pairs -> REINFORCES (one clause: the drift between split draws exceeds the variation between seeds). Otherwise DELIMITS (the sentence keeps the two deviations side by side). The design is not crossed; the crossed one is test G1.",
+ "se_inverter": "nao inverte.",
+ "fixado_em": "2026-10-01T22:47:16-03:00 (before any script or result of this test existed)"
+}

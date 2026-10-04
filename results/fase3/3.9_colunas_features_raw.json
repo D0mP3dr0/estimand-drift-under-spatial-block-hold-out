@@ -1,0 +1,1762 @@
+{
+ "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_3.9_colunas_lidar.py",
+ "resumo": {
+  "n_celulas": 16,
+  "col14_frac_nao_zero_min_max": [
+   0.013090586419753086,
+   0.030038194444444444
+  ],
+  "col15_frac_nao_zero_min_max": [
+   0.013090586419753086,
+   0.030038194444444444
+  ],
+  "col16_constante_zero_em_todas": true,
+  "colunas_0_13_frac_nao_zero_min": 0.7881482253086419
+ },
+ "por_celula": {
+  "bauru_Q1": {
+   "arquivo": "transfer_dataset_bauru_v19_Q1_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -1.8892478942871094,
+     "max": 1.6802136898040771,
+     "frac_nao_zero": 0.9999998456790123,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.5522145628929138,
+     "frac_nao_zero": 0.964074537037037,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9636699845679012,
+     "constante": false
+    },
+    "4": {
+     "min": -0.02569665014743805,
+     "max": 0.03590017557144165,
+     "frac_nao_zero": 0.9659399691358025,
+     "constante": false
+    },
+    "5": {
+     "min": -0.15894080698490143,
+     "max": 2.1882879734039307,
+     "frac_nao_zero": 0.9662931327160493,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.8168848752975464,
+     "frac_nao_zero": 0.964928549382716,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 2.8422980308532715,
+     "frac_nao_zero": 0.9641097222222222,
+     "constante": false
+    },
+    "8": {
+     "min": 0.0012000000569969416,
+     "max": 0.9092777967453003,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.004411111120134592,
+     "max": 0.9342278242111206,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0025111110880970955,
+     "max": 0.9489055275917053,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.0009722222457639873,
+     "max": 0.9793221950531006,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.9273613691329956,
+     "max": 0.983613133430481,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.9006575345993042,
+     "max": 0.9465623497962952,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.024628626543209877,
+     "constante": false
+    },
+    "15": {
+     "min": -2.2399659156799316,
+     "max": 1.5135399103164673,
+     "frac_nao_zero": 0.024628626543209877,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "bauru_Q2": {
+   "arquivo": "transfer_dataset_bauru_v19_Q2_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -1.6620177030563354,
+     "max": 2.2079741954803467,
+     "frac_nao_zero": 0.9999996913580247,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.5387230515480042,
+     "frac_nao_zero": 0.9887057098765432,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9883641203703704,
+     "constante": false
+    },
+    "4": {
+     "min": -0.030620422214269638,
+     "max": 0.03238562494516373,
+     "frac_nao_zero": 0.9900472222222222,
+     "constante": false
+    },
+    "5": {
+     "min": -0.21036913990974426,
+     "max": 3.2936882972717285,
+     "frac_nao_zero": 0.9992443672839506,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.8178268671035767,
+     "frac_nao_zero": 0.9893398919753087,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 3.5473849773406982,
+     "frac_nao_zero": 0.9938031635802469,
+     "constante": false
+    },
+    "8": {
+     "min": 8.888888987712562e-05,
+     "max": 0.8854444026947021,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.0004333333345130086,
+     "max": 0.8945443630218506,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.00022222223924472928,
+     "max": 0.897100031375885,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 9.999999747378752e-05,
+     "max": 0.8900999426841736,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.988788366317749,
+     "max": 0.9961417317390442,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.988250195980072,
+     "max": 0.9958237409591675,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.01945138888888889,
+     "constante": false
+    },
+    "15": {
+     "min": -2.576235294342041,
+     "max": 2.1140146255493164,
+     "frac_nao_zero": 0.01945138888888889,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "bauru_Q3": {
+   "arquivo": "transfer_dataset_bauru_v19_Q3_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -1.8357572555541992,
+     "max": 3.943502426147461,
+     "frac_nao_zero": 0.9999993827160494,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.636492133140564,
+     "frac_nao_zero": 0.9742465277777778,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.973722762345679,
+     "constante": false
+    },
+    "4": {
+     "min": -0.03565550595521927,
+     "max": 0.03716285526752472,
+     "frac_nao_zero": 0.9765651234567901,
+     "constante": false
+    },
+    "5": {
+     "min": -0.20799486339092255,
+     "max": 2.9015657901763916,
+     "frac_nao_zero": 0.9768890432098766,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.9518784284591675,
+     "frac_nao_zero": 0.9753266975308642,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 4.0958075523376465,
+     "frac_nao_zero": 0.9739756944444444,
+     "constante": false
+    },
+    "8": {
+     "min": 0.005900000222027302,
+     "max": 0.6618777513504028,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.00985555537045002,
+     "max": 0.7249667048454285,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.005900000222027302,
+     "max": 0.8674555420875549,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.003122222376987338,
+     "max": 0.9686222076416016,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.7014721632003784,
+     "max": 0.9398946762084961,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.8882843852043152,
+     "max": 0.8604127168655396,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.02248804012345679,
+     "constante": false
+    },
+    "15": {
+     "min": -1.872299075126648,
+     "max": 3.798898458480835,
+     "frac_nao_zero": 0.02248804012345679,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "bauru_Q4": {
+   "arquivo": "transfer_dataset_bauru_v19_Q4_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -1.285152792930603,
+     "max": 4.372781276702881,
+     "frac_nao_zero": 0.9999996141975309,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.6252866983413696,
+     "frac_nao_zero": 0.9622707561728395,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9618192129629629,
+     "constante": false
+    },
+    "4": {
+     "min": -0.03161664679646492,
+     "max": 0.0392221063375473,
+     "frac_nao_zero": 0.9647789351851852,
+     "constante": false
+    },
+    "5": {
+     "min": -0.19651620090007782,
+     "max": 3.458972692489624,
+     "frac_nao_zero": 0.9845655864197531,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.9756789207458496,
+     "frac_nao_zero": 0.9634376543209876,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 4.073936462402344,
+     "frac_nao_zero": 0.9809594907407407,
+     "constante": false
+    },
+    "8": {
+     "min": 0.013988888822495937,
+     "max": 0.6758000254631042,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.019022222608327866,
+     "max": 0.7257333397865295,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.013155554421246052,
+     "max": 0.7849499583244324,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.007555556017905474,
+     "max": 0.8117667436599731,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.5797272324562073,
+     "max": 0.9311354160308838,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.8771477341651917,
+     "max": 0.6962964534759521,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.021718595679012347,
+     "constante": false
+    },
+    "15": {
+     "min": -1.3145464658737183,
+     "max": 6.085843086242676,
+     "frac_nao_zero": 0.021718595679012347,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "campinas_Q1": {
+   "arquivo": "transfer_dataset_campinas_v19_Q1_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -1.4628539085388184,
+     "max": 1.492639422416687,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.6481724977493286,
+     "frac_nao_zero": 0.9953145833333333,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9947305555555556,
+     "constante": false
+    },
+    "4": {
+     "min": -0.03239169716835022,
+     "max": 0.03764065355062485,
+     "frac_nao_zero": 0.9970848765432099,
+     "constante": false
+    },
+    "5": {
+     "min": -0.08409814536571503,
+     "max": 2.0013980865478516,
+     "frac_nao_zero": 0.9981540895061728,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.5409234166145325,
+     "frac_nao_zero": 0.9963036265432099,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 1.9977885484695435,
+     "frac_nao_zero": 0.9909374228395061,
+     "constante": false
+    },
+    "8": {
+     "min": 0.002411111257970333,
+     "max": 0.6780722141265869,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.004750000312924385,
+     "max": 0.7029944658279419,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0028055557049810886,
+     "max": 0.7174111604690552,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.002966666594147682,
+     "max": 0.7564777731895447,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.7264028787612915,
+     "max": 0.9746874570846558,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.9199297428131104,
+     "max": 0.8143754005432129,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.020750385802469136,
+     "constante": false
+    },
+    "15": {
+     "min": -1.7173714637756348,
+     "max": 1.346960425376892,
+     "frac_nao_zero": 0.020750385802469136,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "campinas_Q2": {
+   "arquivo": "transfer_dataset_campinas_v19_Q2_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -1.026848316192627,
+     "max": 5.148317813873291,
+     "frac_nao_zero": 0.9999997685185186,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.7130183577537537,
+     "frac_nao_zero": 0.9986639660493827,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9982956790123457,
+     "constante": false
+    },
+    "4": {
+     "min": -0.03917008265852928,
+     "max": 0.032118845731019974,
+     "frac_nao_zero": 0.9995229166666667,
+     "constante": false
+    },
+    "5": {
+     "min": -0.09190709888935089,
+     "max": 3.1184146404266357,
+     "frac_nao_zero": 0.9996068672839507,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.6802560091018677,
+     "frac_nao_zero": 0.9991551697530864,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 3.8422908782958984,
+     "frac_nao_zero": 0.9968617283950617,
+     "constante": false
+    },
+    "8": {
+     "min": 0.00019999999494757503,
+     "max": 0.8074333667755127,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.002955555683001876,
+     "max": 0.8362666368484497,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.001466666697524488,
+     "max": 0.844855546951294,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.002344444626942277,
+     "max": 0.9608500003814697,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.6606752872467041,
+     "max": 0.9808927178382874,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.9514778852462769,
+     "max": 0.8280046582221985,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.014828395061728394,
+     "constante": false
+    },
+    "15": {
+     "min": -1.0385141372680664,
+     "max": 4.666239261627197,
+     "frac_nao_zero": 0.014828395061728394,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "campinas_Q3": {
+   "arquivo": "transfer_dataset_campinas_v19_Q3_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -1.4416875839233398,
+     "max": 2.126627206802368,
+     "frac_nao_zero": 0.9999999228395062,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.6948330402374268,
+     "frac_nao_zero": 0.995948225308642,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9953438271604939,
+     "constante": false
+    },
+    "4": {
+     "min": -0.03622144088149071,
+     "max": 0.053706295788288116,
+     "frac_nao_zero": 0.9978100308641975,
+     "constante": false
+    },
+    "5": {
+     "min": -0.12941572070121765,
+     "max": 1.692308783531189,
+     "frac_nao_zero": 0.9992761574074074,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.6227730512619019,
+     "frac_nao_zero": 0.9970342592592593,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 2.2307586669921875,
+     "frac_nao_zero": 0.9949458333333333,
+     "constante": false
+    },
+    "8": {
+     "min": 0.0025444445200264454,
+     "max": 0.8606944680213928,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.004644444212317467,
+     "max": 0.7591277956962585,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0039055554661899805,
+     "max": 0.7748388648033142,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.002622221829369664,
+     "max": 0.7413333058357239,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.8374575972557068,
+     "max": 0.9552987217903137,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.9091660976409912,
+     "max": 0.9334192276000977,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.021534027777777777,
+     "constante": false
+    },
+    "15": {
+     "min": -1.4727550745010376,
+     "max": 2.6357154846191406,
+     "frac_nao_zero": 0.021534027777777777,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "campinas_Q4": {
+   "arquivo": "transfer_dataset_campinas_v19_Q4_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -3.839388132095337,
+     "max": 4.175885200500488,
+     "frac_nao_zero": 0.9999996141975309,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.702086329460144,
+     "frac_nao_zero": 0.9687317901234568,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9676047067901234,
+     "constante": false
+    },
+    "4": {
+     "min": -0.042885713279247284,
+     "max": 0.057915620505809784,
+     "frac_nao_zero": 0.9737045524691358,
+     "constante": false
+    },
+    "5": {
+     "min": -0.1181315928697586,
+     "max": 2.5921456813812256,
+     "frac_nao_zero": 0.9896539351851852,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.7038105130195618,
+     "frac_nao_zero": 0.9711770833333333,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 3.6192970275878906,
+     "frac_nao_zero": 0.9802148148148148,
+     "constante": false
+    },
+    "8": {
+     "min": 0.0026666666381061077,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.0046166665852069855,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0022000002209097147,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.0007888888940215111,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.8788738250732422,
+     "max": 0.9485594630241394,
+     "frac_nao_zero": 0.9999997685185186,
+     "constante": false
+    },
+    "13": {
+     "min": -0.9063347578048706,
+     "max": 0.9502658843994141,
+     "frac_nao_zero": 0.9999998456790123,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.013090586419753086,
+     "constante": false
+    },
+    "15": {
+     "min": -3.576643705368042,
+     "max": 4.175117492675781,
+     "frac_nao_zero": 0.013090586419753086,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "lins_Q1": {
+   "arquivo": "transfer_dataset_lins_v19_Q1_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -2.244889497756958,
+     "max": 1.3777198791503906,
+     "frac_nao_zero": 0.9999999228395062,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.4790903329849243,
+     "frac_nao_zero": 0.9629018518518518,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9623703703703703,
+     "constante": false
+    },
+    "4": {
+     "min": -0.02765515074133873,
+     "max": 0.027790874242782593,
+     "frac_nao_zero": 0.9655943672839506,
+     "constante": false
+    },
+    "5": {
+     "min": -0.2777943015098572,
+     "max": 2.9530375003814697,
+     "frac_nao_zero": 0.9646587962962963,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.6718337535858154,
+     "frac_nao_zero": 0.9641546296296296,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 3.6197986602783203,
+     "frac_nao_zero": 0.9796104166666667,
+     "constante": false
+    },
+    "8": {
+     "min": 0.00026666666963137686,
+     "max": 0.8871222138404846,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.004411111120134592,
+     "max": 0.9023000001907349,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0019555555190891027,
+     "max": 0.9078444242477417,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.0002888888702727854,
+     "max": 0.9317222237586975,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.9549481868743896,
+     "max": 0.9596198201179504,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.90028977394104,
+     "max": 0.977306604385376,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.026837191358024693,
+     "constante": false
+    },
+    "15": {
+     "min": -2.7086386680603027,
+     "max": 1.1257821321487427,
+     "frac_nao_zero": 0.026837191358024693,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "lins_Q2": {
+   "arquivo": "transfer_dataset_lins_v19_Q2_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -1.5512213706970215,
+     "max": 2.3652565479278564,
+     "frac_nao_zero": 0.9999999228395062,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.40752655267715454,
+     "frac_nao_zero": 0.9623011574074074,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9619212191358024,
+     "constante": false
+    },
+    "4": {
+     "min": -0.028532426804304123,
+     "max": 0.02381855808198452,
+     "frac_nao_zero": 0.9643233796296297,
+     "constante": false
+    },
+    "5": {
+     "min": -0.16437438130378723,
+     "max": 4.594485759735107,
+     "frac_nao_zero": 0.9635462962962963,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.7577998638153076,
+     "frac_nao_zero": 0.9632226080246914,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 4.193149089813232,
+     "frac_nao_zero": 0.9616823302469136,
+     "constante": false
+    },
+    "8": {
+     "min": 8.8888882601168e-05,
+     "max": 0.9940666556358337,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.00047777779400348663,
+     "max": 0.973822295665741,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0005222221952863038,
+     "max": 0.9782999753952026,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.0003777777892537415,
+     "max": 0.9646444320678711,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.9273613691329956,
+     "max": 0.9899834394454956,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.9780974984169006,
+     "max": 0.9584575295448303,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.022814043209876542,
+     "constante": false
+    },
+    "15": {
+     "min": -1.6005394458770752,
+     "max": 2.165531873703003,
+     "frac_nao_zero": 0.022814043209876542,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "lins_Q3": {
+   "arquivo": "transfer_dataset_lins_v19_Q3_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -2.0784566402435303,
+     "max": 3.4158854484558105,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.5522145628929138,
+     "frac_nao_zero": 0.9997891975308641,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9996873456790123,
+     "constante": false
+    },
+    "4": {
+     "min": -0.026413265615701675,
+     "max": 0.03590017557144165,
+     "frac_nao_zero": 0.9999502314814814,
+     "constante": false
+    },
+    "5": {
+     "min": -0.24187901616096497,
+     "max": 3.488832712173462,
+     "frac_nao_zero": 0.9998986882716049,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 1.243150234222412,
+     "frac_nao_zero": 0.9998876543209877,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 4.165541172027588,
+     "frac_nao_zero": 0.9992430555555556,
+     "constante": false
+    },
+    "8": {
+     "min": 0.004327777773141861,
+     "max": 0.9092777967453003,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.009044444188475609,
+     "max": 0.9342278242111206,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0048500001430511475,
+     "max": 0.9532555341720581,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.0030111109372228384,
+     "max": 0.9793221950531006,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.7347130179405212,
+     "max": 0.9519513249397278,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.9064532518386841,
+     "max": 0.7978032231330872,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.030038194444444444,
+     "constante": false
+    },
+    "15": {
+     "min": -2.94551420211792,
+     "max": 5.353206157684326,
+     "frac_nao_zero": 0.030038194444444444,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "lins_Q4": {
+   "arquivo": "transfer_dataset_lins_v19_Q4_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -1.385947346687317,
+     "max": 4.160325527191162,
+     "frac_nao_zero": 0.9999997685185186,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.5276795625686646,
+     "frac_nao_zero": 0.9867147376543209,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9864124228395061,
+     "constante": false
+    },
+    "4": {
+     "min": -0.025990020483732224,
+     "max": 0.033611781895160675,
+     "frac_nao_zero": 0.9880152777777778,
+     "constante": false
+    },
+    "5": {
+     "min": -0.20475132763385773,
+     "max": 5.338129997253418,
+     "frac_nao_zero": 0.9968131172839506,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 1.1592917442321777,
+     "frac_nao_zero": 0.98731875,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 5.0805134773254395,
+     "frac_nao_zero": 0.9943938271604938,
+     "constante": false
+    },
+    "8": {
+     "min": 0.0005833333707414567,
+     "max": 0.7864333391189575,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.006516667082905769,
+     "max": 0.8117722272872925,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.004566667135804892,
+     "max": 0.8220221996307373,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.005977777764201164,
+     "max": 0.8294333815574646,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.6120709180831909,
+     "max": 0.9532549977302551,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.8968520760536194,
+     "max": 0.700265645980835,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.022424382716049383,
+     "constante": false
+    },
+    "15": {
+     "min": -2.229031801223755,
+     "max": 3.8485727310180664,
+     "frac_nao_zero": 0.022424382716049383,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "sorocaba_Q1": {
+   "arquivo": "transfer_dataset_sorocaba_v19_Q1_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -0.5164141058921814,
+     "max": 1.609828233718872,
+     "frac_nao_zero": 0.9999993827160494,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.6287407875061035,
+     "frac_nao_zero": 0.9788469907407408,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9781729166666666,
+     "constante": false
+    },
+    "4": {
+     "min": -0.03226007521152496,
+     "max": 0.0392221063375473,
+     "frac_nao_zero": 0.9813435185185185,
+     "constante": false
+    },
+    "5": {
+     "min": -0.07627733051776886,
+     "max": 1.198876976966858,
+     "frac_nao_zero": 0.9992433641975309,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.4390809237957001,
+     "frac_nao_zero": 0.9802087962962963,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 1.700156569480896,
+     "frac_nao_zero": 0.9966612654320988,
+     "constante": false
+    },
+    "8": {
+     "min": 0.0,
+     "max": 0.7379166483879089,
+     "frac_nao_zero": 0.9999993055555556,
+     "constante": false
+    },
+    "9": {
+     "min": 0.0,
+     "max": 0.7591277956962585,
+     "frac_nao_zero": 0.9999993055555556,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0,
+     "max": 0.7849499583244324,
+     "frac_nao_zero": 0.9999993055555556,
+     "constante": false
+    },
+    "11": {
+     "min": 0.0,
+     "max": 0.8117667436599731,
+     "frac_nao_zero": 0.9999993055555556,
+     "constante": false
+    },
+    "12": {
+     "min": -0.7500115633010864,
+     "max": 0.9746874570846558,
+     "frac_nao_zero": 0.9999993055555556,
+     "constante": false
+    },
+    "13": {
+     "min": -0.9199297428131104,
+     "max": 0.8532269597053528,
+     "frac_nao_zero": 0.9999993055555556,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.02203171296296296,
+     "constante": false
+    },
+    "15": {
+     "min": -0.5656989216804504,
+     "max": 2.282602548599243,
+     "frac_nao_zero": 0.02203171296296296,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "sorocaba_Q2": {
+   "arquivo": "transfer_dataset_sorocaba_v19_Q2_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -0.3870750367641449,
+     "max": 3.109905481338501,
+     "frac_nao_zero": 0.9999999228395062,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.6779916286468506,
+     "frac_nao_zero": 0.9959984567901234,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9952843364197531,
+     "constante": false
+    },
+    "4": {
+     "min": -0.03426966816186905,
+     "max": 0.057915620505809784,
+     "frac_nao_zero": 0.9980344907407407,
+     "constante": false
+    },
+    "5": {
+     "min": -0.0958903357386589,
+     "max": 1.7010064125061035,
+     "frac_nao_zero": 0.9978979166666667,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.4318743944168091,
+     "frac_nao_zero": 0.9971520833333334,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 2.3444623947143555,
+     "frac_nao_zero": 0.9961645833333334,
+     "constante": false
+    },
+    "8": {
+     "min": 0.0006722222315147519,
+     "max": 0.9761278629302979,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.004644444212317467,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0032222222071141005,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.0015999999595806003,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.8374575972557068,
+     "max": 0.959899365901947,
+     "frac_nao_zero": 0.9999998456790123,
+     "constante": false
+    },
+    "13": {
+     "min": -0.91650390625,
+     "max": 0.9334192276000977,
+     "frac_nao_zero": 0.9999998456790123,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.01863179012345679,
+     "constante": false
+    },
+    "15": {
+     "min": -0.7225229144096375,
+     "max": 3.5437233448028564,
+     "frac_nao_zero": 0.01863179012345679,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "sorocaba_Q3": {
+   "arquivo": "transfer_dataset_sorocaba_v19_Q3_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -2.1974689960479736,
+     "max": 1.9784191846847534,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.7012074589729309,
+     "frac_nao_zero": 0.9979145833333334,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.9975390432098765,
+     "constante": false
+    },
+    "4": {
+     "min": -0.039504554122686386,
+     "max": 0.04162019491195679,
+     "frac_nao_zero": 0.9989811728395062,
+     "constante": false
+    },
+    "5": {
+     "min": -0.0974220559000969,
+     "max": 1.407901644706726,
+     "frac_nao_zero": 0.9991367283950617,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.4919881820678711,
+     "frac_nao_zero": 0.9984942901234568,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 1.9224660396575928,
+     "frac_nao_zero": 0.9971327160493827,
+     "constante": false
+    },
+    "8": {
+     "min": 0.004522222094237804,
+     "max": 0.5736111402511597,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.006511111743748188,
+     "max": 0.6252333521842957,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 0.0033111113589257,
+     "max": 0.66721111536026,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 0.004611111246049404,
+     "max": 0.9971110820770264,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.6866240501403809,
+     "max": 0.9530123472213745,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "13": {
+     "min": -0.916391134262085,
+     "max": 0.8473218083381653,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.022346064814814815,
+     "constante": false
+    },
+    "15": {
+     "min": -2.220052480697632,
+     "max": 2.8419649600982666,
+     "frac_nao_zero": 0.022346064814814815,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  },
+  "sorocaba_Q4": {
+   "arquivo": "transfer_dataset_sorocaba_v19_Q4_enriched_cftudo.pt",
+   "n_nos": 12960000,
+   "n_colunas": 17,
+   "colunas": {
+    "0": {
+     "min": -2.270627975463867,
+     "max": 3.179426670074463,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "1": {
+     "min": 0.0,
+     "max": 0.8071120381355286,
+     "frac_nao_zero": 0.7889063271604938,
+     "constante": false
+    },
+    "2": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "3": {
+     "min": -1.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.7881482253086419,
+     "constante": false
+    },
+    "4": {
+     "min": -0.05217578262090683,
+     "max": 0.08016234636306763,
+     "frac_nao_zero": 0.7919038580246913,
+     "constante": false
+    },
+    "5": {
+     "min": -0.12457815557718277,
+     "max": 1.0851898193359375,
+     "frac_nao_zero": 0.80019375,
+     "constante": false
+    },
+    "6": {
+     "min": 0.0,
+     "max": 0.7784886360168457,
+     "frac_nao_zero": 0.7904141975308642,
+     "constante": false
+    },
+    "7": {
+     "min": 0.0,
+     "max": 1.5398579835891724,
+     "frac_nao_zero": 0.7979743827160494,
+     "constante": false
+    },
+    "8": {
+     "min": 0.00047777779400348663,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "9": {
+     "min": 0.0008777778130024672,
+     "max": 0.9997721910476685,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "10": {
+     "min": 9.999999747378752e-05,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "11": {
+     "min": 9.999999747378752e-05,
+     "max": 1.0,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "12": {
+     "min": -0.9720751643180847,
+     "max": 0.9601561427116394,
+     "frac_nao_zero": 0.989435262345679,
+     "constante": false
+    },
+    "13": {
+     "min": -0.9006296992301941,
+     "max": 0.989960789680481,
+     "frac_nao_zero": 1.0,
+     "constante": false
+    },
+    "14": {
+     "min": 0.0,
+     "max": 1.0,
+     "frac_nao_zero": 0.01640686728395062,
+     "constante": false
+    },
+    "15": {
+     "min": -2.2414302825927734,
+     "max": 2.986692190170288,
+     "frac_nao_zero": 0.01640686728395062,
+     "constante": false
+    },
+    "16": {
+     "min": 0.0,
+     "max": 0.0,
+     "frac_nao_zero": 0.0,
+     "constante": true
+    }
+   }
+  }
+ }
+}

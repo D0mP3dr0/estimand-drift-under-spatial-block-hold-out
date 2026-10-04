@@ -1,0 +1,29 @@
+{
+ "n_celulas": 16,
+ "n_celulas_composicao_acima_de_meio": 11,
+ "composicao_nas_demais": [
+  0.34,
+  0.399,
+  0.405,
+  0.434,
+  0.447
+ ],
+ "composicao_min_max": [
+  0.34018111923335737,
+  1.240182486925011
+ ],
+ "celulas_composicao_acima_de_1": {
+  "lins_Q3": 1.24,
+  "sorocaba_Q3": 1.11
+ },
+ "celulas_resto_negativo": {
+  "bauru_Q3": -0.189,
+  "lins_Q3": -0.476,
+  "sorocaba_Q3": -0.651
+ },
+ "soma_das_tres_medianas": 0.951866963230144,
+ "n_sorteios_usados_min_max": [
+  48,
+  59
+ ]
+}

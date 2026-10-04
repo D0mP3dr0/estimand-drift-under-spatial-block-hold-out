@@ -1,0 +1,677 @@
+{
+ "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase4/B7.2_hiperparametros/b7_2_folha_hiperparametros.py",
+ "script_sha256": "c4fbbcd768b4a2a4d79f069df3f58a5cf4fb27add20ec20f2acf9b44467c793f",
+ "natureza": "data sheet B7.2; PROVISIONAL until independent recalculation; not article text",
+ "n_corridas": {
+  "gnn": 60,
+  "mlp": 60,
+  "mlp_sensibilidade": 10
+ },
+ "fontes_sha256": {
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py": "6f955629cde164f2843f454e1ebf6977292fd80647ef48ecd0df31e464c42445",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py": "4b75093f52e8b7fdec45c7f2b8c5bcd68c38093c420697927b49fa99a474b31c",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/scripts_congelados/baselines_v2_por_particao.py": "6d5fde065f86c7bdf39465d49e93d8f4218332273d2efdd1580dfea3ac45063c",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/gnn_rf_encoder.py": "f971f226c40072712ebf1a8ccc2c1c0782c87d7b8514aee1d28d830a4b4f525d",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py": "fcd3dcf81df16607fb06349dedc3f205c91fbd0d04e492e773dbf31aeadd11b7",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/modelo_v3/v3_common.py": "57ffd38d869450a63d5263b101b440c02e19b738447c7013e5e9d7e48eff0268",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/modelo_v3/train_gnn_v3.py": "903b1ffaa19f7d6d732e958516a9e3dd98110cc3ac0f1aed704582e6e23a914f",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_2.1_3.1_deriva_calibracao.py": "9b9bcf91bab51621107a3d7978964d46dd16c5ec1a76a3789842ae1bce77f3bc"
+ },
+ "campos": [
+  {
+   "grupo": "arquitetura",
+   "campo": "classe",
+   "gnn": "GNNRFModel",
+   "mlp": "MLPRFModel",
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON modelo.classe",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "operador antena->terreno",
+   "gnn": "GATv2Conv(hidden->hidden/heads, heads=4, concat, edge_dim=2, dropout, add_self_loops=False)",
+   "mlp": "nenhum (sem arestas)",
+   "igual_nos_dois_bracos": false,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/gnn_rf_encoder.py:120",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "terrain->terrain operator (Moore + self-loop)",
+   "gnn": "GATv2Conv(..., add_self_loops=True)",
+   "mlp": "nenhum (sem arestas)",
+   "igual_nos_dois_bracos": false,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/gnn_rf_encoder.py:130 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/gnn_rf_encoder.py:137",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "operador terreno->antena",
+   "gnn": "SAGEConv(aggr='mean') -- no gradient (relation not sampled from terrain seeds)",
+   "mlp": "nenhum",
+   "igual_nos_dois_bracos": false,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/gnn_rf_encoder.py:140 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/gnn_rf_encoder.py:143",
+   "nota": "run JSON diagnostico_avaliacao.arestas_amostradas_por_relacao_*.TA = 0"
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "agregacao entre relacoes",
+   "gnn": "soma",
+   "mlp": "-",
+   "igual_nos_dois_bracos": false,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/gnn_rf_encoder.py:145",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "per layer (GNN) / block (MLP)",
+   "gnn": "LeakyReLU(0.2) + dropout + residual + LayerNorm",
+   "mlp": "Linear + BatchNorm1d + LeakyReLU(0.2) (+ Dropout, except the last)",
+   "igual_nos_dois_bracos": false,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/gnn_rf_encoder.py:217 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py:712",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "message-passing layers / encoder layers",
+   "gnn": 4,
+   "mlp": 5,
+   "igual_nos_dois_bracos": false,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1233 ; run JSON modelo.num_layers / modelo.larguras_encoder",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "cabecas de atencao",
+   "gnn": 4,
+   "mlp": null,
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON modelo.heads",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "hidden width / encoder widths",
+   "gnn": 256,
+   "mlp": [
+    654,
+    654,
+    600,
+    636,
+    256
+   ],
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON modelo.hidden_dim ; modelo.larguras_encoder ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/modelo_v3/v3_common.py:685",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "inputs per terrain node",
+   "gnn": 18,
+   "mlp": 18,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON modelo.terrain_dim",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "entradas por transmissor",
+   "gnn": 6,
+   "mlp": "nao usado",
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON modelo.antenna_dim / modelo.antenna_dim_nao_usado",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "saidas",
+   "gnn": 5,
+   "mlp": 5,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON modelo.output_dim",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "decodificador",
+   "gnn": {
+    "coverage_prob": "sigmoid(raw) (the only compressed channel; see rf_decoder_v3.py)",
+    "path_loss_terrain_dB": "raw*15+15 (physical clamp [0,30])",
+    "path_loss_total_dB": "raw*100+100 (physical clamp [0,200])",
+    "path_loss_vegetation_dB": "raw*25+25 (physical clamp [0,50])",
+    "rssi_dBm": "raw*75-75 (physical clamp [-150,0])"
+   },
+   "mlp": {
+    "coverage_prob": "sigmoid(raw) (the only compressed channel; see rf_decoder_v3.py)",
+    "path_loss_terrain_dB": "raw*15+15 (physical clamp [0,30])",
+    "path_loss_total_dB": "raw*100+100 (physical clamp [0,200])",
+    "path_loss_vegetation_dB": "raw*25+25 (physical clamp [0,50])",
+    "rssi_dBm": "raw*75-75 (physical clamp [-150,0])"
+   },
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON modelo_v3.escalas (AffineDecoderV3, sha 645f16975592)",
+   "nota": ""
+  },
+  {
+   "grupo": "arquitetura",
+   "campo": "dropout",
+   "gnn": 0.1,
+   "mlp": 0.1,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON modelo.dropout ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1234",
+   "nota": ""
+  },
+  {
+   "grupo": "capacidade",
+   "campo": "parametros nominais",
+   "gnn": 1812515,
+   "mlp": 1484067,
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON capacidade.nominal",
+   "nota": ""
+  },
+  {
+   "grupo": "capacidade",
+   "campo": "effective parameters (those receiving gradient)",
+   "gnn": 1484037,
+   "mlp": 1484037,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON capacidade.efetiva",
+   "nota": ""
+  },
+  {
+   "grupo": "capacidade",
+   "campo": "sensitivity arm (10 runs, nominal widths)",
+   "gnn": null,
+   "mlp": {
+    "larguras": [
+     712,
+     712,
+     720,
+     688,
+     256
+    ],
+    "nominal": 1812515,
+    "efetiva": 1812485
+   },
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON mlp_v3_a4s_* capacidade.*",
+   "nota": ""
+  },
+  {
+   "grupo": "vizinhanca",
+   "campo": "amostragem no treino",
+   "gnn": {
+    "num_neighbors": "[-1] per relation (list of size 1 = ONE hop, full neighbourhood)",
+    "k_antenna": -1,
+    "k_terrain": -1,
+    "disjoint_treino": false
+   },
+   "mlp": "batches of terrain nodes (no graph)",
+   "igual_nos_dois_bracos": false,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1171 ; run JSON config.k_*",
+   "nota": "4 layers over a 1-hop subgraph: receptive field = 8 Moore neighbours + up to 5 transmitters"
+  },
+  {
+   "grupo": "vizinhanca",
+   "campo": "sampling at evaluation (val/test)",
+   "gnn": "num_neighbors=-1 in the 3 relations (AT,TT,TA), disjoint=True, in val and test",
+   "mlp": "nao se aplica",
+   "igual_nos_dois_bracos": false,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/modelo_v3/v3_common.py:478 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/modelo_v3/v3_common.py:484 ; run JSON diagnostico_avaliacao.regra",
+   "nota": ""
+  },
+  {
+   "grupo": "perda",
+   "campo": "termo de predicao",
+   "gnn": "Huber(delta=5 dB) per channel, over the 5 channels, mean over the seed nodes (sentinels included)",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py:99",
+   "nota": ""
+  },
+  {
+   "grupo": "perda",
+   "campo": "pesos dos canais",
+   "gnn": "softmax(log_weights), log_weights=zeros(5) outside the optimizer => 1/5 each",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py:53 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py:69 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1245 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py:1381",
+   "nota": "checked: prediction_loss = arithmetic mean of the 5 per-channel losses (see verificacao_pesos_uniformes)"
+  },
+  {
+   "grupo": "perda",
+   "campo": "distance gradient penalty (weight)",
+   "gnn": 0.05,
+   "mlp": 0.05,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON loss.distance_gradient_weight",
+   "nota": ""
+  },
+  {
+   "grupo": "perda",
+   "campo": "distance gradient penalty (expression)",
+   "gnn": "mean_{(i,j): d_i<d_j} ReLU(rssi_hat_j - rssi_hat_i + 1 dBm), K=min(512, N//2) pairs drawn in the batch",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py:237 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py:258",
+   "nota": ""
+  },
+  {
+   "grupo": "perda",
+   "campo": "weight of the variance penalty",
+   "gnn": 0.02,
+   "mlp": 0.02,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON loss.variance_weight",
+   "nota": ""
+  },
+  {
+   "grupo": "perda",
+   "campo": "expression of the variance penalty",
+   "gnn": "ReLU(std(y_rssi) - std(rssi_hat))^2 in the batch (target without gradient)",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py:286",
+   "nota": ""
+  },
+  {
+   "grupo": "perda",
+   "campo": "shadow x NDVI penalty (weight)",
+   "gnn": 0.03,
+   "mlp": 0.03,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON loss.shadowing_ndvi_weight",
+   "nota": ""
+  },
+  {
+   "grupo": "perda",
+   "campo": "shadow x NDVI penalty (expression)",
+   "gnn": "ReLU(0.15 - corr(PL_veg_hat, NDVI)) in the batch, NDVI = column 12 (no gradient)",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py:319 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:212",
+   "nota": ""
+  },
+  {
+   "grupo": "perda",
+   "campo": "FSPL constraint (not cited in the text)",
+   "gnn": "0.05 * mean ReLU(FSPL_900MHz(d) - PL_hat_total)",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py:131 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/02_models/physics_loss.py:181",
+   "nota": "see valor_maximo_constraint_fspl_registrado: if 0 in all epochs, the term never acted"
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "otimizador",
+   "gnn": "AdamW, weight_decay=1e-5",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1245 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py:1381",
+   "nota": ""
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "taxa inicial",
+   "gnn": 0.001,
+   "mlp": 0.001,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON config.lr",
+   "nota": ""
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "agenda",
+   "gnn": {
+    "classe": "CosineAnnealingWarmRestarts",
+    "T_0_epocas": 10,
+    "T_mult": 2,
+    "eta_min": 1e-06,
+    "passo": "por epoca",
+    "reinicio_dentro_de_8_epocas": false
+   },
+   "mlp": {
+    "classe": "CosineAnnealingWarmRestarts",
+    "T_0_epocas": 10,
+    "T_mult": 2,
+    "eta_min": 1e-06,
+    "passo": "por epoca",
+    "reinicio_dentro_de_8_epocas": false
+   },
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1247 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1373 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py:1383",
+   "nota": ""
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "gradient clipping threshold (norm)",
+   "gnn": 0.5,
+   "mlp": 0.5,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON config.max_norm ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1358 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py:1494",
+   "nota": ""
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "fraction of clipped steps (min across runs)",
+   "gnn": 1.0,
+   "mlp": 1.0,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON diagnostico_treino.fracao_passos_clipados",
+   "nota": ""
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "precisao mista",
+   "gnn": "AMP (autocast + GradScaler) on CUDA",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1279 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py:1415",
+   "nota": ""
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "lote (nos semente)",
+   "gnn": 12288,
+   "mlp": 12288,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON config.batch_size",
+   "nota": ""
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "epocas",
+   "gnn": 8,
+   "mlp": 8,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON config.epochs ; custo.n_epocas_rodadas",
+   "nota": ""
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "parada antecipada",
+   "gnn": 0,
+   "mlp": 0,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON config.early_stopping_patience (0 = disabled)",
+   "nota": ""
+  },
+  {
+   "grupo": "otimizacao",
+   "campo": "gradient steps per run",
+   "gnn": {
+    "mediana": 5912.0,
+    "min": 5880,
+    "max": 5920,
+    "n": 60
+   },
+   "mlp": {
+    "mediana": 5912.0,
+    "min": 5880,
+    "max": 5920,
+    "n": 60
+   },
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON diagnostico_treino.n_passos",
+   "nota": "overlapping ranges; they differ by cell/split draw, not by arm"
+  },
+  {
+   "grupo": "selecao",
+   "campo": "rule for the retained epoch",
+   "gnn": "lowest mae_rssi_db on VAL",
+   "mlp": "lowest mae_rssi_db on VAL",
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON selecao.criterio ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1503",
+   "nota": ""
+  },
+  {
+   "grupo": "selecao",
+   "campo": "test used in selection",
+   "gnn": false,
+   "mlp": false,
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON selecao.test_usado_na_selecao ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:1502",
+   "nota": ""
+  },
+  {
+   "grupo": "selecao",
+   "campo": "best epoch (median, min, max)",
+   "gnn": {
+    "mediana": 6.0,
+    "min": 2,
+    "max": 8,
+    "n": 60
+   },
+   "mlp": {
+    "mediana": 6.0,
+    "min": 1,
+    "max": 8,
+    "n": 60
+   },
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON selecao.melhor_epoca",
+   "nota": ""
+  },
+  {
+   "grupo": "sementes",
+   "campo": "pairs (training seed, split seed)",
+   "gnn": [
+    [
+     42,
+     42
+    ],
+    [
+     42,
+     101
+    ],
+    [
+     42,
+     102
+    ],
+    [
+     42,
+     103
+    ],
+    [
+     42,
+     104
+    ],
+    [
+     42,
+     105
+    ],
+    [
+     43,
+     42
+    ],
+    [
+     44,
+     42
+    ],
+    [
+     45,
+     42
+    ],
+    [
+     46,
+     42
+    ]
+   ],
+   "mlp": [
+    [
+     42,
+     42
+    ],
+    [
+     42,
+     101
+    ],
+    [
+     42,
+     102
+    ],
+    [
+     42,
+     103
+    ],
+    [
+     42,
+     104
+    ],
+    [
+     42,
+     105
+    ],
+    [
+     43,
+     42
+    ],
+    [
+     44,
+     42
+    ],
+    [
+     45,
+     42
+    ],
+    [
+     46,
+     42
+    ]
+   ],
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON seed, split_seed",
+   "nota": "A3: training 42-46 x split 42; A4: training 42 x split 101-105"
+  },
+  {
+   "grupo": "sementes",
+   "campo": "determinismo declarado",
+   "gnn": [
+    true,
+    false
+   ],
+   "mlp": [
+    true,
+    false
+   ],
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON ambiente.cudnn_* ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py:827",
+   "nota": "GNN nondeterministic even so (A2c: up to 0.132 dB valid / 0.117 dB sentinel); MLP deterministic"
+  },
+  {
+   "grupo": "custo",
+   "campo": "hardware",
+   "gnn": [
+    "NVIDIA GeForce RTX 5070 Ti",
+    "2.10.0+cu128",
+    "12.8"
+   ],
+   "mlp": [
+    "NVIDIA GeForce RTX 5070 Ti",
+    "2.10.0+cu128",
+    "12.8"
+   ],
+   "igual_nos_dois_bracos": true,
+   "fonte": "run JSON ambiente.*",
+   "nota": ""
+  },
+  {
+   "grupo": "custo",
+   "campo": "time per run (s)",
+   "gnn": {
+    "mediana": 783.05,
+    "min": 775.9,
+    "max": 1141.3,
+    "n": 60
+   },
+   "mlp": {
+    "mediana": 84.55,
+    "min": 82.5,
+    "max": 192.2,
+    "n": 60
+   },
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON custo.tempo_total_s",
+   "nota": ""
+  },
+  {
+   "grupo": "custo",
+   "campo": "peak VRAM usage (MB)",
+   "gnn": {
+    "mediana": 4159.9,
+    "min": 4140.7,
+    "max": 4187.6,
+    "n": 60
+   },
+   "mlp": {
+    "mediana": 316.3,
+    "min": 316.3,
+    "max": 316.3,
+    "n": 60
+   },
+   "igual_nos_dois_bracos": false,
+   "fonte": "run JSON custo.vram_peak_mb",
+   "nota": ""
+  },
+  {
+   "grupo": "baselines",
+   "campo": "frequencia",
+   "gnn": 900.0,
+   "mlp": 900.0,
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_2.1_3.1_deriva_calibracao.py:77 ; run JSON baselines_analiticos.train.freq_mhz",
+   "nota": ""
+  },
+  {
+   "grupo": "baselines",
+   "campo": "h_tx, h_rx (m) Hata rural and COST-231",
+   "gnn": {
+    "h_tx": 30.0,
+    "h_rx": 1.5
+   },
+   "mlp": {
+    "h_tx": 30.0,
+    "h_rx": 1.5
+   },
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/scripts_congelados/baselines_v2_por_particao.py:268 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/scripts_congelados/baselines_v2_por_particao.py:269 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/scripts_congelados/baselines_v2_por_particao.py:277",
+   "nota": "default values; v3_2.1_3.1_deriva_calibracao.py calls without passing heights"
+  },
+  {
+   "grupo": "baselines",
+   "campo": "variante COST-231",
+   "gnn": "suburban (C_m = 0)",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_2.1_3.1_deriva_calibracao.py:99 ; /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/scripts_congelados/baselines_v2_por_particao.py:282",
+   "nota": ""
+  },
+  {
+   "grupo": "baselines",
+   "campo": "distancia",
+   "gnn": "distance to the nearest transmitter, floor 1 m",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/scripts_congelados/baselines_v2_por_particao.py:247",
+   "nota": ""
+  },
+  {
+   "grupo": "baselines",
+   "campo": "calibracao",
+   "gnn": "offset = median(RSSI + PL_modelo) on training ((a) all nodes; (b) only valid nodes)",
+   "mlp": "idem",
+   "igual_nos_dois_bracos": true,
+   "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_2.1_3.1_deriva_calibracao.py:298",
+   "nota": ""
+  }
+ ],
+ "verificacao_pesos_uniformes": {
+  "corrida": "gnn_v3_a3_bauru_Q1_s42",
+  "media_5_canais": 3.7277341119013725,
+  "prediction_loss": 3.727734327316284
+ },
+ "valor_maximo_constraint_fspl_registrado": 0.08260106295347214,
+ "valor_maximo_shadowing_ndvi_penalty_registrado": 0.0
+}

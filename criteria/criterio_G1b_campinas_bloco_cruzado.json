@@ -1,0 +1,36 @@
+{
+ "id": "G1b_campinas_bloco_cruzado_completo",
+ "subclaim": "S8 (condition 2 of decision criterion G1 in Campinas Q1)",
+ "origem": "decision of 03/10/2026 ('go ahead and run everything, including c'): complete the Campinas Q1 cross block to 3 seeds x 10 split draws; suggested in internal/note_28.md and in an internal physics/mathematics note (power of the 5x3 design insufficient).",
+ "pergunta": "With 10 split draws crossed with 3 seeds in Campinas Q1 (GNN and MLP), does the split-draw component exceed the seed component (condition 2 of decision criterion G1)?",
+ "desenho": {
+  "bloco": 4,
+  "celula": "campinas_Q1",
+  "sementes_treino": [
+   43,
+   44
+  ],
+  "sorteios": [
+   739191,
+   29675,
+   676375,
+   387379,
+   259492
+  ],
+  "modelos": [
+   "gnn",
+   "mlp"
+  ],
+  "n_corridas": 20,
+  "config": "identical to batch G1 (g=10, b=2, 8 epochs, shim train_v3_g10.py, canonical dataset)",
+  "orcamento": "~20 x (15.4 + 1.8) min ~ 3 h; cap 4 h; resumable"
+ },
+ "metricas": "with the seed-42 runs of the 10 split draws (block 1) and those of seeds 43/44 (blocks 2 and 4): one-way decomposition, seeds nested in the split draw, n_sorteios = 10, n_sementes = 3: sigma2_semente = QM_dentro (d.f. 20), sigma2_sorteio = max(0,(QM_entre - QM_dentro)/3) (d.f. 9); pooled between-seed SD; comparator max(0.132; pooled SD) and ratio of the SD across the 20 split draws (seed 42) to it; 95% CI of sigma2_sorteio/sigma2_semente by F(9,20) (record only).",
+ "leitura": "condition 2 in Campinas Q1 = sigma2_sorteio >= sigma2_semente for GNN AND MLP with the 10 split draws. If true: condition 2 of decision criterion G1 becomes valid in both Q1 cells; with condition 1 already met in 3 of 4 cells, the G1 result moves from PARTIALLY DELIMITS to REINFORCES, unless condition 1 of Campinas Q1 (recomputed with the new seed comparator) falls below 2x in some model, in which case it stays PARTIALLY DELIMITS by band. If false: the result remains PARTIALLY DELIMITS and the text states, as a validity condition, that in Campinas the crossed block of 10 split draws does not separate the components. The reading of the original block 2 (5 split draws) stays on record; the final reading uses the 10 split draws. Block 4 numbers are citable only after independent recalculation and inclusion in the manifest.",
+ "se_inverter": "no outcome inverts the title; the worst outcome keeps the current delimitation.",
+ "prova_de_anterioridade": {
+  "corridas_existentes_bloco4": [],
+  "nota": "no run of seeds 43/44 on split draws 6-10 exists."
+ },
+ "fixado_em": "2026-10-03T16:18:37-03:00"
+}

@@ -1,0 +1,31 @@
+{
+ "id": "A3_analise",
+ "gravado_em": "2026-09-26 06:50 (machine clock)",
+ "autor": "set before the batch was launched",
+ "estado_no_momento_da_gravacao": "10 of the 80 runs of batch A3 completed (rc=0); NO .npz prediction or test metric was read by anyone before this record was written (only the driver log: 'OK em Ns'). The criterio_A3.json of the execution step covers execution/provenance and deferred the analysis; this file fixes the analysis.",
+ "alegacao": "A4 (deflation/inversion under sentinel target; approximate GNN×MLP parity on the sentinel) and input to A3 (distributions across seeds)",
+ "unidade_de_analise": "cell (8) × training seed (5); GNN−MLP contrast paired by seed within the cell; the city is the unit of inference across cells (EV-5); no sign test across cells",
+ "metricas": "RSSI MAE (channel 3) on the held-out test set, per population: valid (target[:,0] < 299), sentinel (>= 299), all; computed from the .npz predictions (physical pred via fisico()); also PL MAE (channel 0) on the valid nodes",
+ "H1_paridade_sentinela": {
+  "estatistica": "median across the 5 seeds of (MAE_sent_GNN − MAE_sent_MLP) per cell",
+  "tolerancia": "data-derived, per cell: SD across the 5 seeds of the MLP MAE_sent in the cell itself (the MLP is deterministic given the seed; the SD measures the recipe dispersion). If dp_MLP < 0.01 dB, use the GNN SD. The tolerance is recorded per cell BEFORE reading the contrast.",
+  "aceite": "approximate parity if |median| <= tolerance in >= 6 of the 8 cells; otherwise, 'systematic difference' with the sign and magnitude reported",
+  "proibido": "fix 0.05 dB or 0.25 dB a priori (v2); report 'consistent in direction' without counting the seeds"
+ },
+ "contraste_GNN_menos_MLP": "distribution per cell: median, min, max, number of seeds with negative sign (GNN better) out of 5; in the three populations; no aggregated magnitude across cells as a result (description only)",
+ "regras_gradscaler": {
+  "pulos_pos_aquecimento_max_pct": 1.0,
+  "escala_minima_min": 1.0,
+  "acao": "a flagged run enters the distribution with a mark; if > 20 % of the runs of a cell are flagged, the cell is reported separately"
+ },
+ "regras_canal_1": {
+  "R-c0": "no target outside the clamp range (precondition)",
+  "R-c1": "among targets > 0: <= 1 % outside the range and P99 of the excess <= 5 dB",
+  "R-c2": "raw MAE <= 1.05 × MAE after clamp",
+  "R-c3": "GNN−MLP contrast with the same sign with and without clamp",
+  "nota": "channels 1–2 are auxiliary components derived from the terrain (generator); no number in the article depends on them; rules only flag"
+ },
+ "nao_determinismo": "A2/A2c showed the GNN to be non-deterministic with the same seed (Δ up to 0.13 dB in the aggregate MAE); no individual run is citable; only distributions across seeds; checkpoint selection (best epoch on validation) is part of the variance",
+ "proveniencia": "all 80 with insumos.sha256_rf_data = manifest v4 and identical test-partition hash within the cell; a run with rc=3 is a finding, not data",
+ "votos": "3 independent recalculations per number before any claim; the aggregation script (v3_A3_agregar.py, to be written) is re-run independently and read in full"
+}

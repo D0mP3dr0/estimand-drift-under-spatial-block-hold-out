@@ -1,0 +1,566 @@
+{
+  "id": "2.1",
+  "pergunta": "Does the reported error (MAE of the constant predictor and of the calibrated FSPL) drift with split_seed in the 16 g10b2 cells?",
+  "alegacao": "A3 (estimand drift measured in ERROR)",
+  "criterio": {
+    "id": "2.1",
+    "pergunta": "Does the reported error (MAE of the constant predictor and of the calibrated FSPL) drift with split_seed in the 16 g10b2 cells?",
+    "alegacao": "A3 (estimand drift measured in ERROR)",
+    "hipotese": "under a sentinel-dominated target, the per-population MAE on the held-out test varies across split draws in a way that is not negligible compared with the variation across cells",
+    "metodo_fixado": "16 cells x 20 split_seeds (0..19 with 42 included), split_espacial_3vias (grid_km=10,buffer_km=2,fracs=0.70/0.15/0.15), constant = mediana(RSSI) of the whole training set of the split draw, FSPL calibrated by offset in p_tx_eff=mediana(rssi_tr+FSPL(dist_tr,900MHz)) on the whole training set of the split draw; MAE on the held-out test per population (valid: PL<299; sentinel: PL>=299; all)",
+    "limiar_aceitacao": "the MAE of the constant predictor on valid nodes varies across split draws with standard deviation >= 0.1 dB in at least 8 of the 16 cells",
+    "refutacao": "if in fewer than 8 of the 16 cells the SD across split draws (valid nodes, constant) reaches 0.1 dB, the error drift is declared small and the title 'estimand drift' is reconsidered",
+    "comparacao_dp": "SD across split draws (per cell) vs SD across cells (mean over split draws) -- both standard deviation, never SD x range",
+    "fixado_em": "2026-09-25T00:00:00-03:00 (before running the script v3_2.1_3.1_deriva_calibracao.py)"
+  },
+  "metodo": "16 cells x 60 split_seeds (aleatorios_N=60_semente=20260926), split_espacial_3vias g10b2 (grid=10km,buffer=2km,fracs 0.70/0.15/0.15), constant=median(RSSI of the whole training set of the split draw), FSPL calibrated by offset in p_tx_eff=median(rssi_tr+FSPL(dist_tr,900MHz)) on the whole training set; MAE on the held-out test set per population (valid: PL<299, sentinel: PL>=299, all). Simple sd (ddof=1) and weighted sd (weight=n_validos of the test set per split draw) reported.",
+  "nota_divergencia_seeds": {
+    "seeds_usados_nesta_rodada": [
+      811474,
+      54892,
+      880099,
+      125243,
+      159513,
+      739191,
+      29675,
+      676375,
+      387379,
+      259492,
+      684965,
+      723969,
+      508734,
+      198718,
+      769856,
+      535105,
+      282106,
+      756541,
+      934410,
+      546703,
+      26985,
+      58662,
+      20148,
+      605829,
+      540222,
+      5424,
+      950991,
+      665836,
+      467964,
+      3501,
+      930981,
+      594931,
+      736698,
+      962757,
+      142719,
+      901191,
+      175301,
+      139100,
+      961518,
+      703500,
+      265085,
+      871666,
+      713232,
+      187349,
+      669235,
+      88695,
+      458475,
+      558282,
+      552975,
+      273559,
+      242785,
+      9777,
+      241392,
+      313330,
+      525912,
+      390809,
+      14034,
+      373703,
+      346056,
+      513794
+    ],
+    "descricao": "aleatorios_N=60_semente=20260926",
+    "seeds_20_default_deste_script": [
+      42,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "seeds_20_da_c1": [
+      42,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "divergencia": "when seeds_descricao == 'default_SEEDS_20_[42,0..18]', this script uses seed 0 where C-1 (varredura_fracao_valida_r3.py) uses seed 19 -- 19 of 20 seeds coincide. Independent recalculation 3 showed that the 20 seeds of C-1 have mean retention 2.6% above random seeds (pixel raster check); the list of 20 is NOT a random sample of seeds, and therefore the comparison against random seeds (--seeds aleatorios:N:S) is the robustness test of this round."
+  },
+  "insumos": [
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q1_enriched_cftudo.pt",
+      "sha256": "33e8d57368920241fc289f8c939de35ece7178c316d2bf5488c3cdf98ff5fb5c"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q2_enriched_cftudo.pt",
+      "sha256": "29bdc73e6f4bea464f2e3772670bef68febac95c21e18d66e0293dcd5f799163"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q3_enriched_cftudo.pt",
+      "sha256": "ef67c8c886b6c0cb7001a84f0316033699965d73961b6eca31ea66dd042f5264"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q4_enriched_cftudo.pt",
+      "sha256": "0caa7c2c3a7412a4f7fbf39ce08cefffc6896f7efa9db376897df6438024db20"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_campinas_v19_Q1_enriched_cftudo.pt",
+      "sha256": "d3787cd087c1ded417da788a83bd048bcaafa347dcd6adc0e64a9fe1e405fe00"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_campinas_v19_Q2_enriched_cftudo.pt",
+      "sha256": "c952a61cfcbeda2a042a6ba80f17ff73aabea5e42511a5614b0a7954321ef16c"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_campinas_v19_Q3_enriched_cftudo.pt",
+      "sha256": "8b7bacbcdb7d34bc8c0234554a1f1afd954a05773a61d1b79e53191687330bb5"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_campinas_v19_Q4_enriched_cftudo.pt",
+      "sha256": "7e9c4e41fc10078813afe081a436b88323532ff41282555232938f17913916dc"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_lins_v19_Q1_enriched_cftudo.pt",
+      "sha256": "f23d15852f1d132eeb5412e194cb0d4251f88c6a0d32097cef08588835742cfc"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_lins_v19_Q2_enriched_cftudo.pt",
+      "sha256": "64a48e1cb48287cf0753c04bb4934d65bf21144a084e1afe058161640a428249"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_lins_v19_Q3_enriched_cftudo.pt",
+      "sha256": "845b287a7b3d33e1b08670c0dad745c2b9f50628e2d38540553de73ed234a4f2"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_lins_v19_Q4_enriched_cftudo.pt",
+      "sha256": "eb2974f829c149378d1025fca8fa51e3191e8a06ba0821cf8f1adc2712754744"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_sorocaba_v19_Q1_enriched_cftudo.pt",
+      "sha256": "858293a658cddbf2b45ddf2673d46153108698b0d04c7b48f8d39d3bf8527919"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_sorocaba_v19_Q2_enriched_cftudo.pt",
+      "sha256": "5741e2b87fee80b15907aebee1122a5f12c992a66555a4b8b17282d384ab991d"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_sorocaba_v19_Q3_enriched_cftudo.pt",
+      "sha256": "aed5e373e11bc94650b1d944e03153cf58af07b1224884f2f011a14609db8f2a"
+    },
+    {
+      "caminho": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_sorocaba_v19_Q4_enriched_cftudo.pt",
+      "sha256": "467a03166acd932abea979a48dded6ce51cf1c3d13992aa45ae4949c3737177a"
+    }
+  ],
+  "formulas_congeladas": {
+    "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/scripts_congelados/baselines_v2_por_particao.py",
+    "sha256": "6d5fde065f86c7bdf39465d49e93d8f4218332273d2efdd1580dfea3ac45063c",
+    "linhas": "245-284 (free_space_path_loss, okumura_hata_rural, cost231_hata)"
+  },
+  "por_celula": {
+    "bauru_Q1": {
+      "n_sorteios_ok": 59,
+      "constante_validos": {
+        "mediana": 18.10143378775323,
+        "min": 4.5279963688670835,
+        "max": 38.79030753925218,
+        "dp_simples": 7.034393648382777,
+        "dp_ponderado_por_n_validos_teste": 6.276069819249327
+      },
+      "constante_todos": {
+        "mediana": 2.346897398450314,
+        "min": 0.0,
+        "max": 7.232738154093753,
+        "dp_simples": 1.8904155629060666
+      },
+      "fspl_a_validos": {
+        "mediana": 6.210352508195784,
+        "min": 2.766770749876709,
+        "max": 14.179049700081242,
+        "dp_simples": 2.523905148587825
+      }
+    },
+    "bauru_Q2": {
+      "n_sorteios_ok": 56,
+      "constante_validos": {
+        "mediana": 15.079777696845849,
+        "min": 2.727214865044017,
+        "max": 41.29275608710735,
+        "dp_simples": 7.244004380441048,
+        "dp_ponderado_por_n_validos_teste": 6.922944461094714
+      },
+      "constante_todos": {
+        "mediana": 1.2216432784811504,
+        "min": 0.0,
+        "max": 6.916867908733579,
+        "dp_simples": 1.766508312572504
+      },
+      "fspl_a_validos": {
+        "mediana": 4.9056220944851905,
+        "min": 1.1688034528220728,
+        "max": 15.581240953394714,
+        "dp_simples": 3.8790875895806103
+      }
+    },
+    "bauru_Q3": {
+      "n_sorteios_ok": 56,
+      "constante_validos": {
+        "mediana": 17.825996349677744,
+        "min": 8.525602730112412,
+        "max": 42.72102977271736,
+        "dp_simples": 7.7244467217127895,
+        "dp_ponderado_por_n_validos_teste": 6.197580357940937
+      },
+      "constante_todos": {
+        "mediana": 1.5686291064358517,
+        "min": 0.0,
+        "max": 4.500014701063492,
+        "dp_simples": 1.355744804431253
+      },
+      "fspl_a_validos": {
+        "mediana": 5.615126675894047,
+        "min": 1.8758189971001669,
+        "max": 18.002927547752137,
+        "dp_simples": 3.44624471500526
+      }
+    },
+    "bauru_Q4": {
+      "n_sorteios_ok": 56,
+      "constante_validos": {
+        "mediana": 15.492051985504048,
+        "min": 3.637150281697178,
+        "max": 44.56221401714248,
+        "dp_simples": 8.242688924092242,
+        "dp_ponderado_por_n_validos_teste": 7.1800857567594
+      },
+      "constante_todos": {
+        "mediana": 1.7944787744157726,
+        "min": 0.0,
+        "max": 7.848477674475317,
+        "dp_simples": 1.808299860724605
+      },
+      "fspl_a_validos": {
+        "mediana": 5.40638641987348,
+        "min": 1.7814586614314887,
+        "max": 19.409394096500616,
+        "dp_simples": 3.9688285827923617
+      }
+    },
+    "campinas_Q1": {
+      "n_sorteios_ok": 59,
+      "constante_validos": {
+        "mediana": 14.113661078476479,
+        "min": 5.619786154895249,
+        "max": 52.959911689924056,
+        "dp_simples": 10.397658314112505,
+        "dp_ponderado_por_n_validos_teste": 9.967112738412396
+      },
+      "constante_todos": {
+        "mediana": 1.356575976921735,
+        "min": 0.0,
+        "max": 8.253018696897701,
+        "dp_simples": 2.0148556986156025
+      },
+      "fspl_a_validos": {
+        "mediana": 5.067201126772608,
+        "min": 1.3970811049119087,
+        "max": 18.7993251818877,
+        "dp_simples": 3.875392777670595
+      }
+    },
+    "campinas_Q2": {
+      "n_sorteios_ok": 59,
+      "constante_validos": {
+        "mediana": 16.940060293236918,
+        "min": 2.781936075452348,
+        "max": 48.89982628799423,
+        "dp_simples": 9.064379865272642,
+        "dp_ponderado_por_n_validos_teste": 8.956632427007403
+      },
+      "constante_todos": {
+        "mediana": 2.7973631222681683,
+        "min": 0.0,
+        "max": 11.5241623956702,
+        "dp_simples": 2.5704851527351553
+      },
+      "fspl_a_validos": {
+        "mediana": 6.258181585214296,
+        "min": 1.3275277657729014,
+        "max": 15.317816283217175,
+        "dp_simples": 3.0101963592292456
+      }
+    },
+    "campinas_Q3": {
+      "n_sorteios_ok": 57,
+      "constante_validos": {
+        "mediana": 15.767382054459908,
+        "min": 6.329255723520572,
+        "max": 41.073486653642995,
+        "dp_simples": 8.574514037914847,
+        "dp_ponderado_por_n_validos_teste": 7.5295677914417185
+      },
+      "constante_todos": {
+        "mediana": 1.9842194693029966,
+        "min": 0.0,
+        "max": 6.798645422160311,
+        "dp_simples": 1.7596145828509921
+      },
+      "fspl_a_validos": {
+        "mediana": 9.718829956923814,
+        "min": 0.953732238580585,
+        "max": 21.05731100161491,
+        "dp_simples": 4.638134439933074
+      }
+    },
+    "campinas_Q4": {
+      "n_sorteios_ok": 58,
+      "constante_validos": {
+        "mediana": 15.512189003653862,
+        "min": 5.7006031718433805,
+        "max": 51.51122739080533,
+        "dp_simples": 8.457682950550817,
+        "dp_ponderado_por_n_validos_teste": 7.426446479617344
+      },
+      "constante_todos": {
+        "mediana": 2.1372459466436977,
+        "min": 0.0,
+        "max": 9.054459410916412,
+        "dp_simples": 2.1070850317927783
+      },
+      "fspl_a_validos": {
+        "mediana": 6.660589565132859,
+        "min": 1.6801407687579264,
+        "max": 21.451633521267244,
+        "dp_simples": 4.668824445894156
+      }
+    },
+    "lins_Q1": {
+      "n_sorteios_ok": 56,
+      "constante_validos": {
+        "mediana": 18.887909323824836,
+        "min": 11.566957821997766,
+        "max": 50.944717535803086,
+        "dp_simples": 7.977808852754722,
+        "dp_ponderado_por_n_validos_teste": 6.680035077415079
+      },
+      "constante_todos": {
+        "mediana": 0.9797898936126006,
+        "min": 0.0,
+        "max": 5.567065324240657,
+        "dp_simples": 1.4947866733850685
+      },
+      "fspl_a_validos": {
+        "mediana": 6.392300738516802,
+        "min": 2.0949270849052186,
+        "max": 14.84097084011177,
+        "dp_simples": 2.72100891515524
+      }
+    },
+    "lins_Q2": {
+      "n_sorteios_ok": 59,
+      "constante_validos": {
+        "mediana": 21.2203990270551,
+        "min": 12.531239241874639,
+        "max": 36.935249330827055,
+        "dp_simples": 5.745358846317356,
+        "dp_ponderado_por_n_validos_teste": 5.3240973413285815
+      },
+      "constante_todos": {
+        "mediana": 3.6144216498580333,
+        "min": 0.0,
+        "max": 10.437046358158973,
+        "dp_simples": 2.3974763149096585
+      },
+      "fspl_a_validos": {
+        "mediana": 6.913448813367414,
+        "min": 3.1703073589659487,
+        "max": 13.310735416840119,
+        "dp_simples": 2.20408191529186
+      }
+    },
+    "lins_Q3": {
+      "n_sorteios_ok": 48,
+      "constante_validos": {
+        "mediana": 19.481453272298864,
+        "min": 10.483891373820537,
+        "max": 36.651251892887686,
+        "dp_simples": 6.02579185033425,
+        "dp_ponderado_por_n_validos_teste": 4.6165653551104935
+      },
+      "constante_todos": {
+        "mediana": 1.1277082463337627,
+        "min": 0.0,
+        "max": 3.5960385893949733,
+        "dp_simples": 1.1757552337094765
+      },
+      "fspl_a_validos": {
+        "mediana": 6.91155128446481,
+        "min": 4.55843547877109,
+        "max": 10.11800327042349,
+        "dp_simples": 1.3675910985678816
+      }
+    },
+    "lins_Q4": {
+      "n_sorteios_ok": 53,
+      "constante_validos": {
+        "mediana": 19.775437486346515,
+        "min": 6.211998712448847,
+        "max": 38.03007960097308,
+        "dp_simples": 7.447211074362315,
+        "dp_ponderado_por_n_validos_teste": 6.469264704385758
+      },
+      "constante_todos": {
+        "mediana": 1.6296438100422286,
+        "min": 0.0,
+        "max": 6.983055274482449,
+        "dp_simples": 1.6290154139852107
+      },
+      "fspl_a_validos": {
+        "mediana": 5.798720431527055,
+        "min": 1.2126977226950906,
+        "max": 11.800999030180447,
+        "dp_simples": 2.125424078931488
+      }
+    },
+    "sorocaba_Q1": {
+      "n_sorteios_ok": 58,
+      "constante_validos": {
+        "mediana": 11.664594892714447,
+        "min": 6.126934401229293,
+        "max": 52.529268113988685,
+        "dp_simples": 10.511974125784015,
+        "dp_ponderado_por_n_validos_teste": 10.565184752880796
+      },
+      "constante_todos": {
+        "mediana": 0.9804260226439787,
+        "min": 0.0,
+        "max": 6.1051572177625655,
+        "dp_simples": 1.77269567282953
+      },
+      "fspl_a_validos": {
+        "mediana": 7.23087129445981,
+        "min": 1.320442323352844,
+        "max": 17.91232700038952,
+        "dp_simples": 4.804301106480377
+      }
+    },
+    "sorocaba_Q2": {
+      "n_sorteios_ok": 59,
+      "constante_validos": {
+        "mediana": 14.749005488479991,
+        "min": 6.370778934658003,
+        "max": 55.1712540421416,
+        "dp_simples": 8.818190775465292,
+        "dp_ponderado_por_n_validos_teste": 8.753614085866431
+      },
+      "constante_todos": {
+        "mediana": 2.328177284253343,
+        "min": 0.0,
+        "max": 10.769210127662474,
+        "dp_simples": 2.381325245311485
+      },
+      "fspl_a_validos": {
+        "mediana": 6.282640351092678,
+        "min": 0.8431903970354687,
+        "max": 22.807130291110074,
+        "dp_simples": 4.3091373963850605
+      }
+    },
+    "sorocaba_Q3": {
+      "n_sorteios_ok": 55,
+      "constante_validos": {
+        "mediana": 20.171784684778046,
+        "min": 6.029847049038179,
+        "max": 40.33664881284696,
+        "dp_simples": 8.668822526955049,
+        "dp_ponderado_por_n_validos_teste": 7.189376295901918
+      },
+      "constante_todos": {
+        "mediana": 1.8394375786372827,
+        "min": 0.0,
+        "max": 4.917802751628086,
+        "dp_simples": 1.3213103854409367
+      },
+      "fspl_a_validos": {
+        "mediana": 8.03046790536768,
+        "min": 1.5469477709944068,
+        "max": 44.23992076828983,
+        "dp_simples": 12.639917734493412
+      }
+    },
+    "sorocaba_Q4": {
+      "n_sorteios_ok": 56,
+      "constante_validos": {
+        "mediana": 14.597559858445177,
+        "min": 6.903710375650726,
+        "max": 37.403239160270914,
+        "dp_simples": 6.330729521638972,
+        "dp_ponderado_por_n_validos_teste": 5.583203136312009
+      },
+      "constante_todos": {
+        "mediana": 1.8016270450426417,
+        "min": 0.0,
+        "max": 6.751364810322393,
+        "dp_simples": 1.6007199291280125
+      },
+      "fspl_a_validos": {
+        "mediana": 4.815304054252412,
+        "min": 1.1523580433683718,
+        "max": 22.08376380460602,
+        "dp_simples": 4.929330079253362
+      }
+    }
+  },
+  "resumo": {
+    "n_celulas_com_dp_entre_sorteios_ge_0_1_dB": 16,
+    "n_celulas_total_ok": 16,
+    "dp_entre_celulas_das_medias_validos_dB": 2.179646210370172,
+    "dp_medio_entre_sorteios_validos_dB_simples": 8.016603526005728,
+    "dp_medio_entre_sorteios_validos_dB_ponderado": 7.227361286295269,
+    "definicao_dp_ponderado": "weight = number of valid nodes in the held-out test set of the split draw; reliability-weights estimator (unbiased): var=sum(w*(x-xbar)^2)/(sum(w)-sum(w^2)/sum(w))"
+  },
+  "n_celulas_ok": 16,
+  "n_celulas_total": 16,
+  "veredito_vs_criterio": "A3_sustentada_deriva_nao_pequena",
+  "nao_verificado": [],
+  "comando_rodado": "v3_2.1_3.1_deriva_calibracao.py --seeds aleatorios:60:20260926 --sufixo-saida _16x60rnd --sem-sha",
+  "timestamp_utc": "2026-09-25T23:35:28.674805+00:00"
+}

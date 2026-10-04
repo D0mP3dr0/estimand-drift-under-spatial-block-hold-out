@@ -1,0 +1,36 @@
+{
+ "registrado_em": "2026-10-01T23:31:09-03:00",
+ "nota": "D1 of internal/note_27.md (phase 5, rounds R5-R7): sha of the scripts of batch G1 g10 (01/10), recorded while the batch was running; recheck at the end of the batch.",
+ "arquivos": [
+  {
+   "caminho": "_v3_2026-09-25/gpu/G1/train_v3_g10.py",
+   "sha256": "1a9dfa2f7079ce58056e53a63f682f7b0336355dae6582efa2941379fefae70c",
+   "mtime": "2026-10-01T22:54:19-03:00",
+   "bytes": 7429
+  },
+  {
+   "caminho": "_v3_2026-09-25/gpu/G1/rodar_lote_G1.py",
+   "sha256": "e05a921488a13f4fb34e262968cddeb9cb3134bd44c9cfcb05bbaaa03ff3bc59",
+   "mtime": "2026-10-01T22:54:33-03:00",
+   "bytes": 14435
+  },
+  {
+   "caminho": "scripts/v3_G1_agregar.py",
+   "sha256": "88d444d4c480b7758ccd197f6936d5835a78c71863d99933fe8cbcfcd2419d2b",
+   "mtime": "2026-10-01T22:52:17-03:00",
+   "bytes": 18812
+  },
+  {
+   "caminho": "_v3_2026-09-25/criterios/criterio_G1_modelos_g10.json",
+   "sha256": "d0d2b6366930d53ca71065baeff36addbe61be6f56560e722d08721e91125132",
+   "mtime": "2026-10-01T22:47:16-03:00",
+   "bytes": 3033
+  },
+  {
+   "caminho": "_v3_2026-09-25/gpu/G1/portao_G1.json",
+   "sha256": "4ced4fcba7aa8e6e520f467458260f958723d56084b25a8c54d71573d60161c8",
+   "mtime": "2026-10-01T23:18:03-03:00",
+   "bytes": 3545
+  }
+ ]
+}

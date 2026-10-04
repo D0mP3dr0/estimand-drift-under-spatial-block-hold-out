@@ -1,0 +1,34 @@
+{
+ "id": "G2_adendo1",
+ "criterio": "criterios/criterio_G2_deriva_alvo_continuo.json",
+ "criterio_sha256": "2beeb34142828ce0575b74f80f511d7a1f328895cdf94c9eef91d1084511a8f4",
+ "motivo": "Gate P1 of the criterion assumed elevation normalised by cell; the producer (GNN_RF_V2/data_raw/generate_graph_v19.py:371-427) normalises by CITY, with elev_mean/elev_std computed on the 2 x 2 degree window of the city cut from the mosaic, after imputing the mean in the nodata pixels (l. 416-418). P1 failed in the 16 cells because of a wrong premise of the draft, not because of a wrong column: a measurement found exact equality of features_raw[:,0] with dem.x[:,0] of the <city>_v19_<Q>_gpu.pt in the 16 cells (internal/note_34.md, sha256 6a8d63f8...).",
+ "muda": {
+  "P1_coluna": {
+   "P1a_identidade": "per cell, features_raw[:,0] == dem.x[:,0] of <city>_v19_<Q>_gpu.pt in exact equality; failure -> abort",
+   "P1b_constantes": "per city, normalization['elev_mean'] and normalization['elev_std'] equal bit for bit in the four <city>_v19_<Q>_gpu.pt; failure -> abort",
+   "P1c0_cobertura": "per city, the four quadrants are disjoint in node positions and the sum of their nodes equals H*W of raster_meta['dem_shape'] of the _gpu.pt (if the field exists); result recorded",
+   "P1c_momentos": "only if P1c0 passes: node-weighted mean of features_raw[:,0] over the four quadrants in [-1e-3, 1e-3] and aggregate SD (ddof=0) in [0.999; 1.001]; failure -> abort. If P1c0 fails or cannot be evaluated: 'not applicable', recorded, and the gate rests on P1a and P1b. Tolerance: in exact arithmetic mean 0 and SD 1 are identities; the float32 error over ~5.2e7 values is of the order of 1e-6 * elev_mean/elev_std, two to three orders below 1e-3",
+   "P1d_nodata": "per city, share of nodes with |features_raw[:,0]| < 1e-6 (the value the producer assigns to nodata imputed by the mean); > 1 % -> abort (the target would carry a constant imputed value); otherwise recorded. New sub-item, motivated by the same passage of the producer; it may be reduced to a record"
+  },
+  "redacoes": {
+   "desenho": "'(elevation normalised by cell)' -> '(elevation normalised by city by the producer, (z - elev_mean_city)/elev_std_city)'",
+   "grandezas.CV_d": "'(dimensionless, invariant to normalisation by cell)' -> '(dimensionless, invariant to any affine transformation of the target within the cell, including the normalisation by city of the producer)'",
+   "grandezas.razao_entre_celulas": "'in metres (y denormalised by elev_std of the cell)' -> 'in metres (MAE multiplied by elev_std of the city; elev_mean does not enter the MAE)'; remains DESCRIPTIVE and with no role in the branches"
+  }
+ },
+ "nao_muda": [
+  "question, subclaim, seeds, geometry (g = 10 km; b = 2 and b = 0), partition",
+  "primary predictor (fixed constant c_ref, median of the training nodes of the reference draw, split seed 42) and secondary (median per draw)",
+  "quantity deff and its closed form; decision statistics (medians over the 16 cells)",
+  "thresholds A (median of CV_d >= 0.05) and B (median of deff >= 10) and their justifications",
+  "reading of the three branches (A -> REINFORCES; not A and B -> DELIMITS; not A and not B -> INVERTS), secondary readings and se_inverter",
+  "gates P2, P3, P4 and P5 (permuted negative control, range [0.5; 2])",
+  "orcamento"
+ ],
+ "invariancia": "For y' = a*y + b with a != 0 constant in the cell: the median is equivariant (c' = a*c + b), hence e'_i = |a| e_i, Err'_sigma = |a| Err_sigma, Var' = a^2 Var, S2'_U = a^2 S2_U, with n_sigma and N_U unchanged; CV_d and deff are identical under normalisation by cell, by city or none. Therefore thresholds and branches do not change.",
+ "declaracao_sem_resultado": "No quantity of G2 (CV_d, deff, ratio, negative control) was computed before this addendum. The only execution was the pre-check of P1/P2, which aborted: fase5/G2_abortado.json (sha256 e2411a4ea9ee469065076bef9825f98edfaea309f70e4e50dd19129e572ff10e) and fase5/G2_run.log (sha256 6192841f726c4a6318dee7f5c2837a66334ca86d1b99b9d4e2c012a4eab7ac61); neither _parcial_G2 nor G2_resumo.json existed. The per-cell moments of P1 recorded in the aborted run enter no decision quantity and were not used to fix anything in this addendum.",
+ "autor": "authors",
+ "fixado_em": "2026-10-04T10:23:11-03:00",
+ "fixado_por": "fixed at recording. P1d kept as a GATE (aborts above 1 %), not reduced to a record. Checked at recording: sha256 of the original criterion and of G2_abortado.json; non-existence of fase5/G2_resumo.json and of fase5/_parcial_G2."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "1.4",
+  "alegacao": "A1 (Geometry: the retention of an eroded block follows a closed-form law with finite-domain corrections)",
+  "pergunta": "Does the retention law (eq:R, mean field) predict the REAL nodal retention (val and test) at more than two geometry points (g,b)? Today there is a comparison only at (g,b)=(10,2) and (5,2); this test adds b=1 and b=3 km with g=10km, in the 16 g10 cells, 20 split_seeds.",
+  "hipotese": "The relative error (lei_campo_medio(q_realizado) - retencao_nodal_real)/retencao_nodal_real, on the TEST set, varies monotonically with b (smaller b -> smaller error in absolute value), without changing sign between b=1,2,3, and the order of magnitude of the error at b=2 (already published, -6.2% to -6.9%) is preserved at the neighbouring points (b=1 and b=3).",
+  "limiar_de_aceitacao": [
+    "sign of the mean relative test error (over the 20 seeds, per cell) is the SAME at the three points b=1,2,3 (g=10) -- no sign change",
+    "|erro_relativo_teste(b=1)| <= |erro_relativo_teste(b=2)| <= |erro_relativo_teste(b=3)| (monotonicity in b, violation tolerance: at most 2/16 cells out of order, due to sampling noise)",
+    "erro_relativo_teste(b=2) recomputed here lies within [-6.9%, -6.2%] (order of magnitude of the already published number); b=1 and b=3 stay in the same order of magnitude (factor <=3x in absolute value)"
+  ],
+  "o_que_refuta": "sign change of the relative error between b=1, b=2 and b=3 on the test set; OR gross non-monotonicity (more than 2/16 cells out of the expected order); OR relative error at b=2 outside one decade of the published range (-6.2% to -6.9%) -- any of these overturns 'the law holds at more than two points' and A1 is left without support from this test (it goes to a note, not to the article)",
+  "metodo_declarado": "for (g,b) in {(10,1),(10,2),(10,3)} in the 16 g10 cells and (5,2) in the 4 bauru g5 cells, 20 split_seeds (SEEDS_20 from varredura_fracao_valida_r3.py), reconstruct the actual partition via split_e_metricas_edt (varredura_split_geometria.py, EDT method already validated <1e-3 against exact cKDTree in the module itself), fractions 70/15/remainder-test (FRACS); compute q_te=k_te/N, q_va=1-k_tr/N (k,N in actual pixels of the cell); compare the actual NODAL retention (n_apos_buffer/n_antes_buffer) with eq:R evaluated at the realised q (closed formula copied, without editing, from analysis/fismat_sympy_eqR.py lines 42 and 118-149 -- eqR_num and lattice_retention/raster_counts for the finite-domain correction, reimplemented locally by literal copy so as not to execute the other script with write side effects outside pasta_saida)",
+  "fixado_por": "fixed in internal/note_16.md, 25/09/2026, BEFORE running the script v3_1.4_varredura_b_lei_vs_nodal.py",
+  "nao_amplia_a_varredura": "roadmap rule D5 -- only the 4 listed (g,b) points; no additional grid"
+}

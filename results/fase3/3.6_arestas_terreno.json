@@ -1,0 +1,163 @@
+{
+  "seed": 42,
+  "celulas": {
+    "bauru": {
+      "terreno_terreno": {
+        "arquivo": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/bauru_v19_Q1_gpu.pt",
+        "n_nos_terreno": 12960000,
+        "n_arestas_terreno_terreno": 116596804,
+        "n_autolacos": 12960000,
+        "frac_autolacos": 0.11115227480849303,
+        "n_duplicatas_exatas_i_j": 0,
+        "n_arestas_com_reverso_j_i": 116596804,
+        "frac_simetrica": 1.0,
+        "grau_saida": {
+          "min": 4,
+          "mediana": 9.0,
+          "media": 8.996666975308642,
+          "max": 9
+        },
+        "grau_entrada": {
+          "min": 4,
+          "mediana": 9.0,
+          "media": 8.996666975308642,
+          "max": 9
+        },
+        "mean_degree_E_sobre_N": 8.996666975308642,
+        "amostra_pos_delta": {
+          "n_amostra": 10000,
+          "n_delta_zero_autolaco": 1155,
+          "passo_grade_dx_estimado": 0.00027799999224953353,
+          "passo_grade_dy_estimado": 0.00027799999224953353,
+          "frac_vizinhanca_moore_8_mais_autolaco": 0.0,
+          "dist_min": 0.000274658203125,
+          "dist_max": 0.00039382014074362814
+        },
+        "grid_shape": [
+          3600,
+          3600
+        ],
+        "tempo_carga_s": 2.120983600616455,
+        "node_types_arquivo": [
+          "dem",
+          "sentinel",
+          "lidar"
+        ],
+        "edge_types_arquivo": [
+          "('dem', 'adjacent_to', 'dem')",
+          "('sentinel', 'belongs_to', 'dem')",
+          "('lidar', 'belongs_to', 'dem')",
+          "('lidar', 'near_to', 'dem')",
+          "('lidar', 'near_to', 'lidar')"
+        ]
+      },
+      "antena_terreno": {
+        "arquivo": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q1_enriched_cftudo.pt",
+        "n_antenas": 794,
+        "n_nos_terreno": 12960000,
+        "n_arestas_antena_terreno": 10503392,
+        "direcao": "antenna(src) -> terrain(dst), unidirectional (no terrain->antenna edges)",
+        "fanout_por_antena": {
+          "min": 0,
+          "mediana": 0.0,
+          "media": 13228.453400503779,
+          "max": 1711430
+        },
+        "grau_entrada_terreno": {
+          "min": 0,
+          "mediana": 0.0,
+          "media": 0.8104469135802469,
+          "max": 5
+        },
+        "tempo_carga_s": 3.429699420928955,
+        "node_types_arquivo": [
+          "terrain",
+          "antenna"
+        ],
+        "edge_types_arquivo": [
+          "('antenna', 'propagates_to', 'terrain')"
+        ],
+        "achado_enriched_sem_aresta_terreno_terreno": true
+      }
+    },
+    "lins": {
+      "terreno_terreno": {
+        "arquivo": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/lins_v19_Q1_gpu.pt",
+        "n_nos_terreno": 12960000,
+        "n_arestas_terreno_terreno": 116596804,
+        "n_autolacos": 12960000,
+        "frac_autolacos": 0.11115227480849303,
+        "n_duplicatas_exatas_i_j": 0,
+        "n_arestas_com_reverso_j_i": 116596804,
+        "frac_simetrica": 1.0,
+        "grau_saida": {
+          "min": 4,
+          "mediana": 9.0,
+          "media": 8.996666975308642,
+          "max": 9
+        },
+        "grau_entrada": {
+          "min": 4,
+          "mediana": 9.0,
+          "media": 8.996666975308642,
+          "max": 9
+        },
+        "mean_degree_E_sobre_N": 8.996666975308642,
+        "amostra_pos_delta": {
+          "n_amostra": 10000,
+          "n_delta_zero_autolaco": 1074,
+          "passo_grade_dx_estimado": 0.00027799999224953353,
+          "passo_grade_dy_estimado": 0.00027799999224953353,
+          "frac_vizinhanca_moore_8_mais_autolaco": 0.0,
+          "dist_min": 0.000274658203125,
+          "dist_max": 0.00039382014074362814
+        },
+        "grid_shape": [
+          3600,
+          3600
+        ],
+        "tempo_carga_s": 0.0017228126525878906,
+        "node_types_arquivo": [
+          "dem",
+          "sentinel",
+          "lidar"
+        ],
+        "edge_types_arquivo": [
+          "('dem', 'adjacent_to', 'dem')",
+          "('sentinel', 'belongs_to', 'dem')",
+          "('lidar', 'belongs_to', 'dem')",
+          "('lidar', 'near_to', 'dem')",
+          "('lidar', 'near_to', 'lidar')"
+        ]
+      },
+      "antena_terreno": {
+        "arquivo": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_lins_v19_Q1_enriched_cftudo.pt",
+        "n_antenas": 175,
+        "n_nos_terreno": 12960000,
+        "n_arestas_antena_terreno": 5536465,
+        "direcao": "antenna(src) -> terrain(dst), unidirectional (no terrain->antenna edges)",
+        "fanout_por_antena": {
+          "min": 0,
+          "mediana": 0.0,
+          "media": 31636.942857142858,
+          "max": 833413
+        },
+        "grau_entrada_terreno": {
+          "min": 0,
+          "mediana": 0.0,
+          "media": 0.4271963734567901,
+          "max": 5
+        },
+        "tempo_carga_s": 2.9069387912750244,
+        "node_types_arquivo": [
+          "terrain",
+          "antenna"
+        ],
+        "edge_types_arquivo": [
+          "('antenna', 'propagates_to', 'terrain')"
+        ],
+        "achado_enriched_sem_aresta_terreno_terreno": true
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "3.1",
+  "pergunta": "Does the constant > FSPL inversion (and rural Hata, COST-231) survive the correct calibration (offset only on the valid training nodes), or does it occur only with the contaminated median?",
+  "alegacao": "A4 (deflation and inversion under a correctly calibrated baseline)",
+  "hipotese": "the constant>FSPL inversion reported today is an artifact of calibration by the contaminated median (which includes sentinel) and does not survive when the offset is calibrated on valid nodes only",
+  "metodo_fixado": "16 cells x 20 split_seeds, same splits as 2.1; FSPL/Hata_rural/COST231_suburbano calibrated by offset p_tx_eff=mediana(rssi_tr+PL_modelo(dist_tr,900MHz)) on two training populations: (a) whole training set (contaminated, as today) and (b) valid training nodes only (PL_tr<299); MAE per population on the held-out test for each model x calibration; count of how many cells x split draws (max 320) the constant beats each model, separated by calibration (a) and (b)",
+  "limiar_aceitacao": "if the constant>FSPL inversion on valid nodes occurs in >=50% of the 320 cell x split-draw combinations UNDER CALIBRATION (b), claim A4 holds with a correctly calibrated baseline",
+  "refutacao": "if the inversion only occurs in >=50% under calibration (a) and falls below 50% under (b), the claim changes from 'inversion with correct baseline' to 'the inversion is induced by the contaminated calibration'",
+  "verificacao_citacao": "check whether the p_tx_eff offsets calibrated in (a) for Lins Q1 seed 42 reproduce the values cited in the current text (20.4 / 55.2 / 83.3 dBm for fspl/hata_rural/cost231_sub)",
+  "fixado_em": "2026-09-25T00:00:00-03:00 (before running the script v3_2.1_3.1_deriva_calibracao.py)"
+}

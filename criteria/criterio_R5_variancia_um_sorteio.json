@@ -1,0 +1,11 @@
+{
+ "id": "R5_variancia_um_sorteio",
+ "subclaim": "S4 (title) and S9 (reporting rule)",
+ "origem": "test requested in the internal review of the manuscript drafts and adopted on 01/10/2026, with the title 'Estimand Drift under Spatial Block Hold-Out'",
+ "pergunta": "Can a study with ONE partition estimate, using only its own test blocks, the between-draw variance of the error it reports? In the 16 cells, g=10 km, b=2 km, on the 60 split draws of fase2/_v3_2.1_3.1_parcial_16x60rnd.json, for the constant predictor and the calibrated FSPL (b), populations 'validos' (valid nodes) and 'todos' (all nodes).",
+ "metodo_fixado": "per split draw, cluster ratio variance estimator (held-out test blocks as clusters): v = (1 - k/N) * k/(k-1) * sum_B (S_B - Err*M_B)^2 / M^2, with S_B the sum of the losses and M_B the number of scored nodes of block B, M = sum M_B, Err = sum S_B / M, k the number of test blocks with a scored node of the population, N the number of blocks of the mesh. Compare per cell: (i) ratio Q = mean over split draws of v / empirical between-draw variance of Err; (ii) coverage: fraction of split draws in which Err +- 2*sqrt(v) contains the mean of Err over the split draws; split draws with k<2 are undefined and are counted.",
+ "previsao": "the estimator captures the order of magnitude (Q between 0.5 and 2) in the population 'todos' (all nodes); in 'validos' (valid nodes), with few blocks containing valid nodes, it tends to underestimate.",
+ "leitura": "constant, valid: Q in [0.5; 2] AND coverage >= 0.80 in >= 12 of the 16 cells -> REINFORCES: the text provides the procedure (standard error of one split draw from the test blocks) within the reporting rule. Coverage < 0.60 in >= 8 cells -> DELIMITS: the text says that the dispersion across blocks of a single split draw under- or overestimates the drift by the median factor of Q, and the reporting rule becomes repeating split draws. In between: descriptive, with Q and coverage.",
+ "se_inverter": "no outcome inverts S4; delimits S9.",
+ "fixado_em": "2026-10-01T22:47:16-03:00 (before any script or result of this test existed)"
+}

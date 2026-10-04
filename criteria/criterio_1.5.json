@@ -1,0 +1,16 @@
+{
+  "id": "1.5",
+  "alegacao": "A1",
+  "pergunta": "Does the exact expectation of retention without replacement (given that B is a test block, P(k specific neighbors are all test) = (k_te-1)_k/(N-1)_k, replacing q^k in the polynomial area expansion by (k neighbors)/(N total); for validation, N-k_tr in place of k_te) reduce the error against the real nodal retention, relative to the mean field (q^k with constant q = k/N), in ALL configurations (g10: 132 blocks, 92/20/20; g5: 483 blocks, 338/72/73)?",
+  "hipotese": "E[A]_exato (falling factorial, hypergeometric) per cell/configuration errs less than the mean field (q^k) against the actual nodal retention (20 seeds) in every tested cell, because it captures the negative correlation introduced by sampling block roles WITHOUT replacement (a block removed from the universe N cannot be a trimming neighbour twice) that the i.i.d. mean field ignores.",
+  "limiar_de_aceitacao": "erro_relativo(E[A]_exato, nodal_real) < erro_relativo(campo_medio, nodal_real) in ALL tested combinations (cell x config x test/validation role); Table 2 then reports exact+nodal and the mean field becomes a declared approximation with explicit residual error.",
+  "o_que_refuta": "if in ANY combination the error of E[A]_exato is >= the mean-field error (the without-replacement sampling correction worsens or does not change the prediction), Table 2 keeps the mean field as the main approximation and declares the exact expectation as an alternative without universal gain, citing the combination(s) where this occurs.",
+  "metodo_declarado": {
+    "e_area_exato": "lattice_retention() from analysis/fismat_sympy_eqR.py (reused by import, without editing the original file), field 'exato_permutacao': falling(N_nontrim-1,k)/falling(N-1,k) replacing qmf**k in the sum sum(ak[k]*prob(k)) over the 3x3=9 trimming-neighbour counters per block (core/side/corner), actual lattice (actual per-city border widths, thin block included)",
+    "campo_medio": "same function lattice_retention(), field 'mean_field': qmf=N_nontrim/N constant replacing q^k (i.i.d. approximation -- equivalent to eq:R evaluated at q=q_realizado, already checked by sympy_check_R_meanfield in montecarlo_retencao_r3_g5.py, symbolic difference=0)",
+    "q_realizado": "q_te = k_te/N (fraction of test blocks in the universe); q_va = 1 - k_tr/N (fraction of NON-training, since validation trimming counts training blocks as trimmers)",
+    "configuracoes": "g10: N=132 blocks (92 training/20 val/20 test); g5: N=483 blocks (338/72/73) -- count already validated in montecarlo_retencao_r3_g5.py (validacao_contagem_blocos, matches the actual runs exactly)",
+    "comparadores": "actual nodal (20 seeds, varredura_split_geometria.py, existing artifact reused by reading); block MC (variant C, montecarlo_retencao_r3_g5.py, existing artifact reused by reading)",
+    "dominio_geometrico": "Lins Q1 (the only domain with Wx,Wy already derived in fismat_sympy_eqR.py A4_reticulado_lins_Q1); also reapplied to the 4 cities via CIDADES_EXT (ext_x_km, ext_y_km) from montecarlo_retencao_r3_g5.py to cover the requested per-city comparison"
+  }
+}

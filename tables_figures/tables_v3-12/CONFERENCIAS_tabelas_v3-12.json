@@ -1,0 +1,770 @@
+{
+ "T2_contra_T2_retencao_v3.csv": {
+  "valores_comparados": 80,
+  "passou": true
+ },
+ "T3_rodape_dp_mae_constante_validos_b0": {
+  "resumo_R1_b0_ou_2.1": 7.0928559703037735,
+  "recontagem_direta": 7.0928559703037735,
+  "absdiff": 0.0,
+  "passou": true
+ },
+ "T3_rodape_dp_fracao_valida_teste_b0": {
+  "resumo_R1_b0_ou_2.1": 0.061260161758249485,
+  "recontagem_direta": 0.061260161758249485,
+  "absdiff": 0.0,
+  "passou": true
+ },
+ "T3_rodape_dp_fracao_valida_teste_b2": {
+  "resumo_R1_b0_ou_2.1": 0.07405487087989077,
+  "recontagem_direta": 0.07405487087989077,
+  "absdiff": 0.0,
+  "passou": true
+ },
+ "T3_rodape_dp_mae_constante_validos_b2": {
+  "resumo_R1_b0_ou_2.1": 8.016603526005728,
+  "recontagem_direta": 8.016603526005728,
+  "absdiff": 0.0,
+  "passou": true
+ },
+ "T3_contra_T3_deriva_erro_v3.csv": {
+  "valores_comparados": 112,
+  "passou": true
+ },
+ "T3_resumo_igual_as_linhas_resumo_da_T3": {
+  "linhas": 6,
+  "passou": true
+ },
+ "T4_recontagem_b2_antes_de_gravar": {
+  "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase2/_v3_2.1_3.1_parcial_16x60rnd.json",
+  "recontagem": {
+   "nv": 904,
+   "fa": 799,
+   "fb": 796,
+   "ca": 629,
+   "cb": 729
+  },
+  "esperado_T4_v3-11g_csv": {
+   "nv": 904,
+   "fa": 799,
+   "fb": 796,
+   "ca": 629,
+   "cb": 729
+  },
+  "esperado_enunciado_tarefa": "629/729 (constant lower on all nodes, a/b) and 799/796 (FSPL lower on valid nodes, a/b) out of 904",
+  "esperado_R1_b0_resumo_b2": {
+   "fspl_menor_validos_a": 799,
+   "fspl_menor_validos_b": 796,
+   "constante_maior_todos_a": 275,
+   "constante_maior_todos_b": 175,
+   "n_nv": 904
+  },
+  "passou": true
+ },
+ "T4_recontagem_b0": {
+  "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase4/R1_b0_por_sorteio.json",
+  "recontagem": {
+   "nv": 938,
+   "fa": 844,
+   "fb": 847,
+   "ca": 691,
+   "cb": 801
+  },
+  "contra_R1_b0_resumo.inversoes_constante_gt_fspl.b0": {
+   "fspl_menor_validos_a": 844,
+   "fspl_menor_validos_b": 847,
+   "constante_maior_todos_a": 247,
+   "constante_maior_todos_b": 137,
+   "n_nv": 938
+  },
+  "passou": true
+ },
+ "T4_contra_T4_inversao_v3.csv": {
+  "valores_comparados": 128,
+  "passou": true
+ },
+ "T4_totais_e_S2": {
+  "totais_b2": {
+   "nv": 904,
+   "fa": 799,
+   "fb": 796,
+   "ca": 629,
+   "cb": 729
+  },
+  "totais_b0": {
+   "nv": 938,
+   "fa": 844,
+   "fb": 847,
+   "ca": 691,
+   "cb": 801
+  },
+  "mesmos_valores_que_a_T4": true,
+  "passou": true
+ },
+ "T6_n_sobre_deff_todos": {
+  "recomputado_min_max": [
+   14.881514669520206,
+   22.000215374509068
+  ],
+  "veredito_fismat": "14.9-22.0 (mean n=n_te_b2 ~0.88e6; deff 39.9e3-59.3e3)",
+  "passou": true
+ },
+ "T6_n_sobre_deff_validos": {
+  "recomputado_min_max": [
+   1.0976872493222933,
+   4.80052812876578
+  ],
+  "veredito_fismat": "1.1-4.8 (n=n_te_b2_validos; with n_A_validos 1.06-4.63)",
+  "passou": true
+ },
+ "T6_deff_contra_bc.json": {
+  "celulas_pred_pop_comparadas": 16,
+  "campos": "deff_calc, varH, varA",
+  "passou": true,
+  "nota": "the field n_sobre_deff_nH of bc.json uses n = number of split draws (nH = 199 or 200), not the number of nodes; the n/deff of this table uses the mean number of scored nodes (n_te_b2; n_te_b2_validos of R2_por_sorteio.json), which reproduces the ranges of veredito.json (b): 14.9-22.0 (all) and 1.1-4.8 (valid)"
+ },
+ "T7_contra_T7_deriva_modelo_A4_v3.csv": {
+  "valores_comparados": 52,
+  "passou": true
+ },
+ "T7b_contra_T7_deriva_modelo_A4_v3.csv": {
+  "valores_comparados": 16,
+  "passou": true
+ },
+ "TA1_guardas_texto_vs_folha_B7.2": {
+  "strings_da_folha_conferidas_por_assert": true,
+  "linhas": 40,
+  "grupos": [
+   "Architecture",
+   "Loss",
+   "Optimisation",
+   "Selection",
+   "Baselines",
+   "Hardware and cost"
+  ],
+  "valor_maximo_shadowing_ndvi_penalty_registrado": 0.0,
+  "fracao_de_passos_cortados_impressa": false,
+  "passou": true
+ },
+ "TN_copia_do_bloco_F-10_com_alteracoes_v3-12b": {
+  "linhas_de_simbolos": 25,
+  "linhas_antes_da_versao_enxuta_v3-12d": 32,
+  "linha_retirada_v3-12d": "$\\hat L$, $\\hat P$, $P_{\\mathrm{tx}}$, $L_{\\max}$",
+  "linha_acrescentada_v3-12h": "neighbouring blocks B_w..B_en (Equation~\\eqref{eq:area})",
+  "linha_retirada_v3-12g": "$\\ell_x$, $\\ell_y$ (not used in the text)",
+  "linhas_fundidas_v3-12d": [
+   {
+    "simbolos": "$D$, $V_T$, $V_A$, $E_{TT}$, $E_{AT}$",
+    "ref": "Section~\\ref{sec:setting}"
+   },
+   {
+    "simbolos": "$\\varpi(V)$, $\\bar\\varpi$, $\\psi(X)$",
+    "ref": "Equation~\\eqref{eq:pi}; Section~\\ref{sec:sentinel}"
+   },
+   {
+    "simbolos": "$g$, $b$, $\\beta(x)$, $N$, $n_1 \\times n_2$",
+    "ref": "Section~\\ref{sec:setting}"
+   },
+   {
+    "simbolos": "$k_{\\mathrm{tr}}, k_{\\mathrm{va}}, k_{\\mathrm{te}}$, $\\nu_{\\mathrm{tr}}, \\nu_{\\mathrm{va}}, \\nu_{\\mathrm{te}}$",
+    "ref": "Equation~\\eqref{eq:counts}; Section~\\ref{sec:setting}"
+   },
+   {
+    "simbolos": "$R_{\\mathrm{va}}(g,b)$, $R_{\\mathrm{te}}(g,b)$, $V_{\\mathrm{te}}(\\sigma)$",
+    "ref": "Section~\\ref{sec:setting}"
+   },
+   {
+    "simbolos": "$\\mathrm{MAE}$, $\\mathrm{MAE}_{\\mathrm{valid}}$, $\\mathrm{MAE}_{\\sigma}$",
+    "ref": "Equation~\\eqref{eq:mixture}; Proposition~\\ref{prop:drift}"
+   }
+  ],
+  "limite_de_linhas": 26,
+  "alteracoes": [
+   "- row ell_x, ell_y (v3-12g: not used in the text)",
+   "+ row d_max, \\bar d_V",
+   "+ rows MAE/MAE_valid and MAE_sigma",
+   "+ row of neighbouring blocks B_w..B_en (v3-12h)",
+   "R_va/R_te -> r, r_va, r_te (v3-12h, clash with \\bar\\rho)",
+   "Proposition -> Remark in prop:degree (v3-12h)",
+   "+ \\varepsilon_c in row Delta_f, e_f (v3-12i)"
+  ],
+  "bloco_gravado_contem_o_bloco_alterado": true,
+  "passou": true
+ },
+ "T10_conferencia_por_caminho_json": {
+  "fontes": {
+   "R5_resumo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/R5_resumo.json",
+   "R5_por_sorteio": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/R5_por_sorteio.json",
+   "R5_criterio": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/criterios/criterio_R5_variancia_um_sorteio.json",
+   "R5_veredito": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/votos_R5/veredito.json"
+  },
+  "verificacoes": 524,
+  "falhas": [],
+  "passou": true,
+  "linhas": [
+   {
+    "celula": "bauru_Q1",
+    "n_v_definido": 57,
+    "constante": {
+     "Q": 0.4428974270304618,
+     "cob": 0.7017543859649122,
+     "Q_recalc": 0.44289742703046214,
+     "cob_recalc": 0.7017543859649122,
+     "n_Err_definido": 59
+    },
+    "fspl_b": {
+     "Q": 0.49038414019307447,
+     "cob": 0.6491228070175439,
+     "Q_recalc": 0.4903841401930746,
+     "cob_recalc": 0.6491228070175439,
+     "n_Err_definido": 59
+    }
+   },
+   {
+    "celula": "bauru_Q2",
+    "n_v_definido": 40,
+    "constante": {
+     "Q": 0.6948649071238363,
+     "cob": 0.775,
+     "Q_recalc": 0.6948649071238364,
+     "cob_recalc": 0.775,
+     "n_Err_definido": 56
+    },
+    "fspl_b": {
+     "Q": 0.468527407219704,
+     "cob": 0.625,
+     "Q_recalc": 0.46852740721970415,
+     "cob_recalc": 0.625,
+     "n_Err_definido": 56
+    }
+   },
+   {
+    "celula": "bauru_Q3",
+    "n_v_definido": 46,
+    "constante": {
+     "Q": 0.4942521690683892,
+     "cob": 0.6086956521739131,
+     "Q_recalc": 0.4942521690683892,
+     "cob_recalc": 0.6086956521739131,
+     "n_Err_definido": 56
+    },
+    "fspl_b": {
+     "Q": 0.4650816987023916,
+     "cob": 0.41304347826086957,
+     "Q_recalc": 0.46508169870239163,
+     "cob_recalc": 0.41304347826086957,
+     "n_Err_definido": 56
+    }
+   },
+   {
+    "celula": "bauru_Q4",
+    "n_v_definido": 44,
+    "constante": {
+     "Q": 0.5641758038122561,
+     "cob": 0.6136363636363636,
+     "Q_recalc": 0.564175803812256,
+     "cob_recalc": 0.6136363636363636,
+     "n_Err_definido": 56
+    },
+    "fspl_b": {
+     "Q": 0.5570526614980783,
+     "cob": 0.7045454545454546,
+     "Q_recalc": 0.5570526614980783,
+     "cob_recalc": 0.7045454545454546,
+     "n_Err_definido": 56
+    }
+   },
+   {
+    "celula": "campinas_Q1",
+    "n_v_definido": 53,
+    "constante": {
+     "Q": 0.24890458615975405,
+     "cob": 0.5660377358490566,
+     "Q_recalc": 0.24890458615975408,
+     "cob_recalc": 0.5660377358490566,
+     "n_Err_definido": 59
+    },
+    "fspl_b": {
+     "Q": 0.29661121880028235,
+     "cob": 0.5660377358490566,
+     "Q_recalc": 0.2966112188002823,
+     "cob_recalc": 0.5660377358490566,
+     "n_Err_definido": 59
+    }
+   },
+   {
+    "celula": "campinas_Q2",
+    "n_v_definido": 54,
+    "constante": {
+     "Q": 0.5916911540796052,
+     "cob": 0.6296296296296297,
+     "Q_recalc": 0.5916911540796052,
+     "cob_recalc": 0.6296296296296297,
+     "n_Err_definido": 59
+    },
+    "fspl_b": {
+     "Q": 0.6866408144779023,
+     "cob": 0.7777777777777778,
+     "Q_recalc": 0.6866408144779024,
+     "cob_recalc": 0.7777777777777778,
+     "n_Err_definido": 59
+    }
+   },
+   {
+    "celula": "campinas_Q3",
+    "n_v_definido": 52,
+    "constante": {
+     "Q": 0.7704166265537005,
+     "cob": 0.6538461538461539,
+     "Q_recalc": 0.7704166265537004,
+     "cob_recalc": 0.6538461538461539,
+     "n_Err_definido": 57
+    },
+    "fspl_b": {
+     "Q": 0.7117773488284179,
+     "cob": 0.6730769230769231,
+     "Q_recalc": 0.7117773488284178,
+     "cob_recalc": 0.6730769230769231,
+     "n_Err_definido": 57
+    }
+   },
+   {
+    "celula": "campinas_Q4",
+    "n_v_definido": 49,
+    "constante": {
+     "Q": 0.5551315860426335,
+     "cob": 0.5918367346938775,
+     "Q_recalc": 0.5551315860426334,
+     "cob_recalc": 0.5918367346938775,
+     "n_Err_definido": 58
+    },
+    "fspl_b": {
+     "Q": 0.4212717508715792,
+     "cob": 0.5102040816326531,
+     "Q_recalc": 0.4212717508715792,
+     "cob_recalc": 0.5102040816326531,
+     "n_Err_definido": 58
+    }
+   },
+   {
+    "celula": "lins_Q1",
+    "n_v_definido": 40,
+    "constante": {
+     "Q": 0.31287926359064333,
+     "cob": 0.6,
+     "Q_recalc": 0.3128792635906434,
+     "cob_recalc": 0.6,
+     "n_Err_definido": 56
+    },
+    "fspl_b": {
+     "Q": 0.4316810711633544,
+     "cob": 0.575,
+     "Q_recalc": 0.43168107116335447,
+     "cob_recalc": 0.575,
+     "n_Err_definido": 56
+    }
+   },
+   {
+    "celula": "lins_Q2",
+    "n_v_definido": 53,
+    "constante": {
+     "Q": 0.7285191555233219,
+     "cob": 0.6792452830188679,
+     "Q_recalc": 0.7285191555233218,
+     "cob_recalc": 0.6792452830188679,
+     "n_Err_definido": 59
+    },
+    "fspl_b": {
+     "Q": 0.7171121853260848,
+     "cob": 0.8301886792452831,
+     "Q_recalc": 0.7171121853260847,
+     "cob_recalc": 0.8301886792452831,
+     "n_Err_definido": 59
+    }
+   },
+   {
+    "celula": "lins_Q3",
+    "n_v_definido": 35,
+    "constante": {
+     "Q": 0.4200926661324318,
+     "cob": 0.5714285714285714,
+     "Q_recalc": 0.4200926661324317,
+     "cob_recalc": 0.5714285714285714,
+     "n_Err_definido": 48
+    },
+    "fspl_b": {
+     "Q": 0.7853524799395439,
+     "cob": 0.6285714285714286,
+     "Q_recalc": 0.785352479939544,
+     "cob_recalc": 0.6285714285714286,
+     "n_Err_definido": 48
+    }
+   },
+   {
+    "celula": "lins_Q4",
+    "n_v_definido": 35,
+    "constante": {
+     "Q": 0.15984803468795744,
+     "cob": 0.37142857142857144,
+     "Q_recalc": 0.1598480346879575,
+     "cob_recalc": 0.37142857142857144,
+     "n_Err_definido": 53
+    },
+    "fspl_b": {
+     "Q": 0.4623954976467497,
+     "cob": 0.6571428571428571,
+     "Q_recalc": 0.46239549764674925,
+     "cob_recalc": 0.6571428571428571,
+     "n_Err_definido": 53
+    }
+   },
+   {
+    "celula": "sorocaba_Q1",
+    "n_v_definido": 46,
+    "constante": {
+     "Q": 0.23183165631766367,
+     "cob": 0.4782608695652174,
+     "Q_recalc": 0.2318316563176637,
+     "cob_recalc": 0.4782608695652174,
+     "n_Err_definido": 58
+    },
+    "fspl_b": {
+     "Q": 0.39716280506806123,
+     "cob": 0.6086956521739131,
+     "Q_recalc": 0.39716280506806134,
+     "cob_recalc": 0.6086956521739131,
+     "n_Err_definido": 58
+    }
+   },
+   {
+    "celula": "sorocaba_Q2",
+    "n_v_definido": 50,
+    "constante": {
+     "Q": 0.6037318398114017,
+     "cob": 0.6,
+     "Q_recalc": 0.6037318398114017,
+     "cob_recalc": 0.6,
+     "n_Err_definido": 59
+    },
+    "fspl_b": {
+     "Q": 0.8421101496892378,
+     "cob": 0.74,
+     "Q_recalc": 0.8421101496892375,
+     "cob_recalc": 0.74,
+     "n_Err_definido": 59
+    }
+   },
+   {
+    "celula": "sorocaba_Q3",
+    "n_v_definido": 39,
+    "constante": {
+     "Q": 0.30976564209883084,
+     "cob": 0.5384615384615384,
+     "Q_recalc": 0.3097656420988309,
+     "cob_recalc": 0.5384615384615384,
+     "n_Err_definido": 55
+    },
+    "fspl_b": {
+     "Q": 0.4802405274892635,
+     "cob": 0.5128205128205128,
+     "Q_recalc": 0.4802405274892636,
+     "cob_recalc": 0.5128205128205128,
+     "n_Err_definido": 55
+    }
+   },
+   {
+    "celula": "sorocaba_Q4",
+    "n_v_definido": 43,
+    "constante": {
+     "Q": 0.5177032612056278,
+     "cob": 0.5813953488372093,
+     "Q_recalc": 0.5177032612056282,
+     "cob_recalc": 0.5813953488372093,
+     "n_Err_definido": 56
+    },
+    "fspl_b": {
+     "Q": 0.8739436183864613,
+     "cob": 0.7209302325581395,
+     "Q_recalc": 0.8739436183864613,
+     "cob_recalc": 0.7209302325581395,
+     "n_Err_definido": 56
+    }
+   }
+  ]
+ },
+ "T10_n_v_definido_igual_60_menos_indefinidos": {
+  "regra": "n_v_definido == 60 - n_indefinidos_k_lt_2, checked on the 32 rows (16 cells x constante__validos and fspl_b__validos); n_v_definido equal for the two predictors in each cell (same test blocks with a valid node)",
+  "passou": true,
+  "faixa_n_v_definido": [
+   35,
+   57
+  ]
+ },
+ "T10_agregados_vs_veredito_independente": {
+  "agregados": {
+   "constante__validos": {
+    "Q_mediano": 0.5059777151370085,
+    "Q_min": 0.15984803468795744,
+    "Q_max": 0.7704166265537005,
+    "n_cob_ge_0.80": 0,
+    "n_cob_lt_0.60": 7,
+    "cobertura_min": 0.37142857142857144,
+    "cobertura_max": 0.775
+   },
+   "fspl_b__validos": {
+    "Q_mediano": 0.485312333841169,
+    "Q_min": 0.29661121880028235,
+    "Q_max": 0.8739436183864613,
+    "n_cob_ge_0.80": 1,
+    "n_cob_lt_0.60": 5,
+    "cobertura_min": 0.41304347826086957,
+    "cobertura_max": 0.8301886792452831
+   }
+  },
+  "veredito": "confirmado"
+ },
+ "T10_nota_Err_definido": {
+  "nota": "The mean and the variance of Err (denominator of Q and reference of the coverage) follow reading A: over the draws with Err defined (at least one valid test node), not over all 60",
+  "n_Err_definido_valores_distintos": [
+   48,
+   53,
+   55,
+   56,
+   57,
+   58,
+   59
+  ]
+ },
+ "T10_campos_ausentes_no_json": {
+  "rotulo 'blocos com no valido' como nome de campo": "not available; n_v_definido used instead (k >= 2 test blocks with a scored node, criterion R5)",
+  "cobertura e Q por preditor FSPL (b) com nome 'FSPL (b)'": "the JSON calls it fspl_b; the table prints 'FSPL (second calibration)', the name used in the manuscript (T8)"
+ },
+ "TN_v3-13_ambientes_dos_ref": {
+  "ambientes_do_manuscrito": {
+   "prop:retention": {
+    "ambiente": "Remark",
+    "linha_do_begin": 253
+   },
+   "prop:degree": {
+    "ambiente": "Lemma",
+    "linha_do_begin": 389
+   },
+   "prop:deflation": {
+    "ambiente": "Lemma",
+    "linha_do_begin": 487
+   },
+   "rem:designs": {
+    "ambiente": "Proposition",
+    "linha_do_begin": 317
+   },
+   "rem:refit": {
+    "ambiente": "Proposition",
+    "linha_do_begin": 341
+   }
+  },
+  "achados_depois": [
+   {
+    "arquivo": "tables_v3-12/TN_notacao_v3-12.tex",
+    "linha": 16,
+    "palavra_antes": "Remark",
+    "rotulo": "prop:retention",
+    "ambiente_no_manuscrito": "Remark"
+   },
+   {
+    "arquivo": "tables_v3-12/TN_notacao_v3-12.tex",
+    "linha": 26,
+    "palavra_antes": "Lemma",
+    "rotulo": "prop:degree",
+    "ambiente_no_manuscrito": "Lemma"
+   },
+   {
+    "arquivo": "tables_v3-12/TN_notacao_v3-12.tex",
+    "linha": 27,
+    "palavra_antes": "Lemma",
+    "rotulo": "prop:degree",
+    "ambiente_no_manuscrito": "Lemma"
+   },
+   {
+    "arquivo": "tables_v3-12/TN_notacao_v3-12.csv",
+    "linha": 11,
+    "palavra_antes": "Remark",
+    "rotulo": "prop:retention",
+    "ambiente_no_manuscrito": "Remark"
+   },
+   {
+    "arquivo": "tables_v3-12/TN_notacao_v3-12.csv",
+    "linha": 21,
+    "palavra_antes": "Lemma",
+    "rotulo": "prop:degree",
+    "ambiente_no_manuscrito": "Lemma"
+   },
+   {
+    "arquivo": "tables_v3-12/TN_notacao_v3-12.csv",
+    "linha": 22,
+    "palavra_antes": "Lemma",
+    "rotulo": "prop:degree",
+    "ambiente_no_manuscrito": "Lemma"
+   }
+  ],
+  "todos_conferem": true,
+  "passou": true
+ },
+ "T6_v3-13_rotulo_FSPL": {
+  "de": "FSPL (second calibration)",
+  "para": "FSPL (calibrated once)",
+  "linhas": 4,
+  "valores_inalterados": true,
+  "passou": true
+ },
+ "T9_v3-13d_legenda_igual_ao_manuscrito": {
+  "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/redacao_v3-12/main_v3-13d.tex",
+  "sha256_main": "aa74be7fe021d2bd55436566cca92b71f861dd707a1bfe4124674b32acd32973",
+  "passou": true
+ },
+ "T9_v3-12t_sd_recalculado_reproduz_impresso": {
+  "recalculado": [
+   "1.25",
+   "1.13",
+   "3.26",
+   "2.01",
+   "3.86",
+   "4.08",
+   "2.46",
+   "3.08"
+  ],
+  "impresso_v3-12h": [
+   "1.25",
+   "1.13",
+   "3.26",
+   "2.01",
+   "3.86",
+   "4.08",
+   "2.46",
+   "3.08"
+  ],
+  "passou": true
+ },
+ "T9_conferencia_por_caminho_json": {
+  "fontes": {
+   "G1_bloco1": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1/agregado_G1_v5_bloco1.json",
+   "G1_bloco2": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1/agregado_G1_v5_bloco2.json",
+   "G1_bloco4": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1/agregado_G1_v10_bloco4.json",
+   "G1_bloco3": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1/agregado_G1_v8_bloco3.json"
+  },
+  "verificacoes": 198,
+  "falhas": [],
+  "passou": true,
+  "linhas": [
+   {
+    "celula": "bauru_Q1",
+    "modelo": "gnn",
+    "n": 20,
+    "excluidos": "0",
+    "dp_json": 1.248182158036913,
+    "dp_recalculado_stdev_ddof1": 1.248182158036913,
+    "razao_json": 9.455925439673583,
+    "spearman_json": 0.6060150375939849,
+    "media_recalculada": 1.4596977222949648
+   },
+   {
+    "celula": "bauru_Q1",
+    "modelo": "mlp",
+    "n": 20,
+    "excluidos": "0",
+    "dp_json": 1.1304380663198776,
+    "dp_recalculado_stdev_ddof1": 1.1304380663198776,
+    "razao_json": 8.563924744847558,
+    "spearman_json": 0.6075187969924812,
+    "media_recalculada": 2.8863064442565927
+   },
+   {
+    "celula": "campinas_Q1",
+    "modelo": "gnn",
+    "n": 20,
+    "excluidos": "0",
+    "dp_json": 3.260303378611019,
+    "dp_recalculado_stdev_ddof1": 3.260303378611019,
+    "razao_json": 24.699268019780444,
+    "spearman_json": 0.37293233082706767,
+    "media_recalculada": 2.5667549876004205
+   },
+   {
+    "celula": "campinas_Q1",
+    "modelo": "mlp",
+    "n": 20,
+    "excluidos": "0",
+    "dp_json": 2.0050368461786,
+    "dp_recalculado_stdev_ddof1": 2.0050368461786,
+    "razao_json": 15.189673077110607,
+    "spearman_json": 0.3293233082706767,
+    "media_recalculada": 5.106673600208566
+   },
+   {
+    "celula": "bauru_Q3",
+    "modelo": "gnn",
+    "n": 16,
+    "excluidos": "2+2",
+    "dp_json": 3.85833963975475,
+    "dp_recalculado_stdev_ddof1": 3.85833963975475,
+    "razao_json": 29.2298457557178,
+    "spearman_json": 0.9470588235294116,
+    "media_recalculada": 3.5646979251996433
+   },
+   {
+    "celula": "bauru_Q3",
+    "modelo": "mlp",
+    "n": 16,
+    "excluidos": "2+2",
+    "dp_json": 4.075810656190718,
+    "dp_recalculado_stdev_ddof1": 4.075810656190718,
+    "razao_json": 30.87735345599029,
+    "spearman_json": 0.7676470588235293,
+    "media_recalculada": 5.045277243516309
+   },
+   {
+    "celula": "campinas_Q3",
+    "modelo": "gnn",
+    "n": 19,
+    "excluidos": "1+0",
+    "dp_json": 2.4601856124049646,
+    "dp_recalculado_stdev_ddof1": 2.4601856124049646,
+    "razao_json": 18.6377697909467,
+    "spearman_json": 0.9070175438596491,
+    "media_recalculada": 4.055206922163788
+   },
+   {
+    "celula": "campinas_Q3",
+    "modelo": "mlp",
+    "n": 19,
+    "excluidos": "1+0",
+    "dp_json": 3.080107743587456,
+    "dp_recalculado_stdev_ddof1": 3.080107743587456,
+    "razao_json": 23.334149572632242,
+    "spearman_json": 0.8210526315789475,
+    "media_recalculada": 5.643700630443268
+   }
+  ]
+ },
+ "T9_spearman": {
+  "nota": "Spearman reread from the aggregate by path and checked against CSV and TEX; not recalculated here (it requires the constant-predictor MAE per split draw, which is in 2.1 and in the recalculation gpu/G1_votos_bloco*/veredito.json)",
+  "veredito_independente": {
+   "G1_veredito_bloco1": "confirmado",
+   "G1_veredito_bloco2": "confirmado",
+   "G1_veredito_bloco4": "confirmado",
+   "G1_veredito_bloco3": "confirmado"
+  }
+ },
+ "T9_faixa_razao_0_132": {
+  "min": 8.563924744847558,
+  "max": 30.87735345599029,
+  "impresso": "8.6 a 30.9"
+ },
+ "T9_paridade_faixa_db": {
+  "min": 0.02745364559522756,
+  "max": 0.035917179276856157
+ },
+ "T9_campos_ausentes_no_json": {
+  "n_sorteios_nao_treinaveis em agregado_G1_v5_bloco1.json (bauru_Q1, campinas_Q1)": "field absent; treated as 0 (list sem_validos empty; n_sorteios_plano_usados = 20 = n_sorteios_com_validos)",
+  "dp_entre_sementes_pooled_db nas celulas Q3": "absent by design (block 2 has only Q1); printed as '--' (empty csv)"
+ }
+}

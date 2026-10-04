@@ -1,0 +1,1111 @@
+{
+ "id": "E4_hajek_p_fechado",
+ "script_sha256": "5d7f102a6df0789b9819e364dd8ce8262267b55bbe0bce41bec4a7ff7e85d2de",
+ "data_utc": "2026-10-04T00:57:28.591131+00:00",
+ "comando": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python /trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_13_E4_hajek_p_fechado.py",
+ "c_info_por_celula": {
+  "bauru_Q1": {
+   "c_T": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": 0.027254055631791754,
+    "3": 0.002646492509798031
+   },
+   "c_origem": {
+    "0": "fechado(T_classe)",
+    "1": "fechado(T_classe)",
+    "2": "frequencia_empirica_condicional_200(R4)",
+    "3": "fechado(T_classe)"
+   },
+   "lo": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": 0.02008220786846741,
+    "3": 0.002646492509798031,
+    "4": 0.00033081156372475386
+   },
+   "freq_condicional_200": {
+    "0": 1.0,
+    "1": 0.1485214131610027,
+    "2": 0.027254055631791754,
+    "3": 0.0017535297278071533
+   },
+   "freq_incondicional_200_media_classe": {
+    "0": 0.15074129787117801,
+    "1": 0.02253709416345585,
+    "2": 0.004153030146277704,
+    "3": 0.0002683998899470619
+   },
+   "c_L": {
+    "0|falha=0": 1.0,
+    "1|falha=0": 0.1450381679389313,
+    "1|falha=1": 0.14403390590443596,
+    "2|falha=0": 0.02008220786846741,
+    "2|falha=1": 0.02725549111556714,
+    "3|falha=0": 0.002646492509798031
+   },
+   "vf_T_R4": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": null,
+    "3": 0.002646492509798031
+   }
+  },
+  "campinas_Q1": {
+   "c_T": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": 0.02752984443273903,
+    "3": 0.002646492509798031
+   },
+   "c_origem": {
+    "0": "fechado(T_classe)",
+    "1": "fechado(T_classe)",
+    "2": "frequencia_empirica_condicional_200(R4)",
+    "3": "fechado(T_classe)"
+   },
+   "lo": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": 0.02008220786846741,
+    "3": 0.002646492509798031,
+    "4": 0.00033081156372475386
+   },
+   "freq_condicional_200": {
+    "0": 1.0,
+    "1": 0.14857035379769432,
+    "2": 0.02752984443273903,
+    "3": 0.0017535874082177997
+   },
+   "freq_incondicional_200_media_classe": {
+    "0": 0.1506121459563821,
+    "1": 0.022536741029281555,
+    "2": 0.004195922197032405,
+    "3": 0.00026842979396442235
+   },
+   "c_L": {
+    "0|falha=0": 1.0,
+    "1|falha=0": 0.1450381679389313,
+    "1|falha=1": 0.14486373966422605,
+    "2|falha=0": 0.02008220786846741,
+    "2|falha=1": 0.027530543841030364,
+    "3|falha=0": 0.002646492509798031
+   },
+   "vf_T_R4": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": null,
+    "3": 0.002646492509798031
+   }
+  },
+  "lins_Q1": {
+   "c_T": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": 0.027248082553675407,
+    "3": 0.002646492509798031
+   },
+   "c_origem": {
+    "0": "fechado(T_classe)",
+    "1": "fechado(T_classe)",
+    "2": "frequencia_empirica_condicional_200(R4)",
+    "3": "fechado(T_classe)"
+   },
+   "lo": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": 0.02008220786846741,
+    "3": 0.002646492509798031,
+    "4": 0.00033081156372475386
+   },
+   "freq_condicional_200": {
+    "0": 1.0,
+    "1": 0.14846303558934712,
+    "2": 0.027248082553675407,
+    "3": 0.0017538432741051944
+   },
+   "freq_incondicional_200_media_classe": {
+    "0": 0.15087577487993134,
+    "1": 0.022536775102848808,
+    "2": 0.004154627638841739,
+    "3": 0.0002684027072645375
+   },
+   "c_L": {
+    "0|falha=0": 1.0,
+    "1|falha=0": 0.1450381679389313,
+    "1|falha=1": 0.15324794646531362,
+    "2|falha=0": 0.02008220786846741,
+    "2|falha=1": 0.027248615102662854,
+    "3|falha=0": 0.002646492509798031
+   },
+   "vf_T_R4": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": null,
+    "3": 0.002646492509798031
+   }
+  },
+  "sorocaba_Q1": {
+   "c_T": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": 0.02766790970246184,
+    "3": 0.002646492509798031
+   },
+   "c_origem": {
+    "0": "fechado(T_classe)",
+    "1": "fechado(T_classe)",
+    "2": "frequencia_empirica_condicional_200(R4)",
+    "3": "fechado(T_classe)"
+   },
+   "lo": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": 0.02008220786846741,
+    "3": 0.002646492509798031,
+    "4": 0.00033081156372475386
+   },
+   "freq_condicional_200": {
+    "0": 1.0,
+    "1": 0.1485988252441968,
+    "2": 0.02766790970246184,
+    "3": 0.0017535929613731248
+   },
+   "freq_incondicional_200_media_classe": {
+    "0": 0.15050412005481553,
+    "1": 0.022529508696571377,
+    "2": 0.00422760272619518,
+    "3": 0.00026843484657156584
+   },
+   "c_L": {
+    "0|falha=0": 1.0,
+    "1|falha=0": 0.1450381679389313,
+    "1|falha=1": 0.14525216415898617,
+    "2|falha=0": 0.02008220786846741,
+    "2|falha=1": 0.027668725293295764,
+    "3|falha=0": 0.002646492509798031
+   },
+   "vf_T_R4": {
+    "0": 1.0,
+    "1": 0.1450381679389313,
+    "2": null,
+    "3": 0.002646492509798031
+   }
+  }
+ },
+ "V1_H_recomputado_igual_R2_resumo": {
+  "passou": true,
+  "detalhe": {
+   "bauru_Q1": {
+    "constante": {
+     "validos": {
+      "reqm_recomputado": 7.184095213040981,
+      "reqm_R2": 7.184095213040981,
+      "reqm_igual": true,
+      "vies_recomputado": 0.3619503579574648,
+      "vies_R2": 0.3619503579574648,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 2.2929649599725948,
+      "reqm_R2": 2.2929649599725948,
+      "reqm_igual": true,
+      "vies_recomputado": 0.10209178941545272,
+      "vies_R2": 0.10209178941545272,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    },
+    "fspl_calibrado_b": {
+     "validos": {
+      "reqm_recomputado": 3.3922174973417336,
+      "reqm_R2": 3.3922174973417336,
+      "reqm_igual": true,
+      "vies_recomputado": 0.022429506105116737,
+      "vies_R2": 0.022429506105116737,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 0.8969809609411503,
+      "reqm_R2": 0.8969809609411503,
+      "reqm_igual": true,
+      "vies_recomputado": -0.12412575421926775,
+      "vies_R2": -0.12412575421926775,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    }
+   },
+   "campinas_Q1": {
+    "constante": {
+     "validos": {
+      "reqm_recomputado": 9.249549792768638,
+      "reqm_R2": 9.249549792768638,
+      "reqm_igual": true,
+      "vies_recomputado": 0.28488851928239,
+      "vies_R2": 0.28488851928239,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 2.2404001885711455,
+      "reqm_R2": 2.2404001885711455,
+      "reqm_igual": true,
+      "vies_recomputado": 0.1458711100036898,
+      "vies_R2": 0.1458711100036898,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    },
+    "fspl_calibrado_b": {
+     "validos": {
+      "reqm_recomputado": 3.836995766057699,
+      "reqm_R2": 3.836995766057699,
+      "reqm_igual": true,
+      "vies_recomputado": 0.4596586557116513,
+      "vies_R2": 0.4596586557116513,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 0.7738753217592198,
+      "reqm_R2": 0.7738753217592198,
+      "reqm_igual": true,
+      "vies_recomputado": -0.07010056562188449,
+      "vies_R2": -0.07010056562188449,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    }
+   },
+   "lins_Q1": {
+    "constante": {
+     "validos": {
+      "reqm_recomputado": 7.545915902830855,
+      "reqm_R2": 7.545915902830855,
+      "reqm_igual": true,
+      "vies_recomputado": 1.0698085269105526,
+      "vies_R2": 1.0698085269105526,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 1.6247519803667452,
+      "reqm_R2": 1.6247519803667452,
+      "reqm_igual": true,
+      "vies_recomputado": 0.1558194527609682,
+      "vies_R2": 0.1558194527609682,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    },
+    "fspl_calibrado_b": {
+     "validos": {
+      "reqm_recomputado": 1.7169061240685641,
+      "reqm_R2": 1.7169061240685641,
+      "reqm_igual": true,
+      "vies_recomputado": 0.2640263610259339,
+      "vies_R2": 0.2640263610259339,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 0.7972104010368416,
+      "reqm_R2": 0.7972104010368416,
+      "reqm_igual": true,
+      "vies_recomputado": -0.14217757892946903,
+      "vies_R2": -0.14217757892946903,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    }
+   },
+   "sorocaba_Q1": {
+    "constante": {
+     "validos": {
+      "reqm_recomputado": 8.63836872323506,
+      "reqm_R2": 8.63836872323506,
+      "reqm_igual": true,
+      "vies_recomputado": -0.30451541257324166,
+      "vies_R2": -0.30451541257324166,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 1.8603992514541436,
+      "reqm_R2": 1.8603992514541436,
+      "reqm_igual": true,
+      "vies_recomputado": 0.06874416805970096,
+      "vies_R2": 0.06874416805970096,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    },
+    "fspl_calibrado_b": {
+     "validos": {
+      "reqm_recomputado": 4.62361554313729,
+      "reqm_R2": 4.62361554313729,
+      "reqm_igual": true,
+      "vies_recomputado": 0.9545832985206477,
+      "vies_R2": 0.9545832985206477,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 0.6834976125291558,
+      "reqm_R2": 0.6834976125291558,
+      "reqm_igual": true,
+      "vies_recomputado": 0.007492754199798668,
+      "vies_R2": 0.007492754199798668,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    }
+   }
+  },
+  "regra": "RMSE (reqm) and bias == (exact float equality) and per-draw vector == R2_por_sorteio (NaN==NaN)"
+ },
+ "V2_J_p200_igual_R2": {
+  "passou": true,
+  "detalhe": {
+   "bauru_Q1": {
+    "constante": {
+     "validos": {
+      "reqm_recomputado": 8.158946515710534,
+      "reqm_R2": 8.158946515710534,
+      "reqm_igual": true,
+      "vies_recomputado": -0.26966464665905576,
+      "vies_R2": -0.26966464665905576,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 3.5742928240110605,
+      "reqm_R2": 3.5742928240110605,
+      "reqm_igual": true,
+      "vies_recomputado": 0.09719841593471701,
+      "vies_R2": 0.09719841593471701,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    },
+    "fspl_calibrado_b": {
+     "validos": {
+      "reqm_recomputado": 4.016774788275833,
+      "reqm_R2": 4.016774788275833,
+      "reqm_igual": true,
+      "vies_recomputado": 0.42436216932858617,
+      "vies_R2": 0.42436216932858617,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 1.370498984163081,
+      "reqm_R2": 1.370498984163081,
+      "reqm_igual": true,
+      "vies_recomputado": -0.041022407320769005,
+      "vies_R2": -0.041022407320769005,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    }
+   },
+   "campinas_Q1": {
+    "constante": {
+     "validos": {
+      "reqm_recomputado": 9.822367342014852,
+      "reqm_R2": 9.822367342014852,
+      "reqm_igual": true,
+      "vies_recomputado": -0.29754047057399546,
+      "vies_R2": -0.29754047057399546,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 3.202878696843709,
+      "reqm_R2": 3.202878696843709,
+      "reqm_igual": true,
+      "vies_recomputado": 0.10327110316701038,
+      "vies_R2": 0.10327110316701038,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    },
+    "fspl_calibrado_b": {
+     "validos": {
+      "reqm_recomputado": 4.2415283651448,
+      "reqm_R2": 4.2415283651448,
+      "reqm_igual": true,
+      "vies_recomputado": 0.7254237657111631,
+      "vies_R2": 0.7254237657111631,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 1.231678343500271,
+      "reqm_R2": 1.231678343500271,
+      "reqm_igual": true,
+      "vies_recomputado": -0.004701091285165049,
+      "vies_R2": -0.004701091285165049,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    }
+   },
+   "lins_Q1": {
+    "constante": {
+     "validos": {
+      "reqm_recomputado": 7.80990278737731,
+      "reqm_R2": 7.80990278737731,
+      "reqm_igual": true,
+      "vies_recomputado": 0.7497763953840249,
+      "vies_R2": 0.7497763953840249,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 2.2757716500588767,
+      "reqm_R2": 2.2757716500588767,
+      "reqm_igual": true,
+      "vies_recomputado": 0.061661417007217834,
+      "vies_R2": 0.061661417007217834,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    },
+    "fspl_calibrado_b": {
+     "validos": {
+      "reqm_recomputado": 2.000065219534797,
+      "reqm_R2": 2.000065219534797,
+      "reqm_igual": true,
+      "vies_recomputado": 0.41044820961004636,
+      "vies_R2": 0.41044820961004636,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 1.1729052625751835,
+      "reqm_R2": 1.1729052625751835,
+      "reqm_igual": true,
+      "vies_recomputado": -0.04431777521953961,
+      "vies_R2": -0.04431777521953961,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    }
+   },
+   "sorocaba_Q1": {
+    "constante": {
+     "validos": {
+      "reqm_recomputado": 9.383470791446992,
+      "reqm_R2": 9.383470791446992,
+      "reqm_igual": true,
+      "vies_recomputado": -0.4083655244878397,
+      "vies_R2": -0.4083655244878397,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 2.6257745370844208,
+      "reqm_R2": 2.6257745370844208,
+      "reqm_igual": true,
+      "vies_recomputado": 0.08258572433196187,
+      "vies_R2": 0.08258572433196187,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    },
+    "fspl_calibrado_b": {
+     "validos": {
+      "reqm_recomputado": 5.09313865675997,
+      "reqm_R2": 5.09313865675997,
+      "reqm_igual": true,
+      "vies_recomputado": 1.0792422021070305,
+      "vies_R2": 1.0792422021070305,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     },
+     "todos": {
+      "reqm_recomputado": 1.1205699035736567,
+      "reqm_R2": 1.1205699035736567,
+      "reqm_igual": true,
+      "vies_recomputado": -0.004907277666905685,
+      "vies_R2": -0.004907277666905685,
+      "vies_igual": true,
+      "mu_U_igual": true,
+      "por_sorteio_igual": true,
+      "n_sorteios_comparados": 200
+     }
+    }
+   }
+  },
+  "regra": "idem para J_p200"
+ },
+ "V3_p_fechado_media_por_classe_igual_valor_fechado_R4_e_nenhum_p_zero": {
+  "passou": true,
+  "detalhe": {
+   "bauru_Q1": {
+    "por_classe": {
+     "m=0": {
+      "media_c_do_p_i": 1.0,
+      "alvo": 1.0,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 0.0,
+      "n_nos": 4923709
+     },
+     "m=1": {
+      "media_c_do_p_i": 0.14503816793893126,
+      "alvo": 0.1450381679389313,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 2.7755575615628914e-17,
+      "n_nos": 6131625
+     },
+     "m=2": {
+      "media_c_do_p_i": 0.02725405563179176,
+      "alvo": 0.027254055631791754,
+      "alvo_origem": "frequencia_media_nodal(R4) (m=2: no closed form)",
+      "dif_abs": 6.938893903907228e-18,
+      "n_nos": 396301
+     },
+     "m=3": {
+      "media_c_do_p_i": 0.0026464925097980305,
+      "alvo": 0.002646492509798031,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 4.336808689942018e-19,
+      "n_nos": 1508365
+     }
+    },
+    "igual_a_1e12": true,
+    "p_min": 0.00040098371360576226,
+    "n_p_zero": 0,
+    "nenhum_p_zero": true
+   },
+   "campinas_Q1": {
+    "por_classe": {
+     "m=0": {
+      "media_c_do_p_i": 1.0,
+      "alvo": 1.0,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 0.0,
+      "n_nos": 4899820
+     },
+     "m=1": {
+      "media_c_do_p_i": 0.14503816793893132,
+      "alvo": 0.1450381679389313,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 2.7755575615628914e-17,
+      "n_nos": 6138165
+     },
+     "m=2": {
+      "media_c_do_p_i": 0.027529844432739033,
+      "alvo": 0.02752984443273903,
+      "alvo_origem": "frequencia_media_nodal(R4) (m=2: no closed form)",
+      "dif_abs": 3.469446951953614e-18,
+      "n_nos": 407131
+     },
+     "m=3": {
+      "media_c_do_p_i": 0.00264649250979803,
+      "alvo": 0.002646492509798031,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 8.673617379884035e-19,
+      "n_nos": 1514884
+     }
+    },
+    "igual_a_1e12": true,
+    "p_min": 0.00040098371360576226,
+    "n_p_zero": 0,
+    "nenhum_p_zero": true
+   },
+   "lins_Q1": {
+    "por_classe": {
+     "m=0": {
+      "media_c_do_p_i": 1.0000000000000002,
+      "alvo": 1.0,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 2.220446049250313e-16,
+      "n_nos": 4935926
+     },
+     "m=1": {
+      "media_c_do_p_i": 0.14503816793893132,
+      "alvo": 0.1450381679389313,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 2.7755575615628914e-17,
+      "n_nos": 6124524
+     },
+     "m=2": {
+      "media_c_do_p_i": 0.027248082553675414,
+      "alvo": 0.027248082553675407,
+      "alvo_origem": "frequencia_media_nodal(R4) (m=2: no closed form)",
+      "dif_abs": 6.938893903907228e-18,
+      "n_nos": 397665
+     },
+     "m=3": {
+      "media_c_do_p_i": 0.00264649250979803,
+      "alvo": 0.002646492509798031,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 8.673617379884035e-19,
+      "n_nos": 1501885
+     }
+    },
+    "igual_a_1e12": true,
+    "p_min": 0.00040098371360576226,
+    "n_p_zero": 0,
+    "nenhum_p_zero": true
+   },
+   "sorocaba_Q1": {
+    "por_classe": {
+     "m=0": {
+      "media_c_do_p_i": 1.0000000000000002,
+      "alvo": 1.0,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 2.220446049250313e-16,
+      "n_nos": 4894231
+     },
+     "m=1": {
+      "media_c_do_p_i": 0.1450381679389313,
+      "alvo": 0.1450381679389313,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 0.0,
+      "n_nos": 6139546
+     },
+     "m=2": {
+      "media_c_do_p_i": 0.027667909702461847,
+      "alvo": 0.02766790970246184,
+      "alvo_origem": "frequencia_media_nodal(R4) (m=2: no closed form)",
+      "dif_abs": 6.938893903907228e-18,
+      "n_nos": 404960
+     },
+     "m=3": {
+      "media_c_do_p_i": 0.0026464925097980313,
+      "alvo": 0.002646492509798031,
+      "alvo_origem": "valor_fechado(R4)",
+      "dif_abs": 4.336808689942018e-19,
+      "n_nos": 1521263
+     }
+    },
+    "igual_a_1e12": true,
+    "p_min": 0.00040098371360576226,
+    "n_p_zero": 0,
+    "nenhum_p_zero": true
+   }
+  },
+  "regra": "mean of p_i/(k_te/N) per class m == valor_fechado (T_classe) of R4 at m=0,1,3 and == frequencia_media_nodal at m=2; tolerance 1e-12; p_i>0 at every node"
+ },
+ "V4_soma_p_vs_nos_pontuados": {
+  "detalhe": {
+   "bauru_Q1": {
+    "T_primaria": {
+     "soma_p": 883003.2337369737,
+     "n_te_medio_por_sorteio": 882445.99,
+     "razao": 1.000631476309359,
+     "soma_p_validos": 140253.21910575958,
+     "n_te_validos_medio": 138787.94,
+     "razao_validos": 1.0105576832234817
+    },
+    "L_no_a_no": {
+     "soma_p": 883002.4476800822,
+     "n_te_medio_por_sorteio": 882445.99,
+     "razao": 1.0006305855388182,
+     "soma_p_validos": 140252.9141663377,
+     "n_te_validos_medio": 138787.94,
+     "razao_validos": 1.0105554860626773
+    },
+    "C_todas": {
+     "soma_p": 882572.5957914505,
+     "n_te_medio_por_sorteio": 882445.99,
+     "razao": 1.000143471433816,
+     "soma_p_validos": 140179.9575942136,
+     "n_te_validos_medio": 138787.94,
+     "razao_validos": 1.0100298166700479
+    },
+    "freq_classe": {
+     "soma_p": 886035.2094457806,
+     "n_te_medio_por_sorteio": 882445.99,
+     "razao": 1.0040673531144728,
+     "soma_p_validos": 140754.06639760907,
+     "n_te_validos_medio": 138787.94,
+     "razao_validos": 1.0141664066604712
+    },
+    "emp2_incond": {
+     "soma_p": 883012.5974489532,
+     "n_te_medio_por_sorteio": 882445.99,
+     "razao": 1.0006420873972732,
+     "soma_p_validos": 140254.81209054048,
+     "n_te_validos_medio": 138787.94,
+     "razao_validos": 1.0105691610563603
+    },
+    "p200": {
+     "soma_p": 882445.99,
+     "n_te_medio_por_sorteio": 882445.99,
+     "razao": 1.0,
+     "soma_p_validos": 138787.94,
+     "n_te_validos_medio": 138787.94,
+     "razao_validos": 1.0
+    }
+   },
+   "campinas_Q1": {
+    "T_primaria": {
+     "soma_p": 879591.7558120952,
+     "n_te_medio_por_sorteio": 878421.57,
+     "razao": 1.001332146035639,
+     "soma_p_validos": 122704.16813603905,
+     "n_te_validos_medio": 120618.585,
+     "razao_validos": 1.0172907279258752
+    },
+    "L_no_a_no": {
+     "soma_p": 879591.6739429601,
+     "n_te_medio_por_sorteio": 878421.57,
+     "razao": 1.0013320528353602,
+     "soma_p_validos": 122704.13402760796,
+     "n_te_validos_medio": 120618.585,
+     "razao_validos": 1.017290445146641
+    },
+    "C_todas": {
+     "soma_p": 879132.3370663305,
+     "n_te_medio_por_sorteio": 878421.57,
+     "razao": 1.0008091411807323,
+     "soma_p_validos": 122641.71180443914,
+     "n_te_validos_medio": 120618.585,
+     "razao_validos": 1.0167729276913597
+    },
+    "freq_classe": {
+     "soma_p": 882671.8303514668,
+     "n_te_medio_por_sorteio": 878421.57,
+     "razao": 1.0048385200188867,
+     "soma_p_validos": 123143.74140218597,
+     "n_te_validos_medio": 120618.585,
+     "razao_validos": 1.020935052439771
+    },
+    "emp2_incond": {
+     "soma_p": 879601.8256463764,
+     "n_te_medio_por_sorteio": 878421.57,
+     "razao": 1.001343609590981,
+     "soma_p_validos": 122705.53709391202,
+     "n_te_validos_medio": 120618.585,
+     "razao_validos": 1.017302077403014
+    },
+    "p200": {
+     "soma_p": 878421.5700000001,
+     "n_te_medio_por_sorteio": 878421.57,
+     "razao": 1.0000000000000002,
+     "soma_p_validos": 120618.585,
+     "n_te_validos_medio": 120618.585,
+     "razao_validos": 1.0
+    }
+   },
+   "lins_Q1": {
+    "T_primaria": {
+     "soma_p": 884700.9206984547,
+     "n_te_medio_por_sorteio": 884793.94,
+     "razao": 0.9998948689662757,
+     "soma_p_validos": 76714.8337590313,
+     "n_te_validos_medio": 78431.325,
+     "razao_validos": 0.9781147234097002
+    },
+    "L_no_a_no": {
+     "soma_p": 884703.0463416257,
+     "n_te_medio_por_sorteio": 884793.94,
+     "razao": 0.9998972713823354,
+     "soma_p_validos": 76715.14275311684,
+     "n_te_validos_medio": 78431.325,
+     "razao_validos": 0.9781186630866793
+    },
+    "C_todas": {
+     "soma_p": 884269.160462592,
+     "n_te_medio_por_sorteio": 884793.94,
+     "razao": 0.9994068906739937,
+     "soma_p_validos": 76679.09124469236,
+     "n_te_validos_medio": 78431.325,
+     "razao_validos": 0.9776590060756001
+    },
+    "freq_classe": {
+     "soma_p": 887675.924883977,
+     "n_te_medio_por_sorteio": 884793.94,
+     "razao": 1.0032572384977876,
+     "soma_p_validos": 76967.61924002072,
+     "n_te_validos_medio": 78431.325,
+     "razao_validos": 0.9813377402462693
+    },
+    "emp2_incond": {
+     "soma_p": 884711.3117971354,
+     "n_te_medio_por_sorteio": 884793.94,
+     "razao": 0.9999066130551656,
+     "soma_p_validos": 76715.69396792213,
+     "n_te_validos_medio": 78431.325,
+     "razao_validos": 0.9781256910797074
+    },
+    "p200": {
+     "soma_p": 884793.94,
+     "n_te_medio_por_sorteio": 884793.94,
+     "razao": 1.0,
+     "soma_p_validos": 78431.32500000001,
+     "n_te_validos_medio": 78431.325,
+     "razao_validos": 1.0000000000000002
+    }
+   },
+   "sorocaba_Q1": {
+    "T_primaria": {
+     "soma_p": 878777.259343157,
+     "n_te_medio_por_sorteio": 877043.255,
+     "razao": 1.0019771024214275,
+     "soma_p_validos": 111621.38188464551,
+     "n_te_validos_medio": 108533.4,
+     "razao_validos": 1.0284519040649747
+    },
+    "L_no_a_no": {
+     "soma_p": 878777.3758261041,
+     "n_te_medio_por_sorteio": 877043.255,
+     "razao": 1.0019772352346568,
+     "soma_p_validos": 111621.39532783751,
+     "n_te_validos_medio": 108533.4,
+     "razao_validos": 1.0284520279272327
+    },
+    "C_todas": {
+     "soma_p": 878311.8190682032,
+     "n_te_medio_por_sorteio": 877043.255,
+     "razao": 1.001446409924449,
+     "soma_p_validos": 111562.34328675055,
+     "n_te_validos_medio": 108533.4,
+     "razao_validos": 1.0279079369737847
+    },
+    "freq_classe": {
+     "soma_p": 881883.6963537901,
+     "n_te_medio_por_sorteio": 877043.255,
+     "razao": 1.00551904518528,
+     "soma_p_validos": 112022.83465847769,
+     "n_te_validos_medio": 108533.4,
+     "razao_validos": 1.0321507909867165
+    },
+    "emp2_incond": {
+     "soma_p": 878791.6334775344,
+     "n_te_medio_por_sorteio": 877043.255,
+     "razao": 1.0019934917320976,
+     "soma_p_validos": 111623.20516635374,
+     "n_te_validos_medio": 108533.4,
+     "razao_validos": 1.0284687033332942
+    },
+    "p200": {
+     "soma_p": 877043.255,
+     "n_te_medio_por_sorteio": 877043.255,
+     "razao": 1.0,
+     "soma_p_validos": 108533.4,
+     "n_te_validos_medio": 108533.4,
+     "razao_validos": 1.0
+    }
+   }
+  },
+  "regra": "sum of p_i over the domain nodes vs mean (200 split draws) of retained test nodes b=2 (n_te_b2); same for valid nodes. For p200 it is an exact identity. No pass/fail limit fixed: the ratio is reported."
+ },
+ "classes_vs_intermediarios": {
+  "bauru": {
+   "m_igual_intermediario": true,
+   "falha_igual_intermediario": true,
+   "cnt200_igual_cnt_ret_intermediario": true
+  },
+  "campinas": {
+   "m_igual_intermediario": true,
+   "falha_igual_intermediario": true,
+   "cnt200_igual_cnt_ret_intermediario": true
+  },
+  "lins": {
+   "m_igual_intermediario": true,
+   "falha_igual_intermediario": true,
+   "cnt200_igual_cnt_ret_intermediario": true
+  },
+  "sorocaba": {
+   "m_igual_intermediario": true,
+   "falha_igual_intermediario": true,
+   "cnt200_igual_cnt_ret_intermediario": true
+  }
+ },
+ "freq_condicional_R4_recomputada": {
+  "bauru": {
+   "m=0": {
+    "recomputada": 1.0,
+    "json_R4": 1.0,
+    "dif_abs": 0.0
+   },
+   "m=1": {
+    "recomputada": 0.1485214131610027,
+    "json_R4": 0.1485214131610027,
+    "dif_abs": 0.0
+   },
+   "m=2": {
+    "recomputada": 0.027254055631791754,
+    "json_R4": 0.027254055631791754,
+    "dif_abs": 0.0
+   },
+   "m=3": {
+    "recomputada": 0.0017535297278071533,
+    "json_R4": 0.0017535297278071533,
+    "dif_abs": 0.0
+   }
+  },
+  "campinas": {
+   "m=0": {
+    "recomputada": 1.0,
+    "json_R4": 1.0,
+    "dif_abs": 0.0
+   },
+   "m=1": {
+    "recomputada": 0.14857035379769432,
+    "json_R4": 0.14857035379769432,
+    "dif_abs": 0.0
+   },
+   "m=2": {
+    "recomputada": 0.02752984443273903,
+    "json_R4": 0.02752984443273903,
+    "dif_abs": 0.0
+   },
+   "m=3": {
+    "recomputada": 0.0017535874082177997,
+    "json_R4": 0.0017535874082177997,
+    "dif_abs": 0.0
+   }
+  },
+  "lins": {
+   "m=0": {
+    "recomputada": 1.0,
+    "json_R4": 1.0,
+    "dif_abs": 0.0
+   },
+   "m=1": {
+    "recomputada": 0.14846303558934712,
+    "json_R4": 0.14846303558934712,
+    "dif_abs": 0.0
+   },
+   "m=2": {
+    "recomputada": 0.027248082553675407,
+    "json_R4": 0.027248082553675407,
+    "dif_abs": 0.0
+   },
+   "m=3": {
+    "recomputada": 0.0017538432741051944,
+    "json_R4": 0.0017538432741051944,
+    "dif_abs": 0.0
+   }
+  },
+  "sorocaba": {
+   "m=0": {
+    "recomputada": 1.0,
+    "json_R4": 1.0,
+    "dif_abs": 0.0
+   },
+   "m=1": {
+    "recomputada": 0.1485988252441968,
+    "json_R4": 0.1485988252441968,
+    "dif_abs": 0.0
+   },
+   "m=2": {
+    "recomputada": 0.02766790970246184,
+    "json_R4": 0.02766790970246184,
+    "dif_abs": 0.0
+   },
+   "m=3": {
+    "recomputada": 0.0017535929613731248,
+    "json_R4": 0.0017535929613731248,
+    "dif_abs": 0.0
+   }
+  }
+ },
+ "sha256_reuso": {
+  "R2": {
+   "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_12_R2_referencia_desenho.py",
+   "sha256_antes_do_import": "9e386fb4f9ba2a0adf16469f6efaf563899503aefd694b2376db560f6f6d0a89",
+   "sha256_depois": "9e386fb4f9ba2a0adf16469f6efaf563899503aefd694b2376db560f6f6d0a89",
+   "sha256_gravado_na_saida_anterior": "9e386fb4f9ba2a0adf16469f6efaf563899503aefd694b2376db560f6f6d0a89",
+   "igual_antes_depois": true,
+   "igual_ao_gravado_na_saida_anterior": true
+  },
+  "R4": {
+   "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_12_R4_p_fechado_vs_frequencia.py",
+   "sha256_antes_do_import": "c31b2df31b4e0f26f4b6cd09f3e441c0b0f514c2e1783afc14d6237122ad639a",
+   "sha256_depois": "c31b2df31b4e0f26f4b6cd09f3e441c0b0f514c2e1783afc14d6237122ad639a",
+   "sha256_gravado_na_saida_anterior": "c31b2df31b4e0f26f4b6cd09f3e441c0b0f514c2e1783afc14d6237122ad639a",
+   "igual_antes_depois": true,
+   "igual_ao_gravado_na_saida_anterior": true
+  },
+  "motor_R3R4": {
+   "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_12_R3R4_motor.py",
+   "sha256_antes_do_import": "09e0d7e025f5ac85d89a3a71ba40584d84ac36a137474dece9b4d8736f7d8da5",
+   "sha256_depois": "09e0d7e025f5ac85d89a3a71ba40584d84ac36a137474dece9b4d8736f7d8da5",
+   "sha256_gravado_na_saida_anterior": "09e0d7e025f5ac85d89a3a71ba40584d84ac36a137474dece9b4d8736f7d8da5",
+   "igual_antes_depois": true,
+   "igual_ao_gravado_na_saida_anterior": true
+  },
+  "s16_importado_por_R2_e_motor": {
+   "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_1.6_2.3_estimando_formal.py",
+   "sha256_antes_do_import": "260af11f4892cf694f149a80aef5e5fce7eb6a7e24c3511e38d33080c08cc49d",
+   "sha256_depois": "260af11f4892cf694f149a80aef5e5fce7eb6a7e24c3511e38d33080c08cc49d",
+   "sha256_gravado_na_saida_anterior": "260af11f4892cf694f149a80aef5e5fce7eb6a7e24c3511e38d33080c08cc49d",
+   "igual_antes_depois": true,
+   "igual_ao_gravado_na_saida_anterior": true
+  }
+ },
+ "sha256_reuso_todos_estaveis": true,
+ "sha256_reuso_iguais_aos_gravados": true
+}

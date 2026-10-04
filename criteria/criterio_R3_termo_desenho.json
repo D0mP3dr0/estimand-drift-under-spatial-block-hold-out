@@ -1,0 +1,12 @@
+{
+ "id": "R3_termo_desenho",
+ "roadmap": "B3.2",
+ "subclaim": "S2",
+ "origem": "requested in the internal review of the manuscript; adopted on 01/10/2026",
+ "pergunta": "Without Monte Carlo over the error, what is the value of the design term of the bias Corollary (cor:bias, main.tex l.272): Sum_i p_i e_i / Sum_i p_i - mu_U, for the constant and the calibrated FSPL (b), in the populations 'todos' (all nodes) and 'validos' (valid nodes), in the four Q1 cells?",
+ "metodo_fixado": "p_i (inclusion in the test set) by the closed form of the inclusion-probability proposition (main.tex section 4.4) where it is exact; where the proposition gives only bounds, use both bounds and report the interval [T_inf, T_sup] of the term; e_i fixed as in criterio_2.3. Check: the term computed with the inclusion frequency of fase2/1.6 (100 split draws) and the difference (b)-(a) of fase2/2.3 must fall within the interval or less than 2 SE from it.",
+ "previsao": "term small compared with the between-draw SD (order of tenths of a dB or less), with sign defined by the covariance between distance to the block edge and error.",
+ "leitura": "any outcome REINFORCES S2: the text states ONCE the value of the design term in this case (value or interval, in dB) instead of repeating that a hundred split draws do not resolve it. If the interval of the bounds is wider than 2 SE of the Monte Carlo, the interval is reported and the sentence says that the bounds do not narrow it.",
+ "se_inverter": "if the closed-form term lies more than 3 SE from the Monte Carlo value of fase2/2.3 in >= 2 cells, there is an error in the proposition or in the code: it blocks and goes to an independent physics/mathematics check before any text.",
+ "fixado_em": "2026-10-01T17:13:54-03:00 (before any script or result of this test existed)"
+}

@@ -1,0 +1,7 @@
+chave,quantidade,valor,unidade
+sd_entre_sorteios_b2_media_das_celulas,"Between-draw standard deviation of the valid-node MAE, b=2 km, mean over the cells (dB)",8.016603526005728,dB
+sd_entre_sorteios_b2_ponderado_media_das_celulas,"Between-draw standard deviation of the valid-node MAE, b=2 km, weighted by the valid test nodes of each draw, mean over the cells (dB)",7.227361286295269,dB
+sd_entre_celulas_das_medias,"Standard deviation between the cells' mean errors, b=2 km (dB)",2.179646210370172,dB
+sd_entre_sorteios_b0_media_das_celulas,"Between-draw standard deviation of the valid-node MAE, no buffer (b=0), mean over the cells (dB)",7.0928559703037735,dB
+sd_fracao_valida_b2,"Between-draw standard deviation of the valid fraction of the test set, b=2 km, mean over the cells (dimensionless)",0.07405487087989077,dimensionless
+sd_fracao_valida_b0,"Between-draw standard deviation of the valid fraction of the test set, no buffer (b=0), mean over the cells (dimensionless)",0.061260161758249485,dimensionless

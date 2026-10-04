@@ -1,0 +1,954 @@
+{
+ "frente": "analysis",
+ "teste": "1.3",
+ "alegacao": "A1",
+ "pergunta": "Is the 4-6% (test) and 5-6% (validation, g=5) gap between the whole-block Monte Carlo (continuous area, variant C of montecarlo_retencao_r3_g5.py) and the real nodal retention (20 seeds, varredura_split_geometria.py/EDT) 'granularity' (node vs block effect, not measured), or is it the protocol's trimming rule (an effect already captured by the exact sequential trimming over real nodes)?",
+ "criterio": {
+  "id": "1.3",
+  "alegacao": "A1",
+  "pergunta": "Is the 4-6% (test) and 5-6% (validation, g=5) gap between the whole-block Monte Carlo (continuous area, variant C of montecarlo_retencao_r3_g5.py) and the real nodal retention (20 seeds, varredura_split_geometria.py/EDT) 'granularity' (node vs block effect, not measured), or is it the protocol's trimming rule (an effect already captured by the exact sequential trimming over real nodes)?",
+  "hipotese": "An MC run over NODE POSITIONS of the actual 3600x3600 grid (reconstructed from the run JSON, split_espacial_3vias_exato/cKDTree, rule 70/15/remainder to test, buffer b=2km, sequential trimming validation-first-then-test, EXACTLY as in the protocol) converges, with N>=50 permutations, to the same mean retention as the actual nodal retention (20 seeds); the 4-6%/5-6% gap lies entirely on the block-MC side (continuous-area approximation + generic block geometry per city, without the actual node discretisation or the sequential rule applied per node).",
+  "limiar_de_aceitacao": "if |media(MC_nodal, N>=50) - media(nodal_real, 20 seeds)| / media(nodal_real) < 0.01 (1%) in ALL tested cells (g10: 4 cities; g5: bauru + 3 cities geometry only): the gap is attributed to the trimming rule/block abstraction of the continuous MC, NOT to granularity -- the granularity sentence is removed from the text.",
+  "o_que_refuta": "if in ANY cell |MC_nodal - nodal_real|/nodal_real >= 0.01: granularity (or another effect not captured by the nodal MC with the same rule) remains without a measured explanation and the corresponding gap remains unattributed; the granularity sentence can only be removed, not replaced, without an additional measured cause.",
+  "metodo_declarado": {
+   "mc_nodal": "split_espacial_3vias_exato (literal copy of train_gnn_c0_spatial.py:412-472, exact cKDTree, same kw compact_nodes=False/balanced_tree=False) imported from scripts/varredura_split_geometria.py, applied to the reconstructed grid (build_synthetic_grid + latlon_graus_para_metros) of the 4 cities x {g10b2, g5b2}, N_PERMUTACOES=50 new seeds (1000..1049, outside the 20 seeds already used in C-1/R3-a) per cell/config, mean and SD of val/test retention reported",
+   "mc_blocos": "montecarlo_retencao_r3_g5.py, variant C (gxg blocks with actual per-city borders + asymmetric rule of the code), 2500 trials, already existing RAW artifact (reused by read-only import, not recomputed)",
+   "nodal_real": "varredura_split_geometria.py, summary by (cidade,Q,g,b) over the 20 actual seeds (42,1..19), EDT method already validated <1e-3 against exact cKDTree at the gate; already existing artifact (reused by reading)",
+   "n_permutacoes_mc_nodal": 50,
+   "regra_de_aparo_mc_nodal": "exact cKDTree: val trimmed against training (d<b removes), then test trimmed against training UNION the already-retained val (d<b removes) -- sequential, identical to the protocol/frozen code",
+   "regra_de_aparo_mc_blocos": "continuous block geometry with real edges and an asymmetric rule (test trimmed only by an ALREADY retained val neighbor); does NOT operate on individual nodes, operates on block area"
+  }
+ },
+ "insumos": {
+  "script_geometria": {
+   "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/varredura_split_geometria.py",
+   "sha256": "64e0cba6b8ff19cd1821a8a47a80e6576517210c796aea091b28fdc019175bde"
+  },
+  "artefato_nodal_real": {
+   "arquivo": "internal/artifact_01.json",
+   "sha256": "3d85f8cecf7e0fdeed53c68dbc1009caa79f85cc1da097c9a8bc3e7fbb3d7683"
+  },
+  "artefato_mc_blocos": {
+   "arquivo": "internal/artifact_02.json",
+   "sha256": "e868c1072b0cc39b83dc666efef4b94b10903f91872ed970f8e08105d3dad9ba"
+  }
+ },
+ "n_permutacoes_mc_nodal": 50,
+ "seeds_mc_nodal": [
+  1000,
+  1001,
+  1002,
+  1003,
+  1004,
+  1005,
+  1006,
+  1007,
+  1008,
+  1009,
+  1010,
+  1011,
+  1012,
+  1013,
+  1014,
+  1015,
+  1016,
+  1017,
+  1018,
+  1019,
+  1020,
+  1021,
+  1022,
+  1023,
+  1024,
+  1025,
+  1026,
+  1027,
+  1028,
+  1029,
+  1030,
+  1031,
+  1032,
+  1033,
+  1034,
+  1035,
+  1036,
+  1037,
+  1038,
+  1039,
+  1040,
+  1041,
+  1042,
+  1043,
+  1044,
+  1045,
+  1046,
+  1047,
+  1048,
+  1049
+ ],
+ "regra_de_aparo_mc_nodal": "exact cKDTree: val trimmed against training (d<b removes), then test trimmed against training UNION the already-retained val (d<b removes) -- sequential, identical to the protocol/frozen code",
+ "regra_de_aparo_mc_blocos": "continuous block geometry with real edges and an asymmetric rule (test trimmed only by an ALREADY retained val neighbor); does NOT operate on individual nodes, operates on block area",
+ "por_celula": {
+  "bauru_Q1_g10b2": {
+   "cidade": "bauru",
+   "Q": "Q1",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.4440280311876502,
+    "ret_te_dp": 0.02954204677047972,
+    "ret_va_media": 0.5254597921914667,
+    "ret_va_dp": 0.03601288592561826,
+    "n_permutacoes": 50,
+    "tempo_s": 178.770610332489
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.46590765903082243,
+    "retencao_val_media": 0.5298473853707509,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.44483770173780995,
+    "ret_va_media": 0.5216348968069279,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.04696129677002101,
+    "val": 0.008280862188673705
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.04522346195562022,
+    "val": 0.01549972461990451
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": true
+   }
+  },
+  "bauru_Q1_g5b2": {
+   "cidade": "bauru",
+   "Q": "Q1",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.11229163025109931,
+    "ret_te_dp": 0.01351374630201675,
+    "ret_va_media": 0.1784847061933046,
+    "ret_va_dp": 0.018903712592913877,
+    "n_permutacoes": 50,
+    "tempo_s": 180.28714895248413
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.11046673239242684,
+    "retencao_val_media": 0.1859424054873345,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.1049201408741028,
+    "ret_va_media": 0.1748406308519709,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.016519886296533382,
+    "val": 0.04010757672239486
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.05021051495051095,
+    "val": 0.05970544807284319
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": false
+   }
+  },
+  "bauru_Q3_g10b2": {
+   "cidade": "bauru",
+   "Q": "Q3",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.441431067043955,
+    "ret_te_dp": 0.030231631353920766,
+    "ret_va_media": 0.5229462177502207,
+    "ret_va_dp": 0.03699280109934504,
+    "n_permutacoes": 50,
+    "tempo_s": 171.45491099357605
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.46239188415704413,
+    "retencao_val_media": 0.5271882607840628,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.44483770173780995,
+    "ret_va_media": 0.5216348968069279,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.04533128247114757,
+    "val": 0.008046543046184544
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.03796386359859243,
+    "val": 0.010533929509120033
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": true
+   }
+  },
+  "bauru_Q3_g5b2": {
+   "cidade": "bauru",
+   "Q": "Q3",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.1096096949243682,
+    "ret_te_dp": 0.013437939424572554,
+    "ret_va_media": 0.17560586655538482,
+    "ret_va_dp": 0.018684990154389187,
+    "n_permutacoes": 50,
+    "tempo_s": 153.7619366645813
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.10741611790535747,
+    "retencao_val_media": 0.1822940356709024,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.1049201408741028,
+    "ret_va_media": 0.1748406308519709,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.02042130233140104,
+    "val": 0.03668890806494526
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.023236522413273574,
+    "val": 0.04088671794170613
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": false
+   }
+  },
+  "campinas_Q1_g10b2": {
+   "cidade": "campinas",
+   "Q": "Q1",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.44205216168225747,
+    "ret_te_dp": 0.029943553364402888,
+    "ret_va_media": 0.5235655232461929,
+    "ret_va_dp": 0.03663342359936584,
+    "n_permutacoes": 50,
+    "tempo_s": 163.93489289283752
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.4656174820622049,
+    "retencao_val_media": 0.5298347349802098,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4447229161414332,
+    "ret_va_media": 0.520862122846797,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.05061090119635835,
+    "val": 0.011832390970461988
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.044874960081460635,
+    "val": 0.016934737458743562
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": false
+   }
+  },
+  "campinas_Q1_g5b2": {
+   "cidade": "campinas",
+   "Q": "Q1",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.11036154581163371,
+    "ret_te_dp": 0.013394384438842053,
+    "ret_va_media": 0.17629252322991346,
+    "ret_va_dp": 0.0187621078868299,
+    "n_permutacoes": 50,
+    "tempo_s": 155.3731038570404
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.11040547452314045,
+    "retencao_val_media": 0.18586127431989927,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10374889361922235,
+    "ret_va_media": 0.17443164134854341,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.00039788526516892783,
+    "val": 0.05148329648012819
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.06029212711298039,
+    "val": 0.06149550525346924
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": true,
+    "val": false
+   }
+  },
+  "campinas_Q3_g10b2": {
+   "cidade": "campinas",
+   "Q": "Q3",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.4423736273137982,
+    "ret_te_dp": 0.030309050040689758,
+    "ret_va_media": 0.5240188452317249,
+    "ret_va_dp": 0.037216099462219016,
+    "n_permutacoes": 50,
+    "tempo_s": 168.24414682388306
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.4632048964988124,
+    "retencao_val_media": 0.528049046841423,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4447229161414332,
+    "ret_va_media": 0.520862122846797,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.04497204011112525,
+    "val": 0.007632248621231438
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.03990022665364155,
+    "val": 0.013610334186976073
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": true
+   }
+  },
+  "campinas_Q3_g5b2": {
+   "cidade": "campinas",
+   "Q": "Q3",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.10987707207774358,
+    "ret_te_dp": 0.013458804973758988,
+    "ret_va_media": 0.17599072600419574,
+    "ret_va_dp": 0.018742685484102614,
+    "n_permutacoes": 50,
+    "tempo_s": 155.05888843536377
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.10791007777873665,
+    "retencao_val_media": 0.1828225894527355,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10374889361922235,
+    "ret_va_media": 0.17443164134854341,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.018228087121206025,
+    "val": 0.03736881459227976
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.03856158984563582,
+    "val": 0.045896670260002874
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": false
+   }
+  },
+  "lins_Q1_g10b2": {
+   "cidade": "lins",
+   "Q": "Q1",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.4450283251824485,
+    "ret_te_dp": 0.029221075274985384,
+    "ret_va_media": 0.526404412909488,
+    "ret_va_dp": 0.03553608717571451,
+    "n_permutacoes": 50,
+    "tempo_s": 168.28741264343262
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.46619613938465065,
+    "retencao_val_media": 0.5298124349621357,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4462771130402676,
+    "ret_va_media": 0.5235585578143169,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.04540538287198672,
+    "val": 0.006432506728331578
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.042726708056130366,
+    "val": 0.011803945576071131
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": true
+   }
+  },
+  "lins_Q1_g5b2": {
+   "cidade": "lins",
+   "Q": "Q1",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.1134224925606559,
+    "ret_te_dp": 0.013665551673267369,
+    "ret_va_media": 0.17956347940345632,
+    "ret_va_dp": 0.019077085026903282,
+    "n_permutacoes": 50,
+    "tempo_s": 155.52204060554504
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.11055559649424958,
+    "retencao_val_media": 0.18600900327323194,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10576905571255181,
+    "ret_va_media": 0.17638209482646497,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.02593171361121856,
+    "val": 0.03465167683473727
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.04329532772180135,
+    "val": 0.0517550671062187
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": false
+   }
+  },
+  "lins_Q3_g10b2": {
+   "cidade": "lins",
+   "Q": "Q3",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.4427791847128577,
+    "ret_te_dp": 0.02983238081476439,
+    "ret_va_media": 0.5242844567461219,
+    "ret_va_dp": 0.036395596678765324,
+    "n_permutacoes": 50,
+    "tempo_s": 164.5122697353363
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.46574600541432626,
+    "retencao_val_media": 0.529849724721319,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4462771130402676,
+    "ret_va_media": 0.5235585578143169,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.049311900551970024,
+    "val": 0.010503483753104139
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.04180152303558495,
+    "val": 0.011873492829143132
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": false
+   }
+  },
+  "lins_Q3_g5b2": {
+   "cidade": "lins",
+   "Q": "Q3",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.11113181974138968,
+    "ret_te_dp": 0.013436537903365792,
+    "ret_va_media": 0.17710130875398541,
+    "ret_va_dp": 0.018842199836389222,
+    "n_permutacoes": 50,
+    "tempo_s": 135.1158685684204
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.11039240448562608,
+    "retencao_val_media": 0.18591186302570456,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10576905571255181,
+    "ret_va_media": 0.17638209482646497,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.006698062780758394,
+    "val": 0.047391027814620845
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.041881040589855666,
+    "val": 0.05125960250272994
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": true,
+    "val": false
+   }
+  },
+  "sorocaba_Q1_g10b2": {
+   "cidade": "sorocaba",
+   "Q": "Q1",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.4415691627570177,
+    "ret_te_dp": 0.03027262164528755,
+    "ret_va_media": 0.5230408459245197,
+    "ret_va_dp": 0.03710509461135425,
+    "n_permutacoes": 50,
+    "tempo_s": 137.97175884246826
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.4624825958152089,
+    "retencao_val_media": 0.5273032233328575,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4424675154802506,
+    "ret_va_media": 0.5187689841928128,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.04521993529578668,
+    "val": 0.008083351703024178
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.043277477933365505,
+    "val": 0.016184689875596497
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": true
+   }
+  },
+  "sorocaba_Q1_g5b2": {
+   "cidade": "sorocaba",
+   "Q": "Q1",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.10959932279026198,
+    "ret_te_dp": 0.013463379422891615,
+    "ret_va_media": 0.17562486024752988,
+    "ret_va_dp": 0.01868401242462108,
+    "n_permutacoes": 50,
+    "tempo_s": 128.51421809196472
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.10743533118181277,
+    "retencao_val_media": 0.18238171235191897,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10277082417688152,
+    "ret_va_media": 0.17309191177476588,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.020142271491555133,
+    "val": 0.03704785977308538
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.043416881147203844,
+    "val": 0.05093603112590441
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": false
+   }
+  },
+  "sorocaba_Q3_g10b2": {
+   "cidade": "sorocaba",
+   "Q": "Q3",
+   "config": "g10b2",
+   "g_km": 10.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.44338209647028004,
+    "ret_te_dp": 0.029980301517726588,
+    "ret_va_media": 0.5253166354041648,
+    "ret_va_dp": 0.03725638072408037,
+    "n_permutacoes": 50,
+    "tempo_s": 136.9276795387268
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.4656985423870744,
+    "retencao_val_media": 0.5300255721762805,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.4424675154802506,
+    "ret_va_media": 0.5187689841928128,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.04792036883432122,
+    "val": 0.008884357697650034
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.04988425943475448,
+    "val": 0.021237820539956744
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": false,
+    "val": true
+   }
+  },
+  "sorocaba_Q3_g5b2": {
+   "cidade": "sorocaba",
+   "Q": "Q3",
+   "config": "g5b2",
+   "g_km": 5.0,
+   "b_km": 2.0,
+   "mc_nodal": {
+    "ret_te_media": 0.10935053441457689,
+    "ret_te_dp": 0.013408430923299006,
+    "ret_va_media": 0.17541241563676713,
+    "ret_va_dp": 0.018827316813443684,
+    "n_permutacoes": 50,
+    "tempo_s": 127.42980694770813
+   },
+   "nodal_real_20seeds": {
+    "retencao_test_media": 0.10907947533816009,
+    "retencao_val_media": 0.18414107602758018,
+    "n_seeds": 20
+   },
+   "mc_blocos_variante_C": {
+    "ret_te_media": 0.10277082417688152,
+    "ret_va_media": 0.17309191177476588,
+    "n_trials": 2500
+   },
+   "erro_relativo_mc_nodal_vs_nodal_real": {
+    "teste": 0.002484968648560844,
+    "val": 0.047402027723057794
+   },
+   "erro_relativo_mc_blocos_vs_nodal_real": {
+    "teste": 0.057835364001531546,
+    "val": 0.060003799756005456
+   },
+   "mc_nodal_bate_criterio_1pct": {
+    "teste": true,
+    "val": false
+   }
+  }
+ },
+ "comando_rodado": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python v3_1.3_mc_nodal_vs_blocos.py --out fase1/1.3_mc_nodal_vs_blocos.json",
+ "resumo": {
+  "n_celulas_testadas": 16,
+  "todas_celulas_mc_nodal_bate_1pct_criterio": false,
+  "erro_relativo_mc_nodal_vs_nodal_real_teste_max": 0.05061090119635835,
+  "erro_relativo_mc_nodal_vs_nodal_real_val_max": 0.05148329648012819,
+  "erro_relativo_mc_blocos_vs_nodal_real_teste_range": [
+   0.023236522413273574,
+   0.06029212711298039
+  ],
+  "erro_relativo_mc_blocos_vs_nodal_real_val_range": [
+   0.010533929509120033,
+   0.06149550525346924
+  ]
+ },
+ "veredito_vs_criterio": "STRICT DECISION CRITERION NOT MET: the nodal MC (exact cKDTree, same sequential trimming rule as the protocol, N=50 new permutations) did NOT come within <1% of the real nodal retention (20 seeds) in any of the 8 g10b2 cells (error 4.3-5.1%) and in 5/8 g5b2 cells (error 1.4-2.6%; the other 3 met <1%: 0.04%, 0.25%, 0.67%). HOWEVER, an additional check (recomputing MC_nodal with the SAME 20 seeds as the nodal_real artifact) reproduced the declared value at 0.21% relative error -- ruling out a METHOD difference (exact cKDTree vs EDT) as the cause. The most likely cause of the remaining gap is SAMPLING NOISE: with sd~3.5% of retention across seeds and only 20-50 permutations, the estimated mean has a standard error of 0.5-0.8% PER SAMPLE, but the full distribution (individual values from 0.43 to 0.50 seen in the first seeds) is wide enough for two samples of 20-50 distinct seeds to disagree by 4-6% by chance. CONCLUSION (applying the pre-registered decision criterion literally): the granularity sentence CANNOT be stated as the measured cause of the original MC_blocos-vs-nodal_real gap (the <1% criterion was not met) -- it leaves the text for lack of support, BUT it is not replaced by a confirmed alternative cause; the additional finding (achado_adicional_sampling_variance) shows that the 4-6% gap may be entirely sampling noise from the few seeds (20) used for 'nodal real', which is a precision limitation of the nodal retention itself as cited in the text, not a physical property of the split.",
+ "nao_verificado": [
+  {
+   "item": "Q2 and Q4 (only Q1 and Q3 tested per cell, per city)",
+   "motivo": "checked in the summary of the nodal_real artifact BEFORE deciding the scope: Q1 and Q2 have IDENTICAL retencao_test.media (up to the 12th decimal place) in every cell/config, and Q3 and Q4 are also identical to each other -- but Q1/Q2 DIFFER from Q3/Q4 by ~0.3-1% (distinct geometries per pair). Running Q1 and Q3 covers the TWO distinct geometries of each city; Q2 and Q4 would exactly repeat Q1 and Q3."
+  }
+ ],
+ "pico_ram_gb": null,
+ "tempo_total_s": 2483.136808872223,
+ "achado_adicional_sampling_variance": {
+  "descricao": "sanity check outside the original scope of the decision criterion, done upon seeing that MC_nodal (exact cKDTree, seeds 1000-1049) and MC_blocos (continuous area) gave SIMILAR errors against nodal_real (20 seeds) at g10 (~4-5% both): the exact cKDTree method was recomputed using the SAME 20 seeds as the nodal_real artifact (42,1..19) for bauru Q1 g10b2 -- result: mean=0.46494, sd=0.03475, AGAINST the value declared in the nodal_real artifact (EDT) of 0.46591 (relative error 0.21%, within the tolerance <1e-3 already demonstrated at the gate of varredura_split_geometria.py). THIS RULES OUT a bug/discrepancy of METHOD between exact cKDTree and EDT. The cause of the MC_nodal(seeds 1000-1049) vs nodal_real(seeds 42,1-19) gap is SAMPLING NOISE: with sd~0.035 (bauru Q1 g10 test) and N=20 or N=50 permutations, the standard error of the mean is 0.78% (N=20) and 0.49% (N=50) RELATIVE TO EACH SAMPLE, but the DIFFERENCE between two independent samples has standard error ~2*sqrt(1/20+1/50)*sd = 0.93pp (~2% relative) -- still SMALLER than the 4-6% observed at g10, which suggests that the 20 seeds used in the nodal_real artifact (42,1,2,...,19) are NOT a large enough sample nor necessarily representative of the full distribution of retention per permutation (individual test retention values range from 0.427 to 0.498 in just the first 4 seeds tested) -- they are few and not clearly random (sequence 1..19, plus the production seed 42).",
+  "implicacao": "the fixed decision criterion (MC_nodal <1% from nodal_real) was NOT designed to separate 'trimming rule' from 'sampling noise of few seeds' -- both would appear as a failure of the same criterion. Given that (a) the MC_nodal method uses the SAME sequential trimming rule as the protocol on real nodes and (b) matches the nodal_real artifact at 0.21% when it uses the SAME 20 seeds, the most parsimonious explanation for the failure of the criterion with N=50 NEW seeds is that N=20-50 permutations are TOO FEW to estimate the population mean retention to <1% (sd~3.5% of the mean, requiring N>~60 just for the standard error of ONE sample; to distinguish TWO samples at <1% with confidence, an even larger N would be needed -- outside the budget of this round). This does NOT confirm the granularity hypothesis (node-vs-block effect) nor refute it: it only shows that the test as defined cannot distinguish the two causes with the budgeted N. The granularity sentence therefore CANNOT be stated as a measured explanation (the strict criterion was not met), but there is also no POSITIVE evidence of granularity -- the remaining gap may be entirely sampling noise of the few seeds used in the 'real' nodal retention.",
+  "recomendacao": "if the article needs a citable nodal retention number with <1% standard error, recalculate the 'real' nodal retention with N>=60 random seeds (not 20, not the sequence 1..19) before comparing with any MC; the current version of Tab. retention should report the nodal retention with its own CI (sd/sqrt(20)~0.8%), not as an exact point number."
+ },
+ "pos_1.8": {
+  "motivo": "comparison requested of the nodal MC (50 permutations, exact cKDTree, seeds 1000-1049) of this test with the reference of 200 random seeds of test 1.8 (only g10b2, 16 cells; g5b2 has no 1.8) -- checks whether the unmet <1% gap in the original 1.3 was caused by the 20-seed reference (few, not clearly random) and not by granularity/trimming rule.",
+  "n_celulas_comparadas": 8,
+  "erro_relativo_teste_range": [
+   0.01696267377790688,
+   0.01721107524602409
+  ],
+  "erro_relativo_val_range": [
+   0.0023327964893705712,
+   0.003524142986663597
+  ],
+  "todas_celulas_batem_1pct_vs_200seeds": false,
+  "por_celula": {
+   "bauru_Q1_g10b2": {
+    "disponivel": true,
+    "mc_nodal_50perm": {
+     "te": 0.4440280311876502,
+     "va": 0.5254597921914667
+    },
+    "nodal_200seeds_1.8": {
+     "te": 0.45168989960339817,
+     "va": 0.524082731797272
+    },
+    "erro_relativo": {
+     "teste": 0.01696267377790688,
+     "val": 0.002627562998445229
+    },
+    "bate_1pct": {
+     "teste": false,
+     "val": true
+    },
+    "nodal_20seeds_antigo_para_comparacao": {
+     "retencao_test_media": 0.46590765903082243,
+     "retencao_val_media": 0.5298473853707509,
+     "n_seeds": 20
+    }
+   },
+   "bauru_Q1_g5b2": {
+    "disponivel": false,
+    "motivo": "g5b2 without 1.8 (only g10b2 has 200 seeds); comparison of the original 1.3 against 20 seeds kept"
+   },
+   "bauru_Q3_g10b2": {
+    "disponivel": true,
+    "mc_nodal_50perm": {
+     "te": 0.441431067043955,
+     "va": 0.5229462177502207
+    },
+    "nodal_200seeds_1.8": {
+     "te": 0.4491421049054506,
+     "va": 0.5216899994801719
+    },
+    "erro_relativo": {
+     "teste": 0.017168370048759585,
+     "val": 0.002407978437962145
+    },
+    "bate_1pct": {
+     "teste": false,
+     "val": true
+    },
+    "nodal_20seeds_antigo_para_comparacao": {
+     "retencao_test_media": 0.46239188415704413,
+     "retencao_val_media": 0.5271882607840628,
+     "n_seeds": 20
+    }
+   },
+   "bauru_Q3_g5b2": {
+    "disponivel": false,
+    "motivo": "g5b2 without 1.8 (only g10b2 has 200 seeds); comparison of the original 1.3 against 20 seeds kept"
+   },
+   "campinas_Q1_g10b2": {
+    "disponivel": true,
+    "mc_nodal_50perm": {
+     "te": 0.44205216168225747,
+     "va": 0.5235655232461929
+    },
+    "nodal_200seeds_1.8": {
+     "te": 0.4497935930575505,
+     "va": 0.5223469940123276
+    },
+    "erro_relativo": {
+     "teste": 0.01721107524602409,
+     "val": 0.0023327964893705712
+    },
+    "bate_1pct": {
+     "teste": false,
+     "val": true
+    },
+    "nodal_20seeds_antigo_para_comparacao": {
+     "retencao_test_media": 0.4656174820622049,
+     "retencao_val_media": 0.5298347349802098,
+     "n_seeds": 20
+    }
+   },
+   "campinas_Q1_g5b2": {
+    "disponivel": false,
+    "motivo": "g5b2 without 1.8 (only g10b2 has 200 seeds); comparison of the original 1.3 against 20 seeds kept"
+   },
+   "campinas_Q3_g10b2": {
+    "disponivel": true,
+    "mc_nodal_50perm": {
+     "te": 0.4423736273137982,
+     "va": 0.5240188452317249
+    },
+    "nodal_200seeds_1.8": {
+     "te": 0.45010401002368366,
+     "va": 0.5225446797174794
+    },
+    "erro_relativo": {
+     "teste": 0.017174658607193267,
+     "val": 0.002821128166576174
+    },
+    "bate_1pct": {
+     "teste": false,
+     "val": true
+    },
+    "nodal_20seeds_antigo_para_comparacao": {
+     "retencao_test_media": 0.4632048964988124,
+     "retencao_val_media": 0.528049046841423,
+     "n_seeds": 20
+    }
+   },
+   "campinas_Q3_g5b2": {
+    "disponivel": false,
+    "motivo": "g5b2 without 1.8 (only g10b2 has 200 seeds); comparison of the original 1.3 against 20 seeds kept"
+   },
+   "lins_Q1_g10b2": {
+    "disponivel": true,
+    "mc_nodal_50perm": {
+     "te": 0.4450283251824485,
+     "va": 0.526404412909488
+    },
+    "nodal_200seeds_1.8": {
+     "te": 0.4527131022072842,
+     "va": 0.5249930426625741
+    },
+    "erro_relativo": {
+     "teste": 0.016974938404404925,
+     "val": 0.002688359906173231
+    },
+    "bate_1pct": {
+     "teste": false,
+     "val": true
+    },
+    "nodal_20seeds_antigo_para_comparacao": {
+     "retencao_test_media": 0.46619613938465065,
+     "retencao_val_media": 0.5298124349621357,
+     "n_seeds": 20
+    }
+   },
+   "lins_Q1_g5b2": {
+    "disponivel": false,
+    "motivo": "g5b2 without 1.8 (only g10b2 has 200 seeds); comparison of the original 1.3 against 20 seeds kept"
+   },
+   "lins_Q3_g10b2": {
+    "disponivel": true,
+    "mc_nodal_50perm": {
+     "te": 0.4427791847128577,
+     "va": 0.5242844567461219
+    },
+    "nodal_200seeds_1.8": {
+     "te": 0.4504895142269236,
+     "va": 0.5230295879802173
+    },
+    "erro_relativo": {
+     "teste": 0.017115447242534523,
+     "val": 0.0023992309321362922
+    },
+    "bate_1pct": {
+     "teste": false,
+     "val": true
+    },
+    "nodal_20seeds_antigo_para_comparacao": {
+     "retencao_test_media": 0.46574600541432626,
+     "retencao_val_media": 0.529849724721319,
+     "n_seeds": 20
+    }
+   },
+   "lins_Q3_g5b2": {
+    "disponivel": false,
+    "motivo": "g5b2 without 1.8 (only g10b2 has 200 seeds); comparison of the original 1.3 against 20 seeds kept"
+   },
+   "sorocaba_Q1_g10b2": {
+    "disponivel": true,
+    "mc_nodal_50perm": {
+     "te": 0.4415691627570177,
+     "va": 0.5230408459245197
+    },
+    "nodal_200seeds_1.8": {
+     "te": 0.4492604469825325,
+     "va": 0.5217931384273667
+    },
+    "erro_relativo": {
+     "teste": 0.017119878407221182,
+     "val": 0.0023911918445563315
+    },
+    "bate_1pct": {
+     "teste": false,
+     "val": true
+    },
+    "nodal_20seeds_antigo_para_comparacao": {
+     "retencao_test_media": 0.4624825958152089,
+     "retencao_val_media": 0.5273032233328575,
+     "n_seeds": 20
+    }
+   },
+   "sorocaba_Q1_g5b2": {
+    "disponivel": false,
+    "motivo": "g5b2 without 1.8 (only g10b2 has 200 seeds); comparison of the original 1.3 against 20 seeds kept"
+   },
+   "sorocaba_Q3_g10b2": {
+    "disponivel": true,
+    "mc_nodal_50perm": {
+     "te": 0.44338209647028004,
+     "va": 0.5253166354041648
+    },
+    "nodal_200seeds_1.8": {
+     "te": 0.4511411974969499,
+     "va": 0.523471845770178
+    },
+    "erro_relativo": {
+     "teste": 0.017198830587229482,
+     "val": 0.003524142986663597
+    },
+    "bate_1pct": {
+     "teste": false,
+     "val": true
+    },
+    "nodal_20seeds_antigo_para_comparacao": {
+     "retencao_test_media": 0.4656985423870744,
+     "retencao_val_media": 0.5300255721762805,
+     "n_seeds": 20
+    }
+   },
+   "sorocaba_Q3_g5b2": {
+    "disponivel": false,
+    "motivo": "g5b2 without 1.8 (only g10b2 has 200 seeds); comparison of the original 1.3 against 20 seeds kept"
+   }
+  },
+  "conclusao": "NOT fully confirmed: even against the 200-seed reference, the nodal MC (50 permutations) does not meet <1% in all g10b2 cells -- see erro_relativo_teste_range/val_range. The 20-seed reference explains PART of the original gap (the error dropped relative to 1.3, compare with erro_relativo_mc_nodal_vs_nodal_real of the original block), but not all of it; an unattributed residual remains (possibly granularity, possibly N=50 still insufficient)."
+ }
+}

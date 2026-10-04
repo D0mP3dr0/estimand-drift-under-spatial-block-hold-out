@@ -1,0 +1,21 @@
+{
+ "G4": {
+  "veredito": "CONFIRMED IN SUBSTANCE, COINCIDENCE NUMBERS NOT REPRODUCED",
+  "medido": {
+   "tol_grau": 1e-06,
+   "bbox_overlap_frac_Bauru_com_Lins": 0.4466,
+   "bbox_overlap_frac_Campinas_com_Sorocaba": 0.5645,
+   "bauru_Q1_nos_em_algum_Lins": 0.757,
+   "bauru_Q2_nos_em_algum_Lins": 0.2402,
+   "bauru_Q3": 0.2675,
+   "bauru_Q4": 0.0849,
+   "campinas_Q3_em_Sorocaba": 0.6747,
+   "y_igual_nos_coincidentes": "~0 to 3.5 % per pair (mostly <0.3 %); y differs (mean |dy| 0.02 to 29)"
+  },
+  "nota": "'all' (100%) of Bauru Q1 and 31.9% of Q2 NOT reproduced: obtained 75.7% and 24.0% (Q1 with Lins Q1-Q4 combined). Bbox overlap and coincident nodes exist; the cells are not disjoint across cities."
+ },
+ "G5": {
+  "veredito": "CONFIRMED in 1.8 (132 blocks): min corr 0.9953; INCONCLUSIVE/PARTIAL in 1.8b (483 blocks): min corr 0.9764, median 0.9968, only 56.7% of pairs >=0.995",
+  "fonte": "fase1/1.8_referencia_nodal_200seeds.json and 1.8b_..._g5.json, field retencoes_te (200 seeds)"
+ }
+}

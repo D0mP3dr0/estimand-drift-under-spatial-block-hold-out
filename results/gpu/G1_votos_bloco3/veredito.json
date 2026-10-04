@@ -1,0 +1,205 @@
+{
+ "achado_id": "G1_bloco3",
+ "veredito": "confirmado",
+ "refutado": false,
+ "motivo_classe": "confirmado",
+ "motivo": "Independent recalculation from the .npz and from 2.1 reproduces all numbers (sd, ratios, Pearson, parity) and the branch counts; exclusions checked (no .npz, rc=1, log PARTICAO DEGENERADA test/val), MLP also failed in the 5 split draws; same split draws for GNN/MLP.",
+ "ressalva_menor": "LOO sd of Bauru Q3 GNN goes to 2.23 (ratio 16.9x) when split draw 159513 is removed (outlier 15.6 dB); max 3.99; all above 3x. The condition 1 count uses the v5 ratios (bauru_Q1 9.46/8.56; campinas_Q1 MLP 2.64 checked in v5, not recalculated from the npz).",
+ "numeros": {
+  "bauru_Q3": {
+   "n_sorteios_plano": 20,
+   "excluidos": {
+    "125243": {
+     "gnn": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['test']",
+       "['test']"
+      ]
+     },
+     "mlp": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['test']",
+       "['test']"
+      ]
+     }
+    },
+    "282106": {
+     "gnn": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['val']",
+       "['val']"
+      ]
+     },
+     "mlp": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['val']",
+       "['val']"
+      ]
+     }
+    },
+    "739191": {
+     "gnn": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['test']",
+       "['test']"
+      ]
+     },
+     "mlp": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['test']",
+       "['test']"
+      ]
+     }
+    },
+    "769856": {
+     "gnn": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['val']",
+       "['val']"
+      ]
+     },
+     "mlp": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['val']",
+       "['val']"
+      ]
+     }
+    }
+   },
+   "mesmos_sorteios_gnn_mlp": true,
+   "n_usaveis": 16,
+   "gnn": {
+    "dp_ddof1": 3.85833963975475,
+    "dp_ddof0": 3.735821292195518,
+    "razao": 29.2298457557178,
+    "pearson_const": 0.8709904165466309,
+    "loo_min": 2.2309247490787447,
+    "loo_max": 3.9937066654033324,
+    "loo_min_razao": 16.90094506877837,
+    "loo_max_razao": 30.25535352578282,
+    "agg_dp": 3.85833963975475
+   },
+   "mlp": {
+    "dp_ddof1": 4.075810656190718,
+    "dp_ddof0": 3.9463866984303437,
+    "razao": 30.87735345599029,
+    "pearson_const": 0.84593191208125,
+    "loo_min": 2.922217349098694,
+    "loo_max": 4.218857851836247,
+    "loo_min_razao": 22.13801022044465,
+    "loo_max_razao": 31.961044332092776,
+    "agg_dp": 4.075810656190718
+   },
+   "paridade_mediana": 0.03184279506194881,
+   "agg_paridade": "{\"abs_gnn_menos_mlp_por_sorteio\": {\"811474\": 0.09657774695230556, \"54892\": 0.012416618641821087, \"880099\": 0.03203887350317175, \"159513\": 0.04257996539123954, \"29675\": 0.031646716620725865, \"676375\": 0.020296985611431728, \"387379\": 0.046335359705454604, \"259492\": 0.006172100373047301, \"684965\": 0.01"
+  },
+  "campinas_Q3": {
+   "n_sorteios_plano": 20,
+   "excluidos": {
+    "739191": {
+     "gnn": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['test']",
+       "['test']"
+      ]
+     },
+     "mlp": {
+      "npz": false,
+      "rc": 1,
+      "degenerada": [
+       "['test']",
+       "['test']"
+      ]
+     }
+    }
+   },
+   "mesmos_sorteios_gnn_mlp": true,
+   "n_usaveis": 19,
+   "gnn": {
+    "dp_ddof1": 2.4601856124049646,
+    "dp_ddof0": 2.394568837738732,
+    "razao": 18.6377697909467,
+    "pearson_const": 0.8873536242558764,
+    "loo_min": 2.29075134972958,
+    "loo_max": 2.531509535348046,
+    "loo_min_razao": 17.35417689189076,
+    "loo_max_razao": 19.1781025405155,
+    "agg_dp": 2.4601856124049646
+   },
+   "mlp": {
+    "dp_ddof1": 3.080107743587456,
+    "dp_ddof0": 2.997956732403741,
+    "razao": 23.334149572632242,
+    "pearson_const": 0.8726763470366903,
+    "loo_min": 2.569776752891431,
+    "loo_max": 3.1693614301271107,
+    "loo_min_razao": 19.468005703722962,
+    "loo_max_razao": 24.010313864599322,
+    "agg_dp": 3.080107743587456
+   },
+   "paridade_mediana": 0.02745364559522756,
+   "agg_paridade": "{\"abs_gnn_menos_mlp_por_sorteio\": {\"811474\": 0.013805222015449786, \"54892\": 0.009137658647377839, \"880099\": 0.038410271863747625, \"125243\": 0.1687621375630643, \"159513\": 0.004029709793155645, \"29675\": 0.02745364559522756, \"676375\": 0.033026422809509626, \"387379\": 0.0302252137763879, \"259492\": 0.1542"
+  },
+  "agregado_bauru_Q1_leitura": "{}",
+  "agregado_campinas_Q1_leitura": "{\"condicao1_gnn_e_mlp\": false, \"ambos_lt_2x\": false, \"faixa_intermediaria\": true, \"algum_modelo_entre_2x_e_3x\": true, \"indeterminada_dp_nao_calculavel\": false, \"condicao2_gnn_e_mlp\": false, \"paridade_le_0_117\": true}",
+  "ramos_agg": {
+   "n_celulas": 4,
+   "limiar_celulas": 3,
+   "celulas_condicao1_gnn_e_mlp": [
+    "bauru_Q1",
+    "bauru_Q3",
+    "campinas_Q3"
+   ],
+   "celulas_ambos_lt_2x": [],
+   "celulas_faixa_intermediaria": [
+    "campinas_Q1"
+   ],
+   "celulas_algum_modelo_entre_2x_e_3x": [
+    "campinas_Q1"
+   ],
+   "condicao2_por_celula_q1": {
+    "bauru_Q1": true,
+    "campinas_Q1": false
+   },
+   "condicao2_nas_celulas_q1_todas": false,
+   "satisfaz_regra_reforca": false,
+   "satisfaz_regra_delimita": false,
+   "satisfaz_regra_delimita_parcial": true,
+   "delimita_parcial_por": {
+    "condicao1_atendida_condicao2_nao": true,
+    "celulas_entre_2x_e_3x_impedem_limiar": false,
+    "residual_nao_prevista_literalmente_no_adendo": false
+   },
+   "celulas_paridade_sentinela_le_0_117": [
+    "bauru_Q1",
+    "campinas_Q1",
+    "bauru_Q3",
+    "campinas_Q3"
+   ],
+   "paridade_em_todas_as_celulas": true,
+   "nota": "arithmetic application of the rules of the decision criterion/addendum; the interpretation belongs to a separate check, not to this script"
+  },
+  "sha_agregado": "66199c1522c54ff2a173678634061838ce8b844fc93e10ebee7051f348889348",
+  "sha_script": "9e9ce1b03b1757e956f2eba8d091c9c3f29cca6b85e4ff073d882fb3e353a136"
+ },
+ "comando_rodado": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python gpu/G1_votos_bloco3/verif_bloco3.py",
+ "gravidade_sugerida": "nota"
+}

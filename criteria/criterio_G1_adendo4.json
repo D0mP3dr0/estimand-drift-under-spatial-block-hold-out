@@ -1,0 +1,16 @@
+{
+ "id": "G1_modelos_g10_adendo4",
+ "emenda": "criterios/criterio_G1_adendo3.json (sha256 b0a4280a91830ac1c6cc0c9a68bc83f4bc37bfedd7c6ed239294cbf01ba1cf2b), which stays intact; addenda 1-3 intact",
+ "origem": "fact observed in the batch (02/10 23:14): in Bauru Q3, split draw 769856, the frozen trainer aborts before training with 'PARTICAO DEGENERADA: [val] sem nenhuma aresta antena->terreno' (rc=1): the VALIDATION partition of this split draw has no antenna-terrain link, although the test set has valid nodes (2.1). The launcher stopped the batch on an unforeseen failure (abortado_por_falha_corrida), as designed. Training this split draw would only be possible by changing trainer parameters (--window-anchor or --max-nodes), which would break the configuration identity with A3/A4 and with the other runs; therefore it is NOT done.",
+ "prova_de_anterioridade": {
+  "agregados_bloco3_existentes": [],
+  "nota": "no block 3 aggregate exists; no block 3 MAE has been read; the automatic aggregation of block 3 aborted (rc=4) precisely because of this run, without writing anything."
+ },
+ "fixacao": {
+  "sorteio_nao_treinavel": "A split draw whose validation (or training) partition is degenerate for the frozen trainer, with the configuration identical to A3/A4, is recorded as 'nao_treinavel' in the cell, is NOT replaced, and is EXCLUDED from the cell for BOTH models (GNN and MLP), including from the parity median, so that GNN and MLP are compared over the same split draws. The count of untrainable split draws is reported next to that of sem_validos.",
+  "aceitacao_pelo_agregador": "analogous to addendum 3: (a) batch status with rc != 0 and marker nao_treinavel for the run_label (or, for the run that stopped the batch before the amendment, the original failure record plus the marker added by the resume launcher in its own file); (b) run log with 'PARTICAO DEGENERADA' and the named partition different from test; (c) partial run JSON with g = 10, b = 2, seed and split_seed of the plan, dataset with the expected name and size; 2.1 may have validos > 0 in this case. Any item missing: abort. If the MLP of the same split draw does get to train (the guard may differ), the run is checked normally but the split draw stays excluded from the cell.",
+  "retomada": "the batch is resumed with a RESUME launcher in a new file (gpu/G1/rodar_lote_G1_retomada.py, declared copy of the original, which stays intact), whose only difference is: on encountering rc != 0 with 'PARTICAO DEGENERADA' in a partition other than test, it records 'nao_treinavel' and continues, instead of stopping the batch. The cap is reset at resumption, as in the design.",
+  "leitura": "unchanged: SD over the usable split draws of the cell (plan of 20 minus sem_validos minus nao_treinaveis); the minimum k of addendum 1 (>= 10 usable split draws per cell) still applies to block 3."
+ },
+ "fixado_em": "2026-10-03T11:06:33-03:00"
+}

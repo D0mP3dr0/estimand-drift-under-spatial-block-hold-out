@@ -1,0 +1,14 @@
+{
+ "id": "G1_modelos_g10_adendo3",
+ "emenda": "criterios/criterio_G1_adendo2.json (sha256 5089c7f869adb34d5172201b3e6c1e57ad383515c25af73e59f739acfe8e80d0), which stays intact; addenda 1 and 2 intact",
+ "origem": "fact observed in the batch (02/10, 18:03-18:42): in split draws 125243 (Bauru Q3) and 739191 (Bauru Q3 and Campinas Q3), predicted by 2.1 as having no valid node, the frozen trainer aborts BEFORE training with 'PARTICAO DEGENERADA: test sem nenhuma aresta antena->terreno' (rc=1) and writes a PARTIAL run JSON (no training/selection block, no .npz, no sidecar). Rule C2 of aggregator v5 requires checks that the partial run JSON cannot satisfy (e.g. the dataset sha in the inputs block), and would abort the whole block 3.",
+ "prova_de_anterioridade": {
+  "agregados_bloco3_existentes": [],
+  "nota": "no block 3 aggregate exists; no block 3 MAE has been read. Blocks 1 and 2, already aggregated and recalculated, are not affected (no sem_validos runs)."
+ },
+ "fixacao": {
+  "corrida_sem_validos": "It is accepted as 'no valid nodes' (excluded from the SD, counted per cell, left out of the parity median for lacking a prediction) when, AND ONLY WHEN: (a) 2.1 records validos == 0 for the cell and the split_seed; (b) the batch status records rc != 0 with sem_validos == true and the run log contains the degenerate-partition message or equivalent; (c) the partial run JSON exists and carries g = 10 and b = 2, seed and split_seed equal to the plan, dataset with the expected name/sha in the fields it contains, and particoes.test.n_pl_alvo_valido == 0 (or the equivalent field of the degenerate-partition guard); the checks that depend on completed training (selection, .npz, sidecar, binding) do not apply to that run. Any one of the three missing: abort.",
+  "leitura": "unchanged: 20 split draws of the plan per cell; SD over the split draws with valid nodes; count of sem_validos reported (addendum 1, amendment 6)."
+ },
+ "fixado_em": "2026-10-02T19:28:48-03:00"
+}

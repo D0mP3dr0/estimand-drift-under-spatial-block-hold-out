@@ -1,0 +1,27 @@
+{
+ "artefato": "shim_g10",
+ "modelo": "mlp",
+ "run_label": "g1_mlp_bauru_Q3_ss29675_s42",
+ "grid_km_pedido": 10.0,
+ "buffer_km_pedido": 2.0,
+ "efetivo": {
+  "config.grid_km": 10.0,
+  "config.buffer_km": 2.0,
+  "geometria.grid_km_usado": 10.0,
+  "geometria.buffer_km_usado": 2.0,
+  "split.grid_km": 10.0,
+  "split.buffer_km": 2.0
+ },
+ "g_b_efetivos_conferem": true,
+ "n_nos_teste_retidos_run_json": 740192,
+ "n_nos_npz": 740192,
+ "npz_igual_teste_retido": true,
+ "sha256_observados": {
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/modelo_v3/train_gnn_v3.py": "903b1ffaa19f7d6d732e958516a9e3dd98110cc3ac0f1aed704582e6e23a914f",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/modelo_v3/train_mlp_v3.py": "86484b957e8507d8626a3e0ac386ce8c87fdca33f2548a814b02bee26c9085b8",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/modelo_v3/v3_common.py": "57ffd38d869450a63d5263b101b440c02e19b738447c7013e5e9d7e48eff0268",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/modelo_v3/rf_decoder_v3.py": "645f169755926b1525b7a8082da7e8dbfcb8d4bdbac1dfbf3aa5c45884fbfe0a",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py": "6f955629cde164f2843f454e1ebf6977292fd80647ef48ecd0df31e464c42445",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py": "4b75093f52e8b7fdec45c7f2b8c5bcd68c38093c420697927b49fa99a474b31c"
+ }
+}

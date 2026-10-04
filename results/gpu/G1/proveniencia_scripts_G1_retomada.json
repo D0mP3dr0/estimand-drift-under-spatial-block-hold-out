@@ -1,0 +1,30 @@
+{
+ "registrado_em": "2026-10-03T11:07:51-03:00",
+ "nota": "Provenance of the RESUME launcher of batch G1 (addendum 4), recorded before launch. Declared copy of rodar_lote_G1.py (sha e05a9214...3bc59, intact). proveniencia_scripts_G1.json was not edited.",
+ "arquivos": [
+  {
+   "caminho": "_v3_2026-09-25/gpu/G1/rodar_lote_G1_retomada.py",
+   "sha256": "4f4f61cf170319ea9f3752fb78d83681065b4bc034b347751777a5d9edd3fc79",
+   "mtime": "2026-10-03T11:07:44-03:00",
+   "bytes": 20377
+  },
+  {
+   "caminho": "_v3_2026-09-25/gpu/G1/rodar_lote_G1.py",
+   "sha256": "e05a921488a13f4fb34e262968cddeb9cb3134bd44c9cfcb05bbaaa03ff3bc59",
+   "mtime": "2026-10-01T22:54:33-03:00",
+   "bytes": 14435
+  },
+  {
+   "caminho": "_v3_2026-09-25/gpu/G1/train_v3_g10.py",
+   "sha256": "1a9dfa2f7079ce58056e53a63f682f7b0336355dae6582efa2941379fefae70c",
+   "mtime": "2026-10-01T22:54:19-03:00",
+   "bytes": 7429
+  },
+  {
+   "caminho": "_v3_2026-09-25/criterios/criterio_G1_adendo4.json",
+   "sha256": "9d48d0d38d0f0b57e269ba8644955faa050ab08ad4355a16778bc0c05540e4e4",
+   "mtime": "2026-10-03T11:06:33-03:00",
+   "bytes": 2852
+  }
+ ]
+}

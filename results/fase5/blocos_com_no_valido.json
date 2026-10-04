@@ -1,0 +1,428 @@
+{
+  "id": "blocos_com_no_valido_por_celula",
+  "pergunta": "10 km blocks with >= 1 valid node (not sentinel) per cell",
+  "definicao_no_valido": "~sent of the shared loop (sent = terrain.y[:,0] >= 299.0), not a comparison of RSSI values",
+  "grid_km": 10.0,
+  "id_de_bloco": "gid = SpatialKFold._assign_groups(pos_km) (shared loop)",
+  "conferencia_N_blocos_ocupados_vs_R5": {
+    "fonte": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/R5_resumo.json",
+    "fonte_sha256": "b1081dae6148d025d2d0c02f14d360521ba7ed6dc7b19987bd06123714e60ab0",
+    "reproduz_132_nas_16": true,
+    "por_celula": {
+      "bauru_Q1": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "bauru_Q2": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "bauru_Q3": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "bauru_Q4": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "campinas_Q1": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "campinas_Q2": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "campinas_Q3": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "campinas_Q4": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "lins_Q1": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "lins_Q2": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "lins_Q3": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "lins_Q4": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "sorocaba_Q1": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "sorocaba_Q2": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "sorocaba_Q3": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      },
+      "sorocaba_Q4": {
+        "N_blocos_ocupados_aqui": 132,
+        "N_blocos_ocupados_R5": 132,
+        "reproduz": true
+      }
+    }
+  },
+  "por_celula": {
+    "bauru_Q1": {
+      "celula": "bauru_Q1",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 27,
+      "fracao_blocos_com_no_valido": 0.20454545454545456,
+      "blocos_sem_no_valido": 105,
+      "n_nos": 12960000,
+      "n_nos_validos": 2101544,
+      "n_nos_sentinela": 10858456,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 10858456,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "33e8d57368920241fc289f8c939de35ece7178c316d2bf5488c3cdf98ff5fb5c",
+      "tempo_s": 9.183188351016724
+    },
+    "bauru_Q2": {
+      "celula": "bauru_Q2",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 15,
+      "fracao_blocos_com_no_valido": 0.11363636363636363,
+      "blocos_sem_no_valido": 117,
+      "n_nos": 12960000,
+      "n_nos_validos": 1225847,
+      "n_nos_sentinela": 11734153,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11734153,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "29bdc73e6f4bea464f2e3772670bef68febac95c21e18d66e0293dcd5f799163",
+      "tempo_s": 9.26652416001889
+    },
+    "bauru_Q3": {
+      "celula": "bauru_Q3",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 24,
+      "fracao_blocos_com_no_valido": 0.18181818181818182,
+      "blocos_sem_no_valido": 108,
+      "n_nos": 12960000,
+      "n_nos_validos": 1272193,
+      "n_nos_sentinela": 11687807,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11687807,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "ef67c8c886b6c0cb7001a84f0316033699965d73961b6eca31ea66dd042f5264",
+      "tempo_s": 9.245941166998819
+    },
+    "bauru_Q4": {
+      "celula": "bauru_Q4",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 18,
+      "fracao_blocos_com_no_valido": 0.13636363636363635,
+      "blocos_sem_no_valido": 114,
+      "n_nos": 12960000,
+      "n_nos_validos": 1236231,
+      "n_nos_sentinela": 11723769,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11723769,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "0caa7c2c3a7412a4f7fbf39ce08cefffc6896f7efa9db376897df6438024db20",
+      "tempo_s": 9.095315154001582
+    },
+    "campinas_Q1": {
+      "celula": "campinas_Q1",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 24,
+      "fracao_blocos_com_no_valido": 0.18181818181818182,
+      "blocos_sem_no_valido": 108,
+      "n_nos": 12960000,
+      "n_nos_validos": 1806577,
+      "n_nos_sentinela": 11153423,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11153423,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "d3787cd087c1ded417da788a83bd048bcaafa347dcd6adc0e64a9fe1e405fe00",
+      "tempo_s": 6.862417903990718
+    },
+    "campinas_Q2": {
+      "celula": "campinas_Q2",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 22,
+      "fracao_blocos_com_no_valido": 0.16666666666666666,
+      "blocos_sem_no_valido": 110,
+      "n_nos": 12960000,
+      "n_nos_validos": 1904361,
+      "n_nos_sentinela": 11055639,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11055639,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "c952a61cfcbeda2a042a6ba80f17ff73aabea5e42511a5614b0a7954321ef16c",
+      "tempo_s": 6.828790344996378
+    },
+    "campinas_Q3": {
+      "celula": "campinas_Q3",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 32,
+      "fracao_blocos_com_no_valido": 0.24242424242424243,
+      "blocos_sem_no_valido": 100,
+      "n_nos": 12960000,
+      "n_nos_validos": 1971601,
+      "n_nos_sentinela": 10988399,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 10988399,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "8b7bacbcdb7d34bc8c0234554a1f1afd954a05773a61d1b79e53191687330bb5",
+      "tempo_s": 6.887920326000312
+    },
+    "campinas_Q4": {
+      "celula": "campinas_Q4",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 24,
+      "fracao_blocos_com_no_valido": 0.18181818181818182,
+      "blocos_sem_no_valido": 108,
+      "n_nos": 12960000,
+      "n_nos_validos": 1646822,
+      "n_nos_sentinela": 11313178,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11313178,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "7e9c4e41fc10078813afe081a436b88323532ff41282555232938f17913916dc",
+      "tempo_s": 6.853043383016484
+    },
+    "lins_Q1": {
+      "celula": "lins_Q1",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 17,
+      "fracao_blocos_com_no_valido": 0.12878787878787878,
+      "blocos_sem_no_valido": 115,
+      "n_nos": 12960000,
+      "n_nos_validos": 1107293,
+      "n_nos_sentinela": 11852707,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11852707,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "f23d15852f1d132eeb5412e194cb0d4251f88c6a0d32097cef08588835742cfc",
+      "tempo_s": 6.534319634985877
+    },
+    "lins_Q2": {
+      "celula": "lins_Q2",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 22,
+      "fracao_blocos_com_no_valido": 0.16666666666666666,
+      "blocos_sem_no_valido": 110,
+      "n_nos": 12960000,
+      "n_nos_validos": 1926580,
+      "n_nos_sentinela": 11033420,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11033420,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "64a48e1cb48287cf0753c04bb4934d65bf21144a084e1afe058161640a428249",
+      "tempo_s": 6.662812871974893
+    },
+    "lins_Q3": {
+      "celula": "lins_Q3",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 18,
+      "fracao_blocos_com_no_valido": 0.13636363636363635,
+      "blocos_sem_no_valido": 114,
+      "n_nos": 12960000,
+      "n_nos_validos": 924875,
+      "n_nos_sentinela": 12035125,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 12035125,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "845b287a7b3d33e1b08670c0dad745c2b9f50628e2d38540553de73ed234a4f2",
+      "tempo_s": 6.6672236190061085
+    },
+    "lins_Q4": {
+      "celula": "lins_Q4",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 15,
+      "fracao_blocos_com_no_valido": 0.11363636363636363,
+      "blocos_sem_no_valido": 117,
+      "n_nos": 12960000,
+      "n_nos_validos": 904934,
+      "n_nos_sentinela": 12055066,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 12055066,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "eb2974f829c149378d1025fca8fa51e3191e8a06ba0821cf8f1adc2712754744",
+      "tempo_s": 6.667945785011398
+    },
+    "sorocaba_Q1": {
+      "celula": "sorocaba_Q1",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 22,
+      "fracao_blocos_com_no_valido": 0.16666666666666666,
+      "blocos_sem_no_valido": 110,
+      "n_nos": 12960000,
+      "n_nos_validos": 1653966,
+      "n_nos_sentinela": 11306034,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11306034,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "858293a658cddbf2b45ddf2673d46153108698b0d04c7b48f8d39d3bf8527919",
+      "tempo_s": 6.6542120079975575
+    },
+    "sorocaba_Q2": {
+      "celula": "sorocaba_Q2",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 20,
+      "fracao_blocos_com_no_valido": 0.15151515151515152,
+      "blocos_sem_no_valido": 112,
+      "n_nos": 12960000,
+      "n_nos_validos": 1688201,
+      "n_nos_sentinela": 11271799,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11271799,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "5741e2b87fee80b15907aebee1122a5f12c992a66555a4b8b17282d384ab991d",
+      "tempo_s": 6.598894802009454
+    },
+    "sorocaba_Q3": {
+      "celula": "sorocaba_Q3",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 24,
+      "fracao_blocos_com_no_valido": 0.18181818181818182,
+      "blocos_sem_no_valido": 108,
+      "n_nos": 12960000,
+      "n_nos_validos": 1408283,
+      "n_nos_sentinela": 11551717,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11551717,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "aed5e373e11bc94650b1d944e03153cf58af07b1224884f2f011a14609db8f2a",
+      "tempo_s": 6.6410821699828375
+    },
+    "sorocaba_Q4": {
+      "celula": "sorocaba_Q4",
+      "N_blocos_ocupados": 132,
+      "N_blocos_bbox_laco": 132,
+      "blocos_com_ao_menos_1_no_valido": 21,
+      "fracao_blocos_com_no_valido": 0.1590909090909091,
+      "blocos_sem_no_valido": 111,
+      "n_nos": 12960000,
+      "n_nos_validos": 1369841,
+      "n_nos_sentinela": 11590159,
+      "conferencia_registro": {
+        "sentinela_e_rssi_igual_menos110": 11590159,
+        "sentinela_e_rssi_diferente_de_menos110": 0,
+        "valido_e_rssi_igual_menos110": 0
+      },
+      "sha256_manifest_tensor": "467a03166acd932abea979a48dded6ce51cf1c3d13992aa45ae4949c3737177a",
+      "tempo_s": 6.339671274996363
+    }
+  },
+  "faixa_16_celulas": {
+    "blocos_com_no_valido": {
+      "n": 16,
+      "min": 15.0,
+      "mediana": 22.0,
+      "max": 32.0
+    },
+    "fracao": {
+      "n": 16,
+      "min": 0.11363636363636363,
+      "mediana": 0.16666666666666666,
+      "max": 0.24242424242424243
+    }
+  },
+  "faixa_4_celulas_Q1": {
+    "celulas": [
+      "bauru_Q1",
+      "campinas_Q1",
+      "lins_Q1",
+      "sorocaba_Q1"
+    ],
+    "blocos_com_no_valido": {
+      "n": 4,
+      "min": 17.0,
+      "mediana": 23.0,
+      "max": 27.0
+    },
+    "fracao": {
+      "n": 4,
+      "min": 0.12878787878787878,
+      "mediana": 0.17424242424242425,
+      "max": 0.20454545454545456
+    }
+  },
+  "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_14_blocos_com_no_valido.py",
+  "script_sha256": "28478f7fb7430f49fe6f89358512ec08ebd0564f32d8530e6dc74634586f2986",
+  "laco_importado": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_13_laco_comum.py",
+  "laco_sha256": "d6e7c2c6f5f0bb0af5f12c1fe3cbe47235e85347665f171b3fd7cd41fe813b93",
+  "script_original_sha256": "9b9bcf91bab51621107a3d7978964d46dd16c5ec1a76a3789842ae1bce77f3bc",
+  "comando": "scripts/v3_14_blocos_com_no_valido.py",
+  "data_utc": "2026-10-04T13:13:30.104620+00:00",
+  "venv": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python",
+  "sementes": "not applicable (no split draw)",
+  "tempo_total_s": 29.53253257399774
+}

@@ -1,0 +1,96 @@
+{
+ "sorteios_total": 960,
+ "sorteios_com_no_valido": 904,
+ "n_por_celula": [
+  59,
+  56,
+  56,
+  56,
+  59,
+  59,
+  57,
+  58,
+  56,
+  59,
+  48,
+  53,
+  58,
+  59,
+  55,
+  56
+ ],
+ "dp_intra_media_simples": 8.016603526005728,
+ "dp_entre_medias": 2.179646210370172,
+ "razao": 3.6779379551896443,
+ "dp_intra_ponderado_media": 7.227361286295269,
+ "razao_ponderada_vs_dp_entre_medias": 3.3158414663395477,
+ "dp_intra_poolado": 8.156806738065539,
+ "var_ruido_medias": 1.16292156132203,
+ "dp_entre_corrigido": 1.894184795910637,
+ "razao_corrigida": 4.232218283724378,
+ "razao_corrigida_poolado": 4.306235989052019,
+ "anova": {
+  "MSB": 266.67009034403446,
+  "MSW": 66.53349616215137,
+  "n0": 56.490855457227134,
+  "dp_celula": 1.882236438535587,
+  "dp_sorteio_residual": 8.156806738065539,
+  "ICC": 0.05055651477396419
+ },
+ "razao_boot_IC95": [
+  2.6579651452531685,
+  4.158319809455464
+ ],
+ "A2": {
+  "n_celulas": 16,
+  "n_seeds_por_celula": [
+   20
+  ],
+  "sinal_muda_val": 16,
+  "sinal_muda_te": 16,
+  "frac_val_mais_pobre_min_max": [
+   0.4,
+   0.85
+  ],
+  "frac_te_mais_rico_min_max": [
+   0.4,
+   0.7
+  ],
+  "frac_val_mais_pobre": {
+   "bauru_Q1": 0.65,
+   "bauru_Q2": 0.4,
+   "bauru_Q3": 0.85,
+   "bauru_Q4": 0.65,
+   "campinas_Q1": 0.55,
+   "campinas_Q2": 0.6,
+   "campinas_Q3": 0.75,
+   "campinas_Q4": 0.65,
+   "lins_Q1": 0.7,
+   "lins_Q2": 0.55,
+   "lins_Q3": 0.75,
+   "lins_Q4": 0.6,
+   "sorocaba_Q1": 0.55,
+   "sorocaba_Q2": 0.45,
+   "sorocaba_Q3": 0.85,
+   "sorocaba_Q4": 0.7
+  },
+  "frac_te_mais_rico": {
+   "bauru_Q1": 0.6,
+   "bauru_Q2": 0.6,
+   "bauru_Q3": 0.4,
+   "bauru_Q4": 0.7,
+   "campinas_Q1": 0.45,
+   "campinas_Q2": 0.4,
+   "campinas_Q3": 0.4,
+   "campinas_Q4": 0.55,
+   "lins_Q1": 0.5,
+   "lins_Q2": 0.45,
+   "lins_Q3": 0.45,
+   "lins_Q4": 0.65,
+   "sorocaba_Q1": 0.55,
+   "sorocaba_Q2": 0.45,
+   "sorocaba_Q3": 0.4,
+   "sorocaba_Q4": 0.65
+  }
+ }
+}

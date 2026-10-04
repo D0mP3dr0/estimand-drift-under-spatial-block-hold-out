@@ -1,0 +1,177 @@
+{
+ "artefato": "TN_T6_v3-13_proveniencia",
+ "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_13_gerar_TN_T6.py",
+ "script_sha256": "d9316a42d204f6a32d5ca26b2dac9d717e88ec8c31f047450b6ce946d9a05e63",
+ "comando": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python scripts/v3_13_gerar_TN_T6.py (cwd = MDPI_Mathematics)",
+ "data": "2026-10-04T10:41:29-03:00",
+ "fontes": {
+  "manuscrito_ambientes": {
+   "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/redacao_v3-12/main_v3-13a.tex",
+   "sha256": "dcaafd6ac948b2c801256ab15d28be8d6c83d648933fdcf8e6c75847ab8c4392"
+  },
+  "gerador_antigo": {
+   "arquivo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_12_gerar_tabelas.py",
+   "sha256": "5c1c1f6f4b532b9290c1691bf80ff85eaaf578754d311da904a329f300a7734f"
+  }
+ },
+ "ambientes_no_manuscrito": {
+  "prop:retention": {
+   "ambiente": "Remark",
+   "linha_do_begin": 253
+  },
+  "prop:degree": {
+   "ambiente": "Lemma",
+   "linha_do_begin": 389
+  },
+  "prop:deflation": {
+   "ambiente": "Lemma",
+   "linha_do_begin": 487
+  },
+  "rem:designs": {
+   "ambiente": "Proposition",
+   "linha_do_begin": 317
+  },
+  "rem:refit": {
+   "ambiente": "Proposition",
+   "linha_do_begin": 341
+  }
+ },
+ "varredura_antes_da_correcao": [
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.tex",
+   "linha": 16,
+   "palavra_antes": "Proposition",
+   "rotulo": "prop:retention",
+   "ambiente_no_manuscrito": "Remark"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.tex",
+   "linha": 26,
+   "palavra_antes": "Remark",
+   "rotulo": "prop:degree",
+   "ambiente_no_manuscrito": "Lemma"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.tex",
+   "linha": 27,
+   "palavra_antes": "Remark",
+   "rotulo": "prop:degree",
+   "ambiente_no_manuscrito": "Lemma"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.csv",
+   "linha": 11,
+   "palavra_antes": "Proposition",
+   "rotulo": "prop:retention",
+   "ambiente_no_manuscrito": "Remark"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.csv",
+   "linha": 21,
+   "palavra_antes": "Remark",
+   "rotulo": "prop:degree",
+   "ambiente_no_manuscrito": "Lemma"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.csv",
+   "linha": 22,
+   "palavra_antes": "Remark",
+   "rotulo": "prop:degree",
+   "ambiente_no_manuscrito": "Lemma"
+  }
+ ],
+ "trocas_feitas_nesta_execucao": [
+  {
+   "arquivo": "TN_notacao_v3-12.tex",
+   "rotulo": "prop:retention",
+   "de": "Proposition",
+   "para": "Remark"
+  },
+  {
+   "arquivo": "TN_notacao_v3-12.tex",
+   "rotulo": "prop:degree",
+   "de": "Remark",
+   "para": "Lemma"
+  },
+  {
+   "arquivo": "TN_notacao_v3-12.tex",
+   "rotulo": "prop:degree",
+   "de": "Remark",
+   "para": "Lemma"
+  },
+  {
+   "arquivo": "TN_notacao_v3-12.csv",
+   "rotulo": "prop:retention",
+   "de": "Proposition",
+   "para": "Remark"
+  },
+  {
+   "arquivo": "TN_notacao_v3-12.csv",
+   "rotulo": "prop:degree",
+   "de": "Remark",
+   "para": "Lemma"
+  },
+  {
+   "arquivo": "TN_notacao_v3-12.csv",
+   "rotulo": "prop:degree",
+   "de": "Remark",
+   "para": "Lemma"
+  }
+ ],
+ "varredura_depois": [
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.tex",
+   "linha": 16,
+   "palavra_antes": "Remark",
+   "rotulo": "prop:retention",
+   "ambiente_no_manuscrito": "Remark"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.tex",
+   "linha": 26,
+   "palavra_antes": "Lemma",
+   "rotulo": "prop:degree",
+   "ambiente_no_manuscrito": "Lemma"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.tex",
+   "linha": 27,
+   "palavra_antes": "Lemma",
+   "rotulo": "prop:degree",
+   "ambiente_no_manuscrito": "Lemma"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.csv",
+   "linha": 11,
+   "palavra_antes": "Remark",
+   "rotulo": "prop:retention",
+   "ambiente_no_manuscrito": "Remark"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.csv",
+   "linha": 21,
+   "palavra_antes": "Lemma",
+   "rotulo": "prop:degree",
+   "ambiente_no_manuscrito": "Lemma"
+  },
+  {
+   "arquivo": "tables_v3-12/TN_notacao_v3-12.csv",
+   "linha": 22,
+   "palavra_antes": "Lemma",
+   "rotulo": "prop:degree",
+   "ambiente_no_manuscrito": "Lemma"
+  }
+ ],
+ "T6_rotulo": {
+  "de": "FSPL (second calibration)",
+  "para": "FSPL (calibrated once)",
+  "ocorrencias_no_tex": 4,
+  "csv_alterado": false
+ },
+ "saidas": {
+  "TN_notacao_v3-12.tex": "43ac2fc9f1f2ee291d29bd2a4e0518a19e4404f6dd3e6b77a5bf4da4d3658ecb",
+  "TN_notacao_v3-12.csv": "3ba47c61c689a1c1115b6618ef951662be5b9fd0a735c89656dcc38314d56c85",
+  "T6_referencia_desenho_v3-12.tex": "fe552da64bd843e10006e8adc59c8f1cc1c3d253555753f5c55b877191d1339c",
+  "T6_referencia_desenho_v3-12.csv": "2b566e874393989ef02c16a22a2f7be004c48c5c5e4e68bf4afcdae8032d06dd"
+ }
+}

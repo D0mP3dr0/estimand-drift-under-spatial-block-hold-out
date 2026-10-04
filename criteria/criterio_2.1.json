@@ -1,0 +1,11 @@
+{
+  "id": "2.1",
+  "pergunta": "Does the reported error (MAE of the constant predictor and of the calibrated FSPL) drift with split_seed in the 16 g10b2 cells?",
+  "alegacao": "A3 (estimand drift measured in ERROR)",
+  "hipotese": "under a sentinel-dominated target, the per-population MAE on the held-out test varies across split draws in a way that is not negligible compared with the variation across cells",
+  "metodo_fixado": "16 cells x 20 split_seeds (0..19 with 42 included), split_espacial_3vias (grid_km=10,buffer_km=2,fracs=0.70/0.15/0.15), constant = mediana(RSSI) of the whole training set of the split draw, FSPL calibrated by offset in p_tx_eff=mediana(rssi_tr+FSPL(dist_tr,900MHz)) on the whole training set of the split draw; MAE on the held-out test per population (valid: PL<299; sentinel: PL>=299; all)",
+  "limiar_aceitacao": "the MAE of the constant predictor on valid nodes varies across split draws with standard deviation >= 0.1 dB in at least 8 of the 16 cells",
+  "refutacao": "if in fewer than 8 of the 16 cells the SD across split draws (valid nodes, constant) reaches 0.1 dB, the error drift is declared small and the title 'estimand drift' is reconsidered",
+  "comparacao_dp": "SD across split draws (per cell) vs SD across cells (mean over split draws) -- both standard deviation, never SD x range",
+  "fixado_em": "2026-09-25T00:00:00-03:00 (before running the script v3_2.1_3.1_deriva_calibracao.py)"
+}

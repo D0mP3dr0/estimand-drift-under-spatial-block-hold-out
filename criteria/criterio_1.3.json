@@ -1,0 +1,16 @@
+{
+  "id": "1.3",
+  "alegacao": "A1",
+  "pergunta": "Is the 4-6% (test) and 5-6% (validation, g=5) gap between the whole-block Monte Carlo (continuous area, variant C of montecarlo_retencao_r3_g5.py) and the real nodal retention (20 seeds, varredura_split_geometria.py/EDT) 'granularity' (node vs block effect, not measured), or is it the protocol's trimming rule (an effect already captured by the exact sequential trimming over real nodes)?",
+  "hipotese": "An MC run over NODE POSITIONS of the actual 3600x3600 grid (reconstructed from the run JSON, split_espacial_3vias_exato/cKDTree, rule 70/15/remainder to test, buffer b=2km, sequential trimming validation-first-then-test, EXACTLY as in the protocol) converges, with N>=50 permutations, to the same mean retention as the actual nodal retention (20 seeds); the 4-6%/5-6% gap lies entirely on the block-MC side (continuous-area approximation + generic block geometry per city, without the actual node discretisation or the sequential rule applied per node).",
+  "limiar_de_aceitacao": "if |media(MC_nodal, N>=50) - media(nodal_real, 20 seeds)| / media(nodal_real) < 0.01 (1%) in ALL tested cells (g10: 4 cities; g5: bauru + 3 cities geometry only): the gap is attributed to the trimming rule/block abstraction of the continuous MC, NOT to granularity -- the granularity sentence is removed from the text.",
+  "o_que_refuta": "if in ANY cell |MC_nodal - nodal_real|/nodal_real >= 0.01: granularity (or another effect not captured by the nodal MC with the same rule) remains without a measured explanation and the corresponding gap remains unattributed; the granularity sentence can only be removed, not replaced, without an additional measured cause.",
+  "metodo_declarado": {
+    "mc_nodal": "split_espacial_3vias_exato (literal copy of train_gnn_c0_spatial.py:412-472, exact cKDTree, same kw compact_nodes=False/balanced_tree=False) imported from scripts/varredura_split_geometria.py, applied to the reconstructed grid (build_synthetic_grid + latlon_graus_para_metros) of the 4 cities x {g10b2, g5b2}, N_PERMUTACOES=50 new seeds (1000..1049, outside the 20 seeds already used in C-1/R3-a) per cell/config, mean and SD of val/test retention reported",
+    "mc_blocos": "montecarlo_retencao_r3_g5.py, variant C (gxg blocks with actual per-city borders + asymmetric rule of the code), 2500 trials, already existing RAW artifact (reused by read-only import, not recomputed)",
+    "nodal_real": "varredura_split_geometria.py, summary by (cidade,Q,g,b) over the 20 actual seeds (42,1..19), EDT method already validated <1e-3 against exact cKDTree at the gate; already existing artifact (reused by reading)",
+    "n_permutacoes_mc_nodal": 50,
+    "regra_de_aparo_mc_nodal": "exact cKDTree: val trimmed against training (d<b removes), then test trimmed against training UNION the already-retained val (d<b removes) -- sequential, identical to the protocol/frozen code",
+    "regra_de_aparo_mc_blocos": "continuous block geometry with real edges and an asymmetric rule (test trimmed only by an ALREADY retained val neighbor); does NOT operate on individual nodes, operates on block area"
+  }
+}

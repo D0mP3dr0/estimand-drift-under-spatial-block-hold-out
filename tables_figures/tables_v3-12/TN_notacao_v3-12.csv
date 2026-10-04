@@ -1,0 +1,26 @@
+Symbol,Meaning,Defined in
+"$D$, $V_T$, $V_A$, $E_{TT}$, $E_{AT}$",domain; terrain nodes; transmitter nodes; terrain--terrain and transmitter--terrain edges,Section~\ref{sec:setting}
+"$c = (c_L, c_P)$","sentinel pair, $300$~dB and $-110$~dBm",Section~\ref{sec:setting}
+"$Z_i$, $\zeta$",sentinel indicator of node $i$; its random counterpart,"Section~\ref{sec:setting}, \ref{sec:sentinel}"
+"$\varpi(V)$, $\bar\varpi$, $\psi(X)$",sentinel fraction of a node set; of the population at hand; conditional probability of the sentinel given the covariates,Equation~\eqref{eq:pi}; Section~\ref{sec:sentinel}
+"$g$, $b$, $\beta(x)$, $N$, $n_1 \times n_2$",block side; buffer width; block rule; number of blocks; lattice of blocks,Section~\ref{sec:setting}
+$\sigma$,"split draw, a uniform permutation of the blocks",Section~\ref{sec:setting}
+"$k_{\mathrm{tr}}, k_{\mathrm{va}}, k_{\mathrm{te}}$, $\nu_{\mathrm{tr}}, \nu_{\mathrm{va}}, \nu_{\mathrm{te}}$",block counts per class; nominal class proportions,Equation~\eqref{eq:counts}; Section~\ref{sec:setting}
+"$B_{\mathsf{w}}$, $B_{\mathsf{e}}$, $B_{\mathsf{s}}$, $B_{\mathsf{n}}$, $B_{\mathsf{ws}}$, $B_{\mathsf{es}}$, $B_{\mathsf{wn}}$, $B_{\mathsf{en}}$",lateral and diagonal neighbour blocks of $B$,Equation~\eqref{eq:area}
+"$\mathcal{S}$, $A(\mathcal{S})$, $\rho(\mathcal{S})$",trimming neighbours; surviving area; surviving fraction,Proposition~\ref{prop:area}
+"$q$, $R(g,b,q)$",non-trimming probability; mean-field retention,Remark~\ref{prop:retention}
+"$\omega_k$, $\bar\rho_{\mathrm{te}}$, $\bar\rho_{\mathrm{va}}$",area near exactly $k$ neighbours; exact expected surviving fraction,Proposition~\ref{prop:exactretention}
+"$r(g,b)$, $r_{\mathrm{va}}(g,b)$, $r_{\mathrm{te}}(g,b)$, $V_{\mathrm{te}}(\sigma)$","nodal retention of a partition, of validation and of test; retained (scored) test nodes",Section~\ref{sec:setting}
+"$\mathcal{L}$, $e_i$",loss function; loss at node $i$,Equation~\eqref{eq:err}; Definition~\ref{def:estimand}
+"$U$, $M_U$, $S_U$, $A_U$",subpopulation; scored size; scored sum; event $M_U > 0$,Definition~\ref{def:estimand}
+"$p_i$, $p_{ij}$",first- and second-order inclusion probabilities,Definition~\ref{def:estimand}; Proposition~\ref{prop:designvar}
+"$\mathrm{Err}_\sigma(U)$, $\mathrm{Err}(U)$",conditional error of a draw; protocol estimand,"Definition~\ref{def:estimand}, \ref{def:drift}"
+"$\theta_U$, $\mu_U$",inclusion-weighted mean; domain mean,Definition~\ref{def:estimand}
+$w_i$,weight of node $i$ in $\mathrm{Err}(U)$,Proposition~\ref{prop:ratio}
+"$m(i)$, $\mathcal{N}_b(i)$",number and set of other blocks within $b$ of node $i$,Proposition~\ref{prop:inclusion}
+"$d_i$, $d_i^V$, $\partial V$, $\Lambda(V)$",degree; degree after induction; inner boundary; relative degree loss,Lemma~\ref{prop:degree}
+"$d_{\max}$, $\bar d_V$",maximum degree; mean degree over $V$,Lemma~\ref{prop:degree}
+"$\mathrm{MAE}$, $\mathrm{MAE}_{\mathrm{valid}}$, $\mathrm{MAE}_{\sigma}$",mean absolute error; on the valid nodes; on the test set of draw $\sigma$,Equation~\eqref{eq:mixture}; Proposition~\ref{prop:drift}
+"$\Delta_f$, $e_f$, $\varepsilon_{\mathrm{c}}$",sentinel and valid mean absolute errors of $f$; remainder of the composition identity,"Proposition~\ref{prop:drift}, Equation~\eqref{eq:composition}"
+"$a$, $e$, $\Delta$, $\varpi^*$",valid error of $f_c$; valid error and sentinel deviation of $f$; threshold,Proposition~\ref{prop:inversion}
+"$W$, $F_0$, $F_1$, $Q_1^{\pm}$, $\hat\tau$",calibration residual; its laws; quantiles; median offset,Proposition~\ref{prop:median}

@@ -1,0 +1,159 @@
+{
+ "veredito": "confirmado",
+ "achado_id": "G1_bloco1_v5",
+ "sha_script_votante": "c4426f06b6fd3513f83594a8f68c52af0e2b7df06782285bb2c422c58ec3684e",
+ "sha_agregado": "5684bceb8df9d360bb7ce3ed2b5cfd04f83a6ea0ba05a9a8916b5f73820898d3",
+ "numeros_votante": {
+  "cel": {
+   "bauru_gnn": {
+    "n": 20,
+    "dp": 1.2481821775436401,
+    "razao": 9.455925941467285,
+    "r": 0.6312910478752047,
+    "sem_valido": 0,
+    "loo_min": 1.1104460954666138,
+    "loo_max": 1.28180730342865,
+    "maxmae": 4.112112998962402,
+    "dp_sem_maior": 1.1104460954666138
+   },
+   "bauru_mlp": {
+    "n": 20,
+    "dp": 1.1304380893707275,
+    "razao": 8.563924789428711,
+    "r": 0.5337507221277112,
+    "sem_valido": 0,
+    "loo_min": 1.0523149967193604,
+    "loo_max": 1.1613529920578003,
+    "maxmae": 4.918534278869629,
+    "dp_sem_maior": 1.0523149967193604
+   },
+   "bauru_med_dif_sent": 0.027695197612047195,
+   "campinas_gnn": {
+    "n": 20,
+    "dp": 3.260303497314453,
+    "razao": 24.699268341064453,
+    "r": 0.8626627992316842,
+    "sem_valido": 0,
+    "loo_min": 2.0303518772125244,
+    "loo_max": 3.349571943283081,
+    "maxmae": 13.58365535736084,
+    "dp_sem_maior": 2.0303518772125244
+   },
+   "campinas_mlp": {
+    "n": 20,
+    "dp": 2.0050368309020996,
+    "razao": 15.18967342376709,
+    "r": 0.6192889747528993,
+    "sem_valido": 0,
+    "loo_min": 1.7002500295639038,
+    "loo_max": 2.059324264526367,
+    "maxmae": 9.91610050201416,
+    "dp_sem_maior": 1.7002500295639038
+   },
+   "campinas_med_dif_sent": 0.03591717779636383
+  },
+  "a": [
+   {
+    "cid": "bauru",
+    "ss": 684965,
+    "n": 928927,
+    "n_21": 928927,
+    "validos": 82930,
+    "validos_21": 82930,
+    "mlp_n": 928927,
+    "mlp_val": 82930,
+    "idx_igual": true
+   },
+   {
+    "cid": "bauru",
+    "ss": 159513,
+    "n": 830847,
+    "n_21": 830847,
+    "validos": 117389,
+    "validos_21": 117389,
+    "mlp_n": 830847,
+    "mlp_val": 117389,
+    "idx_igual": true
+   },
+   {
+    "cid": "bauru",
+    "ss": 508734,
+    "n": 905186,
+    "n_21": 905186,
+    "validos": 146351,
+    "validos_21": 146351,
+    "mlp_n": 905186,
+    "mlp_val": 146351,
+    "idx_igual": true
+   },
+   {
+    "cid": "campinas",
+    "ss": 684965,
+    "n": 923907,
+    "n_21": 923907,
+    "validos": 83104,
+    "validos_21": 83104,
+    "mlp_n": 923907,
+    "mlp_val": 83104,
+    "idx_igual": true
+   },
+   {
+    "cid": "campinas",
+    "ss": 159513,
+    "n": 823051,
+    "n_21": 823051,
+    "validos": 11060,
+    "validos_21": 11060,
+    "mlp_n": 823051,
+    "mlp_val": 11060,
+    "idx_igual": true
+   },
+   {
+    "cid": "campinas",
+    "ss": 508734,
+    "n": 903711,
+    "n_21": 903711,
+    "validos": 150209,
+    "validos_21": 150209,
+    "mlp_n": 903711,
+    "mlp_val": 150209,
+    "idx_igual": true
+   }
+  ],
+  "criterio": {
+   "bauru_gnn": true,
+   "bauru_mlp": true,
+   "campinas_gnn": true,
+   "campinas_mlp": true
+  },
+  "paridade_ok": {
+   "bauru": true,
+   "campinas": true
+  }
+ },
+ "alegados": {
+  "dp": [
+   1.2482,
+   1.1304,
+   3.2603,
+   2.005
+  ],
+  "razoes": [
+   9.46,
+   8.56,
+   24.7,
+   15.19
+  ],
+  "med_sent": [
+   0.0277,
+   0.0359
+  ],
+  "r": [
+   0.631,
+   0.534,
+   0.863,
+   0.619
+  ]
+ },
+ "nota": "All match up to the stated rounding. Block 1 decision criterion (sd>=0.396 and parity<=0.117) met in the 4 cells; the condition with the seed comparator depends on block 2. No split draw without valid nodes; 6 runs checked (n, valid, idx) equal to 2.1."
+}

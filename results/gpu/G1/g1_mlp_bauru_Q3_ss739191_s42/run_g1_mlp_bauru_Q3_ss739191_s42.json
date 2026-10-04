@@ -1,0 +1,258 @@
+{
+  "artefato_tipo": "run_treino_c0c1_mlp",
+  "controle": "E1/B4 of internal/note_19.md: MLP without graph structure, same yardstick as the c0c1cf campaign",
+  "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py",
+  "script_sha256": "4b75093f52e8b7fdec45c7f2b8c5bcd68c38093c420697927b49fa99a474b31c",
+  "origem_script": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF\\gnn_rf_ieee_access\\FIRST_RESPONSE_REVIEW_IEEE_ACESSES\\EVIDENCIA_RESUBMISSAO\\dados\\scripts_congelados\\train_gnn_c0_spatial.py",
+  "origem_script_sha256": "6f955629cde164f2843f454e1ebf6977292fd80647ef48ecd0df31e464c42445",
+  "roadmap_itens": [
+    "C0",
+    "C1",
+    "E1/B4 (MLP control requested in an internal note)"
+  ],
+  "pontos_revisor": "R1-1",
+  "timestamp_utc": "2026-10-02T21:42:04.658220+00:00",
+  "run_label": "g1_mlp_bauru_Q3_ss739191_s42",
+  "seed": 42,
+  "split_seed": 739191,
+  "smoke": false,
+  "status": "provisorio",
+  "config": {
+    "epochs": 8,
+    "batch_size": 12288,
+    "k_antenna": 20,
+    "k_terrain": 8,
+    "hidden_dim": 256,
+    "lr": 0.001,
+    "version": 21,
+    "run_label": "g1_mlp_bauru_Q3_ss739191_s42",
+    "variance_weight": 0.02,
+    "ndvi_weight": 0.03,
+    "dist_grad_weight": 0.05,
+    "max_norm": 0.5,
+    "scheduler": "cosine",
+    "scheduler_patience": 2,
+    "cosine_t0": 10,
+    "early_stopping_patience": 0,
+    "resume": "",
+    "transfer_from": "",
+    "checkpoint_interval": 0,
+    "p_tx_dbm": 43.0,
+    "graph_file": "bauru_v19_Q3_gpu.pt",
+    "graph_dir": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3",
+    "rf_data_file": "transfer_dataset_bauru_v19_Q3_enriched_cftudo.pt",
+    "num_workers": 0,
+    "prefetch": 2,
+    "seed": 42,
+    "base_dir": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2",
+    "evid_dir": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1",
+    "freq_mhz": 900.0,
+    "diag_freq_mhz": 1800.0,
+    "grid_km": 10.0,
+    "buffer_km": 2.0,
+    "split_frac": "0.70,0.15,0.15",
+    "split_seed": 739191,
+    "test_every": 1,
+    "eval_batch_size": 0,
+    "max_nodes": 0,
+    "window_anchor": "cobertura",
+    "smoke": false,
+    "selftest": false,
+    "hash": false,
+    "mmap": true,
+    "no_baselines": false
+  },
+  "ambiente": {
+    "python": "3.11.16",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+    "torch": "2.10.0+cu128",
+    "cuda_disponivel": true,
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti",
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "executavel": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python"
+  },
+  "dataset": {
+    "rf_data_file": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/transfer_dataset_bauru_v19_Q3_enriched_cftudo.pt",
+    "rf_data_bytes": 28246855209,
+    "graph_file": "/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/bauru_v19_Q3_gpu.pt",
+    "graph_bytes": 15598136249,
+    "freq_antenas_mhz": {
+      "fonte": "edge_attr[:,1] * 2600 (prepare_transfer_dataset_v19.py:256-257)",
+      "min": 788.0,
+      "max": 2680.0,
+      "media": 842.7330932617188,
+      "valores_mais_comuns": [
+        [
+          788.0,
+          5345168
+        ],
+        [
+          874.0,
+          496655
+        ],
+        [
+          890.0,
+          327502
+        ],
+        [
+          2680.0,
+          140684
+        ],
+        [
+          885.0,
+          25956
+        ],
+        [
+          891.0,
+          15191
+        ]
+      ]
+    }
+  },
+  "geometria": {
+    "convencao": "equirectangular projection of the ETL (prepare_transfer_dataset_v19.py:181-184)",
+    "deg_para_m": 111000.0,
+    "cos_phi": "per node (cosine of the node's own latitude)",
+    "lon_min_deg": -50.063751220703125,
+    "lat_min_deg": -23.324304580688477,
+    "lon_max_deg": -49.064029693603516,
+    "lat_max_deg": -22.324583053588867,
+    "extensao_x_km": 102.65160398721596,
+    "extensao_y_km": 110.96908950805664,
+    "grid_km_usado": 10.0,
+    "buffer_km_usado": 2.0,
+    "grid_km_ajustado_por_smoke": null,
+    "n_nos_no_grafo_de_trabalho": 12960000,
+    "subamostrado": false,
+    "n_nos_dataset_completo": 12960000
+  },
+  "split": {
+    "grid_km": 10.0,
+    "buffer_km": 2.0,
+    "n_blocos_total": 132,
+    "n_blocos": {
+      "train": 92,
+      "val": 20,
+      "test": 20
+    },
+    "fracs_blocos_pedidas": [
+      0.7,
+      0.15,
+      0.15
+    ],
+    "split_seed": 739191,
+    "n_nos_antes_do_buffer": {
+      "train": 8948417,
+      "val": 1924025,
+      "test": 2087558
+    },
+    "n_nos_apos_buffer": {
+      "train": 8948417,
+      "val": 996391,
+      "test": 1043146
+    },
+    "retencao_apos_buffer": {
+      "val": 0.5178680110705423,
+      "test": 0.499696774892003
+    },
+    "n_descartados_pelo_buffer": 1972046,
+    "regra_buffer": "train intact; val trimmed against train; test trimmed against train U val(trimmed)",
+    "verificacao": {
+      "buffer_km_exigido": 2.0,
+      "pares": {
+        "train|val": {
+          "dist_min_km": 2.0000573546536917,
+          "respeita_buffer": true
+        },
+        "train|test": {
+          "dist_min_km": 2.000006167007652,
+          "respeita_buffer": true
+        },
+        "val|test": {
+          "dist_min_km": 2.0001645732993527,
+          "respeita_buffer": true
+        }
+      },
+      "intersecoes": {
+        "train|val": 0,
+        "train|test": 0,
+        "val|test": 0
+      },
+      "ok": true,
+      "validate_spatial_cv_casa": {
+        "val": true,
+        "test": true
+      },
+      "nota_validate_spatial_cv": "run on a subsample of <=20k per set (cdist is O(n*m)); the exhaustive check is the cKDTree above"
+    }
+  },
+  "particoes": {
+    "train": {
+      "n": 8948417,
+      "frac_dos_nos": 0.6904642746913581,
+      "idx_sha256_global": "fbd4be939ef04c6319649a7a30628e888c9a52bc1d1b22884c3c147921603134",
+      "idx_sha256_local_janela": "fbd4be939ef04c6319649a7a30628e888c9a52bc1d1b22884c3c147921603134",
+      "n_pl_alvo_valido": 974618,
+      "frac_pl_alvo_valido": 0.10891512781381607,
+      "bbox_km": [
+        0.0,
+        0.0,
+        102.65160398721596,
+        110.96908950805664
+      ],
+      "nota_indices": "idx_sha256_global = sha256 of the SORTED int64 indices in the original dataset; idx_sha256_local_janela likewise, relative to the contiguous subsample"
+    },
+    "val": {
+      "n": 996391,
+      "frac_dos_nos": 0.07688202160493827,
+      "idx_sha256_global": "d1c34d000c753fdb1792b428f9d5e867dc9377791a2b968e578efc1e3bddcd60",
+      "idx_sha256_local_janela": "d1c34d000c753fdb1792b428f9d5e867dc9377791a2b968e578efc1e3bddcd60",
+      "n_pl_alvo_valido": 135439,
+      "frac_pl_alvo_valido": 0.13592956960201263,
+      "bbox_km": [
+        0.0,
+        0.0,
+        102.63197447950651,
+        109.98249435424805
+      ],
+      "nota_indices": "idx_sha256_global = sha256 of the SORTED int64 indices in the original dataset; idx_sha256_local_janela likewise, relative to the contiguous subsample"
+    },
+    "test": {
+      "n": 1043146,
+      "frac_dos_nos": 0.08048966049382716,
+      "idx_sha256_global": "857d3bf477f2b5da9a50eea734e4521602b52f7b5b7cf5fef3f78b80d6618792",
+      "idx_sha256_local_janela": "857d3bf477f2b5da9a50eea734e4521602b52f7b5b7cf5fef3f78b80d6618792",
+      "n_pl_alvo_valido": 0,
+      "frac_pl_alvo_valido": 0.0,
+      "bbox_km": [
+        0.0,
+        11.994117736816406,
+        102.02451945265945,
+        108.00909233093262
+      ],
+      "nota_indices": "idx_sha256_global = sha256 of the SORTED int64 indices in the original dataset; idx_sha256_local_janela likewise, relative to the contiguous subsample"
+    }
+  },
+  "normalizacao": {
+    "feature_col17": "dist_to_nearest_antenna",
+    "dist_mean_train": 73144.90625,
+    "dist_std_train": 30644.447265625,
+    "dist_mean_todos": 74137.4921875,
+    "dist_std_todos": 30755.140625,
+    "decisao": "[D1] TRAINING mean/std (the original train_lins_physics.py:569-571 used all nodes = test statistics in the standardization)"
+  },
+  "guarda_particao_degenerada": {
+    "particoes_sem_aresta_antena": [
+      "test"
+    ],
+    "n_pl_alvo_valido": {
+      "train": 974618,
+      "val": 135439,
+      "test": 0
+    },
+    "significado": "partition with 0 ant->ter edges and 0 valid PL targets does not test the antenna path; the RSSI MAE there is a regression on the constant sentinel of -110 dBm",
+    "nota_mlp": "[M3] count by membership of the global terrain endpoint; identical to that of the induced subgraph of the frozen code"
+  }
+}

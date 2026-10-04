@@ -1,0 +1,122 @@
+{
+ "artefato": "portao_G1",
+ "gravado_em": "2026-10-01T23:18:03-03:00",
+ "veredito_portao": "PASSA",
+ "itens": {
+  "a1_g_b_no_run_json_mlp": true,
+  "a2_split_seed_mlp": true,
+  "a3_dataset_cftudo_sha_mlp": true,
+  "a4_dist_min_ge_2km_mlp": true,
+  "a5_n_teste_igual_2_1": true,
+  "a6_n_validos_igual_2_1": true,
+  "a7_frac_valida_igual_2_1": true,
+  "a8_n_train_igual_2_1": true,
+  "b1_zero_aresta_cruzando_gnn": true,
+  "b2_g_b_gnn": true,
+  "b3_npz_gnn_a_g10_igual_teste_retido": true,
+  "b4_dist_min_ge_2km_gnn": true,
+  "b5_vram_livre_minima_ge_1GB": true
+ },
+ "referencia_2_1_bauru_Q1_primeiro_sorteio": {
+  "split_seed": 811474,
+  "n_train": 8944138,
+  "n_test": 899948,
+  "n_validos_teste": 84396,
+  "n_todos_teste": 899948,
+  "frac_valida_teste": 0.0937787516612071
+ },
+ "mlp": {
+  "run_label": "g1_mlp_bauru_Q1_ss811474_s42",
+  "config.grid_km": 10.0,
+  "config.buffer_km": 2.0,
+  "geometria.grid_km_usado": 10.0,
+  "split_seed_pedido": 811474,
+  "split_seed_run": 811474,
+  "seed_treino": 42,
+  "epocas": 8,
+  "dataset": "transfer_dataset_bauru_v19_Q1_enriched_cftudo.pt",
+  "sha256_rf_data": "33e8d57368920241fc289f8c939de35ece7178c316d2bf5488c3cdf98ff5fb5c",
+  "bate_manifest_v4": true,
+  "dist_min_km": {
+   "train|val": 2.000002074834015,
+   "train|test": 2.000014179597967,
+   "val|test": 2.0000008870264523
+  },
+  "intersecoes": {
+   "train|val": 0,
+   "train|test": 0,
+   "val|test": 0
+  },
+  "n_nos_apos_buffer": {
+   "train": 8944138,
+   "val": 1044943,
+   "test": 899948
+  },
+  "n_teste_npz": 899948,
+  "n_validos_teste_npz": 84396,
+  "frac_valida_teste_npz": 0.0937787516612071,
+  "custo": {
+   "tempo_total_s": 173.6,
+   "n_epocas_rodadas": 8,
+   "vram_peak_mb": 316.3
+  },
+  "arestas_cruzando_fronteira": "n/a (MLP has no edges)"
+ },
+ "gnn": {
+  "run_label": "g1_gnn_bauru_Q1_ss811474_s42",
+  "config.grid_km": 10.0,
+  "config.buffer_km": 2.0,
+  "geometria.grid_km_usado": 10.0,
+  "split_seed_pedido": 811474,
+  "split_seed_run": 811474,
+  "seed_treino": 42,
+  "epocas": 8,
+  "dataset": "transfer_dataset_bauru_v19_Q1_enriched_cftudo.pt",
+  "sha256_rf_data": "33e8d57368920241fc289f8c939de35ece7178c316d2bf5488c3cdf98ff5fb5c",
+  "bate_manifest_v4": true,
+  "dist_min_km": {
+   "train|val": 2.000002074834015,
+   "train|test": 2.000014179597967,
+   "val|test": 2.0000008870264523
+  },
+  "intersecoes": {
+   "train|val": 0,
+   "train|test": 0,
+   "val|test": 0
+  },
+  "n_nos_apos_buffer": {
+   "train": 8944138,
+   "val": 1044943,
+   "test": 899948
+  },
+  "n_teste_npz": 899948,
+  "n_validos_teste_npz": 84396,
+  "frac_valida_teste_npz": 0.0937787516612071,
+  "custo": {
+   "tempo_total_s": 961.9,
+   "n_epocas_rodadas": 8,
+   "vram_peak_mb": 4192.0
+  },
+  "arestas_cruzando_fronteira": {
+   "train": 0,
+   "val": 0,
+   "test": 0
+  }
+ },
+ "gnn_primeira_corrida": {
+  "tempo_treino_s": 961.9,
+  "tempo_parede_total_s": 1066.6,
+  "vram_pico_torch_mb": 4192.0,
+  "vram_total_gpu_usada_max_mib_amostrada_5s": 9005,
+  "vram_livre_min_mib_amostrada_5s": 6836,
+  "ref_A4_g5_gnn_tempo_s": 845.9,
+  "ref_A4_g5_mlp_tempo_s": 110.1
+ },
+ "mlp_primeira_corrida": {
+  "tempo_treino_s": 173.6,
+  "tempo_parede_total_s": 215.8,
+  "vram_pico_torch_mb": 316.3
+ },
+ "shim": "gpu/G1/train_v3_g10.py (sha of the originals checked before each run; sidecar shim_g10_<label>.json per run)",
+ "nota": "the two gate runs use the run_labels from the batch plan (first ones of block 1: GNN and MLP Bauru Q1 split draw 811474, seed 42, same launcher arguments) and will be skipped by the launcher as completed; they were not interpreted"
+}

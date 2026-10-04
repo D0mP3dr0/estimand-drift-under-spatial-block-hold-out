@@ -1,0 +1,547 @@
+{
+ "id": "A4",
+ "gravado_em": "2026-09-26 09:14 (machine clock time)",
+ "autor": "set before the batch was launched; executed by the driver gpu/A4/rodar_lote_A4.py",
+ "estado_no_momento_da_gravacao": "A3 batch with 28/80 runs; NO A4 run started; no A3 prediction read",
+ "alvo": "gpu/modelo_v3/{v3_common.py,train_gnn_v3.py,train_mlp_v3.py,rf_decoder_v3.py} -- code byte-identical to the code approved by gates A1bis (criterio_A1bis.json, veredito=passa, 9 criteria) and A3 (gpu/A3/ia-bug-silencioso.json, veredito=atencao, non-blocking findings explicitly accepted in the decision section dated 26/09 ~06:00 of the protocol itself).",
+ "tipo": "confirmatorio",
+ "alegacoes": {
+  "A3": "error drift with the split draw ALSO with the models (input 2.2): SD across split draws of the per-population MAE vs SD across cells",
+  "A4": "model × baselines inversion per split draw (input 3.3, π* per split draw) and GNN×MLP parity under different split draws",
+  "sensibilidade": "arm E2: MLP with old nominal widths (712,712,720,688,256) vs widths matched by effective size (654,654,600,636,256)"
+ },
+ "desenho": {
+  "braco_principal": "Bauru Q1–Q4 × 5 split seeds (101–105, training seed 42) × {GNN, MLP} = 40 runs; modelo_v3 without chain, same config as A3",
+  "braco_sensibilidade": "MLP --larguras-antigas on Bauru Q1 and Lins Q1, training seeds 42–46, split seed 42 = 10 runs (paired with mlp_v3_a3_<cid>_Q1_s<seed> of A3)"
+ },
+ "config_fixa_por_corrida": {
+  "split_seed": 42,
+  "epochs": 8,
+  "max_nodes": 0,
+  "mmap": true,
+  "k_antenna": -1,
+  "k_terrain": -1,
+  "hidden_dim": 256,
+  "batch_size": 12288,
+  "lr": 0.001,
+  "sem_cadeia": true,
+  "transfer_from": ""
+ },
+ "corridas": [
+  {
+   "run_label": "gnn_v3_a4_bauru_Q1_ss101",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 101,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q1_ss101",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 101,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q1_ss102",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 102,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q1_ss102",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 102,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q1_ss103",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 103,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q1_ss103",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 103,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q1_ss104",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 104,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q1_ss104",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 104,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q1_ss105",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 105,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q1_ss105",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 105,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q2_ss101",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 101,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q2_ss101",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 101,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q2_ss102",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 102,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q2_ss102",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 102,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q2_ss103",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 103,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q2_ss103",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 103,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q2_ss104",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 104,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q2_ss104",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 104,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q2_ss105",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 105,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q2_ss105",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q2",
+   "seed_treino": 42,
+   "split_seed": 105,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q3_ss101",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 101,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q3_ss101",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 101,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q3_ss102",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 102,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q3_ss102",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 102,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q3_ss103",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 103,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q3_ss103",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 103,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q3_ss104",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 104,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q3_ss104",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 104,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q3_ss105",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 105,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q3_ss105",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q3",
+   "seed_treino": 42,
+   "split_seed": 105,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q4_ss101",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 101,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q4_ss101",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 101,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q4_ss102",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 102,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q4_ss102",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 102,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q4_ss103",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 103,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q4_ss103",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 103,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q4_ss104",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 104,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q4_ss104",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 104,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "gnn_v3_a4_bauru_Q4_ss105",
+   "tipo": "gnn",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 105,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4_bauru_Q4_ss105",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q4",
+   "seed_treino": 42,
+   "split_seed": 105,
+   "larguras_antigas": false,
+   "braco": "deriva_com_modelo"
+  },
+  {
+   "run_label": "mlp_v3_a4s_bauru_Q1_s42_antigas",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  },
+  {
+   "run_label": "mlp_v3_a4s_bauru_Q1_s43_antigas",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  },
+  {
+   "run_label": "mlp_v3_a4s_bauru_Q1_s44_antigas",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  },
+  {
+   "run_label": "mlp_v3_a4s_bauru_Q1_s45_antigas",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 45,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  },
+  {
+   "run_label": "mlp_v3_a4s_bauru_Q1_s46_antigas",
+   "tipo": "mlp",
+   "cidade": "bauru",
+   "quadrante": "Q1",
+   "seed_treino": 46,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  },
+  {
+   "run_label": "mlp_v3_a4s_lins_Q1_s42_antigas",
+   "tipo": "mlp",
+   "cidade": "lins",
+   "quadrante": "Q1",
+   "seed_treino": 42,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  },
+  {
+   "run_label": "mlp_v3_a4s_lins_Q1_s43_antigas",
+   "tipo": "mlp",
+   "cidade": "lins",
+   "quadrante": "Q1",
+   "seed_treino": 43,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  },
+  {
+   "run_label": "mlp_v3_a4s_lins_Q1_s44_antigas",
+   "tipo": "mlp",
+   "cidade": "lins",
+   "quadrante": "Q1",
+   "seed_treino": 44,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  },
+  {
+   "run_label": "mlp_v3_a4s_lins_Q1_s45_antigas",
+   "tipo": "mlp",
+   "cidade": "lins",
+   "quadrante": "Q1",
+   "seed_treino": 45,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  },
+  {
+   "run_label": "mlp_v3_a4s_lins_Q1_s46_antigas",
+   "tipo": "mlp",
+   "cidade": "lins",
+   "quadrante": "Q1",
+   "seed_treino": 46,
+   "split_seed": 42,
+   "larguras_antigas": true,
+   "braco": "sensibilidade_larguras_mlp"
+  }
+ ],
+ "criterio_aceite_execucao": "A run counts as completed if rc=0 AND the run JSON records insumos.sha256_rf_data_bate_manifest_v4=true (proof of provenance). A run with rc=3 (sha256 does not match) is a provenance finding, not a valid run. A run not started because of the budget = abortado_por_orcamento, with no conclusion on the hypothesis; document it as partial coverage.",
+ "analise_pre_registrada": {
+  "metricas": "RSSI MAE (channel 3) per population (valid = target[:,0] < 299; sentinel; all) and PL MAE (channel 0) on valid nodes, from the physical predictions in the .npz; never from a log",
+  "2.2_deriva_com_modelo": "per cell and model: SD of MAE_validos across the 5 split seeds; compare with the SD of the means across the 4 cells (same rule as 2.1); also report the SD of the analytical baselines on the SAME split draws, read from baselines_analiticos.test of the run JSON",
+  "3.3_inversao_por_sorteio": "fraction of (cell × split draw) in which MAE_validos(model) < MAE of the baselines (fspl, hata_rural, cost231_sub from baselines_analiticos.test, same split draw), per model; no aggregate magnitude across cells",
+  "paridade_sob_sorteio": "GNN−MLP contrast paired by split seed within the cell: median, min, max, no. of split draws with GNN better out of 5, in the 3 populations; tolerance = SD across split draws of the MLP MAE_sent in the cell (rule of A3_analise)",
+  "sensibilidade_larguras": "per cell (Bauru Q1, Lins Q1): distribution across 5 seeds of (MAE_pop old − MAE_pop new), paired by training seed with the mlp_v3_a3_* runs; negligible effect if |median| ≤ SD across seeds of the new widths in the same cell and population; otherwise reported with sign",
+  "gradscaler_e_canal_1": "same rules as criterio_A3_analise (post-warm-up jumps ≤ 1 %, minimum scale ≥ 1; R-c1..R-c3 only flag)",
+  "proveniencia": "all runs with insumos.sha256_rf_data = manifest v4 (tensores_cftudo); in the same cell and split seed, identical test-partition hash GNN×MLP; a run with rc=3 is a finding, not data",
+  "nao_determinismo": "no individual run is citable; only distributions; checkpoint selection is part of the variance",
+  "votos": "3 independent recalculations per number; aggregation script (v3_A4_agregar.py, to be written BEFORE reading any A4 prediction) re-run independently and read in full",
+  "proibido": "fix tolerances a priori in dB; read predictions before the batch closes; compare with numbers from the IEEE Access article"
+ },
+ "condicao_de_lancamento": "only after 'ALL 80 runs completed' for A3 (single GPU); modelo_v3 code byte-identical to the code approved in the A3 gate; free VRAM ≥ 1 GB; embedding server (pid 1630) left untouched; driver launched with setsid nohup",
+ "orcamento": "40 runs ≈ 20×16 min + 20×2 min ≈ 6 h; 10 MLP ≈ 20 min; driver cap 840 min"
+}

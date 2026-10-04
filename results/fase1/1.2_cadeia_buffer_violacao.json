@@ -1,0 +1,178 @@
+{
+ "id": "1.2",
+ "fio": "analysis",
+ "alegacao": "A3 (condition 1.2 buffer honoured); A4 (condition 4.3 if 1.2 flags a problem)",
+ "pergunta": "Does the transfer chain Q1->Q2->Q3->Q4 (Bauru, seed 42, g10b2) breach the b=2km buffer? For each pair (Qi training -> Qi+1 test) -- including the pairs Q1/Q2 and Q3/Q4, which share the same block permutation because they have the same group count -- how many TEST nodes of Qi+1 lie at distance < 2km from TRAINING nodes of Qi, what is the minimum observed distance and what fraction of test nodes is affected?",
+ "criterio": {
+  "id": "1.2",
+  "alegacao": "A3 (Estimand drift -- condition 1.2 buffer honoured); A4 (Deflation and inversion -- condition 4.3 if 1.2 flags a violation, chained models)",
+  "pergunta": "Does the transfer chain Q1->Q2->Q3->Q4 (Bauru, seed 42, g10b2) breach the b=2km buffer? For each pair (Qi training -> Qi+1 test) -- including the pairs Q1/Q2 and Q3/Q4, which share the same block permutation because they have the same group count -- how many TEST nodes of Qi+1 lie at distance < 2km from TRAINING nodes of Qi, what is the minimum observed distance and what fraction of test nodes is affected?",
+  "hipotese": "The 2km buffer is applied ONLY within each quadrant (against that quadrant's own training/val); nothing in the protocol trims the test of one quadrant against the training of the geographically neighbouring quadrant. Since the Bauru quadrants are physically adjacent (they share an edge or have a gap of ~1 grid step, ~30m, according to 1.1), a number of violations > 0 is expected if border blocks happen to fall as training-in-Qi and test-in-Qi+1 on the same stretch of boundary; if the cells are sufficiently disjoint/distant (1.1), the result may be 0 -- the number is reported in any case.",
+  "limiar_de_aceitacao": [
+   "0 test nodes of Qi+1 within 2km of the training of Qi, in the 3 pairs of the chain (Q1->Q2, Q2->Q3, Q3->Q4), with distance computed in global city coordinates (same origin lon0/lat0 for the 2 quadrants of the pair, not the local origin of each graph)"
+  ],
+  "o_que_refuta": "any pair with a violation count > 0 refutes the threshold; severity classification: blocks A3/A4 when models are chained across quadrants (triggers phase 4.3 of the roadmap -- retraining without chain or reporting both arms); if 0 in all 3 pairs, the finding is stated in the text with the number (it is not a null test, it is a citable result)",
+  "metodo_declarado": "for Bauru Q1-Q4 (run_c0c1cf_bauru_s42_Q<k>_g10b2.json), reconstruct the ACTUAL train/val/test partitions of each quadrant via split_espacial_3vias_exato (literal copy of the frozen code, imported without editing from scripts/varredura_split_geometria.py -- same technique already used in the validation gate of that script, with known residual <=2e-4 relative against the run JSONs), using the LOCAL synthetic grid of each quadrant (build_synthetic_grid + latlon_graus_para_metros with origin at the quadrant's own bbox -- faithful to the actual code, which processes each graph file separately); to measure PHYSICAL DISTANCE between nodes of DIFFERENT quadrants, reproject lon/lat of each quadrant to a common GLOBAL reference frame per city (lon0/lat0 = minimum over the 4 Bauru quadrants, equirectangular with cos(lat) per node) -- the train/test masks remain those of the local reconstruction (faithful to the actual protocol), only the distance uses global coordinates; cKDTree(scipy, compact_nodes=False, balanced_tree=False, workers=-1) over the TRAINING nodes of Qi (global position), k=1 query of the TEST nodes of Qi+1 (global position); count violations (d<2km), d_min, d_mediana, fraction of test nodes affected, for the 3 pairs of the chain",
+  "fixado_por": "fixed in internal/note_16.md, 25/09/2026, BEFORE running the script v3_1.1_1.2_celulas_cadeia.py",
+  "nao_amplia_a_varredura": "roadmap rule D5 -- only Bauru (the only city with a Q1-Q4 chain declared in the roadmap), seed 42, g10b2; no other city/seed in this round."
+ },
+ "metodo": "split_espacial_3vias_exato (literal copy, imported without editing from scripts/varredura_split_geometria.py) reconstructs the REAL train/val/test of each quadrant in LOCAL coordinates (faithful to the frozen code, which processes each graph separately); PHYSICAL distance between quadrants computed in GLOBAL city coordinates (common origin lon0/lat0 = minimum over the 4 quadrants), cKDTree k=1 of the test nodes of Qi+1 against the training nodes of Qi",
+ "insumos": {
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json": "552890b4dd972c6e7e4bb2193d03a7483b70f6d6bcedb2434c0401cbd9c5f7a2",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json": "42256b79ed7914b9776aaccc24ff1139236c59ce6662e653e8684419c436f7d2",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json": "a2519b94caf880d98995ea8066a99357a3e6780ec1ab35ebfca9d144fbe89909",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json": "adddf2211d473a592fc18722c12eb4ec980b1d5da7512f18611ede57d7fec885"
+ },
+ "reconstrucao_por_celula": {
+  "Q1": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json",
+   "n_nos_apos_buffer_reconstruido": {
+    "train": 9188826,
+    "val": 1033406,
+    "test": 828161
+   },
+   "n_nos_apos_buffer_declarado": {
+    "train": 9188831,
+    "val": 1033370,
+    "test": 828243
+   },
+   "erro_relativo_vs_declarado": {
+    "train": 5.441388572713983e-07,
+    "val": 3.483747350900452e-05,
+    "test": 9.900476068013856e-05
+   },
+   "n_blocos_total": 132,
+   "tempo_reconstrucao_s": 4.221773862838745
+  },
+  "Q2": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json",
+   "n_nos_apos_buffer_reconstruido": {
+    "train": 9188826,
+    "val": 1033406,
+    "test": 828161
+   },
+   "n_nos_apos_buffer_declarado": {
+    "train": 9188829,
+    "val": 1033369,
+    "test": 828243
+   },
+   "erro_relativo_vs_declarado": {
+    "train": 3.264833854237575e-07,
+    "val": 3.5805215755456185e-05,
+    "test": 9.900476068013856e-05
+   },
+   "n_blocos_total": 132,
+   "tempo_reconstrucao_s": 4.240046739578247
+  },
+  "Q3": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json",
+   "n_nos_apos_buffer_reconstruido": {
+    "train": 9188538,
+    "val": 1034028,
+    "test": 817603
+   },
+   "n_nos_apos_buffer_declarado": {
+    "train": 9188528,
+    "val": 1034037,
+    "test": 817601
+   },
+   "erro_relativo_vs_declarado": {
+    "train": 1.088313601482196e-06,
+    "val": 8.70375044606721e-06,
+    "test": 2.4461809611289615e-06
+   },
+   "n_blocos_total": 132,
+   "tempo_reconstrucao_s": 4.460705995559692
+  },
+  "Q4": {
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json",
+   "n_nos_apos_buffer_reconstruido": {
+    "train": 9188538,
+    "val": 1034028,
+    "test": 817603
+   },
+   "n_nos_apos_buffer_declarado": {
+    "train": 9188530,
+    "val": 1034035,
+    "test": 817601
+   },
+   "erro_relativo_vs_declarado": {
+    "train": 8.706506916775589e-07,
+    "val": 6.769596773803595e-06,
+    "test": 2.4461809611289615e-06
+   },
+   "n_blocos_total": 132,
+   "tempo_reconstrucao_s": 4.124197721481323
+  }
+ },
+ "pares_mesma_permutacao_n_blocos": [
+  {
+   "par": "Q1/Q2",
+   "n_blocos_total_iguais": true,
+   "n_blocos_qi": 132,
+   "n_blocos_qi1": 132
+  },
+  {
+   "par": "Q2/Q3",
+   "n_blocos_total_iguais": true,
+   "n_blocos_qi": 132,
+   "n_blocos_qi1": 132
+  },
+  {
+   "par": "Q3/Q4",
+   "n_blocos_total_iguais": true,
+   "n_blocos_qi": 132,
+   "n_blocos_qi1": 132
+  }
+ ],
+ "cadeia_buffer_violacao": [
+  {
+   "par": "Q1(treino)->Q2(teste)",
+   "n_treino_qi": 9188826,
+   "n_teste_qi1": 828161,
+   "n_violacoes_buffer": 13663,
+   "fracao_teste_afetada": 0.01649799978506595,
+   "d_min_km": 0.02863412500360596,
+   "d_mediana_km": 72.58762824378833,
+   "d_max_km": 104.4824551596797,
+   "buffer_km_exigido": 2.0,
+   "tempo_s": 1.6209383010864258
+  },
+  {
+   "par": "Q2(treino)->Q3(teste)",
+   "n_treino_qi": 9188826,
+   "n_teste_qi1": 817603,
+   "n_violacoes_buffer": 0,
+   "fracao_teste_afetada": 0.0,
+   "d_min_km": 14.979183937299757,
+   "d_mediana_km": 86.39376762308238,
+   "d_max_km": 135.8936583376491,
+   "buffer_km_exigido": 2.0,
+   "tempo_s": 2.0174617767333984
+  },
+  {
+   "par": "Q3(treino)->Q4(teste)",
+   "n_treino_qi": 9188538,
+   "n_teste_qi1": 817603,
+   "n_violacoes_buffer": 13720,
+   "fracao_teste_afetada": 0.016780760344568206,
+   "d_min_km": 0.02842657605117438,
+   "d_mediana_km": 72.28846422116834,
+   "d_max_km": 102.25366918636207,
+   "buffer_km_exigido": 2.0,
+   "tempo_s": 1.6891822814941406
+  }
+ ],
+ "resumo": {
+  "n_pares_avaliados": 3,
+  "n_violacoes_maximo_por_par": 13720,
+  "n_violacoes_total_soma_pares": 27383,
+  "algum_par_fura_buffer": true
+ },
+ "veredito_vs_criterio": "DECISION CRITERION NOT MET: the chain breaks the buffer -- severity blocks A3/A4 for chained models; triggers phase 4.3 of the roadmap",
+ "nao_verificado": [],
+ "comando_rodado": "python v3_1.1_1.2_celulas_cadeia.py --out-11 <out> --out-12 <out> --fig <fig>",
+ "script_sha256": "aa03b1d7e2eb3a865b6a664afbc2e8b7b16ba86041ffb1f07b246c0afb866581",
+ "pico_ram_gb": 2.5248680114746094,
+ "tempo_total_s": 29.834571599960327
+}

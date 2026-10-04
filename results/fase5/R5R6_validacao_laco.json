@@ -1,0 +1,371 @@
+{
+  "id": "R5R6_validacao_laco",
+  "sementes": [
+    811474,
+    54892,
+    880099,
+    125243,
+    159513
+  ],
+  "referencia": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase2/_v3_2.1_3.1_parcial_16x60rnd.json",
+  "referencia_sha256": "c8bddfe828c583f7fca78f9d961fb2d502f5727956b78a2d9132598c1b42c5d1",
+  "criterio_de_aceite": "MAE of the constant and of FSPL (b) on valid nodes and on all nodes: exact equality (==) of orig.mae against the stored partial file; Err = sum S_B / sum M_B within 1e-9; R6 c=-110 equal to the stored constant MAE",
+  "reproduz": true,
+  "celulas": {
+    "lins_Q1": {
+      "reproduz": true,
+      "n_numeros_comparados_exato": 25,
+      "max_abs_diferenca_mae_orig": 0.0,
+      "divergentes": [],
+      "max_abs_diferenca_Err_soma_vs_gravado": 0.0,
+      "tolerancia_soma": 1e-09,
+      "linhas": [
+        {
+          "split_seed": 811474,
+          "constante_validos": {
+            "gravado": 19.78650246023598,
+            "laco_mae_orig": 19.78650246023598,
+            "laco_soma_S_sobre_M": 19.78650246023598,
+            "k_blocos": 2,
+            "M": 24570
+          },
+          "constante_todos": {
+            "gravado": 0.535771050932781,
+            "laco_mae_orig": 0.535771050932781,
+            "laco_soma_S_sobre_M": 0.535771050932781,
+            "k_blocos": 20,
+            "M": 907392
+          },
+          "fspl_b_validos": {
+            "gravado": 1.6398450114739636,
+            "laco_mae_orig": 1.6398450114739636,
+            "laco_soma_S_sobre_M": 1.6398450114739636,
+            "k_blocos": 2,
+            "M": 24570
+          },
+          "fspl_b_todos": {
+            "gravado": 8.354773879671303,
+            "laco_mae_orig": 8.354773879671303,
+            "laco_soma_S_sobre_M": 8.354773879671303,
+            "k_blocos": 20,
+            "M": 907392
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 19.78650246023598
+        },
+        {
+          "split_seed": 54892,
+          "constante_validos": {
+            "gravado": 23.053656694344934,
+            "laco_mae_orig": 23.053656694344934,
+            "laco_soma_S_sobre_M": 23.053656694344934,
+            "k_blocos": 1,
+            "M": 8956
+          },
+          "constante_todos": {
+            "gravado": 0.20084919069722623,
+            "laco_mae_orig": 0.20084919069722623,
+            "laco_soma_S_sobre_M": 0.20084919069722623,
+            "k_blocos": 20,
+            "M": 1027978
+          },
+          "fspl_b_validos": {
+            "gravado": 0.6809278859150841,
+            "laco_mae_orig": 0.6809278859150841,
+            "laco_soma_S_sobre_M": 0.6809278859150841,
+            "k_blocos": 1,
+            "M": 8956
+          },
+          "fspl_b_todos": {
+            "gravado": 6.6401082728194725,
+            "laco_mae_orig": 6.6401082728194725,
+            "laco_soma_S_sobre_M": 6.6401082728194725,
+            "k_blocos": 20,
+            "M": 1027978
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 23.053656694344934
+        },
+        {
+          "split_seed": 880099,
+          "constante_validos": {
+            "gravado": 16.974480362592175,
+            "laco_mae_orig": 16.974480362592175,
+            "laco_soma_S_sobre_M": 16.974480362592175,
+            "k_blocos": 6,
+            "M": 108308
+          },
+          "constante_todos": {
+            "gravado": 2.3257107461383675,
+            "laco_mae_orig": 2.3257107461383675,
+            "laco_soma_S_sobre_M": 2.3257107461383675,
+            "k_blocos": 19,
+            "M": 790499
+          },
+          "fspl_b_validos": {
+            "gravado": 2.1204725949420937,
+            "laco_mae_orig": 2.1204725949420937,
+            "laco_soma_S_sobre_M": 2.1204725949420937,
+            "k_blocos": 6,
+            "M": 108308
+          },
+          "fspl_b_todos": {
+            "gravado": 7.3289792102156275,
+            "laco_mae_orig": 7.3289792102156275,
+            "laco_soma_S_sobre_M": 7.3289792102156275,
+            "k_blocos": 19,
+            "M": 790499
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 16.974480362592175
+        },
+        {
+          "split_seed": 125243,
+          "constante_validos": {
+            "gravado": 13.92634853017943,
+            "laco_mae_orig": 13.92634853017943,
+            "laco_soma_S_sobre_M": 13.92634853017943,
+            "k_blocos": 2,
+            "M": 106296
+          },
+          "constante_todos": {
+            "gravado": 1.5513303948489532,
+            "laco_mae_orig": 1.5513303948489532,
+            "laco_soma_S_sobre_M": 1.5513303948489532,
+            "k_blocos": 17,
+            "M": 954223
+          },
+          "fspl_b_validos": {
+            "gravado": 4.500201093232721,
+            "laco_mae_orig": 4.500201093232721,
+            "laco_soma_S_sobre_M": 4.500201093232721,
+            "k_blocos": 2,
+            "M": 106296
+          },
+          "fspl_b_todos": {
+            "gravado": 8.870357140164487,
+            "laco_mae_orig": 8.870357140164487,
+            "laco_soma_S_sobre_M": 8.870357140164487,
+            "k_blocos": 17,
+            "M": 954223
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 13.92634853017943
+        },
+        {
+          "split_seed": 159513,
+          "constante_validos": {
+            "gravado": 23.053656694344934,
+            "laco_mae_orig": 23.053656694344934,
+            "laco_soma_S_sobre_M": 23.053656694344934,
+            "k_blocos": 1,
+            "M": 8956
+          },
+          "constante_todos": {
+            "gravado": 0.24722538458030927,
+            "laco_mae_orig": 0.24722538458030927,
+            "laco_soma_S_sobre_M": 0.24722538458030927,
+            "k_blocos": 18,
+            "M": 835143
+          },
+          "fspl_b_validos": {
+            "gravado": 0.7665629608389415,
+            "laco_mae_orig": 0.7665629608389415,
+            "laco_soma_S_sobre_M": 0.7665629608389415,
+            "k_blocos": 1,
+            "M": 8956
+          },
+          "fspl_b_todos": {
+            "gravado": 6.317433122511763,
+            "laco_mae_orig": 6.317433122511763,
+            "laco_soma_S_sobre_M": 6.317433122511763,
+            "k_blocos": 18,
+            "M": 835143
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 23.053656694344934
+        }
+      ]
+    },
+    "bauru_Q1": {
+      "reproduz": true,
+      "n_numeros_comparados_exato": 25,
+      "max_abs_diferenca_mae_orig": 0.0,
+      "divergentes": [],
+      "max_abs_diferenca_Err_soma_vs_gravado": 0.0,
+      "tolerancia_soma": 1e-09,
+      "linhas": [
+        {
+          "split_seed": 811474,
+          "constante_validos": {
+            "gravado": 11.846550534531891,
+            "laco_mae_orig": 11.846550534531891,
+            "laco_soma_S_sobre_M": 11.846550534531891,
+            "k_blocos": 5,
+            "M": 84396
+          },
+          "constante_todos": {
+            "gravado": 1.1109547206198065,
+            "laco_mae_orig": 1.1109547206198065,
+            "laco_soma_S_sobre_M": 1.1109547206198065,
+            "k_blocos": 20,
+            "M": 899948
+          },
+          "fspl_b_validos": {
+            "gravado": 4.540762852218977,
+            "laco_mae_orig": 4.540762852218977,
+            "laco_soma_S_sobre_M": 4.540762852218977,
+            "k_blocos": 5,
+            "M": 84396
+          },
+          "fspl_b_todos": {
+            "gravado": 6.332757683386773,
+            "laco_mae_orig": 6.332757683386773,
+            "laco_soma_S_sobre_M": 6.332757683386773,
+            "k_blocos": 20,
+            "M": 899948
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 11.846550534531891
+        },
+        {
+          "split_seed": 54892,
+          "constante_validos": {
+            "gravado": 13.81846963483104,
+            "laco_mae_orig": 13.81846963483104,
+            "laco_soma_S_sobre_M": 13.81846963483104,
+            "k_blocos": 4,
+            "M": 75130
+          },
+          "constante_todos": {
+            "gravado": 1.0110126799174348,
+            "laco_mae_orig": 1.0110126799174348,
+            "laco_soma_S_sobre_M": 1.0110126799174348,
+            "k_blocos": 20,
+            "M": 1026873
+          },
+          "fspl_b_validos": {
+            "gravado": 5.950299523296582,
+            "laco_mae_orig": 5.950299523296582,
+            "laco_soma_S_sobre_M": 5.950299523296582,
+            "k_blocos": 4,
+            "M": 75130
+          },
+          "fspl_b_todos": {
+            "gravado": 4.8253151626460085,
+            "laco_mae_orig": 4.8253151626460085,
+            "laco_soma_S_sobre_M": 4.8253151626460085,
+            "k_blocos": 20,
+            "M": 1026873
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 13.81846963483104
+        },
+        {
+          "split_seed": 880099,
+          "constante_validos": {
+            "gravado": 22.902910373272274,
+            "laco_mae_orig": 22.902910373272274,
+            "laco_soma_S_sobre_M": 22.902910373272274,
+            "k_blocos": 6,
+            "M": 247290
+          },
+          "constante_todos": {
+            "gravado": 7.232738154093753,
+            "laco_mae_orig": 7.232738154093753,
+            "laco_soma_S_sobre_M": 7.232738154093753,
+            "k_blocos": 19,
+            "M": 783059
+          },
+          "fspl_b_validos": {
+            "gravado": 4.669767938653004,
+            "laco_mae_orig": 4.669767938653004,
+            "laco_soma_S_sobre_M": 4.669767938653004,
+            "k_blocos": 6,
+            "M": 247290
+          },
+          "fspl_b_todos": {
+            "gravado": 4.653530995621034,
+            "laco_mae_orig": 4.653530995621034,
+            "laco_soma_S_sobre_M": 4.653530995621034,
+            "k_blocos": 19,
+            "M": 783059
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 22.902910373272274
+        },
+        {
+          "split_seed": 125243,
+          "constante_validos": {
+            "gravado": 16.340510316187242,
+            "laco_mae_orig": 16.340510316187242,
+            "laco_soma_S_sobre_M": 16.340510316187242,
+            "k_blocos": 5,
+            "M": 226242
+          },
+          "constante_todos": {
+            "gravado": 3.852613093112996,
+            "laco_mae_orig": 3.852613093112996,
+            "laco_soma_S_sobre_M": 3.852613093112996,
+            "k_blocos": 17,
+            "M": 959585
+          },
+          "fspl_b_validos": {
+            "gravado": 5.196349654073469,
+            "laco_mae_orig": 5.196349654073469,
+            "laco_soma_S_sobre_M": 5.196349654073469,
+            "k_blocos": 5,
+            "M": 226242
+          },
+          "fspl_b_todos": {
+            "gravado": 6.11082932954495,
+            "laco_mae_orig": 6.11082932954495,
+            "laco_soma_S_sobre_M": 6.11082932954495,
+            "k_blocos": 17,
+            "M": 959585
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 16.340510316187242
+        },
+        {
+          "split_seed": 159513,
+          "constante_validos": {
+            "gravado": 9.438036796462521,
+            "laco_mae_orig": 9.438036796462521,
+            "laco_soma_S_sobre_M": 9.438036796462521,
+            "k_blocos": 4,
+            "M": 117389
+          },
+          "constante_todos": {
+            "gravado": 1.3334846265316467,
+            "laco_mae_orig": 1.3334846265316467,
+            "laco_soma_S_sobre_M": 1.3334846265316467,
+            "k_blocos": 18,
+            "M": 830847
+          },
+          "fspl_b_validos": {
+            "gravado": 8.81092610497118,
+            "laco_mae_orig": 8.81092610497118,
+            "laco_soma_S_sobre_M": 8.81092610497118,
+            "k_blocos": 4,
+            "M": 117389
+          },
+          "fspl_b_todos": {
+            "gravado": 4.698266840070811,
+            "laco_mae_orig": 4.698266840070811,
+            "laco_soma_S_sobre_M": 4.698266840070811,
+            "k_blocos": 18,
+            "M": 830847
+          },
+          "constante_treino_mediana_rssi": -110.0,
+          "R6_c-110_mae_validos": 9.438036796462521
+        }
+      ]
+    }
+  },
+  "script_sha256": "d6e7c2c6f5f0bb0af5f12c1fe3cbe47235e85347665f171b3fd7cd41fe813b93",
+  "script_original_sha256": "9b9bcf91bab51621107a3d7978964d46dd16c5ec1a76a3789842ae1bce77f3bc",
+  "comando": "v3_13_laco_comum.py --validar",
+  "data_utc": "2026-10-02T01:51:36.135122+00:00",
+  "venv": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python"
+}

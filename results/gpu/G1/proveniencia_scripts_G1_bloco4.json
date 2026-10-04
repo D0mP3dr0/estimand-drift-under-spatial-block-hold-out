@@ -1,0 +1,30 @@
+{
+  "gerado_em": "2026-10-03T16:19:58.935306-03:00",
+  "nota": "provenance of the scripts of block 4 of batch G1 (decision criterion G1b); the launcher is a declared copy of the resume launcher (sha in the header)",
+  "arquivos": {
+    "lancador_bloco4": {
+      "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1/rodar_lote_G1_bloco4.py",
+      "sha256": "031a41cc36548cb028ac414db744449fad3cb69acd60651d88df7072e824b0ef",
+      "mtime": "2026-10-03T16:19:52.413600-03:00",
+      "bytes": 22236
+    },
+    "shim": {
+      "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1/train_v3_g10.py",
+      "sha256": "1a9dfa2f7079ce58056e53a63f682f7b0336355dae6582efa2941379fefae70c",
+      "mtime": "2026-10-01T22:54:19.148119-03:00",
+      "bytes": 7429
+    },
+    "criterio_G1b": {
+      "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/criterios/criterio_G1b_campinas_bloco_cruzado.json",
+      "sha256": "be5a75e346a7b9d5db25bb12147cc6f2b4963e6cdf1345c2c543db68b47db044",
+      "mtime": "2026-10-03T16:18:37.076329-03:00",
+      "bytes": 2514
+    },
+    "lancador_copiado_retomada": {
+      "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1/rodar_lote_G1_retomada.py",
+      "sha256": "4f4f61cf170319ea9f3752fb78d83681065b4bc034b347751777a5d9edd3fc79",
+      "mtime": "2026-10-03T11:07:44.186979-03:00",
+      "bytes": 20377
+    }
+  }
+}

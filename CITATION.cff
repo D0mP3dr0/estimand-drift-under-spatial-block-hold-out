@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: >-
+  If you use the code or the records in this repository, please cite them
+  using the metadata below. The manuscript "Estimand Drift under Spatial Block
+  Hold-Out" is under review at MDPI Mathematics; once it is published, please
+  cite the article as well.
+title: "Estimand Drift under Spatial Block Hold-Out: reproducibility package"
+abstract: >-
+  Reproducibility package of the manuscript "Estimand Drift under Spatial
+  Block Hold-Out" by L. F. C. Seelig and R. M. Salles (submitted to MDPI
+  Mathematics, under review). It holds the code that partitions and trims
+  sixteen simulated city x quadrant cells at block sizes of 10 km and 5 km,
+  the computation of the per-node inclusion probabilities, the split draws,
+  the numerical tests, the training and evaluation code of a graph neural
+  network and a graph-free multilayer perceptron, the per-run records of the
+  trained models, the aggregation scripts, and the tables and figures of the
+  article. The large data files are listed with size and SHA-256 in
+  manifest/data_manifest.csv and are available from the corresponding author
+  on request.
+type: software
+authors:
+  - given-names: Luis Felipe Comodo
+    family-names: Seelig
+    affiliation: >-
+      Postgraduate Program in Defense Engineering (PGED), Military Institute
+      of Engineering (IME), Rio de Janeiro, Brazil
+  - given-names: Ronaldo Moreira
+    family-names: Salles
+    affiliation: >-
+      Military Institute of Engineering (IME), Brazil; CIICESI, ESTG,
+      Polytechnic of Porto, Felgueiras, Portugal
+repository-code: "https://github.com/D0mP3dr0/estimand-drift-under-spatial-block-hold-out"
+license: MIT
+keywords:
+  - spatial cross-validation
+  - block hold-out
+  - estimand
+  - inclusion probability
+  - graph neural networks
+  - reproducibility

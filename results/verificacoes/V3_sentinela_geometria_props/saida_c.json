@@ -1,0 +1,370 @@
+[
+ {
+  "celula": "bauru_Q1",
+  "N": 12960000,
+  "sent_far": 10858456,
+  "notsent_far": 4373,
+  "sent_notfar": 0,
+  "notsent_notfar": 2097171,
+  "frac_sent": 0.8378438271604939,
+  "valid": 2101544,
+  "valid_below_110": 270861,
+  "frac_valid_below110": 0.1288866661844815,
+  "min_rssi_valid": -128.79251098632812,
+  "min_dist_sent": 30041.83203125,
+  "max_dist_valid": 30059.654296875,
+  "pos0min": [
+   -50.063751220703125,
+   -22.324304580688477
+  ],
+  "pos0max": [
+   -49.11930847167969,
+   -21.324583053588867
+  ]
+ },
+ {
+  "celula": "bauru_Q2",
+  "N": 12960000,
+  "sent_far": 11734153,
+  "notsent_far": 3082,
+  "sent_notfar": 0,
+  "notsent_notfar": 1222765,
+  "frac_sent": 0.9054130401234568,
+  "valid": 1225847,
+  "valid_below_110": 369662,
+  "frac_valid_below110": 0.3015563932529916,
+  "min_rssi_valid": -132.08399963378906,
+  "min_dist_sent": 30042.013671875,
+  "max_dist_valid": 30051.74609375,
+  "pos0min": [
+   -49.063751220703125,
+   -22.324304580688477
+  ],
+  "pos0max": [
+   -48.11930847167969,
+   -21.324583053588867
+  ]
+ },
+ {
+  "celula": "bauru_Q3",
+  "N": 12960000,
+  "sent_far": 11687807,
+  "notsent_far": 4216,
+  "sent_notfar": 0,
+  "notsent_notfar": 1267977,
+  "frac_sent": 0.9018369598765432,
+  "valid": 1272193,
+  "valid_below_110": 57548,
+  "frac_valid_below110": 0.045235274836443844,
+  "min_rssi_valid": -128.97030639648438,
+  "min_dist_sent": 30052.712890625,
+  "max_dist_valid": 30063.966796875,
+  "pos0min": [
+   -50.063751220703125,
+   -23.324304580688477
+  ],
+  "pos0max": [
+   -49.11930847167969,
+   -22.324583053588867
+  ]
+ },
+ {
+  "celula": "bauru_Q4",
+  "N": 12960000,
+  "sent_far": 11723769,
+  "notsent_far": 3955,
+  "sent_notfar": 0,
+  "notsent_notfar": 1232276,
+  "frac_sent": 0.9046118055555555,
+  "valid": 1236231,
+  "valid_below_110": 299645,
+  "frac_valid_below110": 0.242385929490524,
+  "min_rssi_valid": -133.78317260742188,
+  "min_dist_sent": 30052.970703125,
+  "max_dist_valid": 30063.9609375,
+  "pos0min": [
+   -49.063751220703125,
+   -23.324304580688477
+  ],
+  "pos0max": [
+   -48.11930847167969,
+   -22.324583053588867
+  ]
+ },
+ {
+  "celula": "campinas_Q1",
+  "N": 12960000,
+  "sent_far": 11153423,
+  "notsent_far": 3715,
+  "sent_notfar": 0,
+  "notsent_notfar": 1802862,
+  "frac_sent": 0.8606036265432099,
+  "valid": 1806577,
+  "valid_below_110": 339422,
+  "frac_valid_below110": 0.18788128045469416,
+  "min_rssi_valid": -133.74197387695312,
+  "min_dist_sent": 30041.50390625,
+  "max_dist_valid": 30052.56640625,
+  "pos0min": [
+   -48.06097412109375,
+   -22.90513801574707
+  ],
+  "pos0max": [
+   -47.11653137207031,
+   -21.90541648864746
+  ]
+ },
+ {
+  "celula": "campinas_Q2",
+  "N": 12960000,
+  "sent_far": 11055639,
+  "notsent_far": 3968,
+  "sent_notfar": 0,
+  "notsent_notfar": 1900393,
+  "frac_sent": 0.8530585648148148,
+  "valid": 1904361,
+  "valid_below_110": 446603,
+  "frac_valid_below110": 0.2345159347413647,
+  "min_rssi_valid": -136.91749572753906,
+  "min_dist_sent": 30041.359375,
+  "max_dist_valid": 30053.326171875,
+  "pos0min": [
+   -47.06097412109375,
+   -22.90513801574707
+  ],
+  "pos0max": [
+   -46.11653137207031,
+   -21.90541648864746
+  ]
+ },
+ {
+  "celula": "campinas_Q3",
+  "N": 12960000,
+  "sent_far": 10988399,
+  "notsent_far": 5064,
+  "sent_notfar": 0,
+  "notsent_notfar": 1966537,
+  "frac_sent": 0.8478702932098765,
+  "valid": 1971601,
+  "valid_below_110": 832284,
+  "frac_valid_below110": 0.4221361218623849,
+  "min_rssi_valid": -148.3449249267578,
+  "min_dist_sent": 30053.015625,
+  "max_dist_valid": 30064.029296875,
+  "pos0min": [
+   -48.06097412109375,
+   -23.90513801574707
+  ],
+  "pos0max": [
+   -47.11653137207031,
+   -22.90541648864746
+  ]
+ },
+ {
+  "celula": "campinas_Q4",
+  "N": 12960000,
+  "sent_far": 11313178,
+  "notsent_far": 4654,
+  "sent_notfar": 0,
+  "notsent_notfar": 1642168,
+  "frac_sent": 0.8729304012345679,
+  "valid": 1646822,
+  "valid_below_110": 523078,
+  "frac_valid_below110": 0.3176287419041038,
+  "min_rssi_valid": -139.25453186035156,
+  "min_dist_sent": 30051.236328125,
+  "max_dist_valid": 30064.005859375,
+  "pos0min": [
+   -47.06097412109375,
+   -23.90513801574707
+  ],
+  "pos0max": [
+   -46.11653137207031,
+   -22.90541648864746
+  ]
+ },
+ {
+  "celula": "lins_Q1",
+  "N": 12960000,
+  "sent_far": 11852707,
+  "notsent_far": 2937,
+  "sent_notfar": 0,
+  "notsent_notfar": 1104356,
+  "frac_sent": 0.914560725308642,
+  "valid": 1107293,
+  "valid_below_110": 21294,
+  "frac_valid_below110": 0.019230682393910195,
+  "min_rssi_valid": -130.26158142089844,
+  "min_dist_sent": 30041.853515625,
+  "max_dist_valid": 30050.5703125,
+  "pos0min": [
+   -50.745140075683594,
+   -21.679304122924805
+  ],
+  "pos0max": [
+   -49.800697326660156,
+   -20.679582595825195
+  ]
+ },
+ {
+  "celula": "lins_Q2",
+  "N": 12960000,
+  "sent_far": 11033420,
+  "notsent_far": 4419,
+  "sent_notfar": 0,
+  "notsent_notfar": 1922161,
+  "frac_sent": 0.8513441358024691,
+  "valid": 1926580,
+  "valid_below_110": 0,
+  "frac_valid_below110": 0.0,
+  "min_rssi_valid": -107.64778137207031,
+  "min_dist_sent": 30042.130859375,
+  "max_dist_valid": 30063.322265625,
+  "pos0min": [
+   -49.745140075683594,
+   -21.679304122924805
+  ],
+  "pos0max": [
+   -48.800697326660156,
+   -20.679582595825195
+  ]
+ },
+ {
+  "celula": "lins_Q3",
+  "N": 12960000,
+  "sent_far": 12035125,
+  "notsent_far": 3357,
+  "sent_notfar": 0,
+  "notsent_notfar": 921518,
+  "frac_sent": 0.928636188271605,
+  "valid": 924875,
+  "valid_below_110": 61512,
+  "frac_valid_below110": 0.06650844708744424,
+  "min_rssi_valid": -127.01551055908203,
+  "min_dist_sent": 30053.134765625,
+  "max_dist_valid": 30063.419921875,
+  "pos0min": [
+   -50.745140075683594,
+   -22.679304122924805
+  ],
+  "pos0max": [
+   -49.800697326660156,
+   -21.679582595825195
+  ]
+ },
+ {
+  "celula": "lins_Q4",
+  "N": 12960000,
+  "sent_far": 12055066,
+  "notsent_far": 3417,
+  "sent_notfar": 0,
+  "notsent_notfar": 901517,
+  "frac_sent": 0.9301748456790123,
+  "valid": 904934,
+  "valid_below_110": 902,
+  "frac_valid_below110": 0.0009967577746001367,
+  "min_rssi_valid": -123.87374114990234,
+  "min_dist_sent": 30053.11328125,
+  "max_dist_valid": 30063.349609375,
+  "pos0min": [
+   -49.745140075683594,
+   -22.679304122924805
+  ],
+  "pos0max": [
+   -48.800697326660156,
+   -21.679582595825195
+  ]
+ },
+ {
+  "celula": "sorocaba_Q1",
+  "N": 12960000,
+  "sent_far": 11306034,
+  "notsent_far": 3610,
+  "sent_notfar": 0,
+  "notsent_notfar": 1650356,
+  "frac_sent": 0.8723791666666667,
+  "valid": 1653966,
+  "valid_below_110": 485977,
+  "frac_valid_below110": 0.2938252660574643,
+  "min_rssi_valid": -133.4327392578125,
+  "min_dist_sent": 30041.12109375,
+  "max_dist_valid": 30052.638671875,
+  "pos0min": [
+   -48.452640533447266,
+   -23.5009708404541
+  ],
+  "pos0max": [
+   -47.50819778442383,
+   -22.501249313354492
+  ]
+ },
+ {
+  "celula": "sorocaba_Q2",
+  "N": 12960000,
+  "sent_far": 11271799,
+  "notsent_far": 3576,
+  "sent_notfar": 0,
+  "notsent_notfar": 1684625,
+  "frac_sent": 0.8697375771604938,
+  "valid": 1688201,
+  "valid_below_110": 410656,
+  "frac_valid_below110": 0.24325065557951928,
+  "min_rssi_valid": -165.92489624023438,
+  "min_dist_sent": 30040.859375,
+  "max_dist_valid": 30051.26171875,
+  "pos0min": [
+   -47.452640533447266,
+   -23.5009708404541
+  ],
+  "pos0max": [
+   -46.50819778442383,
+   -22.501249313354492
+  ]
+ },
+ {
+  "celula": "sorocaba_Q3",
+  "N": 12960000,
+  "sent_far": 11551717,
+  "notsent_far": 4197,
+  "sent_notfar": 0,
+  "notsent_notfar": 1404086,
+  "frac_sent": 0.891336188271605,
+  "valid": 1408283,
+  "valid_below_110": 407453,
+  "frac_valid_below110": 0.2893260800563523,
+  "min_rssi_valid": -160.7754364013672,
+  "min_dist_sent": 30052.857421875,
+  "max_dist_valid": 30064.06640625,
+  "pos0min": [
+   -48.452640533447266,
+   -24.5009708404541
+  ],
+  "pos0max": [
+   -47.50819778442383,
+   -23.501249313354492
+  ]
+ },
+ {
+  "celula": "sorocaba_Q4",
+  "N": 12960000,
+  "sent_far": 11590159,
+  "notsent_far": 4224,
+  "sent_notfar": 0,
+  "notsent_notfar": 1365617,
+  "frac_sent": 0.8943023919753087,
+  "valid": 1369841,
+  "valid_below_110": 384546,
+  "frac_valid_below110": 0.2807230912200759,
+  "min_rssi_valid": -160.29383850097656,
+  "min_dist_sent": 30051.646484375,
+  "max_dist_valid": 30064.541015625,
+  "pos0min": [
+   -47.452640533447266,
+   -24.5009708404541
+  ],
+  "pos0max": [
+   -46.50819778442383,
+   -23.501249313354492
+  ]
+ }
+]
