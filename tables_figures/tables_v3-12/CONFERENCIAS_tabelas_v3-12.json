@@ -106,7 +106,7 @@
    14.881514669520206,
    22.000215374509068
   ],
-  "veredito_fismat": "14.9-22.0 (mean n=n_te_b2 ~0.88e6; deff 39.9e3-59.3e3)",
+  "veredito_indep": "14.9-22.0 (mean n=n_te_b2 ~0.88e6; deff 39.9e3-59.3e3)",
   "passou": true
  },
  "T6_n_sobre_deff_validos": {
@@ -114,7 +114,7 @@
    1.0976872493222933,
    4.80052812876578
   ],
-  "veredito_fismat": "1.1-4.8 (n=n_te_b2_validos; with n_A_validos 1.06-4.63)",
+  "veredito_indep": "1.1-4.8 (n=n_te_b2_validos; with n_A_validos 1.06-4.63)",
   "passou": true
  },
  "T6_deff_contra_bc.json": {
@@ -196,7 +196,7 @@
    "R5_resumo": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/R5_resumo.json",
    "R5_por_sorteio": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/R5_por_sorteio.json",
    "R5_criterio": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/criterios/criterio_R5_variancia_um_sorteio.json",
-   "R5_veredito": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/votos_R5/veredito.json"
+   "R5_veredito": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/checks_R5/veredito.json"
   },
   "verificacoes": 524,
   "falhas": [],
@@ -746,7 +746,7 @@
   ]
  },
  "T9_spearman": {
-  "nota": "Spearman reread from the aggregate by path and checked against CSV and TEX; not recalculated here (it requires the constant-predictor MAE per split draw, which is in 2.1 and in the recalculation gpu/G1_votos_bloco*/veredito.json)",
+  "nota": "Spearman reread from the aggregate by path and checked against CSV and TEX; not recalculated here (it requires the constant-predictor MAE per split draw, which is in 2.1 and in the recalculation gpu/G1_checks_block*/veredito.json)",
   "veredito_independente": {
    "G1_veredito_bloco1": "confirmado",
    "G1_veredito_bloco2": "confirmado",

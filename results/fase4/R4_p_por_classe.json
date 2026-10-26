@@ -229,7 +229,7 @@
  "leitura_primaria": "L_no_a_no",
  "ambiguidades": [
   "The proposition says that the lower bound is ATTAINED IF hypothesis (iii) holds; it does not say that it fails outside it nor does it declare per class what is exact. The four readings (L, T, C, U) are implemented and reported; none was chosen after seeing the number.",
-  "m(i) has two definitions in the material: nodal (main.tex l.296: blocks with >= 1 node at < b; used in the proposition) and geometric (sides/corners at < b, as the decision criterion and fismat_k_corrigido.py describe). Both reported; the differences are discretization and thin blocks.",
+  "m(i) has two definitions in the material: nodal (main.tex l.296: blocks with >= 1 node at < b; used in the proposition) and geometric (sides/corners at < b, as the decision criterion and indep_k_corrigido.py describe). Both reported; the differences are discretization and thin blocks.",
   "'declared exact' in the decision criterion: only m=0 has lower bound = upper bound (p=1). In the other classes the proposition only states 'attained if (iii)'."
  ],
  "por_celula": {
@@ -5901,9 +5901,9 @@
   }
  },
  "trabalho_anterior": {
-  "fismat_k_corrigido": "geometric class m (8-neighbourhood by distance to face/vertex) only in Bauru Q1, 100+100 seeds; classified as contested in the record index; here: exact nodal m in the 4 cells, condition (iii) per node, 200 seeds of 1.8, SE by bootstrap over split draws",
-  "fismat_inclusao_decomp": "decomposition of m=1/m=2/m=3 for Bauru Q1 from the fismat_k_corrigido JSON; not recomputed",
-  "fismat_razao_cov": "ratio identity and decomposition of retention by lateral class k (1.6); does not cover p per class m",
+  "indep_k_corrigido": "geometric class m (8-neighbourhood by distance to face/vertex) only in Bauru Q1, 100+100 seeds; classified as contested in the record index; here: exact nodal m in the 4 cells, condition (iii) per node, 200 seeds of 1.8, SE by bootstrap over split draws",
+  "indep_inclusao_decomp": "decomposition of m=1/m=2/m=3 for Bauru Q1 from the indep_k_corrigido JSON; not recomputed",
+  "indep_razao_cov": "ratio identity and decomposition of retention by lateral class k (1.6); does not cover p per class m",
   "p_inclusao_por_no_1_6": "lateral-only profile by class k with errata; not used as comparator"
  },
  "scripts_sha256": {

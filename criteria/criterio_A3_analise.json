@@ -27,5 +27,5 @@
  },
  "nao_determinismo": "A2/A2c showed the GNN to be non-deterministic with the same seed (Δ up to 0.13 dB in the aggregate MAE); no individual run is citable; only distributions across seeds; checkpoint selection (best epoch on validation) is part of the variance",
  "proveniencia": "all 80 with insumos.sha256_rf_data = manifest v4 and identical test-partition hash within the cell; a run with rc=3 is a finding, not data",
- "votos": "3 independent recalculations per number before any claim; the aggregation script (v3_A3_agregar.py, to be written) is re-run independently and read in full"
+ "checks": "3 independent recalculations per number before any claim; the aggregation script (v3_A3_agregar.py, to be written) is re-run independently and read in full"
 }

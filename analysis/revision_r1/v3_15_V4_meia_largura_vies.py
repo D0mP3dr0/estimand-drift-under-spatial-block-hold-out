@@ -13,7 +13,7 @@ def log(*a):
     print(*a); sys.stdout.flush()
 CEL = ['bauru_Q1', 'campinas_Q1', 'lins_Q1', 'sorocaba_Q1']
 F_R3 = 'results/fase4/R3_termo_desenho.json'; F_R2 = 'results/fase4/R2_resumo.json'
-F_FM = 'results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json'
+F_FM = 'results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json'
 CRIT = 'criteria/criterio_V4_meia_largura_vies.json'
 R3, R2, FM = J(F_R3), J(F_R2), J(F_FM)
 PRED = {'constante': {'r3': 'constante', 'r2': 'constante', 'fm': 'constante'},
@@ -42,25 +42,25 @@ for c in CEL:
             b2 = f"resumo_por_celula.{c}.{pr['r2']}.{pop}.estimadores"
             L['termos']['vies_total_H_com_buffer'] = pm(r2['H']['vies'], r2['H']['ep_mc_vies'], b2 + '.H.{vies,ep_mc_vies}', F_R2)
             L['termos']['vies_total_H0_sem_buffer'] = pm(r2['H0']['vies'], r2['H0']['ep_mc_vies'], b2 + '.H0.{vies,ep_mc_vies}', F_R2)
-            # ratio term (fismat_R2_termo_razao.json): H with buffer, H0 without buffer
+            # ratio term (recalc_R2_ratio_term.json): H with buffer, H0 without buffer
             for tag, key in (('razao_H_com_buffer', 'H'), ('razao_H0_sem_buffer', 'H0')):
                 k = f"{key}_{pr['fm']}_{pop}"
                 if k in FM[c]:
                     e = FM[c][k]
                     t = pm(e['termo_razao'], e['ep_boot_razao'], f"{c}.{k}.{{termo_razao,ep_boot_razao}}", F_FM)
-                    t['vies_no_registro_fismat'] = e['vies']; t['z_razao'] = e['z_razao']; t['n'] = e['n']
+                    t['vies_no_registro_indep'] = e['vies']; t['z_razao'] = e['z_razao']; t['n'] = e['n']
                     L['termos'][tag] = t
                 else:
                     L['termos'][tag] = {'ausente_no_artefato': True, 'chave_procurada': f"{c}.{k}", 'fonte': F_FM}
             linhas.append(L)
 # source of the -1.23 dB value
 fm_s = FM['sorocaba_Q1']['H_constante_validos']
-fonte123 = {'valor_no_parecer': -1.23, 'item_do_parecer': 'stored records',
-            'caminho_citado_no_parecer': 'results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json -> sorocaba_Q1.H_constante_validos.termo_razao',
+fonte123 = {'valor_no_review': -1.23, 'item_do_review': 'stored records',
+            'caminho_citado_no_review': 'results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json -> sorocaba_Q1.H_constante_validos.termo_razao',
             'artefato_localizado': F_FM, 'sha256': sha(F_FM), 'caminho_json': 'sorocaba_Q1.H_constante_validos.{termo_razao,ep_boot_razao,z_razao,termo_desenho_empirico_MC}',
             'termo_razao': fm_s['termo_razao'], 'ep_boot_razao': fm_s['ep_boot_razao'], 'z_razao': fm_s['z_razao'], 'termo_desenho_empirico_MC': fm_s['termo_desenho_empirico_MC'],
             'reproduz_-1,23_a_0,01': abs(fm_s['termo_razao'] - (-1.23)) <= 0.01,
-            'nota': 'generator script: results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.py (recalculation of 01/10/2026); not an R2_resumo; H = with buffer b=2'}
+            'nota': 'generator script: results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.py (recalculation of 01/10/2026); not an R2_resumo; H = with buffer b=2'}
 # cross-checks against the values printed in the text
 def faixa(pn, pop, campo):
     v = [next(l for l in linhas if l['celula'] == c and l['preditor'] == pn and l['populacao'] == pop)['termos']['desenho_fechado'][campo] for c in CEL]
@@ -85,23 +85,23 @@ rz = [l['termos']['razao_H0_sem_buffer']['estimativa'] for l in linhas if l['pre
 tx['frase_2_razao_fspl_sem_buffer_meio_decibel'] = {'valores_por_celula': dict(zip(CEL, rz)), 'min': min(rz), 'max': max(rz), 'texto_W': [0.46, 0.64],
     'reproduzida_a_0,01': bool(abs(min(rz) - 0.46) <= 0.01 and abs(max(rz) - 0.64) <= 0.01)}
 rzH = {c: next(l for l in linhas if l['celula'] == c and l['preditor'] == 'fspl_b' and l['populacao'] == 'validos')['termos']['razao_H_com_buffer'] for c in CEL}
-tx['razao_fspl_com_buffer_validos_(parecer: 0,31-0,96)'] = {c: t.get('estimativa') for c, t in rzH.items()}
+tx['razao_fspl_com_buffer_validos_(review: 0,31-0,96)'] = {c: t.get('estimativa') for c, t in rzH.items()}
 vl = [l for l in linhas if l['populacao'] == 'validos']
 resumo = {'n_linhas_validos': len(vl), 'por_termo_n_distinguidas_validos': {k: sum(1 for l in vl if l['termos'][k].get('distinguido_de_zero')) for k in vl[0]['termos']},
           'por_termo_n_distinguidas_todos': {k: sum(1 for l in linhas if l['populacao'] == 'todos' and l['termos'][k].get('distinguido_de_zero')) for k in vl[0]['termos']},
           'maior_meia_largura_vies_total_H_constante_validos': max(l['termos']['vies_total_H_com_buffer']['meia_largura_2EP'] for l in vl if l['preditor'] == 'constante'),
           'maior_meia_largura_vies_total_H0_constante_validos': max(l['termos']['vies_total_H0_sem_buffer']['meia_largura_2EP'] for l in vl if l['preditor'] == 'constante'),
           'maior_EP_vies_total_H_constante_validos': max(l['termos']['vies_total_H_com_buffer']['EP'] for l in vl if l['preditor'] == 'constante')}
-# consistency of the fismat record with R2 (bias H)
+# consistency of the indep record with R2 (bias H)
 coer = []
 for l in linhas:
     t, f = l['termos']['vies_total_H_com_buffer'], l['termos']['razao_H_com_buffer']
-    if 'vies_no_registro_fismat' in f:
-        coer.append({'celula': l['celula'], 'preditor': l['preditor'], 'pop': l['populacao'], 'vies_R2': t['estimativa'], 'vies_fismat': f['vies_no_registro_fismat'], 'absdiff': abs(t['estimativa'] - f['vies_no_registro_fismat'])})
+    if 'vies_no_registro_indep' in f:
+        coer.append({'celula': l['celula'], 'preditor': l['preditor'], 'pop': l['populacao'], 'vies_R2': t['estimativa'], 'vies_indep': f['vies_no_registro_indep'], 'absdiff': abs(t['estimativa'] - f['vies_no_registro_indep'])})
 S = {'id': 'V4_tabela_vies', 'criterio': CRIT, 'criterio_sha256': sha(CRIT),
      'regra': 'intervalo = estimativa +- 2 EP (ou [T_inf, T_sup] se fechado); distinguido_de_zero = intervalo exclui 0; so leitura', 'leitura_primaria_desenho': 'm_nodal.L_no_a_no (R3.leitura_primaria)',
      'rotulos': {'H': 'estimador de Hajek com buffer b=2', 'H0': 'sem buffer (b=0)', 'fspl_b': 'fspl_calibrado_b nos artefatos'},
-     'linhas': linhas, 'fonte_menos_1_23': fonte123, 'conferencias_texto': txt, 'resumo_contagens': resumo, 'coerencia_vies_R2_vs_fismat_H': {'max_absdiff': max(x['absdiff'] for x in coer), 'linhas': coer},
+     'linhas': linhas, 'fonte_menos_1_23': fonte123, 'conferencias_texto': txt, 'resumo_contagens': resumo, 'coerencia_vies_R2_vs_indep_H': {'max_absdiff': max(x['absdiff'] for x in coer), 'linhas': coer},
      'sha256_fontes': {F_R3: sha(F_R3), F_R2: sha(F_R2), F_FM: sha(F_FM)}, 'script': SCRIPT_REL, 'script_sha256': hashlib.sha256(open(HERE, 'rb').read()).hexdigest(),
      'data_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'comando': 'python ' + SCRIPT_REL}
 os.makedirs(OUT, exist_ok=True)
@@ -126,7 +126,7 @@ open(os.path.join(OUT, 'T_V4_vies.tex'), 'w').write('\n'.join(tex) + '\n')
 log('FONTE -1,23', json.dumps(fonte123, ensure_ascii=False))
 log('CONF_TEXTO', json.dumps(txt, ensure_ascii=False))
 log('RESUMO', json.dumps(resumo))
-log('COERENCIA max absdiff vies R2 vs fismat H', S['coerencia_vies_R2_vs_fismat_H']['max_absdiff'])
+log('COERENCIA max absdiff vies R2 vs indep H', S['coerencia_vies_R2_vs_indep_H']['max_absdiff'])
 for l in linhas:
     log('LINHA', l['celula'], l['preditor'], l['populacao'], ' | '.join(f"{k}={f(v)}" for k, v in l['termos'].items()))
 log('GRAVADO V4_tabela_vies.json e T_V4_vies.tex em', OUT)

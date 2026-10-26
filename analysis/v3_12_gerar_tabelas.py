@@ -7,7 +7,7 @@ constant predictor, with b = 0 summary rows (2.1_16x60rnd, fase4/R1_b0_*); T4, T
 T4_totais inversion counts with and without buffer (partial record 3.1 at b = 2,
 fase4/R1_b0_por_sorteio.json at b = 0); T5 inclusion by class (fase4/R4_p_por_classe.json,
 primary reading, nodal m); T6 design reference (fase4/R2_*, cross-checked against the
-independent recalculation in fase4/votos_fismat_R2_R4/); T7 and T7b model drift of campaign
+independent recalculation in fase4/checks_R2_R4/); T7 and T7b model drift of campaign
 A4 (gpu/A4/agregado_A4.json); T8 design term (fase4/R3_termo_desenho.json); TA1, TA1a, TA1b
 hyper-parameters (fase4/B7.2_hiperparametros/b7_2_folha_hiperparametros.json); TN notation.
 Table T9 is written by the separate script v3_12h_gerar_T9_G1.py.
@@ -55,8 +55,8 @@ ENT = {
     "R3": F4 / "R3_termo_desenho.json",
     "R4": F4 / "R4_p_por_classe.json",
     "B7.2": F4 / "B7.2_hiperparametros" / "b7_2_folha_hiperparametros.json",
-    "bc_fismat": F4 / "votos_fismat_R2_R4" / "bc.json",
-    "veredito_fismat": F4 / "votos_fismat_R2_R4" / "veredito.json",
+    "bc_indep": F4 / "checks_R2_R4" / "bc.json",
+    "veredito_indep": F4 / "checks_R2_R4" / "veredito.json",
     "F10_notacao": B / "_propostas_2026-10-01" / "blocos_formais_v3-12.tex",
     "T2_antiga_csv": ANT / "T2_retencao_v3.csv",
     "T3_antiga_csv": ANT / "T3_deriva_erro_v3.csv",
@@ -557,8 +557,8 @@ def gerar_t6():
     """T6: bias and RMSE of the block hold-out H, RMSE of the random sample A and n/deff, deff = Var(H)/Var(A)."""
     res = load(ENT["R2_resumo"])["resumo_por_celula"]
     por = load(ENT["R2_por_sorteio"])["celulas"]
-    bc = load(ENT["bc_fismat"])["b"]
-    ver = load(ENT["veredito_fismat"])["b"]
+    bc = load(ENT["bc_indep"])["b"]
+    ver = load(ENT["veredito_indep"])["b"]
     linhas_tex, linhas_csv = [], []
     nde = {"todos": [], "validos": []}
     for k in Q1:
@@ -588,7 +588,7 @@ def gerar_t6():
     for pop, chave in (("todos", "todos_n/deff"), ("validos", "validos_n/deff")):
         lo, hi = faixa_txt(ver[chave])
         assert abs(min(nde[pop]) - lo) <= 0.05 and abs(max(nde[pop]) - hi) <= 0.05, (pop, min(nde[pop]), max(nde[pop]), lo, hi)
-        CONF[f"T6_n_sobre_deff_{pop}"] = {"recomputado_min_max": [min(nde[pop]), max(nde[pop])], "veredito_fismat": ver[chave], "passou": True}
+        CONF[f"T6_n_sobre_deff_{pop}"] = {"recomputado_min_max": [min(nde[pop]), max(nde[pop])], "veredito_indep": ver[chave], "passou": True}
     CONF["T6_deff_contra_bc.json"] = {"celulas_pred_pop_comparadas": 16, "campos": "deff_calc, varH, varA", "passou": True,
                                       "nota": "the n_sobre_deff_nH field of bc.json uses n = number of split draws (nH = 199 or 200), not the number of nodes; the n/deff of this table uses the mean number of scored nodes "
                                               "(n_te_b2; n_te_b2_validos of R2_por_sorteio.json), which reproduces the ranges of the independent recalculation record (b): 14.9-22.0 (all nodes) and 1.1-4.8 (valid nodes)"}

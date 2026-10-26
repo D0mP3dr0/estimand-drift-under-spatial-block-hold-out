@@ -474,7 +474,7 @@ def main():
         motivo="the first run of classe_k_e_dist_borda.existe(gx,gy) computed ids=gx*max_y+gy "
                "WITHOUT checking 0<=gy<max_y (nor 0<=gx<max_x); nodes of the bottom row (gy=0) with "
                "dy<b 'found' block (gx-1,max_y-1) -- a PHANTOM NEIGHBOUR -- inflating k(i) in "
-               "211,185 nodes per cell (fismat_k_corrigido_bauru.json: 124,618 true k=1 nodes "
+               "211,185 nodes per cell (indep_k_corrigido_bauru.json: 124,618 true k=1 nodes "
                "became k=2 and k=0 nodes became k=1). This accounted for 69% of the excess at k=1 "
                "(0.0171 of 0.0246 absolute points). Fixed: existe() now checks bounds in both "
                "directions (gx and gy) before testing whether the neighbouring block exists.",
@@ -486,10 +486,10 @@ def main():
                              "(N-1-k_tr)_k/(N-1)_k uses the lateral-only k(i) as an approximation of "
                              "the exact geometric m(i); the remaining part of the excess at k=1/k=2 "
                              "(face discretisation and the second-order validation-neighbour effect) "
-                             "is quantified in fismat_k_corrigido_bauru.json / "
-                             "fismat_inclusao_decomp.json and not recomputed here (that would require "
+                             "is quantified in indep_k_corrigido_bauru.json / "
+                             "indep_inclusao_decomp.json and not recomputed here (that would require "
                              "reclassifying each NODE with diagonals, outside the scope of this script).",
-        residual_nao_explicado_aprox="~0,0075 de 0,0246 (31%) em k=1, ver fismat_inclusao_decomp.json",
+        residual_nao_explicado_aprox="~0,0075 de 0,0246 (31%) em k=1, ver indep_inclusao_decomp.json",
     )
     saida_16 = dict(
         id="1.6", pergunta=crit16["pergunta"], alegacao=crit16["alegacao"], criterio=crit16,
@@ -589,7 +589,7 @@ def main():
         conclusao_HT_mantida="the Horvitz-Thompson correction STAYS out of the article (pre-registered "
                               "criterion not met: |vies_HT| does not fall below |vies_protocolo|/2 "
                               "in >=3 cells x 3 populations). BUT the reason recorded in "
-                              "fismat_vies_ht.json is stronger than 'the criterion was not reached': "
+                              "indep_vies_ht.json is stronger than 'the criterion was not reached': "
                               "the 'halves the bias' criterion itself was decided WITHIN the Monte "
                               "Carlo noise -- the HT estimate varies by 7.8 to 9.1 dB from draw to "
                               "draw (d_HT_dp_dB, valid population, constant predictor), that is, 13 "

@@ -74,9 +74,9 @@
       -0.10061271528934013
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "bauru_Q1.H_constante_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.3619503579574648,
+     "vies_no_registro_indep": 0.3619503579574648,
      "z_razao": -2.283837832163023,
      "n": 199
     },
@@ -89,9 +89,9 @@
       -0.052363292792784955
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "bauru_Q1.H0_constante_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": -0.18293948364468093,
+     "vies_no_registro_indep": -0.18293948364468093,
      "z_razao": -2.2009578259686453,
      "n": 199
     }
@@ -161,9 +161,9 @@
       0.048209444324439646
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "bauru_Q1.H_constante_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.10209178941545272,
+     "vies_no_registro_indep": 0.10209178941545272,
      "z_razao": 1.0701766541279618,
      "n": 200
     },
@@ -176,9 +176,9 @@
       0.04204296762176321
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "bauru_Q1.H0_constante_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.05421752286285697,
+     "vies_no_registro_indep": 0.05421752286285697,
      "z_razao": 2.5023481281766196,
      "n": 200
     }
@@ -248,9 +248,9 @@
       0.9075174750856134
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "bauru_Q1.H_fspl_calibrado_b_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.022429506105116737,
+     "vies_no_registro_indep": 0.022429506105116737,
      "z_razao": 3.234532234051264,
      "n": 199
     },
@@ -263,9 +263,9 @@
       0.7420324463852617
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "bauru_Q1.H0_fspl_calibrado_b_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.4340871446825103,
+     "vies_no_registro_indep": 0.4340871446825103,
      "z_razao": 3.283018756778146,
      "n": 199
     }
@@ -335,9 +335,9 @@
       0.0062749969366608285
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "bauru_Q1.H_fspl_calibrado_b_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": -0.12412575421926775,
+     "vies_no_registro_indep": -0.12412575421926775,
      "z_razao": -1.11938523614039,
      "n": 200
     },
@@ -350,9 +350,9 @@
       0.0019486322695518258
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "bauru_Q1.H0_fspl_calibrado_b_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": -0.029837641494290246,
+     "vies_no_registro_indep": -0.029837641494290246,
      "z_razao": -1.477159252554958,
      "n": 200
     }
@@ -422,9 +422,9 @@
       -0.10751969528563132
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "campinas_Q1.H_constante_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.28488851928239,
+     "vies_no_registro_indep": 0.28488851928239,
      "z_razao": -2.259323332250894,
      "n": 197
     },
@@ -437,9 +437,9 @@
       0.26450032235010185
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "campinas_Q1.H0_constante_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.31974248526546845,
+     "vies_no_registro_indep": 0.31974248526546845,
      "z_razao": -1.147444705320525,
      "n": 197
     }
@@ -509,9 +509,9 @@
       0.04615239100453216
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "campinas_Q1.H_constante_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.1458711100036898,
+     "vies_no_registro_indep": 0.1458711100036898,
      "z_razao": 1.0762425014707642,
      "n": 200
     },
@@ -524,9 +524,9 @@
       0.04284630092947522
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "campinas_Q1.H0_constante_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.08117314879087667,
+     "vies_no_registro_indep": 0.08117314879087667,
      "z_razao": 2.817649337336678,
      "n": 200
     }
@@ -596,9 +596,9 @@
       1.0792813889618589
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "campinas_Q1.H_fspl_calibrado_b_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.4596586557116513,
+     "vies_no_registro_indep": 0.4596586557116513,
      "z_razao": 3.6335102278559765,
      "n": 197
     },
@@ -611,9 +611,9 @@
       0.7357925760099404
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "campinas_Q1.H0_fspl_calibrado_b_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.5110838281415973,
+     "vies_no_registro_indep": 0.5110838281415973,
      "z_razao": 3.8743841258768565,
      "n": 197
     }
@@ -683,9 +683,9 @@
       0.012641130885167095
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "campinas_Q1.H_fspl_calibrado_b_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": -0.07010056562188449,
+     "vies_no_registro_indep": -0.07010056562188449,
      "z_razao": -0.07241224861602605,
      "n": 200
     },
@@ -698,9 +698,9 @@
       0.008177097262722009
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "campinas_Q1.H0_fspl_calibrado_b_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": -0.0072093768457595075,
+     "vies_no_registro_indep": -0.0072093768457595075,
      "z_razao": 0.43382882127457745,
      "n": 200
     }
@@ -770,9 +770,9 @@
       1.0647207775530414
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "lins_Q1.H_constante_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 1.0698085269105526,
+     "vies_no_registro_indep": 1.0698085269105526,
      "z_razao": 0.6650499202088713,
      "n": 189
     },
@@ -785,9 +785,9 @@
       0.537668296523406
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "lins_Q1.H0_constante_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.43242481048870474,
+     "vies_no_registro_indep": 0.43242481048870474,
      "z_razao": -0.1586925723631843,
      "n": 192
     }
@@ -857,9 +857,9 @@
       0.038984210201475814
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "lins_Q1.H_constante_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.1558194527609682,
+     "vies_no_registro_indep": 0.1558194527609682,
      "z_razao": 1.957130855084525,
      "n": 200
     },
@@ -872,9 +872,9 @@
       0.03290164677274289
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "lins_Q1.H0_constante_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.07885036903873166,
+     "vies_no_registro_indep": 0.07885036903873166,
      "z_razao": 3.407933337021603,
      "n": 200
     }
@@ -944,9 +944,9 @@
       0.4896246974881843
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "lins_Q1.H_fspl_calibrado_b_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.2640263610259339,
+     "vies_no_registro_indep": 0.2640263610259339,
      "z_razao": 3.4146707844981603,
      "n": 189
     },
@@ -959,9 +959,9 @@
       0.7568895709710217
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "lins_Q1.H0_fspl_calibrado_b_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.4489738794896576,
+     "vies_no_registro_indep": 0.4489738794896576,
      "z_razao": 3.21793550711823,
      "n": 192
     }
@@ -1031,9 +1031,9 @@
       0.006752203216557282
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "lins_Q1.H_fspl_calibrado_b_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": -0.14217757892946903,
+     "vies_no_registro_indep": -0.14217757892946903,
      "z_razao": -0.873193827805424,
      "n": 200
     },
@@ -1046,9 +1046,9 @@
       0.0013903672799309976
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "lins_Q1.H0_fspl_calibrado_b_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": -0.06273079867722497,
+     "vies_no_registro_indep": -0.06273079867722497,
      "z_razao": -1.6080076529124605,
      "n": 200
     }
@@ -1118,9 +1118,9 @@
       -0.5894071155058264
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "sorocaba_Q1.H_constante_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": -0.30451541257324166,
+     "vies_no_registro_indep": -0.30451541257324166,
      "z_razao": -3.8468734955236896,
      "n": 194
     },
@@ -1133,9 +1133,9 @@
       0.4642964440457332
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "sorocaba_Q1.H0_constante_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.40395910845588645,
+     "vies_no_registro_indep": 0.40395910845588645,
      "z_razao": -0.4434285355415278,
      "n": 196
     }
@@ -1205,9 +1205,9 @@
       0.041265806908509665
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "sorocaba_Q1.H_constante_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.06874416805970096,
+     "vies_no_registro_indep": 0.06874416805970096,
      "z_razao": 1.1687637899940546,
      "n": 200
     },
@@ -1220,9 +1220,9 @@
       0.0363009027978062
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "sorocaba_Q1.H0_constante_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.04575335266770253,
+     "vies_no_registro_indep": 0.04575335266770253,
      "z_razao": 2.8020250324507274,
      "n": 200
     }
@@ -1292,9 +1292,9 @@
       1.3874544275654024
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "sorocaba_Q1.H_fspl_calibrado_b_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.9545832985206477,
+     "vies_no_registro_indep": 0.9545832985206477,
      "z_razao": 4.5434065841788485,
      "n": 194
     },
@@ -1307,9 +1307,9 @@
       0.9330779385962484
      ],
      "distinguido_de_zero": true,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "sorocaba_Q1.H0_fspl_calibrado_b_validos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.576495122007505,
+     "vies_no_registro_indep": 0.576495122007505,
      "z_razao": 4.281094188288515,
      "n": 196
     }
@@ -1379,9 +1379,9 @@
       0.014134359730222028
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "sorocaba_Q1.H_fspl_calibrado_b_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.007492754199798668,
+     "vies_no_registro_indep": 0.007492754199798668,
      "z_razao": 0.1108065474557655,
      "n": 200
     },
@@ -1394,9 +1394,9 @@
       0.009154189602391005
      ],
      "distinguido_de_zero": false,
-     "fonte": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+     "fonte": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
      "caminho_json": "sorocaba_Q1.H0_fspl_calibrado_b_todos.{termo_razao,ep_boot_razao}",
-     "vies_no_registro_fismat": 0.0032508652959708506,
+     "vies_no_registro_indep": 0.0032508652959708506,
      "z_razao": 0.7049187455659751,
      "n": 200
     }
@@ -1404,10 +1404,10 @@
   }
  ],
  "fonte_menos_1_23": {
-  "valor_no_parecer": -1.23,
-  "item_do_parecer": "stored records",
-  "caminho_citado_no_parecer": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json -> sorocaba_Q1.H_constante_validos.termo_razao",
-  "artefato_localizado": "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json",
+  "valor_no_review": -1.23,
+  "item_do_review": "stored records",
+  "caminho_citado_no_review": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json -> sorocaba_Q1.H_constante_validos.termo_razao",
+  "artefato_localizado": "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json",
   "sha256": "6878d5f5e9c081b4797e054996f571ece1ad22fc409ccf7a9f36055886f1854c",
   "caminho_json": "sorocaba_Q1.H_constante_validos.{termo_razao,ep_boot_razao,z_razao,termo_desenho_empirico_MC}",
   "termo_razao": -1.2276826843895492,
@@ -1415,7 +1415,7 @@
   "z_razao": -3.8468734955236896,
   "termo_desenho_empirico_MC": 0.9231672718163075,
   "reproduz_-1,23_a_0,01": true,
-  "nota": "generator script: results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.py (recalculation of 01/10/2026); not an R2_resumo; H = with buffer b=2"
+  "nota": "generator script: results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.py (recalculation of 01/10/2026); not an R2_resumo; H = with buffer b=2"
  },
  "conferencias_texto": {
   "abstract_main.tex_l83_e_l708": {
@@ -1486,7 +1486,7 @@
     ],
     "reproduzida_a_0,01": true
    },
-   "razao_fspl_com_buffer_validos_(parecer: 0,31-0,96)": {
+   "razao_fspl_com_buffer_validos_(review: 0,31-0,96)": {
     "bauru_Q1": 0.5607749450913944,
     "campinas_Q1": 0.6961165963871888,
     "lins_Q1": 0.30877355547971835,
@@ -1516,7 +1516,7 @@
   "maior_meia_largura_vies_total_H0_constante_validos": 1.1142165415963035,
   "maior_EP_vies_total_H_constante_validos": 0.6603686737017197
  },
- "coerencia_vies_R2_vs_fismat_H": {
+ "coerencia_vies_R2_vs_indep_H": {
   "max_absdiff": 0.0,
   "linhas": [
    {
@@ -1524,7 +1524,7 @@
     "preditor": "constante",
     "pop": "validos",
     "vies_R2": 0.3619503579574648,
-    "vies_fismat": 0.3619503579574648,
+    "vies_indep": 0.3619503579574648,
     "absdiff": 0.0
    },
    {
@@ -1532,7 +1532,7 @@
     "preditor": "constante",
     "pop": "todos",
     "vies_R2": 0.10209178941545272,
-    "vies_fismat": 0.10209178941545272,
+    "vies_indep": 0.10209178941545272,
     "absdiff": 0.0
    },
    {
@@ -1540,7 +1540,7 @@
     "preditor": "fspl_b",
     "pop": "validos",
     "vies_R2": 0.022429506105116737,
-    "vies_fismat": 0.022429506105116737,
+    "vies_indep": 0.022429506105116737,
     "absdiff": 0.0
    },
    {
@@ -1548,7 +1548,7 @@
     "preditor": "fspl_b",
     "pop": "todos",
     "vies_R2": -0.12412575421926775,
-    "vies_fismat": -0.12412575421926775,
+    "vies_indep": -0.12412575421926775,
     "absdiff": 0.0
    },
    {
@@ -1556,7 +1556,7 @@
     "preditor": "constante",
     "pop": "validos",
     "vies_R2": 0.28488851928239,
-    "vies_fismat": 0.28488851928239,
+    "vies_indep": 0.28488851928239,
     "absdiff": 0.0
    },
    {
@@ -1564,7 +1564,7 @@
     "preditor": "constante",
     "pop": "todos",
     "vies_R2": 0.1458711100036898,
-    "vies_fismat": 0.1458711100036898,
+    "vies_indep": 0.1458711100036898,
     "absdiff": 0.0
    },
    {
@@ -1572,7 +1572,7 @@
     "preditor": "fspl_b",
     "pop": "validos",
     "vies_R2": 0.4596586557116513,
-    "vies_fismat": 0.4596586557116513,
+    "vies_indep": 0.4596586557116513,
     "absdiff": 0.0
    },
    {
@@ -1580,7 +1580,7 @@
     "preditor": "fspl_b",
     "pop": "todos",
     "vies_R2": -0.07010056562188449,
-    "vies_fismat": -0.07010056562188449,
+    "vies_indep": -0.07010056562188449,
     "absdiff": 0.0
    },
    {
@@ -1588,7 +1588,7 @@
     "preditor": "constante",
     "pop": "validos",
     "vies_R2": 1.0698085269105526,
-    "vies_fismat": 1.0698085269105526,
+    "vies_indep": 1.0698085269105526,
     "absdiff": 0.0
    },
    {
@@ -1596,7 +1596,7 @@
     "preditor": "constante",
     "pop": "todos",
     "vies_R2": 0.1558194527609682,
-    "vies_fismat": 0.1558194527609682,
+    "vies_indep": 0.1558194527609682,
     "absdiff": 0.0
    },
    {
@@ -1604,7 +1604,7 @@
     "preditor": "fspl_b",
     "pop": "validos",
     "vies_R2": 0.2640263610259339,
-    "vies_fismat": 0.2640263610259339,
+    "vies_indep": 0.2640263610259339,
     "absdiff": 0.0
    },
    {
@@ -1612,7 +1612,7 @@
     "preditor": "fspl_b",
     "pop": "todos",
     "vies_R2": -0.14217757892946903,
-    "vies_fismat": -0.14217757892946903,
+    "vies_indep": -0.14217757892946903,
     "absdiff": 0.0
    },
    {
@@ -1620,7 +1620,7 @@
     "preditor": "constante",
     "pop": "validos",
     "vies_R2": -0.30451541257324166,
-    "vies_fismat": -0.30451541257324166,
+    "vies_indep": -0.30451541257324166,
     "absdiff": 0.0
    },
    {
@@ -1628,7 +1628,7 @@
     "preditor": "constante",
     "pop": "todos",
     "vies_R2": 0.06874416805970096,
-    "vies_fismat": 0.06874416805970096,
+    "vies_indep": 0.06874416805970096,
     "absdiff": 0.0
    },
    {
@@ -1636,7 +1636,7 @@
     "preditor": "fspl_b",
     "pop": "validos",
     "vies_R2": 0.9545832985206477,
-    "vies_fismat": 0.9545832985206477,
+    "vies_indep": 0.9545832985206477,
     "absdiff": 0.0
    },
    {
@@ -1644,7 +1644,7 @@
     "preditor": "fspl_b",
     "pop": "todos",
     "vies_R2": 0.007492754199798668,
-    "vies_fismat": 0.007492754199798668,
+    "vies_indep": 0.007492754199798668,
     "absdiff": 0.0
    }
   ]
@@ -1652,7 +1652,7 @@
  "sha256_fontes": {
   "results/fase4/R3_termo_desenho.json": "5a564ad6ca01873bfa20a8947fb84bebdf604e301d43f128bdd5c5fd4d605f7e",
   "results/fase4/R2_resumo.json": "f363a57b9aed733a9f73c89f7cbcec1d2524b7a1062521a9154492bc580b63f3",
-  "results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json": "6878d5f5e9c081b4797e054996f571ece1ad22fc409ccf7a9f36055886f1854c"
+  "results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json": "6878d5f5e9c081b4797e054996f571ece1ad22fc409ccf7a9f36055886f1854c"
  },
  "script": "analysis/revision_r1/v3_15_V4_meia_largura_vies.py",
  "script_sha256": "9daa05ff2a3c69a01fdba7f7daf3d85ff837dad865c52d9bdd008b41e685553b",

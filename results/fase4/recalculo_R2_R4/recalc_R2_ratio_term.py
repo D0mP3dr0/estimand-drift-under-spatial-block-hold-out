@@ -14,8 +14,8 @@ with that record (`conferencia_*` keys). For b = 2 km (H) the stored errors and 
 
 Inputs: analysis/v3_12_R2_referencia_desenho.py, results/fase1/1.8_referencia_nodal_200seeds.json,
 results/fase4/R2_por_sorteio.json (absolute paths of the original run).
-Output: the JSON path given as first argument (fismat_R2_termo_razao.json in this folder).
-Usage: python fismat_R2_termo_razao.py fismat_R2_termo_razao.json
+Output: the JSON path given as first argument (recalc_R2_ratio_term.json in this folder).
+Usage: python recalc_R2_ratio_term.py recalc_R2_ratio_term.json
 """
 import importlib.util, json, sys, numpy as np
 S="/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/v3_12_R2_referencia_desenho.py"

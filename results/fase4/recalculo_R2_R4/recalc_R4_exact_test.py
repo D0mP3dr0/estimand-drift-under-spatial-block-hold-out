@@ -10,8 +10,8 @@ reports the fraction of nodes whose p has an exact closed form (versus bounds on
 fractions of the classes m = 0, m = 1 (iii) and m = 3 (iii).
 
 Input: results/fase4/R4_p_por_classe.json (absolute path of the original run).
-Output: the JSON path given as first argument (fismat_R4_teste_exato.json in this folder), also printed.
-Usage: python fismat_R4_teste_exato.py fismat_R4_teste_exato.json
+Output: the JSON path given as first argument (recalc_R4_exact_test.json in this folder), also printed.
+Usage: python recalc_R4_exact_test.py recalc_R4_exact_test.json
 """
 import json, sys
 from scipy import stats

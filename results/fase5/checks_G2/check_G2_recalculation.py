@@ -7,10 +7,10 @@ Level 2 (`n2 <cell>`): for one cell, reloads the elevation from the reference-fi
 assignment (10 km grid), the 0.70/0.15/0.15 partition and the 2 km buffer trimming with a k-d tree, and recomputes
 c_ref, S2_U, the 60 per-draw n and Err, and the statistics -> nivel2_<cell>.json. The permuted control uses
 np.random.default_rng(20261004 + cell index). Seeds are read from fase2/2.1_deriva_erro_baselines_16x60rnd.json.
-Absolute paths are those of the original run. Usage: python voto_G2_recalculo.py n1 | n2 <cell>
+Absolute paths are those of the original run. Usage: python check_G2_recalculation.py n1 | n2 <cell>
 """
 import json, sys, numpy as np
-M='/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics'; V=M+'/_v3_2026-09-25'; D=V+'/fase5/votos_G2'
+M='/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics'; V=M+'/_v3_2026-09-25'; D=V+'/fase5/checks_G2'
 CEL=[f"{c}_Q{q}" for c in ['bauru','campinas','lins','sorocaba'] for q in (1,2,3,4)]
 def seeds():
     a=json.load(open(V+'/fase2/2.1_deriva_erro_baselines_16x60rnd.json'))

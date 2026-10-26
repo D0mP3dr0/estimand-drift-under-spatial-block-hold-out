@@ -317,15 +317,15 @@ def main():
         leitura_primaria=LEITURA_PRIMARIA,
         ambiguidades=[
             "A proposicao diz que a cota inferior e ATINGIDA SE vale a hipotese (iii); nao diz que ela falha fora dela nem declara por classe o que e exato. As quatro leituras (L, T, C, U) sao implementadas e reportadas; nenhuma foi escolhida depois de ver o numero.",
-            "m(i) tem duas definicoes no material: nodal (main.tex l.296: blocos com >= 1 no a < b; usada na proposicao) e geometrica (lados/cantos a < b, como o criterio e fismat_k_corrigido.py descrevem). Ambas reportadas; as diferencas sao discretizacao e blocos finos.",
+            "m(i) tem duas definicoes no material: nodal (main.tex l.296: blocos com >= 1 no a < b; usada na proposicao) e geometrica (lados/cantos a < b, como o criterio e indep_k_corrigido.py descrevem). Ambas reportadas; as diferencas sao discretizacao e blocos finos.",
             "'declarada exata' no criterio: so m=0 tem cota inferior = superior (p=1). Nas demais classes a proposicao so afirma 'atingida se (iii)'.",
         ],
         por_celula=res,
         trabalho_anterior=dict(
-            fismat_k_corrigido=("geometric class m (8-neighbourhood by distance to face/vertex) only in Bauru Q1, 100+100 seeds; "
+            indep_k_corrigido=("geometric class m (8-neighbourhood by distance to face/vertex) only in Bauru Q1, 100+100 seeds; "
                                 "here: exact nodal m in the 4 cells, condition (iii) per node, 200 seeds from 1.8, SE by bootstrap over split draws"),
-            fismat_inclusao_decomp="decomposicao de m=1/m=2/m=3 de Bauru Q1 a partir do JSON do fismat_k_corrigido; nao recomputada",
-            fismat_razao_cov="identidade da razao e decomposicao da retencao por classe k lateral (1.6); nao cobre p por classe m",
+            indep_inclusao_decomp="decomposicao de m=1/m=2/m=3 de Bauru Q1 a partir do JSON do indep_k_corrigido; nao recomputada",
+            indep_razao_cov="identidade da razao e decomposicao da retencao por classe k lateral (1.6); nao cobre p por classe m",
             p_inclusao_por_no_1_6="perfil por classe k lateral-only com errata; nao usado como comparador",
         ),
         scripts_sha256={str(SCRIPTS / "v3_12_R4_p_fechado_vs_frequencia.py"): mo.sha256_file(Path(__file__)),

@@ -16,7 +16,7 @@
     {
       "id": "A3",
       "gravidade": "bloqueia",
-      "texto": "MAE of the constant predictor, LITERAL definition from fismat_controle_negativo_alvo.py: the constant is the MEDIAN of the RSSI column (col3) of the measured population ITSELF -- it is NOT defined as the sentinel value; it only COINCIDES with -110.0 dBm (floor/sentinel value) in all 16 cells, in every partition, because pi > 0.5 in all of them (min 0.6718 in the test set). MAE_constante whole cell: 1.3373-3.2886 dB; MAE_constante on the test set: 1.1304-5.2355 dB (identical to the 'floor -110' and to the 'training median applied to the test set' in all 16 cells, because the median is always -110). The text (main.tex ~332) cites 1.63 dB for lins_Q1 whole cell, pre-correction; post-correction lins_Q1 whole cell = 1.7400 dB (difference +0.1107 dB). The figure in the text is pre-correction; the test-set value for lins_Q1 (not the same population as in the text) is 1.1304 dB, identical to the value in baselines_v2_lins_Q1.json particoes.test.preditor_constante_piso.todos.mae_db (1.1304 dB) and to the value recomputed from the E3 .npz (diff 0.0)."
+      "texto": "MAE of the constant predictor, LITERAL definition from indep_controle_negativo_alvo.py: the constant is the MEDIAN of the RSSI column (col3) of the measured population ITSELF -- it is NOT defined as the sentinel value; it only COINCIDES with -110.0 dBm (floor/sentinel value) in all 16 cells, in every partition, because pi > 0.5 in all of them (min 0.6718 in the test set). MAE_constante whole cell: 1.3373-3.2886 dB; MAE_constante on the test set: 1.1304-5.2355 dB (identical to the 'floor -110' and to the 'training median applied to the test set' in all 16 cells, because the median is always -110). The text (main.tex ~332) cites 1.63 dB for lins_Q1 whole cell, pre-correction; post-correction lins_Q1 whole cell = 1.7400 dB (difference +0.1107 dB). The figure in the text is pre-correction; the test-set value for lins_Q1 (not the same population as in the text) is 1.1304 dB, identical to the value in baselines_v2_lins_Q1.json particoes.test.preditor_constante_piso.todos.mae_db (1.1304 dB) and to the value recomputed from the E3 .npz (diff 0.0)."
     },
     {
       "id": "A4",
@@ -90,7 +90,7 @@
         "lins_Q1_celula_inteira": 1.6293892346023042,
         "bauru_Q1_celula_inteira": 3.205406635170954,
         "citado_em": "MDPI_Mathematics/draft_B/main.tex:332 (lins_Q1 whole cell, '1.63 dB')",
-        "fonte": "evidence/dados/alvo/fismat_controle_negativo_alvo.json"
+        "fonte": "evidence/dados/alvo/indep_controle_negativo_alvo.json"
       }
     },
     "cruzamento_npz": {
@@ -156,7 +156,7 @@
       },
       "pre_correcao_mae_constante": {
         "valor_db": 1.6293892346023042,
-        "arquivo": "evidence/dados/alvo/fismat_controle_negativo_alvo.json",
+        "arquivo": "evidence/dados/alvo/indep_controle_negativo_alvo.json",
         "campo": "lins_Q1.col3_rssi.MAE_preditor_constante_mediana",
         "populacao": "celula inteira",
         "diferenca_celula_inteira": 0.11065787330032961
@@ -214,7 +214,7 @@
       },
       "pre_correcao_mae_constante": {
         "valor_db": 3.205406635170954,
-        "arquivo": "evidence/dados/alvo/fismat_controle_negativo_alvo.json",
+        "arquivo": "evidence/dados/alvo/indep_controle_negativo_alvo.json",
         "campo": "bauru_Q1.col3_rssi.MAE_preditor_constante_mediana",
         "populacao": "celula inteira",
         "diferenca_celula_inteira": 0.08317793538392682
@@ -874,7 +874,7 @@
   "definicoes": {
     "pi_frac_sentinela": "y[:,0] >= 299.0 (PL_TARGET_MAX_VALID); e3_inferencia_por_populacao.py:175,951; alvo_stats.py:'sentinela'",
     "r2_teto": "corr_pearson(RSSI[~sentinela], -log10(max(dist_nearest_m,1.0)))**2, over the indicated POPULATION (whole cell or test set); COPY of the corr() function of evidence/scripts/alvo_stats.py:24-27, reused by e3_alvos_dataset_v2_multi.py (generator of the alvo_stats_*_v2.json files). dist_nearest_m is the field of the tensor itself (rf_data['terrain'].dist_nearest_m), the same one used by alvo_stats.py and by e3_inferencia_por_populacao.py.",
-    "mae_constante": "mean(|RSSI - median(RSSI)|) over the SAME population (whole cell or test set); COPY of evidence/scripts/fismat_controle_negativo_alvo.py:31-35 (field 'MAE_preditor_constante_mediana'). The constant is the median of the column, NOT the sentinel value by definition -- in the 16 cells it collapses to -110.0 dBm (== floor/sentinel) because frac_sentinela>0.5 in every cell and every partition; hence mae_constante_teste == mae_constante_piso_teste == mae_constante_treino_aplicada_teste in all 16 cells (see por_celula).",
+    "mae_constante": "mean(|RSSI - median(RSSI)|) over the SAME population (whole cell or test set); COPY of evidence/scripts/indep_controle_negativo_alvo.py:31-35 (field 'MAE_preditor_constante_mediana'). The constant is the median of the column, NOT the sentinel value by definition -- in the 16 cells it collapses to -110.0 dBm (== floor/sentinel) because frac_sentinela>0.5 in every cell and every partition; hence mae_constante_teste == mae_constante_piso_teste == mae_constante_treino_aplicada_teste in all 16 cells (see por_celula).",
     "split": "Literal COPY of train_gnn_c0_spatial.py:351-373 (latlon_graus_para_metros) and :412-487 (split_espacial_3vias) + SpatialKFold from GNN_RF_V2/03_training/spatial_cv.py, via e3_inferencia_por_populacao.py. grid_km/buffer_km/split_frac/split_seed read from run_rec['config']; idx_sha256_global of the 3 partitions checked against run_c0c1cf_<cidade>_s42_<Q>_g10b2.json (16/16 OK)."
   },
   "nao_verificado": [

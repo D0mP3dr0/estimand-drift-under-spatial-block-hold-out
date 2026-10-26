@@ -634,7 +634,7 @@ def tab_t6(og):
              f"RMSE: root mean squared error of the estimate of the domain mean error, from the block hold-out and from a simple random sample of the same number of nodes. "
              f"deff: ratio of the hold-out variance to the random-sample variance; $n$: mean number of scored nodes. "
              f"{FSPL_UMA_VEZ}: the offset is fixed once on a reference partition (split seed 42) and not recomputed per draw."]
-    return Tabela("T6_referencia_desenho_v4", "lllcccc", 7, cab, corpo, notas, [og.ENT["R2_resumo"], og.ENT["R2_por_sorteio"], og.ENT["bc_fismat"], og.ENT["veredito_fismat"], OG_TAB],
+    return Tabela("T6_referencia_desenho_v4", "lllcccc", 7, cab, corpo, notas, [og.ENT["R2_resumo"], og.ENT["R2_por_sorteio"], og.ENT["bc_indep"], og.ENT["veredito_indep"], OG_TAB],
                   ["Tab. 5 antiga (v4-1): T6_referencia_desenho regerada; rotulo 'FSPL (second calibration)' do gerador antigo -> 'FSPL, calibrated once' (4 ocorrencias, so rotulo; valores = gerar_t6 capturado).",
                    "Preditor: coluna 'fspl_calibrado_b' de fase4/R2_resumo.json (resumo_por_celula.<celula>.fspl_calibrado_b.{todos,validos}); single calibration of e_i at split seed=42 (analysis/v3_12_R2_referencia_desenho.py), not recalibrated per draw.",
                    "Cabecalho de 4 linhas -> 3 linhas, unidades (dB) no cabecalho, nota de definicao no pe."],

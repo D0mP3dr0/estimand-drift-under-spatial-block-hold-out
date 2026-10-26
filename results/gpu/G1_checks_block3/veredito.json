@@ -200,6 +200,6 @@
   "sha_agregado": "66199c1522c54ff2a173678634061838ce8b844fc93e10ebee7051f348889348",
   "sha_script": "9e9ce1b03b1757e956f2eba8d091c9c3f29cca6b85e4ff073d882fb3e353a136"
  },
- "comando_rodado": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python gpu/G1_votos_bloco3/verif_bloco3.py",
+ "comando_rodado": "/trabalho/ambientes/s33_amb_virtual/.venv/bin/python gpu/G1_checks_block3/verif_bloco3.py",
  "gravidade_sugerida": "nota"
 }

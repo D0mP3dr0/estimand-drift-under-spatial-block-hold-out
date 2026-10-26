@@ -83,7 +83,7 @@ holds the following:
     - `varredura_split_geometria.py`, which holds the shared split code;
     - `varredura_fracao_valida_r3.py`;
     - `montecarlo_retencao_r3_g5.py`;
-    - `fismat_sympy_eqR.py`, the symbolic and numerical check of the retention
+    - `sympy_check_eqR.py`, the symbolic and numerical check of the retention
       law, imported by `v3_1.5_retencao_exata_vs_mc.py`.
   - Two cell-level checks: `blocos_efetivos_20celulas.py` and
     `r3_alvo_pos_correcao_16celulas.py`.
@@ -112,8 +112,8 @@ holds the following:
       (closed-form inclusion probability against frequency);
     - the hyper-parameter sheet `B7.2_hiperparametros/` with its script;
     - `recalculo_R2_R4/` (two recalculation scripts and their outputs);
-    - the folders `votos_fismat_R2_R4/`, `votos_R3_R4/` and
-      `votos_termo_razao_campinas_sorocaba/`.
+    - the folders `checks_R2_R4/`, `checks_R3_R4/` and
+      `checks_ratio_term_campinas_sorocaba/`.
   - `fase5/`:
     - checks R5 (variance of one split draw), R6 (level of the constant
       predictor) and R7 (split draws against training seeds);
@@ -122,10 +122,10 @@ holds the following:
     - the continuous-target test G2: `G2_resumo.json`, the per-cell records of
       its 60 split draws in `_parcial_G2/` (with `_P1_cidades.json`, the
       checks on the elevation column), and its independent recalculation in
-      `votos_G2/`;
+      `checks_G2/`;
     - the count of blocks with a valid node, `blocos_com_no_valido.json`, and
-      its recalculation in `votos_blocos_validos/`;
-    - `recalculo_G1/` and `votos_R5/`.
+      its recalculation in `checks_valid_blocks/`;
+    - `recalculo_G1/` and `checks_R5/`.
   - `gpu/`: the model campaigns. Each run has a folder with its record
     `run_<label>.json`, and most G1 runs also have the shim record
     `shim_g10_<label>.json`.
@@ -135,7 +135,7 @@ holds the following:
       MLP width-sensitivity arm whose run folders end in `_antigas`.
     - `G1/`: GNN and MLP at g = 10 km, with plans, launcher status, gate,
       script-provenance records and the four aggregates.
-    - `G1_votos_bloco1/` to `G1_votos_bloco4/`: the outcome of the independent
+    - `G1_checks_block1/` to `G1_checks_block4/`: the outcome of the independent
       recalculation of each G1 block.
   - `verificacoes/`: the outputs of individual checks, each next to the script
     that produced it: `G4_G5_celulas/`, `V1_deriva/`, `V2_modelos/` and
@@ -189,7 +189,7 @@ following.
 
 - `criteria/criterio_*.json`: the decision criterion of a test, written before
   the run.
-- Folders named `votos_*` (including `G1_votos_bloco*`) and `recalculo_*`: an
+- Folders named `checks_*` (including `G1_checks_block*`) and `recalculo_*`: an
   independent recalculation of a result, with its script or output.
 - Files named `veredito*.json`: the outcome of such a recalculation or of a
   check. `veredito_A2c.json` is the outcome of the repeatability check.
@@ -271,10 +271,10 @@ and records in `results/`.
 | Table 2 | `T2_retencao_v3-12` | retention after the buffer, by cell | `v3_12_gerar_tabelas.py` | `fase1/1.8_referencia_nodal_200seeds.json`, `fase1/1.8b_referencia_nodal_200seeds_g5.json` |
 | Table 3 | `T5_inclusao_por_classe_v3-12` | inclusion probability by edge class | `v3_12_gerar_tabelas.py` | `fase4/R4_p_por_classe.json` |
 | Table 4 | `T3_resumo_v3-12` (per-cell detail in `T3_deriva_erro_v3-12.csv`) | error drift of the constant predictor, with and without the buffer | `v3_12_gerar_tabelas.py` | `fase2/2.1_deriva_erro_baselines_16x60rnd.json`, `fase2/_v3_2.1_3.1_parcial_16x60rnd.json`, `fase4/R1_b0_resumo.json`, `fase4/R1_b0_por_sorteio.json` |
-| Table 5 | `T6_referencia_desenho_v3-12` | design reference: block hold-out against simple random sampling | `v3_12_gerar_tabelas.py`, then `v3_13_gerar_TN_T6.py` (row label only) | `fase4/R2_resumo.json`, `fase4/R2_por_sorteio.json`; cross-checked against `fase4/votos_fismat_R2_R4/` |
-| Table 6 | `T10_cobertura_R5_v3-12` | coverage of the one-partition variance estimate | `v3_12q_gerar_T10_R5.py` | `fase5/R5_resumo.json`; checked against `fase5/R5_por_sorteio.json` and `fase5/votos_R5/veredito.json` |
+| Table 5 | `T6_referencia_desenho_v3-12` | design reference: block hold-out against simple random sampling | `v3_12_gerar_tabelas.py`, then `v3_13_gerar_TN_T6.py` (row label only) | `fase4/R2_resumo.json`, `fase4/R2_por_sorteio.json`; cross-checked against `fase4/checks_R2_R4/` |
+| Table 6 | `T10_cobertura_R5_v3-12` | coverage of the one-partition variance estimate | `v3_12q_gerar_T10_R5.py` | `fase5/R5_resumo.json`; checked against `fase5/R5_por_sorteio.json` and `fase5/checks_R5/veredito.json` |
 | Table 7 | `T4_totais_v3-12` | constant predictor against calibrated FSPL, totals with and without the buffer | `v3_12_gerar_tabelas.py` | `fase2/_v3_2.1_3.1_parcial_16x60rnd.json`, `fase4/R1_b0_por_sorteio.json` |
-| Table 8 | `T9_deriva_modelo_G1_v3-12` | drift of the trained models at g = 10 km (campaign G1) | `v3_13_gerar_T9_G1.py` | `gpu/G1/agregado_G1_v5_bloco1.json`, `gpu/G1/agregado_G1_v5_bloco2.json`, `gpu/G1/agregado_G1_v8_bloco3.json`, `gpu/G1/agregado_G1_v10_bloco4.json`; outcomes in `gpu/G1_votos_bloco1/` to `gpu/G1_votos_bloco4/`; values in `tables_figures/tables_v3-12/T9_v3-12t_valores.json`; the caption is compared with the manuscript source (not distributed) |
+| Table 8 | `T9_deriva_modelo_G1_v3-12` | drift of the trained models at g = 10 km (campaign G1) | `v3_13_gerar_T9_G1.py` | `gpu/G1/agregado_G1_v5_bloco1.json`, `gpu/G1/agregado_G1_v5_bloco2.json`, `gpu/G1/agregado_G1_v8_bloco3.json`, `gpu/G1/agregado_G1_v10_bloco4.json`; outcomes in `gpu/G1_checks_block1/` to `gpu/G1_checks_block4/`; values in `tables_figures/tables_v3-12/T9_v3-12t_valores.json`; the caption is compared with the manuscript source (not distributed) |
 | Table S1 | `TA1a_hiperparametros_arquitetura_perda_v3-12`, `TA1b_hiperparametros_otimizacao_custo_v3-12` (CSV `TA1_hiperparametros_v3-12.csv`) | training settings of the two models | `v3_12_gerar_tabelas.py`, then `v3_12t_gerar_TA1.py` for TA1a | `fase4/B7.2_hiperparametros/b7_2_folha_hiperparametros.json` |
 | Table S2 | `T4_S2_v3-12` | constant predictor against calibrated FSPL, by cell | `v3_12_gerar_tabelas.py` | as Table 7 |
 | Table S3 | `T7b_deriva_modelo_A4_v3-12` | trained models at g = 5 km in the four Bauru cells | `v3_12_gerar_tabelas.py` | `gpu/A4/agregado_A4.json` |
@@ -296,12 +296,12 @@ numbers have no table:
   records are in `results/fase5/_parcial_G2/`, the decision criterion and its
   addendum in `criteria/criterio_G2_deriva_alvo_continuo.json` and
   `criteria/criterio_G2_adendo1.json`, and the independent recalculation in
-  `results/fase5/votos_G2/`.
+  `results/fase5/checks_G2/`.
 - The blocks with a valid node. The number of the 132 blocks of each cell that
   hold at least one valid node, with its range over the sixteen cells and over
   the four Q1 cells, is in `results/fase5/blocos_com_no_valido.json`
   (`por_celula`, `faixa_16_celulas`, `faixa_4_celulas_Q1`); its independent
-  recalculation is in `results/fase5/votos_blocos_validos/`.
+  recalculation is in `results/fase5/checks_valid_blocks/`.
 
 The records of the numerical tests store the command that produced them
 (`comando_rodado` or `comando`), the SHA-256 of the script (`script_sha256`)
@@ -511,7 +511,7 @@ Where a record and this table differ, the record is authoritative.
 | Geometry of the 16 cells; buffer check along the Bauru quadrant chain (1.1, 1.2) | `python analysis/v3_1.1_1.2_celulas_cadeia.py --out-11 <json> --out-12 <json> --fig <fig>` | `results/fase1/1.1_geo_celulas_16.json`, `results/fase1/1.2_cadeia_buffer_violacao.json` |
 | Nodal Monte Carlo against block Monte Carlo (1.3) | `python analysis/v3_1.3_mc_nodal_vs_blocos.py --out <json>` | `results/fase1/1.3_mc_nodal_vs_blocos.json` |
 | Retention law against nodal retention over b (1.4) | `python analysis/v3_1.4_varredura_b_lei_vs_nodal.py --out <json> --seeds 20` | `results/fase1/1.4_varredura_b_lei_vs_nodal.json` |
-| Symbolic and numerical check of the retention law | `python analysis/fismat_sympy_eqR.py` (writes the JSON next to the script) | `results/fase1/fismat_sympy_eqR.json` |
+| Symbolic and numerical check of the retention law | `python analysis/sympy_check_eqR.py` (writes the JSON next to the script) | `results/fase1/sympy_check_eqR.json` |
 | Exact retention against the mean-field form (1.5) | `python analysis/v3_1.5_retencao_exata_vs_mc.py --out <json>` | `results/fase1/1.5_retencao_exata_vs_mc.json` |
 | Nodal retention reference, 200 draws, g = 10 km and g = 5 km (1.8, 1.8b) | `N_SEEDS=200 python analysis/v3_1.8_referencia_nodal_200seeds.py`; `N_SEEDS=200 python analysis/v3_1.8b_referencia_nodal_200seeds_g5.py` | `results/fase1/1.8_referencia_nodal_200seeds.json`, `results/fase1/1.8b_referencia_nodal_200seeds_g5.json` |
 | Per-node inclusion probabilities and formal estimand (1.6, 2.3); per-draw values (2.3b) | `python analysis/v3_1.6_2.3_estimando_formal.py`; `python analysis/v3_2.3b_por_sorteio.py` | `results/fase2/1.6_p_inclusao_por_no.json`, `results/fase2/2.3_estimando_ht_baselines.json`, `results/fase2/2.3b_estimando_por_sorteio.json` |
@@ -525,15 +525,15 @@ Where a record and this table differ, the record is authoritative.
 | Drift at b = 0 (R1) | `python analysis/v3_12_R1_b0_deriva.py --validar`, then `--celula <cell>` for each of the 16 cells, then `--consolidar` | `results/fase4/R1_b0_por_sorteio.json`, `results/fase4/R1_b0_resumo.json` |
 | Design reference (R2) | `python analysis/v3_12_R2_referencia_desenho.py` | `results/fase4/R2_por_sorteio.json`, `results/fase4/R2_resumo.json` |
 | Design term (R3) and closed-form inclusion probability against frequency (R4) | `python analysis/v3_12_R3R4_motor.py`, then `python analysis/v3_12_R3_termo_desenho.py` and `python analysis/v3_12_R4_p_fechado_vs_frequencia.py` | `results/fase4/R3_termo_desenho.json`, `results/fase4/R4_p_por_classe.json` |
-| Recalculations of R2 and R4 | `python results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.py <json>`; `python results/fase4/recalculo_R2_R4/fismat_R4_teste_exato.py <json>` | `results/fase4/recalculo_R2_R4/fismat_R2_termo_razao.json`, `results/fase4/recalculo_R2_R4/fismat_R4_teste_exato.json` |
+| Recalculations of R2 and R4 | `python results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.py <json>`; `python results/fase4/recalculo_R2_R4/recalc_R4_exact_test.py <json>` | `results/fase4/recalculo_R2_R4/recalc_R2_ratio_term.json`, `results/fase4/recalculo_R2_R4/recalc_R4_exact_test.json` |
 | Hyper-parameter sheet | `python results/fase4/B7.2_hiperparametros/b7_2_folha_hiperparametros.py` | `results/fase4/B7.2_hiperparametros/b7_2_folha_hiperparametros.json`, `results/fase4/B7.2_hiperparametros/b7_2_folha_hiperparametros.csv` |
 | Variance of one split draw (R5) and level of the constant predictor (R6) | `python analysis/v3_13_laco_comum.py --validar`, then `--celula <cell>` for each of the 16 cells; `python analysis/v3_13_R5_variancia_um_sorteio.py --consolidar`; `python analysis/v3_13_R6_nivel_sentinela.py --consolidar` | `results/fase5/R5R6_validacao_laco.json`, `results/fase5/R5_por_sorteio.json`, `results/fase5/R5_resumo.json`, `results/fase5/R6_por_sorteio.json`, `results/fase5/R6_resumo.json` |
 | Split draws against training seeds at g = 5 km (R7) | `python analysis/v3_13_R7_sementes_x_sorteios.py` | `results/fase5/R7_resumo.json` |
 | Block K-fold scored jointly (E1) | `python analysis/v3_13_E1_kfold_conjunto.py --validar`, then `--celula <cell>` for each of the 16 cells, then `--consolidar` | `results/fase5/E1_validacao.json`, `results/fase5/E1_por_sorteio.json`, `results/fase5/E1_resumo.json` |
 | Hajek weighting with the closed-form inclusion probability (E4) | `python analysis/v3_13_E4_hajek_p_fechado.py` | `results/fase5/E4_resumo.json`, `results/fase5/E4_por_sorteio.json`, `results/fase5/E4_validacao.json` |
 | Continuous-target test, terrain elevation as target (G2) | `python analysis/v3_14_G2_alvo_continuo_v2.py --executar` (or `--celula <cell>` for each of the 16 cells, then `--consolidar`) | `results/fase5/_parcial_G2/<cell>.json`, `results/fase5/_parcial_G2/_P1_cidades.json`, `results/fase5/G2_resumo.json` |
-| Independent recalculation of G2 | `python results/fase5/votos_G2/voto_G2_recalculo.py n1`, then `python results/fase5/votos_G2/voto_G2_recalculo.py n2 <cell>` for `bauru_Q2`, `campinas_Q1`, `lins_Q2` and `sorocaba_Q2` | `results/fase5/votos_G2/nivel1.json`, `results/fase5/votos_G2/nivel2_<cell>.json`, `results/fase5/votos_G2/veredito.json` |
-| Blocks with a valid node | `python analysis/v3_14_blocos_com_no_valido.py`; recalculation: `python results/fase5/votos_blocos_validos/voto_blocos.py` | `results/fase5/blocos_com_no_valido.json`, `results/fase5/votos_blocos_validos/veredito.json` |
+| Independent recalculation of G2 | `python results/fase5/checks_G2/check_G2_recalculation.py n1`, then `python results/fase5/checks_G2/check_G2_recalculation.py n2 <cell>` for `bauru_Q2`, `campinas_Q1`, `lins_Q2` and `sorocaba_Q2` | `results/fase5/checks_G2/nivel1.json`, `results/fase5/checks_G2/nivel2_<cell>.json`, `results/fase5/checks_G2/veredito.json` |
+| Blocks with a valid node | `python analysis/v3_14_blocos_com_no_valido.py`; recalculation: `python results/fase5/checks_valid_blocks/check_blocks.py` | `results/fase5/blocos_com_no_valido.json`, `results/fase5/checks_valid_blocks/veredito.json` |
 | Repeatability of training (A2c; GPU and tensors needed) | `python results/gpu/A2c/rodar_lote_A2c.py`; `python analysis/v3_A2c_veredito.py` | `results/gpu/A2c/lote_A2c_status.json`, run folders, `results/gpu/A2c/veredito_A2c.json` |
 | Model campaigns A3 and A4 (GPU and tensors needed) | `python results/gpu/A3/rodar_lote_A3.py`; `python results/gpu/A4/rodar_lote_A4.py` (both call `training/modelo_v3/train_gnn_v3.py` and `train_mlp_v3.py`); then `python analysis/v3_A3_agregar.py` and `python analysis/v3_A4_agregar.py` | run folders, `results/gpu/A3/agregado_A3.json`, `results/gpu/A4/agregado_A4.json` |
 | Model campaign G1 at g = 10 km (GPU and tensors needed) | `python training/G1/rodar_lote_G1.py`, `python training/G1/rodar_lote_G1_retomada.py`, `python training/G1/rodar_lote_G1_bloco4.py` (through the shim `training/G1/train_v3_g10.py`); then `python analysis/v3_G1_agregar_v5.py --bloco 1`, `--bloco 2`; `python analysis/v3_G1_agregar_v8.py --bloco 3`; `python analysis/v3_G1_agregar_v10.py --bloco 4` | run folders and plans in `results/gpu/G1/`, `results/gpu/G1/agregado_G1_v5_bloco1.json`, `results/gpu/G1/agregado_G1_v5_bloco2.json`, `results/gpu/G1/agregado_G1_v8_bloco3.json`, `results/gpu/G1/agregado_G1_v10_bloco4.json` |

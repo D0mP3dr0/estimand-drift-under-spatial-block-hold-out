@@ -6,7 +6,7 @@ The FSPL calibrated transmit power of Lins Q1 on the training partition (20.4026
 baselines_analiticos.train.p_tx_eff_dbm.fspl of the frozen run JSON) agrees to the
 fourth decimal with the upper edge of the median-calibration band obtained from a
 simulated distance distribution (20.4022 dBm: FSPL at 900 MHz, d ~ U[1, 140] km,
-sentinel fraction 0.8), read from the symbolic derivation record fismat_sympy_eqR.json.
+sentinel fraction 0.8), read from the symbolic derivation record sympy_check_eqR.json.
 That record is only read; the script that produced it is hashed for citation and never
 executed. The Friis free-space formula is reimplemented here.
 
@@ -21,7 +21,7 @@ Two lines of evidence, fixed in the decision criterion before the run:
       sentinel nodes and the real training sentinel fraction (same definition as the
       band-edge test v3_3.2_banda_p7_bordas_reais.py, loaded independently here).
 
-Inputs: the Lins Q1 reference-field tensor, its frozen run JSON, fismat_sympy_eqR.json,
+Inputs: the Lins Q1 reference-field tensor, its frozen run JSON, sympy_check_eqR.json,
 criterio_3.4.json, and the sibling script v3_2.1_3.1_deriva_calibracao.py (split and
 tensor loader, imported unchanged).
 Output: results/fase3/3.4_coincidencia_fspl.json.
@@ -50,8 +50,8 @@ TENSOR_LINS_Q1 = Path("/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/"
 RUN_LINS_Q1 = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/"
                    "prior_runs/evidence/dados/"
                    "treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json")
-FISMAT_JSON = Path("internal/fismat_sympy_eqR.json")
-FISMAT_SCRIPT = Path("internal/fismat_sympy_eqR.py")
+INDEP_JSON = Path("internal/sympy_check_eqR.json")
+INDEP_SCRIPT = Path("internal/sympy_check_eqR.py")
 SIBLING_SCRIPT = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/"
                       "v3_2.1_3.1_deriva_calibracao.py")
 
@@ -202,9 +202,9 @@ def main():
     out_path.parent.mkdir(parents=True, exist_ok=True)
     t0 = time.perf_counter()
 
-    fismat = json.loads(FISMAT_JSON.read_text(encoding="utf-8"))
-    borda_superior_toy_fismat = fismat["C_P7"]["pi_0.8"]["borda_superior_dBm"]
-    fismat_script_sha256 = hashlib.sha256(FISMAT_SCRIPT.read_bytes()).hexdigest()
+    indep = json.loads(INDEP_JSON.read_text(encoding="utf-8"))
+    borda_superior_toy_indep = indep["C_P7"]["pi_0.8"]["borda_superior_dBm"]
+    indep_script_sha256 = hashlib.sha256(INDEP_SCRIPT.read_bytes()).hexdigest()
 
     log("parte A: grade de seeds x intervalos...")
     parte_a = parte_A_grade_seeds_intervalos()
@@ -215,7 +215,7 @@ def main():
     parte_b = parte_B_recomputo_dado_real()
     if parte_b.get("status") == "ok":
         parte_b["divergencia_Q1_mais_real_vs_toy_U1_140_pi0_8_dB"] = abs(
-            parte_b["Q1_mais_dBm_dado_real"] - borda_superior_toy_fismat)
+            parte_b["Q1_mais_dBm_dado_real"] - borda_superior_toy_indep)
     log(f"  parte B status={parte_b.get('status')}")
 
     coincidencia_se_repete_com_d_real = (
@@ -264,9 +264,9 @@ def main():
                  "pi_bar=0.8 fixo; parte B = recomputo com d real de Lins Q1 (dist_nearest_m dos nos sentinela "
                  "de treino) e pi_bar_real do treino, mesma definicao do teste 3.2.",
         "insumos": {
-            "fismat_sympy_eqR.json": {"caminho": str(FISMAT_JSON), "campo_lido": "C_P7.pi_0.8.borda_superior_dBm",
-                                      "valor": borda_superior_toy_fismat},
-            "fismat_sympy_eqR.py_sha256_apenas_para_citacao_NAO_executado": fismat_script_sha256,
+            "sympy_check_eqR.json": {"caminho": str(INDEP_JSON), "campo_lido": "C_P7.pi_0.8.borda_superior_dBm",
+                                      "valor": borda_superior_toy_indep},
+            "sympy_check_eqR.py_sha256_apenas_para_citacao_NAO_executado": indep_script_sha256,
             "run_c0c1cf_lins_s42_Q1_g10b2.json": {"caminho": str(RUN_LINS_Q1),
                                                   "campo": "baselines_analiticos.train.p_tx_eff_dbm.fspl",
                                                   "valor": P_TX_EFF_FSPL_REAL_DBM},

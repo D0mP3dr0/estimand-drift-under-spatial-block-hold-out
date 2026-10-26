@@ -14,7 +14,7 @@ Inputs (aggregates of the G1 campaign, under gpu/G1/): agregado_G1_v5_bloco1.jso
 agregado_G1_v5_bloco2.json (crossed seeds 42/43/44 x 5 draws; pooled SD for Bauru Q1),
 agregado_G1_v10_bloco4.json (crossed seeds x 10 draws; pooled SD for Campinas Q1) and
 agregado_G1_v8_bloco3.json (Q3 cells); the independent recalculation file of each block in
-gpu/G1_votos_bloco<k>/ (hashed and its verdict field copied into the checks); and the manuscript source
+gpu/G1_checks_block<k>/ (hashed and its verdict field copied into the checks); and the manuscript source
 (path given by --manuscrito; not distributed), whose caption for this label must equal LEGENDA
 character for character.
 Outputs: T9_deriva_modelo_G1_v3-12.csv and .tex in tables_v3-12/; T9_v3-12t_valores.json next to this
@@ -53,10 +53,10 @@ ENT = {
     "G1_bloco3": G1 / "agregado_G1_v8_bloco3.json",
 }
 VEREDITOS = {
-    "G1_veredito_bloco1": B / "gpu" / "G1_votos_bloco1" / "veredito.json",
-    "G1_veredito_bloco2": B / "gpu" / "G1_votos_bloco2" / "veredito.json",
-    "G1_veredito_bloco4": B / "gpu" / "G1_votos_bloco4" / "veredito.json",
-    "G1_veredito_bloco3": B / "gpu" / "G1_votos_bloco3" / "veredito.json",
+    "G1_veredito_bloco1": B / "gpu" / "G1_checks_block1" / "veredito.json",
+    "G1_veredito_bloco2": B / "gpu" / "G1_checks_block2" / "veredito.json",
+    "G1_veredito_bloco4": B / "gpu" / "G1_checks_block4" / "veredito.json",
+    "G1_veredito_bloco3": B / "gpu" / "G1_checks_block3" / "veredito.json",
 }
 NOME_T = "T9_deriva_modelo_G1_v3-12"
 LABEL = "tab:drift_models_g10"

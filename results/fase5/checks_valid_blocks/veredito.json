@@ -1,6 +1,6 @@
 {
  "data": "2026-10-04",
- "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/votos_blocos_validos/voto_blocos.py",
+ "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/checks_valid_blocks/check_blocks.py",
  "sha256": "7a4ad8fec910091d49470e02c08caac9ff0360a18fdcbe12393d2d18c7a28211",
  "celulas": {
   "bauru_Q1": {

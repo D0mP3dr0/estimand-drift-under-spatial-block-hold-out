@@ -19,7 +19,7 @@ DEFAULT_FILES = ["V1_resumo.json", "V1_por_sorteio.json", "V2_resumo.json", "V2b
 TEXT_SKIP = {"data_utc", "tempo_s", "tempo_total_s"}  # wall-clock fields, not results
 # Provenance fields: file names, digests of scripts and inputs, command lines. They differ by construction
 # (the scripts and inputs of this repository are the cleaned copies); they are counted, not compared (numbers are always compared).
-PROV = re.compile(r"sha256|fonte|comando|venv|script|criterio|caminho|chave_kfold|item_do_parecer|artefato_localizado|"
+PROV = re.compile(r"sha256|fonte|comando|venv|script|criterio|caminho|chave_kfold|item_do_review|artefato_localizado|"
                   r"nota|copia|parciais|referencias_lidas|rotina_.*reusada|origem")
 
 

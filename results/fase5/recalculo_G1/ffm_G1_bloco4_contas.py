@@ -12,7 +12,7 @@ same ANOVA is redone on the Bauru Q1 matrices (5 draws) of the block-2 recalcula
 next to the interval stored there.
 
 Inputs: results/gpu/G1/agregado_G1_v10_bloco4.json and the block-2 record under
-results/gpu/G1_votos_bloco2/ (absolute paths of the original run; their SHA-256 is stored in `entradas`).
+results/gpu/G1_checks_block2/ (absolute paths of the original run; their SHA-256 is stored in `entradas`).
 Output: ffm_G1_bloco4_contas.json (path in OUT); a summary is printed.
 Usage: python ffm_G1_bloco4_contas.py   Deterministic.
 """
@@ -21,7 +21,7 @@ from scipy import stats
 
 R ="/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25"
 AG = f"{R}/gpu/G1/agregado_G1_v10_bloco4.json"
-V2 = f"{R}/gpu/G1_votos_bloco2/veredito.json"
+V2 = f"{R}/gpu/G1_checks_block2/veredito.json"
 OUT = f"{R}/fase5/internal/ffm_G1_bloco4_contas.json"
 sha = lambda p: hashlib.sha256(open(p, "rb").read()).hexdigest()
 ag = json.load(open(AG)); v2 = json.load(open(V2))
@@ -84,7 +84,7 @@ for mod in ("gnn", "mlp"):
     out["modelos"][mod] = r
 
 # Bauru Q1 (block 2, 5 draws): stored interval and the same ANOVA redone on the stored matrices.
-out["bauru_Q1_bloco2_ic95_voto2"] ={m: v2["celulas"][f"bauru_{m}"]["razao_sorteio_sobre_semente_IC95"]
+out["bauru_Q1_bloco2_ic95_check2"] ={m: v2["celulas"][f"bauru_{m}"]["razao_sorteio_sobre_semente_IC95"]
                                      for m in ("gnn", "mlp")}
 out["bauru_Q1_bloco2_recalc"] = {m: anova(v2["celulas"][f"bauru_{m}"]["matriz"]) for m in ("gnn", "mlp")}
 json.dump(out, open(OUT, "w"), indent=1, ensure_ascii=False, default=float)
@@ -94,4 +94,4 @@ print(json.dumps({m: {k: out["modelos"][m][k] for k in ("lodo_min", "lodo_ic_inf
       "log": {k: out["modelos"][m]["log_mae"][k] for k in ("rho", "ic95")},
       "completo_p": out["modelos"][m]["completo"]["p_unilateral_rho_le_1"]} for m in ("gnn", "mlp")},
       indent=1, default=float))
-print("bauru", json.dumps(out["bauru_Q1_bloco2_ic95_voto2"]), {m: (out["bauru_Q1_bloco2_recalc"][m]["rho"], out["bauru_Q1_bloco2_recalc"][m]["ic95"]) for m in ("gnn","mlp")})
+print("bauru", json.dumps(out["bauru_Q1_bloco2_ic95_check2"]), {m: (out["bauru_Q1_bloco2_recalc"][m]["rho"], out["bauru_Q1_bloco2_recalc"][m]["ic95"]) for m in ("gnn","mlp")})

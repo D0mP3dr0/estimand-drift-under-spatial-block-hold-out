@@ -476,7 +476,7 @@ def main():
                              "second-order effect of the validation neighbour) was quantified separately and "
                              "is not recomputed here, since that requires reclassifying every node "
                              "with diagonals.",
-        residual_nao_explicado_aprox="~0,0075 de 0,0246 (31%) em k=1, ver fismat_inclusao_decomp.json",
+        residual_nao_explicado_aprox="~0,0075 de 0,0246 (31%) em k=1, ver indep_inclusao_decomp.json",
     )
     saida_16 = dict(
         id="1.6", pergunta=crit16["pergunta"], alegacao=crit16["alegacao"], criterio=crit16,

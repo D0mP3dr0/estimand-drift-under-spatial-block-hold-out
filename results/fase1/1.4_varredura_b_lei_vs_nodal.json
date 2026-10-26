@@ -14,7 +14,7 @@
    "erro_relativo_teste(b=2) recomputed here lies within [-6.9%, -6.2%] (order of magnitude of the already published number); b=1 and b=3 stay in the same order of magnitude (factor <=3x in absolute value)"
   ],
   "o_que_refuta": "sign change of the relative error between b=1, b=2 and b=3 on the test set; OR gross non-monotonicity (more than 2/16 cells out of the expected order); OR relative error at b=2 outside one decade of the published range (-6.2% to -6.9%) -- any of these overturns 'the law holds at more than two points' and A1 is left without support from this test (it goes to a note, not to the article)",
-  "metodo_declarado": "for (g,b) in {(10,1),(10,2),(10,3)} in the 16 g10 cells and (5,2) in the 4 bauru g5 cells, 20 split_seeds (SEEDS_20 from varredura_fracao_valida_r3.py), reconstruct the actual partition via split_e_metricas_edt (varredura_split_geometria.py, EDT method already validated <1e-3 against exact cKDTree in the module itself), fractions 70/15/remainder-test (FRACS); compute q_te=k_te/N, q_va=1-k_tr/N (k,N in actual pixels of the cell); compare the actual NODAL retention (n_apos_buffer/n_antes_buffer) with eq:R evaluated at the realised q (closed formula copied, without editing, from analysis/fismat_sympy_eqR.py lines 42 and 118-149 -- eqR_num and lattice_retention/raster_counts for the finite-domain correction, reimplemented locally by literal copy so as not to execute the other script with write side effects outside pasta_saida)",
+  "metodo_declarado": "for (g,b) in {(10,1),(10,2),(10,3)} in the 16 g10 cells and (5,2) in the 4 bauru g5 cells, 20 split_seeds (SEEDS_20 from varredura_fracao_valida_r3.py), reconstruct the actual partition via split_e_metricas_edt (varredura_split_geometria.py, EDT method already validated <1e-3 against exact cKDTree in the module itself), fractions 70/15/remainder-test (FRACS); compute q_te=k_te/N, q_va=1-k_tr/N (k,N in actual pixels of the cell); compare the actual NODAL retention (n_apos_buffer/n_antes_buffer) with eq:R evaluated at the realised q (closed formula copied, without editing, from analysis/sympy_check_eqR.py lines 42 and 118-149 -- eqR_num and lattice_retention/raster_counts for the finite-domain correction, reimplemented locally by literal copy so as not to execute the other script with write side effects outside pasta_saida)",
   "fixado_por": "fixed in internal/note_16.md, 25/09/2026, BEFORE running the script v3_1.4_varredura_b_lei_vs_nodal.py",
   "nao_amplia_a_varredura": "roadmap rule D5 -- only the 4 listed (g,b) points; no additional grid"
  },
@@ -62,7 +62,7 @@
    ]
   ]
  },
- "status": "concluido_provisorio_3votos_pendentes",
+ "status": "concluido_provisorio_3checks_pendentes",
  "script_sha256": "09dbd168af6a3d70cd12b4d337feaa409d977229f0c79a18a0784529c170d56a",
  "insumos": {
   "varredura_split_geometria.py_sha256": "64e0cba6b8ff19cd1821a8a47a80e6576517210c796aea091b28fdc019175bde",
@@ -38476,7 +38476,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.02887661747970505,
    "erro_relativo_val_sobre_media_nodal": -0.012962614973399709,
    "erro_relativo_test_media_de_razoes_por_seed": -0.02793752997766204,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_bauru_Q2": {
    "g_km": 10.0,
@@ -38504,7 +38504,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.02887661747970505,
    "erro_relativo_val_sobre_media_nodal": -0.012962614973399709,
    "erro_relativo_test_media_de_razoes_por_seed": -0.02793752997766204,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_bauru_Q3": {
    "g_km": 10.0,
@@ -38532,7 +38532,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.023325155998195835,
    "erro_relativo_val_sobre_media_nodal": -0.00871852462151638,
    "erro_relativo_test_media_de_razoes_por_seed": -0.022316828815911693,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_bauru_Q4": {
    "g_km": 10.0,
@@ -38560,7 +38560,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.023325155998195835,
    "erro_relativo_val_sobre_media_nodal": -0.00871852462151638,
    "erro_relativo_test_media_de_razoes_por_seed": -0.022316828815911693,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_campinas_Q1": {
    "g_km": 10.0,
@@ -38588,7 +38588,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.028659376564117846,
    "erro_relativo_val_sobre_media_nodal": -0.012944781169669997,
    "erro_relativo_test_media_de_razoes_por_seed": -0.027697624792597724,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_campinas_Q2": {
    "g_km": 10.0,
@@ -38616,7 +38616,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.028659376564117846,
    "erro_relativo_val_sobre_media_nodal": -0.012944781169669997,
    "erro_relativo_test_media_de_razoes_por_seed": -0.027697624792597724,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_campinas_Q3": {
    "g_km": 10.0,
@@ -38644,7 +38644,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.023042732265994747,
    "erro_relativo_val_sobre_media_nodal": -0.008682266350103334,
    "erro_relativo_test_media_de_razoes_por_seed": -0.022004634026016025,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_campinas_Q4": {
    "g_km": 10.0,
@@ -38672,7 +38672,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.023042732265994747,
    "erro_relativo_val_sobre_media_nodal": -0.008682266350103334,
    "erro_relativo_test_media_de_razoes_por_seed": -0.022004634026016025,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_lins_Q1": {
    "g_km": 10.0,
@@ -38700,7 +38700,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.029063233650870185,
    "erro_relativo_val_sobre_media_nodal": -0.012916105079851624,
    "erro_relativo_test_media_de_razoes_por_seed": -0.028144512965395562,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_lins_Q2": {
    "g_km": 10.0,
@@ -38728,7 +38728,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.029063233650870185,
    "erro_relativo_val_sobre_media_nodal": -0.012916105079851624,
    "erro_relativo_test_media_de_razoes_por_seed": -0.028144512965395562,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_lins_Q3": {
    "g_km": 10.0,
@@ -38756,7 +38756,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.028736105957402072,
    "erro_relativo_val_sobre_media_nodal": -0.012947525373746672,
    "erro_relativo_test_media_de_razoes_por_seed": -0.027783082287810477,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_lins_Q4": {
    "g_km": 10.0,
@@ -38784,7 +38784,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.028736105957402072,
    "erro_relativo_val_sobre_media_nodal": -0.012947525373746672,
    "erro_relativo_test_media_de_razoes_por_seed": -0.027783082287810477,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_sorocaba_Q1": {
    "g_km": 10.0,
@@ -38812,7 +38812,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.023235213364000237,
    "erro_relativo_val_sobre_media_nodal": -0.00868839413317356,
    "erro_relativo_test_media_de_razoes_por_seed": -0.022218664581188048,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_sorocaba_Q2": {
    "g_km": 10.0,
@@ -38840,7 +38840,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.023235213364000237,
    "erro_relativo_val_sobre_media_nodal": -0.00868839413317356,
    "erro_relativo_test_media_de_razoes_por_seed": -0.022218664581188048,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_sorocaba_Q3": {
    "g_km": 10.0,
@@ -38868,7 +38868,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.02278891050935276,
    "erro_relativo_val_sobre_media_nodal": -0.00868454697471334,
    "erro_relativo_test_media_de_razoes_por_seed": -0.0217158188381738,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b1.0_sorocaba_Q4": {
    "g_km": 10.0,
@@ -38896,7 +38896,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.02278891050935276,
    "erro_relativo_val_sobre_media_nodal": -0.00868454697471334,
    "erro_relativo_test_media_de_razoes_por_seed": -0.0217158188381738,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_bauru_Q1": {
    "g_km": 10.0,
@@ -38924,7 +38924,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06858663000628447,
    "erro_relativo_val_sobre_media_nodal": -0.03348709678944599,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06346560761222637,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_bauru_Q2": {
    "g_km": 10.0,
@@ -38952,7 +38952,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06858663000628447,
    "erro_relativo_val_sobre_media_nodal": -0.03348709678944599,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06346560761222637,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_bauru_Q3": {
    "g_km": 10.0,
@@ -38980,7 +38980,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.061504672395166674,
    "erro_relativo_val_sobre_media_nodal": -0.02861202954030775,
    "erro_relativo_test_media_de_razoes_por_seed": -0.05599453695951175,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_bauru_Q4": {
    "g_km": 10.0,
@@ -39008,7 +39008,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.061504672395166674,
    "erro_relativo_val_sobre_media_nodal": -0.02861202954030775,
    "erro_relativo_test_media_de_razoes_por_seed": -0.05599453695951175,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_campinas_Q1": {
    "g_km": 10.0,
@@ -39036,7 +39036,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06800616488492005,
    "erro_relativo_val_sobre_media_nodal": -0.03346402022446939,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06273210701714113,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_campinas_Q2": {
    "g_km": 10.0,
@@ -39064,7 +39064,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06800616488492005,
    "erro_relativo_val_sobre_media_nodal": -0.03346402022446939,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06273210701714113,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_campinas_Q3": {
    "g_km": 10.0,
@@ -39092,7 +39092,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06315190948139326,
    "erro_relativo_val_sobre_media_nodal": -0.03019551354858436,
    "erro_relativo_test_media_de_razoes_por_seed": -0.057645974748350995,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_campinas_Q4": {
    "g_km": 10.0,
@@ -39120,7 +39120,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06315190948139326,
    "erro_relativo_val_sobre_media_nodal": -0.03019551354858436,
    "erro_relativo_test_media_de_razoes_por_seed": -0.057645974748350995,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_lins_Q1": {
    "g_km": 10.0,
@@ -39148,7 +39148,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06916298496900634,
    "erro_relativo_val_sobre_media_nodal": -0.03342333833707686,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06417923084577329,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_lins_Q2": {
    "g_km": 10.0,
@@ -39176,7 +39176,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06916298496900634,
    "erro_relativo_val_sobre_media_nodal": -0.03342333833707686,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06417923084577329,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_lins_Q3": {
    "g_km": 10.0,
@@ -39204,7 +39204,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06826335006837404,
    "erro_relativo_val_sobre_media_nodal": -0.03349136406071867,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06305192932599132,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_lins_Q4": {
    "g_km": 10.0,
@@ -39232,7 +39232,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06826335006837404,
    "erro_relativo_val_sobre_media_nodal": -0.03349136406071867,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06305192932599132,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_sorocaba_Q1": {
    "g_km": 10.0,
@@ -39260,7 +39260,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06168874952178126,
    "erro_relativo_val_sobre_media_nodal": -0.028823811361489773,
    "erro_relativo_test_media_de_razoes_por_seed": -0.056161980557006295,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_sorocaba_Q2": {
    "g_km": 10.0,
@@ -39288,7 +39288,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06168874952178126,
    "erro_relativo_val_sobre_media_nodal": -0.028823811361489773,
    "erro_relativo_test_media_de_razoes_por_seed": -0.056161980557006295,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_sorocaba_Q3": {
    "g_km": 10.0,
@@ -39316,7 +39316,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06816838940609547,
    "erro_relativo_val_sobre_media_nodal": -0.033812024218926616,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06292356858122283,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b2.0_sorocaba_Q4": {
    "g_km": 10.0,
@@ -39344,7 +39344,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.06816838940609547,
    "erro_relativo_val_sobre_media_nodal": -0.033812024218926616,
    "erro_relativo_test_media_de_razoes_por_seed": -0.06292356858122283,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_bauru_Q1": {
    "g_km": 10.0,
@@ -39372,7 +39372,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12152425373424337,
    "erro_relativo_val_sobre_media_nodal": -0.06272474473950763,
    "erro_relativo_test_media_de_razoes_por_seed": -0.1033838087467945,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_bauru_Q2": {
    "g_km": 10.0,
@@ -39400,7 +39400,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12152425373424337,
    "erro_relativo_val_sobre_media_nodal": -0.06272474473950763,
    "erro_relativo_test_media_de_razoes_por_seed": -0.1033838087467945,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_bauru_Q3": {
    "g_km": 10.0,
@@ -39428,7 +39428,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.1224306194850367,
    "erro_relativo_val_sobre_media_nodal": -0.06323742347309279,
    "erro_relativo_test_media_de_razoes_por_seed": -0.10460223108738867,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_bauru_Q4": {
    "g_km": 10.0,
@@ -39456,7 +39456,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.1224306194850367,
    "erro_relativo_val_sobre_media_nodal": -0.06323742347309279,
    "erro_relativo_test_media_de_razoes_por_seed": -0.10460223108738867,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_campinas_Q1": {
    "g_km": 10.0,
@@ -39484,7 +39484,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.1253017980345141,
    "erro_relativo_val_sobre_media_nodal": -0.06573380921647452,
    "erro_relativo_test_media_de_razoes_por_seed": -0.10738692173695472,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_campinas_Q2": {
    "g_km": 10.0,
@@ -39512,7 +39512,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.1253017980345141,
    "erro_relativo_val_sobre_media_nodal": -0.06573380921647452,
    "erro_relativo_test_media_de_razoes_por_seed": -0.10738692173695472,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_campinas_Q3": {
    "g_km": 10.0,
@@ -39540,7 +39540,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12852357984199073,
    "erro_relativo_val_sobre_media_nodal": -0.06771885748598028,
    "erro_relativo_test_media_de_razoes_por_seed": -0.11128423176022359,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_campinas_Q4": {
    "g_km": 10.0,
@@ -39568,7 +39568,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12852357984199073,
    "erro_relativo_val_sobre_media_nodal": -0.06771885748598028,
    "erro_relativo_test_media_de_razoes_por_seed": -0.11128423176022359,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_lins_Q1": {
    "g_km": 10.0,
@@ -39596,7 +39596,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.129005081243435,
    "erro_relativo_val_sobre_media_nodal": -0.06776519941872532,
    "erro_relativo_test_media_de_razoes_por_seed": -0.11163202789873923,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_lins_Q2": {
    "g_km": 10.0,
@@ -39624,7 +39624,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.129005081243435,
    "erro_relativo_val_sobre_media_nodal": -0.06776519941872532,
    "erro_relativo_test_media_de_razoes_por_seed": -0.11163202789873923,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_lins_Q3": {
    "g_km": 10.0,
@@ -39652,7 +39652,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12327476054169587,
    "erro_relativo_val_sobre_media_nodal": -0.06425391693459988,
    "erro_relativo_test_media_de_razoes_por_seed": -0.10518670153228864,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_lins_Q4": {
    "g_km": 10.0,
@@ -39680,7 +39680,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12327476054169587,
    "erro_relativo_val_sobre_media_nodal": -0.06425391693459988,
    "erro_relativo_test_media_de_razoes_por_seed": -0.10518670153228864,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_sorocaba_Q1": {
    "g_km": 10.0,
@@ -39708,7 +39708,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12424373937303762,
    "erro_relativo_val_sobre_media_nodal": -0.06456392373921431,
    "erro_relativo_test_media_de_razoes_por_seed": -0.10660938726994389,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_sorocaba_Q2": {
    "g_km": 10.0,
@@ -39736,7 +39736,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12424373937303762,
    "erro_relativo_val_sobre_media_nodal": -0.06456392373921431,
    "erro_relativo_test_media_de_razoes_por_seed": -0.10660938726994389,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_sorocaba_Q3": {
    "g_km": 10.0,
@@ -39764,7 +39764,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12816565281012732,
    "erro_relativo_val_sobre_media_nodal": -0.06691198650397881,
    "erro_relativo_test_media_de_razoes_por_seed": -0.11117856554120228,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g10.0_b3.0_sorocaba_Q4": {
    "g_km": 10.0,
@@ -39792,7 +39792,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.12816565281012732,
    "erro_relativo_val_sobre_media_nodal": -0.06691198650397881,
    "erro_relativo_test_media_de_razoes_por_seed": -0.11117856554120228,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g5.0_b2.0_bauru_Q1": {
    "g_km": 5.0,
@@ -39820,7 +39820,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.15597084547592444,
    "erro_relativo_val_sobre_media_nodal": -0.12852485839319922,
    "erro_relativo_test_media_de_razoes_por_seed": -0.14327651636796457,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g5.0_b2.0_bauru_Q2": {
    "g_km": 5.0,
@@ -39848,7 +39848,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.15597084547592444,
    "erro_relativo_val_sobre_media_nodal": -0.12852485839319922,
    "erro_relativo_test_media_de_razoes_por_seed": -0.14327651636796457,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g5.0_b2.0_bauru_Q3": {
    "g_km": 5.0,
@@ -39876,7 +39876,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.13200044311444017,
    "erro_relativo_val_sobre_media_nodal": -0.11108345615144366,
    "erro_relativo_test_media_de_razoes_por_seed": -0.11909028742175451,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   },
   "g5.0_b2.0_bauru_Q4": {
    "g_km": 5.0,
@@ -39904,7 +39904,7 @@
    "erro_relativo_test_sobre_media_nodal": -0.13200044311444017,
    "erro_relativo_val_sobre_media_nodal": -0.11108345615144366,
    "erro_relativo_test_media_de_razoes_por_seed": -0.11909028742175451,
-   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, fismat_sympy_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
+   "nota_definicao": "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), RATIO-OF-MEANS -- matches the number already published/reproduced (R3-c, sympy_check_eqR.json); erro_relativo_test_media_de_razoes_por_seed = mean, over the 20 seeds, of (lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's inequality (nodal varies per seed, the law does not)"
   }
  },
  "resumo_por_gb": {
@@ -39962,7 +39962,7 @@
   }
  },
  "veredito_vs_criterio": {
-  "definicao_usada": "RATIO-OF-MEANS: (media_seeds(lei_campo_medio) - media_seeds(retencao_nodal))/media_seeds(retencao_nodal); matches exactly the number already published/reproduced (R3-c, fismat_sympy_eqR.json, verificador_eqR_resultado.json) after the correction of the q bug (see errata block)",
+  "definicao_usada": "RATIO-OF-MEANS: (media_seeds(lei_campo_medio) - media_seeds(retencao_nodal))/media_seeds(retencao_nodal); matches exactly the number already published/reproduced (R3-c, sympy_check_eqR.json, verificador_eqR_resultado.json) after the correction of the q bug (see errata block)",
   "erro_relativo_test_pct_b1": -2.5965918223704842,
   "erro_relativo_test_pct_b2": -6.60666063416277,
   "erro_relativo_test_pct_b3": -12.53086856330101,
@@ -40013,7 +40013,7 @@
   {
    "numero": "correction for the finite domain (Appendix A)",
    "campo": "correcao_dominio_finito_por_celula",
-   "comando": "same, function _lattice_retention (literal copy of fismat_sympy_eqR.py)"
+   "comando": "same, function _lattice_retention (literal copy of sympy_check_eqR.py)"
   }
  ],
  "pico_ram_gb": 5.677524566650391,
@@ -40022,12 +40022,12 @@
  "errata": {
   "data": "2026-09-25",
   "reportado_por": "reconciliation against 3 independent scripts",
-  "bug_identificado": "The function R_law(g,b,q) (eq:R, closed form) was CORRECT, but the q FED into it was WRONG: q_te_realizado = n_te_apos_buffer(pixels) / N_total(pixels=3600x3600) and q_va_realizado = 1 - n_tr(pixels)/N_total(pixels) had been used -- a fraction of PIXELS after buffer erosion, which varies by seed. The correct q (used by R3-c, fismat_sympy_eqR.json and verificador_eqR_resultado.json) is the fraction of BLOCKS (not pixels): q_te = n_blocos_test/n_blocos_total, q_va = 1 - n_blocos_train/n_blocos_total, with the NOMINAL block counts (FRACS 0.70/0.15/0.15 rounded over n_blocos_total = number of g x g blocks that fit in the cell domain) -- these counts are DETERMINISTIC per (cell,g), independent of split_seed (only which block goes to which partition changes, not how many). For bauru Q1 g10b2: n_blocos_total=132, n_blocos_test_nominal=20 -> q_te=20/132=0.151515, R_law(10,2,0.151515)=0.433953 -- matches to 6 decimal places the number already published/reproduced (0.43395). The function split_e_metricas_edt() already returned these counts in the field n_blocos (never used in v1 of this script). CORRECTED: q now comes from n_blocos/n_blocos_total (via assign_groups, without recomputing the sweep -- n_blocos depend only on (cell,g), reused from the imported module itself).",
+  "bug_identificado": "The function R_law(g,b,q) (eq:R, closed form) was CORRECT, but the q FED into it was WRONG: q_te_realizado = n_te_apos_buffer(pixels) / N_total(pixels=3600x3600) and q_va_realizado = 1 - n_tr(pixels)/N_total(pixels) had been used -- a fraction of PIXELS after buffer erosion, which varies by seed. The correct q (used by R3-c, sympy_check_eqR.json and verificador_eqR_resultado.json) is the fraction of BLOCKS (not pixels): q_te = n_blocos_test/n_blocos_total, q_va = 1 - n_blocos_train/n_blocos_total, with the NOMINAL block counts (FRACS 0.70/0.15/0.15 rounded over n_blocos_total = number of g x g blocks that fit in the cell domain) -- these counts are DETERMINISTIC per (cell,g), independent of split_seed (only which block goes to which partition changes, not how many). For bauru Q1 g10b2: n_blocos_total=132, n_blocos_test_nominal=20 -> q_te=20/132=0.151515, R_law(10,2,0.151515)=0.433953 -- matches to 6 decimal places the number already published/reproduced (0.43395). The function split_e_metricas_edt() already returned these counts in the field n_blocos (never used in v1 of this script). CORRECTED: q now comes from n_blocos/n_blocos_total (via assign_groups, without recomputing the sweep -- n_blocos depend only on (cell,g), reused from the imported module itself).",
   "segundo_ajuste_necessario": "The original aggregation also averaged, per cell, the MEAN ACROSS SEEDS of (lei-nodal_s)/nodal_s (mean-of-ratios). Since the law is CONSTANT across seeds (it depends only on cell/g/b) and the nodal retention VARIES per seed, mean-of-ratios != (lei-media(nodal))/media(nodal) (ratio-of-means) by Jensen's inequality (1/x is convex). The number already published in the draft uses RATIO-OF-MEANS (confirmed against R3-c: bauru g10b2 te = -6.8587% == (0.433953-0.465908)/0.465908). Ratio-of-means is now reported as the PRIMARY definition (field *_RATIO_OF_MEANS in resumo_por_gb) and mean-of-ratios as a secondary field (erro_relativo_test_media_entre_celulas_MEAN_OF_RATIOS_por_seed), both explicitly named.",
   "valores_apos_correcao_vs_ja_publicado": {
    "bauru_g10b2_lei_campo_medio_te": {
     "meu_valor_corrigido": 0.4339526228037813,
-    "ja_publicado_R3-c_fismat_verificador": 0.43395,
+    "ja_publicado_R3-c_indep_verificador": 0.43395,
     "bate": true
    },
    "bauru_g10b2_nodal_te_media_20_seeds": {
@@ -40047,6 +40047,6 @@
    }
   },
   "achado_removido": "The finding \"achado_ambiguidade_definicao\" of the previous round (which said that the published number only matched as an absolute difference in pp, not as a relative error) was CAUSED BY THE q BUG and is FALSE -- removed from this artifact. With the correct q (fraction of blocks), the RELATIVE error matches the published number directly (RATIO-OF-MEANS), without needing reinterpretation as pp.",
-  "nao_verificado_novo": "none -- the reconciliation against the 3 independent artifacts (R3-c, fismat_sympy_eqR.json, verificador_eqR_resultado.json) closed with agreement to >=6 decimal places for bauru g10b2 and g5b2"
+  "nao_verificado_novo": "none -- the reconciliation against the 3 independent artifacts (R3-c, sympy_check_eqR.json, verificador_eqR_resultado.json) closed with agreement to >=6 decimal places for bauru g10b2 and g5b2"
  }
 }

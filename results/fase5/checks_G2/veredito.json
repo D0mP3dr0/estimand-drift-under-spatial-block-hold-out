@@ -772,7 +772,7 @@
   "razao_B": 3858.2145503371385,
   "celulas_fora": []
  },
- "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/votos_G2/voto_G2_recalculo.py",
+ "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/fase5/checks_G2/check_G2_recalculation.py",
  "script_sha256": "35267904b866768372b040fcee028cce38cf82a27041015c384497b39a9fb115",
  "data": "2026-10-04T11:31:20.626014",
  "sementes": {

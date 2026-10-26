@@ -1,7 +1,7 @@
 {
  "entradas": {
   "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1/agregado_G1_v10_bloco4.json": "bc47778f91fbdd1413a430813ce7bcc4d7a93c69db2c700f6f439d252f2add2f",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1_votos_bloco2/veredito.json": "ea16028e913f8c2dbbf9a61345242c16bd5f51fe2b4f6bc95dba57a7b77010ba"
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25/gpu/G1_checks_block2/veredito.json": "ea16028e913f8c2dbbf9a61345242c16bd5f51fe2b4f6bc95dba57a7b77010ba"
  },
  "modelos": {
   "gnn": {
@@ -673,7 +673,7 @@
    "P_razao_ge_3_se_verdadeira_2_98_aprox": 0.48465886119719687
   }
  },
- "bauru_Q1_bloco2_ic95_voto2": {
+ "bauru_Q1_bloco2_ic95_check2": {
   "gnn": [
    3.010260744204483,
    131.79708232103678

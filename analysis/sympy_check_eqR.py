@@ -13,8 +13,8 @@ not trim the block under study. Sections, one key each in the output JSON:
   C   edges of the median band under free-space loss, and a sampled check of the inequality;
   D   floor and plateau of the link-budget error on a sentinel node.
 
-Output: fismat_sympy_eqR.json next to this script (also printed). Seeds: 20260925 (A3), 7 (C).
-Usage: python fismat_sympy_eqR.py
+Output: sympy_check_eqR.json next to this script (also printed). Seeds: 20260925 (A3), 7 (C).
+Usage: python sympy_check_eqR.py
 """
 import itertools
 import json

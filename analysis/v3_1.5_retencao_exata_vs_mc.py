@@ -9,13 +9,13 @@ blocks under a random permutation of roles is the falling-factorial ratio
 (k_te - 1)_k / (N - 1)_k (for validation, N - k_tr replaces k_te). For each city and
 design (g = 10 km and g = 5 km, b = 2 km) the script evaluates both forms on the real
 block lattice (thin border column/row, extents and role counts from
-montecarlo_retencao_r3_g5.py) with lattice_retention() of fismat_sympy_eqR.py
+montecarlo_retencao_r3_g5.py) with lattice_retention() of sympy_check_eqR.py
 (in this folder), and compares them with the nodal retention
 over 20 split seeds (Q1 and Q3) and with variant C of the block Monte Carlo.
 Decision criterion (criterio_1.5.json): the exact form reduces the relative error
 against nodal retention in every city x quadrant x design x role combination.
 
-Inputs: fismat_sympy_eqR.py and montecarlo_retencao_r3_g5.py (imported by path), the
+Inputs: sympy_check_eqR.py and montecarlo_retencao_r3_g5.py (imported by path), the
 20-seed nodal record (NODAL_REAL_ARTEFATO), the block Monte Carlo record
 (MC_BLOCOS_ARTEFATO) and the criterion (criteria/criterio_1.5.json).
 Output: results/fase1/1.5_retencao_exata_vs_mc.json. Deterministic (no random draws).
@@ -68,7 +68,7 @@ def main():
             logf.write(line + "\n"); logf.flush()
 
     t0 = time.time()
-    fismat_mod = import_module(INTERNAL_NOTES_DIR / "fismat_sympy_eqR.py", "fismat_mod")
+    indep_mod = import_module(INTERNAL_NOTES_DIR / "sympy_check_eqR.py", "indep_mod")
     mcg5_mod = import_module(SCRIPTS_DIR / "montecarlo_retencao_r3_g5.py", "mcg5_mod")
 
     criterio = json.loads(CRITERIO_PATH.read_text())
@@ -82,8 +82,8 @@ def main():
         "pergunta": criterio["pergunta"],
         "criterio": criterio,
         "insumos": {
-            "script_fismat_eqR": {"arquivo": str(INTERNAL_NOTES_DIR / "fismat_sympy_eqR.py"),
-                                   "sha256": sha256_file(INTERNAL_NOTES_DIR / "fismat_sympy_eqR.py")},
+            "script_indep_eqR": {"arquivo": str(INTERNAL_NOTES_DIR / "sympy_check_eqR.py"),
+                                   "sha256": sha256_file(INTERNAL_NOTES_DIR / "sympy_check_eqR.py")},
             "script_mc_blocos_r3g5": {"arquivo": str(SCRIPTS_DIR / "montecarlo_retencao_r3_g5.py"),
                                        "sha256": sha256_file(SCRIPTS_DIR / "montecarlo_retencao_r3_g5.py")},
             "artefato_nodal_real": {"arquivo": str(NODAL_REAL_ARTEFATO), "sha256": sha256_file(NODAL_REAL_ARTEFATO)},
@@ -126,8 +126,8 @@ def main():
             # Non-trimming block counts: test blocks for test, all but training blocks for validation;
             # raster resolution 0.02 km.
             t_c = time.time()
-            lr_te = fismat_mod.lattice_retention(Wx, Wy, g_km, b_km, None, n_te, N, full_blocks=False, res=0.02)
-            lr_va = fismat_mod.lattice_retention(Wx, Wy, g_km, b_km, None, N - n_tr, N, full_blocks=False, res=0.02)
+            lr_te = indep_mod.lattice_retention(Wx, Wy, g_km, b_km, None, n_te, N, full_blocks=False, res=0.02)
+            lr_va = indep_mod.lattice_retention(Wx, Wy, g_km, b_km, None, N - n_tr, N, full_blocks=False, res=0.02)
             dt = time.time() - t_c
 
             mc_blocos = mc_blocos_por_config.get((cidade, cfg))

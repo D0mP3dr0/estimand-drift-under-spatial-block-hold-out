@@ -350,7 +350,7 @@ def main():
             "nota_definicao": (
                 "erro_relativo_test_sobre_media_nodal = (media(lei) - media(nodal))/media(nodal), "
                 "RATIO-OF-MEANS -- matches the previously reported and reproduced number ("
-                "fismat_sympy_eqR.json, verificador_eqR_resultado.json); "
+                "sympy_check_eqR.json, verificador_eqR_resultado.json); "
                 "erro_relativo_test_media_de_razoes_por_seed = mean, over the seeds, of "
                 "(lei-nodal_s)/nodal_s per seed (MEAN-OF-RATIOS) -- differs by Jensen's "
                 "inequality (lei is constant, nodal varies by seed)."
@@ -434,7 +434,7 @@ def main():
         {"numero": "IC95 bootstrap MEAN-OF-RATIOS por celula (secundario)", "campo": "agregado_por_gb_celula.<chave>.erro_relativo_test_ic95_bootstrap", "comando": "idem"},
         {"numero": "curva R(q) / erro medio entre celulas por (g,b)", "campo": "resumo_por_gb", "comando": "idem"},
         {"numero": "outcome against the fixed criterion", "campo": "veredito_vs_criterio", "comando": "idem"},
-        {"numero": "correcao de dominio finito (Apendice A)", "campo": "correcao_dominio_finito_por_celula", "comando": "idem, funcao _lattice_retention (copia literal de fismat_sympy_eqR.py)"},
+        {"numero": "correcao de dominio finito (Apendice A)", "campo": "correcao_dominio_finito_por_celula", "comando": "idem, funcao _lattice_retention (copia literal de sympy_check_eqR.py)"},
     ]
 
     saida["status"] = "concluido_provisorio"

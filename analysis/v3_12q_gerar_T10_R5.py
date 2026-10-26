@@ -16,7 +16,7 @@ Consistency checks (not used to build the table): every value re-read by its JSO
 with the CSV and the TEX; n_v_definido == 60 - n_indefinidos_k_lt_2 in all 32 rows; Q, coverage and
 n_v_definido recomputed in pure Python from fase5/R5_por_sorteio.json; aggregates (median, min and
 max of Q, number of cells with coverage >= 0.80) compared with the record of the independent
-recalculation stored in fase5/votos_R5/.
+recalculation stored in fase5/checks_R5/.
 
 Run order: v3_12_gerar_tabelas.py (rewrites the manifest and the checks file in full), then
 v3_12h_gerar_T9_G1.py, then this script, which only adds its own T10 entries and is idempotent.
@@ -38,7 +38,7 @@ ENT = {
     "R5_resumo": F5 / "R5_resumo.json",
     "R5_por_sorteio": F5 / "R5_por_sorteio.json",
     "R5_criterio": B / "criterios" / "criterio_R5_variancia_um_sorteio.json",
-    "R5_veredito": F5 / "votos_R5" / "veredito.json",
+    "R5_veredito": F5 / "checks_R5" / "veredito.json",
 }
 NOME_T = "T10_cobertura_R5_v3-12"
 LABEL = "tab:coverage_one_partition"

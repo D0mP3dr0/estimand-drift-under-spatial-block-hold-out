@@ -11,17 +11,17 @@
   "limiar_de_aceitacao": "erro_relativo(E[A]_exato, nodal_real) < erro_relativo(campo_medio, nodal_real) in ALL tested combinations (cell x config x test/validation role); Table 2 then reports exact+nodal and the mean field becomes a declared approximation with explicit residual error.",
   "o_que_refuta": "if in ANY combination the error of E[A]_exato is >= the mean-field error (the without-replacement sampling correction worsens or does not change the prediction), Table 2 keeps the mean field as the main approximation and declares the exact expectation as an alternative without universal gain, citing the combination(s) where this occurs.",
   "metodo_declarado": {
-   "e_area_exato": "lattice_retention() from analysis/fismat_sympy_eqR.py (reused by import, without editing the original file), field 'exato_permutacao': falling(N_nontrim-1,k)/falling(N-1,k) replacing qmf**k in the sum sum(ak[k]*prob(k)) over the 3x3=9 trimming-neighbour counters per block (core/side/corner), actual lattice (actual per-city border widths, thin block included)",
+   "e_area_exato": "lattice_retention() from analysis/sympy_check_eqR.py (reused by import, without editing the original file), field 'exato_permutacao': falling(N_nontrim-1,k)/falling(N-1,k) replacing qmf**k in the sum sum(ak[k]*prob(k)) over the 3x3=9 trimming-neighbour counters per block (core/side/corner), actual lattice (actual per-city border widths, thin block included)",
    "campo_medio": "same function lattice_retention(), field 'mean_field': qmf=N_nontrim/N constant replacing q^k (i.i.d. approximation -- equivalent to eq:R evaluated at q=q_realizado, already checked by sympy_check_R_meanfield in montecarlo_retencao_r3_g5.py, symbolic difference=0)",
    "q_realizado": "q_te = k_te/N (fraction of test blocks in the universe); q_va = 1 - k_tr/N (fraction of NON-training, since validation trimming counts training blocks as trimmers)",
    "configuracoes": "g10: N=132 blocks (92 training/20 val/20 test); g5: N=483 blocks (338/72/73) -- count already validated in montecarlo_retencao_r3_g5.py (validacao_contagem_blocos, matches the actual runs exactly)",
    "comparadores": "actual nodal (20 seeds, varredura_split_geometria.py, existing artifact reused by reading); block MC (variant C, montecarlo_retencao_r3_g5.py, existing artifact reused by reading)",
-   "dominio_geometrico": "Lins Q1 (the only domain with Wx,Wy already derived in fismat_sympy_eqR.py A4_reticulado_lins_Q1); also reapplied to the 4 cities via CIDADES_EXT (ext_x_km, ext_y_km) from montecarlo_retencao_r3_g5.py to cover the requested per-city comparison"
+   "dominio_geometrico": "Lins Q1 (the only domain with Wx,Wy already derived in sympy_check_eqR.py A4_reticulado_lins_Q1); also reapplied to the 4 cities via CIDADES_EXT (ext_x_km, ext_y_km) from montecarlo_retencao_r3_g5.py to cover the requested per-city comparison"
   }
  },
  "insumos": {
-  "script_fismat_eqR": {
-   "arquivo": "internal/fismat_sympy_eqR.py",
+  "script_indep_eqR": {
+   "arquivo": "internal/sympy_check_eqR.py",
    "sha256": "1231c937b73987375cc574b1e126eed6501c41e532b3088c7181ff4033ee03c6"
   },
   "script_mc_blocos_r3g5": {

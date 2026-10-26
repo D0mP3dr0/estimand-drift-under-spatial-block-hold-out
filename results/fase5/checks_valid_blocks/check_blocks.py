@@ -6,7 +6,7 @@ path loss below 299 dB, and RSSI different from -110 dBm. It compares both with 
 that the two masks coincide, that the occupied blocks are 132 per cell and equal to `meta_celulas` of
 fase5/R5_resumo.json, and that no position or target is NaN. Output: a JSON record in the working directory
 (per cell, ranges over the 16 cells and over the Q1 cells). Absolute paths are those of the original run.
-Usage: python voto_blocos.py
+Usage: python check_blocks.py
 """
 import json, hashlib, datetime, numpy as np, torch
 from pathlib import Path
