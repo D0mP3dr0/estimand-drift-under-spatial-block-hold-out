@@ -43,8 +43,8 @@ import torch
 
 SCRIPT_PATH = Path(__file__).resolve()
 TENSOR_DIR = Path("/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3")
-RUNDIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/"
-              "FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1")
+RUNDIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/"
+              "prior_runs/evidence/dados/treinos_c1")
 SIBLING_SCRIPT = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/scripts/"
                        "v3_2.1_3.1_deriva_calibracao.py")
 

@@ -1,0 +1,1859 @@
+{
+ "artefato": "E6_por_sorteio",
+ "data_utc": "2026-10-26T12:41:14.542599+00:00",
+ "por_celula": {
+  "bauru_Q1": [
+   {
+    "indice_sorteio": 0,
+    "split_seed": 811474,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss811474_s42",
+     "mae_validos": 0.7155877550019264,
+     "mae_todos": 0.22494770044911405,
+     "n": 899948,
+     "n_validos": 84396
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss811474_s42",
+     "mae_validos": 2.836760638500199,
+     "mae_todos": 0.39949444701199216,
+     "n": 899948,
+     "n_validos": 84396
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.1745467465628781,
+    "usado_validos": true,
+    "d_validos": 2.1211728834982724
+   },
+   {
+    "indice_sorteio": 1,
+    "split_seed": 54892,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss54892_s42",
+     "mae_validos": 0.7985770106839226,
+     "mae_todos": 0.15437428435660697,
+     "n": 1026873,
+     "n_validos": 75130
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss54892_s42",
+     "mae_validos": 1.2817567817955062,
+     "mae_todos": 0.24101747492086564,
+     "n": 1026873,
+     "n_validos": 75130
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.08664319056425868,
+    "usado_validos": true,
+    "d_validos": 0.4831797711115836
+   },
+   {
+    "indice_sorteio": 2,
+    "split_seed": 880099,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss880099_s42",
+     "mae_validos": 1.6188843808954014,
+     "mae_todos": 0.6458288539891832,
+     "n": 783059,
+     "n_validos": 247290
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss880099_s42",
+     "mae_validos": 3.023584583425422,
+     "mae_todos": 1.116159242200508,
+     "n": 783059,
+     "n_validos": 247290
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.4703303882113248,
+    "usado_validos": true,
+    "d_validos": 1.4047002025300204
+   },
+   {
+    "indice_sorteio": 3,
+    "split_seed": 125243,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss125243_s42",
+     "mae_validos": 1.1621854867101482,
+     "mae_todos": 0.4205648352920845,
+     "n": 959585,
+     "n_validos": 226242
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss125243_s42",
+     "mae_validos": 2.2732470022717437,
+     "mae_todos": 0.6701469637368109,
+     "n": 959585,
+     "n_validos": 226242
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.24958212844472644,
+    "usado_validos": true,
+    "d_validos": 1.1110615155615955
+   },
+   {
+    "indice_sorteio": 4,
+    "split_seed": 159513,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss159513_s42",
+     "mae_validos": 0.3908430056153612,
+     "mae_todos": 0.2195916636841058,
+     "n": 830847,
+     "n_validos": 117389
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss159513_s42",
+     "mae_validos": 2.5349590737385297,
+     "mae_todos": 0.5268329934835666,
+     "n": 830847,
+     "n_validos": 117389
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.30724132979946084,
+    "usado_validos": true,
+    "d_validos": 2.1441160681231684
+   },
+   {
+    "indice_sorteio": 5,
+    "split_seed": 739191,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss739191_s42",
+     "mae_validos": 0.5751666193264686,
+     "mae_todos": 0.17586363670741048,
+     "n": 1041798,
+     "n_validos": 52361
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss739191_s42",
+     "mae_validos": 3.066546419379395,
+     "mae_todos": 0.2865337320790126,
+     "n": 1041798,
+     "n_validos": 52361
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.11067009537160213,
+    "usado_validos": true,
+    "d_validos": 2.4913798000529264
+   },
+   {
+    "indice_sorteio": 6,
+    "split_seed": 29675,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss29675_s42",
+     "mae_validos": 3.6549104758637663,
+     "mae_todos": 0.26279350508949284,
+     "n": 762025,
+     "n_validos": 28814
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss29675_s42",
+     "mae_validos": 3.8184479259576656,
+     "mae_todos": 0.3159892946022365,
+     "n": 762025,
+     "n_validos": 28814
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.053195789512743674,
+    "usado_validos": true,
+    "d_validos": 0.1635374500938993
+   },
+   {
+    "indice_sorteio": 7,
+    "split_seed": 676375,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss676375_s42",
+     "mae_validos": 0.820627293235602,
+     "mae_todos": 0.24449907676906807,
+     "n": 821824,
+     "n_validos": 126879
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss676375_s42",
+     "mae_validos": 2.692644913852239,
+     "mae_todos": 0.5376007525444254,
+     "n": 821824,
+     "n_validos": 126879
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.29310167577535734,
+    "usado_validos": true,
+    "d_validos": 1.8720176206166368
+   },
+   {
+    "indice_sorteio": 8,
+    "split_seed": 387379,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss387379_s42",
+     "mae_validos": 4.112112914534979,
+     "mae_todos": 0.9576705610352721,
+     "n": 935295,
+     "n_validos": 187311
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss387379_s42",
+     "mae_validos": 4.702341930039182,
+     "mae_todos": 1.1269050475772413,
+     "n": 935295,
+     "n_validos": 187311
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.16923448654196915,
+    "usado_validos": true,
+    "d_validos": 0.5902290155042031
+   },
+   {
+    "indice_sorteio": 9,
+    "split_seed": 259492,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss259492_s42",
+     "mae_validos": 0.5374625034345378,
+     "mae_todos": 0.18882719702900871,
+     "n": 835603,
+     "n_validos": 69872
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss259492_s42",
+     "mae_validos": 1.9728581963782184,
+     "mae_todos": 0.2585801235430718,
+     "n": 835603,
+     "n_validos": 69872
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.06975292651406309,
+    "usado_validos": true,
+    "d_validos": 1.4353956929436804
+   },
+   {
+    "indice_sorteio": 10,
+    "split_seed": 684965,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss684965_s42",
+     "mae_validos": 0.47776381638546583,
+     "mae_todos": 0.17715489601978487,
+     "n": 928927,
+     "n_validos": 82930
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss684965_s42",
+     "mae_validos": 1.8160396358352453,
+     "mae_todos": 0.3713537465247517,
+     "n": 928927,
+     "n_validos": 82930
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.19419885050496685,
+    "usado_validos": true,
+    "d_validos": 1.3382758194497795
+   },
+   {
+    "indice_sorteio": 11,
+    "split_seed": 723969,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss723969_s42",
+     "mae_validos": 3.9023770796799684,
+     "mae_todos": 0.49061589395172583,
+     "n": 922494,
+     "n_validos": 80925
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss723969_s42",
+     "mae_validos": 4.918533761649357,
+     "mae_todos": 0.5618201984755029,
+     "n": 922494,
+     "n_validos": 80925
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.07120430452377707,
+    "usado_validos": true,
+    "d_validos": 1.0161566819693886
+   },
+   {
+    "indice_sorteio": 12,
+    "split_seed": 508734,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss508734_s42",
+     "mae_validos": 0.5217222311008155,
+     "mae_todos": 0.24997913292080118,
+     "n": 905186,
+     "n_validos": 146351
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss508734_s42",
+     "mae_validos": 2.391327979911646,
+     "mae_todos": 0.4706034190964614,
+     "n": 905186,
+     "n_validos": 146351
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.22062428617566024,
+    "usado_validos": true,
+    "d_validos": 1.8696057488108306
+   },
+   {
+    "indice_sorteio": 13,
+    "split_seed": 198718,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss198718_s42",
+     "mae_validos": 0.418622951713463,
+     "mae_todos": 0.20900507924877118,
+     "n": 826228,
+     "n_validos": 130711
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss198718_s42",
+     "mae_validos": 1.1731771048907365,
+     "mae_todos": 0.3321340300486407,
+     "n": 826228,
+     "n_validos": 130711
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.12312895079986955,
+    "usado_validos": true,
+    "d_validos": 0.7545541531772735
+   },
+   {
+    "indice_sorteio": 14,
+    "split_seed": 769856,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss769856_s42",
+     "mae_validos": 0.6567521063421656,
+     "mae_todos": 0.29643601556066984,
+     "n": 867147,
+     "n_validos": 296992
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss769856_s42",
+     "mae_validos": 4.195091475830061,
+     "mae_todos": 1.500350917104923,
+     "n": 867147,
+     "n_validos": 296992
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 1.2039149015442532,
+    "usado_validos": true,
+    "d_validos": 3.5383393694878955
+   },
+   {
+    "indice_sorteio": 15,
+    "split_seed": 535105,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss535105_s42",
+     "mae_validos": 1.739116644744668,
+     "mae_todos": 0.32924288313757183,
+     "n": 801673,
+     "n_validos": 111571
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss535105_s42",
+     "mae_validos": 2.9655206590505436,
+     "mae_todos": 0.5403699557138116,
+     "n": 801673,
+     "n_validos": 111571
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.2111270725762398,
+    "usado_validos": true,
+    "d_validos": 1.2264040143058756
+   },
+   {
+    "indice_sorteio": 16,
+    "split_seed": 282106,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss282106_s42",
+     "mae_validos": 1.6739506811099734,
+     "mae_todos": 0.165152415518601,
+     "n": 870140,
+     "n_validos": 16710
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss282106_s42",
+     "mae_validos": 3.359664867225341,
+     "mae_todos": 0.16957786977065056,
+     "n": 870140,
+     "n_validos": 16710
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.004425454252049571,
+    "usado_validos": true,
+    "d_validos": 1.6857141861153675
+   },
+   {
+    "indice_sorteio": 17,
+    "split_seed": 756541,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss756541_s42",
+     "mae_validos": 1.2090173986945156,
+     "mae_todos": 0.30735997324363634,
+     "n": 831846,
+     "n_validos": 137857
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss756541_s42",
+     "mae_validos": 3.5272597307233853,
+     "mae_todos": 0.7086882254224073,
+     "n": 831846,
+     "n_validos": 137857
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.40132825217877094,
+    "usado_validos": true,
+    "d_validos": 2.31824233202887
+   },
+   {
+    "indice_sorteio": 18,
+    "split_seed": 934410,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss934410_s42",
+     "mae_validos": 3.3086876430101513,
+     "mae_todos": 0.4431852484323438,
+     "n": 717812,
+     "n_validos": 67194
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss934410_s42",
+     "mae_validos": 4.189186515663729,
+     "mae_todos": 0.5686173735688134,
+     "n": 717812,
+     "n_validos": 67194
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.12543212513646956,
+    "usado_validos": true,
+    "d_validos": 0.8804988726535776
+   },
+   {
+    "indice_sorteio": 19,
+    "split_seed": 546703,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q1_ss546703_s42",
+     "mae_validos": 0.8995864478159894,
+     "mae_todos": 0.1442865712647674,
+     "n": 856614,
+     "n_validos": 46128
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q1_ss546703_s42",
+     "mae_validos": 0.9871796890137058,
+     "mae_todos": 0.16897690130206863,
+     "n": 856614,
+     "n_validos": 46128
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.024690330037301228,
+    "usado_validos": true,
+    "d_validos": 0.08759324119771639
+   }
+  ],
+  "campinas_Q1": [
+   {
+    "indice_sorteio": 0,
+    "split_seed": 811474,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss811474_s42",
+     "mae_validos": 1.655102384367487,
+     "mae_todos": 0.25077768522239013,
+     "n": 890835,
+     "n_validos": 53008
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss811474_s42",
+     "mae_validos": 4.072259783349007,
+     "mae_todos": 0.37486394917433613,
+     "n": 890835,
+     "n_validos": 53008
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.124086263951946,
+    "usado_validos": true,
+    "d_validos": 2.41715739898152
+   },
+   {
+    "indice_sorteio": 1,
+    "split_seed": 54892,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss54892_s42",
+     "mae_validos": 0.9864887156754886,
+     "mae_todos": 0.18372074836154265,
+     "n": 1022869,
+     "n_validos": 47404
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss54892_s42",
+     "mae_validos": 6.873650385633158,
+     "mae_todos": 0.4338079214863628,
+     "n": 1022869,
+     "n_validos": 47404
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.2500871731248202,
+    "usado_validos": true,
+    "d_validos": 5.88716166995767
+   },
+   {
+    "indice_sorteio": 2,
+    "split_seed": 880099,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss880099_s42",
+     "mae_validos": 0.8155582838971659,
+     "mae_todos": 0.37965761741877707,
+     "n": 773479,
+     "n_validos": 226788
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss880099_s42",
+     "mae_validos": 5.321539902326693,
+     "mae_todos": 1.7253562075749012,
+     "n": 773479,
+     "n_validos": 226788
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 1.345698590156124,
+    "usado_validos": true,
+    "d_validos": 4.505981618429527
+   },
+   {
+    "indice_sorteio": 3,
+    "split_seed": 125243,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss125243_s42",
+     "mae_validos": 1.2230395970557681,
+     "mae_todos": 0.40508645070678073,
+     "n": 960728,
+     "n_validos": 189023
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss125243_s42",
+     "mae_validos": 2.8603965598756655,
+     "mae_todos": 0.7067800053744847,
+     "n": 960728,
+     "n_validos": 189023
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.301693554667704,
+    "usado_validos": true,
+    "d_validos": 1.6373569628198974
+   },
+   {
+    "indice_sorteio": 4,
+    "split_seed": 159513,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss159513_s42",
+     "mae_validos": 1.2762223448934433,
+     "mae_todos": 0.23627463766536308,
+     "n": 823051,
+     "n_validos": 11060
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss159513_s42",
+     "mae_validos": 7.10584336568822,
+     "mae_todos": 0.3028888160975508,
+     "n": 823051,
+     "n_validos": 11060
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.06661417843218773,
+    "usado_validos": true,
+    "d_validos": 5.829621020794777
+   },
+   {
+    "indice_sorteio": 5,
+    "split_seed": 739191,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss739191_s42",
+     "mae_validos": 0.7948619054390286,
+     "mae_todos": 0.2516976110580506,
+     "n": 1041707,
+     "n_validos": 46746
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss739191_s42",
+     "mae_validos": 6.71892234661233,
+     "mae_todos": 0.46115599282291686,
+     "n": 1041707,
+     "n_validos": 46746
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.20945838176486625,
+    "usado_validos": true,
+    "d_validos": 5.924060441173301
+   },
+   {
+    "indice_sorteio": 6,
+    "split_seed": 29675,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss29675_s42",
+     "mae_validos": 1.3993184738067992,
+     "mae_todos": 0.2038160215623713,
+     "n": 748511,
+     "n_validos": 28133
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss29675_s42",
+     "mae_validos": 3.6687659786389317,
+     "mae_todos": 0.35883307182354907,
+     "n": 748511,
+     "n_validos": 28133
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.15501705026117776,
+    "usado_validos": true,
+    "d_validos": 2.2694475048321325
+   },
+   {
+    "indice_sorteio": 7,
+    "split_seed": 676375,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss676375_s42",
+     "mae_validos": 0.8581833712167314,
+     "mae_todos": 0.229272133648902,
+     "n": 819826,
+     "n_validos": 133178
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss676375_s42",
+     "mae_validos": 3.5581010066501033,
+     "mae_todos": 0.7097378819896256,
+     "n": 819826,
+     "n_validos": 133178
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.48046574834072364,
+    "usado_validos": true,
+    "d_validos": 2.699917635433372
+   },
+   {
+    "indice_sorteio": 8,
+    "split_seed": 387379,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss387379_s42",
+     "mae_validos": 8.411208446471813,
+     "mae_todos": 1.2879738249070054,
+     "n": 938672,
+     "n_validos": 126604
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss387379_s42",
+     "mae_validos": 6.945947754435693,
+     "mae_todos": 1.147518171412557,
+     "n": 938672,
+     "n_validos": 126604
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.14045565349444833,
+    "usado_validos": true,
+    "d_validos": -1.4652606920361197
+   },
+   {
+    "indice_sorteio": 9,
+    "split_seed": 259492,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss259492_s42",
+     "mae_validos": 0.37544818404740454,
+     "mae_todos": 0.1351222753854879,
+     "n": 822659,
+     "n_validos": 44969
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss259492_s42",
+     "mae_validos": 4.3971113287113415,
+     "mae_todos": 0.36126916707705725,
+     "n": 822659,
+     "n_validos": 44969
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.22614689169156935,
+    "usado_validos": true,
+    "d_validos": 4.021663144663937
+   },
+   {
+    "indice_sorteio": 10,
+    "split_seed": 684965,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss684965_s42",
+     "mae_validos": 0.43889079362004824,
+     "mae_todos": 0.19743841434866533,
+     "n": 923907,
+     "n_validos": 83104
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss684965_s42",
+     "mae_validos": 4.58788775305221,
+     "mae_todos": 0.5218346216474273,
+     "n": 923907,
+     "n_validos": 83104
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.324396207298762,
+    "usado_validos": true,
+    "d_validos": 4.148996959432162
+   },
+   {
+    "indice_sorteio": 11,
+    "split_seed": 723969,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss723969_s42",
+     "mae_validos": 13.583654053230068,
+     "mae_todos": 0.9536758458209217,
+     "n": 922324,
+     "n_validos": 55312
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss723969_s42",
+     "mae_validos": 9.916100267766934,
+     "mae_todos": 0.7407756357655824,
+     "n": 922324,
+     "n_validos": 55312
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.21290021005533932,
+    "usado_validos": true,
+    "d_validos": -3.6675537854631344
+   },
+   {
+    "indice_sorteio": 12,
+    "split_seed": 508734,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss508734_s42",
+     "mae_validos": 2.6571950212119324,
+     "mae_todos": 0.5309881081926179,
+     "n": 903711,
+     "n_validos": 150209
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss508734_s42",
+     "mae_validos": 3.3218135247729146,
+     "mae_todos": 0.7215523138984109,
+     "n": 903711,
+     "n_validos": 150209
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.19056420570579302,
+    "usado_validos": true,
+    "d_validos": 0.6646185035609822
+   },
+   {
+    "indice_sorteio": 13,
+    "split_seed": 198718,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss198718_s42",
+     "mae_validos": 0.42292026087224077,
+     "mae_todos": 0.2032987407969147,
+     "n": 816162,
+     "n_validos": 81885
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss198718_s42",
+     "mae_validos": 4.883012888234577,
+     "mae_todos": 0.7660210853432384,
+     "n": 816162,
+     "n_validos": 81885
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.5627223445463237,
+    "usado_validos": true,
+    "d_validos": 4.460092627362337
+   },
+   {
+    "indice_sorteio": 14,
+    "split_seed": 769856,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss769856_s42",
+     "mae_validos": 3.0418027180074656,
+     "mae_todos": 1.1345797360068315,
+     "n": 857874,
+     "n_validos": 300983
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss769856_s42",
+     "mae_validos": 3.8621393047834065,
+     "mae_todos": 1.4804572617475975,
+     "n": 857874,
+     "n_validos": 300983
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.345877525740766,
+    "usado_validos": true,
+    "d_validos": 0.8203365867759409
+   },
+   {
+    "indice_sorteio": 15,
+    "split_seed": 535105,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss535105_s42",
+     "mae_validos": 2.235041861394564,
+     "mae_todos": 0.31074491073765254,
+     "n": 793011,
+     "n_validos": 63895
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss535105_s42",
+     "mae_validos": 2.8349842252264152,
+     "mae_todos": 0.33710003207982336,
+     "n": 793011,
+     "n_validos": 63895
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.02635512134217083,
+    "usado_validos": true,
+    "d_validos": 0.5999423638318513
+   },
+   {
+    "indice_sorteio": 16,
+    "split_seed": 282106,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss282106_s42",
+     "mae_validos": 5.072640539913477,
+     "mae_todos": 0.22448379184581566,
+     "n": 866022,
+     "n_validos": 22819
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss282106_s42",
+     "mae_validos": 2.500970090604214,
+     "mae_todos": 0.1751262535530185,
+     "n": 866022,
+     "n_validos": 22819
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.049357538292797154,
+    "usado_validos": true,
+    "d_validos": -2.5716704493092633
+   },
+   {
+    "indice_sorteio": 17,
+    "split_seed": 756541,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss756541_s42",
+     "mae_validos": 4.288270853375316,
+     "mae_todos": 0.6729538910085204,
+     "n": 831106,
+     "n_validos": 99084
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss756541_s42",
+     "mae_validos": 3.987405413695037,
+     "mae_todos": 0.6021315097867359,
+     "n": 831106,
+     "n_validos": 99084
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.07082238122178452,
+    "usado_validos": true,
+    "d_validos": -0.3008654396802788
+   },
+   {
+    "indice_sorteio": 18,
+    "split_seed": 934410,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss934410_s42",
+     "mae_validos": 0.7083071943466572,
+     "mae_todos": 0.15022274420298903,
+     "n": 715815,
+     "n_validos": 41496
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss934410_s42",
+     "mae_validos": 6.799763229050939,
+     "mae_todos": 0.5383332653502231,
+     "n": 715815,
+     "n_validos": 41496
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.38811052114723404,
+    "usado_validos": true,
+    "d_validos": 6.091456034704281
+   },
+   {
+    "indice_sorteio": 19,
+    "split_seed": 546703,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q1_ss546703_s42",
+     "mae_validos": 1.0909447491655062,
+     "mae_todos": 0.17622172514352705,
+     "n": 852918,
+     "n_validos": 41446
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q1_ss546703_s42",
+     "mae_validos": 7.916856895063522,
+     "mae_todos": 0.49095554074554804,
+     "n": 852918,
+     "n_validos": 41446
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.31473381560202096,
+    "usado_validos": true,
+    "d_validos": 6.825912145898016
+   }
+  ],
+  "bauru_Q3": [
+   {
+    "indice_sorteio": 0,
+    "split_seed": 811474,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss811474_s42",
+     "mae_validos": 0.5985280371515803,
+     "mae_todos": 0.17963903665965172,
+     "n": 886373,
+     "n_validos": 43558
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss811474_s42",
+     "mae_validos": 2.2502265007810394,
+     "mae_todos": 0.3526382767948763,
+     "n": 886373,
+     "n_validos": 43558
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.17299924013522458,
+    "usado_validos": true,
+    "d_validos": 1.651698463629459
+   },
+   {
+    "indice_sorteio": 1,
+    "split_seed": 54892,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss54892_s42",
+     "mae_validos": 4.121876604273867,
+     "mae_todos": 0.4996859394982189,
+     "n": 1022514,
+     "n_validos": 69866
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss54892_s42",
+     "mae_validos": 7.736432690271391,
+     "mae_todos": 0.7350919178891352,
+     "n": 1022514,
+     "n_validos": 69866
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.23540597839091632,
+    "usado_validos": true,
+    "d_validos": 3.614556085997524
+   },
+   {
+    "indice_sorteio": 2,
+    "split_seed": 880099,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss880099_s42",
+     "mae_validos": 5.704075168236948,
+     "mae_todos": 0.43628597343060294,
+     "n": 768293,
+     "n_validos": 41272
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss880099_s42",
+     "mae_validos": 10.138587503937886,
+     "mae_todos": 0.7048217104114143,
+     "n": 768293,
+     "n_validos": 41272
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.26853573698081135,
+    "usado_validos": true,
+    "d_validos": 4.434512335700938
+   },
+   {
+    "indice_sorteio": 3,
+    "split_seed": 125243,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss125243_s42",
+     "sem_validos_sem_npz": true,
+     "mae_validos": null,
+     "mae_todos": null,
+     "n_validos": 0
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss125243_s42",
+     "sem_validos_sem_npz": true,
+     "mae_validos": null,
+     "mae_todos": null,
+     "n_validos": 0
+    },
+    "motivo_exclusao_validos": [
+     "gnn: sem no valido no teste (corrida sem predicao; run JSON parcial)",
+     "mlp: sem no valido no teste (corrida sem predicao; run JSON parcial)"
+    ],
+    "excluido_todos": true,
+    "usado_validos": false
+   },
+   {
+    "indice_sorteio": 4,
+    "split_seed": 159513,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss159513_s42",
+     "mae_validos": 15.565612668882206,
+     "mae_todos": 1.608038687422014,
+     "n": 819224,
+     "n_validos": 76497
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss159513_s42",
+     "mae_validos": 16.069364292516937,
+     "mae_todos": 1.6164737405919003,
+     "n": 819224,
+     "n_validos": 76497
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.008435053169886242,
+    "usado_validos": true,
+    "d_validos": 0.5037516236347308
+   },
+   {
+    "indice_sorteio": 5,
+    "split_seed": 739191,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss739191_s42",
+     "sem_validos_sem_npz": true,
+     "mae_validos": null,
+     "mae_todos": null,
+     "n_validos": 0
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss739191_s42",
+     "sem_validos_sem_npz": true,
+     "mae_validos": null,
+     "mae_todos": null,
+     "n_validos": 0
+    },
+    "motivo_exclusao_validos": [
+     "gnn: sem no valido no teste (corrida sem predicao; run JSON parcial)",
+     "mlp: sem no valido no teste (corrida sem predicao; run JSON parcial)"
+    ],
+    "excluido_todos": true,
+    "usado_validos": false
+   },
+   {
+    "indice_sorteio": 6,
+    "split_seed": 29675,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss29675_s42",
+     "mae_validos": 0.6267638309316448,
+     "mae_todos": 0.14887659301615982,
+     "n": 740192,
+     "n_validos": 5147
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss29675_s42",
+     "mae_validos": 4.101896334556044,
+     "mae_todos": 0.14161462068691735,
+     "n": 740192,
+     "n_validos": 5147
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.007261972329242472,
+    "usado_validos": true,
+    "d_validos": 3.4751325036243994
+   },
+   {
+    "indice_sorteio": 7,
+    "split_seed": 676375,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss676375_s42",
+     "mae_validos": 1.9486493181426179,
+     "mae_todos": 0.4616496548650174,
+     "n": 820858,
+     "n_validos": 141954
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss676375_s42",
+     "mae_validos": 1.2217700958843154,
+     "mae_todos": 0.35273470441449906,
+     "n": 820858,
+     "n_validos": 141954
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.10891495045051836,
+    "usado_validos": true,
+    "d_validos": -0.7268792222583025
+   },
+   {
+    "indice_sorteio": 8,
+    "split_seed": 387379,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss387379_s42",
+     "mae_validos": 4.0080836190205025,
+     "mae_todos": 0.5239428723348144,
+     "n": 941668,
+     "n_validos": 94677
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss387379_s42",
+     "mae_validos": 4.679092316409071,
+     "mae_todos": 0.6330840166605642,
+     "n": 941668,
+     "n_validos": 94677
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.10914114432574984,
+    "usado_validos": true,
+    "d_validos": 0.6710086973885687
+   },
+   {
+    "indice_sorteio": 9,
+    "split_seed": 259492,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss259492_s42",
+     "mae_validos": 3.4892578070340474,
+     "mae_todos": 0.6578308251096687,
+     "n": 814816,
+     "n_validos": 127716
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss259492_s42",
+     "mae_validos": 3.47527502781502,
+     "mae_todos": 0.6504344622534434,
+     "n": 814816,
+     "n_validos": 127716
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.007396362856225358,
+    "usado_validos": true,
+    "d_validos": -0.013982779219027464
+   },
+   {
+    "indice_sorteio": 10,
+    "split_seed": 684965,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss684965_s42",
+     "mae_validos": 2.463764187596306,
+     "mae_todos": 0.35110922291011853,
+     "n": 920658,
+     "n_validos": 88007
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss684965_s42",
+     "mae_validos": 4.395532984638601,
+     "mae_todos": 0.5527449483547795,
+     "n": 920658,
+     "n_validos": 88007
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.20163572544466096,
+    "usado_validos": true,
+    "d_validos": 1.9317687970422952
+   },
+   {
+    "indice_sorteio": 11,
+    "split_seed": 723969,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss723969_s42",
+     "mae_validos": 0.641084733548089,
+     "mae_todos": 0.2591204357268348,
+     "n": 922724,
+     "n_validos": 129673
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss723969_s42",
+     "mae_validos": 2.140423615296705,
+     "mae_todos": 0.48949522406986656,
+     "n": 922724,
+     "n_validos": 129673
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.23037478834303177,
+    "usado_validos": true,
+    "d_validos": 1.4993388817486157
+   },
+   {
+    "indice_sorteio": 12,
+    "split_seed": 508734,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss508734_s42",
+     "mae_validos": 0.919385547147823,
+     "mae_todos": 0.30327149938340703,
+     "n": 904136,
+     "n_validos": 110561
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss508734_s42",
+     "mae_validos": 0.7400439741957353,
+     "mae_todos": 0.2346231982279247,
+     "n": 904136,
+     "n_validos": 110561
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.06864830115548232,
+    "usado_validos": true,
+    "d_validos": -0.17934157295208764
+   },
+   {
+    "indice_sorteio": 13,
+    "split_seed": 198718,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss198718_s42",
+     "mae_validos": 0.7748284930579548,
+     "mae_todos": 0.15240539993307675,
+     "n": 810995,
+     "n_validos": 45272
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss198718_s42",
+     "mae_validos": 1.3889157210459746,
+     "mae_todos": 0.2714762689864458,
+     "n": 810995,
+     "n_validos": 45272
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.11907086905336903,
+    "usado_validos": true,
+    "d_validos": 0.6140872279880198
+   },
+   {
+    "indice_sorteio": 14,
+    "split_seed": 769856,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss769856_s42",
+     "nao_treinavel": true,
+     "particao": [
+      "val"
+     ]
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss769856_s42",
+     "nao_treinavel": true,
+     "particao": [
+      "val"
+     ]
+    },
+    "motivo_exclusao_validos": [
+     "gnn: nao_treinavel (particao sem aresta antena-terreno: ['val'])",
+     "mlp: nao_treinavel (particao sem aresta antena-terreno: ['val'])"
+    ],
+    "excluido_todos": true,
+    "usado_validos": false
+   },
+   {
+    "indice_sorteio": 15,
+    "split_seed": 535105,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss535105_s42",
+     "mae_validos": 1.0265510372398061,
+     "mae_todos": 0.29689683115338783,
+     "n": 787357,
+     "n_validos": 142384
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss535105_s42",
+     "mae_validos": 1.9313230167842874,
+     "mae_todos": 0.4046724218942464,
+     "n": 787357,
+     "n_validos": 142384
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.10777559074085857,
+    "usado_validos": true,
+    "d_validos": 0.9047719795444813
+   },
+   {
+    "indice_sorteio": 16,
+    "split_seed": 282106,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss282106_s42",
+     "nao_treinavel": true,
+     "particao": [
+      "val"
+     ]
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss282106_s42",
+     "nao_treinavel": true,
+     "particao": [
+      "val"
+     ]
+    },
+    "motivo_exclusao_validos": [
+     "gnn: nao_treinavel (particao sem aresta antena-terreno: ['val'])",
+     "mlp: nao_treinavel (particao sem aresta antena-terreno: ['val'])"
+    ],
+    "excluido_todos": true,
+    "usado_validos": false
+   },
+   {
+    "indice_sorteio": 17,
+    "split_seed": 756541,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss756541_s42",
+     "mae_validos": 1.7374303881077797,
+     "mae_todos": 0.36443991796494407,
+     "n": 831227,
+     "n_validos": 128424
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss756541_s42",
+     "mae_validos": 5.017457386136375,
+     "mae_todos": 0.9887623784109626,
+     "n": 831227,
+     "n_validos": 128424
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.6243224604460185,
+    "usado_validos": true,
+    "d_validos": 3.280026998028595
+   },
+   {
+    "indice_sorteio": 18,
+    "split_seed": 934410,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss934410_s42",
+     "mae_validos": 6.937833213678435,
+     "mae_todos": 0.7914945209274553,
+     "n": 716336,
+     "n_validos": 65827
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss934410_s42",
+     "mae_validos": 6.342738405952075,
+     "mae_todos": 0.7335510178832759,
+     "n": 716336,
+     "n_validos": 65827
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.05794350304417939,
+    "usado_validos": true,
+    "d_validos": -0.59509480772636
+   },
+   {
+    "indice_sorteio": 19,
+    "split_seed": 546703,
+    "gnn": {
+     "run_label": "g1_gnn_bauru_Q3_ss546703_s42",
+     "mae_validos": 6.471442149144679,
+     "mae_todos": 0.4885183241378097,
+     "n": 851319,
+     "n_validos": 45158
+    },
+    "mlp": {
+     "run_label": "g1_mlp_bauru_Q3_ss546703_s42",
+     "mae_validos": 9.095356030039477,
+     "mae_todos": 0.644291732906257,
+     "n": 851319,
+     "n_validos": 45158
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.15577340876844725,
+    "usado_validos": true,
+    "d_validos": 2.623913880894798
+   }
+  ],
+  "campinas_Q3": [
+   {
+    "indice_sorteio": 0,
+    "split_seed": 811474,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss811474_s42",
+     "mae_validos": 0.9791884868217892,
+     "mae_todos": 0.22482288911317963,
+     "n": 886599,
+     "n_validos": 78554
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss811474_s42",
+     "mae_validos": 3.6111539196821787,
+     "mae_todos": 0.470601029215288,
+     "n": 886599,
+     "n_validos": 78554
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.24577814010210838,
+    "usado_validos": true,
+    "d_validos": 2.6319654328603894
+   },
+   {
+    "indice_sorteio": 1,
+    "split_seed": 54892,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss54892_s42",
+     "mae_validos": 6.524228545737461,
+     "mae_todos": 0.7273818084147217,
+     "n": 1025308,
+     "n_validos": 83755
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss54892_s42",
+     "mae_validos": 5.961368087338843,
+     "mae_todos": 0.67301183606925,
+     "n": 1025308,
+     "n_validos": 83755
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.054369972345471695,
+    "usado_validos": true,
+    "d_validos": -0.5628604583986183
+   },
+   {
+    "indice_sorteio": 2,
+    "split_seed": 880099,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss880099_s42",
+     "mae_validos": 8.37935282396273,
+     "mae_todos": 0.7318746540316394,
+     "n": 767890,
+     "n_validos": 59203
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss880099_s42",
+     "mae_validos": 11.831183501426718,
+     "mae_todos": 1.0334537759556182,
+     "n": 767890,
+     "n_validos": 59203
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.30157912192397873,
+    "usado_validos": true,
+    "d_validos": 3.451830677463988
+   },
+   {
+    "indice_sorteio": 3,
+    "split_seed": 125243,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss125243_s42",
+     "mae_validos": 1.069172547614822,
+     "mae_todos": 0.17601958486535965,
+     "n": 970173,
+     "n_validos": 62024
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss125243_s42",
+     "mae_validos": 3.1732271073418987,
+     "mae_todos": 0.46850664282128246,
+     "n": 970173,
+     "n_validos": 62024
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.2924870579559228,
+    "usado_validos": true,
+    "d_validos": 2.104054559727077
+   },
+   {
+    "indice_sorteio": 4,
+    "split_seed": 159513,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss159513_s42",
+     "mae_validos": 4.888686365765378,
+     "mae_todos": 0.9336054012442488,
+     "n": 817963,
+     "n_validos": 138748
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss159513_s42",
+     "mae_validos": 7.445255168809455,
+     "mae_todos": 1.370612756860478,
+     "n": 817963,
+     "n_validos": 138748
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.43700735561622917,
+    "usado_validos": true,
+    "d_validos": 2.556568803044077
+   },
+   {
+    "indice_sorteio": 5,
+    "split_seed": 739191,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss739191_s42",
+     "sem_validos_sem_npz": true,
+     "mae_validos": null,
+     "mae_todos": null,
+     "n_validos": 0
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss739191_s42",
+     "sem_validos_sem_npz": true,
+     "mae_validos": null,
+     "mae_todos": null,
+     "n_validos": 0
+    },
+    "motivo_exclusao_validos": [
+     "gnn: sem no valido no teste (corrida sem predicao; run JSON parcial)",
+     "mlp: sem no valido no teste (corrida sem predicao; run JSON parcial)"
+    ],
+    "excluido_todos": true,
+    "usado_validos": false
+   },
+   {
+    "indice_sorteio": 6,
+    "split_seed": 29675,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss29675_s42",
+     "mae_validos": 0.7540721699280839,
+     "mae_todos": 0.1804187982432232,
+     "n": 737992,
+     "n_validos": 41680
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss29675_s42",
+     "mae_validos": 4.145056100175386,
+     "mae_todos": 0.39783648445718167,
+     "n": 737992,
+     "n_validos": 41680
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.21741768621395846,
+    "usado_validos": true,
+    "d_validos": 3.3909839302473017
+   },
+   {
+    "indice_sorteio": 7,
+    "split_seed": 676375,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss676375_s42",
+     "mae_validos": 4.378331217134024,
+     "mae_todos": 1.2104248533342163,
+     "n": 823274,
+     "n_validos": 206061
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss676375_s42",
+     "mae_validos": 5.202857840736951,
+     "mae_todos": 1.4415594671903185,
+     "n": 823274,
+     "n_validos": 206061
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.23113461385610212,
+    "usado_validos": true,
+    "d_validos": 0.8245266236029272
+   },
+   {
+    "indice_sorteio": 8,
+    "split_seed": 387379,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss387379_s42",
+     "mae_validos": 3.289168493433666,
+     "mae_todos": 0.7972642808233515,
+     "n": 947552,
+     "n_validos": 201355
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss387379_s42",
+     "mae_validos": 3.4421055285951234,
+     "mae_todos": 0.8535657825448767,
+     "n": 947552,
+     "n_validos": 201355
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.05630150172152515,
+    "usado_validos": true,
+    "d_validos": 0.1529370351614574
+   },
+   {
+    "indice_sorteio": 9,
+    "split_seed": 259492,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss259492_s42",
+     "mae_validos": 4.416755556041541,
+     "mae_todos": 0.9917253467972112,
+     "n": 809322,
+     "n_validos": 153824
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss259492_s42",
+     "mae_validos": 4.706888490066472,
+     "mae_todos": 1.1717689667937432,
+     "n": 809322,
+     "n_validos": 153824
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.18004361999653196,
+    "usado_validos": true,
+    "d_validos": 0.290132934024931
+   },
+   {
+    "indice_sorteio": 10,
+    "split_seed": 684965,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss684965_s42",
+     "mae_validos": 6.320265939488802,
+     "mae_todos": 0.9618628038927086,
+     "n": 918551,
+     "n_validos": 125108
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss684965_s42",
+     "mae_validos": 6.619096842971982,
+     "mae_todos": 1.0183016058662933,
+     "n": 918551,
+     "n_validos": 125108
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.05643880197358464,
+    "usado_validos": true,
+    "d_validos": 0.29883090348317953
+   },
+   {
+    "indice_sorteio": 11,
+    "split_seed": 723969,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss723969_s42",
+     "mae_validos": 1.0663573146334215,
+     "mae_todos": 0.3683072671813353,
+     "n": 925947,
+     "n_validos": 168180
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss723969_s42",
+     "mae_validos": 2.3064475320014677,
+     "mae_todos": 0.5985764302307092,
+     "n": 925947,
+     "n_validos": 168180
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.2302691630493739,
+    "usado_validos": true,
+    "d_validos": 1.2400902173680461
+   },
+   {
+    "indice_sorteio": 12,
+    "split_seed": 508734,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss508734_s42",
+     "mae_validos": 2.804964882367392,
+     "mae_todos": 0.8088762802456717,
+     "n": 907577,
+     "n_validos": 217556
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss508734_s42",
+     "mae_validos": 2.846647702330786,
+     "mae_todos": 0.8155128724435732,
+     "n": 907577,
+     "n_validos": 217556
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.00663659219790147,
+    "usado_validos": true,
+    "d_validos": 0.04168281996339385
+   },
+   {
+    "indice_sorteio": 13,
+    "split_seed": 198718,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss198718_s42",
+     "mae_validos": 1.084259694437792,
+     "mae_todos": 0.194200761463415,
+     "n": 809781,
+     "n_validos": 60223
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss198718_s42",
+     "mae_validos": 2.373590095224244,
+     "mae_todos": 0.34674169680231276,
+     "n": 809781,
+     "n_validos": 60223
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.15254093533889776,
+    "usado_validos": true,
+    "d_validos": 1.2893304007864521
+   },
+   {
+    "indice_sorteio": 14,
+    "split_seed": 769856,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss769856_s42",
+     "mae_validos": 3.6850994442365472,
+     "mae_todos": 0.6573327004415299,
+     "n": 848091,
+     "n_validos": 125758
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss769856_s42",
+     "mae_validos": 8.533751684459064,
+     "mae_todos": 1.3907912407022875,
+     "n": 848091,
+     "n_validos": 125758
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.7334585402607576,
+    "usado_validos": true,
+    "d_validos": 4.848652240222517
+   },
+   {
+    "indice_sorteio": 15,
+    "split_seed": 535105,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss535105_s42",
+     "mae_validos": 6.026541520953344,
+     "mae_todos": 1.2002584964343517,
+     "n": 789251,
+     "n_validos": 140217
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss535105_s42",
+     "mae_validos": 5.577221887926023,
+     "mae_todos": 1.099657287395009,
+     "n": 789251,
+     "n_validos": 140217
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.10060120903934267,
+    "usado_validos": true,
+    "d_validos": -0.44931963302732125
+   },
+   {
+    "indice_sorteio": 16,
+    "split_seed": 282106,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss282106_s42",
+     "mae_validos": 2.5581760187161855,
+     "mae_todos": 0.7550254345804541,
+     "n": 864463,
+     "n_validos": 217404
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss282106_s42",
+     "mae_validos": 4.217566791465711,
+     "mae_todos": 1.1972703735371755,
+     "n": 864463,
+     "n_validos": 217404
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.44224493895672135,
+    "usado_validos": true,
+    "d_validos": 1.6593907727495258
+   },
+   {
+    "indice_sorteio": 17,
+    "split_seed": 756541,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss756541_s42",
+     "mae_validos": 4.048359901412533,
+     "mae_todos": 1.0320586975122512,
+     "n": 834039,
+     "n_validos": 173046
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss756541_s42",
+     "mae_validos": 3.4336839481307653,
+     "mae_todos": 0.8286411359516229,
+     "n": 834039,
+     "n_validos": 173046
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": -0.2034175615606283,
+    "usado_validos": true,
+    "d_validos": -0.6146759532817674
+   },
+   {
+    "indice_sorteio": 18,
+    "split_seed": 934410,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss934410_s42",
+     "mae_validos": 7.8496011663785135,
+     "mae_todos": 1.2792355604866081,
+     "n": 718259,
+     "n_validos": 104026
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss934410_s42",
+     "mae_validos": 13.0884457197636,
+     "mae_todos": 2.0106838880388094,
+     "n": 718259,
+     "n_validos": 104026
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.7314483275522012,
+    "usado_validos": true,
+    "d_validos": 5.2388445533850865
+   },
+   {
+    "indice_sorteio": 19,
+    "split_seed": 546703,
+    "gnn": {
+     "run_label": "g1_gnn_campinas_Q3_ss546703_s42",
+     "mae_validos": 6.926349432047943,
+     "mae_todos": 0.6869478972130811,
+     "n": 851109,
+     "n_validos": 63303
+    },
+    "mlp": {
+     "run_label": "g1_mlp_campinas_Q3_ss546703_s42",
+     "mae_validos": 8.714764029975413,
+     "mae_todos": 0.8146398611737943,
+     "n": 851109,
+     "n_validos": 63303
+    },
+    "motivo_exclusao_validos": null,
+    "excluido_todos": false,
+    "d_todos": 0.12769196396071314,
+    "usado_validos": true,
+    "d_validos": 1.7884145979274697
+   }
+  ]
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "id": "V3_tabela_celulas",
+ "subclaim": "context of S4 (Reviewer 1, item 8: characteristics of the data of the four cities and why they serve as evidence)",
+ "origem": "Reviewer request, round 1 (MDPI Mathematics)",
+ "pergunta": "Which characteristics distinguish the 16 cells (4 cities x 4 quadrants) as evaluation populations? Descriptive table, one row per cell, read from the tensors (same loading as scripts/v3_13_laco_comum.py::carregar_celula plus additional fields read from the same .pt).",
+ "metodo_fixado": "Columns fixed beforehand: n_nos (total), n_validos, n_sentinela, fracao_sentinela, n_blocos_10km_ocupados, n_blocos_com_no_valido (copy of fase5/blocos_com_no_valido.json, checked), n_transmissores (nodes of the transmitter type in the cell tensor; the field name is recorded in the artifact), dist_mediana_validos_km (distance to the nearest transmitter, valid nodes), rssi_mediana_validos_dBm, rssi_min_validos_dBm, elevacao_min/mediana/max_m (elevation column of terrain.x, identified by name in the tensor metadata; if the name does not exist in the tensor, the column stays empty and the artifact says why). No hand-typed number; sha256 of the per-cell manifest in the artifact.",
+ "previsao": "sentinel fraction from 0.838 to 0.930 (current text); n_validos from 0.90 to 2.10 million.",
+ "leitura": "Descriptive (neutral direction). Serves Section 6.1 of the text and the response to R1-8. If fracao_sentinela or n_validos differ from the current text by more than 0.001 or 1%, the number in the text is wrong.",
+ "se_inverter": "Not applicable.",
+ "fixado_em": "2026-10-26T09:35:30-03:00 (before any script or result of this test existed)"
+}

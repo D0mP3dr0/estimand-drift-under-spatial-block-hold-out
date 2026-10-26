@@ -1,6 +1,6 @@
 {
   "artefato_tipo": "run_treino_c0c1",
-  "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_gnn_c0_spatial.py",
+  "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/scripts/train_gnn_c0_spatial.py",
   "script_sha256": "6f955629cde164f2843f454e1ebf6977292fd80647ef48ecd0df31e464c42445",
   "origem_script": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF_V2\\train_lins_physics.py",
   "origem_script_sha256": "13ea2ff0fcaca2776d8c0f3603b122efa509854c19fdac7e1d5d5e7d128826e1",

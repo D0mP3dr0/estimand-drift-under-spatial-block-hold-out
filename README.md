@@ -165,6 +165,7 @@ holds the following:
 Root files:
 
 - `README.md`: this file.
+- `analysis/revision_r1/`: the scripts of the first-round revision (see "Revision 1" below); `criteria/MANIFEST_criterios.jsonl`: SHA-256 of the criterion files.
 - `LICENSE`: MIT licence for the code.
 - `LICENSE-DATA`: CC BY 4.0 for the records, tables, figures and manifest.
 - `CITATION.cff`: citation metadata.
@@ -585,6 +586,50 @@ Tables S1, S2 and S3 are compiled with `pdflatex Table_S1.tex`,
 
 Run the first script before the second, so that `fig1_block_erosion` enters the
 figure manifest.
+
+## Revision 1 (MDPI Mathematics, October 2026)
+
+The scripts of `analysis/revision_r1/` produce the numbers, tables and figures
+added to the manuscript in response to the first round of review. Each numerical
+test has a criterion file in `criteria/` (`criterio_V1_*`, `criterio_V2_*`,
+`criterio_V2bis_*`, `criterio_V3_*`, `criterio_V4_*`, `criterio_E6_*`) that
+fixes the question, the method and the reading rule before the script was
+written; `criteria/MANIFEST_criterios.jsonl` lists the SHA-256 of every
+criterion file. The stamped outputs are in `results/fase6/` (numerical tests)
+and `results/figures_v4/` (figures). The scripts write to the folder given by the
+environment variable `R1_OUT` (default `results/fase6_rerun` for the tests and
+`results/figures_v4_rerun` for the figures), so a re-run never overwrites the
+stamped records. Commands are run at the repository root, with `python` denoting
+the environment's interpreter.
+
+| Script | Reproduces | Command | Needs |
+| --- | --- | --- | --- |
+| `v3_15_V1_variancia_amostra_pequena.py` | V1: coverage of small-sample alternatives (base, t, jackknife, wild cluster bootstrap) for the interval of one partition; table `T_V1_cobertura` | `R1_OUT=<dir> python analysis/revision_r1/v3_15_V1_variancia_amostra_pequena.py` | `results/fase5/R5_por_sorteio.json` (in the repository) |
+| `v3_15_V2_incerteza_variabilidade.py` | V2: bootstrap intervals of the four headline drift figures (8.0, 2.2, 7.1 and 0.76 dB) and of their ratios | `R1_OUT=<dir> python analysis/revision_r1/v3_15_V2_incerteza_variabilidade.py` | records of `results/fase2`, `fase4`, `fase5` (in the repository) |
+| `v3_15_V2bis_razao_sorteio_semente.py` | V2-bis: intervals of the draw/seed ratios and of the standard deviations across draws of the trained-model table (Table 8); table `T_V2bis_razoes` | `R1_OUT=<dir> python analysis/revision_r1/v3_15_V2bis_razao_sorteio_semente.py` | `results/gpu/G1/agregado_*.json`, `T9_deriva_modelo_G1_v3-12.tex` (in the repository) |
+| `v3_15_V4_meia_largura_vies.py` | V4: estimate, standard error and interval of each bias term in the four Q1 cells; table `T_V4_vies` | `R1_OUT=<dir> python analysis/revision_r1/v3_15_V4_meia_largura_vies.py` | records of `results/fase4` (in the repository) |
+| `v3_15_V3_tabela_celulas.py` | V3: descriptive table of the 16 cells; table `T_V3_celulas` | `R1_OUT=<dir> python analysis/revision_r1/v3_15_V3_tabela_celulas.py --rodar` (`--inspecionar` for one cell) | on request: the 16 graph tensors; paths set as in "Absolute paths in the scripts" |
+| `v3_15_E6_inversoes_ordem.py` | E6: GNN against MLP order per draw in the four trained cells; table `T_E6_inversoes` | `R1_NPZ_ROOT=<dir> R1_OUT=<dir> python analysis/revision_r1/v3_15_E6_inversoes_ordem.py` | on request: the per-node prediction files `<run>/predicoes_<run>.npz` (150 runs), located through `R1_NPZ_ROOT` |
+| `v4_fig1_block_erosion.py` | Figure 1 (block erosion), revised layout | `R1_OUT=<dir> python analysis/revision_r1/v4_fig1_block_erosion.py` | none (synthetic geometry) |
+| `v4_fig2_fracao_e_deriva.py` | Figure 2 (valid fraction and error drift), revised layout | `R1_OUT=<dir> python analysis/revision_r1/v4_fig2_fracao_e_deriva.py` | records of `results/inputs` and `results/fase2` (in the repository) |
+| `v4_gerar_tabelas.py` | the `.tex` fragments of the revised tables and supplementary tables | `R1_OUT=<dir> python analysis/revision_r1/v4_gerar_tabelas.py` | the imported table generators with their path set-up, the MDPI LaTeX class folder (`MDPI_DEFINITIONS`) and `pdflatex` (`PDFLATEX`) |
+| `compare_fase6.py` | comparison of a re-run with the stamped records | `python analysis/revision_r1/compare_fase6.py <R1_OUT> [results/fase6] [file ...]` | none |
+
+`compare_fase6.py` compares every numeric leaf exactly and reports the largest
+absolute difference; fields that record provenance (script and input digests,
+commands, paths) differ by construction and are only counted. In the re-runs of
+V1, V2, V2-bis and V4 and of the two figures the largest numeric difference to
+the stamped records is zero. `V2bis_manuscript_values.json` holds the two
+published sentences with the ratios that V2-bis checks, because the manuscript
+source is not part of this repository.
+
+The stamped records of `results/fase6/` store the SHA-256 of the criterion file
+as it was when the test ran. The criterion files were later rewritten in
+English without changing any number or threshold, so the `criterio_sha256`
+fields refer to the earlier text; `criteria/MANIFEST_criterios.jsonl` has the
+digests of the published files. In the same pass the repository paths recorded
+in 619 files were shortened; only strings that name a path changed in them, and
+`PROVENANCE.md` lists the new digests.
 
 ## Licence
 

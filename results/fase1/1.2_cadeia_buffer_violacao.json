@@ -18,14 +18,14 @@
  },
  "metodo": "split_espacial_3vias_exato (literal copy, imported without editing from scripts/varredura_split_geometria.py) reconstructs the REAL train/val/test of each quadrant in LOCAL coordinates (faithful to the frozen code, which processes each graph separately); PHYSICAL distance between quadrants computed in GLOBAL city coordinates (common origin lon0/lat0 = minimum over the 4 quadrants), cKDTree k=1 of the test nodes of Qi+1 against the training nodes of Qi",
  "insumos": {
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json": "552890b4dd972c6e7e4bb2193d03a7483b70f6d6bcedb2434c0401cbd9c5f7a2",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json": "42256b79ed7914b9776aaccc24ff1139236c59ce6662e653e8684419c436f7d2",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json": "a2519b94caf880d98995ea8066a99357a3e6780ec1ab35ebfca9d144fbe89909",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json": "adddf2211d473a592fc18722c12eb4ec980b1d5da7512f18611ede57d7fec885"
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json": "552890b4dd972c6e7e4bb2193d03a7483b70f6d6bcedb2434c0401cbd9c5f7a2",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json": "42256b79ed7914b9776aaccc24ff1139236c59ce6662e653e8684419c436f7d2",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json": "a2519b94caf880d98995ea8066a99357a3e6780ec1ab35ebfca9d144fbe89909",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json": "adddf2211d473a592fc18722c12eb4ec980b1d5da7512f18611ede57d7fec885"
  },
  "reconstrucao_por_celula": {
   "Q1": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json",
    "n_nos_apos_buffer_reconstruido": {
     "train": 9188826,
     "val": 1033406,
@@ -45,7 +45,7 @@
    "tempo_reconstrucao_s": 4.221773862838745
   },
   "Q2": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json",
    "n_nos_apos_buffer_reconstruido": {
     "train": 9188826,
     "val": 1033406,
@@ -65,7 +65,7 @@
    "tempo_reconstrucao_s": 4.240046739578247
   },
   "Q3": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json",
    "n_nos_apos_buffer_reconstruido": {
     "train": 9188538,
     "val": 1034028,
@@ -85,7 +85,7 @@
    "tempo_reconstrucao_s": 4.460705995559692
   },
   "Q4": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json",
    "n_nos_apos_buffer_reconstruido": {
     "train": 9188538,
     "val": 1034028,

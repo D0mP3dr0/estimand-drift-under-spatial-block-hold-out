@@ -47,8 +47,8 @@ import torch
 SCRIPT_PATH = Path(__file__).resolve()
 TENSOR_LINS_Q1 = Path("/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3/"
                       "transfer_dataset_lins_v19_Q1_enriched_cftudo.pt")
-RUN_LINS_Q1 = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/"
-                   "FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/"
+RUN_LINS_Q1 = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/"
+                   "prior_runs/evidence/dados/"
                    "treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json")
 FISMAT_JSON = Path("internal/fismat_sympy_eqR.json")
 FISMAT_SCRIPT = Path("internal/fismat_sympy_eqR.py")

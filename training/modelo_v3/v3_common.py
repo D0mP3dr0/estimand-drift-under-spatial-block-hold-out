@@ -51,8 +51,8 @@ MANIFEST_V4_PATH = Path(
     "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/manifest_mathematics_v4.jsonl")
 
 FROZEN_SCRIPTS_DIR = Path(
-    "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/"
-    "FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts")
+    "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/"
+    "prior_runs/evidence/scripts")
 FROZEN_GNN_SCRIPT = FROZEN_SCRIPTS_DIR / "train_gnn_c0_spatial.py"
 FROZEN_MLP_SCRIPT = FROZEN_SCRIPTS_DIR / "train_mlp_c0_spatial.py"
 

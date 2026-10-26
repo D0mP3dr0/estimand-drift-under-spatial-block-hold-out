@@ -1,0 +1,769 @@
+{
+ "artefato": "V2bis_resumo",
+ "data_utc": "2026-10-26T13:04:00.330890+00:00",
+ "comando": "python analysis/revision_r1/v3_15_V2bis_razao_sorteio_semente.py",
+ "script": "analysis/revision_r1/v3_15_V2bis_razao_sorteio_semente.py",
+ "script_sha256": "8e168b46d9923d3c12f06d688efe91b89331b043880441624f7088c1575d474b",
+ "criterio": "criteria/criterio_V2bis_razao_sorteio_semente.json",
+ "criterio_sha256": "fb2cce556e226da0953e5147dd121f363893e07951c4153bac4ab0e5c942819b",
+ "rotina_ms_semente_reusada": {
+  "origem": "analysis/v3_G1_agregar_v10.py::decomposicao_um_fator",
+  "modo": "extracao por ast",
+  "sha256_origem": "d8c2781b118985f3bd0dd5bc64d06091f8bcfd4d2d7bae763623dc4260c4f307"
+ },
+ "fontes_sha256": {
+  "agregado_G1_v5_bloco1.json": "5684bceb8df9d360bb7ce3ed2b5cfd04f83a6ea0ba05a9a8916b5f73820898d3",
+  "agregado_G1_v5_bloco2.json": "5abaa85ba3fc1529e36ac0d7d951f07366b421cacf2734076ce5d990ca1f371d",
+  "agregado_G1_v8_bloco3.json": "66199c1522c54ff2a173678634061838ce8b844fc93e10ebee7051f348889348",
+  "agregado_G1_v10_bloco4.json": "bc47778f91fbdd1413a430813ce7bcc4d7a93c69db2c700f6f439d252f2add2f",
+  "tables_figures/tables_v3-12/T9_deriva_modelo_G1_v3-12.tex": "fc6971579671451659c68f99f2db0f3fd832c02d6e75115c073652bed1994e60",
+  "analysis/revision_r1/V2bis_manuscript_values.json": "da9df08329740f1d786bdcb4a69823f9616251d47ed344483dd1548718f3489d"
+ },
+ "caminhos_json_usados": {
+  "bauru_Q1.gnn.s42": "agregado_G1_v5_bloco1.json :: celulas.bauru_Q1.por_modelo.gnn.mae_validos_por_sorteio",
+  "bauru_Q1.gnn.matriz": "agregado_G1_v5_bloco2.json :: celulas.bauru_Q1.gnn.{sorteios_usados, matriz_mae_validos_sorteio_x_semente_42_43_44}",
+  "bauru_Q1.mlp.s42": "agregado_G1_v5_bloco1.json :: celulas.bauru_Q1.por_modelo.mlp.mae_validos_por_sorteio",
+  "bauru_Q1.mlp.matriz": "agregado_G1_v5_bloco2.json :: celulas.bauru_Q1.mlp.{sorteios_usados, matriz_mae_validos_sorteio_x_semente_42_43_44}",
+  "campinas_Q1.gnn.s42": "agregado_G1_v5_bloco1.json :: celulas.campinas_Q1.por_modelo.gnn.mae_validos_por_sorteio",
+  "campinas_Q1.gnn.matriz": "agregado_G1_v10_bloco4.json :: celulas.campinas_Q1.gnn.{sorteios_usados, matriz_mae_validos_sorteio_x_semente_42_43_44}",
+  "campinas_Q1.mlp.s42": "agregado_G1_v5_bloco1.json :: celulas.campinas_Q1.por_modelo.mlp.mae_validos_por_sorteio",
+  "campinas_Q1.mlp.matriz": "agregado_G1_v10_bloco4.json :: celulas.campinas_Q1.mlp.{sorteios_usados, matriz_mae_validos_sorteio_x_semente_42_43_44}",
+  "bauru_Q3.gnn.s42": "agregado_G1_v8_bloco3.json :: celulas.bauru_Q3.por_modelo.gnn.mae_validos_por_sorteio",
+  "bauru_Q3.mlp.s42": "agregado_G1_v8_bloco3.json :: celulas.bauru_Q3.por_modelo.mlp.mae_validos_por_sorteio",
+  "campinas_Q3.gnn.s42": "agregado_G1_v8_bloco3.json :: celulas.campinas_Q3.por_modelo.gnn.mae_validos_por_sorteio",
+  "campinas_Q3.mlp.s42": "agregado_G1_v8_bloco3.json :: celulas.campinas_Q3.por_modelo.mlp.mae_validos_por_sorteio"
+ },
+ "referencias_lidas_de": {
+  "DP": "tables_figures/tables_v3-12/T9_deriva_modelo_G1_v3-12.tex",
+  "R_e_ICF": "analysis/revision_r1/V2bis_manuscript_values.json"
+ },
+ "conferencia_0": {
+  "R": {
+   "bauru_Q1.gnn": {
+    "ref": "10.4",
+    "obtido": 10.39608659570659,
+    "tol": 0.05,
+    "ok": true
+   },
+   "bauru_Q1.mlp": {
+    "ref": "3.6",
+    "obtido": 3.6135489130558947,
+    "tol": 0.05,
+    "ok": true
+   },
+   "campinas_Q1.gnn": {
+    "ref": "7.6",
+    "obtido": 7.601865027150952,
+    "tol": 0.05,
+    "ok": true
+   },
+   "campinas_Q1.mlp": {
+    "ref": "2.98",
+    "obtido": 2.9763032976782093,
+    "tol": 0.005,
+    "ok": true
+   }
+  },
+  "DP": {
+   "bauru_Q1.gnn": {
+    "ref": "1.25",
+    "obtido": 1.248182158036913,
+    "tol": 0.005,
+    "ok": true
+   },
+   "bauru_Q1.mlp": {
+    "ref": "1.13",
+    "obtido": 1.1304380663198776,
+    "tol": 0.005,
+    "ok": true
+   },
+   "campinas_Q1.gnn": {
+    "ref": "3.26",
+    "obtido": 3.260303378611019,
+    "tol": 0.005,
+    "ok": true
+   },
+   "campinas_Q1.mlp": {
+    "ref": "2.01",
+    "obtido": 2.0050368461786,
+    "tol": 0.005,
+    "ok": true
+   },
+   "bauru_Q3.gnn": {
+    "ref": "3.86",
+    "obtido": 3.8583396397547505,
+    "tol": 0.005,
+    "ok": true
+   },
+   "bauru_Q3.mlp": {
+    "ref": "4.08",
+    "obtido": 4.075810656190718,
+    "tol": 0.005,
+    "ok": true
+   },
+   "campinas_Q3.gnn": {
+    "ref": "2.46",
+    "obtido": 2.4601856124049646,
+    "tol": 0.005,
+    "ok": true
+   },
+   "campinas_Q3.mlp": {
+    "ref": "3.08",
+    "obtido": 3.080107743587456,
+    "tol": 0.005,
+    "ok": true
+   }
+  },
+  "ICF": {
+   "bauru_Q1.gnn": {
+    "ref": [
+     "3.0",
+     "131.8"
+    ],
+    "obtido": [
+     3.010260288390286,
+     131.79706430840787
+    ],
+    "tol": 0.05,
+    "ok": true
+   },
+   "campinas_Q1.gnn": {
+    "ref": [
+     "8.1",
+     "87.3"
+    ],
+    "obtido": [
+     8.092998673624683,
+     87.31186520706376
+    ],
+    "tol": 0.05,
+    "ok": true
+   },
+   "campinas_Q1.mlp": {
+    "ref": [
+     "1.5",
+     "18.8"
+    ],
+    "obtido": [
+     1.510002897736677,
+     18.839845437148423
+    ],
+    "tol": 0.05,
+    "ok": true
+   }
+  }
+ },
+ "parametros": {
+  "B": 4000,
+  "semente": 20261027,
+  "tol_dp": 0.005,
+  "tol_ic_theta": 0.05,
+  "tol_R": "max(0,005; meia unidade da ultima casa publicada)"
+ },
+ "pares_cruzados": {
+  "bauru_Q1.gnn": {
+   "n_sorteios_cruzados": 5,
+   "ms_sorteio": 0.6460963263677295,
+   "ms_semente": 0.014415050358859916,
+   "F": 44.820955201909484,
+   "theta_hat": 14.60698506730316,
+   "theta_ic_F95": [
+    3.010260288390286,
+    131.79706430840787
+   ],
+   "R": 3.950567689244567,
+   "R_ic": [
+    2.002563429305121,
+    11.523760857827963
+   ],
+   "R_ic_nota": "R = sqrt(1+max(theta,0)); limite inferior truncado em 1 quando theta_inf < 0",
+   "R20": 10.39608659570659,
+   "R20_ic_F_19_2n": [
+    5.6091872172181905,
+    17.449468482071833
+   ],
+   "dp20_s42": 1.248182158036913,
+   "n_s42": 20,
+   "deixa_um_fora": {
+    "theta_min": 3.0601858257947043,
+    "theta_max": 22.067980029507023,
+    "R_min": 2.014990279330078,
+    "R_max": 4.802913702067426,
+    "sorteio_que_mais_move": "880099",
+    "detalhe": [
+     {
+      "id_fora": "811474",
+      "theta": 15.526254596745968,
+      "R": 4.065249635231023
+     },
+     {
+      "id_fora": "54892",
+      "theta": 16.592157890614843,
+      "R": 4.194300643804023
+     },
+     {
+      "id_fora": "880099",
+      "theta": 3.0601858257947043,
+      "R": 2.014990279330078
+     },
+     {
+      "id_fora": "125243",
+      "theta": 22.067980029507023,
+      "R": 4.802913702067426
+     },
+     {
+      "id_fora": "159513",
+      "theta": 15.687488132924058,
+      "R": 4.085032207085283
+     }
+    ]
+   },
+   "bootstrap_por_id": {
+    "B": 4000,
+    "semente": 20261027,
+    "observado_R20": 10.39608659570659,
+    "media_boot": 10.093679329468989,
+    "ic_bca": [
+     6.794999208524914,
+     15.79825760136471
+    ],
+    "ic_percentil": [
+     5.961409203006323,
+     14.370392921855561
+    ],
+    "z0": 0.1687205841256273,
+    "aceleracao": 0.02266417249391652,
+    "replicas_descartadas": 104,
+    "fracao_descartada": 0.026
+   }
+  },
+  "bauru_Q1.mlp": {
+   "n_sorteios_cruzados": 5,
+   "ms_sorteio": 1.230179434090401,
+   "ms_semente": 0.09786461041486275,
+   "F": 12.570217455273015,
+   "theta_hat": 3.8567391517576715,
+   "theta_ic_F95": [
+    0.6043909681188406,
+    36.72316899523866
+   ],
+   "R": 2.2038010690072896,
+   "R_ic": [
+    1.2666455574148754,
+    6.141918999403904
+   ],
+   "R_ic_nota": "R = sqrt(1+max(theta,0)); limite inferior truncado em 1 quando theta_inf < 0",
+   "R20": 3.6135489130558947,
+   "R20_ic_F_19_2n": [
+    1.9496829105171747,
+    6.065215721926962
+   ],
+   "dp20_s42": 1.1304380663198776,
+   "n_s42": 20,
+   "deixa_um_fora": {
+    "theta_min": 0.3586420380565378,
+    "theta_max": 13.470481651265413,
+    "R_min": 1.1656080121792822,
+    "R_max": 3.8040086292311974,
+    "sorteio_que_mais_move": "880099",
+    "detalhe": [
+     {
+      "id_fora": "811474",
+      "theta": 3.480728290874266,
+      "R": 2.1167730844080257
+     },
+     {
+      "id_fora": "54892",
+      "theta": 0.3586420380565378,
+      "R": 1.1656080121792822
+     },
+     {
+      "id_fora": "880099",
+      "theta": 13.470481651265413,
+      "R": 3.8040086292311974
+     },
+     {
+      "id_fora": "125243",
+      "theta": 4.249549491848078,
+      "R": 2.291189536430384
+     },
+     {
+      "id_fora": "159513",
+      "theta": 4.584709833957541,
+      "R": 2.363199067780271
+     }
+    ]
+   },
+   "bootstrap_por_id": {
+    "B": 4000,
+    "semente": 20261027,
+    "observado_R20": 3.6135489130558947,
+    "media_boot": 4.133083329724146,
+    "ic_bca": [
+     1.704932467309818,
+     7.514918789794034
+    ],
+    "ic_percentil": [
+     1.9615898338648137,
+     8.10830725489639
+    ],
+    "z0": 0.06373825350782727,
+    "aceleracao": -0.1415249005894937,
+    "replicas_descartadas": 104,
+    "fracao_descartada": 0.026
+   }
+  },
+  "campinas_Q1.gnn": {
+   "n_sorteios_cruzados": 10,
+   "ms_sorteio": 13.189410493063244,
+   "ms_semente": 0.1839398040045864,
+   "F": 71.70503722366898,
+   "theta_hat": 23.568345741222995,
+   "theta_ic_F95": [
+    8.092998673624683,
+    87.31186520706376
+   ],
+   "R": 4.956646622589005,
+   "R_ic": [
+    3.015459943959575,
+    9.39743928988444
+   ],
+   "R_ic_nota": "R = sqrt(1+max(theta,0)); limite inferior truncado em 1 quando theta_inf < 0",
+   "R20": 7.601865027150952,
+   "R20_ic_F_19_2n": [
+    4.82517110686751,
+    12.041082138313216
+   ],
+   "dp20_s42": 3.260303378611019,
+   "n_s42": 20,
+   "deixa_um_fora": {
+    "theta_min": 1.5054932155672516,
+    "theta_max": 44.774461651903856,
+    "R_min": 1.5828749841877126,
+    "R_max": 6.765682644929767,
+    "sorteio_que_mais_move": "387379",
+    "detalhe": [
+     {
+      "id_fora": "811474",
+      "theta": 25.21635418358519,
+      "R": 5.1201908346843075
+     },
+     {
+      "id_fora": "54892",
+      "theta": 23.76309550109634,
+      "R": 4.976253158863237
+     },
+     {
+      "id_fora": "880099",
+      "theta": 24.514555459882047,
+      "R": 5.051193468862784
+     },
+     {
+      "id_fora": "125243",
+      "theta": 44.774461651903856,
+      "R": 6.765682644929767
+     },
+     {
+      "id_fora": "159513",
+      "theta": 23.80511235570771,
+      "R": 4.98047310561032
+     },
+     {
+      "id_fora": "739191",
+      "theta": 23.262705900817434,
+      "R": 4.925718820722254
+     },
+     {
+      "id_fora": "29675",
+      "theta": 23.87331063379435,
+      "R": 4.987314972386881
+     },
+     {
+      "id_fora": "676375",
+      "theta": 23.45203427242455,
+      "R": 4.944899824306307
+     },
+     {
+      "id_fora": "387379",
+      "theta": 1.5054932155672516,
+      "R": 1.5828749841877126
+     },
+     {
+      "id_fora": "259492",
+      "theta": 22.550845781740524,
+      "R": 4.852921365707518
+     }
+    ]
+   },
+   "bootstrap_por_id": {
+    "B": 4000,
+    "semente": 20261027,
+    "observado_R20": 7.601865027150952,
+    "media_boot": 8.516660852450343,
+    "ic_bca": [
+     3.352654849033681,
+     30.10074749365449
+    ],
+    "ic_percentil": [
+     2.8920023674071174,
+     23.766480343089743
+    ],
+    "z0": 0.11051620356204181,
+    "aceleracao": 0.02229174933562171,
+    "replicas_descartadas": 0,
+    "fracao_descartada": 0.0
+   }
+  },
+  "campinas_Q1.mlp": {
+   "n_sorteios_cruzados": 10,
+   "ms_sorteio": 7.1187870698326146,
+   "ms_semente": 0.45382701527666053,
+   "F": 15.686124514850407,
+   "theta_hat": 4.895374838283469,
+   "theta_ic_F95": [
+    1.510002897736677,
+    18.839845437148423
+   ],
+   "R": 2.428039299163724,
+   "R_ic": [
+    1.5842988662928081,
+    4.454194140037951
+   ],
+   "R_ic_nota": "R = sqrt(1+max(theta,0)); limite inferior truncado em 1 quando theta_inf < 0",
+   "R20": 2.9763032976782093,
+   "R20_ic_F_19_2n": [
+    1.8891643860998284,
+    4.714357903998098
+   ],
+   "dp20_s42": 2.0050368461786,
+   "n_s42": 20,
+   "deixa_um_fora": {
+    "theta_min": 4.179707259536421,
+    "theta_max": 6.174193080786023,
+    "R_min": 2.2758970230518827,
+    "R_max": 2.6784684207184566,
+    "sorteio_que_mais_move": "54892",
+    "detalhe": [
+     {
+      "id_fora": "811474",
+      "theta": 4.839100570740232,
+      "R": 2.41642309431528
+     },
+     {
+      "id_fora": "54892",
+      "theta": 6.174193080786023,
+      "R": 2.6784684207184566
+     },
+     {
+      "id_fora": "880099",
+      "theta": 5.300382805696257,
+      "R": 2.510056335163866
+     },
+     {
+      "id_fora": "125243",
+      "theta": 5.683220661990395,
+      "R": 2.58519257735094
+     },
+     {
+      "id_fora": "159513",
+      "theta": 4.436159672112071,
+      "R": 2.3315573490935346
+     },
+     {
+      "id_fora": "739191",
+      "theta": 4.495238421630081,
+      "R": 2.3441924881779825
+     },
+     {
+      "id_fora": "29675",
+      "theta": 4.260719666837729,
+      "R": 2.2936258776962144
+     },
+     {
+      "id_fora": "676375",
+      "theta": 4.179707259536421,
+      "R": 2.2758970230518827
+     },
+     {
+      "id_fora": "387379",
+      "theta": 5.422934645051365,
+      "R": 2.5343509317084254
+     },
+     {
+      "id_fora": "259492",
+      "theta": 4.80167001971136,
+      "R": 2.408665609774707
+     }
+    ]
+   },
+   "bootstrap_por_id": {
+    "B": 4000,
+    "semente": 20261027,
+    "observado_R20": 2.9763032976782093,
+    "media_boot": 3.0761036904300383,
+    "ic_bca": [
+     2.0075427036114406,
+     5.984942308419033
+    ],
+    "ic_percentil": [
+     1.9553689419993532,
+     5.357134292595769
+    ],
+    "z0": 0.12060993411930736,
+    "aceleracao": -0.01229020658306985,
+    "replicas_descartadas": 0,
+    "fracao_descartada": 0.0
+   }
+  }
+ },
+ "dp_entre_sorteios_8": {
+  "bauru_Q1.gnn": {
+   "n": 20,
+   "dp": 1.248182158036913,
+   "ic_qui2_95": [
+    0.9492305415610055,
+    1.8230594567387919
+   ],
+   "ic_bca_95": [
+    0.8442996190515988,
+    1.5916336501192525
+   ],
+   "ic_percentil_95": [
+    0.7297564354534465,
+    1.5276988239285179
+   ],
+   "media_boot": 1.1973054052812218,
+   "razao_ao_0_132": 9.455925439673583,
+   "ic_qui2_sobre_0_132": [
+    7.1911404663712535,
+    13.811056490445392
+   ],
+   "ic_bca_sobre_0_132": [
+    6.396209235239384,
+    12.05783068272161
+   ],
+   "nota": "0,132 dB e o maximo de duas repeticoes, nao um estimador com variancia; so o numerador tem IC"
+  },
+  "bauru_Q1.mlp": {
+   "n": 20,
+   "dp": 1.1304380663198776,
+   "ic_qui2_95": [
+    0.8596872908211044,
+    1.65108577605627
+   ],
+   "ic_bca_95": [
+    0.8884510233718954,
+    1.4466703441611675
+   ],
+   "ic_percentil_95": [
+    0.8004919071747428,
+    1.3610887438666885
+   ],
+   "media_boot": 1.0929173721407768,
+   "razao_ao_0_132": 8.563924744847558,
+   "ic_qui2_sobre_0_132": [
+    6.512782506220487,
+    12.508225576183863
+   ],
+   "ic_bca_sobre_0_132": [
+    6.730689570999207,
+    10.959623819402783
+   ],
+   "nota": "0,132 dB e o maximo de duas repeticoes, nao um estimador com variancia; so o numerador tem IC"
+  },
+  "campinas_Q1.gnn": {
+   "n": 20,
+   "dp": 3.260303378611019,
+   "ic_qui2_95": [
+    2.4794294020349152,
+    4.7619066399429135
+   ],
+   "ic_bca_95": [
+    1.6667934471947206,
+    5.547986175176241
+   ],
+   "ic_percentil_95": [
+    1.0805845719237293,
+    4.759889954913192
+   ],
+   "media_boot": 3.026338852419508,
+   "razao_ao_0_132": 24.699268019780444,
+   "ic_qui2_sobre_0_132": [
+    18.783556076022084,
+    36.07505030259783
+   ],
+   "ic_bca_sobre_0_132": [
+    12.627223084808488,
+    42.030198296789706
+   ],
+   "nota": "0,132 dB e o maximo de duas repeticoes, nao um estimador com variancia; so o numerador tem IC"
+  },
+  "campinas_Q1.mlp": {
+   "n": 20,
+   "dp": 2.0050368461786,
+   "ic_qui2_95": [
+    1.5248112617962912,
+    2.928499946902397
+   ],
+   "ic_bca_95": [
+    1.5894759589826728,
+    2.7843813363843597
+   ],
+   "ic_percentil_95": [
+    1.3815405667904828,
+    2.5044639206862125
+   ],
+   "media_boot": 1.935202356678875,
+   "razao_ao_0_132": 15.189673077110607,
+   "ic_qui2_sobre_0_132": [
+    11.55160046815372,
+    22.18560565835149
+   ],
+   "ic_bca_sobre_0_132": [
+    12.04148453774752,
+    21.093798002911814
+   ],
+   "nota": "0,132 dB e o maximo de duas repeticoes, nao um estimador com variancia; so o numerador tem IC"
+  },
+  "bauru_Q3.gnn": {
+   "n": 16,
+   "dp": 3.8583396397547505,
+   "ic_qui2_95": [
+    2.850174234738307,
+    5.971518394705779
+   ],
+   "ic_bca_95": [
+    2.056813913727743,
+    6.50889206657028
+   ],
+   "ic_percentil_95": [
+    1.6092424493050355,
+    5.684300193314506
+   ],
+   "media_boot": 3.537449918120699,
+   "razao_ao_0_132": 29.229845755717804,
+   "ic_qui2_sobre_0_132": [
+    21.59222905104778,
+    45.238775717468016
+   ],
+   "ic_bca_sobre_0_132": [
+    15.581923588846536,
+    49.309788383108184
+   ],
+   "nota": "0,132 dB e o maximo de duas repeticoes, nao um estimador com variancia; so o numerador tem IC"
+  },
+  "bauru_Q3.mlp": {
+   "n": 16,
+   "dp": 4.075810656190718,
+   "ic_qui2_95": [
+    3.010821130999504,
+    6.308096378038861
+   ],
+   "ic_bca_95": [
+    2.606557822103272,
+    6.259168116912109
+   ],
+   "ic_percentil_95": [
+    2.0921810149257376,
+    5.55822992307051
+   ],
+   "media_boot": 3.8383562535,
+   "razao_ao_0_132": 30.87735345599029,
+   "ic_qui2_sobre_0_132": [
+    22.809250992420484,
+    47.78860892453682
+   ],
+   "ic_bca_sobre_0_132": [
+    19.74665016744903,
+    47.417940279637186
+   ],
+   "nota": "0,132 dB e o maximo de duas repeticoes, nao um estimador com variancia; so o numerador tem IC"
+  },
+  "campinas_Q3.gnn": {
+   "n": 19,
+   "dp": 2.4601856124049646,
+   "ic_qui2_95": [
+    1.8589473285865024,
+    3.638182846956521
+   ],
+   "ic_bca_95": [
+    2.02328617504212,
+    3.074134366923212
+   ],
+   "ic_percentil_95": [
+    1.8138366623124675,
+    2.891863020536779
+   ],
+   "media_boot": 2.3762095168836987,
+   "razao_ao_0_132": 18.6377697909467,
+   "ic_qui2_sobre_0_132": [
+    14.082934307473502,
+    27.561991264822126
+   ],
+   "ic_bca_sobre_0_132": [
+    15.327925568500909,
+    23.288896719115243
+   ],
+   "nota": "0,132 dB e o maximo de duas repeticoes, nao um estimador com variancia; so o numerador tem IC"
+  },
+  "campinas_Q3.mlp": {
+   "n": 19,
+   "dp": 3.080107743587456,
+   "ic_qui2_95": [
+    2.3273683224670445,
+    4.5549389050135
+   ],
+   "ic_bca_95": [
+    2.123432367251945,
+    4.250256876358353
+   ],
+   "ic_percentil_95": [
+    1.7089115846309912,
+    3.897461382997544
+   ],
+   "media_boot": 2.936702827846968,
+   "razao_ao_0_132": 23.334149572632242,
+   "ic_qui2_sobre_0_132": [
+    17.631578200507914,
+    34.50711291676893
+   ],
+   "ic_bca_sobre_0_132": [
+    16.086608842817764,
+    32.198915729987526
+   ],
+   "nota": "0,132 dB e o maximo de duas repeticoes, nao um estimador com variancia; so o numerador tem IC"
+  }
+ },
+ "contagens_limiares": {
+  "n_pares": 4,
+  "limite_inferior_theta_maior_que_1": 3,
+  "ic_exclui_0_mas_nao_1": 1,
+  "ic_inclui_0": 0,
+  "por_par": {
+   "bauru_Q1.gnn": {
+    "theta_inf": 3.010260288390286,
+    "inf_gt_1": true,
+    "exclui_0_nao_1": false,
+    "inclui_0": false
+   },
+   "bauru_Q1.mlp": {
+    "theta_inf": 0.6043909681188406,
+    "inf_gt_1": false,
+    "exclui_0_nao_1": true,
+    "inclui_0": false
+   },
+   "campinas_Q1.gnn": {
+    "theta_inf": 8.092998673624683,
+    "inf_gt_1": true,
+    "exclui_0_nao_1": false,
+    "inclui_0": false
+   },
+   "campinas_Q1.mlp": {
+    "theta_inf": 1.510002897736677,
+    "inf_gt_1": true,
+    "exclui_0_nao_1": false,
+    "inclui_0": false
+   }
+  }
+ }
+}

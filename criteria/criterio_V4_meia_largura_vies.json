@@ -1,0 +1,11 @@
+{
+ "id": "V4_meia_largura_vies",
+ "subclaim": "S2 (bias in two terms)",
+ "origem": "Reviewer request, round 1 (MDPI Mathematics), Reviewer 2, item 4: 'Small estimated bias should be distinguished from insufficient precision to detect bias: Table 5 does not establish uniformly negligible valid-node bias'",
+ "pergunta": "How precisely is each term of the bias known in the four Q1 cells? For each (cell, predictor in {constante, fspl_b}, population in {validos, todos}): design term (closed bounds T_inf/T_sup and frequency-200 with bootstrap SE; fase4/R3_termo_desenho.json), ratio term and total bias with SE (fase4/R2_resumo.json, blocks W and X of sheet v3-12; and the -1.23 dB value of the constant predictor with buffer, whose source must be located and cited in the artifact).",
+ "metodo_fixado": "Script that only READS the stamped artifacts (no new draw): table with estimate, SE or half-width, interval estimate +- 2 SE (or [T_inf, T_sup] when closed) and the column 'distinguished from zero' = interval excludes 0. Source and JSON path of each number recorded row by row. Check: the values of the current text (abstract: 'both are fractions of a decibel'; Section 6.5) must be reproduced to 0.01 dB.",
+ "previsao": "closed design term, narrow and distinguished from zero (and small); total bias of the constant predictor in the valid nodes with SE of the order of 1 dB, not distinguished from zero; ratio term of fspl_b in the valid nodes ~0.5 dB distinguished from zero; constant predictor with buffer in the valid nodes with ratio term ~ -1.2 dB.",
+ "leitura": "Precision report (DELIMITS S2 in form, not in substance): the text replaces 'indistinguishable from zero' and 'fractions of a decibel' by an estimate with half-width. If some total bias in the valid nodes is distinguished from zero and larger than 1 dB -> the text states it as a measured bias (still small against the 8 dB drift).",
+ "se_inverter": "No outcome reverses S4; S2 is an exact identity, the magnitude is what is delimited.",
+ "fixado_em": "2026-10-26T09:35:30-03:00 (before any script or result of this test existed)"
+}

@@ -46,8 +46,8 @@ from pathlib import Path
 import numpy as np
 
 TREINOS_DIR = Path(
-    "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/"
-    "FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1"
+    "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/"
+    "prior_runs/evidence/dados/treinos_c1"
 )
 CFTUDO_DIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/graph_data")
 

@@ -1,0 +1,158 @@
+{
+ "descricao": "painel (a) da Fig. 2: fracao valida da particao de teste, g = 10 km, b = 2 km, sorteios do JSON de entrada F3 (filtro igual ao original)",
+ "fonte": "results/inputs/fracao_valida_val_treino_20_splits.json",
+ "fonte_sha256": "5fc43ee5fa25b78c74a428d883f4d917826e6adfc582174cb2961c232e4b0dea",
+ "n_celulas": 16,
+ "n_celulas_minimo_igual_a_zero_exato": 3,
+ "celulas_minimo_zero_exato": [
+  "bauru_Q2",
+  "bauru_Q3",
+  "lins_Q3"
+ ],
+ "n_celulas_minimo_menor_1e_4": 5,
+ "celulas_minimo_menor_1e_4": [
+  "bauru_Q2",
+  "bauru_Q3",
+  "lins_Q3",
+  "lins_Q4",
+  "sorocaba_Q3"
+ ],
+ "total_sorteios_zero_exato": 5,
+ "por_celula": {
+  "bauru_Q1": {
+   "n_sorteios": 20,
+   "minimo": 0.017806903971933147,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "bauru_Q2": {
+   "n_sorteios": 20,
+   "minimo": 0.0,
+   "n_zero_exato": 1,
+   "n_menor_1e_4": 1
+  },
+  "bauru_Q3": {
+   "n_sorteios": 20,
+   "minimo": 0.0,
+   "n_zero_exato": 1,
+   "n_menor_1e_4": 1
+  },
+  "bauru_Q4": {
+   "n_sorteios": 20,
+   "minimo": 0.03457170149134301,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "campinas_Q1": {
+   "n_sorteios": 20,
+   "minimo": 0.012417688939399004,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "campinas_Q2": {
+   "n_sorteios": 20,
+   "minimo": 0.046430243226543336,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "campinas_Q3": {
+   "n_sorteios": 20,
+   "minimo": 0.0327623084424135,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "campinas_Q4": {
+   "n_sorteios": 20,
+   "minimo": 0.048799381681347065,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "lins_Q1": {
+   "n_sorteios": 20,
+   "minimo": 0.009875772767917686,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "lins_Q2": {
+   "n_sorteios": 20,
+   "minimo": 0.05886680199047179,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "lins_Q3": {
+   "n_sorteios": 20,
+   "minimo": 0.0,
+   "n_zero_exato": 3,
+   "n_menor_1e_4": 3
+  },
+  "lins_Q4": {
+   "n_sorteios": 20,
+   "minimo": 2.563983600272515e-05,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 2
+  },
+  "sorocaba_Q1": {
+   "n_sorteios": 20,
+   "minimo": 0.0003536215844136563,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "sorocaba_Q2": {
+   "n_sorteios": 20,
+   "minimo": 0.03616031600437166,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  },
+  "sorocaba_Q3": {
+   "n_sorteios": 20,
+   "minimo": 8.841138880145985e-07,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 1
+  },
+  "sorocaba_Q4": {
+   "n_sorteios": 20,
+   "minimo": 0.04878585391984305,
+   "n_zero_exato": 0,
+   "n_menor_1e_4": 0
+  }
+ },
+ "x_desenhados_por_celula": {
+  "bauru_Q2": 1,
+  "bauru_Q3": 1,
+  "lins_Q3": 3
+ },
+ "script": "analysis/revision_r1/v4_fig2_fracao_e_deriva.py",
+ "script_sha256": "e96244923ed00d6acf69afa1f6b392cb12d2d852198363070a7e2f5a03307687",
+ "original": {
+  "arquivo": "analysis/v3_12_gerar_figuras.py",
+  "sha256": "b89f647f80343112124786e2dadb1b09a7421d3e3c21d7675c048f99e988f077"
+ },
+ "entradas_sha256": {
+  "F3": {
+   "caminho": "results/inputs/fracao_valida_val_treino_20_splits.json",
+   "sha256": "5fc43ee5fa25b78c74a428d883f4d917826e6adfc582174cb2961c232e4b0dea"
+  },
+  "F4_por_sorteio": {
+   "caminho": "results/fase2/_v3_2.1_3.1_parcial_16x60rnd.json",
+   "sha256": "c8bddfe828c583f7fca78f9d961fb2d502f5727956b78a2d9132598c1b42c5d1"
+  },
+  "F4_conferencia_resumo_2.1": {
+   "caminho": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json",
+   "sha256": "f6dfcc8d209e6d711daa16eddb6678e69aa6d432555eb949007b0cd8def223b8"
+  },
+  "F4_conferencia_T3_csv": {
+   "caminho": "tables_figures/tables_v3-12/T3_deriva_erro_v3-12.csv",
+   "sha256": "495e6c1116bd2ca6a3d88a858dea94a9fae1cc160eebe80d6c11e93382082ad3"
+  }
+ },
+ "largura_pt": 394.36,
+ "altura_pt": 376.0,
+ "fontes_pt": {
+  "ticks": 8.5,
+  "rotulos": 9.0,
+  "legenda": 8.5,
+  "cidade": 8.5
+ },
+ "bigode": "1.5 IQR nos dois paineis",
+ "conferencia_painel_b_tudo_confere": true
+}

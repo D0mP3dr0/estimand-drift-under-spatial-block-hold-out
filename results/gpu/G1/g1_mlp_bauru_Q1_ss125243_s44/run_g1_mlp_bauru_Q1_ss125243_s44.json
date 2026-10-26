@@ -1,9 +1,9 @@
 {
   "artefato_tipo": "run_treino_c0c1_mlp",
   "controle": "E1/B4 of internal/note_19.md: MLP without graph structure, same yardstick as the c0c1cf campaign",
-  "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/scripts/train_mlp_c0_spatial.py",
+  "script": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/scripts/train_mlp_c0_spatial.py",
   "script_sha256": "4b75093f52e8b7fdec45c7f2b8c5bcd68c38093c420697927b49fa99a474b31c",
-  "origem_script": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF\\gnn_rf_ieee_access\\FIRST_RESPONSE_REVIEW_IEEE_ACESSES\\EVIDENCIA_RESUBMISSAO\\dados\\scripts_congelados\\train_gnn_c0_spatial.py",
+  "origem_script": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF\\external\\prior_runs\\evidence\\dados\\scripts_congelados\\train_gnn_c0_spatial.py",
   "origem_script_sha256": "6f955629cde164f2843f454e1ebf6977292fd80647ef48ecd0df31e464c42445",
   "roadmap_itens": [
     "C0",

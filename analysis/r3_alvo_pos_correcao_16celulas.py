@@ -42,8 +42,8 @@ SCRIPT_PATH = Path(__file__).resolve()
 TENSOR_DIR = Path("/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3")
 MANIFEST = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/"
                  "manifest_mathematics_v3.jsonl")
-RUNDIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/"
-              "FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos")
+RUNDIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/"
+              "prior_runs/evidence/treinos")
 SPATIAL_CV_BASE = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2")
 OUT_RAW = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/"
                 "_R2_2026-09-24/r3_alvo_pos_correcao_16celulas_RAW.json")

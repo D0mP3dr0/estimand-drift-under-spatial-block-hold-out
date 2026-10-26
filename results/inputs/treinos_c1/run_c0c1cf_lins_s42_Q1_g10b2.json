@@ -1,6 +1,6 @@
 {
   "artefato_tipo": "run_treino_c0c1",
-  "script": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF\\gnn_rf_ieee_access\\FIRST_RESPONSE_REVIEW_IEEE_ACESSES\\EVIDENCIA_RESUBMISSAO\\dados\\scripts_congelados\\train_gnn_c0_spatial.py",
+  "script": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF\\external\\prior_runs\\evidence\\dados\\scripts_congelados\\train_gnn_c0_spatial.py",
   "script_sha256": "6f955629cde164f2843f454e1ebf6977292fd80647ef48ecd0df31e464c42445",
   "origem_script": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF_V2\\train_lins_physics.py",
   "origem_script_sha256": "13ea2ff0fcaca2776d8c0f3603b122efa509854c19fdac7e1d5d5e7d128826e1",
@@ -43,7 +43,7 @@
     "prefetch": 2,
     "seed": 42,
     "base_dir": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF_V2",
-    "evid_dir": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF\\gnn_rf_ieee_access\\FIRST_RESPONSE_REVIEW_IEEE_ACESSES\\EVIDENCIA_RESUBMISSAO\\treinos",
+    "evid_dir": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF\\external\\prior_runs\\evidence\\treinos",
     "freq_mhz": 900.0,
     "diag_freq_mhz": 1800.0,
     "grid_km": 10.0,
@@ -8525,7 +8525,7 @@
     "melhor_epoca": 30,
     "melhor_val_mae_rssi_db": 0.20171160995960236,
     "test_usado_na_selecao": false,
-    "checkpoint": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF\\gnn_rf_ieee_access\\FIRST_RESPONSE_REVIEW_IEEE_ACESSES\\EVIDENCIA_RESUBMISSAO\\treinos\\c0c1cf_lins_s42_Q1_g10b2\\checkpoints\\checkpoint_best.pt",
+    "checkpoint": "D:\\_ARQUIVO_SSD_F\\TOPO_RF\\GNN_RF\\external\\prior_runs\\evidence\\treinos\\c0c1cf_lins_s42_Q1_g10b2\\checkpoints\\checkpoint_best.pt",
     "test_no_melhor_ckpt": {
       "n_nos": 833593,
       "n_nos_avaliados": 833593,

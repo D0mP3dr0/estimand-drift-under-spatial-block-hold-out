@@ -1,0 +1,7 @@
+{
+  "description": "Two sentences of the manuscript of 3 October 2026 (model-drift paragraph) whose printed values the cross-check (0) of v3_15_V2bis_razao_sorteio_semente.py reads: the four draw/seed ratios R and the three F-intervals of theta. The manuscript source is not part of this repository; the sentences are kept verbatim so the check can run.",
+  "sentences": [
+    "By model, the ratio is $10.4$ (GNN) and $3.6$ (MLP) in Bauru Q1 and $7.6$ and $2.98$ in Campinas Q1, the pair closest to the noise of the training seed.",
+    "The interval is $[3.0;\\,131.8]$ for the GNN in Bauru Q1, and $[8.1;\\,87.3]$ for the GNN and $[1.5;\\,18.8]$ for the MLP in Campinas Q1, none containing unity."
+  ]
+}

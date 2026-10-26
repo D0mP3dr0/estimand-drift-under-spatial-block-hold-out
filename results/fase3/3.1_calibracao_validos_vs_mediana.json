@@ -81,7 +81,7 @@
     }
   ],
   "formulas_congeladas": {
-    "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/scripts_congelados/baselines_v2_por_particao.py",
+    "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/scripts_congelados/baselines_v2_por_particao.py",
     "sha256": "6d5fde065f86c7bdf39465d49e93d8f4218332273d2efdd1580dfea3ac45063c",
     "linhas": "245-284 (free_space_path_loss, okumura_hata_rural, cost231_hata)"
   },

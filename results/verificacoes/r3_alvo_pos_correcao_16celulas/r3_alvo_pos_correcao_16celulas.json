@@ -90,7 +90,7 @@
         "lins_Q1_celula_inteira": 1.6293892346023042,
         "bauru_Q1_celula_inteira": 3.205406635170954,
         "citado_em": "MDPI_Mathematics/draft_B/main.tex:332 (lins_Q1 whole cell, '1.63 dB')",
-        "fonte": "EVIDENCIA_RESUBMISSAO/dados/alvo/fismat_controle_negativo_alvo.json"
+        "fonte": "evidence/dados/alvo/fismat_controle_negativo_alvo.json"
       }
     },
     "cruzamento_npz": {
@@ -149,14 +149,14 @@
       "pre_correcao_r2_teto": {
         "corr": 0.4792797565460205,
         "r2": 0.2297090850348127,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_lins_s42_Q1_v2.json",
+        "arquivo": "evidence/dados/alvo/alvo_stats_lins_s42_Q1_v2.json",
         "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
         "populacao": "whole cell (the old script did not separate test)",
         "diferenca_r2_celula": 0.6356858988184833
       },
       "pre_correcao_mae_constante": {
         "valor_db": 1.6293892346023042,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/fismat_controle_negativo_alvo.json",
+        "arquivo": "evidence/dados/alvo/fismat_controle_negativo_alvo.json",
         "campo": "lins_Q1.col3_rssi.MAE_preditor_constante_mediana",
         "populacao": "celula inteira",
         "diferenca_celula_inteira": 0.11065787330032961
@@ -207,14 +207,14 @@
       "pre_correcao_r2_teto": {
         "corr": 0.3193790912628174,
         "r2": 0.10200300393586303,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_bauru_s42_Q1_v2.json",
+        "arquivo": "evidence/dados/alvo/alvo_stats_bauru_s42_Q1_v2.json",
         "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
         "populacao": "whole cell (the old script did not separate test)",
         "diferenca_r2_celula": 0.6647534267947641
       },
       "pre_correcao_mae_constante": {
         "valor_db": 3.205406635170954,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/fismat_controle_negativo_alvo.json",
+        "arquivo": "evidence/dados/alvo/fismat_controle_negativo_alvo.json",
         "campo": "bauru_Q1.col3_rssi.MAE_preditor_constante_mediana",
         "populacao": "celula inteira",
         "diferenca_celula_inteira": 0.08317793538392682
@@ -265,7 +265,7 @@
       "pre_correcao_r2_teto": {
         "corr": 0.2799915671348572,
         "r2": 0.07839527766663323,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_bauru_s42_Q2_v2.json",
+        "arquivo": "evidence/dados/alvo/alvo_stats_bauru_s42_Q2_v2.json",
         "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
         "populacao": "whole cell (the old script did not separate test)",
         "diferenca_r2_celula": 0.7218230840872586
@@ -316,7 +316,7 @@
       "pre_correcao_r2_teto": {
         "corr": 0.6791917681694031,
         "r2": 0.4613014579490802,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_bauru_s42_Q3_v2.json",
+        "arquivo": "evidence/dados/alvo/alvo_stats_bauru_s42_Q3_v2.json",
         "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
         "populacao": "whole cell (the old script did not separate test)",
         "diferenca_r2_celula": 0.3616502151897798
@@ -367,7 +367,7 @@
       "pre_correcao_r2_teto": {
         "corr": 0.5000356435775757,
         "r2": 0.2500356448480403,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_bauru_s42_Q4_v2.json",
+        "arquivo": "evidence/dados/alvo/alvo_stats_bauru_s42_Q4_v2.json",
         "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
         "populacao": "whole cell (the old script did not separate test)",
         "diferenca_r2_celula": 0.5159480084897723
@@ -590,7 +590,7 @@
       "pre_correcao_r2_teto": {
         "corr": 0.4921395182609558,
         "r2": 0.24220130543412566,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_lins_s42_Q2_v2.json",
+        "arquivo": "evidence/dados/alvo/alvo_stats_lins_s42_Q2_v2.json",
         "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
         "populacao": "whole cell (the old script did not separate test)",
         "diferenca_r2_celula": 0.7406912163629897
@@ -641,7 +641,7 @@
       "pre_correcao_r2_teto": {
         "corr": 0.20617219805717468,
         "r2": 0.042506975251726864,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_lins_s42_Q3_v2.json",
+        "arquivo": "evidence/dados/alvo/alvo_stats_lins_s42_Q3_v2.json",
         "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
         "populacao": "whole cell (the old script did not separate test)",
         "diferenca_r2_celula": 0.6969819218577689
@@ -692,7 +692,7 @@
       "pre_correcao_r2_teto": {
         "corr": 0.3822721242904663,
         "r2": 0.14613197700954572,
-        "arquivo": "EVIDENCIA_RESUBMISSAO/dados/alvo/alvo_stats_lins_s42_Q4_v2.json",
+        "arquivo": "evidence/dados/alvo/alvo_stats_lins_s42_Q4_v2.json",
         "campo": "corr_rssi_alvo_vs_neg_log10d_validos",
         "populacao": "whole cell (the old script did not separate test)",
         "diferenca_r2_celula": 0.7783399361534471
@@ -873,8 +873,8 @@
   },
   "definicoes": {
     "pi_frac_sentinela": "y[:,0] >= 299.0 (PL_TARGET_MAX_VALID); e3_inferencia_por_populacao.py:175,951; alvo_stats.py:'sentinela'",
-    "r2_teto": "corr_pearson(RSSI[~sentinela], -log10(max(dist_nearest_m,1.0)))**2, over the indicated POPULATION (whole cell or test set); COPY of the corr() function of EVIDENCIA_RESUBMISSAO/scripts/alvo_stats.py:24-27, reused by e3_alvos_dataset_v2_multi.py (generator of the alvo_stats_*_v2.json files). dist_nearest_m is the field of the tensor itself (rf_data['terrain'].dist_nearest_m), the same one used by alvo_stats.py and by e3_inferencia_por_populacao.py.",
-    "mae_constante": "mean(|RSSI - median(RSSI)|) over the SAME population (whole cell or test set); COPY of EVIDENCIA_RESUBMISSAO/scripts/fismat_controle_negativo_alvo.py:31-35 (field 'MAE_preditor_constante_mediana'). The constant is the median of the column, NOT the sentinel value by definition -- in the 16 cells it collapses to -110.0 dBm (== floor/sentinel) because frac_sentinela>0.5 in every cell and every partition; hence mae_constante_teste == mae_constante_piso_teste == mae_constante_treino_aplicada_teste in all 16 cells (see por_celula).",
+    "r2_teto": "corr_pearson(RSSI[~sentinela], -log10(max(dist_nearest_m,1.0)))**2, over the indicated POPULATION (whole cell or test set); COPY of the corr() function of evidence/scripts/alvo_stats.py:24-27, reused by e3_alvos_dataset_v2_multi.py (generator of the alvo_stats_*_v2.json files). dist_nearest_m is the field of the tensor itself (rf_data['terrain'].dist_nearest_m), the same one used by alvo_stats.py and by e3_inferencia_por_populacao.py.",
+    "mae_constante": "mean(|RSSI - median(RSSI)|) over the SAME population (whole cell or test set); COPY of evidence/scripts/fismat_controle_negativo_alvo.py:31-35 (field 'MAE_preditor_constante_mediana'). The constant is the median of the column, NOT the sentinel value by definition -- in the 16 cells it collapses to -110.0 dBm (== floor/sentinel) because frac_sentinela>0.5 in every cell and every partition; hence mae_constante_teste == mae_constante_piso_teste == mae_constante_treino_aplicada_teste in all 16 cells (see por_celula).",
     "split": "Literal COPY of train_gnn_c0_spatial.py:351-373 (latlon_graus_para_metros) and :412-487 (split_espacial_3vias) + SpatialKFold from GNN_RF_V2/03_training/spatial_cv.py, via e3_inferencia_por_populacao.py. grid_km/buffer_km/split_frac/split_seed read from run_rec['config']; idx_sha256_global of the 3 partitions checked against run_c0c1cf_<cidade>_s42_<Q>_g10b2.json (16/16 OK)."
   },
   "nao_verificado": [

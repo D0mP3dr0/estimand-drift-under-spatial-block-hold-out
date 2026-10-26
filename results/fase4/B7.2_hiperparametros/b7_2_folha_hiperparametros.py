@@ -23,7 +23,7 @@ from pathlib import Path
 
 V3 = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25")
 OUT = V3 / "fase4" / "B7.2_hiperparametros"
-EV = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO")
+EV = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence")
 TG = EV / "scripts" / "train_gnn_c0_spatial.py"
 TM = EV / "scripts" / "train_mlp_c0_spatial.py"
 BL = EV / "dados" / "scripts_congelados" / "baselines_v2_por_particao.py"

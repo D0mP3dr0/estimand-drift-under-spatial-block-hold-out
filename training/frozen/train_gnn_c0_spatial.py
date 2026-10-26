@@ -93,8 +93,8 @@ ORIGEM_PATH = r"D:\_ARQUIVO_SSD_F\TOPO_RF\GNN_RF_V2\train_lins_physics.py"
 ORIGEM_SHA256 = "13ea2ff0fcaca2776d8c0f3603b122efa509854c19fdac7e1d5d5e7d128826e1"
 
 DEFAULT_BASE_DIR = r"D:\_ARQUIVO_SSD_F\TOPO_RF\GNN_RF_V2"
-DEFAULT_EVID_DIR = (r"D:\_ARQUIVO_SSD_F\TOPO_RF\GNN_RF\gnn_rf_ieee_access"
-                    r"\FIRST_RESPONSE_REVIEW_IEEE_ACESSES\EVIDENCIA_RESUBMISSAO\treinos")
+DEFAULT_EVID_DIR = (r"D:\_ARQUIVO_SSD_F\TOPO_RF\GNN_RF\external"
+                    r"\prior_runs\evidence\treinos")
 
 
 def parse_args(argv=None):
@@ -132,7 +132,7 @@ def parse_args(argv=None):
     p.add_argument("--base-dir", type=str, default=DEFAULT_BASE_DIR,
                    help="[C0-3] Raiz do GNN_RF_V2 usada SO PARA LEITURA (modulos + graph_data).")
     p.add_argument("--evid-dir", type=str, default=DEFAULT_EVID_DIR,
-                   help="[C0-3] Raiz de saida (EVIDENCIA_RESUBMISSAO/treinos).")
+                   help="[C0-3] Raiz de saida (evidence/treinos).")
     p.add_argument("--freq-mhz", type=float, default=900.0,
                    help="[C0-4] Frequencia (MHz) do termo FSPL da LOSS e dos baselines analiticos.")
     p.add_argument("--diag-freq-mhz", type=float, default=1800.0,

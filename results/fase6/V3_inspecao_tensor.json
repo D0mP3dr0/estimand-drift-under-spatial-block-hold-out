@@ -1,0 +1,102 @@
+{
+  "tensor_path": "graph_data_v3/transfer_dataset_bauru_v19_Q1_enriched_cftudo.pt",
+  "modo_carga": "mmap",
+  "classe": "HeteroData",
+  "node_types": [
+    "terrain",
+    "antenna"
+  ],
+  "edge_types": [
+    [
+      "antenna",
+      "propagates_to",
+      "terrain"
+    ]
+  ],
+  "nos": {
+    "terrain": {
+      "x": {
+        "shape": [
+          12960000,
+          512
+        ],
+        "dtype": "torch.float32"
+      },
+      "pos": {
+        "shape": [
+          12960000,
+          2
+        ],
+        "dtype": "torch.float32"
+      },
+      "features_raw": {
+        "shape": [
+          12960000,
+          17
+        ],
+        "dtype": "float32"
+      },
+      "y": {
+        "shape": [
+          12960000,
+          5
+        ],
+        "dtype": "torch.float32"
+      },
+      "quadrant": {
+        "tipo": "str",
+        "valor": "Q1"
+      },
+      "dist_nearest_m": {
+        "shape": [
+          12960000
+        ],
+        "dtype": "torch.float32"
+      }
+    },
+    "antenna": {
+      "x": {
+        "shape": [
+          794,
+          6
+        ],
+        "dtype": "torch.float32"
+      },
+      "pos": {
+        "shape": [
+          794,
+          2
+        ],
+        "dtype": "torch.float32"
+      },
+      "num_nodes": {
+        "tipo": "int",
+        "valor": 794
+      }
+    }
+  },
+  "arestas": {
+    "antenna__propagates_to__terrain": {
+      "edge_index": [
+        2,
+        10503392
+      ],
+      "edge_attr": [
+        10503392,
+        2
+      ]
+    }
+  },
+  "global_store_chaves": [],
+  "metadado_de_nomes_de_atributos_encontrado": [],
+  "coluna_elevacao": "sem nome no tensor",
+  "tipo_no_transmissor": "antenna",
+  "n_transmissores_x_shape0": 794,
+  "n_transmissores_num_nodes": 794,
+  "n_transmissores_pos_shape0": 794,
+  "celula": "bauru_Q1",
+  "script": "analysis/revision_r1/v3_15_V3_tabela_celulas.py",
+  "script_sha256": "4d7ab4ebea394ffe65d666201132e05dfb099e5b5fafcf3e3123e095fbce8407",
+  "data_utc": "2026-10-26T12:40:17.068591+00:00",
+  "venv": "python"
+}

@@ -1,0 +1,11 @@
+{
+ "id": "V2_incerteza_comparacoes_variabilidade",
+ "subclaim": "S4 (title)",
+ "origem": "Reviewer request, round 1 (MDPI Mathematics), Reviewer 2, item 5: 'Provide uncertainty for the principal variability comparisons'",
+ "pergunta": "How precisely are the four headline drift numbers known? (i) 8.0 dB = mean over 16 cells of the SD across 60 draws of the MAE of the constant predictor in the valid nodes, b=2 (fase5/_parcial_laco/<cell>.json :: R5.constante.validos.mae_orig, checked against fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.<cell>.constante_validos.dp_simples); (ii) 2.2 dB = SD across the 16 per-cell means of the same error; (iii) 7.1 dB = same as (i) without buffer (fase4/R1_b0_por_sorteio.json :: celulas.<cell>.sorteios[].mae_constante.validos); (iv) 0.76 dB = mean over cells of the SD across 60 draws of the K-fold error scored jointly (fase5/E1_por_sorteio.json :: Err_conjunto[constante|validos|b2]).",
+ "metodo_fixado": "Nonparametric bootstrap over DRAWS, per cell, B = 4000 replicates, seed 20261026, resampling the 60 draws with replacement and recomputing: SD per cell, mean of the SDs over the 16 cells (i, iii, iv), SD across the means of the 16 cells (ii) and the ratios (i)/(ii) and (i)/(iv). Percentile intervals 2.5-97.5. For (ii) also a jackknife over CELLS (16 leave-one-out) as a second reading, because the cells are the unit. First reproduce the four published values (tolerance 0.05 dB) as a check; a discrepancy aborts.",
+ "previsao": "CI of (i) of about 7 to 9 dB; CI of (ii) wide (16 cells) but below 4 dB; ratio (i)/(ii) with CI above 2; ratio (i)/(iv) with CI above 5.",
+ "leitura": "95% CI of (i) entirely above the 95% CI of (ii) AND CI of the ratio (i)/(ii) excluding 1 -> REINFORCES S4 (the drift exceeds the between-cell difference at the stated precision). CI of the ratio including 1 -> DELIMITS (the text says 'of the same order'). For (iv): CI of the ratio (i)/(iv) excluding 1 -> REINFORCES the K-fold sentence.",
+ "se_inverter": "No outcome reverses S4; only the strength of the verb changes.",
+ "fixado_em": "2026-10-26T09:35:30-03:00 (before any script or result of this test existed)"
+}

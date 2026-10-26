@@ -78,8 +78,8 @@ PARCIAL = OUT_DIR / "fase2" / "_v3_1.6_2.3_parcial.json"
 
 TENSOR_DIR = Path("/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3")
 BASELINES_CONGELADO = Path(
-    "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/"
-    "FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/"
+    "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/"
+    "prior_runs/evidence/dados/"
     "scripts_congelados/baselines_v2_por_particao.py")
 
 _spec = importlib.util.spec_from_file_location("baselines_congelado", BASELINES_CONGELADO)

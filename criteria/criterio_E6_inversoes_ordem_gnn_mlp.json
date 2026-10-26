@@ -1,0 +1,11 @@
+{
+ "id": "E6_inversoes_ordem_gnn_mlp",
+ "subclaim": "S8 (trained models drift) and S9 (paired comparison by draw)",
+ "origem": "Reviewer request, round 1 (MDPI Mathematics), Reviewer 3, item 5: 'differences in predictor rankings and the substantial variability across split draws'",
+ "pergunta": "In how many of the 20 draws (training seed 42, g=10 km, b=2 km) does the GNN-MLP order in the valid-test-node MAE invert, in each of the 4 cells of the trained models (Bauru Q1 and Q3, Campinas Q1 and Q3)? Data: existing runs in gpu/G1/g1_<model>_<cell>_ss<split>_s42/ (run JSON and prediction .npz), the same that fed Table 8 (aggregator v10).",
+ "metodo_fixado": "Per cell and draw: MAE_valid(GNN), MAE_valid(MLP), difference d = MAE_MLP - MAE_GNN, in the valid nodes and in all nodes, read by the SAME routine as the v10 aggregator (reuse by import or a copy checked by sha; the artifact says which). Counts: draws with d>0, d<0, |d| <= 0.132 dB (repetition noise); mean and SD of d across draws; 'inversion' = sign of d in some draw different from the sign of the mean. Excluded draws (no valid node; no antenna-terrain edge in validation) are counted as in the aggregator.",
+ "previsao": "GNN below the MLP in most draws; inversion in at least one cell; SD of d of the order of the mean of d.",
+ "leitura": "inversion in >= 1 draw in >= 1 cell OR SD(d) >= |mean(d)| in >= 1 cell -> REINFORCES S8/S9: the order between models depends on the draw and the valid comparison is paired and by distribution. No inversion and SD(d) < |mean(d)|/2 in all cells -> neutral (the text says the order is stable despite the drift).",
+ "se_inverter": "Not applicable to S4.",
+ "fixado_em": "2026-10-26T09:35:30-03:00 (before any script or result of this test existed)"
+}

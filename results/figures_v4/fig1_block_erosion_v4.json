@@ -1,0 +1,23 @@
+{
+ "script": "analysis/revision_r1/v4_fig1_block_erosion.py",
+ "script_sha256": "2f987d4daad21cc1ee39e9fe1a152b3327457fe89b00dc188bd5c3edb06e7f92",
+ "original": "analysis/v3_12_fig1_block_erosion.py",
+ "original_sha256": "6677f8fa7bb04337418339d3f8ddb97bc137b42097c02eebd0854ca03d3a5cd7",
+ "largura_pt": 394.36,
+ "altura_pt": 273.59999999999997,
+ "fonte_pt": 9.0,
+ "fonte_rodape_pt": 8.5,
+ "rho_a": 0.608584073464102,
+ "rho_b": 0.36,
+ "rho_esperado": {
+  "a": 0.608584073464102,
+  "b": 0.36
+ },
+ "luminancia_cinza_0a255": {
+  "vizinho_nao_aparador": 243.85559999999998,
+  "vizinho_aparador_alfa_0.40": 197.08159999999998,
+  "vizinho_aparador_alfa_0.25_v3": 218.80100000000002,
+  "area_removida_laranja_alfa_0.30_sobre_branco": 216.92885999999993,
+  "nota": "a area removida distingue-se tambem por hachura '////' (padrao, nao so cor)"
+ }
+}

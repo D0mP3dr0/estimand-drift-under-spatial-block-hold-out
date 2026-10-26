@@ -32,8 +32,8 @@ GRID_KM = 10.0
 BUFFER_KM = 2.0
 
 MODELO_V3_DIR = Path(__file__).resolve().parent.parent / "modelo_v3"
-FROZEN_DIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/"
-                  "EVIDENCIA_RESUBMISSAO/scripts")
+FROZEN_DIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/"
+                  "evidence/scripts")
 # Digests of the wrapped files; the same values appear in the run records of campaign A4.
 SHA_ESPERADOS = {
     MODELO_V3_DIR / "train_gnn_v3.py": "903b1ffaa19f7d6d732e958516a9e3dd98110cc3ac0f1aed704582e6e23a914f",

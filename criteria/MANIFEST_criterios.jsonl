@@ -1,0 +1,51 @@
+{"id": "1.4", "sha256": "3ac982d90e3b54eafb3080394a7b0808214e31e2983e1801a679ca7862cf5acf", "hora": "2026-09-25T17:43:17-03:00"}
+{"id": "2.1", "sha256": "9fd3132ec6dc18a414e1be8ac01bbd2ff1ed0f8fb0239c6d616157f66265d40c", "hora": "2026-09-25T17:43:53.665344-03:00"}
+{"id": "3.1", "sha256": "beaddf64705b42f5314230fa905b5b123bbe200e2b26e51265226a3e9b4420d1", "hora": "2026-09-25T17:43:53.665422-03:00"}
+{"id": "1.3", "sha256": "e81e6ef0cd41899645d4023bd34f7289d4cbdb5d0ef13abe1c1622332c2ae552", "hora": "2026-09-25T18:17:36.809240-03:00"}
+{"id": "1.5", "sha256": "eb29bf165af9a5eb5172bd5ffda6cb35913b77db7e24d8ab2be952b15ec6afc1", "hora": "2026-09-25T18:17:36.809446-03:00"}
+{"id": "1.7", "sha256": "120976c598393743011e2fa9fc023600663d142416f4a0c784c055c876c4dad3", "hora": "2026-09-25T18:17:40"}
+{"id": "1.1", "sha256": "0f3db0077130a9403e595f3a537beb49ef52aa6f585c93ffc0e427a2d33b1af9", "hora": "2026-09-25T18:18:14-03:00"}
+{"id": "1.2", "sha256": "2e5e61970eb19ce27faf4d78da210384a120027f8c16407f7819a31d4981fa65", "hora": "2026-09-25T18:18:14-03:00"}
+{"id": "3.2", "sha256": "457452278ee43abfd7d494b9d17ad78aa044ce6ee3a92936d2045a60f9e1f8ca", "hora": "2026-09-25T18:19:24.564927-03:00"}
+{"id": "3.4", "sha256": "2b0e24a2c806b32fc224ba26bd5a1235e0c46c5098a33e181dfe8840ab0580ba", "hora": "2026-09-25T18:19:24.565010-03:00"}
+{"id": "1.8", "sha256": "7103aa7ea39d01b4a3c40980b3382e07a1231464b421a6104c3d86e77d3beca9", "hora": "2026-09-25 19:26:59"}
+{"id": "2.1_e_3.1", "evento": "reexecucao_com_60_seeds_aleatorios", "hora": "2026-09-25T19:29:26.910907-03:00"}
+{"id": "1.6", "sha256": "d5a06f9444c9711e6dfdda7cf47a91f3cec1e5f37fa4dbafcaa8dde3c1bd0a0f", "hora": "2026-09-26T00:45:33Z"}
+{"id": "2.3", "sha256": "e0b6847baa1bfd44826cd0d2344b02bfc04036a6c04374436829a32b6220e32c", "hora": "2026-09-26T00:45:33Z"}
+{"id": "A1", "sha256": "557d1e7e3bcd012c225f670d0b28636654ca0a9d19e390be36ecf27f70a4bd3a", "hora": "2026-09-25T23:41:21-03:00"}
+{"id": "A1bis", "sha256": "5374b3ef1bf7022594862ed698bf6ad9d8fa72dbb877bdfff053f78f16aa2647", "hora": "2026-09-26T01:01:28-03:00"}
+{"id": "A2", "sha256": "09d7655dacf39779d809a5870996fc9ca6ac611a5ca795d24aba14b2b0e94343", "hora": "2026-09-26T01:24:00-03:00"}
+{"id": "A2", "sha256": "4f9b173ffce0410795d7c7a9256893ec7b2adef620678a67b595401b5b21079a", "hora": "2026-09-26 01:32:07"}
+{"id": "A3", "sha256": "76bc7f706e9e87705738353176c87dc2a19fd4deb320fc4c6401776f13e9d341", "hora": "2026-09-26 06:28:02"}
+{"id": "A3_analise", "sha256": "d4bf44efef665ac70ecfcb5432e97b737beaafc91f025c71aabf91094694ad63", "hora": "2026-09-26 06:28:50"}
+{"id": "A3_agregar_script", "sha256": "ddfa13f7575c8f78bd2f1893b075ec59e2f6df6b2f55a441204457393f36b253", "hora": "2026-09-26 08:15:41"}
+{"id": "A4", "sha256": "6a6ea4a98ed596380981948da1dee050eb9c2af8f078c4e5edc7309eb697e228", "hora": "2026-09-26 09:15:24"}
+{"id": "A4_agregar_script", "sha256": "b5bb904429fd7ff79566a013e202f14d256794fa82cb32f427d6cdfa3bb07b6f", "hora": "2026-09-26 09:17:25"}
+{"id": "1.8b", "sha256": "e7dda052f948629223036df9b7787742c99e001e8041e0e8ac7dd9d9e578a106", "hora": "2026-09-26 09:45:38"}
+{"id": "A4_suplemento_inversao_validos", "arquivo": "criteria/criterio_A4_suplemento_validos.json", "sha256": "85249ecd1fc4457b70046dd0cd9e6c8a16be005c5dd2b23e836e1b8e64a444be", "registrado_em": "2026-09-27T08:51:40-03:00", "natureza": "post_hoc_declarado_antes_do_calculo"}
+{"id": "A4_suplemento_inversao_validos_emenda", "arquivo": "criteria/criterio_A4_suplemento_validos.json", "sha256": "e0da62204d623cd1c5765e00d65d21b7a6d0af73cc2c49e8152090a6b48376d3", "script": "scripts/v3_A4_suplemento_inversao_validos.py", "script_sha256": "232d80bb39a81ac4c6585c452b74a764f808133d72cd4869b2db19f231835d79", "registrado_em": "2026-09-27T08:56:41-03:00"}
+{"id": "resposta_cego_v3-10", "arquivo": "criteria/criterio_resposta_cego_v3-10.json", "sha256": "b8b73bf8c88d66aa5851e5e6dd5eb719a0eefb458cede7f0b82122d5907b5a65", "registrado_em": "2026-09-27T14:11:21-03:00", "natureza": "post_hoc_descritivo_declarado_antes_do_calculo"}
+{"id": "resposta_cego_v3-10_adendo_G1G2", "arquivo": "criteria/criterio_resposta_cego_v3-10.json", "sha256": "4f8cbb20689e1389791e00db1863ddcd6a308f70e9113185da38b261cac7a850", "registrado_em": "2026-09-27T14:37:41-03:00"}
+{"id": "A2c", "arquivo": "criteria/criterio_A2c.json", "sha256": "606d1e2be3e99e84cd7b7b815eb24d4748f386ec2e52d43f77e0c7c894f12fe7", "registrado_em": "2026-09-27T15:13:17-03:00"}
+{"id": "errata_2026-09-27", "arquivo": "criteria/criterio_resposta_cego_v3-10.json", "registrado_em": "2026-09-27T15:13:17-03:00"}
+{"id": "R1_b0", "arquivo": "criteria/criterio_R1_b0.json", "sha256": "df1e57da84c6b33d32a5481165bc95ef87c967e184b0759bc5eb1ba40b15e15d", "registrado_em": "2026-10-01T17:13:54-03:00"}
+{"id": "R2_referencia_desenho", "arquivo": "criteria/criterio_R2_referencia_desenho.json", "sha256": "a2c40fc40ecb574a5e91b9fe73d43d67fc351c5e679382728d171f2fb1570901", "registrado_em": "2026-10-01T17:13:54-03:00"}
+{"id": "R3_termo_desenho", "arquivo": "criteria/criterio_R3_termo_desenho.json", "sha256": "fc96a23486349d9f2c3c7a3a3c73d31b9c86a938095771ad605d88c928b700dd", "registrado_em": "2026-10-01T17:13:54-03:00"}
+{"id": "R4_p_fechado_vs_frequencia", "arquivo": "criteria/criterio_R4_p_fechado_vs_frequencia.json", "sha256": "4bb4027b318d63c3c7103671db0f04687404e23b0c4bade876dced97fa3d52fe", "registrado_em": "2026-10-01T17:13:54-03:00"}
+{"id": "R5_variancia_um_sorteio", "arquivo": "criteria/criterio_R5_variancia_um_sorteio.json", "sha256": "51488d326ff745c605c8e27483cfc91f334caa2a5a23d273ba4c010c85a07faf", "registrado_em": "2026-10-01T22:47:16-03:00"}
+{"id": "R6_nivel_do_sentinela", "arquivo": "criteria/criterio_R6_nivel_do_sentinela.json", "sha256": "a0eedb69a2e646e9e46e2829a0d57b1be09a020f23ac7fdf77d55b2d5d9ec709", "registrado_em": "2026-10-01T22:47:16-03:00"}
+{"id": "R7_sementes_x_sorteios_existentes", "arquivo": "criteria/criterio_R7_sementes_x_sorteios_existentes.json", "sha256": "66e92206ff16938bcbbb5299366e58de6ff33388de16d4f7af847a024d4a9cc3", "registrado_em": "2026-10-01T22:47:16-03:00"}
+{"id": "G1_modelos_g10", "arquivo": "criteria/criterio_G1_modelos_g10.json", "sha256": "d0d2b6366930d53ca71065baeff36addbe61be6f56560e722d08721e91125132", "registrado_em": "2026-10-01T22:47:16-03:00"}
+{"id": "G1_modelos_g10_adendo1", "arquivo": "criteria/criterio_G1_adendo1.json", "sha256": "e36a6294948566905f50ca5adebe325c3d5a003178a18397ed499fad4eb409e5", "registrado_em": "2026-10-01T23:33:14-03:00"}
+{"id": "G1_modelos_g10_adendo2", "arquivo": "criteria/criterio_G1_adendo2.json", "sha256": "5089c7f869adb34d5172201b3e6c1e57ad383515c25af73e59f739acfe8e80d0", "registrado_em": "2026-10-01T23:51:05-03:00"}
+{"id": "G1_modelos_g10_adendo3", "arquivo": "criteria/criterio_G1_adendo3.json", "sha256": "b0a4280a91830ac1c6cc0c9a68bc83f4bc37bfedd7c6ed239294cbf01ba1cf2b", "registrado_em": "2026-10-02T19:28:48-03:00"}
+{"id": "G1_modelos_g10_adendo4", "arquivo": "criteria/criterio_G1_adendo4.json", "sha256": "9d48d0d38d0f0b57e269ba8644955faa050ab08ad4355a16778bc0c05540e4e4", "registrado_em": "2026-10-03T11:06:33-03:00"}
+{"id": "G1b_campinas_bloco_cruzado_completo", "arquivo": "criteria/criterio_G1b_campinas_bloco_cruzado.json", "sha256": "be5a75e346a7b9d5db25bb12147cc6f2b4963e6cdf1345c2c543db68b47db044", "registrado_em": "2026-10-03T16:18:37-03:00"}
+{"id": "E1_kfold_blocos_pontuado_em_conjunto", "arquivo": "criteria/criterio_E1_kfold_conjunto.json", "sha256": "c47a43d2b07d0e90c0138362bb25a4673984c0e8a3016d66b9882f7e2f81cbcc", "registrado_em": "2026-10-03T20:27:18-03:00"}
+{"id": "E4_hajek_p_fechado", "arquivo": "criteria/criterio_E4_hajek_p_fechado.json", "sha256": "42f8b8454b6e36cecd7d32d732cb7dbda36ff98a7210ddb476a46f656afe6d98", "registrado_em": "2026-10-03T21:39:21-03:00"}
+{"id": "V1_variancia_amostra_pequena", "arquivo": "criteria/criterio_V1_variancia_amostra_pequena.json", "sha256": "2b450a58bc2c8da0aee476d002886b02a33dfbf513108c2fb7ca7a4c1761d1e5", "registrado_em": "2026-10-26T09:35:30-03:00"}
+{"id": "V2_incerteza_comparacoes_variabilidade", "arquivo": "criteria/criterio_V2_incerteza_comparacoes_variabilidade.json", "sha256": "dc439cf936489ee75e26f50b3b01ea6a59bf370bee55963d40782845e75c7876", "registrado_em": "2026-10-26T09:35:30-03:00"}
+{"id": "V2bis_razao_sorteio_semente", "arquivo": "criteria/criterio_V2bis_razao_sorteio_semente.json", "sha256": "8862da8ca8e8089a5ced992c12b85039c77eb5ed78d3ac99dc926e2277642285", "registrado_em": "2026-10-26T10:01:49-03:00"}
+{"id": "V3_tabela_celulas", "arquivo": "criteria/criterio_V3_tabela_celulas.json", "sha256": "16bf0bcfcc386218f9879228e68a0cb554636a842354d68bf41d63f38939cffb", "registrado_em": "2026-10-26T09:35:30-03:00"}
+{"id": "V4_meia_largura_vies", "arquivo": "criteria/criterio_V4_meia_largura_vies.json", "sha256": "6c880dc1f00c2545c5a82e955565d629f226662270cfc28b37070a0a3afea2e8", "registrado_em": "2026-10-26T09:35:30-03:00"}
+{"id": "E6_inversoes_ordem_gnn_mlp", "arquivo": "criteria/criterio_E6_inversoes_ordem_gnn_mlp.json", "sha256": "1a6406b833274eacbd91e097af0426cb2c3390201357a34e75cc19735e33756f", "registrado_em": "2026-10-26T09:35:30-03:00"}

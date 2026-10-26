@@ -48,14 +48,14 @@ import torch
 
 SCRIPT_PATH = Path(__file__).resolve()
 TENSOR_DIR = Path("/trabalho/TOPO_RF_DOWNLOAD_DRIVE/graph_data_v3")
-RUNDIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/"
-              "FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/treinos")
+RUNDIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/"
+              "prior_runs/evidence/treinos")
 MANIFEST = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/"
                  "manifest_mathematics_v3.jsonl")
 SPATIAL_CV_DIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF_V2/03_training")
 BASELINES_CONGELADO = Path(
-    "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/"
-    "FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/"
+    "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/"
+    "prior_runs/evidence/dados/"
     "scripts_congelados/baselines_v2_por_particao.py")
 
 OUT_DIR = Path("/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/MDPI_Mathematics/_v3_2026-09-25")

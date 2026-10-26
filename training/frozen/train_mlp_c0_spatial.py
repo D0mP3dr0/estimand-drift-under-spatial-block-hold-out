@@ -78,8 +78,8 @@ RSSI_THRESHOLD_CONF_DBM = -85.0
 PL_TARGET_MAX_VALID = 299.0
 
 # The frozen GNN trainer this script derives from (path on the original machine).
-ORIGEM_PATH = (r"D:\_ARQUIVO_SSD_F\TOPO_RF\GNN_RF\gnn_rf_ieee_access"
-               r"\FIRST_RESPONSE_REVIEW_IEEE_ACESSES\EVIDENCIA_RESUBMISSAO"
+ORIGEM_PATH = (r"D:\_ARQUIVO_SSD_F\TOPO_RF\GNN_RF\external"
+               r"\prior_runs\evidence"
                r"\dados\scripts_congelados\train_gnn_c0_spatial.py")
 ORIGEM_SHA256 = "6f955629cde164f2843f454e1ebf6977292fd80647ef48ecd0df31e464c42445"
 
@@ -89,8 +89,8 @@ MLP_LARGURAS = (712, 712, 720, 688, 256)   # 18 -> ... -> 256 -> decoder
 
 # Defaults of the original machine; pass --base-dir and --evid-dir elsewhere.
 DEFAULT_BASE_DIR = r"D:\_ARQUIVO_SSD_F\TOPO_RF\GNN_RF_V2"
-DEFAULT_EVID_DIR = (r"D:\_ARQUIVO_SSD_F\TOPO_RF\GNN_RF\gnn_rf_ieee_access"
-                    r"\FIRST_RESPONSE_REVIEW_IEEE_ACESSES\EVIDENCIA_RESUBMISSAO\treinos")
+DEFAULT_EVID_DIR = (r"D:\_ARQUIVO_SSD_F\TOPO_RF\GNN_RF\external"
+                    r"\prior_runs\evidence\treinos")
 
 
 def parse_args(argv=None):
@@ -137,7 +137,7 @@ def parse_args(argv=None):
     p.add_argument("--base-dir", type=str, default=DEFAULT_BASE_DIR,
                    help="[C0-3] Raiz do GNN_RF_V2 usada SO PARA LEITURA (modulos + graph_data).")
     p.add_argument("--evid-dir", type=str, default=DEFAULT_EVID_DIR,
-                   help="[C0-3] Raiz de saida (EVIDENCIA_RESUBMISSAO/treinos).")
+                   help="[C0-3] Raiz de saida (evidence/treinos).")
     p.add_argument("--freq-mhz", type=float, default=900.0,
                    help="[C0-4] Frequencia (MHz) do termo FSPL da LOSS e dos baselines analiticos.")
     p.add_argument("--diag-freq-mhz", type=float, default=1800.0,

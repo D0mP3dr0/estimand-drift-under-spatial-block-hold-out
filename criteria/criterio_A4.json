@@ -540,7 +540,7 @@
   "proveniencia": "all runs with insumos.sha256_rf_data = manifest v4 (tensores_cftudo); in the same cell and split seed, identical test-partition hash GNN×MLP; a run with rc=3 is a finding, not data",
   "nao_determinismo": "no individual run is citable; only distributions; checkpoint selection is part of the variance",
   "votos": "3 independent recalculations per number; aggregation script (v3_A4_agregar.py, to be written BEFORE reading any A4 prediction) re-run independently and read in full",
-  "proibido": "fix tolerances a priori in dB; read predictions before the batch closes; compare with numbers from the IEEE Access article"
+  "proibido": "fix tolerances a priori in dB; read predictions before the batch closes; compare with numbers from earlier runs"
  },
  "condicao_de_lancamento": "only after 'ALL 80 runs completed' for A3 (single GPU); modelo_v3 code byte-identical to the code approved in the A3 gate; free VRAM ≥ 1 GB; embedding server (pid 1630) left untouched; driver launched with setsid nohup",
  "orcamento": "40 runs ≈ 20×16 min + 20×2 min ≈ 6 h; 10 MLP ≈ 20 min; driver cap 840 min"

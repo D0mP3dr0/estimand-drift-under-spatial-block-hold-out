@@ -20,26 +20,26 @@
  },
  "metodo": "direct reading of geometry/subgraphs from the 16 g10b2 run JSONs; independent recalculation of the extent in km (equirectangular, cos phi at the center); analytic bbox intersection per pair of quadrants of the same city; count of coincident nodes via a synthetic grid only when the bboxes intersect",
  "insumos": {
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json": "552890b4dd972c6e7e4bb2193d03a7483b70f6d6bcedb2434c0401cbd9c5f7a2",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json": "42256b79ed7914b9776aaccc24ff1139236c59ce6662e653e8684419c436f7d2",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json": "a2519b94caf880d98995ea8066a99357a3e6780ec1ab35ebfca9d144fbe89909",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json": "adddf2211d473a592fc18722c12eb4ec980b1d5da7512f18611ede57d7fec885",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q1_g10b2.json": "257ca5ef60b07acede04a81a84764dc152d455d2adf797b417a64727dd8366c6",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q2_g10b2.json": "3f4137ec7c2f7c1dcf23ba3d8c5eecac69038d75948c89d3d65785fe176a9df5",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q3_g10b2.json": "2549ce770a5fce6fc95929a2ddfe42801f63e27dc435a8fe77c60bcc4c32477e",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q4_g10b2.json": "3760ce316e13e52a7ff614880b9fe3efe0524f5b55402d41f75948181ec07224",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json": "e56719dffd273cce73fcafa71afbb8f8417ddd0ce8dd923089652bce253f8359",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q2_g10b2.json": "2c60de023b73a63d642a6023a4159bfe28bcbf85643be3f1c5b92f76f47fa0e9",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q3_g10b2.json": "0d25f361abecab655e17e28d5a82c9e7d2833d80bcf59367e31e3de5b61a4a77",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q4_g10b2.json": "f732d6e97c4146b4c053fad63023ba8ba131845e923a47eb1b0e1f5fd9d9d873",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q1_g10b2.json": "091a498915d1482476f983fb260cc4f774ab9b3118fd7187e311259b01e03819",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q2_g10b2.json": "bafed7e36b1096e3e3bb064181357298d09212edf6e875f59f0997d10b0bf368",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q3_g10b2.json": "dca25aaaa504d33a766859231164f49d2a825c3461fa9a47f9b3e9e9058c9069",
-  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q4_g10b2.json": "2eaa5abd38fb24ff466b77501ba3ea0c1e4a2bb39a646701a441cb4856eba2d4"
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json": "552890b4dd972c6e7e4bb2193d03a7483b70f6d6bcedb2434c0401cbd9c5f7a2",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json": "42256b79ed7914b9776aaccc24ff1139236c59ce6662e653e8684419c436f7d2",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json": "a2519b94caf880d98995ea8066a99357a3e6780ec1ab35ebfca9d144fbe89909",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json": "adddf2211d473a592fc18722c12eb4ec980b1d5da7512f18611ede57d7fec885",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_campinas_s42_Q1_g10b2.json": "257ca5ef60b07acede04a81a84764dc152d455d2adf797b417a64727dd8366c6",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_campinas_s42_Q2_g10b2.json": "3f4137ec7c2f7c1dcf23ba3d8c5eecac69038d75948c89d3d65785fe176a9df5",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_campinas_s42_Q3_g10b2.json": "2549ce770a5fce6fc95929a2ddfe42801f63e27dc435a8fe77c60bcc4c32477e",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_campinas_s42_Q4_g10b2.json": "3760ce316e13e52a7ff614880b9fe3efe0524f5b55402d41f75948181ec07224",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json": "e56719dffd273cce73fcafa71afbb8f8417ddd0ce8dd923089652bce253f8359",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_lins_s42_Q2_g10b2.json": "2c60de023b73a63d642a6023a4159bfe28bcbf85643be3f1c5b92f76f47fa0e9",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_lins_s42_Q3_g10b2.json": "0d25f361abecab655e17e28d5a82c9e7d2833d80bcf59367e31e3de5b61a4a77",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_lins_s42_Q4_g10b2.json": "f732d6e97c4146b4c053fad63023ba8ba131845e923a47eb1b0e1f5fd9d9d873",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q1_g10b2.json": "091a498915d1482476f983fb260cc4f774ab9b3118fd7187e311259b01e03819",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q2_g10b2.json": "bafed7e36b1096e3e3bb064181357298d09212edf6e875f59f0997d10b0bf368",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q3_g10b2.json": "dca25aaaa504d33a766859231164f49d2a825c3461fa9a47f9b3e9e9058c9069",
+  "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q4_g10b2.json": "2eaa5abd38fb24ff466b77501ba3ea0c1e4a2bb39a646701a441cb4856eba2d4"
  },
  "por_celula": {
   "bauru_Q1": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q1_g10b2.json",
    "bbox_lon_min_deg": -50.063751220703125,
    "bbox_lon_max_deg": -49.064029693603516,
    "bbox_lat_min_deg": -22.324304580688477,
@@ -63,7 +63,7 @@
    "n_antena": 794
   },
   "bauru_Q2": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q2_g10b2.json",
    "bbox_lon_min_deg": -49.063751220703125,
    "bbox_lon_max_deg": -48.064029693603516,
    "bbox_lat_min_deg": -22.324304580688477,
@@ -87,7 +87,7 @@
    "n_antena": 794
   },
   "bauru_Q3": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q3_g10b2.json",
    "bbox_lon_min_deg": -50.063751220703125,
    "bbox_lon_max_deg": -49.064029693603516,
    "bbox_lat_min_deg": -23.324304580688477,
@@ -111,7 +111,7 @@
    "n_antena": 794
   },
   "bauru_Q4": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_bauru_s42_Q4_g10b2.json",
    "bbox_lon_min_deg": -49.063751220703125,
    "bbox_lon_max_deg": -48.064029693603516,
    "bbox_lat_min_deg": -23.324304580688477,
@@ -135,7 +135,7 @@
    "n_antena": 794
   },
   "campinas_Q1": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q1_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_campinas_s42_Q1_g10b2.json",
    "bbox_lon_min_deg": -48.06097412109375,
    "bbox_lon_max_deg": -47.06125259399414,
    "bbox_lat_min_deg": -22.90513801574707,
@@ -159,7 +159,7 @@
    "n_antena": 4252
   },
   "campinas_Q2": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q2_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_campinas_s42_Q2_g10b2.json",
    "bbox_lon_min_deg": -47.06097412109375,
    "bbox_lon_max_deg": -46.06125259399414,
    "bbox_lat_min_deg": -22.90513801574707,
@@ -183,7 +183,7 @@
    "n_antena": 4252
   },
   "campinas_Q3": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q3_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_campinas_s42_Q3_g10b2.json",
    "bbox_lon_min_deg": -48.06097412109375,
    "bbox_lon_max_deg": -47.06125259399414,
    "bbox_lat_min_deg": -23.90513801574707,
@@ -207,7 +207,7 @@
    "n_antena": 4252
   },
   "campinas_Q4": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_campinas_s42_Q4_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_campinas_s42_Q4_g10b2.json",
    "bbox_lon_min_deg": -47.06097412109375,
    "bbox_lon_max_deg": -46.06125259399414,
    "bbox_lat_min_deg": -23.90513801574707,
@@ -231,7 +231,7 @@
    "n_antena": 4252
   },
   "lins_Q1": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json",
    "bbox_lon_min_deg": -50.745140075683594,
    "bbox_lon_max_deg": -49.745418548583984,
    "bbox_lat_min_deg": -21.679304122924805,
@@ -255,7 +255,7 @@
    "n_antena": 175
   },
   "lins_Q2": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q2_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_lins_s42_Q2_g10b2.json",
    "bbox_lon_min_deg": -49.745140075683594,
    "bbox_lon_max_deg": -48.745418548583984,
    "bbox_lat_min_deg": -21.679304122924805,
@@ -279,7 +279,7 @@
    "n_antena": 175
   },
   "lins_Q3": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q3_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_lins_s42_Q3_g10b2.json",
    "bbox_lon_min_deg": -50.745140075683594,
    "bbox_lon_max_deg": -49.745418548583984,
    "bbox_lat_min_deg": -22.679304122924805,
@@ -303,7 +303,7 @@
    "n_antena": 175
   },
   "lins_Q4": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q4_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_lins_s42_Q4_g10b2.json",
    "bbox_lon_min_deg": -49.745140075683594,
    "bbox_lon_max_deg": -48.745418548583984,
    "bbox_lat_min_deg": -22.679304122924805,
@@ -327,7 +327,7 @@
    "n_antena": 175
   },
   "sorocaba_Q1": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q1_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q1_g10b2.json",
    "bbox_lon_min_deg": -48.452640533447266,
    "bbox_lon_max_deg": -47.452919006347656,
    "bbox_lat_min_deg": -23.5009708404541,
@@ -351,7 +351,7 @@
    "n_antena": 1398
   },
   "sorocaba_Q2": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q2_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q2_g10b2.json",
    "bbox_lon_min_deg": -47.452640533447266,
    "bbox_lon_max_deg": -46.452919006347656,
    "bbox_lat_min_deg": -23.5009708404541,
@@ -375,7 +375,7 @@
    "n_antena": 1398
   },
   "sorocaba_Q3": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q3_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q3_g10b2.json",
    "bbox_lon_min_deg": -48.452640533447266,
    "bbox_lon_max_deg": -47.452919006347656,
    "bbox_lat_min_deg": -24.5009708404541,
@@ -399,7 +399,7 @@
    "n_antena": 1398
   },
   "sorocaba_Q4": {
-   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q4_g10b2.json",
+   "run_json": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_sorocaba_s42_Q4_g10b2.json",
    "bbox_lon_min_deg": -47.452640533447266,
    "bbox_lon_max_deg": -46.452919006347656,
    "bbox_lat_min_deg": -24.5009708404541,

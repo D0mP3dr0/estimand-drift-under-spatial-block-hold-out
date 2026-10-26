@@ -1,0 +1,725 @@
+{
+ "id": "V2_resumo",
+ "criterio": "criteria/criterio_V2_incerteza_comparacoes_variabilidade.json",
+ "criterio_sha256": "2905a435a23ea69d3733e8c7b93ed53069852b030c501300f8710070ce6ce2b3",
+ "metodo": {
+  "B": 4000,
+  "semente": 20261026,
+  "gerador": "numpy.random.default_rng",
+  "IC": "percentil 2,5-97,5",
+  "dp": "ddof=1",
+  "reamostragem": "indices de sorteio (60, com reposicao) por celula, compartilhados entre as fontes i, iii, iv; sorteios None (sem no valido) excluidos dentro da replica",
+  "chave_kfold": "results/fase5/E1_por_sorteio.json :: celulas.<cel>.sorteios[].Err_conjunto[\"constante|validos|b2\"]"
+ },
+ "conferencias": [
+  {
+   "nome": "dp_simples bauru_Q1",
+   "recomputado": 7.034393648382777,
+   "artefato": 7.034393648382777,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.bauru_Q1.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples bauru_Q2",
+   "recomputado": 7.244004380441048,
+   "artefato": 7.244004380441048,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.bauru_Q2.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples bauru_Q3",
+   "recomputado": 7.7244467217127895,
+   "artefato": 7.7244467217127895,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.bauru_Q3.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples bauru_Q4",
+   "recomputado": 8.242688924092242,
+   "artefato": 8.242688924092242,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.bauru_Q4.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples campinas_Q1",
+   "recomputado": 10.397658314112505,
+   "artefato": 10.397658314112505,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.campinas_Q1.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples campinas_Q2",
+   "recomputado": 9.064379865272642,
+   "artefato": 9.064379865272642,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.campinas_Q2.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples campinas_Q3",
+   "recomputado": 8.574514037914847,
+   "artefato": 8.574514037914847,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.campinas_Q3.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples campinas_Q4",
+   "recomputado": 8.457682950550817,
+   "artefato": 8.457682950550817,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.campinas_Q4.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples lins_Q1",
+   "recomputado": 7.977808852754722,
+   "artefato": 7.977808852754722,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.lins_Q1.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples lins_Q2",
+   "recomputado": 5.745358846317356,
+   "artefato": 5.745358846317356,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.lins_Q2.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples lins_Q3",
+   "recomputado": 6.02579185033425,
+   "artefato": 6.02579185033425,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.lins_Q3.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples lins_Q4",
+   "recomputado": 7.447211074362315,
+   "artefato": 7.447211074362315,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.lins_Q4.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples sorocaba_Q1",
+   "recomputado": 10.511974125784015,
+   "artefato": 10.511974125784015,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.sorocaba_Q1.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples sorocaba_Q2",
+   "recomputado": 8.818190775465292,
+   "artefato": 8.818190775465292,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.sorocaba_Q2.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples sorocaba_Q3",
+   "recomputado": 8.668822526955049,
+   "artefato": 8.668822526955049,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.sorocaba_Q3.constante_validos.dp_simples"
+  },
+  {
+   "nome": "dp_simples sorocaba_Q4",
+   "recomputado": 6.330729521638972,
+   "artefato": 6.330729521638972,
+   "absdiff": 0.0,
+   "bateu": true,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: por_celula.sorocaba_Q4.constante_validos.dp_simples"
+  },
+  {
+   "nome": "(i) media 16 DPs b=2",
+   "recomputado": 8.016603526005728,
+   "artefato": 8.016603526005728,
+   "absdiff": 0.0,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: resumo.dp_medio_entre_sorteios_validos_dB_simples",
+   "bateu": true
+  },
+  {
+   "nome": "(ii) DP entre 16 medias",
+   "recomputado": 2.179646210370172,
+   "artefato": 2.179646210370172,
+   "absdiff": 0.0,
+   "fonte": "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json :: resumo.dp_entre_celulas_das_medias_validos_dB",
+   "bateu": true
+  },
+  {
+   "nome": "(iii) media 16 DPs b=0",
+   "recomputado": 7.0928559703037735,
+   "artefato": 7.0928559703037735,
+   "absdiff": 0.0,
+   "fonte": "results/fase4/R1_b0_resumo.json :: medias_16_celulas.dp_mae_constante_validos_b0",
+   "bateu": true
+  },
+  {
+   "nome": "(iv) media 16 DPs K-fold",
+   "recomputado": 0.7565306116170978,
+   "artefato": 0.7565306116170978,
+   "absdiff": 0.0,
+   "fonte": "results/fase5/E1_resumo.json :: limiares_do_criterio_contagem_mecanica.b2_constante_validos.dp_sorteios_medio_16_kfold",
+   "bateu": true
+  }
+ ],
+ "valores_reproduzidos": {
+  "i_media_dp_b2": 8.016603526005728,
+  "ii_dp_entre_medias_b2": 2.179646210370172,
+  "iii_media_dp_b0": 7.0928559703037735,
+  "iv_media_dp_kfold_b2": 0.7565306116170978,
+  "razao_i_ii": 3.6779379551896443,
+  "razao_i_iv": 10.59653555706106
+ },
+ "ICs": {
+  "i_media_dp_b2": {
+   "estimativa": 8.016603526005728,
+   "IC95_percentil": [
+    7.401939276193295,
+    8.38783690044445
+   ],
+   "media_boot": 7.883720676054659,
+   "dp_boot": 0.25325127148574944
+  },
+  "ii_dp_entre_medias_b2": {
+   "estimativa": 2.179646210370172,
+   "IC95_percentil": [
+    1.9188639776652814,
+    2.912323394216315
+   ],
+   "media_boot": 2.419448895494301,
+   "dp_boot": 0.24997929908296398
+  },
+  "iii_media_dp_b0": {
+   "estimativa": 7.0928559703037735,
+   "IC95_percentil": [
+    6.519603130005979,
+    7.443481018781201
+   ],
+   "media_boot": 6.976428168119937,
+   "dp_boot": 0.23463064471742648
+  },
+  "iv_media_dp_kfold_b2": {
+   "estimativa": 0.7565306116170978,
+   "IC95_percentil": [
+    0.7121194223298518,
+    0.781528331853403
+   ],
+   "media_boot": 0.7470271907646661,
+   "dp_boot": 0.018162357767086527
+  },
+  "razao_i_ii": {
+   "estimativa": 3.6779379551896443,
+   "IC95_percentil": [
+    2.6481895602706325,
+    4.167159926647175
+   ],
+   "media_boot": 3.2960383250401284,
+   "dp_boot": 0.38298903510614574
+  },
+  "razao_i_iv": {
+   "estimativa": 10.59653555706106,
+   "IC95_percentil": [
+    9.751360192988509,
+    11.404989469530525
+   ],
+   "media_boot": 10.559424168183844,
+   "dp_boot": 0.4186088815109
+  }
+ },
+ "por_celula": {
+  "bauru_Q1": {
+   "b2": {
+    "dp": 7.034393648382777,
+    "IC95_percentil": [
+     5.7105982352734905,
+     8.25445943437996
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "b0": {
+    "dp": 6.512595782668684,
+    "IC95_percentil": [
+     5.309839908236159,
+     7.559158834531229
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "kf": {
+    "dp": 0.6740182682600679,
+    "IC95_percentil": [
+     0.5564365959062604,
+     0.7737752088546266
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "bauru_Q2": {
+   "b2": {
+    "dp": 7.244004380441048,
+    "IC95_percentil": [
+     5.416706693552624,
+     9.087673579135824
+    ],
+    "n_sorteios_finitos": 56
+   },
+   "b0": {
+    "dp": 6.253034701922486,
+    "IC95_percentil": [
+     4.834381932464168,
+     7.823196185130127
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "kf": {
+    "dp": 0.5608670512893862,
+    "IC95_percentil": [
+     0.45113971880260056,
+     0.658448796906331
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "bauru_Q3": {
+   "b2": {
+    "dp": 7.7244467217127895,
+    "IC95_percentil": [
+     5.706027090436246,
+     9.357381339059835
+    ],
+    "n_sorteios_finitos": 56
+   },
+   "b0": {
+    "dp": 6.831604537120137,
+    "IC95_percentil": [
+     5.057942354427495,
+     8.371020978464582
+    ],
+    "n_sorteios_finitos": 60
+   },
+   "kf": {
+    "dp": 0.7100106419718419,
+    "IC95_percentil": [
+     0.5758442935807703,
+     0.8210332452780577
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "bauru_Q4": {
+   "b2": {
+    "dp": 8.242688924092242,
+    "IC95_percentil": [
+     6.184078303574248,
+     10.107242191304335
+    ],
+    "n_sorteios_finitos": 56
+   },
+   "b0": {
+    "dp": 6.857254942916488,
+    "IC95_percentil": [
+     5.3466834538704004,
+     8.22309522468821
+    ],
+    "n_sorteios_finitos": 57
+   },
+   "kf": {
+    "dp": 0.6852502003475965,
+    "IC95_percentil": [
+     0.562559307095371,
+     0.7866658048668922
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "campinas_Q1": {
+   "b2": {
+    "dp": 10.397658314112505,
+    "IC95_percentil": [
+     7.266971649400704,
+     12.89119424317084
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "b0": {
+    "dp": 9.043735165860895,
+    "IC95_percentil": [
+     6.492393803796754,
+     11.281988825211002
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "kf": {
+    "dp": 0.997815880362956,
+    "IC95_percentil": [
+     0.7979456113809814,
+     1.1833635217804992
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "campinas_Q2": {
+   "b2": {
+    "dp": 9.064379865272642,
+    "IC95_percentil": [
+     7.234637369485659,
+     11.007751908721243
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "b0": {
+    "dp": 7.562372724881168,
+    "IC95_percentil": [
+     6.060562360013307,
+     9.198606893586591
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "kf": {
+    "dp": 0.8103150014000836,
+    "IC95_percentil": [
+     0.6732668833322714,
+     0.9269651357312501
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "campinas_Q3": {
+   "b2": {
+    "dp": 8.574514037914847,
+    "IC95_percentil": [
+     6.670721681309765,
+     10.122963951608964
+    ],
+    "n_sorteios_finitos": 57
+   },
+   "b0": {
+    "dp": 8.284986271410528,
+    "IC95_percentil": [
+     5.887675210512083,
+     10.505456446530834
+    ],
+    "n_sorteios_finitos": 60
+   },
+   "kf": {
+    "dp": 0.9510434571488756,
+    "IC95_percentil": [
+     0.7680291321366043,
+     1.1144513065583463
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "campinas_Q4": {
+   "b2": {
+    "dp": 8.457682950550817,
+    "IC95_percentil": [
+     5.930699286448167,
+     10.899209793232453
+    ],
+    "n_sorteios_finitos": 58
+   },
+   "b0": {
+    "dp": 6.580935639862526,
+    "IC95_percentil": [
+     4.912017517723777,
+     8.221479744103101
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "kf": {
+    "dp": 0.7546031047920194,
+    "IC95_percentil": [
+     0.6242719993164173,
+     0.8635637870117001
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "lins_Q1": {
+   "b2": {
+    "dp": 7.977808852754722,
+    "IC95_percentil": [
+     5.8147665191083,
+     10.070254857182006
+    ],
+    "n_sorteios_finitos": 56
+   },
+   "b0": {
+    "dp": 6.597250347001207,
+    "IC95_percentil": [
+     4.982923986654935,
+     8.134341149801859
+    ],
+    "n_sorteios_finitos": 58
+   },
+   "kf": {
+    "dp": 0.8085252748937265,
+    "IC95_percentil": [
+     0.6250050644312152,
+     0.9507986595037499
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "lins_Q2": {
+   "b2": {
+    "dp": 5.745358846317356,
+    "IC95_percentil": [
+     4.797371077875082,
+     6.543519590856037
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "b0": {
+    "dp": 5.260954422702041,
+    "IC95_percentil": [
+     4.336158044507474,
+     6.104233791157014
+    ],
+    "n_sorteios_finitos": 60
+   },
+   "kf": {
+    "dp": 0.4887089576786351,
+    "IC95_percentil": [
+     0.39383712993539505,
+     0.5697124363656448
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "lins_Q3": {
+   "b2": {
+    "dp": 6.02579185033425,
+    "IC95_percentil": [
+     4.515153153450971,
+     7.253893848048457
+    ],
+    "n_sorteios_finitos": 48
+   },
+   "b0": {
+    "dp": 6.3490732244078325,
+    "IC95_percentil": [
+     4.891622408392577,
+     7.5782078567796205
+    ],
+    "n_sorteios_finitos": 58
+   },
+   "kf": {
+    "dp": 0.6718253309085096,
+    "IC95_percentil": [
+     0.562747706255404,
+     0.7656928551504726
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "lins_Q4": {
+   "b2": {
+    "dp": 7.447211074362315,
+    "IC95_percentil": [
+     6.060193384591654,
+     8.565216758108145
+    ],
+    "n_sorteios_finitos": 53
+   },
+   "b0": {
+    "dp": 7.049246237228722,
+    "IC95_percentil": [
+     5.584824966504788,
+     8.456997269496147
+    ],
+    "n_sorteios_finitos": 55
+   },
+   "kf": {
+    "dp": 0.7023754619150395,
+    "IC95_percentil": [
+     0.5577818532274117,
+     0.8268728037226496
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "sorocaba_Q1": {
+   "b2": {
+    "dp": 10.511974125784015,
+    "IC95_percentil": [
+     7.305521521862561,
+     13.163705220837057
+    ],
+    "n_sorteios_finitos": 58
+   },
+   "b0": {
+    "dp": 8.327302089484558,
+    "IC95_percentil": [
+     5.79584321820954,
+     10.51013661231829
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "kf": {
+    "dp": 1.0139718389542718,
+    "IC95_percentil": [
+     0.7750979404047335,
+     1.2169807213033579
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "sorocaba_Q2": {
+   "b2": {
+    "dp": 8.818190775465292,
+    "IC95_percentil": [
+     6.289651151816337,
+     11.441653122215103
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "b0": {
+    "dp": 7.4158462214173735,
+    "IC95_percentil": [
+     5.122525388487371,
+     9.989517989496512
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "kf": {
+    "dp": 0.6997038126120272,
+    "IC95_percentil": [
+     0.578633546579649,
+     0.8019224792012366
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "sorocaba_Q3": {
+   "b2": {
+    "dp": 8.668822526955049,
+    "IC95_percentil": [
+     7.050796812215478,
+     9.956704866825087
+    ],
+    "n_sorteios_finitos": 55
+   },
+   "b0": {
+    "dp": 8.003330444462977,
+    "IC95_percentil": [
+     5.836764410272833,
+     10.174352634358826
+    ],
+    "n_sorteios_finitos": 59
+   },
+   "kf": {
+    "dp": 0.9527409807720536,
+    "IC95_percentil": [
+     0.7777973302684693,
+     1.0962172160937536
+    ],
+    "n_sorteios_finitos": 60
+   }
+  },
+  "sorocaba_Q4": {
+   "b2": {
+    "dp": 6.330729521638972,
+    "IC95_percentil": [
+     4.79353699348356,
+     7.745195969478376
+    ],
+    "n_sorteios_finitos": 56
+   },
+   "b0": {
+    "dp": 6.556172771512748,
+    "IC95_percentil": [
+     4.799282606773722,
+     8.25719537422801
+    ],
+    "n_sorteios_finitos": 58
+   },
+   "kf": {
+    "dp": 0.6227145225664746,
+    "IC95_percentil": [
+     0.50637073104127,
+     0.7181782765406783
+    ],
+    "n_sorteios_finitos": 60
+   }
+  }
+ },
+ "jackknife_ii": {
+  "valores_deixa_uma_fora": {
+   "bauru_Q1": 2.2515427188281034,
+   "bauru_Q2": 1.9698562399180894,
+   "bauru_Q3": 2.2444430270712816,
+   "bauru_Q4": 2.254122408712315,
+   "campinas_Q1": 2.2474615444577624,
+   "campinas_Q2": 2.2531228306382487,
+   "campinas_Q3": 2.2221432492586555,
+   "campinas_Q4": 2.2536899843893576,
+   "lins_Q1": 2.1438703221743793,
+   "lins_Q2": 2.0359265336294343,
+   "lins_Q3": 2.1744610842446,
+   "lins_Q4": 2.1855816977523914,
+   "sorocaba_Q1": 2.07447783049051,
+   "sorocaba_Q2": 2.2364329253727013,
+   "sorocaba_Q3": 2.153660781570795,
+   "sorocaba_Q4": 2.1473461757363768
+  },
+  "min": 1.9698562399180894,
+  "max": 2.254122408712315,
+  "pseudo_valor_media": 2.2042087213180537,
+  "EP_jackknife": 0.3271619578739172,
+  "IC95_normal_est_pm_1.96EP": [
+   1.5384087729372942,
+   2.8208836478030497
+  ]
+ },
+ "contagens_mecanicas_limiares": {
+  "IC_i_dentro_7_a_9": true,
+  "IC_ii_limite_superior_abaixo_de_4": true,
+  "IC_i_inteiramente_acima_IC_ii (inf_i > sup_ii)": true,
+  "IC_razao_i_ii_exclui_1": true,
+  "IC_razao_i_ii_acima_de_2": true,
+  "IC_razao_i_iv_exclui_1": true,
+  "IC_razao_i_iv_acima_de_5": true,
+  "n_replicas_ii_ge_i": 0,
+  "n_replicas_razao_i_ii_le_1": 0,
+  "n_replicas_razao_i_iv_le_1": 0
+ },
+ "sha256_fontes": {
+  "results/fase2/2.1_deriva_erro_baselines_16x60rnd.json": "f6dfcc8d209e6d711daa16eddb6678e69aa6d432555eb949007b0cd8def223b8",
+  "results/fase4/R1_b0_por_sorteio.json": "6a499484427e388ba760ad4dcbd904dc977b0ff712e0536f6c91066735abb32a",
+  "results/fase4/R1_b0_resumo.json": "5237e231f6f5ac940fda37b9af7c0464fb10556b7159f4bcaf611993d3dbfaaa",
+  "results/fase5/E1_por_sorteio.json": "9870e4bb966a38fd37732fa59a0f0ee1eacdb3aa57d07722b2cd070ed93d59c7",
+  "results/fase5/E1_resumo.json": "34931ca50b7d9c437a168556c131e43959ea8bf4da247973d031aecbadee0ec2",
+  "results/fase5/_parcial_laco/bauru_Q1.json": "2e0285d0c2401fa3d9f6fcffe9234f511034af768c34021277baa718934bc2c5",
+  "results/fase5/_parcial_laco/bauru_Q2.json": "bbbea62bedaa78685d7fd278307814b299cecb8c82aa7a79a9f4b5eb779efeb5",
+  "results/fase5/_parcial_laco/bauru_Q3.json": "29d1280024aabe80c0a3f32ee4b18c11fbf3e3f8dc0f25eff786c921c120e03d",
+  "results/fase5/_parcial_laco/bauru_Q4.json": "18cf0482624e99fc175c0feaa250c2b1e40869aaba4b411ce1c71c5b5d482451",
+  "results/fase5/_parcial_laco/campinas_Q1.json": "d60bc536fb9a6729f05216a8f130bff4408283632bf4620cffb049c91dc47706",
+  "results/fase5/_parcial_laco/campinas_Q2.json": "e4c9717b94705242b75c99ad7d91ac78de05225938245f3f3b21c63bd026a94f",
+  "results/fase5/_parcial_laco/campinas_Q3.json": "cf3b9f29d02015192a1e8b8f2bd093e999322de4ec8df859448703b14af74fd9",
+  "results/fase5/_parcial_laco/campinas_Q4.json": "62bdb77085f2ea48e9badd67896d77ff212b8e20bce4fb818bb435aa833c333f",
+  "results/fase5/_parcial_laco/lins_Q1.json": "d6929ea02a2a7b2e3c6bccfe1e85d591ddbd1a7d449daed34a64b3c1b76992b0",
+  "results/fase5/_parcial_laco/lins_Q2.json": "b39c0d4f3339129de7ebf5cb81c0755681d138e4947d831cf98fe5a344ee82f2",
+  "results/fase5/_parcial_laco/lins_Q3.json": "e3e171e384b1acae0809a57e7afbd792d36274f5e52e0230d390b999ac05d268",
+  "results/fase5/_parcial_laco/lins_Q4.json": "79ca968360d5680419faafdf31a92a39e8a62d6f4568250b0e49111cceb51f2b",
+  "results/fase5/_parcial_laco/sorocaba_Q1.json": "c0c3d852dfe52d271a500c39db847883a8348aac8784dde4f6529b53014b0b45",
+  "results/fase5/_parcial_laco/sorocaba_Q2.json": "5e07a0cd22341d34c676345746906d766fe674732e3f5fe6f493a349278fa976",
+  "results/fase5/_parcial_laco/sorocaba_Q3.json": "f83a59250a9d0530a0fc636fbc36d031bda2a987a62462b4c87601d6188bea01",
+  "results/fase5/_parcial_laco/sorocaba_Q4.json": "2fc928d94916d2d4fc09513f3c8e7ca8f8ddb835db6d2d8345b59c43f54fe566"
+ },
+ "script": "analysis/revision_r1/v3_15_V2_incerteza_variabilidade.py",
+ "script_sha256": "3a044e3362f7c02a90c965767ded895fe970f9de1ffbbca484ceca972752a869",
+ "data_utc": "2026-10-26T12:39:00.414432+00:00",
+ "comando": "python analysis/revision_r1/v3_15_V2_incerteza_variabilidade.py"
+}

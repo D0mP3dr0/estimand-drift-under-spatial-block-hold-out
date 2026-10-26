@@ -30,7 +30,7 @@
   },
   "fismat_sympy_eqR.py_sha256_apenas_para_citacao_NAO_executado": "1231c937b73987375cc574b1e126eed6501c41e532b3088c7181ff4033ee03c6",
   "run_c0c1cf_lins_s42_Q1_g10b2.json": {
-   "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/gnn_rf_ieee_access/FIRST_RESPONSE_REVIEW_IEEE_ACESSES/EVIDENCIA_RESUBMISSAO/dados/treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json",
+   "caminho": "/trabalho/ARPIA_RF/TOPO_RF_PROJETO/GNN_RF/external/prior_runs/evidence/dados/treinos_c1/run_c0c1cf_lins_s42_Q1_g10b2.json",
    "campo": "baselines_analiticos.train.p_tx_eff_dbm.fspl",
    "valor": 20.402631103093142
   },
