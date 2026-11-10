@@ -2,13 +2,13 @@ cff-version: 1.2.0
 message: >-
   If you use the code or the records in this repository, please cite them
   using the metadata below. The manuscript "Estimand Drift under Spatial Block
-  Hold-Out" is under review at MDPI Mathematics; once it is published, please
-  cite the article as well.
+  Hold-Out" is published in Mathematics (MDPI) 2026, 14(22), 4129
+  (doi:10.3390/math14224129); please cite the article as well.
 title: "Estimand Drift under Spatial Block Hold-Out: reproducibility package"
 abstract: >-
   Reproducibility package of the manuscript "Estimand Drift under Spatial
-  Block Hold-Out" by L. F. C. Seelig and R. M. Salles (submitted to MDPI
-  Mathematics, under review). It holds the code that partitions and trims
+  Block Hold-Out" by L. F. C. Seelig and R. M. Salles (Mathematics 2026,
+  14(22), 4129, doi:10.3390/math14224129). It holds the code that partitions and trims
   sixteen simulated city x quadrant cells at block sizes of 10 km and 5 km,
   the computation of the per-node inclusion probabilities, the split draws,
   the numerical tests, the training and evaluation code of a graph neural
@@ -38,3 +38,21 @@ keywords:
   - inclusion probability
   - graph neural networks
   - reproducibility
+preferred-citation:
+  type: article
+  title: "Estimand Drift Under Spatial Block Hold-Out"
+  authors:
+    - given-names: Luis F. C.
+      family-names: Seelig
+      orcid: "https://orcid.org/0009-0000-6095-3864"
+    - given-names: Ronaldo M.
+      family-names: Salles
+      orcid: "https://orcid.org/0000-0002-3916-5086"
+  journal: Mathematics
+  publisher:
+    name: MDPI
+  year: 2026
+  volume: 14
+  issue: 22
+  start: 4129
+  doi: "10.3390/math14224129"

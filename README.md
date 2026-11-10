@@ -1,8 +1,8 @@
 # Estimand Drift under Spatial Block Hold-Out: reproducibility package
 
 Reproducibility package for L. F. C. Seelig and R. M. Salles, *Estimand Drift
-under Spatial Block Hold-Out*, a manuscript submitted to MDPI Mathematics and
-currently under review. The study asks what a buffered spatial block hold-out
+under Spatial Block Hold-Out*, published in *Mathematics* (MDPI) 2026, 14(22),
+4129, https://doi.org/10.3390/math14224129. The study asks what a buffered spatial block hold-out
 actually estimates when the test set is made of the nodes that survive the
 buffer. It looks at which population the reported error covers, how that
 population differs from the domain, and how the error moves from one split
@@ -640,6 +640,9 @@ are released under the Creative Commons Attribution 4.0 International licence
 
 ## Citation
 
-The manuscript is under review at MDPI Mathematics. Until it is published,
-please cite this repository using the metadata in `CITATION.cff`. Once the
-article is published, please cite the article.
+Please cite the article:
+
+Seelig, L. F. C.; Salles, R. M. Estimand Drift Under Spatial Block Hold-Out.
+*Mathematics* 2026, 14(22), 4129. https://doi.org/10.3390/math14224129
+
+To cite this repository as well, use the metadata in `CITATION.cff`.
